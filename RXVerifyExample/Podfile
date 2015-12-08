@@ -1,0 +1,19 @@
+
+
+pod 'RXCoreText'
+pod 'RXVCMediator'
+
+pod 'RXVerifyButton'
+
+pod 'RXTextView'
+
+pod 'RXPaddingView'
+
+pod 'RXCategory'
+
+pod 'RX3_XGPush'
+
+
+
+
+
