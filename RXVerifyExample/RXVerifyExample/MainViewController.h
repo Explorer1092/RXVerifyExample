@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  RXVerifyExample
 //
-//  Created by Rush.D.Xzj on 15/11/12.
+//  Created by Rush.D.Xzj on 15/12/8.
 //  Copyright © 2015年 Rush.D.Xzj. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainViewController : UIViewController
 
 @end
-

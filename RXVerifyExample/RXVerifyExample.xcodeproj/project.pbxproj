@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5804D28C1C006FDA005A02D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2731BF47F2A00EC9144 /* Main.storyboard */; };
 		5850B26C1BF47F2A00EC9144 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.m */; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
-		5850B2721BF47F2A00EC9144 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B2711BF47F2A00EC9144 /* ViewController.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
-		5850B27A1BF47F2A00EC9144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2781BF47F2A00EC9144 /* LaunchScreen.storyboard */; };
 		5850B2841BF4803E00EC9144 /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2821BF4803E00EC9144 /* coretext-image-1.jpg */; };
 		5850B2851BF4803E00EC9144 /* coretext-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2831BF4803E00EC9144 /* coretext-image-2.jpg */; };
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
+		58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BF5F871C16BAC500E8AEF3 /* MainViewController.m */; };
+		58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */; };
 		58DAD4581C16B13C00256B8F /* RXMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAD4571C16B13C00256B8F /* RXMenuView.m */; };
 		58DAD45B1C16B16000256B8F /* RXMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAD45A1C16B16000256B8F /* RXMenuItemView.m */; };
 		688362FEF9A294D3EAF9F0B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA873A2C4D346B9960AB9F28 /* libPods.a */; };
@@ -27,15 +26,14 @@
 		5850B26B1BF47F2A00EC9144 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5850B26D1BF47F2A00EC9144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5850B26E1BF47F2A00EC9144 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5850B2701BF47F2A00EC9144 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5850B2711BF47F2A00EC9144 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5850B2741BF47F2A00EC9144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5850B2761BF47F2A00EC9144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5850B2791BF47F2A00EC9144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5850B27B1BF47F2A00EC9144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5850B2821BF4803E00EC9144 /* coretext-image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-1.jpg"; sourceTree = "<group>"; };
 		5850B2831BF4803E00EC9144 /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
 		5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		58BF5F861C16BAC500E8AEF3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		58BF5F871C16BAC500E8AEF3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		58DAD4561C16B13C00256B8F /* RXMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuView.h; sourceTree = "<group>"; };
 		58DAD4571C16B13C00256B8F /* RXMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMenuView.m; sourceTree = "<group>"; };
 		58DAD4591C16B16000256B8F /* RXMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuItemView.h; sourceTree = "<group>"; };
@@ -91,13 +89,12 @@
 				5850B2811BF4803E00EC9144 /* Res */,
 				5850B26D1BF47F2A00EC9144 /* AppDelegate.h */,
 				5850B26E1BF47F2A00EC9144 /* AppDelegate.m */,
-				5850B2701BF47F2A00EC9144 /* ViewController.h */,
-				5850B2711BF47F2A00EC9144 /* ViewController.m */,
-				5850B2731BF47F2A00EC9144 /* Main.storyboard */,
 				5850B2761BF47F2A00EC9144 /* Assets.xcassets */,
-				5850B2781BF47F2A00EC9144 /* LaunchScreen.storyboard */,
 				5850B27B1BF47F2A00EC9144 /* Info.plist */,
 				5850B26A1BF47F2A00EC9144 /* Supporting Files */,
+				58BF5F861C16BAC500E8AEF3 /* MainViewController.h */,
+				58BF5F871C16BAC500E8AEF3 /* MainViewController.m */,
+				58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */,
 			);
 			path = RXVerifyExample;
 			sourceTree = "<group>";
@@ -199,11 +196,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5804D28C1C006FDA005A02D6 /* Main.storyboard in Resources */,
-				5850B27A1BF47F2A00EC9144 /* LaunchScreen.storyboard in Resources */,
 				5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */,
 				5850B2851BF4803E00EC9144 /* coretext-image-2.jpg in Resources */,
 				5850B2841BF4803E00EC9144 /* coretext-image-1.jpg in Resources */,
+				58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,34 +258,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5850B2721BF47F2A00EC9144 /* ViewController.m in Sources */,
 				58DAD4581C16B13C00256B8F /* RXMenuView.m in Sources */,
 				58DAD45B1C16B16000256B8F /* RXMenuItemView.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
+				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5850B2731BF47F2A00EC9144 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5850B2741BF47F2A00EC9144 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5850B2781BF47F2A00EC9144 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5850B2791BF47F2A00EC9144 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5850B27C1BF47F2A00EC9144 /* Debug */ = {
@@ -379,6 +356,7 @@
 			baseConfigurationReference = 89CB7AC47D3FCAD8FBB7593A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -392,6 +370,7 @@
 			baseConfigurationReference = 37734B22BC636E123BE17792 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

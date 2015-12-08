@@ -8,21 +8,30 @@
 
 #import "AppDelegate.h"
 #import "XGPush.h"
+#import "MainViewController.h"
+
 @interface AppDelegate ()
+@property (nonatomic, strong) UINavigationController *mainNC;
 
 @end
 
 @implementation AppDelegate
+- (void)showMain
+{
+    UIViewController *vc = nil;
+    vc = [[MainViewController alloc] init];
+    self.mainNC = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = self.mainNC;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    
-    [XGPush startApp:123 appKey:@"kkkk"];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self showMain];
+    [self.window makeKeyAndVisible];
     return YES;
 }
-
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
