@@ -12,6 +12,9 @@
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
 		5850B2841BF4803E00EC9144 /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2821BF4803E00EC9144 /* coretext-image-1.jpg */; };
 		5850B2851BF4803E00EC9144 /* coretext-image-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2831BF4803E00EC9144 /* coretext-image-2.jpg */; };
+		5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5886CDAC1C182D7500013C76 /* RVMenuViewController.m */; };
+		5886CDAF1C182D7500013C76 /* RVMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5886CDAD1C182D7500013C76 /* RVMenuViewController.xib */; };
+		5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */ = {isa = PBXBuildFile; fileRef = 5886CDB11C182E4F00013C76 /* UIViewController+RV.m */; };
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
 		58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BF5F871C16BAC500E8AEF3 /* MainViewController.m */; };
 		58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */; };
@@ -30,6 +33,12 @@
 		5850B27B1BF47F2A00EC9144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5850B2821BF4803E00EC9144 /* coretext-image-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-1.jpg"; sourceTree = "<group>"; };
 		5850B2831BF4803E00EC9144 /* coretext-image-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "coretext-image-2.jpg"; sourceTree = "<group>"; };
+		5886CDAB1C182D7500013C76 /* RVMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVMenuViewController.h; sourceTree = "<group>"; };
+		5886CDAC1C182D7500013C76 /* RVMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVMenuViewController.m; sourceTree = "<group>"; };
+		5886CDAD1C182D7500013C76 /* RVMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVMenuViewController.xib; sourceTree = "<group>"; };
+		5886CDB01C182E4F00013C76 /* UIViewController+RV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RV.h"; sourceTree = "<group>"; };
+		5886CDB11C182E4F00013C76 /* UIViewController+RV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RV.m"; sourceTree = "<group>"; };
+		5886CDB31C182ED400013C76 /* RXVerifyExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXVerifyExample-Prefix.pch"; sourceTree = "<group>"; };
 		5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		58BF5F861C16BAC500E8AEF3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		58BF5F871C16BAC500E8AEF3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -85,6 +94,7 @@
 		5850B2691BF47F2A00EC9144 /* RXVerifyExample */ = {
 			isa = PBXGroup;
 			children = (
+				5886CDAA1C18235B00013C76 /* VC */,
 				58DAD4551C16B11900256B8F /* RXMenu */,
 				5850B2811BF4803E00EC9144 /* Res */,
 				5850B26D1BF47F2A00EC9144 /* AppDelegate.h */,
@@ -102,6 +112,7 @@
 		5850B26A1BF47F2A00EC9144 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5886CDB31C182ED400013C76 /* RXVerifyExample-Prefix.pch */,
 				5850B26B1BF47F2A00EC9144 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -114,6 +125,18 @@
 				5850B2831BF4803E00EC9144 /* coretext-image-2.jpg */,
 			);
 			path = Res;
+			sourceTree = "<group>";
+		};
+		5886CDAA1C18235B00013C76 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				5886CDAB1C182D7500013C76 /* RVMenuViewController.h */,
+				5886CDAC1C182D7500013C76 /* RVMenuViewController.m */,
+				5886CDAD1C182D7500013C76 /* RVMenuViewController.xib */,
+				5886CDB01C182E4F00013C76 /* UIViewController+RV.h */,
+				5886CDB11C182E4F00013C76 /* UIViewController+RV.m */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		58DAD4551C16B11900256B8F /* RXMenu */ = {
@@ -199,6 +222,7 @@
 				5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */,
 				5850B2851BF4803E00EC9144 /* coretext-image-2.jpg in Resources */,
 				5850B2841BF4803E00EC9144 /* coretext-image-1.jpg in Resources */,
+				5886CDAF1C182D7500013C76 /* RVMenuViewController.xib in Resources */,
 				58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
 				58DAD4581C16B13C00256B8F /* RXMenuView.m in Sources */,
+				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
 				58DAD45B1C16B16000256B8F /* RXMenuItemView.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
@@ -357,11 +383,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "RXVerifyExample/RXVerifyExample-Prefix.pch";
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzj.RXVerifyExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -371,11 +399,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "RXVerifyExample/RXVerifyExample-Prefix.pch";
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzj.RXVerifyExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
