@@ -22,6 +22,18 @@
 }
 
 
+- (IBAction)rvRefreshTouchUpInside:(id)sender {
+    
+    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVRefreshViewController" query:nil animate:YES];
+}
+
+
+- (IBAction)rvScrollTouchUpInside:(id)sender {
+    
+    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVScrollViewController" query:nil animate:YES];
+}
+
+
 
 
 #pragma mark - View Life Cycle

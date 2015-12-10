@@ -17,14 +17,8 @@
 @interface RXMenuView ()<RXMenuItemViewDelegate>
 
 @property (nonatomic, strong) NSArray *aryMenu;
-
-
 @property (nonatomic, strong) RXMenuItemView *addMenuItemView;
-
-
 @property (nonatomic, assign) NSInteger animationIndex;
-
-
 @property (nonatomic, strong) NSTimer *timer;
 
 @end

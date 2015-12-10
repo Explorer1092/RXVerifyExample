@@ -22,6 +22,20 @@
                         <action selector="rvMenuTouchUpInside:" destination="-1" eventType="touchUpInside" id="on9-Z7-DBe"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igu-Ik-yRR">
+                    <rect key="frame" x="20" y="142" width="97" height="30"/>
+                    <state key="normal" title="RVScroll"/>
+                    <connections>
+                        <action selector="rvScrollTouchUpInside:" destination="-1" eventType="touchUpInside" id="6lm-Rv-0HK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuV-4l-UY4">
+                    <rect key="frame" x="20" y="91" width="97" height="30"/>
+                    <state key="normal" title="RVRefresh"/>
+                    <connections>
+                        <action selector="rvRefreshTouchUpInside:" destination="-1" eventType="touchUpInside" id="phe-GO-IbC"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>
