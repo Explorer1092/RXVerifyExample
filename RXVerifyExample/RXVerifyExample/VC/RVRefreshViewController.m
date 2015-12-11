@@ -8,7 +8,7 @@
 
 #import "RVRefreshViewController.h"
 #import "RXRefreshView.h"
-@interface RVRefreshViewController ()
+@interface RVRefreshViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
@@ -18,10 +18,45 @@
 
 @implementation RVRefreshViewController
 
+#pragma mark - Action
+- (void)refreshAction:(id)sender
+{
+    [self performSelector:@selector(finishRefreshControl) withObject:nil afterDelay:3 inModes:@[NSRunLoopCommonModes]];
+}
 
 
 
+- (void)finishRefreshControl
+{
+    [self.rxRefreshView finishingLoading];
+}
 
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.rxRefreshView scrollViewDidScroll];
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self.rxRefreshView scrollViewDidEndDragging];
+}
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *identify = @"kkkkkk";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        cell.backgroundColor = [UIColor clearColor];
+    }
+    cell.textLabel.text = @"测试测试";
+    return cell;
+}
 
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
@@ -30,7 +65,9 @@
     
     self.tableView.backgroundColor = [UIColor greenColor];
     self.tableView.tableFooterView = [UIView new];
-    self.rxRefreshView = [RXRefreshView attachToScrollView:self.tableView];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.rxRefreshView = [RXRefreshView attachToScrollView:self.tableView target:self action:@selector(refreshAction:)];
     
     
     NSLog(@"offset:%@, inset:%@", NSStringFromCGPoint(self.tableView.contentOffset), NSStringFromUIEdgeInsets(self.tableView.contentInset));

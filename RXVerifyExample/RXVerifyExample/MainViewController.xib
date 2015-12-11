@@ -43,6 +43,13 @@
                         <action selector="rvRectTouchUpInside:" destination="-1" eventType="touchUpInside" id="vGt-Io-zzX"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fy-mU-qZl">
+                    <rect key="frame" x="20" y="235" width="97" height="30"/>
+                    <state key="normal" title="RVTransform"/>
+                    <connections>
+                        <action selector="rvTransformTouchUpInside:" destination="-1" eventType="touchUpInside" id="Lqn-6j-pqz"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

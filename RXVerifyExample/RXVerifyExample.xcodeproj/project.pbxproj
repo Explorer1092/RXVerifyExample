@@ -26,6 +26,8 @@
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
 		58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BF5F871C16BAC500E8AEF3 /* MainViewController.m */; };
 		58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */; };
+		58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CA8D591C1ABEFB00A507BE /* RVTransformViewController.m */; };
+		58CA8D5C1C1ABEFB00A507BE /* RVTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58CA8D5A1C1ABEFB00A507BE /* RVTransformViewController.xib */; };
 		58DAD4581C16B13C00256B8F /* RXMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAD4571C16B13C00256B8F /* RXMenuView.m */; };
 		58DAD45B1C16B16000256B8F /* RXMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAD45A1C16B16000256B8F /* RXMenuItemView.m */; };
 		688362FEF9A294D3EAF9F0B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA873A2C4D346B9960AB9F28 /* libPods.a */; };
@@ -64,6 +66,9 @@
 		58BF5F861C16BAC500E8AEF3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		58BF5F871C16BAC500E8AEF3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		58CA8D581C1ABEFB00A507BE /* RVTransformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVTransformViewController.h; sourceTree = "<group>"; };
+		58CA8D591C1ABEFB00A507BE /* RVTransformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVTransformViewController.m; sourceTree = "<group>"; };
+		58CA8D5A1C1ABEFB00A507BE /* RVTransformViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVTransformViewController.xib; sourceTree = "<group>"; };
 		58DAD4561C16B13C00256B8F /* RXMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuView.h; sourceTree = "<group>"; };
 		58DAD4571C16B13C00256B8F /* RXMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMenuView.m; sourceTree = "<group>"; };
 		58DAD4591C16B16000256B8F /* RXMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuItemView.h; sourceTree = "<group>"; };
@@ -166,6 +171,9 @@
 				5803F0D61C196F520071FDDA /* RVRectViewController.h */,
 				5803F0D71C196F520071FDDA /* RVRectViewController.m */,
 				5803F0D81C196F520071FDDA /* RVRectViewController.xib */,
+				58CA8D581C1ABEFB00A507BE /* RVTransformViewController.h */,
+				58CA8D591C1ABEFB00A507BE /* RVTransformViewController.m */,
+				58CA8D5A1C1ABEFB00A507BE /* RVTransformViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 				5803F0D01C190FFC0071FDDA /* RVRefreshViewController.xib in Resources */,
 				5803F0D51C1913260071FDDA /* RVScrollViewController.xib in Resources */,
 				5803F0DA1C196F520071FDDA /* RVRectViewController.xib in Resources */,
+				58CA8D5C1C1ABEFB00A507BE /* RVTransformViewController.xib in Resources */,
 				58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +347,7 @@
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
+				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,19 +9,232 @@
 #import "RXRefreshView.h"
 #import "RXItemView.h"
 
+
+typedef enum E_RX_RefreshState {
+    kE_RX_RefreshState_Idle,            // 空闲状态
+    kE_RX_RefreshState_Refreshing,      // 正在刷新状态
+    kE_RX_RefreshState_Disappear,       // 消失状态
+}E_RX_RefreshState;
+
+
+
+
 @interface RXRefreshView ()
 
+
+@property (nonatomic, weak) id target;
+@property (nonatomic, assign) SEL action;
+
 @property (nonatomic, strong) NSArray *aryItem;
+
+
+
+@property (nonatomic, weak) UIScrollView *scrollView;
+
+// 当下拉的高度大于此值的时候,表示是下拉刷新
+// 当前默认是80
+@property (nonatomic, assign) CGFloat dropHeight;
+
+
+@property (nonatomic, assign) E_RX_RefreshState e_RX_RefreshState;
+
+
+
+
+// 是否处于加载的过程中
+@property (nonatomic, assign) BOOL isLoading;
+
+
+// 另外一种形式的定时器
+@property (nonatomic, strong) CADisplayLink *displayLink;
+
+@property (nonatomic, assign) CGFloat disappearProgress;
 
 @end
 
 @implementation RXRefreshView
 
+#pragma mark - Private
+- (void)startLoadingAnimation
+{
+    for (NSInteger i = 0; i < self.aryItem.count; i++) {
+        RXItemView *itemView = self.aryItem[i];
+        [self performSelector:@selector(itemViewAnimation:) withObject:itemView afterDelay:(i * 0.1) inModes:@[NSRunLoopCommonModes]];
+    }
+}
+- (void)itemViewAnimation:(RXItemView *)itemView
+{
+    
+    switch (self.e_RX_RefreshState) {
+        case kE_RX_RefreshState_Refreshing:
+        {
+            //    NSLog(@"itemViewAnimation,tag:%zd", itemView.tag);
+            itemView.alpha = 1;
+            [itemView.layer removeAllAnimations];
+            [UIView animateWithDuration:0.8 animations:^{
+                itemView.alpha = 0.4;
+            } completion:^(BOOL finished) {
+                
+            }];
+            BOOL isLastOne = (itemView.tag == self.aryItem.count - 1);
+            if (isLastOne) {
+                [self startLoadingAnimation];
+            }
+        }
+            break;
+        case kE_RX_RefreshState_Disappear:
+        case kE_RX_RefreshState_Idle:
+        default:
+            break;
+    }
+    
+
+}
+
+- (void)updateDisappearAnimation
+{
+    if (self.disappearProgress >= 0 && self.disappearProgress <= 1) {
+        self.disappearProgress -= 1/60.0f/1.2f;
+        [self updateBarItem];
+        
+    }
+}
+
+- (void)updateBarItem
+{
+    CGFloat progress = self.disappearProgress;
+    CGFloat internalAnimationFactor = 0.7;
+    for (NSInteger i = 0; i < self.aryItem.count; i++) {
+        RXItemView *itemView = self.aryItem[i];
+        CGFloat startPadding = (1 - internalAnimationFactor) / self.aryItem.count * i;
+        CGFloat endPadding = 1 - internalAnimationFactor - startPadding;
+        
+        if (progress == 1 || progress >= 1 - endPadding) {
+            itemView.transform = CGAffineTransformIdentity;
+            itemView.alpha = 0.4;
+            NSLog(@"Do thing 1");
+        } else if (progress == 0) {
+            NSLog(@"Do thing 2");
+            
+        } else {
+            NSLog(@"Do thing 3");
+            CGFloat realProgress;
+            if (progress <= startPadding) {
+                realProgress = 0;
+            } else {
+                realProgress = MIN(1, (progress - startPadding) / internalAnimationFactor);
+            }
+            
+            
+//            itemView.transform = CGAffineTransformMakeTranslation(itemView.translationX*(1-realProgress), -self.dropHeight*(1-realProgress));
+            itemView.transform = CGAffineTransformRotate(itemView.transform, M_PI*(realProgress));
+            itemView.transform = CGAffineTransformScale(itemView.transform, realProgress, realProgress);
+            itemView.alpha = realProgress * 0.4;
+            
+        }
+        
+    }
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll
+{
+
+    if (self.scrollView.contentOffset.y > 0) {
+        return;
+    }
+    CGFloat y = fabs(self.scrollView.contentOffset.y);
+    
+    CGFloat height = self.frame.size.height;
+    CGFloat newY = 0;
+    if (y < height) {
+        newY = -height;
+    } else {
+        newY = -((y - height) / 2.0f + height);
+    }
+    CGRect frame = self.frame;
+    frame.origin.y = newY;
+    self.frame = frame;
+    
+    if (self.isLoading) {
+        // Do Nothing
+    } else {
+        if (y >= self.dropHeight) {
+            self.e_RX_RefreshState = kE_RX_RefreshState_Refreshing;
+//            NSLog(@"Refreshing! y:%.2f", y);
+        } else {
+            self.e_RX_RefreshState = kE_RX_RefreshState_Idle;
+//            NSLog(@"Idle! y:%.2f", y);
+        }
+    }
+    
+}
 
 
+- (void)scrollViewDidEndDragging
+{
+    if (self.isLoading) {
+        return;
+    }
+    
+    switch (self.e_RX_RefreshState) {
+        case kE_RX_RefreshState_Refreshing:
+        {
+//            NSLog(@"Do Something");
+            UIEdgeInsets newInsets;
+            newInsets.top = self.dropHeight;
+            
+            self.isLoading = YES;
+            
+            [UIView animateWithDuration:0 animations:^(void) {
+                self.scrollView.contentInset = newInsets;
+            }];
+            
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+            
+            if ([self.target respondsToSelector:self.action]) {
+                [self.target performSelector:self.action withObject:self];
+            }
+            
+#pragma clang diagnostic pop
+            
+            [self startLoadingAnimation];
+            
+            
+        }
+            break;
+        case kE_RX_RefreshState_Idle:
+        case kE_RX_RefreshState_Disappear:
+        default:
+            // Do Nothing
+            break;
+    }
+}
+- (void)finishingLoading
+{
+    self.e_RX_RefreshState = kE_RX_RefreshState_Disappear;
+    UIEdgeInsets newInsets;
+    newInsets.top = 0;
+    [UIView animateWithDuration:1.2 animations:^{
+        self.scrollView.contentInset = newInsets;
+    } completion:^(BOOL finished) {
+        self.e_RX_RefreshState = kE_RX_RefreshState_Idle;
+        self.isLoading = NO;
+        [self.displayLink invalidate];
+        self.disappearProgress = 1.0f;
+    }];
+    
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateDisappearAnimation)];
+//    self.displayLink.frameInterval = 2;
+    [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+    self.disappearProgress = 1.0f;
+}
 
 
-+ (id)attachToScrollView:(UIScrollView *)scrollView
+#pragma mark - Class Method
++ (id)attachToScrollView:(UIScrollView *)scrollView target:(id)target action:(SEL)action
 {
     
     
@@ -94,14 +307,23 @@
     }
     
     refreshView.aryItem = ary;
+    CGFloat winWidth = [UIScreen mainScreen].bounds.size.width;
+    frame.origin.x = (winWidth - width) / 2.0f;
+    frame.origin.y = -height;
     refreshView.frame = frame;
-    refreshView.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2.0f, 0);
+//    refreshView.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2.0f, height / 2.0f);
     
     
+    refreshView.dropHeight = 80;
+    refreshView.isLoading = NO;
+    refreshView.target = target;
+    refreshView.action = action;
     refreshView.backgroundColor = [UIColor redColor];
     
     [scrollView addSubview:refreshView];
     
+    
+    refreshView.scrollView = scrollView;
     return refreshView;
 }
 

@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface RXRefreshView : UIView
-+ (id)attachToScrollView:(UIScrollView *)scrollView;
++ (id)attachToScrollView:(UIScrollView *)scrollView target:(id)target action:(SEL)action;
+
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll;
+- (void)scrollViewDidEndDragging;
+- (void)finishingLoading;
+
 
 @end
