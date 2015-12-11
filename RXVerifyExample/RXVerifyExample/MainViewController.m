@@ -33,6 +33,11 @@
     [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVScrollViewController" query:nil animate:YES];
 }
 
+- (IBAction)rvRectTouchUpInside:(id)sender {
+    
+    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVRectViewController" query:nil animate:YES];
+}
+
 
 
 
