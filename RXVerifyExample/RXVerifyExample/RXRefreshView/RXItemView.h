@@ -14,5 +14,8 @@
 
 - (void)setupWithRect:(CGRect)rect;
 
+@property (nonatomic, assign) CGFloat translationX;
+
+- (void)setHorizontalRandomness:(NSInteger)horizontalRandomness dropHeight:(CGFloat)dropHeight;
 
 @end

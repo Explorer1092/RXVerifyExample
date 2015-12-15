@@ -25,7 +25,7 @@ typedef enum E_RX_RefreshState {
 @property (nonatomic, weak) id target;
 @property (nonatomic, assign) SEL action;
 
-@property (nonatomic, strong) NSArray *aryItem;
+@property (nonatomic, strong) NSArray *items;
 
 
 
@@ -34,6 +34,8 @@ typedef enum E_RX_RefreshState {
 // 当下拉的高度大于此值的时候,表示是下拉刷新
 // 当前默认是80
 @property (nonatomic, assign) CGFloat dropHeight;
+// 水平随机的一个数据
+@property (nonatomic, assign) NSInteger horizontalRandomness;
 
 
 @property (nonatomic, assign) E_RX_RefreshState e_RX_RefreshState;
@@ -57,18 +59,16 @@ typedef enum E_RX_RefreshState {
 #pragma mark - Private
 - (void)startLoadingAnimation
 {
-    for (NSInteger i = 0; i < self.aryItem.count; i++) {
-        RXItemView *itemView = self.aryItem[i];
+    for (NSInteger i = 0; i < self.items.count; i++) {
+        RXItemView *itemView = self.items[i];
         [self performSelector:@selector(itemViewAnimation:) withObject:itemView afterDelay:(i * 0.1) inModes:@[NSRunLoopCommonModes]];
     }
 }
 - (void)itemViewAnimation:(RXItemView *)itemView
 {
-    
     switch (self.e_RX_RefreshState) {
         case kE_RX_RefreshState_Refreshing:
         {
-            //    NSLog(@"itemViewAnimation,tag:%zd", itemView.tag);
             itemView.alpha = 1;
             [itemView.layer removeAllAnimations];
             [UIView animateWithDuration:0.8 animations:^{
@@ -76,7 +76,7 @@ typedef enum E_RX_RefreshState {
             } completion:^(BOOL finished) {
                 
             }];
-            BOOL isLastOne = (itemView.tag == self.aryItem.count - 1);
+            BOOL isLastOne = (itemView.tag == self.items.count - 1);
             if (isLastOne) {
                 [self startLoadingAnimation];
             }
@@ -87,8 +87,6 @@ typedef enum E_RX_RefreshState {
         default:
             break;
     }
-    
-
 }
 
 - (void)updateDisappearAnimation
@@ -97,6 +95,12 @@ typedef enum E_RX_RefreshState {
         self.disappearProgress -= 1/60.0f/1.2f;
         [self updateBarItem];
         
+    } else {
+        [self.items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            RXItemView *itemView = obj;
+            itemView.transform = CGAffineTransformIdentity;
+            itemView.alpha = 0.4f;
+        }];
     }
 }
 
@@ -104,33 +108,27 @@ typedef enum E_RX_RefreshState {
 {
     CGFloat progress = self.disappearProgress;
     CGFloat internalAnimationFactor = 0.7;
-    for (NSInteger i = 0; i < self.aryItem.count; i++) {
-        RXItemView *itemView = self.aryItem[i];
-        CGFloat startPadding = (1 - internalAnimationFactor) / self.aryItem.count * i;
+    for (NSInteger i = 0; i < self.items.count; i++) {
+        RXItemView *itemView = self.items[i];
+        CGFloat startPadding = (1 - internalAnimationFactor) / self.items.count * i;
         CGFloat endPadding = 1 - internalAnimationFactor - startPadding;
         
         if (progress == 1 || progress >= 1 - endPadding) {
             itemView.transform = CGAffineTransformIdentity;
             itemView.alpha = 0.4;
-            NSLog(@"Do thing 1");
         } else if (progress == 0) {
-            NSLog(@"Do thing 2");
-            
+            [itemView setHorizontalRandomness:self.horizontalRandomness dropHeight:self.dropHeight];
         } else {
-            NSLog(@"Do thing 3");
             CGFloat realProgress;
             if (progress <= startPadding) {
                 realProgress = 0;
             } else {
                 realProgress = MIN(1, (progress - startPadding) / internalAnimationFactor);
             }
-            
-            
-//            itemView.transform = CGAffineTransformMakeTranslation(itemView.translationX*(1-realProgress), -self.dropHeight*(1-realProgress));
+            itemView.transform = CGAffineTransformMakeTranslation(itemView.translationX*(1-realProgress), -self.dropHeight*(1-realProgress));
             itemView.transform = CGAffineTransformRotate(itemView.transform, M_PI*(realProgress));
             itemView.transform = CGAffineTransformScale(itemView.transform, realProgress, realProgress);
             itemView.alpha = realProgress * 0.4;
-            
         }
         
     }
@@ -161,11 +159,13 @@ typedef enum E_RX_RefreshState {
         // Do Nothing
     } else {
         if (y >= self.dropHeight) {
+            if (self.e_RX_RefreshState == kE_RX_RefreshState_Idle) {
+                self.disappearProgress = 0;
+                [self updateBarItem];
+            }
             self.e_RX_RefreshState = kE_RX_RefreshState_Refreshing;
-//            NSLog(@"Refreshing! y:%.2f", y);
         } else {
             self.e_RX_RefreshState = kE_RX_RefreshState_Idle;
-//            NSLog(@"Idle! y:%.2f", y);
         }
     }
     
@@ -181,7 +181,6 @@ typedef enum E_RX_RefreshState {
     switch (self.e_RX_RefreshState) {
         case kE_RX_RefreshState_Refreshing:
         {
-//            NSLog(@"Do Something");
             UIEdgeInsets newInsets;
             newInsets.top = self.dropHeight;
             
@@ -226,8 +225,13 @@ typedef enum E_RX_RefreshState {
         self.disappearProgress = 1.0f;
     }];
     
+    
+    for (RXItemView *itemView in self.items) {
+        [itemView.layer removeAllAnimations];
+        itemView.alpha = 0.4;
+    }
+    
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateDisappearAnimation)];
-//    self.displayLink.frameInterval = 2;
     [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     self.disappearProgress = 1.0f;
 }
@@ -292,13 +296,14 @@ typedef enum E_RX_RefreshState {
     
     RXRefreshView *refreshView = [[RXRefreshView alloc] init];
     
+    refreshView.dropHeight = 80;
+    refreshView.horizontalRandomness = 300;
+    
     NSMutableArray *ary = [NSMutableArray array];
     for (NSInteger i = 0; i < startPoints.count; i++) {
         CGPoint startPoint = CGPointFromString(startPoints[i]);
         CGPoint endPoint = CGPointFromString(endPoints[i]);
-        
         RXItemView *itemView = [[RXItemView alloc] initWithFrame:frame startPoint:startPoint endPoint:endPoint color:[UIColor whiteColor] lineWidth:2.5];
-        
         itemView.tag = i;
         itemView.backgroundColor = [UIColor clearColor];
         itemView.alpha = 0;
@@ -306,22 +311,17 @@ typedef enum E_RX_RefreshState {
         [refreshView addSubview:itemView];
     }
     
-    refreshView.aryItem = ary;
+    refreshView.items = ary;
     CGFloat winWidth = [UIScreen mainScreen].bounds.size.width;
     frame.origin.x = (winWidth - width) / 2.0f;
     frame.origin.y = -height;
     refreshView.frame = frame;
-//    refreshView.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2.0f, height / 2.0f);
     
-    
-    refreshView.dropHeight = 80;
     refreshView.isLoading = NO;
     refreshView.target = target;
     refreshView.action = action;
-    refreshView.backgroundColor = [UIColor redColor];
-    
+    refreshView.backgroundColor = [UIColor clearColor];
     [scrollView addSubview:refreshView];
-    
     
     refreshView.scrollView = scrollView;
     return refreshView;

@@ -53,7 +53,12 @@
 
 
 
-
+- (void)setHorizontalRandomness:(NSInteger)horizontalRandomness dropHeight:(CGFloat)dropHeight
+{
+    NSInteger randomNumber = - horizontalRandomness + arc4random() % horizontalRandomness * 2;
+    self.translationX = randomNumber;
+//    self.transform = CGAffineTransformMakeTranslation(self.translationX, -dropHeight);
+}
 
 
 

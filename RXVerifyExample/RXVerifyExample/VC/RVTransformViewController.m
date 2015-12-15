@@ -20,7 +20,52 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.view.backgroundColor = [UIColor redColor];
+    
+    
+    UIView *parent1View = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 200, 200)];
+    parent1View.backgroundColor = [UIColor redColor];
+
+    
+    UIView *parent2View = [[UIView alloc] initWithFrame:CGRectMake(20, 240, 200, 200)];
+    parent2View.backgroundColor = [UIColor redColor];
+    
+    
+    
+    
+    
+    
+    
+    
+    UIView *test1View = [[UIView alloc] initWithFrame:CGRectMake(40, 40, 40, 40)];
+    test1View.backgroundColor = [UIColor greenColor];
+    
+    
+    UIView *test2View = [[UIView alloc] initWithFrame:CGRectMake(40, 40, 40, 40)];
+    test2View.backgroundColor = [UIColor greenColor];
+    
+    
+    
+    
+    [parent1View addSubview:test1View];
+    [parent2View addSubview:test2View];
+    
+    
+    
+    
+    
+    test2View.transform = CGAffineTransformMakeScale(0.5f, 0.5f);
+    test2View.transform = CGAffineTransformTranslate(test2View.transform, 40, 40);
+    test2View.transform = CGAffineTransformRotate(test2View.transform, M_PI / 4);
+    
+    
+    test2View.transform = CGAffineTransformIdentity;
+    
+    
+    
+    [self.view addSubview:parent1View];
+    [self.view addSubview:parent2View];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
