@@ -28,6 +28,8 @@
 		58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */; };
 		58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CA8D591C1ABEFB00A507BE /* RVTransformViewController.m */; };
 		58CA8D5C1C1ABEFB00A507BE /* RVTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58CA8D5A1C1ABEFB00A507BE /* RVTransformViewController.xib */; };
+		58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660281C256BAD00912786 /* RVWYViewController.m */; };
+		58D6602B1C256BAD00912786 /* RVWYViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D660291C256BAD00912786 /* RVWYViewController.xib */; };
 		58DAD4581C16B13C00256B8F /* RXMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAD4571C16B13C00256B8F /* RXMenuView.m */; };
 		58DAD45B1C16B16000256B8F /* RXMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAD45A1C16B16000256B8F /* RXMenuItemView.m */; };
 		688362FEF9A294D3EAF9F0B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA873A2C4D346B9960AB9F28 /* libPods.a */; };
@@ -69,6 +71,9 @@
 		58CA8D581C1ABEFB00A507BE /* RVTransformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVTransformViewController.h; sourceTree = "<group>"; };
 		58CA8D591C1ABEFB00A507BE /* RVTransformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVTransformViewController.m; sourceTree = "<group>"; };
 		58CA8D5A1C1ABEFB00A507BE /* RVTransformViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVTransformViewController.xib; sourceTree = "<group>"; };
+		58D660271C256BAD00912786 /* RVWYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVWYViewController.h; sourceTree = "<group>"; };
+		58D660281C256BAD00912786 /* RVWYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVWYViewController.m; sourceTree = "<group>"; };
+		58D660291C256BAD00912786 /* RVWYViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVWYViewController.xib; sourceTree = "<group>"; };
 		58DAD4561C16B13C00256B8F /* RXMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuView.h; sourceTree = "<group>"; };
 		58DAD4571C16B13C00256B8F /* RXMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMenuView.m; sourceTree = "<group>"; };
 		58DAD4591C16B16000256B8F /* RXMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuItemView.h; sourceTree = "<group>"; };
@@ -174,6 +179,9 @@
 				58CA8D581C1ABEFB00A507BE /* RVTransformViewController.h */,
 				58CA8D591C1ABEFB00A507BE /* RVTransformViewController.m */,
 				58CA8D5A1C1ABEFB00A507BE /* RVTransformViewController.xib */,
+				58D660271C256BAD00912786 /* RVWYViewController.h */,
+				58D660281C256BAD00912786 /* RVWYViewController.m */,
+				58D660291C256BAD00912786 /* RVWYViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -273,6 +281,7 @@
 				5850B2851BF4803E00EC9144 /* coretext-image-2.jpg in Resources */,
 				5850B2841BF4803E00EC9144 /* coretext-image-1.jpg in Resources */,
 				5886CDAF1C182D7500013C76 /* RVMenuViewController.xib in Resources */,
+				58D6602B1C256BAD00912786 /* RVWYViewController.xib in Resources */,
 				5803F0D01C190FFC0071FDDA /* RVRefreshViewController.xib in Resources */,
 				5803F0D51C1913260071FDDA /* RVScrollViewController.xib in Resources */,
 				5803F0DA1C196F520071FDDA /* RVRectViewController.xib in Resources */,
@@ -342,6 +351,7 @@
 				58DAD4581C16B13C00256B8F /* RXMenuView.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
+				58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */,
 				5886CDBB1C18318900013C76 /* RXItemView.m in Sources */,
 				58DAD45B1C16B16000256B8F /* RXMenuItemView.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,

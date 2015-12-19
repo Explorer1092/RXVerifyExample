@@ -41,7 +41,10 @@
     
     [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVTransformViewController" query:nil animate:YES];
 }
-
+- (IBAction)rvWYTouchUpInside:(id)sender {
+    
+    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVWYViewController" query:nil animate:YES];
+}
 
 
 

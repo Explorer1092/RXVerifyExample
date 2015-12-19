@@ -20,4 +20,35 @@
 #endif
 
 
+/*
+ 
+ 
+ #pragma mark - initialize UI And Data
+ - (void)initializeUIAndData
+ {
+ 
+ self.view.backgroundColor = [UIColor redColor];
+ }
+ - (void)initializeAction
+ {
+ 
+ }
+ 
+ 
+ #pragma mark - View Life Cycle
+ 
+ 
+ - (void)viewDidLoad {
+ [super viewDidLoad];
+ // Do any additional setup after loading the view from its nib.
+ 
+ [self initializeUIAndData];
+ [self initializeAction];
+ }
+ 
+ 
+ 
+ */
+
+
 @end

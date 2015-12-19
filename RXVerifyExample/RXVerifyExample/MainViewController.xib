@@ -50,6 +50,13 @@
                         <action selector="rvTransformTouchUpInside:" destination="-1" eventType="touchUpInside" id="Lqn-6j-pqz"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Os9-eW-dwY">
+                    <rect key="frame" x="20" y="273" width="97" height="30"/>
+                    <state key="normal" title="RVWangYi"/>
+                    <connections>
+                        <action selector="rvWYTouchUpInside:" destination="-1" eventType="touchUpInside" id="owy-ok-gKW"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

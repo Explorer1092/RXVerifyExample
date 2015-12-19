@@ -306,7 +306,7 @@ typedef enum E_RX_RefreshState {
         RXItemView *itemView = [[RXItemView alloc] initWithFrame:frame startPoint:startPoint endPoint:endPoint color:[UIColor whiteColor] lineWidth:2.5];
         itemView.tag = i;
         itemView.backgroundColor = [UIColor clearColor];
-        itemView.alpha = 0;
+        itemView.alpha = 0.4;
         [ary addObject:itemView];
         [refreshView addSubview:itemView];
     }
