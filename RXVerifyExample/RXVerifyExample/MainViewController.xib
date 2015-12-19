@@ -57,6 +57,13 @@
                         <action selector="rvWYTouchUpInside:" destination="-1" eventType="touchUpInside" id="owy-ok-gKW"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7n-sZ-Dyt">
+                    <rect key="frame" x="20" y="320" width="97" height="30"/>
+                    <state key="normal" title="RXPopupBoxView"/>
+                    <connections>
+                        <action selector="rvPopupBoxViewTouchUpInside:" destination="-1" eventType="touchUpInside" id="h8L-rO-GrE"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

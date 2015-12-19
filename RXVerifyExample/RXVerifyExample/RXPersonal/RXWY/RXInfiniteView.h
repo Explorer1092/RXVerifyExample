@@ -13,14 +13,14 @@
 
 @protocol RXInfiniteViewDataSource;
 
-
+@protocol RXInfiniteViewDelegate;
 
 
 
 @interface RXInfiniteView : UIView
 
 @property (nonatomic, weak) id<RXInfiniteViewDataSource> dataSource;
-
+@property (nonatomic, weak) id<RXInfiniteViewDelegate> delegate;
 
 - (id)initWithFrame:(CGRect)frame;
 
@@ -45,6 +45,14 @@
 - (id)preDataInRXInfiniteView:(RXInfiniteView *)infiniteView;
 - (id)nextDataInRXInfiniteView:(RXInfiniteView *)infiniteView;
 
+
+@end
+
+
+@protocol RXInfiniteViewDelegate <NSObject>
+@optional
+- (void)nextActionInRXInfiniteView:(RXInfiniteView *)infiniteView;
+- (void)preActionInRXInfiniteView:(RXInfiniteView *)infiniteView;
 
 @end
 

@@ -45,7 +45,10 @@
     
     [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVWYViewController" query:nil animate:YES];
 }
-
+- (IBAction)rvPopupBoxViewTouchUpInside:(id)sender {
+    
+    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVPopupBoxViewController" query:nil animate:YES];
+}
 
 
 #pragma mark - View Life Cycle

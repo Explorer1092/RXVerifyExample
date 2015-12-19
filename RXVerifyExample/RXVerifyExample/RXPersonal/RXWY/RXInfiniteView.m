@@ -60,6 +60,12 @@
 }
 
 #pragma mark - Private
+- (void)setView:(UIView *)view x:(CGFloat)x
+{
+    CGRect frame = view.frame;
+    frame.origin.x = x;
+    view.frame = frame;
+}
 - (void)updateToRightFrame
 {
     
@@ -77,19 +83,17 @@
     self.nextView = self.curView;
     self.curView = self.preView;
     self.preView = [self.dataSource preViewInRXInfiniteView:self reuseView:nextView];
-    
-    
     [self updateToRightFrame];
+    [self safeDelegate_preActionInRXInfiniteView:self];
 }
 - (void)nextAction
 {
     UIView *preView = self.preView;
-    
     self.preView = self.curView;
     self.curView = self.nextView;
     self.nextView = [self.dataSource nextViewInRXInfiniteView:self reuseView:preView];
-    
     [self updateToRightFrame];
+    [self safeDelegate_nextActionInRXInfiniteView:self];
 }
 
 #pragma mark - Proverty
@@ -101,20 +105,12 @@
         _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
         _scrollView.pagingEnabled = YES;
         _scrollView.delegate = self;
-        
         self.scrollView.contentSize = CGSizeMake(width * 3, height);
         [self addSubview:_scrollView];
     }
     return _scrollView;
 }
 
-#pragma mark - Private
-- (void)setView:(UIView *)view x:(CGFloat)x
-{
-    CGRect frame = view.frame;
-    frame.origin.x = x;
-    view.frame = frame;
-}
 #pragma mark - Public
 - (void)reloadData
 {
@@ -136,6 +132,20 @@
     
     [self updateToRightFrame];
     
+}
+
+#pragma mark - Safe Delegate
+- (void)safeDelegate_nextActionInRXInfiniteView:(RXInfiniteView *)infiniteView
+{
+    if ([self.delegate respondsToSelector:@selector(nextActionInRXInfiniteView:)]) {
+        [self.delegate nextActionInRXInfiniteView:infiniteView];
+    }
+}
+- (void)safeDelegate_preActionInRXInfiniteView:(RXInfiniteView *)infiniteView
+{
+    if ([self.delegate respondsToSelector:@selector(preActionInRXInfiniteView:)]) {
+        [self.delegate preActionInRXInfiniteView:infiniteView];
+    }
 }
 
 
