@@ -11,7 +11,7 @@
 #import "RXInfiniteView.h"
 #import "RXLabelView.h"
 
-@interface RVWYViewController ()<UITableViewDataSource, UITableViewDelegate, RXLimitViewDataSource>
+@interface RVWYViewController ()<UITableViewDataSource, UITableViewDelegate, RXLimitViewDataSource, RXInfiniteViewDataSource>
 
 @property (nonatomic, strong) RXLabelView *limitTopView;
 @property (nonatomic, strong) RXLimitView *rxLimitView;
@@ -23,6 +23,50 @@
 
 @implementation RVWYViewController
 
+#pragma mark - Private
+- (UIView *)viewWithInRXInfiniteView:(RXInfiniteView *)infiniteView data:(id)data reuseView:(UIView *)reuseView
+{
+    UITableView *tableView = nil;
+    if (reuseView == nil) {
+        
+        tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, infiniteView.width, infiniteView.height)];
+        tableView.delegate = self;
+        tableView.dataSource = self;
+    } else {
+        tableView = (UITableView *)reuseView;
+    }
+    tableView.tag = [data integerValue] + 1000;
+    [tableView reloadData];
+    return tableView;
+}
+
+#pragma mark - RXInfiniteViewDataSource
+- (UIView *)curViewInRXInfiniteView:(RXInfiniteView *)infiniteView reuseView:(UIView *)reuseView
+{
+    id curData = infiniteView.curData;
+    return [self viewWithInRXInfiniteView:infiniteView data:curData reuseView:reuseView];
+}
+- (UIView *)preViewInRXInfiniteView:(RXInfiniteView *)infiniteView reuseView:(UIView *)reuseView
+{
+    id preData = [self preDataInRXInfiniteView:infiniteView];
+    return [self viewWithInRXInfiniteView:infiniteView data:preData reuseView:reuseView];
+}
+- (UIView *)nextViewInRXInfiniteView:(RXInfiniteView *)infiniteView reuseView:(UIView *)reuseView
+{
+    id nextData = [self nextDataInRXInfiniteView:infiniteView];
+    return [self viewWithInRXInfiniteView:infiniteView data:nextData reuseView:reuseView];
+}
+
+- (id)preDataInRXInfiniteView:(RXInfiniteView *)infiniteView
+{
+    NSInteger cur = [infiniteView.curData integerValue];
+    return @(cur - 1);
+}
+- (id)nextDataInRXInfiniteView:(RXInfiniteView *)infiniteView
+{
+    NSInteger cur = [infiniteView.curData integerValue];
+    return @(cur + 1);
+}
 #pragma mark - RXLimitViewDataSource
 - (NSInteger)numberOfPageInRXLimitView:(RXLimitView *)rxLimitView
 {
@@ -88,8 +132,9 @@
     CGFloat inHeight = height - topViewHeight * 2 - svHeight - 64;
     CGFloat inY = inTopViewY + topViewHeight;
     self.rxInfiniteView = [[RXInfiniteView alloc] initWithFrame:CGRectMake(0, inY, width, inHeight)];
-    self.rxInfiniteView.backgroundColor = [UIColor blueColor];
-    
+    self.rxInfiniteView.dataSource = self;
+    self.rxInfiniteView.curData = @(100);
+    [self.rxInfiniteView reloadData];
     
     [self.view addSubview:self.infiniteTopView];
     [self.view addSubview:self.rxInfiniteView];

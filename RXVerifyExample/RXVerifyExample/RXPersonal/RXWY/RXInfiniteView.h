@@ -10,12 +10,6 @@
 // 无限的一个scrollerView
 
 
-typedef enum E_RX_InfiniteViewType {
-    kE_RX_InfiniteViewType_Infinite     =       0,      // 无限的
-    kE_RX_InfiniteViewType_Limit        =       1,      // 有限的
-}E_RX_InfiniteViewType;
-
-
 
 @protocol RXInfiniteViewDataSource;
 
@@ -25,12 +19,15 @@ typedef enum E_RX_InfiniteViewType {
 
 @interface RXInfiniteView : UIView
 
-@property (nonatomic, assign) E_RX_InfiniteViewType e_RX_InfiniteViewType;
 @property (nonatomic, weak) id<RXInfiniteViewDataSource> dataSource;
 
 
-- (id)initWithFrame:(CGRect)frame type:(E_RX_InfiniteViewType)type;
+- (id)initWithFrame:(CGRect)frame;
 
+
+// 当前数据
+@property (nonatomic, strong) id curData;
+- (void)reloadData;
 
 
 @end
@@ -39,9 +36,15 @@ typedef enum E_RX_InfiniteViewType {
 
 @protocol RXInfiniteViewDataSource <NSObject>
 
-- (NSInteger)numberOfPageInInfiniteView:(RXInfiniteView *)infiniteView;
 
-- (UIView *)infiniteView:(RXInfiniteView *)infiniteView viewForAtIndex:(NSInteger)index;
+
+- (UIView *)curViewInRXInfiniteView:(RXInfiniteView *)infiniteView reuseView:(UIView *)reuseView;
+- (UIView *)preViewInRXInfiniteView:(RXInfiniteView *)infiniteView reuseView:(UIView *)reuseView;
+- (UIView *)nextViewInRXInfiniteView:(RXInfiniteView *)infiniteView reuseView:(UIView *)reuseView;
+
+- (id)preDataInRXInfiniteView:(RXInfiniteView *)infiniteView;
+- (id)nextDataInRXInfiniteView:(RXInfiniteView *)infiniteView;
+
 
 @end
 

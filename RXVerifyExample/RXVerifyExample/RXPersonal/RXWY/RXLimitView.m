@@ -16,6 +16,15 @@
 @end
 @implementation RXLimitView
 
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGPoint contentOffset = scrollView.contentOffset;
+    NSLog(@"contentOffset:%@", NSStringFromCGPoint(contentOffset));
+}
+
+
 #pragma mark - Proverty
 - (UIScrollView *)scrollView
 {
