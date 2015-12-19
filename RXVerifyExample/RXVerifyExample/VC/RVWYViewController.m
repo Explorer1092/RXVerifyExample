@@ -7,15 +7,37 @@
 //
 
 #import "RVWYViewController.h"
+#import "RXLimitView.h"
+#import "RXInfiniteView.h"
+#import "RXLabelView.h"
 
-@interface RVWYViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface RVWYViewController ()<UITableViewDataSource, UITableViewDelegate, RXLimitViewDataSource>
 
-@property (nonatomic, strong) UIView *topView;
-@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) RXLabelView *limitTopView;
+@property (nonatomic, strong) RXLimitView *rxLimitView;
+
+@property (nonatomic, strong) RXLabelView *infiniteTopView;
+@property (nonatomic, strong) RXInfiniteView *rxInfiniteView;
 
 @end
 
 @implementation RVWYViewController
+
+#pragma mark - RXLimitViewDataSource
+- (NSInteger)numberOfPageInRXLimitView:(RXLimitView *)rxLimitView
+{
+    return 5;
+}
+
+- (UIView *)rxLimitView:(RXLimitView *)rxLimitView viewForAtIndex:(NSInteger)index
+{
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, rxLimitView.width, rxLimitView.height)];
+    tableView.tag = index + 1000;
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    return tableView;
+}
+
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -40,31 +62,39 @@
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     
-    CGFloat topViewHeight = 50;
-    CGFloat svHeight = height - topViewHeight - 64;
+    CGFloat topViewHeight = 30;
+    CGFloat svHeight = 200;
     
-    self.topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width, topViewHeight)];
-    self.topView.backgroundColor = [UIColor redColor];
+    self.limitTopView = [[RXLabelView alloc] initWithFrame:CGRectMake(0, 0, width, topViewHeight)];
+    self.limitTopView.backgroundColor = [UIColor redColor];
+    [self.limitTopView updateConstraintsWithLeft:10];
+    self.limitTopView.label.text = @"有限的";
     
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, topViewHeight, width, svHeight)];
-    NSArray *colorAry = @[[UIColor greenColor], [UIColor blackColor], [UIColor whiteColor], [UIColor blueColor], [UIColor orangeColor]];
-    self.scrollView.pagingEnabled = YES;
-    self.scrollView.contentSize = CGSizeMake(width * colorAry.count, svHeight);
     
-    [self.view addSubview:self.topView];
-    [self.view addSubview:self.scrollView];
+    self.rxLimitView = [[RXLimitView alloc] initWithFrame:CGRectMake(0, topViewHeight, width, svHeight)];
+    self.rxLimitView.dataSource = self;
+    [self.rxLimitView reloadData];
+    
+    [self.view addSubview:self.limitTopView];
+    [self.view addSubview:self.rxLimitView];
+    
+    
+    CGFloat inTopViewY = topViewHeight + svHeight;
+    self.infiniteTopView = [[RXLabelView alloc] initWithFrame:CGRectMake(0, inTopViewY, width, topViewHeight)];
+    [self.infiniteTopView updateConstraintsWithLeft:10];
+    self.infiniteTopView.label.text = @"无限的";
+    self.infiniteTopView.backgroundColor = [UIColor greenColor];
+    
+    CGFloat inHeight = height - topViewHeight * 2 - svHeight - 64;
+    CGFloat inY = inTopViewY + topViewHeight;
+    self.rxInfiniteView = [[RXInfiniteView alloc] initWithFrame:CGRectMake(0, inY, width, inHeight)];
+    self.rxInfiniteView.backgroundColor = [UIColor blueColor];
+    
+    
+    [self.view addSubview:self.infiniteTopView];
+    [self.view addSubview:self.rxInfiniteView];
     
 
-    for (NSInteger i = 0; i < colorAry.count; i++) {
-        CGFloat x = i * width;
-        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(x, 0, width, svHeight)];
-//        tableView.backgroundColor = color;
-        tableView.tag = i + 1000;
-        tableView.delegate = self;
-        tableView.dataSource = self;
-        
-        [self.scrollView addSubview:tableView];
-    }
     
     
 }
