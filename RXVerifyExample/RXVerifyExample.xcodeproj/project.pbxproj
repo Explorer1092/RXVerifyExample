@@ -21,8 +21,6 @@
 		5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5886CDAC1C182D7500013C76 /* RVMenuViewController.m */; };
 		5886CDAF1C182D7500013C76 /* RVMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5886CDAD1C182D7500013C76 /* RVMenuViewController.xib */; };
 		5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */ = {isa = PBXBuildFile; fileRef = 5886CDB11C182E4F00013C76 /* UIViewController+RV.m */; };
-		5886CDBB1C18318900013C76 /* RXItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5886CDBA1C18318900013C76 /* RXItemView.m */; };
-		5886CDBE1C18319700013C76 /* RXRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5886CDBD1C18319700013C76 /* RXRefreshView.m */; };
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
 		58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BF5F871C16BAC500E8AEF3 /* MainViewController.m */; };
 		58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */; };
@@ -30,8 +28,10 @@
 		58CA8D5C1C1ABEFB00A507BE /* RVTransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58CA8D5A1C1ABEFB00A507BE /* RVTransformViewController.xib */; };
 		58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660281C256BAD00912786 /* RVWYViewController.m */; };
 		58D6602B1C256BAD00912786 /* RVWYViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D660291C256BAD00912786 /* RVWYViewController.xib */; };
-		58DAD4581C16B13C00256B8F /* RXMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAD4571C16B13C00256B8F /* RXMenuView.m */; };
-		58DAD45B1C16B16000256B8F /* RXMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAD45A1C16B16000256B8F /* RXMenuItemView.m */; };
+		58D660381C2571A700912786 /* RXMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660301C2571A700912786 /* RXMenuItemView.m */; };
+		58D660391C2571A700912786 /* RXMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660321C2571A700912786 /* RXMenuView.m */; };
+		58D6603A1C2571A700912786 /* RXItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660351C2571A700912786 /* RXItemView.m */; };
+		58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660371C2571A700912786 /* RXRefreshView.m */; };
 		688362FEF9A294D3EAF9F0B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA873A2C4D346B9960AB9F28 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -60,10 +60,6 @@
 		5886CDB01C182E4F00013C76 /* UIViewController+RV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RV.h"; sourceTree = "<group>"; };
 		5886CDB11C182E4F00013C76 /* UIViewController+RV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RV.m"; sourceTree = "<group>"; };
 		5886CDB31C182ED400013C76 /* RXVerifyExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXVerifyExample-Prefix.pch"; sourceTree = "<group>"; };
-		5886CDB91C18318900013C76 /* RXItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXItemView.h; sourceTree = "<group>"; };
-		5886CDBA1C18318900013C76 /* RXItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXItemView.m; sourceTree = "<group>"; };
-		5886CDBC1C18319700013C76 /* RXRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRefreshView.h; sourceTree = "<group>"; };
-		5886CDBD1C18319700013C76 /* RXRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRefreshView.m; sourceTree = "<group>"; };
 		5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		58BF5F861C16BAC500E8AEF3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		58BF5F871C16BAC500E8AEF3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
@@ -74,10 +70,14 @@
 		58D660271C256BAD00912786 /* RVWYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVWYViewController.h; sourceTree = "<group>"; };
 		58D660281C256BAD00912786 /* RVWYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVWYViewController.m; sourceTree = "<group>"; };
 		58D660291C256BAD00912786 /* RVWYViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVWYViewController.xib; sourceTree = "<group>"; };
-		58DAD4561C16B13C00256B8F /* RXMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuView.h; sourceTree = "<group>"; };
-		58DAD4571C16B13C00256B8F /* RXMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMenuView.m; sourceTree = "<group>"; };
-		58DAD4591C16B16000256B8F /* RXMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuItemView.h; sourceTree = "<group>"; };
-		58DAD45A1C16B16000256B8F /* RXMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMenuItemView.m; sourceTree = "<group>"; };
+		58D6602F1C2571A700912786 /* RXMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuItemView.h; sourceTree = "<group>"; };
+		58D660301C2571A700912786 /* RXMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMenuItemView.m; sourceTree = "<group>"; };
+		58D660311C2571A700912786 /* RXMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMenuView.h; sourceTree = "<group>"; };
+		58D660321C2571A700912786 /* RXMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMenuView.m; sourceTree = "<group>"; };
+		58D660341C2571A700912786 /* RXItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXItemView.h; sourceTree = "<group>"; };
+		58D660351C2571A700912786 /* RXItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXItemView.m; sourceTree = "<group>"; };
+		58D660361C2571A700912786 /* RXRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRefreshView.h; sourceTree = "<group>"; };
+		58D660371C2571A700912786 /* RXRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRefreshView.m; sourceTree = "<group>"; };
 		89CB7AC47D3FCAD8FBB7593A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA873A2C4D346B9960AB9F28 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,9 +125,8 @@
 		5850B2691BF47F2A00EC9144 /* RXVerifyExample */ = {
 			isa = PBXGroup;
 			children = (
-				5886CDB81C18318900013C76 /* RXRefreshView */,
+				58D6602C1C25719700912786 /* RXPersonal */,
 				5886CDAA1C18235B00013C76 /* VC */,
-				58DAD4551C16B11900256B8F /* RXMenu */,
 				5850B2811BF4803E00EC9144 /* Res */,
 				5850B26D1BF47F2A00EC9144 /* AppDelegate.h */,
 				5850B26E1BF47F2A00EC9144 /* AppDelegate.m */,
@@ -186,26 +185,43 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
-		5886CDB81C18318900013C76 /* RXRefreshView */ = {
+		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
-				5886CDB91C18318900013C76 /* RXItemView.h */,
-				5886CDBA1C18318900013C76 /* RXItemView.m */,
-				5886CDBC1C18319700013C76 /* RXRefreshView.h */,
-				5886CDBD1C18319700013C76 /* RXRefreshView.m */,
+				58D6602E1C2571A700912786 /* RXMenu */,
+				58D660331C2571A700912786 /* RXRefreshView */,
+				58D6602D1C25719700912786 /* RXWY */,
 			);
-			path = RXRefreshView;
+			path = RXPersonal;
 			sourceTree = "<group>";
 		};
-		58DAD4551C16B11900256B8F /* RXMenu */ = {
+		58D6602D1C25719700912786 /* RXWY */ = {
 			isa = PBXGroup;
 			children = (
-				58DAD4561C16B13C00256B8F /* RXMenuView.h */,
-				58DAD4571C16B13C00256B8F /* RXMenuView.m */,
-				58DAD4591C16B16000256B8F /* RXMenuItemView.h */,
-				58DAD45A1C16B16000256B8F /* RXMenuItemView.m */,
+			);
+			path = RXWY;
+			sourceTree = "<group>";
+		};
+		58D6602E1C2571A700912786 /* RXMenu */ = {
+			isa = PBXGroup;
+			children = (
+				58D6602F1C2571A700912786 /* RXMenuItemView.h */,
+				58D660301C2571A700912786 /* RXMenuItemView.m */,
+				58D660311C2571A700912786 /* RXMenuView.h */,
+				58D660321C2571A700912786 /* RXMenuView.m */,
 			);
 			path = RXMenu;
+			sourceTree = "<group>";
+		};
+		58D660331C2571A700912786 /* RXRefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				58D660341C2571A700912786 /* RXItemView.h */,
+				58D660351C2571A700912786 /* RXItemView.m */,
+				58D660361C2571A700912786 /* RXRefreshView.h */,
+				58D660371C2571A700912786 /* RXRefreshView.m */,
+			);
+			path = RXRefreshView;
 			sourceTree = "<group>";
 		};
 		7665CA80429FCCB402637051 /* Pods */ = {
@@ -346,17 +362,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5803F0CF1C190FFC0071FDDA /* RVRefreshViewController.m in Sources */,
+				58D660391C2571A700912786 /* RXMenuView.m in Sources */,
 				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
-				5886CDBE1C18319700013C76 /* RXRefreshView.m in Sources */,
-				58DAD4581C16B13C00256B8F /* RXMenuView.m in Sources */,
+				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
 				58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */,
-				5886CDBB1C18318900013C76 /* RXItemView.m in Sources */,
-				58DAD45B1C16B16000256B8F /* RXMenuItemView.m in Sources */,
+				58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
+				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.m in Sources */,
 			);
