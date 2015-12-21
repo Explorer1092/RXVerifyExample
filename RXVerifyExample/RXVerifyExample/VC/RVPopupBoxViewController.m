@@ -18,13 +18,49 @@
 #pragma mark - initialize UI And Data
 - (void)initializeUIAndData
 {
-    RXPopupBoxView *pv = [[RXPopupBoxView alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
-    pv.lineWidth = 10;
-    pv.lineColor = [UIColor greenColor];
-    pv.bgColor = [UIColor blueColor];
+    CGFloat borderWidth = 10;
+    CGFloat cornerRadius = 10;
+    
+    
+    RXPopupBoxView *pv = [[RXPopupBoxView alloc] initWithFrame:CGRectMake(30, 0, 100, 150)];
+    pv.borderWidth = borderWidth;
+    pv.borderColor = [UIColor grayColor];
+//    pv.offset = 10;
+    pv.trianglePoint = CGPointMake(10, 20);
 //    pv.backgroundColor = [UIColor redColor];
+//    pv.backgroundView.backgroundColor = [UIColor greenColor];
+//    pv.layer.cornerRadius = cornerRadius;
+//    pv.layer.borderColor = [UIColor grayColor].CGColor;
+//    pv.layer.borderWidth = borderWidth;
+    
+    
+    
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(30, 150 + 20, 100, 150)];
+    view.layer.borderWidth = borderWidth;
+    view.layer.borderColor = [UIColor grayColor].CGColor;
+    view.backgroundColor = [UIColor redColor];
+    view.layer.cornerRadius = cornerRadius;
+    
+    
+    
+    
+//    RXPopupBoxView *pv2 = [[RXPopupBoxView alloc] initWithFrame:CGRectMake(150, 100, 100, 150)];
+//    pv2.lineWidth = 1;
+//    pv2.lineColor = [UIColor grayColor];
+//    pv2.bgColor = [UIColor clearColor];
+//    
+//    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(150, 300, 100, 150)];
+//    view2.layer.borderWidth = 1;
+//    view2.layer.borderColor = [UIColor grayColor].CGColor;
+//    view2.backgroundColor = [UIColor clearColor];
+//    view2.layer.cornerRadius = 10;
+    
     
     [self.view addSubview:pv];
+//    [self.view addSubview:pv2];
+    [self.view addSubview:view];
+//    [self.view addSubview:view2];
 }
 - (void)initializeAction
 {

@@ -59,6 +59,9 @@
 //    self.view.backgroundColor = [UIColor redColor];
     
     
+    [self performSelector:@selector(rvPopupBoxViewTouchUpInside:) withObject:nil afterDelay:1];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
