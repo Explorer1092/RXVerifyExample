@@ -19,7 +19,9 @@
     CGContextSetLineWidth(context, self.borderWidth);
     // 用这个方法
     [self.borderColor setStroke];
-    for (RXPopupRoute *route in self.routes) {
+    NSInteger count = self.routes.count;
+    for (NSInteger i = 0; i < count; i++) {
+        RXPopupRoute *route = self.routes[i];
         CGContextMoveToPoint(context, route.startPoint.x, route.startPoint.y);
         for (NSValue *value in route.routePoints) {
             CGPoint point = [value CGPointValue];

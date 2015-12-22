@@ -17,6 +17,7 @@
 		5813F2D31C28F14B00AA00A2 /* RXPopupBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5813F2D21C28F14B00AA00A2 /* RXPopupBorderView.m */; };
 		5813F2D61C29269600AA00A2 /* RXPopupArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5813F2D51C29269600AA00A2 /* RXPopupArcView.m */; };
 		5813F2D91C292A7900AA00A2 /* RXPopupRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5813F2D81C292A7900AA00A2 /* RXPopupRoute.m */; };
+		5813F2DD1C29456300AA00A2 /* RXPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5813F2DC1C29456300AA00A2 /* RXPopView.m */; };
 		5850B26C1BF47F2A00EC9144 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.m */; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
@@ -64,6 +65,8 @@
 		5813F2D51C29269600AA00A2 /* RXPopupArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXPopupArcView.m; sourceTree = "<group>"; };
 		5813F2D71C292A7900AA00A2 /* RXPopupRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXPopupRoute.h; sourceTree = "<group>"; };
 		5813F2D81C292A7900AA00A2 /* RXPopupRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXPopupRoute.m; sourceTree = "<group>"; };
+		5813F2DB1C29456300AA00A2 /* RXPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXPopView.h; sourceTree = "<group>"; };
+		5813F2DC1C29456300AA00A2 /* RXPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXPopView.m; sourceTree = "<group>"; };
 		5850B2671BF47F2A00EC9144 /* RXVerifyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXVerifyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5850B26B1BF47F2A00EC9144 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5850B26D1BF47F2A00EC9144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -146,6 +149,15 @@
 				5813F2D81C292A7900AA00A2 /* RXPopupRoute.m */,
 			);
 			path = RXPopupView;
+			sourceTree = "<group>";
+		};
+		5813F2DA1C29454F00AA00A2 /* RXPopView */ = {
+			isa = PBXGroup;
+			children = (
+				5813F2DB1C29456300AA00A2 /* RXPopView.h */,
+				5813F2DC1C29456300AA00A2 /* RXPopView.m */,
+			);
+			path = RXPopView;
 			sourceTree = "<group>";
 		};
 		5850B25E1BF47F2A00EC9144 = {
@@ -235,6 +247,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				5813F2DA1C29454F00AA00A2 /* RXPopView */,
 				5813F2CA1C28F0A000AA00A2 /* RXPopupView */,
 				58D660421C25A04200912786 /* RXPopupBoxView */,
 				58D6602E1C2571A700912786 /* RXMenu */,
@@ -428,6 +441,7 @@
 			files = (
 				5803F0CF1C190FFC0071FDDA /* RVRefreshViewController.m in Sources */,
 				58D660391C2571A700912786 /* RXMenuView.m in Sources */,
+				5813F2DD1C29456300AA00A2 /* RXPopView.m in Sources */,
 				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
 				5813F2D31C28F14B00AA00A2 /* RXPopupBorderView.m in Sources */,
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,

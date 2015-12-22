@@ -10,6 +10,7 @@
 //#import "RXPopupBoxView.h"
 
 #import "RXPopupView.h"
+#import "RXPopView.h"
 @interface RVPopupBoxViewController ()
 
 @end
@@ -20,7 +21,7 @@
 #pragma mark - initialize UI And Data
 - (void)initializeUIAndData
 {
-    CGFloat borderWidth = 10;
+    CGFloat borderWidth = 0.5;
     CGFloat cornerRadius = 10;
     
     
@@ -32,16 +33,33 @@
 //    pv.backgroundColor = [UIColor redColor];
 //    pv.backgroundView.backgroundColor = [UIColor greenColor];
     
-    RXPopupView *pv = [[RXPopupView alloc] initWithFrame:CGRectMake(30, 0, 100, 150)];
+    RXPopView *pv = [[RXPopView alloc] initWithFrame:CGRectMake(30, 0, 100, 150)];
     pv.borderWidth = borderWidth;
     pv.borderColor = [UIColor grayColor];
-    pv.trianglePoint = CGPointMake(10, 20);
+    pv.trianglePoint = CGPointMake(4, 7);
     pv.cornerRadius = 5;
+    pv.e_RXPopViewStyle = kE_RXPopViewStyle_TopCenter;
+    pv.e_RXPopViewStyle = kE_RXPopViewStyle_LeftCenter;
+    pv.e_RXPopViewStyle = kE_RXPopViewStyle_BottomCenter;
+    pv.e_RXPopViewStyle = kE_RXPopViewStyle_RightCenter;
+    
+    
+//
+//
+    
+    pv.topTrianglePoint = CGPointMake(5, 10);
+    pv.leftTrianglePoint = CGPointMake(10, 5);
+    pv.bottomTrianglePoint = CGPointMake(5, 10);
+    pv.rightTrianglePoint = CGPointMake(10, 5);
+    pv.edgeInsets = UIEdgeInsetsMake(50, 75, 50, 75);
+    pv.e_RXPopViewStyle = kE_RXPopViewStyle_Top | kE_RXPopViewStyle_Left;
+    pv.e_RXPopViewStyle = kE_RXPopViewStyle_Right | kE_RXPopViewStyle_Bottom;
+    pv.e_RXPopViewStyle = kE_RXPopViewStyle_Right | kE_RXPopViewStyle_Bottom | kE_RXPopViewStyle_Top | kE_RXPopViewStyle_Left;
     
     
 
     
-    [pv refreshView];
+//    [pv refreshView];
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(30, 150 + 20, 100, 150)];
     view.layer.borderWidth = borderWidth;

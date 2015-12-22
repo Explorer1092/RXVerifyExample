@@ -10,12 +10,43 @@
 #import "RXPopupRoute.h"
 @implementation RXPopupArcView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark - Constructor And Destructor
+
+- (id)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor clearColor];
+    }
+    return self;
 }
-*/
+
+
+- (void)drawRect:(CGRect)rect
+{
+    [super drawRect:rect];
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(context, self.borderWidth);
+
+    
+    
+    // 用这个方法
+    [self.borderColor setStroke];
+    NSInteger count = self.routes.count;
+    for (NSInteger i = 0; i < count; i++) {
+        RXPopupRoute *route = self.routes[i];
+        CGContextMoveToPoint(context, route.startPoint.x, route.startPoint.y);
+        for (NSValue *value in route.routePoints) {
+            CGPoint point = [value CGPointValue];
+            CGContextAddLineToPoint(context, point.x, point.y);
+        }
+    }
+    
+    
+    
+    CGContextDrawPath(context, kCGPathStroke);
+    
+}
+
 
 @end
