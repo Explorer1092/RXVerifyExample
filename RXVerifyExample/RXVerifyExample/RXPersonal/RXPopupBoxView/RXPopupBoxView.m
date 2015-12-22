@@ -56,10 +56,10 @@
 {
     
     [super drawRect:rect];
-    CGContextRef content = UIGraphicsGetCurrentContext();
+    CGContextRef context = UIGraphicsGetCurrentContext();
     CGFloat width = rect.size.width;
     CGFloat height = rect.size.height;
-    CGContextSetLineWidth(content, self.borderWidth);
+    CGContextSetLineWidth(context, self.borderWidth);
     
     
     // 用这个方法
@@ -67,20 +67,19 @@
     
     [[UIColor greenColor] setFill];
     // 或者这个方法
-    //    CGContextSetStrokeColorWithColor(content, self.lineColor.CGColor);
-    //    CGContextSetFillColorWithColor(content, self.bgColor.CGColor);
+    //    CGContextSetStrokeColorWithColor(context, self.lineColor.CGColor);
+    //    CGContextSetFillColorWithColor(context, self.bgColor.CGColor);
     
     // 方法一
-    //    CGContextAddRect(content, self.bounds);
+    //    CGContextAddRect(context, self.bounds);
     
     // 方法二
-//    CGContextMoveToPoint(content, 0, 0);
-//    CGContextAddLineToPoint(content, 0, height);
-//    CGContextAddLineToPoint(content, width, height);
-//    CGContextAddLineToPoint(content, width, 0);
-//    CGContextAddLineToPoint(content, 0, 0);
-//    CGContextDrawPath(content, kCGPathStroke);
-    
+//    CGContextMoveToPoint(context, 0, 0);
+//    CGContextAddLineToPoint(context, 0, height);
+//    CGContextAddLineToPoint(context, width, height);
+//    CGContextAddLineToPoint(context, width, 0);
+//    CGContextAddLineToPoint(context, 0, 0);
+//    CGContextDrawPath(context, kCGPathStroke);
     
     CGFloat halfBorderWidth = self.borderWidth / 2.0f;
     CGFloat leftOffset = self.trianglePoint.x;
@@ -90,18 +89,18 @@
     
     
     
-    CGFloat cornerRadius = 10;
+    CGFloat cornerRadius = 20;
     
     
-    CGFloat arcRadius = cornerRadius + halfBorderWidth;
+//    CGFloat arcRadius = cornerRadius + halfBorderWidth;
     
     
     // 覆盖了
-    CGPoint left1 = CGPointMake(leftOffset + halfBorderWidth, cornerRadius + topOffset );
-    CGPoint left2 = CGPointMake(left1.x, height - cornerRadius - bottomOffset - self.borderWidth);
+    CGPoint left1 = CGPointMake(leftOffset + halfBorderWidth, cornerRadius + topOffset  + halfBorderWidth);
+    CGPoint left2 = CGPointMake(left1.x, height - cornerRadius - bottomOffset - halfBorderWidth);
     
-    CGPoint bottom1 = CGPointMake(cornerRadius + leftOffset, height - bottomOffset - halfBorderWidth);
-    CGPoint bottom2 = CGPointMake(width - cornerRadius - rightOffset, bottom1.y);
+    CGPoint bottom1 = CGPointMake(cornerRadius + leftOffset + self.borderWidth, height - bottomOffset - halfBorderWidth);
+    CGPoint bottom2 = CGPointMake(width - cornerRadius - rightOffset - self.borderWidth, bottom1.y);
     
     CGPoint right1 = CGPointMake(width - rightOffset - halfBorderWidth, left1.y);
     CGPoint right2 = CGPointMake(right1.x, left2.y);
@@ -111,41 +110,41 @@
     CGPoint top2 = CGPointMake(bottom2.x, top1.y);
     
     // 左线
-//    CGContextMoveToPoint(content, left1.x, left1.y);
-//    CGContextAddLineToPoint(content, left2.x, left2.y);
-//    
-////    // 左下角圆弧
-////    CGPoint leftBottom = CGPointMake(arcRadius + left1.x, bottom1.y - arcRadius);
-////    CGContextAddArc(content, leftBottom.x, leftBottom.y, arcRadius, M_PI, M_PI_2, 1);
-//
-//    
-//
-//    // 下线
-//    CGContextMoveToPoint(content, bottom1.x, bottom1.y);
-//    CGContextAddLineToPoint(content, bottom2.x, bottom2.y);
-//    
-//    
-//    // 右线
-//    CGContextMoveToPoint(content, right1.x, right1.y);
-//    CGContextAddLineToPoint(content, right2.x, right2.y);
+    CGContextMoveToPoint(context, left1.x, left1.y);
+    CGContextAddLineToPoint(context, left2.x, left2.y);
+    
+//    // 左下角圆弧
+//    CGPoint leftBottom = CGPointMake(arcRadius + left1.x, bottom1.y - arcRadius);
+//    CGContextAddArc(context, leftBottom.x, leftBottom.y, arcRadius, M_PI, M_PI_2, 1);
+
+    
+
+    // 下线
+    CGContextMoveToPoint(context, bottom1.x, bottom1.y);
+    CGContextAddLineToPoint(context, bottom2.x, bottom2.y);
+    
+    
+    // 右线
+    CGContextMoveToPoint(context, right1.x, right1.y);
+    CGContextAddLineToPoint(context, right2.x, right2.y);
     
     
     // 此处是多余的,但是不影响?????
     // 上线
-    CGContextMoveToPoint(content, top1.x, top1.y);
+    CGContextMoveToPoint(context, top1.x, top1.y);
     
     
-    CGContextAddLineToPoint(content, width / 2 - self.trianglePoint.x, top1.y);
-    CGContextAddLineToPoint(content, width / 2, 0);
-    CGContextAddLineToPoint(content, width / 2 + self.trianglePoint.x, top1.y);
+    CGContextAddLineToPoint(context, width / 2 - self.trianglePoint.x, top1.y);
+    CGContextAddLineToPoint(context, width / 2, 0);
+    CGContextAddLineToPoint(context, width / 2 + self.trianglePoint.x, top1.y);
     
     
-    CGContextAddLineToPoint(content, top2.x, top2.y);
+    CGContextAddLineToPoint(context, top2.x, top2.y);
     
-    CGContextDrawPath(content, kCGPathStroke);
+    CGContextDrawPath(context, kCGPathStroke);
     
     
-//    CGContextDrawPath(content, kCGPathFillStroke);
+//    CGContextDrawPath(context, kCGPathFillStroke);
     
     
     
@@ -175,33 +174,33 @@
 //    CGFloat cornerRadius = 10;
 //    CGPoint left1 = CGPointMake(0, cornerRadius);
 //    CGPoint left2 = CGPointMake(0, height - cornerRadius);
-//    CGContextMoveToPoint(content, left1.x, left1.y);
-//    CGContextAddLineToPoint(content, left2.x, left2.y);
+//    CGContextMoveToPoint(context, left1.x, left1.y);
+//    CGContextAddLineToPoint(context, left2.x, left2.y);
 //    
 //    
 //    CGPoint leftBottom = CGPointMake(cornerRadius, height - cornerRadius);
-//    CGContextAddArc(content, leftBottom.x, leftBottom.y, cornerRadius, M_PI, M_PI_2, 1);
-//    CGContextSetLineWidth(content, self.borderWidth * 2);
+//    CGContextAddArc(context, leftBottom.x, leftBottom.y, cornerRadius, M_PI, M_PI_2, 1);
+//    CGContextSetLineWidth(context, self.borderWidth * 2);
 //    
 //    CGPoint bottom2 = CGPointMake(width - cornerRadius, height);
-//    CGContextAddLineToPoint(content, bottom2.x, bottom2.y);
+//    CGContextAddLineToPoint(context, bottom2.x, bottom2.y);
 //    
 //    CGPoint rightBottom = CGPointMake(width - cornerRadius, height - cornerRadius);
-//    CGContextAddArc(content, rightBottom.x, rightBottom.y, cornerRadius, M_PI_2, 0, 1);
+//    CGContextAddArc(context, rightBottom.x, rightBottom.y, cornerRadius, M_PI_2, 0, 1);
 //    
 //    CGPoint right1 = CGPointMake(width, cornerRadius);
-//    CGContextAddLineToPoint(content, right1.x, right1.y);
+//    CGContextAddLineToPoint(context, right1.x, right1.y);
 //    
 //    CGPoint rightTop = CGPointMake(width - cornerRadius, cornerRadius);
-//    CGContextAddArc(content, rightTop.x, rightTop.y, cornerRadius, 0, 1.5 * M_PI, 1);
+//    CGContextAddArc(context, rightTop.x, rightTop.y, cornerRadius, 0, 1.5 * M_PI, 1);
 //    
 //    CGPoint top1 = CGPointMake(cornerRadius, 0);
-//    CGContextAddLineToPoint(content, top1.x, top1.y);
+//    CGContextAddLineToPoint(context, top1.x, top1.y);
 //    
 //    CGPoint leftTop = CGPointMake(cornerRadius, cornerRadius);
-//    CGContextAddArc(content, leftTop.x, leftTop.y, cornerRadius, 1.5 * M_PI, M_PI, 1);
-//    CGContextClosePath(content);
-//    CGContextDrawPath(content, kCGPathFillStroke);
+//    CGContextAddArc(context, leftTop.x, leftTop.y, cornerRadius, 1.5 * M_PI, M_PI, 1);
+//    CGContextClosePath(context);
+//    CGContextDrawPath(context, kCGPathFillStroke);
     
 }
 

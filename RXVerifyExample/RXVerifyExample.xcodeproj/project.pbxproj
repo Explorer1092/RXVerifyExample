@@ -13,6 +13,10 @@
 		5803F0D51C1913260071FDDA /* RVScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5803F0D31C1913260071FDDA /* RVScrollViewController.xib */; };
 		5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5803F0D71C196F520071FDDA /* RVRectViewController.m */; };
 		5803F0DA1C196F520071FDDA /* RVRectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5803F0D81C196F520071FDDA /* RVRectViewController.xib */; };
+		5813F2CD1C28F0F000AA00A2 /* RXPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5813F2CC1C28F0F000AA00A2 /* RXPopupView.m */; };
+		5813F2D31C28F14B00AA00A2 /* RXPopupBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5813F2D21C28F14B00AA00A2 /* RXPopupBorderView.m */; };
+		5813F2D61C29269600AA00A2 /* RXPopupArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5813F2D51C29269600AA00A2 /* RXPopupArcView.m */; };
+		5813F2D91C292A7900AA00A2 /* RXPopupRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5813F2D81C292A7900AA00A2 /* RXPopupRoute.m */; };
 		5850B26C1BF47F2A00EC9144 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.m */; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
@@ -52,6 +56,14 @@
 		5803F0D61C196F520071FDDA /* RVRectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVRectViewController.h; sourceTree = "<group>"; };
 		5803F0D71C196F520071FDDA /* RVRectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVRectViewController.m; sourceTree = "<group>"; };
 		5803F0D81C196F520071FDDA /* RVRectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVRectViewController.xib; sourceTree = "<group>"; };
+		5813F2CB1C28F0F000AA00A2 /* RXPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXPopupView.h; sourceTree = "<group>"; };
+		5813F2CC1C28F0F000AA00A2 /* RXPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXPopupView.m; sourceTree = "<group>"; };
+		5813F2D11C28F14B00AA00A2 /* RXPopupBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXPopupBorderView.h; sourceTree = "<group>"; };
+		5813F2D21C28F14B00AA00A2 /* RXPopupBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXPopupBorderView.m; sourceTree = "<group>"; };
+		5813F2D41C29269600AA00A2 /* RXPopupArcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXPopupArcView.h; sourceTree = "<group>"; };
+		5813F2D51C29269600AA00A2 /* RXPopupArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXPopupArcView.m; sourceTree = "<group>"; };
+		5813F2D71C292A7900AA00A2 /* RXPopupRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXPopupRoute.h; sourceTree = "<group>"; };
+		5813F2D81C292A7900AA00A2 /* RXPopupRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXPopupRoute.m; sourceTree = "<group>"; };
 		5850B2671BF47F2A00EC9144 /* RXVerifyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXVerifyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5850B26B1BF47F2A00EC9144 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5850B26D1BF47F2A00EC9144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,6 +131,21 @@
 				DA873A2C4D346B9960AB9F28 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5813F2CA1C28F0A000AA00A2 /* RXPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				5813F2CB1C28F0F000AA00A2 /* RXPopupView.h */,
+				5813F2CC1C28F0F000AA00A2 /* RXPopupView.m */,
+				5813F2D11C28F14B00AA00A2 /* RXPopupBorderView.h */,
+				5813F2D21C28F14B00AA00A2 /* RXPopupBorderView.m */,
+				5813F2D41C29269600AA00A2 /* RXPopupArcView.h */,
+				5813F2D51C29269600AA00A2 /* RXPopupArcView.m */,
+				5813F2D71C292A7900AA00A2 /* RXPopupRoute.h */,
+				5813F2D81C292A7900AA00A2 /* RXPopupRoute.m */,
+			);
+			path = RXPopupView;
 			sourceTree = "<group>";
 		};
 		5850B25E1BF47F2A00EC9144 = {
@@ -208,6 +235,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				5813F2CA1C28F0A000AA00A2 /* RXPopupView */,
 				58D660421C25A04200912786 /* RXPopupBoxView */,
 				58D6602E1C2571A700912786 /* RXMenu */,
 				58D660331C2571A700912786 /* RXRefreshView */,
@@ -401,17 +429,21 @@
 				5803F0CF1C190FFC0071FDDA /* RVRefreshViewController.m in Sources */,
 				58D660391C2571A700912786 /* RXMenuView.m in Sources */,
 				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
+				5813F2D31C28F14B00AA00A2 /* RXPopupBorderView.m in Sources */,
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
 				58D660451C25A05100912786 /* RXPopupBoxView.m in Sources */,
 				58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */,
 				588D418D1C27E50800C56DD1 /* RXPopupBoxBackgroundView.m in Sources */,
+				5813F2CD1C28F0F000AA00A2 /* RXPopupView.m in Sources */,
 				58D6603E1C25725C00912786 /* RXInfiniteView.m in Sources */,
 				58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */,
 				58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
+				5813F2D91C292A7900AA00A2 /* RXPopupRoute.m in Sources */,
+				5813F2D61C29269600AA00A2 /* RXPopupArcView.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
 				58D660411C2575EB00912786 /* RXLimitView.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,

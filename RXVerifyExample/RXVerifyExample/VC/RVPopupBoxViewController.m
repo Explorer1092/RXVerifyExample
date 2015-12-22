@@ -7,7 +7,9 @@
 //
 
 #import "RVPopupBoxViewController.h"
-#import "RXPopupBoxView.h"
+//#import "RXPopupBoxView.h"
+
+#import "RXPopupView.h"
 @interface RVPopupBoxViewController ()
 
 @end
@@ -22,19 +24,24 @@
     CGFloat cornerRadius = 10;
     
     
-    RXPopupBoxView *pv = [[RXPopupBoxView alloc] initWithFrame:CGRectMake(30, 0, 100, 150)];
-    pv.borderWidth = borderWidth;
-    pv.borderColor = [UIColor grayColor];
-//    pv.offset = 10;
-    pv.trianglePoint = CGPointMake(10, 20);
+//    RXPopupBoxView *pv = [[RXPopupBoxView alloc] initWithFrame:CGRectMake(30, 0, 100, 150)];
+//    pv.borderWidth = borderWidth;
+//    pv.borderColor = [UIColor grayColor];
+////    pv.offset = 10;
+//    pv.trianglePoint = CGPointMake(10, 20);
 //    pv.backgroundColor = [UIColor redColor];
 //    pv.backgroundView.backgroundColor = [UIColor greenColor];
-//    pv.layer.cornerRadius = cornerRadius;
-//    pv.layer.borderColor = [UIColor grayColor].CGColor;
-//    pv.layer.borderWidth = borderWidth;
+    
+    RXPopupView *pv = [[RXPopupView alloc] initWithFrame:CGRectMake(30, 0, 100, 150)];
+    pv.borderWidth = borderWidth;
+    pv.borderColor = [UIColor grayColor];
+    pv.trianglePoint = CGPointMake(10, 20);
+    pv.cornerRadius = 5;
     
     
+
     
+    [pv refreshView];
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(30, 150 + 20, 100, 150)];
     view.layer.borderWidth = borderWidth;
