@@ -38,8 +38,6 @@
 		58D660391C2571A700912786 /* RXMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660321C2571A700912786 /* RXMenuView.m */; };
 		58D6603A1C2571A700912786 /* RXItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660351C2571A700912786 /* RXItemView.m */; };
 		58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660371C2571A700912786 /* RXRefreshView.m */; };
-		58D6603E1C25725C00912786 /* RXInfiniteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D6603D1C25725C00912786 /* RXInfiniteView.m */; };
-		58D660411C2575EB00912786 /* RXLimitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660401C2575EB00912786 /* RXLimitView.m */; };
 		58D660451C25A05100912786 /* RXPopupBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660441C25A05100912786 /* RXPopupBoxView.m */; };
 		58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660471C25A54A00912786 /* RVPopupBoxViewController.m */; };
 		58D6604A1C25A54A00912786 /* RVPopupBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D660481C25A54A00912786 /* RVPopupBoxViewController.xib */; };
@@ -101,10 +99,6 @@
 		58D660351C2571A700912786 /* RXItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXItemView.m; sourceTree = "<group>"; };
 		58D660361C2571A700912786 /* RXRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRefreshView.h; sourceTree = "<group>"; };
 		58D660371C2571A700912786 /* RXRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRefreshView.m; sourceTree = "<group>"; };
-		58D6603C1C25725C00912786 /* RXInfiniteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXInfiniteView.h; sourceTree = "<group>"; };
-		58D6603D1C25725C00912786 /* RXInfiniteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXInfiniteView.m; sourceTree = "<group>"; };
-		58D6603F1C2575EB00912786 /* RXLimitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXLimitView.h; sourceTree = "<group>"; };
-		58D660401C2575EB00912786 /* RXLimitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXLimitView.m; sourceTree = "<group>"; };
 		58D660431C25A05100912786 /* RXPopupBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXPopupBoxView.h; sourceTree = "<group>"; };
 		58D660441C25A05100912786 /* RXPopupBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXPopupBoxView.m; sourceTree = "<group>"; };
 		58D660461C25A54A00912786 /* RVPopupBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVPopupBoxViewController.h; sourceTree = "<group>"; };
@@ -252,20 +246,8 @@
 				58D660421C25A04200912786 /* RXPopupBoxView */,
 				58D6602E1C2571A700912786 /* RXMenu */,
 				58D660331C2571A700912786 /* RXRefreshView */,
-				58D6602D1C25719700912786 /* RXWY */,
 			);
 			path = RXPersonal;
-			sourceTree = "<group>";
-		};
-		58D6602D1C25719700912786 /* RXWY */ = {
-			isa = PBXGroup;
-			children = (
-				58D6603C1C25725C00912786 /* RXInfiniteView.h */,
-				58D6603D1C25725C00912786 /* RXInfiniteView.m */,
-				58D6603F1C2575EB00912786 /* RXLimitView.h */,
-				58D660401C2575EB00912786 /* RXLimitView.m */,
-			);
-			path = RXWY;
 			sourceTree = "<group>";
 		};
 		58D6602E1C2571A700912786 /* RXMenu */ = {
@@ -451,7 +433,6 @@
 				58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */,
 				588D418D1C27E50800C56DD1 /* RXPopupBoxBackgroundView.m in Sources */,
 				5813F2CD1C28F0F000AA00A2 /* RXPopupView.m in Sources */,
-				58D6603E1C25725C00912786 /* RXInfiniteView.m in Sources */,
 				58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */,
 				58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
@@ -459,7 +440,6 @@
 				5813F2D91C292A7900AA00A2 /* RXPopupRoute.m in Sources */,
 				5813F2D61C29269600AA00A2 /* RXPopupArcView.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
-				58D660411C2575EB00912786 /* RXLimitView.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.m in Sources */,

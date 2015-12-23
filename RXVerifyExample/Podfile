@@ -13,7 +13,7 @@ pod 'RXCategory'
 
 pod 'RX3_XGPush'
 
-
+pod 'RXScrollView'
 
 
 
