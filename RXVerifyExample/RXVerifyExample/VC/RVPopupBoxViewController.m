@@ -7,9 +7,6 @@
 //
 
 #import "RVPopupBoxViewController.h"
-//#import "RXPopupBoxView.h"
-
-#import "RXPopupView.h"
 #import "RXPopView.h"
 @interface RVPopupBoxViewController ()
 
@@ -24,15 +21,7 @@
     CGFloat borderWidth = 0.5;
     CGFloat cornerRadius = 10;
     
-    
-//    RXPopupBoxView *pv = [[RXPopupBoxView alloc] initWithFrame:CGRectMake(30, 0, 100, 150)];
-//    pv.borderWidth = borderWidth;
-//    pv.borderColor = [UIColor grayColor];
-////    pv.offset = 10;
-//    pv.trianglePoint = CGPointMake(10, 20);
-//    pv.backgroundColor = [UIColor redColor];
-//    pv.backgroundView.backgroundColor = [UIColor greenColor];
-    
+
     RXPopView *pv = [[RXPopView alloc] initWithFrame:CGRectMake(30, 0, 100, 150)];
     pv.borderWidth = borderWidth;
     pv.borderColor = [UIColor grayColor];
@@ -44,9 +33,7 @@
     pv.e_RXPopViewStyle = kE_RXPopViewStyle_RightCenter;
     
     
-//
-//
-    
+
     pv.topTrianglePoint = CGPointMake(5, 10);
     pv.leftTrianglePoint = CGPointMake(10, 5);
     pv.bottomTrianglePoint = CGPointMake(5, 10);
@@ -58,8 +45,9 @@
     
     
 
+    pv.backgroundView.backgroundColor = [UIColor blackColor];
     
-//    [pv refreshView];
+
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(30, 150 + 20, 100, 150)];
     view.layer.borderWidth = borderWidth;
@@ -67,25 +55,8 @@
     view.backgroundColor = [UIColor redColor];
     view.layer.cornerRadius = cornerRadius;
     
-    
-    
-    
-//    RXPopupBoxView *pv2 = [[RXPopupBoxView alloc] initWithFrame:CGRectMake(150, 100, 100, 150)];
-//    pv2.lineWidth = 1;
-//    pv2.lineColor = [UIColor grayColor];
-//    pv2.bgColor = [UIColor clearColor];
-//    
-//    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(150, 300, 100, 150)];
-//    view2.layer.borderWidth = 1;
-//    view2.layer.borderColor = [UIColor grayColor].CGColor;
-//    view2.backgroundColor = [UIColor clearColor];
-//    view2.layer.cornerRadius = 10;
-    
-    
     [self.view addSubview:pv];
-//    [self.view addSubview:pv2];
     [self.view addSubview:view];
-//    [self.view addSubview:view2];
 }
 - (void)initializeAction
 {
