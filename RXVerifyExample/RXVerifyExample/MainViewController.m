@@ -49,6 +49,10 @@
     
     [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVPopupBoxViewController" query:nil animate:YES];
 }
+- (IBAction)rvButtonTouchUpInside:(id)sender {
+    
+    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVButtonViewController" query:nil animate:YES];
+}
 
 
 #pragma mark - View Life Cycle
@@ -59,7 +63,7 @@
 //    self.view.backgroundColor = [UIColor redColor];
     
     
-    [self performSelector:@selector(rvPopupBoxViewTouchUpInside:) withObject:nil afterDelay:1];
+    [self performSelector:@selector(rvButtonTouchUpInside:) withObject:nil afterDelay:1];
     
     
 }
@@ -78,5 +82,37 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+/*
+ 
+ 
+ #pragma mark - initialize UI And Data
+ - (void)initializeUIAndData
+ {
+ 
+ self.view.backgroundColor = [UIColor redColor];
+ }
+ - (void)initializeAction
+ {
+ 
+ }
+ 
+ 
+ #pragma mark - View Life Cycle
+ 
+ 
+ - (void)viewDidLoad {
+ [super viewDidLoad];
+ // Do any additional setup after loading the view from its nib.
+ 
+ [self initializeUIAndData];
+ [self initializeAction];
+ }
+ 
+ 
+ 
+ */
 
 @end

@@ -16,4 +16,4 @@ pod 'RX3_XGPush'
 pod 'RXScrollView'
 pod 'RXPopView'
 
-
+pod 'RXAppDefine'

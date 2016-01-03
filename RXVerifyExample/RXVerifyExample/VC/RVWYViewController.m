@@ -11,13 +11,14 @@
 #import "RXInfiniteView.h"
 #import "RXLabelView.h"
 
-@interface RVWYViewController ()<UITableViewDataSource, UITableViewDelegate, RXLimitViewDataSource, RXInfiniteViewDataSource>
+@interface RVWYViewController ()<UITableViewDataSource, UITableViewDelegate, RXInfiniteViewDataSource>
 
-@property (nonatomic, strong) RXLabelView *limitTopView;
-@property (nonatomic, strong) RXLimitView *rxLimitView;
 
 @property (nonatomic, strong) RXLabelView *infiniteTopView;
 @property (nonatomic, strong) RXInfiniteView *rxInfiniteView;
+
+
+@property (nonatomic, strong) UIView *topView;
 
 @end
 
@@ -40,11 +41,30 @@
     return tableView;
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    NSLog(@"scrollViewDidEndDecelerating:scrollView:%@", scrollView);
+    
+//    if (scrollView.contentOffset.y < 0) {
+//        CGFloat offset = fabs(scrollView.contentOffset.y);
+//        if (offset > 80) {
+//            scrollView.contentInset = UIEdgeInsetsMake(self.topView.height, 0, 0, 0);
+//        }
+//    }
+
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+}
+
 #pragma mark - RXInfiniteViewDataSource
 - (UIView *)curViewInRXInfiniteView:(RXInfiniteView *)infiniteView reuseView:(UIView *)reuseView
 {
     id curData = infiniteView.curData;
-    return [self viewWithInRXInfiniteView:infiniteView data:curData reuseView:reuseView];
+    UIView *view = [self viewWithInRXInfiniteView:infiniteView data:curData reuseView:reuseView];
+    [view addSubview:self.topView];
+    return view;
 }
 - (UIView *)preViewInRXInfiniteView:(RXInfiniteView *)infiniteView reuseView:(UIView *)reuseView
 {
@@ -67,21 +87,6 @@
     NSInteger cur = [infiniteView.curData integerValue];
     return @(cur + 1);
 }
-#pragma mark - RXLimitViewDataSource
-- (NSInteger)numberOfPageInRXLimitView:(RXLimitView *)rxLimitView
-{
-    return 5;
-}
-
-- (UIView *)rxLimitView:(RXLimitView *)rxLimitView viewForAtIndex:(NSInteger)index
-{
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, rxLimitView.width, rxLimitView.height)];
-    tableView.tag = index + 1000;
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    return tableView;
-}
-
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -103,45 +108,39 @@
 #pragma mark - initialize UI And Data
 - (void)initializeUIAndData
 {
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = [UIScreen mainScreen].bounds.size.height;
     
     CGFloat topViewHeight = 30;
-    CGFloat svHeight = 200;
-    
-    self.limitTopView = [[RXLabelView alloc] initWithFrame:CGRectMake(0, 0, width, topViewHeight)];
-    self.limitTopView.backgroundColor = [UIColor redColor];
-    [self.limitTopView updateConstraintsWithLeft:10];
-    self.limitTopView.label.text = @"有限的";
-    
-    
-    self.rxLimitView = [[RXLimitView alloc] initWithFrame:CGRectMake(0, topViewHeight, width, svHeight)];
-    self.rxLimitView.dataSource = self;
-    [self.rxLimitView reloadData];
-    
-    [self.view addSubview:self.limitTopView];
-    [self.view addSubview:self.rxLimitView];
-    
-    
-    CGFloat inTopViewY = topViewHeight + svHeight;
-    self.infiniteTopView = [[RXLabelView alloc] initWithFrame:CGRectMake(0, inTopViewY, width, topViewHeight)];
+
+    self.infiniteTopView = [[RXLabelView alloc] initWithFrame:CGRectMake(0, 0, width, topViewHeight)];
     [self.infiniteTopView updateConstraintsWithLeft:10];
     self.infiniteTopView.label.text = @"无限的";
     self.infiniteTopView.backgroundColor = [UIColor greenColor];
     
-    CGFloat inHeight = height - topViewHeight * 2 - svHeight - 64;
-    CGFloat inY = inTopViewY + topViewHeight;
+    
+    
+    CGFloat inHeight = height - topViewHeight - 64;
+    CGFloat inY = topViewHeight;
+    
+    
+    
+    self.topView = [[UIView alloc] initWithFrame:CGRectMake(0, -inHeight, width, inHeight)];
+    self.topView.backgroundColor = [UIColor redColor];
+    
     self.rxInfiniteView = [[RXInfiniteView alloc] initWithFrame:CGRectMake(0, inY, width, inHeight)];
     self.rxInfiniteView.dataSource = self;
     self.rxInfiniteView.curData = @(100);
     [self.rxInfiniteView reloadData];
     
+    
+    
+    
     [self.view addSubview:self.infiniteTopView];
     [self.view addSubview:self.rxInfiniteView];
-    
-
-    
-    
 }
 - (void)initializeAction
 {
