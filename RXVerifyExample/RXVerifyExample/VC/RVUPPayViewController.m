@@ -18,7 +18,10 @@
 @implementation RVUPPayViewController
 - (IBAction)sampleButtonTouchUpInside:(id)sender
 {
-    NSURL *url = [NSURL URLWithString:@"http://101.231.204.84:8091/sim/getacptn"];
+    
+    NSURL * url = nil;
+    url = [NSURL URLWithString:@"http://101.231.204.84:8091/sim/getacptn"]; // 银联demo地址
+    url = [NSURL URLWithString:@"http://test.api.yiyizuche.cn/service/v2/3/buildUnionpaySDK.do"]; // 壹壹租车demo逻辑
     NSURLRequest *urlRequest=[NSURLRequest requestWithURL:url];
     NSURLConnection *urlConn = [[NSURLConnection alloc] initWithRequest:urlRequest delegate:self];
     [urlConn start];
@@ -46,13 +49,22 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    NSString *tn = [[NSMutableString alloc] initWithData:self.responseData encoding:NSUTF8StringEncoding];
-    if (tn.length > 0) {
-        NSLog(@"tn=%@",tn);
-        [[UPPaymentControl defaultControl] startPay:tn fromScheme:@"UPPayDemo" mode:@"01" viewController:self];
+    // 壹壹租车的逻辑
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:self.responseData options:NSJSONReadingMutableLeaves error:nil];
+    NSString *returnContent = dic[@"returnContent"];
+    if (returnContent.length > 0) {
+        NSLog(@"returnContent=%@",returnContent);
+        [[UPPaymentControl defaultControl] startPay:returnContent fromScheme:@"UPPayDemo" mode:@"01" viewController:self];
         
     }
     
+//    // 银联Demo的逻辑
+//    NSString *tn = [[NSMutableString alloc] initWithData:self.responseData encoding:NSUTF8StringEncoding];
+//    if (tn.length > 0) {
+//        NSLog(@"tn=%@",tn);
+//        [[UPPaymentControl defaultControl] startPay:tn fromScheme:@"UPPayDemo" mode:@"01" viewController:self];
+//        
+//    }
     
 }
 
