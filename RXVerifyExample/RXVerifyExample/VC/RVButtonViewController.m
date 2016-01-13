@@ -8,7 +8,15 @@
 
 #import "RVButtonViewController.h"
 
+
 @interface RVButtonViewController ()
+
+
+@property (nonatomic, assign) CGFloat buttonWidth;
+@property (nonatomic, assign) CGFloat buttonHeight;
+@property (nonatomic, assign) CGFloat buttonX;
+@property (nonatomic, assign) CGFloat buttonY;
+@property (nonatomic, assign) CGFloat buttonOffset;
 
 @end
 
@@ -42,7 +50,6 @@
     [button setImage:image forState:UIControlStateNormal];
     [button setTitle:@"测试" forState:UIControlStateNormal];
     
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
     
     [button addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
@@ -50,53 +57,77 @@
     return button;
 }
 
+
+- (void)adaptiveAButton:(UIButton *)button
+{
+    NSArray *views = self.view.subviews;
+    CGFloat buttonX = 0;
+    CGFloat buttonY = 0;
+    if (views.count % 2 == 0) {
+        buttonX = self.buttonX;
+    } else {
+        buttonX = self.buttonX + self.buttonWidth + self.buttonOffset;
+    }
+    buttonY = self.buttonY + views.count / 2 * (self.buttonHeight + self.buttonOffset);
+    
+    button.frame = CGRectMake(buttonX, buttonY, self.buttonWidth, self.buttonHeight);
+    
+    button.layer.cornerRadius = 1;
+    button.layer.borderWidth = 0.5;
+    button.layer.borderColor = [UIColor grayColor].CGColor;
+    
+    
+    [button addTarget:self action:@selector(buttonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+
+    
+    [self.view addSubview:button];
+}
+
+
 #pragma mark - initialize UI And Data
 - (void)initializeUIAndData
 {
-//    CGFloat height = RX_Window_Height;
+    CGFloat width = RX_Window_Width;
+    self.buttonX = 30;
+    self.buttonY = 30;
+    self.buttonOffset = 30;
+    self.buttonWidth = (width - self.buttonX * 2 - self.buttonOffset) / 2.0f;
+    self.buttonHeight = 44;
     
-    CGFloat startY = 10;
-    CGFloat yOffset = 10;
-    UIButton *button0 = [self buttonTest];
-    button0.top = startY + (yOffset + button0.height) * 0;
+    UIButton *button0 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self adaptiveAButton:button0];
     
-    
-    UIButton *button1 = [self buttonTest];
-    button1.top = startY + (yOffset + button0.height) * 1;
-    
-    
-    UIButton *button2 = [self buttonTest];
-    button2.top = startY + (yOffset + button0.height) * 2;
-    
-    
-    UIButton *button3 = [self buttonTest];
-    button3.top = startY + (yOffset + button0.height) * 3;
+    UIImage *image0 = [[UIColor redColor] rx_imageWithSize:CGSizeMake(24, 24)];
+    [button0 setImage:image0 forState:UIControlStateNormal];
+    button0.contentEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
+    button0.imageEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
     
     
-    UIButton *button4 = [self buttonTest];
-    button4.top = startY + (yOffset + button0.height) * 4;
-
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self adaptiveAButton:button1];
+    [button1 setTitle:@"测试" forState:UIControlStateNormal];
     
-    UIButton *button5 = [self buttonTest];
-    button5.top = startY + (yOffset + button0.height) * 5;
-
     
-    UIButton *button6 = [self buttonTest];
-    button6.top = startY + (yOffset + button0.height) * 6;
-
+    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self adaptiveAButton:button2];
+    UIImage *image2 = [[UIColor redColor] rx_imageWithSize:CGSizeMake(24, 24)];
+    [button2 setImage:image2 forState:UIControlStateNormal];
+    [button2 setTitle:@"测试" forState:UIControlStateNormal];
     
-    UIButton *button7 = [self buttonTest];
-    button7.top = startY + (yOffset + button0.height) * 7;
-
     
-    [self.view addSubview:button0];
-    [self.view addSubview:button1];
-    [self.view addSubview:button2];
-    [self.view addSubview:button3];
-    [self.view addSubview:button4];
-    [self.view addSubview:button5];
-    [self.view addSubview:button6];
-    [self.view addSubview:button7];
+    UIButton *button3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self adaptiveAButton:button3];
+    
+    
+    UIButton *button4 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self adaptiveAButton:button4];
+    
+    
+    UIButton *button5 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self adaptiveAButton:button5];
+    
+    
 
 
 }
