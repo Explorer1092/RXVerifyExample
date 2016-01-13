@@ -71,6 +71,13 @@
                         <action selector="rvButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="pGA-fn-Teb"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tK-re-8lh">
+                    <rect key="frame" x="166" y="37" width="138" height="30"/>
+                    <state key="normal" title="RVUPPay"/>
+                    <connections>
+                        <action selector="rvUPPayTouchUpInside:" destination="-1" eventType="touchUpInside" id="Cq8-RH-UKP"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

@@ -13,7 +13,7 @@
 		5803F0D51C1913260071FDDA /* RVScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5803F0D31C1913260071FDDA /* RVScrollViewController.xib */; };
 		5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5803F0D71C196F520071FDDA /* RVRectViewController.m */; };
 		5803F0DA1C196F520071FDDA /* RVRectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5803F0D81C196F520071FDDA /* RVRectViewController.xib */; };
-		5850B26C1BF47F2A00EC9144 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.m */; };
+		5850B26C1BF47F2A00EC9144 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.mm */; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
 		5850B2841BF4803E00EC9144 /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2821BF4803E00EC9144 /* coretext-image-1.jpg */; };
@@ -36,6 +36,12 @@
 		58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660371C2571A700912786 /* RXRefreshView.m */; };
 		58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660471C25A54A00912786 /* RVPopupBoxViewController.m */; };
 		58D6604A1C25A54A00912786 /* RVPopupBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D660481C25A54A00912786 /* RVPopupBoxViewController.xib */; };
+		58FF7D761C4623A200F06976 /* libPaymentControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D741C4623A200F06976 /* libPaymentControl.a */; };
+		58FF7D781C4623DC00F06976 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D771C4623DC00F06976 /* CFNetwork.framework */; };
+		58FF7D7A1C4623E900F06976 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D791C4623E900F06976 /* SystemConfiguration.framework */; };
+		58FF7D7C1C4623F000F06976 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D7B1C4623F000F06976 /* libz.tbd */; };
+		58FF7D851C4624E000F06976 /* RVUPPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FF7D831C4624E000F06976 /* RVUPPayViewController.m */; };
+		58FF7D861C4624E000F06976 /* RVUPPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */; };
 		688362FEF9A294D3EAF9F0B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA873A2C4D346B9960AB9F28 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +57,7 @@
 		5803F0D71C196F520071FDDA /* RVRectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVRectViewController.m; sourceTree = "<group>"; };
 		5803F0D81C196F520071FDDA /* RVRectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVRectViewController.xib; sourceTree = "<group>"; };
 		5850B2671BF47F2A00EC9144 /* RXVerifyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXVerifyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5850B26B1BF47F2A00EC9144 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5850B26B1BF47F2A00EC9144 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		5850B26D1BF47F2A00EC9144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5850B26E1BF47F2A00EC9144 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5850B2761BF47F2A00EC9144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +94,14 @@
 		58D660461C25A54A00912786 /* RVPopupBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVPopupBoxViewController.h; sourceTree = "<group>"; };
 		58D660471C25A54A00912786 /* RVPopupBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVPopupBoxViewController.m; sourceTree = "<group>"; };
 		58D660481C25A54A00912786 /* RVPopupBoxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVPopupBoxViewController.xib; sourceTree = "<group>"; };
+		58FF7D741C4623A200F06976 /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
+		58FF7D751C4623A200F06976 /* UPPaymentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPaymentControl.h; sourceTree = "<group>"; };
+		58FF7D771C4623DC00F06976 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		58FF7D791C4623E900F06976 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		58FF7D7B1C4623F000F06976 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		58FF7D821C4624E000F06976 /* RVUPPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVUPPayViewController.h; sourceTree = "<group>"; };
+		58FF7D831C4624E000F06976 /* RVUPPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVUPPayViewController.m; sourceTree = "<group>"; };
+		58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVUPPayViewController.xib; sourceTree = "<group>"; };
 		89CB7AC47D3FCAD8FBB7593A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA873A2C4D346B9960AB9F28 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,8 +111,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58FF7D7C1C4623F000F06976 /* libz.tbd in Frameworks */,
+				58FF7D7A1C4623E900F06976 /* SystemConfiguration.framework in Frameworks */,
+				58FF7D781C4623DC00F06976 /* CFNetwork.framework in Frameworks */,
 				5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */,
 				688362FEF9A294D3EAF9F0B6 /* libPods.a in Frameworks */,
+				58FF7D761C4623A200F06976 /* libPaymentControl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +126,9 @@
 		19AF93432503A28159EAC606 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				58FF7D7B1C4623F000F06976 /* libz.tbd */,
+				58FF7D791C4623E900F06976 /* SystemConfiguration.framework */,
+				58FF7D771C4623DC00F06976 /* CFNetwork.framework */,
 				5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */,
 				DA873A2C4D346B9960AB9F28 /* libPods.a */,
 			);
@@ -135,6 +156,7 @@
 		5850B2691BF47F2A00EC9144 /* RXVerifyExample */ = {
 			isa = PBXGroup;
 			children = (
+				58FF7D721C4623A200F06976 /* Third */,
 				58D6602C1C25719700912786 /* RXPersonal */,
 				5886CDAA1C18235B00013C76 /* VC */,
 				5850B2811BF4803E00EC9144 /* Res */,
@@ -154,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				5886CDB31C182ED400013C76 /* RXVerifyExample-Prefix.pch */,
-				5850B26B1BF47F2A00EC9144 /* main.m */,
+				5850B26B1BF47F2A00EC9144 /* main.mm */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -197,6 +219,9 @@
 				58AAC3111C38CDF20023D2EA /* RVButtonViewController.h */,
 				58AAC3121C38CDF20023D2EA /* RVButtonViewController.m */,
 				58AAC3131C38CDF20023D2EA /* RVButtonViewController.xib */,
+				58FF7D821C4624E000F06976 /* RVUPPayViewController.h */,
+				58FF7D831C4624E000F06976 /* RVUPPayViewController.m */,
+				58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -230,6 +255,23 @@
 				58D660371C2571A700912786 /* RXRefreshView.m */,
 			);
 			path = RXRefreshView;
+			sourceTree = "<group>";
+		};
+		58FF7D721C4623A200F06976 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				58FF7D731C4623A200F06976 /* UnionPay */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		58FF7D731C4623A200F06976 /* UnionPay */ = {
+			isa = PBXGroup;
+			children = (
+				58FF7D741C4623A200F06976 /* libPaymentControl.a */,
+				58FF7D751C4623A200F06976 /* UPPaymentControl.h */,
+			);
+			path = UnionPay;
 			sourceTree = "<group>";
 		};
 		7665CA80429FCCB402637051 /* Pods */ = {
@@ -307,6 +349,7 @@
 				5886CDAF1C182D7500013C76 /* RVMenuViewController.xib in Resources */,
 				58D6604A1C25A54A00912786 /* RVPopupBoxViewController.xib in Resources */,
 				58D6602B1C256BAD00912786 /* RVWYViewController.xib in Resources */,
+				58FF7D861C4624E000F06976 /* RVUPPayViewController.xib in Resources */,
 				58AAC3151C38CDF20023D2EA /* RVButtonViewController.xib in Resources */,
 				5803F0D01C190FFC0071FDDA /* RVRefreshViewController.xib in Resources */,
 				5803F0D51C1913260071FDDA /* RVScrollViewController.xib in Resources */,
@@ -380,13 +423,14 @@
 				58AAC3141C38CDF20023D2EA /* RVButtonViewController.m in Sources */,
 				58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */,
 				58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */,
+				58FF7D851C4624E000F06976 /* RVUPPayViewController.m in Sources */,
 				58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
-				5850B26C1BF47F2A00EC9144 /* main.m in Sources */,
+				5850B26C1BF47F2A00EC9144 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +529,10 @@
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RXVerifyExample/Third/UnionPay",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzj.RXVerifyExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -501,6 +549,10 @@
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RXVerifyExample/Third/UnionPay",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzj.RXVerifyExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
