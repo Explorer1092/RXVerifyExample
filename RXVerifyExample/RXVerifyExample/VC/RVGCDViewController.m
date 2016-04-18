@@ -264,8 +264,8 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
         NSLog(@"3"); // 任务3
     });
     NSLog(@"4"); // 任务4
-    while (1) {
-    }
+//    while (1) {
+//    }
     NSLog(@"5"); // 任务5
 }
 
