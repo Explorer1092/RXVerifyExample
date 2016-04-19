@@ -66,6 +66,10 @@
     
     [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVAFNetworkingViewController" query:nil animate:YES];
 }
+- (IBAction)rvAnimationTouchUpInside:(id)sender {
+    
+    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVAnimationViewController" query:nil animate:YES];
+}
 
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
@@ -75,7 +79,7 @@
 //    self.view.backgroundColor = [UIColor redColor];
     
     
-    [self performSelector:@selector(rvAFNetworkingTouchUpInside:) withObject:nil afterDelay:1];
+    [self performSelector:@selector(rvAnimationTouchUpInside:) withObject:nil afterDelay:1];
     
     
 }

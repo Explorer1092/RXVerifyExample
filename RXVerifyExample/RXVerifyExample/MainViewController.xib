@@ -92,6 +92,13 @@
                         <action selector="rvAFNetworkingTouchUpInside:" destination="-1" eventType="touchUpInside" id="rvJ-s2-oLf"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5U-ts-I1w">
+                    <rect key="frame" x="177" y="197" width="127" height="30"/>
+                    <state key="normal" title="RVAnimation"/>
+                    <connections>
+                        <action selector="rvAnimationTouchUpInside:" destination="-1" eventType="touchUpInside" id="Anh-cH-DoT"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>
