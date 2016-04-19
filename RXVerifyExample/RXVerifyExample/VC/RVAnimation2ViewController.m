@@ -13,6 +13,10 @@
 @end
 
 @implementation RVAnimation2ViewController
+- (IBAction)buttonTouchUpInside:(id)sender
+{
+    NSLog(@"kkkk");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -14,22 +14,6 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1B-L9-z7J">
-                    <rect key="frame" x="85" y="54" width="46" height="30"/>
-                    <state key="normal" title="Green"/>
-                    <connections>
-                        <action selector="greenButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="nKe-SS-XE7"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isP-WY-CdV">
-                    <rect key="frame" x="85" y="115" width="46" height="30"/>
-                    <state key="normal" title="Blue"/>
-                    <connections>
-                        <action selector="blueButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="kGI-QD-Opl"/>
-                    </connections>
-                </button>
-            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>
     </objects>

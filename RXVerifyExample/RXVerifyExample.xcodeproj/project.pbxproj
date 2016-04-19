@@ -49,6 +49,7 @@
 		C9BDAD5F1CC621EA00CBB1CA /* RVAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9BDAD5D1CC621EA00CBB1CA /* RVAnimationViewController.xib */; };
 		C9BDAD631CC6237A00CBB1CA /* RVAnimation2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDAD611CC6237A00CBB1CA /* RVAnimation2ViewController.m */; };
 		C9BDAD641CC6237A00CBB1CA /* RVAnimation2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9BDAD621CC6237A00CBB1CA /* RVAnimation2ViewController.xib */; };
+		C9BDAD671CC62E6E00CBB1CA /* RVPushPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDAD661CC62E6E00CBB1CA /* RVPushPopAnimation.m */; };
 		C9C326071CA28E9F00E65090 /* RVGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C326051CA28E9F00E65090 /* RVGCDViewController.m */; };
 		C9C326081CA28E9F00E65090 /* RVGCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C326061CA28E9F00E65090 /* RVGCDViewController.xib */; };
 /* End PBXBuildFile section */
@@ -120,6 +121,8 @@
 		C9BDAD601CC6237A00CBB1CA /* RVAnimation2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVAnimation2ViewController.h; sourceTree = "<group>"; };
 		C9BDAD611CC6237A00CBB1CA /* RVAnimation2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVAnimation2ViewController.m; sourceTree = "<group>"; };
 		C9BDAD621CC6237A00CBB1CA /* RVAnimation2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVAnimation2ViewController.xib; sourceTree = "<group>"; };
+		C9BDAD651CC62E6E00CBB1CA /* RVPushPopAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVPushPopAnimation.h; sourceTree = "<group>"; };
+		C9BDAD661CC62E6E00CBB1CA /* RVPushPopAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVPushPopAnimation.m; sourceTree = "<group>"; };
 		C9C326041CA28E9F00E65090 /* RVGCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVGCDViewController.h; sourceTree = "<group>"; };
 		C9C326051CA28E9F00E65090 /* RVGCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVGCDViewController.m; sourceTree = "<group>"; };
 		C9C326061CA28E9F00E65090 /* RVGCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVGCDViewController.xib; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				C9BDAD601CC6237A00CBB1CA /* RVAnimation2ViewController.h */,
 				C9BDAD611CC6237A00CBB1CA /* RVAnimation2ViewController.m */,
 				C9BDAD621CC6237A00CBB1CA /* RVAnimation2ViewController.xib */,
+				C9BDAD651CC62E6E00CBB1CA /* RVPushPopAnimation.h */,
+				C9BDAD661CC62E6E00CBB1CA /* RVPushPopAnimation.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 				58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */,
 				58FF7D851C4624E000F06976 /* RVUPPayViewController.m in Sources */,
 				58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */,
+				C9BDAD671CC62E6E00CBB1CA /* RVPushPopAnimation.m in Sources */,
 				C9C326071CA28E9F00E65090 /* RVGCDViewController.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
