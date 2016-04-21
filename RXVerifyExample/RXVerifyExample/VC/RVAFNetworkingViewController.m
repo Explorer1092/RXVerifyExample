@@ -111,76 +111,69 @@ static dispatch_queue_t responseAnalysisQueue(void) {
     NSLog(@"sessionDataTask:%@", sessionDataTask);
 }
 
-/*
-
-AFHTTPRequestOperationManager *manager1 = [AFHTTPRequestOperationManager manager];
-[manager1 POST:@"http://openapi.service.cdn.vip.xunlei.com/high_speed_channel/query_flux"
-    parameters:nil
-      bodyData:jsonData
-       success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
 
-AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+- (void)test_Http_post_003
+{
+    
+    dispatch_queue_t queue = responseAnalysisQueue();
+    dispatch_group_t group = dispatch_group_create();
 
-NSString *fullUrl = [NSString stringWithFormat:@"%@%@", valueAddedServiceStaticDataURLString, language];
-[manager GET:[NSString stringWithFormat:fullUrl, XIAOQIANG_SERVER]
-  parameters:nil
-     success:^(NSURLSessionDataTask *task, id responseObject){
-         XMLogInfo(@"XMRValueAddedServiceManager getValueAddedStaticDataWithLanguage: result:%@", responseObject);
-         NSDictionary *vasDict = responseObject;
-         if (XM_IS_DICT_NIL(vasDict))
-         {
-             NSError *error = [NSError errorWithDomain:@"XMRValueAddedServiceError" code:-1 userInfo:nil];
-             fail(error);
-             return;
-         }
-         
-         if (nil != vasDict)
-         {
-             NSMutableArray *resultAry = [NSMutableArray array];
-             for (NSString *key in vasDict)
-             {
-                 NSDictionary *dict = vasDict[key];
-                 if (!XM_IS_DICT_NIL(dict))
-                 {
-                     XMRValueAddedService *vas = [[XMRValueAddedService alloc] initWithDictionary:dict key:key];
-                     [resultAry addObject:vas];
-                 }
-             }
-             
-             NSArray * sortAry = [resultAry sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-                 XMRValueAddedService *vas1 = (XMRValueAddedService *)obj1;
-                 XMRValueAddedService *vas2 = (XMRValueAddedService *)obj2;
-                 
-                 if (vas1.weight < vas2.weight) {
-                     return NSOrderedDescending;
-                 }else if (vas1.weight == vas2.weight) {
-                     return NSOrderedSame;
-                 }else {
-                     return NSOrderedAscending;
-                 }
-             }];
-             success(sortAry);
-         }
-         else
-         {
-             NSError *error = [NSError errorWithDomain:@"XMRValueAddedServiceError" code:-1 userInfo:nil];
-             fail(error);
-         }
-     }
-     failure:^(NSURLSessionDataTask *task, NSError *error){
-         fail(error);
-     }];
- 
- 
- */
+    NSString *base = @"http://api.hiexhibition.com";
+    NSString *info1 = @"v1/base/city";
+    NSLog(@"start");
+    dispatch_group_enter(group);
+    AFHTTPSessionManager *httpSessionManager1 = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:base]];
+    httpSessionManager1.completionQueue = queue;
+//    AFHTTPRequestSerializer *requestSerializer1 = [[AFHTTPRequestSerializer alloc] init];
+//    [requestSerializer1 setQueryStringSerializationWithBlock:^NSString *(NSURLRequest *request, id parameters, NSError **error) {
+//        return [self parametersFromDictionary:parameters];
+//    }];
+//    httpSessionManager1.requestSerializer = requestSerializer1;
+    [httpSessionManager1 POST:info1 parameters:nil progress:^(NSProgress * progress) {
+        NSLog(@"1progress");
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"1success:responseObject class:%@", [responseObject class]);
+        dispatch_group_leave(group);
+    } failure:^(NSURLSessionDataTask *task, NSError * error) {
+        NSLog(@"1failed");
+        dispatch_group_leave(group);
+    }];
+    
+    NSString *info2 = @"v1/base/dest";
+    dispatch_group_enter(group);
+    AFHTTPSessionManager *httpSessionManager2 = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:base]];
+    httpSessionManager2.completionQueue = queue;
+//    AFHTTPRequestSerializer *requestSerializer2 = [[AFHTTPRequestSerializer alloc] init];
+//    [requestSerializer2 setQueryStringSerializationWithBlock:^NSString *(NSURLRequest *request, id parameters, NSError **error) {
+//        return [self parametersFromDictionary:parameters];
+//    }];
+//    httpSessionManager2.requestSerializer = requestSerializer2;
+    
+    [httpSessionManager2 POST:info2 parameters:nil progress:^(NSProgress * progress) {
+        NSLog(@"2progress");
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"2success:responseObject class:%@", [responseObject class]);
+        dispatch_group_leave(group);
+    } failure:^(NSURLSessionDataTask *task, NSError * error) {
+        NSLog(@"2failed");
+        dispatch_group_leave(group);
+    }];
+    NSLog(@"before notify");
+    dispatch_group_notify(group, queue, ^{
+        NSLog(@"notify");
+    });
+
+}
+
+
 
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self test_Http_post_002];
+    [self test_Http_post_003];
 }
 
 - (void)didReceiveMemoryWarning {

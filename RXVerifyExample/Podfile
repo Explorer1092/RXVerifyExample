@@ -1,4 +1,11 @@
 
+pod 'YYText'
+pod 'YYImage'
+pod 'YYModel'
+pod 'YYCategories'
+pod 'YYCache'
+pod 'YYAsyncLayer'
+pod 'YYDispatchQueuePool'
 
 pod 'RXCoreText'
 pod 'RXVCMediator'

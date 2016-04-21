@@ -26,6 +26,32 @@ static NSString *kLGCircleMaskAnimation = @"kLGCircleMaskAnimation";
 @implementation RVPushPopAnimation
 
 
+/*
+ 
+ 
+ UIButton *btn = fromVC.button;
+ UIBezierPath *originPath = [UIBezierPath bezierPathWithOvalInRect:btn.frame];
+ CGPoint extremePoint = CGPointMake(btn.center.x - 0,CGRectGetHeight(fromVC.view.bounds));
+ 
+ float radius = sqrtf(extremePoint.x * extremePoint.x + extremePoint.y * extremePoint.y);
+ UIBezierPath *finalPath = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(btn.frame, -radius, -radius)];
+ 
+ CAShapeLayer *maskLayer = [CAShapeLayer layer];
+ maskLayer.path = finalPath.CGPath;
+ toVC.view.layer.mask = maskLayer;
+ 
+ CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
+ animation.removedOnCompletion = NO;
+ animation.duration = [self transitionDuration:transitionContext];
+ animation.delegate = self;
+ animation.fromValue = (__bridge id _Nullable)(originPath.CGPath);
+ animation.toValue =(__bridge id _Nullable)(finalPath.CGPath);
+ 
+ [maskLayer addAnimation:animation forKey:@"path"];
+ 
+ 
+ */
+
 
 #pragma mark - UIViewControllerAnimatedTransitioning
 
@@ -86,7 +112,7 @@ static NSString *kLGCircleMaskAnimation = @"kLGCircleMaskAnimation";
 {
     return 3;
 }
-- (void)animationEnded:(BOOL) transitionCompleted
+- (void)animationEnded:(BOOL)transitionCompleted
 {
     
 }
