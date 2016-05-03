@@ -90,14 +90,13 @@
     [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVAnimation2ViewController" query:nil animate:YES];
 }
 
-
-#pragma mark - initialize UI And Data
-- (void)initializeUIAndData
+#pragma mark - Private
+- (void)testNavgationAnimation
 {
     CGFloat width = RX_Window_Width;
     CGFloat height = RX_Window_Height - 64;
     
-
+    
     
     CGFloat buttonWidth = 75;
     CGFloat buttonOffset = 25;
@@ -131,7 +130,7 @@
     
     
     [self.blueButton addTarget:self action:@selector(blueButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
-
+    
     [self.view addSubview:self.greenButton];
     [self.view addSubview:self.blueButton];
     
@@ -144,9 +143,22 @@
     self.view.backgroundColor = [UIColor redColor];
     
     CGPoint center = [self.view convertPoint:self.blueButton.center fromView:self.blueButton];
-
+    
     
     self.rvPushPopAnimation = [[RVPushPopAnimation alloc] initWithCircleCenter:center circleRadius:self.blueButton.width / 2.0f];
+}
+
+
+- (void)testBezierPathAnimation
+{
+    
+}
+
+#pragma mark - initialize UI And Data
+- (void)initializeUIAndData
+{
+//    [self testNavgationAnimation];
+    [self testBezierPathAnimation];
     
 }
 - (void)initializeAction

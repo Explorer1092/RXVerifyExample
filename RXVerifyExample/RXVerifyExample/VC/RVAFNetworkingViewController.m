@@ -10,7 +10,33 @@
 #import <AFNetworking.h>
 
 
-
+// this function doesn't check params valid
+//int water_valume(const int *height, int width, int depth)
+//{
+//    int totalArea = width * width;
+//    int max = 0;
+//    // find max
+//    for (int i = 0; i < totalArea; i++) {
+//        int oneHeight = *(height + i * sizeof(int));
+//        if (max < oneHeight) {
+//            max = oneHeight;
+//        }
+//    }
+//    // to hold to Max
+//    int result = 0;
+//    for (int i = 0; i < width; i++) {
+//        int oneHeight = *(height + i * sizeof(int));
+//        int offset = abs(oneHeight - max);
+//        result += offset;
+//    }
+//    // if depth greater than max need to add
+//    if (depth > max) {
+//        int offset2 = (depth - max) * width * width;
+//        result += offset2;
+//    }
+//    return result;
+//    
+//}
 
 static dispatch_queue_t responseAnalysisQueue(void) {
     static dispatch_queue_t sharedQueue = nil;
@@ -174,6 +200,30 @@ static dispatch_queue_t responseAnalysisQueue(void) {
     // Do any additional setup after loading the view from its nib.
     
     [self test_Http_post_003];
+    
+//    int height_1 = {{5, 5, 5}, {5, 1, 5}, {5, 5, 5}};
+    
+    
+//    assert(water_valume(&height_1, 3, 3) == 4);
+    
+//    int *height1 = {5, 5, 5,
+//                    5, 1, 5,
+//                    5, 5, 5};
+//    assert(water_valume(height1, 3, 3) == 4);
+//    assert(water_valume(height1, 3, 2) == 4);
+//    assert(water_valume(height1, 3, 5) == 4);
+//    assert(water_valume(height1, 3, 6) == (4 + 9));
+//    
+//    int *height2 = {5, 5, 5, 6
+//                    5, 1, 5, 6
+//                    5, 5, 5, 6
+//                    1, 2, 3, 4};
+//    assert(water_valume(height2, 4, 3) == 27);
+//    assert(water_valume(height2, 4, 8) == (27 + 16 * 2));
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
