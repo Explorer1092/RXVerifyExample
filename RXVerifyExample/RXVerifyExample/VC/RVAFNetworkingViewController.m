@@ -141,7 +141,6 @@ static dispatch_queue_t responseAnalysisQueue(void) {
 
 - (void)test_Http_post_003
 {
-    
     dispatch_queue_t queue = responseAnalysisQueue();
     dispatch_group_t group = dispatch_group_create();
 
@@ -156,17 +155,22 @@ static dispatch_queue_t responseAnalysisQueue(void) {
 //        return [self parametersFromDictionary:parameters];
 //    }];
 //    httpSessionManager1.requestSerializer = requestSerializer1;
+//    httpSessionManager1.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript", nil];
     [httpSessionManager1 POST:info1 parameters:nil progress:^(NSProgress * progress) {
         NSLog(@"1progress");
     } success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"1success:responseObject class:%@", [responseObject class]);
+//        NSThread *thread = [NSThread currentThread];
+//        dispatch_queue_t queue = dispatch_get_current_queue();
+//        NSLog(@"%s", dispatch_queue_get_label(queue));
         dispatch_group_leave(group);
+        
     } failure:^(NSURLSessionDataTask *task, NSError * error) {
         NSLog(@"1failed");
         dispatch_group_leave(group);
     }];
     
-    NSString *info2 = @"v1/base/dest";
+    NSString *info2 = @"v1/base/enterprise_nature";
     dispatch_group_enter(group);
     AFHTTPSessionManager *httpSessionManager2 = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:base]];
     httpSessionManager2.completionQueue = queue;
@@ -186,7 +190,14 @@ static dispatch_queue_t responseAnalysisQueue(void) {
         dispatch_group_leave(group);
     }];
     NSLog(@"before notify");
+    
     dispatch_group_notify(group, queue, ^{
+        
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 200, 50, 50)];
+        view.backgroundColor = [UIColor redColor];
+        [self.view addSubview:view];
+//        dispatch_queue_t queue = disp
+        
         NSLog(@"notify");
     });
 
@@ -200,6 +211,10 @@ static dispatch_queue_t responseAnalysisQueue(void) {
     // Do any additional setup after loading the view from its nib.
     
     [self test_Http_post_003];
+    
+    
+
+    
     
 //    int height_1 = {{5, 5, 5}, {5, 1, 5}, {5, 5, 5}};
     

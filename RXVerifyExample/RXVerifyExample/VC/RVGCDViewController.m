@@ -632,6 +632,240 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
 }
 
 
+#pragma mark - Current Queue
+- (void)testGetCurrentQueue
+{
+    
+    
+    dispatch_queue_t queue0 = dispatch_get_current_queue();
+    dispatch_queue_t queue1 = dispatch_get_main_queue();
+    dispatch_queue_t queue2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    dispatch_queue_t queue3 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_t queue4 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
+    dispatch_queue_t queue5 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+    dispatch_queue_t queue5_1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+    dispatch_queue_t queue6 = dispatch_get_global_queue(6, 0);
+    
+    dispatch_queue_t queue7_1 = dispatch_queue_create("com.rx.001", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t queue7_2 = dispatch_queue_create("com.rx.001", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t queue7_3 = dispatch_queue_create("com.rx.003", DISPATCH_QUEUE_CONCURRENT);
+    
+    
+    dispatch_queue_t queue8_1 = dispatch_queue_create("com.rx.001", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue8_2 = dispatch_queue_create("com.rx.001", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue8_3 = dispatch_queue_create("com.rx.003", DISPATCH_QUEUE_SERIAL);
+    
+
+    
+    NSLog(@"queue0:%s %p", dispatch_queue_get_label(queue0), queue0);
+    NSLog(@"queue1:%s %p", dispatch_queue_get_label(queue1), queue1);
+    NSLog(@"queue2:%s %p", dispatch_queue_get_label(queue2), queue2);
+    NSLog(@"queue3:%s %p", dispatch_queue_get_label(queue3), queue3);
+    NSLog(@"queue4:%s %p", dispatch_queue_get_label(queue4), queue4);
+    NSLog(@"queue5:%s %p", dispatch_queue_get_label(queue5), queue5);
+    NSLog(@"queue5_1:%s %p", dispatch_queue_get_label(queue5_1), queue5_1);
+    NSLog(@"queue6:%s %p", dispatch_queue_get_label(queue6), queue6);
+    
+    
+    NSLog(@"queue7_1:%s %p", dispatch_queue_get_label(queue7_1), queue7_1);
+    NSLog(@"queue7_2:%s %p", dispatch_queue_get_label(queue7_2), queue7_2);
+    NSLog(@"queue7_3:%s %p", dispatch_queue_get_label(queue7_3), queue7_3);
+    
+    NSLog(@"queue8_1:%s %p", dispatch_queue_get_label(queue8_1), queue8_1);
+    NSLog(@"queue8_2:%s %p", dispatch_queue_get_label(queue8_2), queue8_2);
+    NSLog(@"queue8_3:%s %p", dispatch_queue_get_label(queue8_3), queue8_3);
+    
+    NSLog(@"perform");
+    
+//    [NSThread detachNewThreadSelector:@selector(detachTest) toTarget:self withObject:nil];
+    [self performSelectorInBackground:@selector(performBackground) withObject:nil];
+//    [self performSelectorOnMainThread:@selector(performMain) withObject:nil waitUntilDone:YES];
+    
+}
+- (void)detachTest
+{
+    [self onPlayWithString:@"detachTest"];
+}
+- (void)performBackground
+{
+    [self onPlayWithString:@"performBackground"];
+}
+- (void)performMain
+{
+    [self onPlayWithString:@"performMain"];
+}
+- (void)onPlayWithString:(NSString *)string
+{
+    dispatch_queue_t queue = dispatch_get_current_queue();
+    NSLog(@"%@:%s %p", string, dispatch_queue_get_label(queue), queue);
+    NSInteger i = 10;
+    NSInteger j = 5;
+    NSInteger k = i + j;
+    NSLog(@"%zd", k);
+}
+
+
+#pragma mark - dispatch_block_t
+- (void)test_dispatch_block_001
+{
+    dispatch_block_t blockT = ^(void) {
+        NSInteger i = 0;
+        NSInteger j = 1;
+        NSLog(@"%zd %zd", i, j);
+    };
+    
+    blockT();
+}
+#pragma mark - dispatch_set_target_queue
+- (void)test_dispatch_set_target_queue_001
+{
+    dispatch_queue_t targetQueue = dispatch_queue_create("test.target.queue", DISPATCH_QUEUE_SERIAL);
+    
+    dispatch_queue_t queue1 = dispatch_queue_create("test.1", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue2 = dispatch_queue_create("test.2", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue3 = dispatch_queue_create("test.3", DISPATCH_QUEUE_SERIAL);
+    
+    dispatch_set_target_queue(queue1, targetQueue);
+    dispatch_set_target_queue(queue2, targetQueue);
+    dispatch_set_target_queue(queue3, targetQueue);
+    
+    dispatch_async(queue1, ^{
+        NSLog(@"1 in");
+        [NSThread sleepForTimeInterval:3.f];
+        NSLog(@"1 out");
+    });
+    
+    dispatch_async(queue2, ^{
+        NSLog(@"2 in");
+        [NSThread sleepForTimeInterval:2.f];
+        NSLog(@"2 out");
+    });
+    dispatch_async(queue3, ^{
+        NSLog(@"3 in");
+        [NSThread sleepForTimeInterval:1.f];
+        NSLog(@"3 out");
+    });
+}
+
+#pragma mark - dispatch_set/get_specific
+- (void)test_dispatch_setget_specific_001
+{
+    
+    // don't get error example
+    dispatch_queue_t queue1 = dispatch_queue_create("rx.test.001", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue2 = dispatch_queue_create("rx.test.001", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue3 = dispatch_queue_create("rx.test.003", DISPATCH_QUEUE_SERIAL);
+    
+    
+    NSLog(@"queue1:%s %p", dispatch_queue_get_label(queue1), queue1);
+    NSLog(@"queue2:%s %p", dispatch_queue_get_label(queue2), queue2);
+    NSLog(@"queue3:%s %p", dispatch_queue_get_label(queue3), queue3);
+    
+    
+    int specificKey = 0;
+    CFStringRef specificValueRef = CFSTR("rx.001");
+//    dispatch_queue_set_specific(queue1, &specificKey, (void *)specificValueRef, (dispatch_function_t)CFRelease);
+    dispatch_queue_set_specific(queue1, &specificKey, (void *)specificValueRef, NULL);
+    CFStringRef getSpecificString = dispatch_queue_get_specific(queue1, &specificKey);
+    NSLog(@"%@  %@", specificValueRef, getSpecificString);
+    
+    dispatch_sync(queue1, ^{
+       
+        dispatch_queue_t queue = dispatch_get_current_queue();
+        NSLog(@"queue:%s %p", dispatch_queue_get_label(queue), queue);
+
+        
+        
+        CFStringRef getSpecific2String = dispatch_get_specific(&specificKey);
+        NSLog(@"%@  %@", specificValueRef, getSpecific2String);
+
+        
+    });
+    
+    dispatch_async(queue1, ^{
+        
+        // 这里是异步的不能使用这个函数:dispatch_get_current_queue
+//        dispatch_queue_t queue = dispatch_get_current_queue();
+//        NSLog(@"queue:%s %p", dispatch_queue_get_label(queue), queue);
+        
+        
+        
+        
+        CFStringRef getSpecific2String = dispatch_get_specific(&specificKey);
+        NSLog(@"%@  %@", specificValueRef, getSpecific2String);
+        
+        
+    });
+    
+    
+//    dispatch_sync(queue1, ^{
+//        
+//        CFStringRef getSpecific2String = dispatch_get_specific(&specificKey);
+//        NSLog(@"%@  %@", specificValueRef, getSpecific2String);
+//        
+//        
+//    });
+    
+    
+}
+
+- (void)test_dispatch_setget_specific_002
+{
+    dispatch_queue_t queueA = dispatch_queue_create("com.rx.001", NULL);
+    dispatch_queue_t queueB = dispatch_queue_create("com.rx.002", NULL);
+    dispatch_set_target_queue(queueB, queueA);
+    
+    static int specificKey;
+    CFStringRef specificValue = CFSTR("queueA");
+    dispatch_queue_set_specific(queueA,
+                                &specificKey,
+                                (void*)specificValue,
+                                (dispatch_function_t)CFRelease);
+    
+    
+    CFStringRef getSpecificString = dispatch_queue_get_specific(queueA, &specificKey);
+    NSLog(@"%@  %@", specificValue, getSpecificString);
+    
+    dispatch_sync(queueB, ^{
+        dispatch_block_t block = ^{
+            //do something
+            NSLog(@"11");
+        };
+        
+        
+        
+        dispatch_queue_t queue = dispatch_get_current_queue();
+        NSLog(@"queue:%s %p", dispatch_queue_get_label(queue), queue);
+        
+        CFStringRef retrievedValue = dispatch_get_specific(&specificKey);
+        NSLog(@"retrievedValue:%@", retrievedValue);
+
+        if (retrievedValue) {
+            block();
+        } else {
+            dispatch_sync(queueA, block);
+        }
+    });
+}
+
+#pragma mark - dispatch_function_t
+- (void)test_dispatch_function_001
+{
+    dispatch_function_t function = (__bridge void *)^(void *test) {
+        NSInteger i = 0;
+        NSInteger j = 1;
+        NSLog(@"%zd %zd", i, j);
+        return test;
+    };
+    
+    CFStringRef str2Ref = CFSTR("queueA");
+    
+    // 这个有问题
+//    CFStringRef ret = (CFStringRef)function((void *)str2Ref);
+    
+}
+
+
 #pragma mark - initialize UI And Data
 - (void)initializeUIAndData
 {
@@ -650,7 +884,28 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
     
 //    [self test_async_sync_004];
 //    [self test_get_label];
-    [self test_group_001];
+//    [self test_group_001];
+    
+    
+//    [self testGetCurrentQueue];
+//    [self test_dispatch_block_001];
+    
+//    [self test_dispatch_set_target_queue_001];
+    
+//    [self test_dispatch_setget_specific_001];
+//    [self test_dispatch_setget_specific_002];
+    
+    
+    
+    [self test_dispatch_function_001];
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 

@@ -84,7 +84,7 @@
 //    self.view.backgroundColor = [UIColor redColor];
     
     
-    [self performSelector:@selector(rvDebugTouchUpInside:) withObject:nil afterDelay:1];
+    [self performSelector:@selector(rvCGDTouchUpInside:) withObject:nil afterDelay:1];
     
     
 }
