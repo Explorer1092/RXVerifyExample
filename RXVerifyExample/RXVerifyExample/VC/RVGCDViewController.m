@@ -661,6 +661,20 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    
+    void (^complet111)(NSInteger, NSInteger) = ^(NSInteger i, NSInteger j){
+        NSInteger k = i + j;
+        NSLog(@"k:%zd", k);
+    };
+    
+    complet111(1, 2);
+    
+    void (^complte2222)(void) = ^(void){
+        NSInteger k = 10;
+        NSLog(@"k:%zd", k);
+    };
+    complte2222();
+    
     [self initializeUIAndData];
     [self initializeAction];
 }

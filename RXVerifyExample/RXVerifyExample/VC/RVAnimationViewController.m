@@ -45,6 +45,118 @@
     
     return nil;
 }
+#pragma mark - CAAnimationDelegate
+- (void)animationDidStart:(CAAnimation *)anim
+{
+    NSLog(@"anim:%p", anim);
+    NSLog(@"anim.delegate:%p", anim.delegate);
+}
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    NSLog(@"anim:%p", anim);
+    NSLog(@"anim.delegate:%p", anim.delegate);
+//    anim.delegate = nil;
+}
+#pragma mark - Private Animation
+// http://blog.csdn.net/fhbystudy/article/details/20464043
+- (void)testBezierPath
+{
+    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    [bezierPath addArcWithCenter:CGPointMake(200, 200) radius:100 startAngle:0 endAngle:(2 * M_PI) clockwise:0];
+    
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = bezierPath.CGPath;
+    shapeLayer.fillColor = [UIColor redColor].CGColor;
+    shapeLayer.strokeColor = [UIColor greenColor].CGColor;
+    shapeLayer.lineWidth = 3;
+    shapeLayer.frame = self.view.frame;
+    
+    NSString *keyPath = @"strokeEnd";
+//    keyPath = @"strokeStart";
+//    keyPath = @"lineWidth";
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:keyPath];
+    basicAnimation.duration = 1;
+    basicAnimation.fromValue = @(0);
+    basicAnimation.toValue = @(1);
+//    basicAnimation.beginTime
+//    basicAnimationf
+//    basicAnimation.removedOnCompletion = NO;
+//    basicAnimation.autoreverses = YES;
+    [shapeLayer addAnimation:basicAnimation forKey:@"key"];
+    
+    [self.view.layer addSublayer:shapeLayer];
+}
+- (void)testAnmation
+{
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(200, 200, 100, 100)];
+    view.backgroundColor = [UIColor greenColor];
+    
+    [self.view addSubview:view];
+    
+    
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    basicAnimation.duration = 2;
+    basicAnimation.fromValue = [NSValue valueWithCGPoint:view.layer.position];
+    basicAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(200, 400)];
+//    basicAnimation.removedOnCompletion = NO;
+//    basicAnimation.autoreverses = YES;
+    [view.layer addAnimation:basicAnimation forKey:@"kk"];
+    
+    view.center = CGPointMake(200, 400);
+    
+}
+- (void)testZhiFuBao
+{
+    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    [bezierPath addArcWithCenter:CGPointMake(200, 200) radius:100 startAngle:M_PI_2 endAngle:(2 * M_PI + M_PI_2) clockwise:1];
+    
+    [bezierPath moveToPoint:CGPointMake(150, 180)];
+    [bezierPath addLineToPoint:CGPointMake(220, 220)];
+    [bezierPath addLineToPoint:CGPointMake(260, 160)];
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = bezierPath.CGPath;
+    shapeLayer.fillColor = [UIColor whiteColor].CGColor;
+    shapeLayer.strokeColor = [UIColor greenColor].CGColor;
+    shapeLayer.lineWidth = 3;
+    shapeLayer.frame = self.view.frame;
+    
+    NSString *keyPath = @"strokeEnd";
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:keyPath];
+    basicAnimation.duration = 3;
+//    basicAnimation.delegate = self;
+    basicAnimation.fromValue = @(0);
+    basicAnimation.toValue = @(3);
+    [shapeLayer addAnimation:basicAnimation forKey:@"key"];
+    
+    [self.view.layer addSublayer:shapeLayer];
+}
+
+- (void)testAnimationDelegate
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(200, 200, 100, 100)];
+    view.backgroundColor = [UIColor greenColor];
+    
+    [self.view addSubview:view];
+    
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    basicAnimation.duration = 2;
+    basicAnimation.fromValue = [NSValue valueWithCGPoint:view.layer.position];
+    basicAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(200, 400)];
+    basicAnimation.delegate = self;
+//    basicAnimation.timingFunction
+    NSLog(@"anim:%p", basicAnimation);
+    NSLog(@"anim.delegate:%p", basicAnimation.delegate);
+//    basicAnimation.removedOnCompletion = NO;
+//    basicAnimation.autoreverses = YES;
+    [view.layer addAnimation:basicAnimation forKey:@"kk"];
+    
+    view.center = CGPointMake(200, 400);
+    
+    
+}
 
 #pragma mark - Action
 - (void)greenButtonTouchUpInside:(id)sender
@@ -74,7 +186,6 @@
 
 - (void)blueButtonTouchUpInside:(id)sender
 {
-    
 //    CATransition *transition = [CATransition animation];
 //    transition.duration = 1.0f;
 //    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
@@ -83,12 +194,19 @@
 //    transition.subtype = kCATransitionFromRight;
 //    transition.delegate = self;
 //    [self.navigationController.view.layer addAnimation:transition forKey:nil];
-    
-    
 //    self.navigationController.transitioningDelegate = self;
     self.navigationController.delegate = self;
     [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVAnimation2ViewController" query:nil animate:YES];
 }
+- (void)bezierPathButtonTouchUpInside:(id)sender
+{
+//    [self testBezierPath];
+//    [self testAnmation];
+    [self testZhiFuBao];
+//    [self testAnimationDelegate];
+}
+
+
 
 #pragma mark - Private
 - (void)testNavgationAnimation
@@ -151,7 +269,13 @@
 
 - (void)testBezierPathAnimation
 {
+    UIButton *bezierPathButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    bezierPathButton.frame = CGRectMake(0, 0, 150, 150);
+    [bezierPathButton setTitle:@"贝塞尔曲线" forState:UIControlStateNormal];
+    [bezierPathButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [bezierPathButton addTarget:self action:@selector(bezierPathButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
     
+    [self.view addSubview:bezierPathButton];
 }
 
 #pragma mark - initialize UI And Data

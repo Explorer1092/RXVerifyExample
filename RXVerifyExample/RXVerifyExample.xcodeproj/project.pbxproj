@@ -52,6 +52,8 @@
 		C9BDAD671CC62E6E00CBB1CA /* RVPushPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDAD661CC62E6E00CBB1CA /* RVPushPopAnimation.m */; };
 		C9C326071CA28E9F00E65090 /* RVGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C326051CA28E9F00E65090 /* RVGCDViewController.m */; };
 		C9C326081CA28E9F00E65090 /* RVGCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C326061CA28E9F00E65090 /* RVGCDViewController.xib */; };
+		C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C58B6B1CD8AE4400448350 /* RVDebugViewController.m */; };
+		C9C58B6E1CD8AE4400448350 /* RVDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C58B6C1CD8AE4400448350 /* RVDebugViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +128,9 @@
 		C9C326041CA28E9F00E65090 /* RVGCDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVGCDViewController.h; sourceTree = "<group>"; };
 		C9C326051CA28E9F00E65090 /* RVGCDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVGCDViewController.m; sourceTree = "<group>"; };
 		C9C326061CA28E9F00E65090 /* RVGCDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVGCDViewController.xib; sourceTree = "<group>"; };
+		C9C58B6A1CD8AE4400448350 /* RVDebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVDebugViewController.h; sourceTree = "<group>"; };
+		C9C58B6B1CD8AE4400448350 /* RVDebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVDebugViewController.m; sourceTree = "<group>"; };
+		C9C58B6C1CD8AE4400448350 /* RVDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVDebugViewController.xib; sourceTree = "<group>"; };
 		DA873A2C4D346B9960AB9F28 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -259,6 +264,9 @@
 				C9BDAD621CC6237A00CBB1CA /* RVAnimation2ViewController.xib */,
 				C9BDAD651CC62E6E00CBB1CA /* RVPushPopAnimation.h */,
 				C9BDAD661CC62E6E00CBB1CA /* RVPushPopAnimation.m */,
+				C9C58B6A1CD8AE4400448350 /* RVDebugViewController.h */,
+				C9C58B6B1CD8AE4400448350 /* RVDebugViewController.m */,
+				C9C58B6C1CD8AE4400448350 /* RVDebugViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -394,6 +402,7 @@
 				5803F0D01C190FFC0071FDDA /* RVRefreshViewController.xib in Resources */,
 				C9C326081CA28E9F00E65090 /* RVGCDViewController.xib in Resources */,
 				5803F0D51C1913260071FDDA /* RVScrollViewController.xib in Resources */,
+				C9C58B6E1CD8AE4400448350 /* RVDebugViewController.xib in Resources */,
 				5803F0DA1C196F520071FDDA /* RVRectViewController.xib in Resources */,
 				58CA8D5C1C1ABEFB00A507BE /* RVTransformViewController.xib in Resources */,
 				58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */,
@@ -474,6 +483,7 @@
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
+				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.mm in Sources */,
