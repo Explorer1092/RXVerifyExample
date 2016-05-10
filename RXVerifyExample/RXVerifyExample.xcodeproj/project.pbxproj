@@ -54,6 +54,8 @@
 		C9C326081CA28E9F00E65090 /* RVGCDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C326061CA28E9F00E65090 /* RVGCDViewController.xib */; };
 		C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C58B6B1CD8AE4400448350 /* RVDebugViewController.m */; };
 		C9C58B6E1CD8AE4400448350 /* RVDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9C58B6C1CD8AE4400448350 /* RVDebugViewController.xib */; };
+		C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F53E211CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m */; };
+		C9F53E241CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F53E221CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,6 +133,9 @@
 		C9C58B6A1CD8AE4400448350 /* RVDebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVDebugViewController.h; sourceTree = "<group>"; };
 		C9C58B6B1CD8AE4400448350 /* RVDebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVDebugViewController.m; sourceTree = "<group>"; };
 		C9C58B6C1CD8AE4400448350 /* RVDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVDebugViewController.xib; sourceTree = "<group>"; };
+		C9F53E201CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVStrongWeakSelfViewController.h; sourceTree = "<group>"; };
+		C9F53E211CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVStrongWeakSelfViewController.m; sourceTree = "<group>"; };
+		C9F53E221CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVStrongWeakSelfViewController.xib; sourceTree = "<group>"; };
 		DA873A2C4D346B9960AB9F28 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -267,6 +272,9 @@
 				C9C58B6A1CD8AE4400448350 /* RVDebugViewController.h */,
 				C9C58B6B1CD8AE4400448350 /* RVDebugViewController.m */,
 				C9C58B6C1CD8AE4400448350 /* RVDebugViewController.xib */,
+				C9F53E201CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.h */,
+				C9F53E211CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m */,
+				C9F53E221CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -398,6 +406,7 @@
 				58D6604A1C25A54A00912786 /* RVPopupBoxViewController.xib in Resources */,
 				58D6602B1C256BAD00912786 /* RVWYViewController.xib in Resources */,
 				58FF7D861C4624E000F06976 /* RVUPPayViewController.xib in Resources */,
+				C9F53E241CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib in Resources */,
 				58AAC3151C38CDF20023D2EA /* RVButtonViewController.xib in Resources */,
 				5803F0D01C190FFC0071FDDA /* RVRefreshViewController.xib in Resources */,
 				C9C326081CA28E9F00E65090 /* RVGCDViewController.xib in Resources */,
@@ -482,6 +491,7 @@
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
+				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
