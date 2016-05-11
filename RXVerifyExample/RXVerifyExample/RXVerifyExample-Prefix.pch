@@ -31,6 +31,7 @@
 //#endif
 
 #pragma mark - cocoapod
+#import "Aspects.h"
 
 
 #pragma mark - My cocoapod

@@ -16,6 +16,42 @@
 @end
 
 @implementation AppDelegate
+
+
+- (void)config
+{
+    [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info) {
+        NSLog(@"viewDidLoad:%@", info.instance);
+    } error:NULL];
+    
+    [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, BOOL animation) {
+        NSLog(@"viewWillAppear:%@", info.instance);
+    } error:NULL];
+    
+    
+    
+    
+    [UIViewController aspect_hookSelector:@selector(viewDidAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, BOOL animation) {
+        NSLog(@"viewDidAppear:%@", info.instance);
+    } error:NULL];
+    
+    
+    
+    [UIViewController aspect_hookSelector:@selector(viewWillDisappear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, BOOL animation) {
+        NSLog(@"viewWillDisappear:%@", info.instance);
+    } error:NULL];
+    
+    
+    
+    [UIViewController aspect_hookSelector:@selector(viewDidDisappear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, BOOL animation) {
+        NSLog(@"viewDidDisappear:%@", info.instance);
+    } error:NULL];
+    
+    
+    
+    
+}
+
 - (void)showMain
 {
     UIViewController *vc = nil;
@@ -28,6 +64,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self config];
     [self showMain];
     [self.window makeKeyAndVisible];
     return YES;

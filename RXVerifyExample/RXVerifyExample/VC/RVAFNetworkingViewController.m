@@ -210,7 +210,7 @@ static dispatch_queue_t responseAnalysisQueue(void) {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self test_Http_post_003];
+//    [self test_Http_post_003];
     
     
 

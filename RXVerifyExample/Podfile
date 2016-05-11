@@ -29,7 +29,7 @@ pod 'RXAppDefine'
 
 pod 'AFNetworking'
 
-
+pod 'Aspects'
 
 
 
