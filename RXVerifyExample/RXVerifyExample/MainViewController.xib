@@ -113,6 +113,13 @@
                         <action selector="rvStrongWeakSelfTouchUpInside:" destination="-1" eventType="touchUpInside" id="Kie-WR-Viz"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ9-bB-DD7">
+                    <rect key="frame" x="177" y="353" width="127" height="30"/>
+                    <state key="normal" title="RVViewCycle"/>
+                    <connections>
+                        <action selector="rvViewCycleTouchUpInside:" destination="-1" eventType="touchUpInside" id="lbr-ih-2Ep"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

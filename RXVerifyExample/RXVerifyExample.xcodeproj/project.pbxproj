@@ -43,6 +43,8 @@
 		58FF7D851C4624E000F06976 /* RVUPPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FF7D831C4624E000F06976 /* RVUPPayViewController.m */; };
 		58FF7D861C4624E000F06976 /* RVUPPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */; };
 		688362FEF9A294D3EAF9F0B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA873A2C4D346B9960AB9F28 /* libPods.a */; };
+		C937947D1CE331D30065F68C /* RVViewCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C937947B1CE331D30065F68C /* RVViewCycleViewController.m */; };
+		C937947E1CE331D30065F68C /* RVViewCycleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C937947C1CE331D30065F68C /* RVViewCycleViewController.xib */; };
 		C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94EB78A1CC4E66600AFDADC /* RVAFNetworkingViewController.m */; };
 		C94EB78D1CC4E66600AFDADC /* RVAFNetworkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94EB78B1CC4E66600AFDADC /* RVAFNetworkingViewController.xib */; };
 		C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDAD5C1CC621EA00CBB1CA /* RVAnimationViewController.m */; };
@@ -116,6 +118,9 @@
 		58FF7D831C4624E000F06976 /* RVUPPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVUPPayViewController.m; sourceTree = "<group>"; };
 		58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVUPPayViewController.xib; sourceTree = "<group>"; };
 		89CB7AC47D3FCAD8FBB7593A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C937947A1CE331D30065F68C /* RVViewCycleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVViewCycleViewController.h; sourceTree = "<group>"; };
+		C937947B1CE331D30065F68C /* RVViewCycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVViewCycleViewController.m; sourceTree = "<group>"; };
+		C937947C1CE331D30065F68C /* RVViewCycleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVViewCycleViewController.xib; sourceTree = "<group>"; };
 		C94EB7891CC4E66600AFDADC /* RVAFNetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVAFNetworkingViewController.h; sourceTree = "<group>"; };
 		C94EB78A1CC4E66600AFDADC /* RVAFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVAFNetworkingViewController.m; sourceTree = "<group>"; };
 		C94EB78B1CC4E66600AFDADC /* RVAFNetworkingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVAFNetworkingViewController.xib; sourceTree = "<group>"; };
@@ -275,6 +280,9 @@
 				C9F53E201CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.h */,
 				C9F53E211CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m */,
 				C9F53E221CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib */,
+				C937947A1CE331D30065F68C /* RVViewCycleViewController.h */,
+				C937947B1CE331D30065F68C /* RVViewCycleViewController.m */,
+				C937947C1CE331D30065F68C /* RVViewCycleViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -408,6 +416,7 @@
 				58FF7D861C4624E000F06976 /* RVUPPayViewController.xib in Resources */,
 				C9F53E241CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib in Resources */,
 				58AAC3151C38CDF20023D2EA /* RVButtonViewController.xib in Resources */,
+				C937947E1CE331D30065F68C /* RVViewCycleViewController.xib in Resources */,
 				5803F0D01C190FFC0071FDDA /* RVRefreshViewController.xib in Resources */,
 				C9C326081CA28E9F00E65090 /* RVGCDViewController.xib in Resources */,
 				5803F0D51C1913260071FDDA /* RVScrollViewController.xib in Resources */,
@@ -497,6 +506,7 @@
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.mm in Sources */,
+				C937947D1CE331D30065F68C /* RVViewCycleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

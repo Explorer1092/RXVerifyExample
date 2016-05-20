@@ -80,6 +80,10 @@
     
     [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVStrongWeakSelfViewController" query:nil animate:YES];
 }
+- (IBAction)rvViewCycleTouchUpInside:(id)sender {
+    
+    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVViewCycleViewController" query:nil animate:YES];
+}
 
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
