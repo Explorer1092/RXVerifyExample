@@ -37,8 +37,8 @@
 {
     
     
-    id objects[] = {@"1", @"2", @"3"};
-    NSArray *array = [[NSArray alloc] initWithObjects:objects count:3];
+//    id objects[] = {@"1", @"2", @"3"};
+//    NSArray *array = [[NSArray alloc] initWithObjects:objects count:3];
     
     NSInteger max = 0;
     NSInteger i = 0;

@@ -10,10 +10,10 @@
 
 static const float kLGCircleDefaultMaxScale = 15.0f;
 static const float kLGCircleDefaultMinScale = 1.0f;
-static const float kLGCircleAnimationTime = 0.5f;   //圆圈遮罩的动画时间
-
-static const float kLGTransitionTime = 0.6f;    //整个呈现动画的时间
-static const float kLGScaleChange = 0.1f;
+//static const float kLGCircleAnimationTime = 0.5f;   //圆圈遮罩的动画时间
+//
+//static const float kLGTransitionTime = 0.6f;    //整个呈现动画的时间
+//static const float kLGScaleChange = 0.1f;
 
 static NSString *kLGCircleMaskAnimation = @"kLGCircleMaskAnimation";
 

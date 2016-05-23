@@ -851,14 +851,14 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
 #pragma mark - dispatch_function_t
 - (void)test_dispatch_function_001
 {
-    dispatch_function_t function = (__bridge void *)^(void *test) {
-        NSInteger i = 0;
-        NSInteger j = 1;
-        NSLog(@"%zd %zd", i, j);
-        return test;
-    };
-    
-    CFStringRef str2Ref = CFSTR("queueA");
+//    dispatch_function_t function = (__bridge void *)^(void *test) {
+//        NSInteger i = 0;
+//        NSInteger j = 1;
+//        NSLog(@"%zd %zd", i, j);
+//        return test;
+//    };
+//    
+//    CFStringRef str2Ref = CFSTR("queueA");
     
     // 这个有问题
 //    CFStringRef ret = (CFStringRef)function((void *)str2Ref);

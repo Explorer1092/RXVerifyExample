@@ -45,6 +45,8 @@
 		688362FEF9A294D3EAF9F0B6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA873A2C4D346B9960AB9F28 /* libPods.a */; };
 		C937947D1CE331D30065F68C /* RVViewCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C937947B1CE331D30065F68C /* RVViewCycleViewController.m */; };
 		C937947E1CE331D30065F68C /* RVViewCycleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C937947C1CE331D30065F68C /* RVViewCycleViewController.xib */; };
+		C93A39491CF2F45D00C0C442 /* RVRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A39471CF2F45D00C0C442 /* RVRunLoopViewController.m */; };
+		C93A394A1CF2F45D00C0C442 /* RVRunLoopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C93A39481CF2F45D00C0C442 /* RVRunLoopViewController.xib */; };
 		C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94EB78A1CC4E66600AFDADC /* RVAFNetworkingViewController.m */; };
 		C94EB78D1CC4E66600AFDADC /* RVAFNetworkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94EB78B1CC4E66600AFDADC /* RVAFNetworkingViewController.xib */; };
 		C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDAD5C1CC621EA00CBB1CA /* RVAnimationViewController.m */; };
@@ -121,6 +123,9 @@
 		C937947A1CE331D30065F68C /* RVViewCycleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVViewCycleViewController.h; sourceTree = "<group>"; };
 		C937947B1CE331D30065F68C /* RVViewCycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVViewCycleViewController.m; sourceTree = "<group>"; };
 		C937947C1CE331D30065F68C /* RVViewCycleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVViewCycleViewController.xib; sourceTree = "<group>"; };
+		C93A39461CF2F45D00C0C442 /* RVRunLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVRunLoopViewController.h; sourceTree = "<group>"; };
+		C93A39471CF2F45D00C0C442 /* RVRunLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVRunLoopViewController.m; sourceTree = "<group>"; };
+		C93A39481CF2F45D00C0C442 /* RVRunLoopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVRunLoopViewController.xib; sourceTree = "<group>"; };
 		C94EB7891CC4E66600AFDADC /* RVAFNetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVAFNetworkingViewController.h; sourceTree = "<group>"; };
 		C94EB78A1CC4E66600AFDADC /* RVAFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVAFNetworkingViewController.m; sourceTree = "<group>"; };
 		C94EB78B1CC4E66600AFDADC /* RVAFNetworkingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVAFNetworkingViewController.xib; sourceTree = "<group>"; };
@@ -283,6 +288,9 @@
 				C937947A1CE331D30065F68C /* RVViewCycleViewController.h */,
 				C937947B1CE331D30065F68C /* RVViewCycleViewController.m */,
 				C937947C1CE331D30065F68C /* RVViewCycleViewController.xib */,
+				C93A39461CF2F45D00C0C442 /* RVRunLoopViewController.h */,
+				C93A39471CF2F45D00C0C442 /* RVRunLoopViewController.m */,
+				C93A39481CF2F45D00C0C442 /* RVRunLoopViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -404,6 +412,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93A394A1CF2F45D00C0C442 /* RVRunLoopViewController.xib in Resources */,
 				5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */,
 				C9BDAD641CC6237A00CBB1CA /* RVAnimation2ViewController.xib in Resources */,
 				5850B2851BF4803E00EC9144 /* coretext-image-2.jpg in Resources */,
@@ -492,6 +501,7 @@
 				58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */,
 				C9BDAD631CC6237A00CBB1CA /* RVAnimation2ViewController.m in Sources */,
 				58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */,
+				C93A39491CF2F45D00C0C442 /* RVRunLoopViewController.m in Sources */,
 				58FF7D851C4624E000F06976 /* RVUPPayViewController.m in Sources */,
 				58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */,
 				C9BDAD671CC62E6E00CBB1CA /* RVPushPopAnimation.m in Sources */,

@@ -132,8 +132,8 @@
     // Do any additional setup after loading the view from its nib.
     
     [self performSelector:@selector(testStrongWeakSelf1) withObject:nil afterDelay:1];
-    [self performSelector:@selector(testStrongWeakSelf2) withObject:nil afterDelay:1];
-    [self performSelector:@selector(testStrongWeakSelf3) withObject:nil afterDelay:1];
+//    [self performSelector:@selector(testStrongWeakSelf2) withObject:nil afterDelay:1];
+//    [self performSelector:@selector(testStrongWeakSelf3) withObject:nil afterDelay:1];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -204,13 +204,99 @@ static dispatch_queue_t responseAnalysisQueue(void) {
 }
 
 
+- (void)test_Http_post_004
+{
+    dispatch_queue_t queue = responseAnalysisQueue();
+    dispatch_group_t group = dispatch_group_create();
+    
+    NSString *base = @"http://api.hiexhibition.com";
+    NSString *info1 = @"v1/base/city";
+    NSLog(@"start");
+    dispatch_group_enter(group);
+
+    
+    AFHTTPSessionManager *httpSessionManager1 = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:base]];
+    httpSessionManager1.completionQueue = queue;
+    httpSessionManager1.completionGroup = group;
+    //    AFHTTPRequestSerializer *requestSerializer1 = [[AFHTTPRequestSerializer alloc] init];
+    //    [requestSerializer1 setQueryStringSerializationWithBlock:^NSString *(NSURLRequest *request, id parameters, NSError **error) {
+    //        return [self parametersFromDictionary:parameters];
+    //    }];
+    //    httpSessionManager1.requestSerializer = requestSerializer1;
+    //    httpSessionManager1.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript", nil];
+    [httpSessionManager1 POST:info1 parameters:nil progress:^(NSProgress * progress) {
+        NSLog(@"1progress");
+
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"1success:responseObject class:%@", [responseObject class]);
+        //        NSThread *thread = [NSThread currentThread];
+        //        dispatch_queue_t queue = dispatch_get_current_queue();
+        //        NSLog(@"%s", dispatch_queue_get_label(queue));
+        dispatch_group_leave(group);
+
+    } failure:^(NSURLSessionDataTask *task, NSError * error) {
+        NSLog(@"1failed");
+        dispatch_group_leave(group);
+
+    }];
+    
+    
+    dispatch_group_enter(group);
+
+    NSString *info2 = @"v1/base/enterprise_nature";
+    AFHTTPSessionManager *httpSessionManager2 = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:base]];
+    httpSessionManager2.completionQueue = queue;
+    httpSessionManager2.completionGroup = group;
+    //    AFHTTPRequestSerializer *requestSerializer2 = [[AFHTTPRequestSerializer alloc] init];
+    //    [requestSerializer2 setQueryStringSerializationWithBlock:^NSString *(NSURLRequest *request, id parameters, NSError **error) {
+    //        return [self parametersFromDictionary:parameters];
+    //    }];
+    //    httpSessionManager2.requestSerializer = requestSerializer2;
+    
+    [httpSessionManager2 POST:info2 parameters:nil progress:^(NSProgress * progress) {
+        NSLog(@"2progress");
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"2success:responseObject class:%@", [responseObject class]);
+        dispatch_group_leave(group);
+
+    } failure:^(NSURLSessionDataTask *task, NSError * error) {
+        NSLog(@"2failed");
+        dispatch_group_leave(group);
+
+    }];
+    NSLog(@"before notify");
+    
+    dispatch_group_notify(group, queue, ^{
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 200, 50, 50)];
+            view.backgroundColor = [UIColor redColor];
+            [self.view addSubview:view];
+            
+            NSLog(@"notify");
+        });
+        
+    });
+    
+}
+
+
 
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-//    [self test_Http_post_003];
+    
+//    dispatch_queue_t queue = dispatch_queue_create("com.1", DISPATCH_QUEUE_SERIAL);
+//    dispatch_async(queue, ^{
+//        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 200, 50, 50)];
+//        view.backgroundColor = [UIColor redColor];
+//        [self.view addSubview:view];
+//        NSLog(@"Kkkk");
+//    });
+//    
+    
+    [self test_Http_post_004];
     
     
 

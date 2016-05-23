@@ -84,6 +84,10 @@
     
     [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVViewCycleViewController" query:nil animate:YES];
 }
+- (IBAction)rvRunLoopTouchUpInside:(id)sender {
+    
+    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVRunLoopViewController" query:nil animate:YES];
+}
 
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
@@ -93,7 +97,7 @@
 //    self.view.backgroundColor = [UIColor redColor];
     
     
-    [self performSelector:@selector(rvAFNetworkingTouchUpInside:) withObject:nil afterDelay:1];
+    [self performSelector:@selector(rvStrongWeakSelfTouchUpInside:) withObject:nil afterDelay:1];
     
     
 }

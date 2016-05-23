@@ -120,6 +120,13 @@
                         <action selector="rvViewCycleTouchUpInside:" destination="-1" eventType="touchUpInside" id="lbr-ih-2Ep"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cC-if-bQ6">
+                    <rect key="frame" x="177" y="396" width="146" height="36"/>
+                    <state key="normal" title="RVRunLoop"/>
+                    <connections>
+                        <action selector="rvRunLoopTouchUpInside:" destination="-1" eventType="touchUpInside" id="bJG-gS-jOQ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>
