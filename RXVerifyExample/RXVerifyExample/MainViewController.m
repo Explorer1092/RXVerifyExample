@@ -97,7 +97,7 @@
 //    self.view.backgroundColor = [UIColor redColor];
     
     
-    [self performSelector:@selector(rvStrongWeakSelfTouchUpInside:) withObject:nil afterDelay:1];
+    [self performSelector:@selector(rvRunLoopTouchUpInside:) withObject:nil afterDelay:1];
     
     
 }

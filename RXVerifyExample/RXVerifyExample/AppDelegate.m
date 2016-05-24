@@ -67,6 +67,13 @@
     [self config];
     [self showMain];
     [self.window makeKeyAndVisible];
+    
+    
+    
+//    CFRunLoopRef runLoopRef = CFRunLoopGetMain();
+//    NSLog(@"%@", runLoopRef);
+    
+    
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
