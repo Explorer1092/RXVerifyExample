@@ -91,7 +91,7 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
 @property (nonatomic, assign) CFRunLoopRef runLoopRef;
 
 
-@property (nonatomic, strong) NSThread *runLoopThread;
+@property (nonatomic, weak) NSThread *runLoopThread;
 
 @property (nonatomic, strong) NSRunLoop *runLoop;
 
@@ -129,7 +129,10 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)dealloc
+{
+    NSLog(@"deallocdeallocdeallocdeallocdeallocdeallocdealloc");
+}
 #pragma mark - Test
 
 - (void)testRunLoopObserve
