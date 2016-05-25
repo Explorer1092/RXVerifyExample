@@ -80,10 +80,15 @@
         object.action = @selector(sendToMode_abc123Action:);
         object.object = nil;
         object.mode = @"abc123";
+        object.mode = NSDefaultRunLoopMode;
         
-        [self.rxRunLoop executeWithRXRunLoopExeObject:object];
+//        [self.rxRunLoop executeWithRXRunLoopExeObject:object];
+        
+        [self performSelector:@selector(sendToMode_abc123Action:) onThread:self.rxRunLoop.thread withObject:nil waitUntilDone:YES];
         
         NSLog(@"%@", self.rxRunLoop);
+        
+        
         
     }
 }
@@ -94,6 +99,10 @@
     
     NSLog(@"current run loop:%@", [self.rxRunLoop currentRunLoopInfo]);
     NSLog(@"sendToMode_abc123Action");
+    
+    
+    
+    
 }
 
 

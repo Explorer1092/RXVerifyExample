@@ -115,6 +115,9 @@ void myRunLoopObserver2(CFRunLoopObserverRef observer, CFRunLoopActivity activit
     
     if ([object.mode isEqualToString:NSDefaultRunLoopMode]) {
         // 如果mode是NSDefaultRunLoopMode 请使用其他的方法
+        
+        [object.target performSelector:object.action onThread:self.thread withObject:object.object waitUntilDone:NO modes:@[NSDefaultRunLoopMode]];
+        
         return;
     }
     
@@ -161,7 +164,6 @@ void myRunLoopObserver2(CFRunLoopObserverRef observer, CFRunLoopActivity activit
 
 - (void)stop
 {
-    
     
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
     
@@ -332,6 +334,7 @@ void myRunLoopObserver2(CFRunLoopObserverRef observer, CFRunLoopActivity activit
     NSArray *array = [self descriptionInfoArrayWithRunLoopRef:runLoopRef tag:@"current"];
     
     return [array description];
+    
     
 }
 
