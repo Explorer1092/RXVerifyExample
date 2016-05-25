@@ -11,83 +11,18 @@
 
 @interface MainViewController ()
 
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSArray *functionItems;
+
+
+
+
 @end
 
 @implementation MainViewController
 
-
-- (IBAction)rvMenuTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVMenuViewController" query:nil animate:YES];
-}
-
-
-- (IBAction)rvRefreshTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVRefreshViewController" query:nil animate:YES];
-}
-
-
-- (IBAction)rvScrollTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVScrollViewController" query:nil animate:YES];
-}
-
-- (IBAction)rvRectTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVRectViewController" query:nil animate:YES];
-}
-- (IBAction)rvTransformTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVTransformViewController" query:nil animate:YES];
-}
-- (IBAction)rvWYTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVWYViewController" query:nil animate:YES];
-}
-- (IBAction)rvPopupBoxViewTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVPopupBoxViewController" query:nil animate:YES];
-}
-- (IBAction)rvButtonTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVButtonViewController" query:nil animate:YES];
-}
-
-- (IBAction)rvUPPayTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVUPPayViewController" query:nil animate:YES];
-}
-- (IBAction)rvCGDTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVGCDViewController" query:nil animate:YES];
-}
-- (IBAction)rvAFNetworkingTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVAFNetworkingViewController" query:nil animate:YES];
-}
-- (IBAction)rvAnimationTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVAnimationViewController" query:nil animate:YES];
-}
-
-- (IBAction)rvDebugTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVDebugViewController" query:nil animate:YES];
-}
-
-- (IBAction)rvStrongWeakSelfTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVStrongWeakSelfViewController" query:nil animate:YES];
-}
-- (IBAction)rvViewCycleTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVViewCycleViewController" query:nil animate:YES];
-}
-- (IBAction)rvRunLoopTouchUpInside:(id)sender {
-    
-    [RXVCMediator pushInNavigationController:self.navigationController withString:@"rxpage://RVRunLoopViewController" query:nil animate:YES];
-}
 
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
@@ -97,7 +32,20 @@
 //    self.view.backgroundColor = [UIColor redColor];
     
     
-    [self performSelector:@selector(rvRunLoopTouchUpInside:) withObject:nil afterDelay:1];
+    
+    self.functionItems = @[@"RVMenu", @"RVRefresh", @"RVRect",
+                           @"RVScroll", @"RVTrans", @"RVWY",
+                           @"RVPopupBox", @"RVButton", @"RVUPPay",
+                           @"RVGCD", @"RVAFNetworking", @"RVAnimation",
+                           @"RVDebug", @"RVStrongWeakSelf", @"RVViewCycle",
+                           @"RVRunLoop"];
+    
+    
+
+    NSString *object = self.functionItems.lastObject;
+    object = @"RVRunLoop";
+    [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
+    
     
     
 }
@@ -106,6 +54,41 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.functionItems.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *identify = @"abc123";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+    }
+    cell.textLabel.text = self.functionItems[indexPath.row];
+    return cell;
+}
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSString *tmp = self.functionItems[indexPath.row];
+    [self gotoExampleVCWithName:tmp];
+}
+
+#pragma mark - Private
+- (void)gotoExampleVCWithName:(NSString *)name
+{
+    NSString *clsString = [NSString stringWithFormat:@"rxpage://%@ViewController", name];
+    
+    [RXVCMediator pushInNavigationController:self.navigationController withString:clsString query:nil animate:YES];
+
+}
+
 
 /*
 #pragma mark - Navigation

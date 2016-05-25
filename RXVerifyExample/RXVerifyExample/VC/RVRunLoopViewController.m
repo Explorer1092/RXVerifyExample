@@ -11,6 +11,8 @@
 
 void RunLoopSourceScheduleRoutine (void *info, CFRunLoopRef rl, CFStringRef mode)
 {
+    
+    NSLog(@"RunLoopSourceScheduleRoutine");
 //    RunLoopSource* obj = (RunLoopSource*)info;
 //    AppDelegate*   del = [AppDelegate sharedAppDelegate];
 //    RunLoopContext* theContext = [[RunLoopContext alloc] initWithSource:obj andLoop:rl];
@@ -20,16 +22,19 @@ void RunLoopSourceScheduleRoutine (void *info, CFRunLoopRef rl, CFStringRef mode
 }
 void RunLoopSourcePerformRoutine (void *info)
 {
+    NSLog(@"RunLoopSourcePerformRoutine");
+
 //    RunLoopSource*  obj = (RunLoopSource*)info;
 //    [obj sourceFired];
 }
 
 void RunLoopSourceCancelRoutine (void *info, CFRunLoopRef rl, CFStringRef mode)
 {
+    NSLog(@"RunLoopSourceCancelRoutine");
+
 //    RVRunLoopViewController* obj = (RVRunLoopViewController*)info;
 //    AppDelegate* del = [AppDelegate sharedAppDelegate];
 //    RunLoopContext* theContext = [[RunLoopContext alloc] initWithSource:obj andLoop:rl];
-//    
 //    [del performSelectorOnMainThread:@selector(removeSource:)
 //                          withObject:theContext waitUntilDone:YES];
 }
@@ -249,14 +254,12 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
     
     CFRunLoopAddCommonMode(runLoopRef, (__bridge CFStringRef)@"123");
     
-    //设置Run loop observer的运行环境
+//    //设置Run loop observer的运行环境
     CFRunLoopObserverContext context = {0, (__bridge void *)self, NULL, NULL, NULL};
     CFRunLoopObserverRef runLoopObserverRef = CFRunLoopObserverCreate(kCFAllocatorDefault, kCFRunLoopAllActivities, YES, 0, &myRunLoopObserver, &context);
-    
-    
     CFRunLoopAddObserver(runLoopRef, runLoopObserverRef, (__bridge CFStringRef)@"123");
-    
-    
+//
+//    
     CFRunLoopAddObserver(runLoopRef, runLoopObserverRef, kCFRunLoopDefaultMode);
 
     
@@ -275,7 +278,9 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
     CFRunLoopAddSource(runLoopRef, runLoopSourceRef, (__bridge CFStringRef)@"123");
     
     
-    
+//
+//    
+//    
     CFRunLoopSourceContext    context3 = {1, (__bridge void *)(self), NULL, NULL, NULL, NULL, NULL,
         &RunLoopSourceScheduleRoutine,
         RunLoopSourceCancelRoutine,
@@ -322,7 +327,6 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
 {
     [self testAnalysis];
     [self printMainAndCurrentRunLoopInfoWithDes:@"exeInRunLoop"];
-
 }
 
 - (void)exeInRunLoop2
@@ -340,6 +344,30 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
     [self performSelectorOnMainThread:@selector(exeInRunLoop2) withObject:nil waitUntilDone:YES];
     
     NSLog(@"exeInRunLoop1");
+    
+    
+    CFRunLoopRef runLoopRef = [self.runLoop getCFRunLoop];
+    
+    CFRunLoopSourceContext    context2 = {0, (__bridge void *)(self), NULL, NULL, NULL, NULL, NULL,
+        &RunLoopSourceScheduleRoutine,
+        RunLoopSourceCancelRoutine,
+        RunLoopSourcePerformRoutine};
+    
+    CFRunLoopSourceRef runLoopSourceRef = CFRunLoopSourceCreate(NULL, 0, &context2);
+    CFRunLoopAddSource(runLoopRef, runLoopSourceRef, (__bridge CFStringRef)@"123");
+    
+    
+    //
+    //
+    //
+    CFRunLoopSourceContext    context3 = {1, (__bridge void *)(self), NULL, NULL, NULL, NULL, NULL,
+        &RunLoopSourceScheduleRoutine,
+        RunLoopSourceCancelRoutine,
+        RunLoopSourcePerformRoutine};
+    
+    CFRunLoopSourceRef runLoopSourceRef3 = CFRunLoopSourceCreate(NULL, 0, &context3);
+    CFRunLoopAddSource(runLoopRef, runLoopSourceRef3, (__bridge CFStringRef)@"123");
+    
     
     [self.runLoop runMode:@"123" beforeDate:[[NSDate new] dateByAddingTimeInterval:100]];
     
@@ -460,6 +488,9 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
     
 //    sleep(1);
     
+//    [self performSelector:@selector(exeInRunLoop) onThread:self.runLoopThread withObject:nil waitUntilDone:NO modes:@[NSDefaultRunLoopMode]];
+//    return;
+
     
     // 只能执行一次, 那个 被 RunLoop exit
     
