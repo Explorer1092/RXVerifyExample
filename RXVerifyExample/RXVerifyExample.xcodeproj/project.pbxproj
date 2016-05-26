@@ -47,8 +47,11 @@
 		C937947E1CE331D30065F68C /* RVViewCycleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C937947C1CE331D30065F68C /* RVViewCycleViewController.xib */; };
 		C93A39491CF2F45D00C0C442 /* RVRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A39471CF2F45D00C0C442 /* RVRunLoopViewController.m */; };
 		C93A394A1CF2F45D00C0C442 /* RVRunLoopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C93A39481CF2F45D00C0C442 /* RVRunLoopViewController.xib */; };
+		C93E6AF31CF684CE00E7B193 /* RXRunTimeDemoBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C93E6AF21CF684CE00E7B193 /* RXRunTimeDemoBaseObject.m */; };
+		C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */ = {isa = PBXBuildFile; fileRef = C93E6AF51CF6A14F00E7B193 /* RXRunTimeDemo1Object.m */; };
 		C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94EB78A1CC4E66600AFDADC /* RVAFNetworkingViewController.m */; };
 		C94EB78D1CC4E66600AFDADC /* RVAFNetworkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94EB78B1CC4E66600AFDADC /* RVAFNetworkingViewController.xib */; };
+		C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */; };
 		C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDAD5C1CC621EA00CBB1CA /* RVAnimationViewController.m */; };
 		C9BDAD5F1CC621EA00CBB1CA /* RVAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9BDAD5D1CC621EA00CBB1CA /* RVAnimationViewController.xib */; };
 		C9BDAD631CC6237A00CBB1CA /* RVAnimation2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDAD611CC6237A00CBB1CA /* RVAnimation2ViewController.m */; };
@@ -64,6 +67,7 @@
 		C9D3979C1CF5483700D8569C /* RXRunLoopExeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D3979B1CF5483700D8569C /* RXRunLoopExeObject.m */; };
 		C9D397A01CF59D3500D8569C /* RVRunTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D3979E1CF59D3500D8569C /* RVRunTimeViewController.m */; };
 		C9D397A11CF59D3500D8569C /* RVRunTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D3979F1CF59D3500D8569C /* RVRunTimeViewController.xib */; };
+		C9D397A51CF5A29200D8569C /* RXRunTimeDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D397A41CF5A29200D8569C /* RXRunTimeDemoObject.m */; };
 		C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F53E211CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m */; };
 		C9F53E241CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F53E221CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib */; };
 /* End PBXBuildFile section */
@@ -132,9 +136,15 @@
 		C93A39461CF2F45D00C0C442 /* RVRunLoopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVRunLoopViewController.h; sourceTree = "<group>"; };
 		C93A39471CF2F45D00C0C442 /* RVRunLoopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVRunLoopViewController.m; sourceTree = "<group>"; };
 		C93A39481CF2F45D00C0C442 /* RVRunLoopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVRunLoopViewController.xib; sourceTree = "<group>"; };
+		C93E6AF11CF684CE00E7B193 /* RXRunTimeDemoBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRunTimeDemoBaseObject.h; sourceTree = "<group>"; };
+		C93E6AF21CF684CE00E7B193 /* RXRunTimeDemoBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRunTimeDemoBaseObject.m; sourceTree = "<group>"; };
+		C93E6AF41CF6A14F00E7B193 /* RXRunTimeDemo1Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRunTimeDemo1Object.h; sourceTree = "<group>"; };
+		C93E6AF51CF6A14F00E7B193 /* RXRunTimeDemo1Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRunTimeDemo1Object.m; sourceTree = "<group>"; };
 		C94EB7891CC4E66600AFDADC /* RVAFNetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVAFNetworkingViewController.h; sourceTree = "<group>"; };
 		C94EB78A1CC4E66600AFDADC /* RVAFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVAFNetworkingViewController.m; sourceTree = "<group>"; };
 		C94EB78B1CC4E66600AFDADC /* RVAFNetworkingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVAFNetworkingViewController.xib; sourceTree = "<group>"; };
+		C97B4EF81CF5AA7500199A6C /* NSObject+RXVerifyExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RXVerifyExample.h"; sourceTree = "<group>"; };
+		C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RXVerifyExample.m"; sourceTree = "<group>"; };
 		C9BDAD5B1CC621EA00CBB1CA /* RVAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVAnimationViewController.h; sourceTree = "<group>"; };
 		C9BDAD5C1CC621EA00CBB1CA /* RVAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVAnimationViewController.m; sourceTree = "<group>"; };
 		C9BDAD5D1CC621EA00CBB1CA /* RVAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVAnimationViewController.xib; sourceTree = "<group>"; };
@@ -159,6 +169,8 @@
 		C9D3979D1CF59D3500D8569C /* RVRunTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVRunTimeViewController.h; sourceTree = "<group>"; };
 		C9D3979E1CF59D3500D8569C /* RVRunTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVRunTimeViewController.m; sourceTree = "<group>"; };
 		C9D3979F1CF59D3500D8569C /* RVRunTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVRunTimeViewController.xib; sourceTree = "<group>"; };
+		C9D397A31CF5A29200D8569C /* RXRunTimeDemoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRunTimeDemoObject.h; sourceTree = "<group>"; };
+		C9D397A41CF5A29200D8569C /* RXRunTimeDemoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRunTimeDemoObject.m; sourceTree = "<group>"; };
 		C9F53E201CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVStrongWeakSelfViewController.h; sourceTree = "<group>"; };
 		C9F53E211CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVStrongWeakSelfViewController.m; sourceTree = "<group>"; };
 		C9F53E221CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVStrongWeakSelfViewController.xib; sourceTree = "<group>"; };
@@ -320,6 +332,8 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				C97B4EF71CF5AA6700199A6C /* Category */,
+				C9D397A21CF5A26F00D8569C /* RXRunTime */,
 				C9D397961CF5360C00D8569C /* RXRunLoop */,
 				58D6602E1C2571A700912786 /* RXMenu */,
 				58D660331C2571A700912786 /* RXRefreshView */,
@@ -375,6 +389,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C97B4EF71CF5AA6700199A6C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C97B4EF81CF5AA7500199A6C /* NSObject+RXVerifyExample.h */,
+				C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		C9D397961CF5360C00D8569C /* RXRunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +407,19 @@
 				C9D3979B1CF5483700D8569C /* RXRunLoopExeObject.m */,
 			);
 			path = RXRunLoop;
+			sourceTree = "<group>";
+		};
+		C9D397A21CF5A26F00D8569C /* RXRunTime */ = {
+			isa = PBXGroup;
+			children = (
+				C93E6AF11CF684CE00E7B193 /* RXRunTimeDemoBaseObject.h */,
+				C93E6AF21CF684CE00E7B193 /* RXRunTimeDemoBaseObject.m */,
+				C9D397A31CF5A29200D8569C /* RXRunTimeDemoObject.h */,
+				C9D397A41CF5A29200D8569C /* RXRunTimeDemoObject.m */,
+				C93E6AF41CF6A14F00E7B193 /* RXRunTimeDemo1Object.h */,
+				C93E6AF51CF6A14F00E7B193 /* RXRunTimeDemo1Object.m */,
+			);
+			path = RXRunTime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,10 +566,13 @@
 				5803F0CF1C190FFC0071FDDA /* RVRefreshViewController.m in Sources */,
 				58D660391C2571A700912786 /* RXMenuView.m in Sources */,
 				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
+				C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */,
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
+				C9D397A51CF5A29200D8569C /* RXRunTimeDemoObject.m in Sources */,
 				58AAC3141C38CDF20023D2EA /* RVButtonViewController.m in Sources */,
+				C93E6AF31CF684CE00E7B193 /* RXRunTimeDemoBaseObject.m in Sources */,
 				58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */,
 				C9BDAD631CC6237A00CBB1CA /* RVAnimation2ViewController.m in Sources */,
 				C9D3979C1CF5483700D8569C /* RXRunLoopExeObject.m in Sources */,
@@ -552,6 +591,7 @@
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
+				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.mm in Sources */,

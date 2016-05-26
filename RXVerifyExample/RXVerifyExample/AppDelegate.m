@@ -43,10 +43,7 @@
 //    
 //    
 //    
-//    [UIViewController aspect_hookSelector:@selector(viewDidDisappear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, BOOL animation) {
-//        NSLog(@"viewDidDisappear:%@", info.instance);
-//    } error:NULL];
-    
+
     
     
     
@@ -54,6 +51,7 @@
 
 - (void)showMain
 {
+    
     UIViewController *vc = nil;
     vc = [[MainViewController alloc] init];
     self.mainNC = [[UINavigationController alloc] initWithRootViewController:vc];
