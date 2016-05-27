@@ -38,7 +38,8 @@
                            @"RVPopupBox", @"RVButton", @"RVUPPay",
                            @"RVGCD", @"RVAFNetworking", @"RVAnimation",
                            @"RVDebug", @"RVStrongWeakSelf", @"RVViewCycle",
-                           @"RVRunLoop", @"RVRunLoop2", @"RVRunTime"];
+                           @"RVRunLoop", @"RVRunLoop2", @"RVRunTime",
+                           @"RVLock"];
     
     
 

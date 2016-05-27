@@ -94,6 +94,8 @@
 
     }
     
+    
+    
 }
 
 
@@ -143,7 +145,7 @@
 
 - (id)init
 {
-    
+//    NSProxy
     if (self = [super init]) {
         NSLog(@"%@", NSStringFromClass([self class]));
         NSLog(@"%@", NSStringFromClass([super class]));

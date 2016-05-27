@@ -51,6 +51,9 @@
 		C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */ = {isa = PBXBuildFile; fileRef = C93E6AF51CF6A14F00E7B193 /* RXRunTimeDemo1Object.m */; };
 		C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94EB78A1CC4E66600AFDADC /* RVAFNetworkingViewController.m */; };
 		C94EB78D1CC4E66600AFDADC /* RVAFNetworkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C94EB78B1CC4E66600AFDADC /* RVAFNetworkingViewController.xib */; };
+		C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B6AF51CF7EF9A00E9FC0F /* NSObject+RXExt.m */; };
+		C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B6AF81CF81EE300E9FC0F /* RVLockViewController.m */; };
+		C95B6AFB1CF81EE300E9FC0F /* RVLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95B6AF91CF81EE300E9FC0F /* RVLockViewController.xib */; };
 		C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */; };
 		C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDAD5C1CC621EA00CBB1CA /* RVAnimationViewController.m */; };
 		C9BDAD5F1CC621EA00CBB1CA /* RVAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9BDAD5D1CC621EA00CBB1CA /* RVAnimationViewController.xib */; };
@@ -143,6 +146,11 @@
 		C94EB7891CC4E66600AFDADC /* RVAFNetworkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVAFNetworkingViewController.h; sourceTree = "<group>"; };
 		C94EB78A1CC4E66600AFDADC /* RVAFNetworkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVAFNetworkingViewController.m; sourceTree = "<group>"; };
 		C94EB78B1CC4E66600AFDADC /* RVAFNetworkingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVAFNetworkingViewController.xib; sourceTree = "<group>"; };
+		C95B6AF41CF7EF9A00E9FC0F /* NSObject+RXExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RXExt.h"; sourceTree = "<group>"; };
+		C95B6AF51CF7EF9A00E9FC0F /* NSObject+RXExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RXExt.m"; sourceTree = "<group>"; };
+		C95B6AF71CF81EE300E9FC0F /* RVLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVLockViewController.h; sourceTree = "<group>"; };
+		C95B6AF81CF81EE300E9FC0F /* RVLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVLockViewController.m; sourceTree = "<group>"; };
+		C95B6AF91CF81EE300E9FC0F /* RVLockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVLockViewController.xib; sourceTree = "<group>"; };
 		C97B4EF81CF5AA7500199A6C /* NSObject+RXVerifyExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RXVerifyExample.h"; sourceTree = "<group>"; };
 		C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RXVerifyExample.m"; sourceTree = "<group>"; };
 		C9BDAD5B1CC621EA00CBB1CA /* RVAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVAnimationViewController.h; sourceTree = "<group>"; };
@@ -325,6 +333,9 @@
 				C9D3979D1CF59D3500D8569C /* RVRunTimeViewController.h */,
 				C9D3979E1CF59D3500D8569C /* RVRunTimeViewController.m */,
 				C9D3979F1CF59D3500D8569C /* RVRunTimeViewController.xib */,
+				C95B6AF71CF81EE300E9FC0F /* RVLockViewController.h */,
+				C95B6AF81CF81EE300E9FC0F /* RVLockViewController.m */,
+				C95B6AF91CF81EE300E9FC0F /* RVLockViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -394,6 +405,8 @@
 			children = (
 				C97B4EF81CF5AA7500199A6C /* NSObject+RXVerifyExample.h */,
 				C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */,
+				C95B6AF41CF7EF9A00E9FC0F /* NSObject+RXExt.h */,
+				C95B6AF51CF7EF9A00E9FC0F /* NSObject+RXExt.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -491,6 +504,7 @@
 				C94EB78D1CC4E66600AFDADC /* RVAFNetworkingViewController.xib in Resources */,
 				5886CDAF1C182D7500013C76 /* RVMenuViewController.xib in Resources */,
 				C9D397A11CF59D3500D8569C /* RVRunTimeViewController.xib in Resources */,
+				C95B6AFB1CF81EE300E9FC0F /* RVLockViewController.xib in Resources */,
 				C9BDAD5F1CC621EA00CBB1CA /* RVAnimationViewController.xib in Resources */,
 				58D6604A1C25A54A00912786 /* RVPopupBoxViewController.xib in Resources */,
 				58D6602B1C256BAD00912786 /* RVWYViewController.xib in Resources */,
@@ -588,8 +602,10 @@
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
 				C9D397941CF535E400D8569C /* RVRunLoop2ViewController.m in Sources */,
+				C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
+				C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
