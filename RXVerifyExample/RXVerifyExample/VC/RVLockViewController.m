@@ -9,7 +9,7 @@
 #import "RVLockViewController.h"
 #import <libkern/OSAtomic.h>
 #import <pthread.h>
-
+#import <CoreMotion/CoreMotion.h>
 
 typedef NS_ENUM(NSUInteger, LockType) {
     LockTypeOSSpinLock = 0,
@@ -28,6 +28,15 @@ typedef NS_ENUM(NSUInteger, LockType) {
 
 @interface RVLockViewController ()
 
+@property (nonatomic, strong) CMMotionManager *motionManager;
+
+
+@property (nonatomic, strong) UIView *showView;
+
+@property (nonatomic, assign) NSInteger times;
+
+@property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 @implementation RVLockViewController
@@ -38,12 +47,60 @@ typedef NS_ENUM(NSUInteger, LockType) {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self performSelector:@selector(testLock) withObject:nil afterDelay:1.0];
+    
+    
+    
+    
+    [self testkkkk];
+    
+    
+//    [self performSelector:@selector(testLock) withObject:nil afterDelay:1.0];
+}
+- (void)dealloc
+{
+    [self.timer invalidate];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)timerAction
+{
+    return;
+    NSInteger kkkk = self.times % 4;
+    CGFloat aaaa = M_PI / 2.0f * kkkk;
+    NSLog(@"kkkk:%zd", kkkk);
+    self.showView.transform = CGAffineTransformMakeRotation(aaaa);
+    
+    self.times ++;
+}
+- (void)testkkkk
+{
+    self.showView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 200)];
+    self.showView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.showView];
+    
+    self.times = 0;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+    
+    
+    self.motionManager=[[CMMotionManager alloc]init];
+    
+    self.motionManager.gyroUpdateInterval=1;
+    [self.motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMGyroData *gyroData, NSError *error) {
+        NSString *str =[NSString stringWithFormat:@"旋转角度:X:%.3f,Y:%.3f,Z:%.3f",gyroData.rotationRate.x,gyroData.rotationRate.y,gyroData.rotationRate.z];
+        NSLog(@"str:%@", str);
+        CGFloat kkk = gyroData.rotationRate.x / gyroData.rotationRate.y;
+        self.showView.transform = CGAffineTransformMakeRotation(kkk);
+//
+    }];
+    
+    self.motionManager.accelerometerUpdateInterval=1;
+    [self.motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue currentQueue] withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
+//        NSString *str =[NSString stringWithFormat:@"加速计:X:%.3f,Y:%.3f,Z:%.3f",accelerometerData.acceleration.x,accelerometerData.acceleration.y,accelerometerData.acceleration.z];
+//        NSLog(@"str:%@", str);
+    }];
 }
 
 - (void)testLock
@@ -102,7 +159,7 @@ typedef NS_ENUM(NSUInteger, LockType) {
             pthread_mutex_t lock;
             pthread_mutex_init(&lock, NULL);
             begin = CACurrentMediaTime();
-            for (int i = 0; i < count; i++) {
+            for (NSInteger i = 0; i < count; i++) {
                 pthread_mutex_lock(&lock);
                 pthread_mutex_unlock(&lock);
             }
@@ -115,7 +172,7 @@ typedef NS_ENUM(NSUInteger, LockType) {
         {
             NSCondition *lock = [NSCondition new];
             begin = CACurrentMediaTime();
-            for (int i = 0; i < count; i++) {
+            for (NSInteger i = 0; i < count; i++) {
                 [lock lock];
                 [lock unlock];
             }
@@ -127,7 +184,7 @@ typedef NS_ENUM(NSUInteger, LockType) {
         {
             NSLock *lock = [NSLock new];
             begin = CACurrentMediaTime();
-            for (int i = 0; i < count; i++) {
+            for (NSInteger i = 0; i < count; i++) {
                 [lock lock];
                 [lock unlock];
             }
@@ -144,7 +201,7 @@ typedef NS_ENUM(NSUInteger, LockType) {
             pthread_mutex_init(&lock, &attr);
             pthread_mutexattr_destroy(&attr);
             begin = CACurrentMediaTime();
-            for (int i = 0; i < count; i++) {
+            for (NSInteger i = 0; i < count; i++) {
                 pthread_mutex_lock(&lock);
                 pthread_mutex_unlock(&lock);
             }
@@ -156,7 +213,7 @@ typedef NS_ENUM(NSUInteger, LockType) {
         {
             NSRecursiveLock *lock = [NSRecursiveLock new];
             begin = CACurrentMediaTime();
-            for (int i = 0; i < count; i++) {
+            for (NSInteger i = 0; i < count; i++) {
                 [lock lock];
                 [lock unlock];
             }
@@ -168,7 +225,7 @@ typedef NS_ENUM(NSUInteger, LockType) {
         {
             NSConditionLock *lock = [[NSConditionLock alloc] initWithCondition:1];
             begin = CACurrentMediaTime();
-            for (int i = 0; i < count; i++) {
+            for (NSInteger i = 0; i < count; i++) {
                 [lock lock];
                 [lock unlock];
             }
@@ -180,7 +237,7 @@ typedef NS_ENUM(NSUInteger, LockType) {
         {
             NSObject *lock = [NSObject new];
             begin = CACurrentMediaTime();
-            for (int i = 0; i < count; i++) {
+            for (NSInteger i = 0; i < count; i++) {
                 @synchronized(lock) {}
             }
             end = CACurrentMediaTime();

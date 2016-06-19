@@ -119,7 +119,9 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
     
 //    [self testChangeToOtherRunLoop];
     
-    [self testNewRunLoop];
+//    [self testNewRunLoop];
+    
+    [self testRunLoop_WangYunPeng];
     
 //    NSRunLoop *runLoop;
     
@@ -134,7 +136,30 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
     NSLog(@"deallocdeallocdeallocdeallocdeallocdeallocdealloc");
 }
 #pragma mark - Test
+- (void)testRunLoop_WangYunPeng
+{
+    // main
+    CFRunLoopRef runLoopRef = CFRunLoopGetMain();
+    CFStringRef stringRef = CFRunLoopCopyCurrentMode(runLoopRef);
+    NSLog(@"main runLoopRef:%p mode:%@", runLoopRef, (__bridge NSString *)stringRef);
 
+    dispatch_async(dispatch_queue_create("1111", DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+        // cur1111
+        CFRunLoopRef cur1 = CFRunLoopGetCurrent();
+        CFStringRef stringRefCur1 = CFRunLoopCopyCurrentMode(cur1);
+        NSLog(@"cur1 runLoopRef:%p mode:%@", cur1, (__bridge NSString *)stringRefCur1);
+        
+
+        [NSThread sleepForTimeInterval:0.1];
+        
+        // cur2222
+        CFRunLoopRef cur2 = CFRunLoopGetCurrent();
+        CFStringRef stringRefCur2 = CFRunLoopCopyCurrentMode(cur2);
+        NSLog(@"cur2 runLoopRef:%p mode:%@", cur2, (__bridge NSString *)stringRefCur2);
+        
+        NSLog(@"11111");
+    });
+}
 - (void)testRunLoopObserve
 {
     CFRunLoopRef runLoopRef = CFRunLoopGetMain();

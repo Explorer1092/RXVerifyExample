@@ -39,14 +39,14 @@
                            @"RVGCD", @"RVAFNetworking", @"RVAnimation",
                            @"RVDebug", @"RVStrongWeakSelf", @"RVViewCycle",
                            @"RVRunLoop", @"RVRunLoop2", @"RVRunTime",
-                           @"RVLock"];
+                           @"RVLock", @"RVUtility"];
     
     
 
     NSString *object = self.functionItems.lastObject;
     
-#if 0
-    object = @"RVRunLoop";
+#if 1
+//    object = @"RVRunLoop";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
