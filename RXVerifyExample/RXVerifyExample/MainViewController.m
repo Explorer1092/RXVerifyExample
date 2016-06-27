@@ -110,17 +110,6 @@
 /*
  
  
- #pragma mark - initialize UI And Data
- - (void)initializeUIAndData
- {
- 
- self.view.backgroundColor = [UIColor redColor];
- }
- - (void)initializeAction
- {
- 
- }
- 
  
  #pragma mark - View Life Cycle
  
@@ -133,6 +122,20 @@
  [self initializeAction];
  }
  
+ 
+ #pragma mark - initialize UI And Data
+ - (void)initializeUIAndData
+ {
+ 
+ self.view.backgroundColor = [UIColor redColor];
+ }
+ - (void)initializeAction
+ {
+ 
+ }
+ 
+ 
+
  
  
  */
