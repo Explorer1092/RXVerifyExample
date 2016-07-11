@@ -40,11 +40,12 @@
                            @"RVDebug", @"RVStrongWeakSelf", @"RVViewCycle",
                            @"RVRunLoop", @"RVRunLoop2", @"RVRunTime",
                            @"RVLock", @"RVUtility", @"RVYYKit",
-                           @"RVLayer", @"RVOSS"];
+                           @"RVLayer", @"RVOSS", @"RVDUMA"];
     
-    
+    // 数组倒叙
+    self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
 
-    NSString *object = self.functionItems.lastObject;
+    NSString *object = self.functionItems.firstObject;
     
 #if 1
 //    object = @"RVRunLoop";

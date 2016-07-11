@@ -43,6 +43,7 @@
 #import "RXPaddingView.h"
 #import "RXVerifyButton.h"
 #import "RXAppDefineHeader.h"
+#import "RXView.h"
 //#import "RXPushTokenManager.h"
 //#import "RXUserManager.h"
 //#import "RXInfoHelper.h"

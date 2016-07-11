@@ -7,7 +7,7 @@
 #pod 'YYAsyncLayer'
 #pod 'YYDispatchQueuePool'
 
-
+pod 'RXView'
 
 pod 'RXImagePickManager'
 pod 'YYKit'
