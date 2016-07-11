@@ -39,7 +39,8 @@
                            @"RVGCD", @"RVAFNetworking", @"RVAnimation",
                            @"RVDebug", @"RVStrongWeakSelf", @"RVViewCycle",
                            @"RVRunLoop", @"RVRunLoop2", @"RVRunTime",
-                           @"RVLock", @"RVUtility"];
+                           @"RVLock", @"RVUtility", @"RVYYKit",
+                           @"RVLayer", @"RVOSS"];
     
     
 

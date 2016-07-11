@@ -7,8 +7,12 @@
 #pod 'YYAsyncLayer'
 #pod 'YYDispatchQueuePool'
 
+
+
+pod 'RXImagePickManager'
 pod 'YYKit'
 
+pod 'AliyunOSSiOS'
 
 pod 'RXCoreText'
 pod 'RXVCMediator'

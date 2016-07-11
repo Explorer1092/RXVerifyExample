@@ -9,19 +9,19 @@
 #import "NSObject+RXVerifyExample.h"
 
 @implementation NSObject (RXVerifyExample)
-
-+ (void)load
-{
-    NSError *error = nil;
-    [NSObject aspect_hookSelector:@selector(resolveInstanceMethod:) withOptions:AspectPositionAfter usingBlock:^BOOL(id<AspectInfo> info, SEL sel) {
-        
-        
-        NSLog(@"resolveInstanceMethod:%@", info.instance);
-        return YES;
-    } error:&error];
-    
-    NSLog(@"error:%@", error);
-}
+//
+//+ (void)load
+//{
+//    NSError *error = nil;
+//    [NSObject aspect_hookSelector:@selector(resolveInstanceMethod:) withOptions:AspectPositionAfter usingBlock:^BOOL(id<AspectInfo> info, SEL sel) {
+//        
+//        
+//        NSLog(@"resolveInstanceMethod:%@", info.instance);
+//        return YES;
+//    } error:&error];
+//    
+//    NSLog(@"error:%@", error);
+//}
 
 
 
