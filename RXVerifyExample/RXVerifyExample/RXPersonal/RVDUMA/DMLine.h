@@ -9,9 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface DMLine : NSObject
-@property(nonatomic, strong) UIBezierPath *bezierPath;
+@property (nonatomic, strong) UIBezierPath *bezierPath;
+
+@property (nonatomic, strong) NSMutableArray *pointArray;
 
 @property (nonatomic, strong) UIColor *fillColor;
 @property (nonatomic, assign) CGFloat alpha;
 @property (nonatomic, assign) CGFloat lineWidth;
+
+@property (nonatomic, assign) BOOL isComplete;
+
 @end

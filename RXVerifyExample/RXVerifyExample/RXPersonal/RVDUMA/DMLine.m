@@ -17,6 +17,7 @@
     if (self) {
         _fillColor = [UIColor blackColor];
         _lineWidth = 4;
+        self.pointArray = [NSMutableArray array];
         
     }
     return self;
