@@ -59,6 +59,8 @@
 		C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B6AF81CF81EE300E9FC0F /* RVLockViewController.m */; };
 		C95B6AFB1CF81EE300E9FC0F /* RVLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95B6AF91CF81EE300E9FC0F /* RVLockViewController.xib */; };
 		C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */; };
+		C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F5FF1D4A0AFB004D654D /* RVWebViewController.m */; };
+		C985F6021D4A0AFB004D654D /* RVWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C985F6001D4A0AFB004D654D /* RVWebViewController.xib */; };
 		C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98FD0EB1D20CD1E0024854D /* RVYYKitViewController.m */; };
 		C98FD0EE1D20CD1E0024854D /* RVYYKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98FD0EC1D20CD1E0024854D /* RVYYKitViewController.xib */; };
 		C98FD0F21D210F960024854D /* RVLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98FD0F01D210F960024854D /* RVLayerViewController.m */; };
@@ -172,6 +174,9 @@
 		C95B6AF91CF81EE300E9FC0F /* RVLockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVLockViewController.xib; sourceTree = "<group>"; };
 		C97B4EF81CF5AA7500199A6C /* NSObject+RXVerifyExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RXVerifyExample.h"; sourceTree = "<group>"; };
 		C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RXVerifyExample.m"; sourceTree = "<group>"; };
+		C985F5FE1D4A0AFB004D654D /* RVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVWebViewController.h; sourceTree = "<group>"; };
+		C985F5FF1D4A0AFB004D654D /* RVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVWebViewController.m; sourceTree = "<group>"; };
+		C985F6001D4A0AFB004D654D /* RVWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVWebViewController.xib; sourceTree = "<group>"; };
 		C98FD0EA1D20CD1E0024854D /* RVYYKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVYYKitViewController.h; sourceTree = "<group>"; };
 		C98FD0EB1D20CD1E0024854D /* RVYYKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVYYKitViewController.m; sourceTree = "<group>"; };
 		C98FD0EC1D20CD1E0024854D /* RVYYKitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVYYKitViewController.xib; sourceTree = "<group>"; };
@@ -382,6 +387,9 @@
 				C92923371D339BCF009D6875 /* RVDUMAViewController.h */,
 				C92923381D339BCF009D6875 /* RVDUMAViewController.m */,
 				C92923391D339BCF009D6875 /* RVDUMAViewController.xib */,
+				C985F5FE1D4A0AFB004D654D /* RVWebViewController.h */,
+				C985F5FF1D4A0AFB004D654D /* RVWebViewController.m */,
+				C985F6001D4A0AFB004D654D /* RVWebViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -560,6 +568,7 @@
 				5850B2851BF4803E00EC9144 /* coretext-image-2.jpg in Resources */,
 				C98FD0F31D210F960024854D /* RVLayerViewController.xib in Resources */,
 				5850B2841BF4803E00EC9144 /* coretext-image-1.jpg in Resources */,
+				C985F6021D4A0AFB004D654D /* RVWebViewController.xib in Resources */,
 				C94EB78D1CC4E66600AFDADC /* RVAFNetworkingViewController.xib in Resources */,
 				5886CDAF1C182D7500013C76 /* RVMenuViewController.xib in Resources */,
 				C9D397A11CF59D3500D8569C /* RVRunTimeViewController.xib in Resources */,
@@ -645,6 +654,7 @@
 				58D660391C2571A700912786 /* RXMenuView.m in Sources */,
 				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
 				C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */,
+				C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */,
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,

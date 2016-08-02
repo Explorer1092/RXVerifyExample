@@ -40,7 +40,7 @@
                            @"RVDebug", @"RVStrongWeakSelf", @"RVViewCycle",
                            @"RVRunLoop", @"RVRunLoop2", @"RVRunTime",
                            @"RVLock", @"RVUtility", @"RVYYKit",
-                           @"RVLayer", @"RVOSS", @"RVDUMA"];
+                           @"RVLayer", @"RVOSS", @"RVDUMA", @"RVWeb"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];

@@ -8,7 +8,7 @@
 
 #import "RVUtilityViewController.h"
 
-@interface RVUtilityViewController ()
+@interface RVUtilityViewController () <UITextViewDelegate>
 
 @end
 
@@ -34,10 +34,24 @@
 }
 - (void)initializeAction
 {
-    [self test_LongPressGestureRecognize];
+//    [self test_LongPressGestureRecognize];
+    [self test_textView];
 }
 
 
+#pragma mark - TextView
+- (void)test_textView
+{
+    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+    textView.delegate = self;
+    [self.view addSubview:textView];
+}
+
+#pragma mark - UITextViewDelegate
+- (void)textViewDidChange:(UITextView *)textView
+{
+    NSLog(@"textViewDidChange:%@", textView.text);
+}
 
 #pragma mark - UILongPressGestureRecognizer
 - (void)test_LongPressGestureRecognize
