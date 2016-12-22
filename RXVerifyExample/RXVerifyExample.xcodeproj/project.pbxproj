@@ -61,10 +61,17 @@
 		C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */; };
 		C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F5FF1D4A0AFB004D654D /* RVWebViewController.m */; };
 		C985F6021D4A0AFB004D654D /* RVWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C985F6001D4A0AFB004D654D /* RVWebViewController.xib */; };
+		C985F6181D5030EC004D654D /* RVStockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F6161D5030EC004D654D /* RVStockViewController.m */; };
+		C985F6191D5030EC004D654D /* RVStockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C985F6171D5030EC004D654D /* RVStockViewController.xib */; };
 		C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98FD0EB1D20CD1E0024854D /* RVYYKitViewController.m */; };
 		C98FD0EE1D20CD1E0024854D /* RVYYKitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98FD0EC1D20CD1E0024854D /* RVYYKitViewController.xib */; };
 		C98FD0F21D210F960024854D /* RVLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98FD0F01D210F960024854D /* RVLayerViewController.m */; };
 		C98FD0F31D210F960024854D /* RVLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C98FD0F11D210F960024854D /* RVLayerViewController.xib */; };
+		C9A7110D1D7BA0880002E703 /* RVCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A7110B1D7BA0880002E703 /* RVCopyViewController.m */; };
+		C9A7110E1D7BA0880002E703 /* RVCopyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A7110C1D7BA0880002E703 /* RVCopyViewController.xib */; };
+		C9A711111D7BA1130002E703 /* RXAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A711101D7BA1130002E703 /* RXAObject.m */; };
+		C9A711141D7BA1240002E703 /* RXBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A711131D7BA1240002E703 /* RXBObject.m */; };
+		C9A711171D7BA1340002E703 /* RXCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A711161D7BA1340002E703 /* RXCObject.m */; };
 		C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDAD5C1CC621EA00CBB1CA /* RVAnimationViewController.m */; };
 		C9BDAD5F1CC621EA00CBB1CA /* RVAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9BDAD5D1CC621EA00CBB1CA /* RVAnimationViewController.xib */; };
 		C9BDAD631CC6237A00CBB1CA /* RVAnimation2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BDAD611CC6237A00CBB1CA /* RVAnimation2ViewController.m */; };
@@ -177,12 +184,24 @@
 		C985F5FE1D4A0AFB004D654D /* RVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVWebViewController.h; sourceTree = "<group>"; };
 		C985F5FF1D4A0AFB004D654D /* RVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVWebViewController.m; sourceTree = "<group>"; };
 		C985F6001D4A0AFB004D654D /* RVWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVWebViewController.xib; sourceTree = "<group>"; };
+		C985F6151D5030EC004D654D /* RVStockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVStockViewController.h; sourceTree = "<group>"; };
+		C985F6161D5030EC004D654D /* RVStockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVStockViewController.m; sourceTree = "<group>"; };
+		C985F6171D5030EC004D654D /* RVStockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVStockViewController.xib; sourceTree = "<group>"; };
 		C98FD0EA1D20CD1E0024854D /* RVYYKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVYYKitViewController.h; sourceTree = "<group>"; };
 		C98FD0EB1D20CD1E0024854D /* RVYYKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVYYKitViewController.m; sourceTree = "<group>"; };
 		C98FD0EC1D20CD1E0024854D /* RVYYKitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVYYKitViewController.xib; sourceTree = "<group>"; };
 		C98FD0EF1D210F960024854D /* RVLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVLayerViewController.h; sourceTree = "<group>"; };
 		C98FD0F01D210F960024854D /* RVLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVLayerViewController.m; sourceTree = "<group>"; };
 		C98FD0F11D210F960024854D /* RVLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVLayerViewController.xib; sourceTree = "<group>"; };
+		C9A7110A1D7BA0880002E703 /* RVCopyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVCopyViewController.h; sourceTree = "<group>"; };
+		C9A7110B1D7BA0880002E703 /* RVCopyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVCopyViewController.m; sourceTree = "<group>"; };
+		C9A7110C1D7BA0880002E703 /* RVCopyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVCopyViewController.xib; sourceTree = "<group>"; };
+		C9A7110F1D7BA1130002E703 /* RXAObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAObject.h; sourceTree = "<group>"; };
+		C9A711101D7BA1130002E703 /* RXAObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXAObject.m; sourceTree = "<group>"; };
+		C9A711121D7BA1240002E703 /* RXBObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXBObject.h; sourceTree = "<group>"; };
+		C9A711131D7BA1240002E703 /* RXBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXBObject.m; sourceTree = "<group>"; };
+		C9A711151D7BA1340002E703 /* RXCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCObject.h; sourceTree = "<group>"; };
+		C9A711161D7BA1340002E703 /* RXCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCObject.m; sourceTree = "<group>"; };
 		C9BDAD5B1CC621EA00CBB1CA /* RVAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVAnimationViewController.h; sourceTree = "<group>"; };
 		C9BDAD5C1CC621EA00CBB1CA /* RVAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVAnimationViewController.m; sourceTree = "<group>"; };
 		C9BDAD5D1CC621EA00CBB1CA /* RVAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVAnimationViewController.xib; sourceTree = "<group>"; };
@@ -390,6 +409,12 @@
 				C985F5FE1D4A0AFB004D654D /* RVWebViewController.h */,
 				C985F5FF1D4A0AFB004D654D /* RVWebViewController.m */,
 				C985F6001D4A0AFB004D654D /* RVWebViewController.xib */,
+				C985F6151D5030EC004D654D /* RVStockViewController.h */,
+				C985F6161D5030EC004D654D /* RVStockViewController.m */,
+				C985F6171D5030EC004D654D /* RVStockViewController.xib */,
+				C9A7110A1D7BA0880002E703 /* RVCopyViewController.h */,
+				C9A7110B1D7BA0880002E703 /* RVCopyViewController.m */,
+				C9A7110C1D7BA0880002E703 /* RVCopyViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -397,6 +422,8 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				C9A711091D7BA06C0002E703 /* RXCopy */,
+				C985F61A1D503119004D654D /* RXStock */,
 				C929233C1D339C4C009D6875 /* RVDUMA */,
 				C97B4EF71CF5AA6700199A6C /* Category */,
 				C9D397A21CF5A26F00D8569C /* RXRunTime */,
@@ -475,6 +502,26 @@
 				C95B6AF51CF7EF9A00E9FC0F /* NSObject+RXExt.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		C985F61A1D503119004D654D /* RXStock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RXStock;
+			sourceTree = "<group>";
+		};
+		C9A711091D7BA06C0002E703 /* RXCopy */ = {
+			isa = PBXGroup;
+			children = (
+				C9A7110F1D7BA1130002E703 /* RXAObject.h */,
+				C9A711101D7BA1130002E703 /* RXAObject.m */,
+				C9A711121D7BA1240002E703 /* RXBObject.h */,
+				C9A711131D7BA1240002E703 /* RXBObject.m */,
+				C9A711151D7BA1340002E703 /* RXCObject.h */,
+				C9A711161D7BA1340002E703 /* RXCObject.m */,
+			);
+			path = RXCopy;
 			sourceTree = "<group>";
 		};
 		C9D397961CF5360C00D8569C /* RXRunLoop */ = {
@@ -562,6 +609,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C93A394A1CF2F45D00C0C442 /* RVRunLoopViewController.xib in Resources */,
+				C985F6191D5030EC004D654D /* RVStockViewController.xib in Resources */,
 				5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */,
 				C9BDAD641CC6237A00CBB1CA /* RVAnimation2ViewController.xib in Resources */,
 				C9D397951CF535E400D8569C /* RVRunLoop2ViewController.xib in Resources */,
@@ -571,6 +619,7 @@
 				C985F6021D4A0AFB004D654D /* RVWebViewController.xib in Resources */,
 				C94EB78D1CC4E66600AFDADC /* RVAFNetworkingViewController.xib in Resources */,
 				5886CDAF1C182D7500013C76 /* RVMenuViewController.xib in Resources */,
+				C9A7110E1D7BA0880002E703 /* RVCopyViewController.xib in Resources */,
 				C9D397A11CF59D3500D8569C /* RVRunTimeViewController.xib in Resources */,
 				C929233B1D339BCF009D6875 /* RVDUMAViewController.xib in Resources */,
 				C95B6AFB1CF81EE300E9FC0F /* RVLockViewController.xib in Resources */,
@@ -654,9 +703,11 @@
 				58D660391C2571A700912786 /* RXMenuView.m in Sources */,
 				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
 				C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */,
+				C9A7110D1D7BA0880002E703 /* RVCopyViewController.m in Sources */,
 				C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */,
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
+				C9A711141D7BA1240002E703 /* RXBObject.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
 				C92923421D339F02009D6875 /* DMLine.m in Sources */,
 				C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */,
@@ -665,6 +716,7 @@
 				C93E6AF31CF684CE00E7B193 /* RXRunTimeDemoBaseObject.m in Sources */,
 				58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */,
 				C9BDAD631CC6237A00CBB1CA /* RVAnimation2ViewController.m in Sources */,
+				C9A711111D7BA1130002E703 /* RXAObject.m in Sources */,
 				C9D3979C1CF5483700D8569C /* RXRunLoopExeObject.m in Sources */,
 				58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */,
 				C93A39491CF2F45D00C0C442 /* RVRunLoopViewController.m in Sources */,
@@ -679,9 +731,11 @@
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
 				C9D397941CF535E400D8569C /* RVRunLoop2ViewController.m in Sources */,
 				C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */,
+				C985F6181D5030EC004D654D /* RVStockViewController.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
+				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
 				C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
