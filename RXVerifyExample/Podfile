@@ -38,5 +38,7 @@ pod 'AFNetworking'
 
 pod 'Aspects'
 
+pod 'RX3_TecentLiteSDK'
+
 
 
