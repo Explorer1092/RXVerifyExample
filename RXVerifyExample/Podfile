@@ -1,4 +1,6 @@
 
+
+target 'RXVerifyExample' do
 #pod 'YYText'
 #pod 'YYImage'
 #pod 'YYModel'
@@ -38,7 +40,6 @@ pod 'AFNetworking'
 
 pod 'Aspects'
 
-pod 'RX3_TecentLiteSDK'
-
-
+pod 'RX3_TencentLiteSDK'
+end
 

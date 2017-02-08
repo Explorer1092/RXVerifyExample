@@ -42,17 +42,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>UPPayDemo</string>
-			</array>
-		</dict>
-	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>uppaysdk</string>
@@ -60,6 +49,17 @@
 		<string>uppayx1</string>
 		<string>uppayx2</string>
 		<string>uppayx3</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>tencent</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tencent101344593</string>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

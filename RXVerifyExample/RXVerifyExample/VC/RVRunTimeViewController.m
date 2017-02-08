@@ -23,6 +23,8 @@
     
     [self.rxRunTimeDemoObject testPrint];
     
+    Class cls;
+    
 //    SEL sel = NSSelectorFromString(@"testNoMethod");
 //    [self.rxRunTimeDemoObject performSelector:sel withObject:nil afterDelay:0];
 //    
@@ -48,7 +50,12 @@
     
 }
 
+
+
+
 - (void)didReceiveMemoryWarning {
+    
+    
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
