@@ -51,7 +51,7 @@
 //#import "RXCheckView.h"
 //#import "RXActionSheetView.h"
 //#import "RXGuideManagerHeader.h"
-//#import "RXTableViewItemHeader.h"
+#import "RXTableViewItemHeader.h"
 
 #pragma mark - App
 #import "AppDelegate.h"

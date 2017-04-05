@@ -7,7 +7,7 @@
 //
 
 #import "RVGCDViewController.h"
-
+#import <objc/message.h>
 
 #define k_CS_RV_RowCount        5
 #define k_CS_RV_ColumnCount     3
@@ -132,6 +132,255 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
         
     }
 }
+
+
+
+
+#pragma mark - queue & sync/async
+// http://www.cnblogs.com/mddblog/p/4767559.html
+
+/*
+ 
+ 　　1）串行队列，同步执行-----串行队列意味着顺序执行，同步执行意味着不开启线程（在当前线程执行）
+ 
+ 　　2）串行队列,异步执行-----串行队列意味着任务顺序执行，异步执行说明要开线程, （如果开多个线程的话，不能保证串行队列顺序执行，所以只开一个线程）
+ 
+ 　　3）并行队列,异步执行-----并行队列意味着执行顺序不确定，异步执行意味着会开启线程，而并行队列又允许不按顺序执行，所以系统为了提高性能会开启多个线程，来队列取任务（队列中任务取出仍然是顺序取出的，只是线程执行无序）。
+ 
+ 　　4）并行队列,同步执行-----同步执行意味着不开线程,则肯定是顺序执行
+ 
+ */
+
+
+
+// 串行同步
+- (void)test_queue_serial_sync
+{
+    NSLog(@"串行同步");
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.001", DISPATCH_QUEUE_SERIAL);
+    NSLog(@"main thread:%p", [NSThread mainThread]);
+    dispatch_sync(queue, ^{
+        NSLog(@"1 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_sync(queue, ^{
+        NSLog(@"2 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_sync(queue, ^{
+        NSLog(@"3 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_sync(queue, ^{
+        NSLog(@"4 thread: %p", [NSThread currentThread]);
+    });
+    /* 结果
+     2017-02-10 18:00:21.991383 RXVerifyExample[4927:2465789] 串行同步
+     2017-02-10 18:00:21.991636 RXVerifyExample[4927:2465789] main thread:0x17406cb00
+     2017-02-10 18:00:21.992020 RXVerifyExample[4927:2465789] 1 thread: 0x17406cb00
+     2017-02-10 18:00:21.992097 RXVerifyExample[4927:2465789] 2 thread: 0x17406cb00
+     2017-02-10 18:00:21.992165 RXVerifyExample[4927:2465789] 3 thread: 0x17406cb00
+     2017-02-10 18:00:21.992230 RXVerifyExample[4927:2465789] 4 thread: 0x17406cb00
+     */
+}
+
+// 并行同步
+- (void)test_queue_concurrent_sync
+{
+    NSLog(@"并行同步");
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.002", DISPATCH_QUEUE_CONCURRENT);
+    NSLog(@"main thread:%p", [NSThread mainThread]);
+    dispatch_sync(queue, ^{
+        NSLog(@"1 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_sync(queue, ^{
+        NSLog(@"2 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_sync(queue, ^{
+        NSLog(@"3 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_sync(queue, ^{
+        NSLog(@"4 thread: %p", [NSThread currentThread]);
+    });
+    /* 结果
+     2017-02-10 18:04:33.107907 RXVerifyExample[4930:2467403] 并行同步
+     2017-02-10 18:04:33.108053 RXVerifyExample[4930:2467403] main thread:0x174066600
+     2017-02-10 18:04:33.108121 RXVerifyExample[4930:2467403] 1 thread: 0x174066600
+     2017-02-10 18:04:33.108177 RXVerifyExample[4930:2467403] 2 thread: 0x174066600
+     2017-02-10 18:04:33.108219 RXVerifyExample[4930:2467403] 3 thread: 0x174066600
+     2017-02-10 18:04:33.108259 RXVerifyExample[4930:2467403] 4 thread: 0x174066600
+     */
+}
+
+
+// 串行异步1
+- (void)test_queue_serial_async1
+{
+    NSLog(@"串行异步方法1");
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.0031", DISPATCH_QUEUE_SERIAL);
+    NSLog(@"main thread:%p", [NSThread mainThread]);
+    dispatch_async(queue, ^{
+        NSLog(@"1 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"2 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"3 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"4 thread: %p", [NSThread currentThread]);
+    });
+    /* 结果
+     2017-02-10 18:06:15.124048 RXVerifyExample[4932:2468052] 串行异步方法1
+     2017-02-10 18:06:15.124244 RXVerifyExample[4932:2468052] main thread:0x174076a40
+     2017-02-10 18:06:15.125490 RXVerifyExample[4932:2468084] 1 thread: 0x174271800
+     2017-02-10 18:06:15.125574 RXVerifyExample[4932:2468084] 2 thread: 0x174271800
+     2017-02-10 18:06:15.125643 RXVerifyExample[4932:2468084] 3 thread: 0x174271800
+     2017-02-10 18:06:15.125710 RXVerifyExample[4932:2468084] 4 thread: 0x174271800
+     */
+}
+// 串行异步2
+- (void)test_queue_serial_async2
+{
+    NSLog(@"串行异步方法2");
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.0032", DISPATCH_QUEUE_SERIAL);
+    NSLog(@"main thread:%p", [NSThread mainThread]);
+    dispatch_async(queue, ^{
+        NSLog(@"1 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"2 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:4.1];
+        NSLog(@"3 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:3.1];
+        NSLog(@"4 thread: %p", [NSThread currentThread]);
+    });
+    /* 结果
+     2017-02-10 18:08:16.478508 RXVerifyExample[4935:2468827] 串行异步方法2
+     2017-02-10 18:08:16.478611 RXVerifyExample[4935:2468827] main thread:0x170072380
+     2017-02-10 18:08:16.479034 RXVerifyExample[4935:2468869] 1 thread: 0x174264240
+     2017-02-10 18:08:16.479069 RXVerifyExample[4935:2468869] 2 thread: 0x174264240
+     2017-02-10 18:08:20.584321 RXVerifyExample[4935:2468869] 3 thread: 0x174264240
+     2017-02-10 18:08:23.689611 RXVerifyExample[4935:2468869] 4 thread: 0x174264240
+     */
+}
+
+// 并行异步1
+- (void)test_queue_concurrent_async1
+{
+    NSLog(@"并行异步方法1");
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.0041", DISPATCH_QUEUE_CONCURRENT);
+    NSLog(@"main thread:%p", [NSThread mainThread]);
+    dispatch_async(queue, ^{
+        NSLog(@"1 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"2 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"3 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"4 thread: %p", [NSThread currentThread]);
+    });
+    /* 结果
+     2017-02-10 18:09:25.692681 RXVerifyExample[4937:2469287] 并行异步方法1
+     2017-02-10 18:09:25.692880 RXVerifyExample[4937:2469287] main thread:0x174073000
+     2017-02-10 18:09:25.693828 RXVerifyExample[4937:2469323] 1 thread: 0x174267d00
+     2017-02-10 18:09:25.693916 RXVerifyExample[4937:2469323] 2 thread: 0x174267d00
+     2017-02-10 18:09:25.693988 RXVerifyExample[4937:2469323] 3 thread: 0x174267d00
+     2017-02-10 18:09:25.694056 RXVerifyExample[4937:2469323] 4 thread: 0x174267d00
+     */
+}
+// 并行异步2
+- (void)test_queue_concurrent_async2
+{
+    NSLog(@"并行异步方法2");
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.0042", DISPATCH_QUEUE_CONCURRENT);
+    NSLog(@"main thread:%p", [NSThread mainThread]);
+    dispatch_async(queue, ^{
+        NSLog(@"1 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"2 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:4.1];
+        NSLog(@"3 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:3.1];
+        NSLog(@"4 thread: %p", [NSThread currentThread]);
+    });
+    /* 结果
+     2017-02-10 18:10:27.262009 RXVerifyExample[4940:2469782] 并行异步方法2
+     2017-02-10 18:10:27.262213 RXVerifyExample[4940:2469782] main thread:0x17406e080
+     2017-02-10 18:10:27.263710 RXVerifyExample[4940:2469821] 1 thread: 0x174262e80
+     2017-02-10 18:10:27.263811 RXVerifyExample[4940:2469821] 2 thread: 0x174262e80
+     2017-02-10 18:10:30.369209 RXVerifyExample[4940:2469813] 4 thread: 0x1742648c0
+     2017-02-10 18:10:31.369205 RXVerifyExample[4940:2469821] 3 thread: 0x174262e80
+     */
+}
+
+// 并行异步3
+- (void)test_queue_concurrent_async3
+{
+    NSLog(@"并行异步方法3");
+    dispatch_queue_t queue = dispatch_queue_create("com.demo.0043", DISPATCH_QUEUE_CONCURRENT);
+    NSLog(@"main thread:%p", [NSThread mainThread]);
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:2.1];
+        NSLog(@"1 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:1.1];
+        NSLog(@"2 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:4.1];
+        NSLog(@"3 thread: %p", [NSThread currentThread]);
+    });
+    dispatch_async(queue, ^{
+        [NSThread sleepForTimeInterval:3.1];
+        NSLog(@"4 thread: %p", [NSThread currentThread]);
+    });
+    /* 结果
+     2017-02-10 18:10:59.926988 RXVerifyExample[4942:2470140] 并行异步方法3
+     2017-02-10 18:10:59.927184 RXVerifyExample[4942:2470140] main thread:0x17007f8c0
+     2017-02-10 18:11:01.033209 RXVerifyExample[4942:2470183] 2 thread: 0x170462ac0
+     2017-02-10 18:11:02.033478 RXVerifyExample[4942:2470185] 1 thread: 0x170462f40
+     2017-02-10 18:11:03.037799 RXVerifyExample[4942:2470176] 4 thread: 0x170462a40
+     2017-02-10 18:11:04.033691 RXVerifyExample[4942:2470177] 3 thread: 0x170462480
+     */
+}
+
+
+- (void)test_queue_serial_concurrent_sync_async
+{
+//    [self test_queue_serial_sync];
+    
+    
+//    [self test_queue_concurrent_sync];
+    
+    
+//    [self test_queue_serial_async1];
+    
+    
+//    [self test_queue_serial_async2];
+    
+    
+//    [self test_queue_concurrent_async1];
+    
+    
+//    [self test_queue_concurrent_async2];
+    
+    
+    [self test_queue_concurrent_async3];
+    
+}
+
 
 
 #pragma mark - gcd Test Action
@@ -657,6 +906,7 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
     
 
     
+    
     NSLog(@"queue0:%s %p", dispatch_queue_get_label(queue0), queue0);
     NSLog(@"queue1:%s %p", dispatch_queue_get_label(queue1), queue1);
     NSLog(@"queue2:%s %p", dispatch_queue_get_label(queue2), queue2);
@@ -865,6 +1115,27 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
     
 }
 
+#pragma mark - queue
+- (void)test_queue
+{
+    
+    
+    dispatch_queue_t queueA = dispatch_queue_create("com.yiyaaixuexi.queueA", NULL);
+    dispatch_queue_t queueB = dispatch_queue_create("com.yiyaaixuexi.queueB", NULL);
+    dispatch_sync(queueA, ^{
+        dispatch_sync(queueB, ^{
+            dispatch_block_t block = ^{
+                
+                NSLog(@"111");
+            };
+
+            
+        
+        });
+    });
+
+}
+
 
 #pragma mark - initialize UI And Data
 - (void)initializeUIAndData
@@ -897,8 +1168,16 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
     
     
     
-    [self test_dispatch_function_001];
+    // [self test_dispatch_function_001];
     
+//     [self test_queue_serial_sync];
+//    [self test_queue_serial_async];
+    
+//    [self test_queue_concurrent_sync];
+//    [self test_queue_concurrent_async];
+    
+    
+//    [self test_queue_serial_concurrent_sync_async];
     
     
     
@@ -908,14 +1187,8 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
     
 }
 
-
-#pragma mark - View Life Cycle
-
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
+- (void)test_completion
+{
     
     void (^complet111)(NSInteger, NSInteger) = ^(NSInteger i, NSInteger j){
         NSInteger k = i + j;
@@ -929,6 +1202,16 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
         NSLog(@"k:%zd", k);
     };
     complte2222();
+}
+
+#pragma mark - View Life Cycle
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    
+    
     
     [self initializeUIAndData];
     [self initializeAction];

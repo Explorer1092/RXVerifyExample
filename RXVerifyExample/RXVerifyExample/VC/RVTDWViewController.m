@@ -1,18 +1,18 @@
 //
-//  RVThreadViewController.m
+//  RVTDWViewController.m
 //  RXVerifyExample
 //
-//  Created by ceshi on 17/2/8.
+//  Created by ceshi on 17/4/5.
 //  Copyright © 2017年 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RVThreadViewController.h"
+#import "RVTDWViewController.h"
 
-@interface RVThreadViewController ()
+@interface RVTDWViewController ()
 
 @end
 
-@implementation RVThreadViewController
+@implementation RVTDWViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,12 +22,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-- (void)test1
-{
-    NSThread *thread;
 }
 
 /*

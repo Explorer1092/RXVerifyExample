@@ -57,6 +57,8 @@
 		C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B6AF51CF7EF9A00E9FC0F /* NSObject+RXExt.m */; };
 		C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B6AF81CF81EE300E9FC0F /* RVLockViewController.m */; };
 		C95B6AFB1CF81EE300E9FC0F /* RVLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95B6AF91CF81EE300E9FC0F /* RVLockViewController.xib */; };
+		C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96AD5201E94F0BA0002B6EB /* RVTDWViewController.m */; };
+		C96AD5231E94F0BA0002B6EB /* RVTDWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96AD5211E94F0BA0002B6EB /* RVTDWViewController.xib */; };
 		C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */; };
 		C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F5FF1D4A0AFB004D654D /* RVWebViewController.m */; };
 		C985F6021D4A0AFB004D654D /* RVWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C985F6001D4A0AFB004D654D /* RVWebViewController.xib */; };
@@ -185,6 +187,9 @@
 		C95B6AF71CF81EE300E9FC0F /* RVLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVLockViewController.h; sourceTree = "<group>"; };
 		C95B6AF81CF81EE300E9FC0F /* RVLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVLockViewController.m; sourceTree = "<group>"; };
 		C95B6AF91CF81EE300E9FC0F /* RVLockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVLockViewController.xib; sourceTree = "<group>"; };
+		C96AD51F1E94F0BA0002B6EB /* RVTDWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVTDWViewController.h; sourceTree = "<group>"; };
+		C96AD5201E94F0BA0002B6EB /* RVTDWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVTDWViewController.m; sourceTree = "<group>"; };
+		C96AD5211E94F0BA0002B6EB /* RVTDWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVTDWViewController.xib; sourceTree = "<group>"; };
 		C97B4EF81CF5AA7500199A6C /* NSObject+RXVerifyExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RXVerifyExample.h"; sourceTree = "<group>"; };
 		C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RXVerifyExample.m"; sourceTree = "<group>"; };
 		C985F5FE1D4A0AFB004D654D /* RVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVWebViewController.h; sourceTree = "<group>"; };
@@ -439,6 +444,9 @@
 				C9BDAFB61E4AC4B8006CCD0E /* RVThreadViewController.h */,
 				C9BDAFB71E4AC4B8006CCD0E /* RVThreadViewController.m */,
 				C9BDAFB81E4AC4B8006CCD0E /* RVThreadViewController.xib */,
+				C96AD51F1E94F0BA0002B6EB /* RVTDWViewController.h */,
+				C96AD5201E94F0BA0002B6EB /* RVTDWViewController.m */,
+				C96AD5211E94F0BA0002B6EB /* RVTDWViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -601,7 +609,7 @@
 		5850B25F1BF47F2A00EC9144 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Rush.D.Xzj;
 				TargetAttributes = {
 					5850B2661BF47F2A00EC9144 = {
@@ -655,6 +663,7 @@
 				58D6604A1C25A54A00912786 /* RVPopupBoxViewController.xib in Resources */,
 				C98FD0EE1D20CD1E0024854D /* RVYYKitViewController.xib in Resources */,
 				58D6602B1C256BAD00912786 /* RVWYViewController.xib in Resources */,
+				C96AD5231E94F0BA0002B6EB /* RVTDWViewController.xib in Resources */,
 				C9E8B7B11D23B74A00A3D16F /* RVOSSViewController.xib in Resources */,
 				C9C2B33F1E0BD92D0087C718 /* RVQQViewController.xib in Resources */,
 				58FF7D861C4624E000F06976 /* RVUPPayViewController.xib in Resources */,
@@ -757,6 +766,7 @@
 				C9BDAD671CC62E6E00CBB1CA /* RVPushPopAnimation.m in Sources */,
 				C9C326071CA28E9F00E65090 /* RVGCDViewController.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
+				C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */,
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
@@ -797,8 +807,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -820,7 +832,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -841,8 +853,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -858,7 +872,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -875,7 +889,7 @@
 				DEVELOPMENT_TEAM = BMW986WME7;
 				GCC_PREFIX_HEADER = "RXVerifyExample/RXVerifyExample-Prefix.pch";
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -896,7 +910,7 @@
 				DEVELOPMENT_TEAM = BMW986WME7;
 				GCC_PREFIX_HEADER = "RXVerifyExample/RXVerifyExample-Prefix.pch";
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

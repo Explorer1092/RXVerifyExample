@@ -23,7 +23,7 @@
     
     [self.rxRunTimeDemoObject testPrint];
     
-    Class cls;
+//    Class cls;
     
 //    SEL sel = NSSelectorFromString(@"testNoMethod");
 //    [self.rxRunTimeDemoObject performSelector:sel withObject:nil afterDelay:0];
