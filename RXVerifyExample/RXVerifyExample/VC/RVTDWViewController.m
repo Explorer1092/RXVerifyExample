@@ -10,6 +10,11 @@
 
 @interface RVTDWViewController ()
 
+
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+
+
+@property (nonatomic, strong) RXTVProtocolObject *rxtvProtocolObject;
 @end
 
 @implementation RVTDWViewController
@@ -17,6 +22,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    
+    self.rxtvProtocolObject = [[RXTVProtocolObject alloc] init];
+    
+    CGFloat width = RX_Window_Width;
+    CGFloat height = RX_Window_Height;
+    
+    UILabel *topLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, width, 50)];
+    topLabel.backgroundColor = [UIColor redColor];
+    topLabel.text = @"这个是顶部的最上面的一个view";
+    topLabel.numberOfLines = 0;
+    topLabel.textColor = [UIColor blackColor];
+    
+    
+    
+    
+    
+    self.tableView.delegate = self.rxtvProtocolObject;
+    self.tableView.dataSource = self.rxtvProtocolObject;
 }
 
 - (void)didReceiveMemoryWarning {

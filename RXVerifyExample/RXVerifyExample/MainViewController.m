@@ -51,7 +51,7 @@
     NSString *object = self.functionItems.firstObject;
     
 #if 1
-    object = @"RVGCD";
+    object = @"RVTDW";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
