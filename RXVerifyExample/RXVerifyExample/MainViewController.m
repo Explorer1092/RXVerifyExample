@@ -52,6 +52,7 @@
     
 #if 1
     object = @"RVTDW";
+    object = @"RVRunTime";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
