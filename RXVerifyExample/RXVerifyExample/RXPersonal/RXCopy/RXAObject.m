@@ -20,4 +20,9 @@
     return tmp;
 }
 
+
+- (void)abcTest {
+    NSLog(@"1234567890");
+}
+
 @end

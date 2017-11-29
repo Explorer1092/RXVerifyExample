@@ -43,7 +43,7 @@
                            @"RVLayer", @"RVOSS", @"RVDUMA",
                            @"RVWeb", @"RVStock", @"RVCopy",
                            @"RVOCData", @"RVQQ", @"RVThread",
-                           @"RVTDW"];
+                           @"RVTDW", @"RVLLDB", @"RXMethodForward"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -51,7 +51,7 @@
     NSString *object = self.functionItems.firstObject;
     
 #if 1
-    object = @"RVTDW";
+    object = @"RVLLDB";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];

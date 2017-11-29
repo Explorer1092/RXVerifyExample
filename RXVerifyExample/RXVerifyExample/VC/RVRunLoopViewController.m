@@ -9,6 +9,8 @@
 #import "RVRunLoopViewController.h"
 
 
+NS_ENUM(...)
+
 void RunLoopSourceScheduleRoutine (void *info, CFRunLoopRef rl, CFStringRef mode)
 {
     
@@ -468,7 +470,7 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
 //    [self.runLoop runMode:@"123" beforeDate:[[NSDate new] dateByAddingTimeInterval:100]];
 
     
-    CFRunLoopRef runLoopRef = [self.runLoop getCFRunLoop];
+//    CFRunLoopRef runLoopRef = [self.runLoop getCFRunLoop];
 //    [self.runLoop run];
 //    CFRunLoopWakeUp(runLoopRef);
 

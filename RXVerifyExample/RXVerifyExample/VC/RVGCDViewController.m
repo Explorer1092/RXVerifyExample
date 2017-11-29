@@ -1180,11 +1180,86 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
 //    [self test_queue_serial_concurrent_sync_async];
     
     
+    [[RXLogManager sharedInstance] writeToLogTextView:@"111"];
+    
+    
+//    [self testSD_GCD];
+    
+//    [self testMain11];
+    
+    
+//    [self test2222];
+}
+
+// 串行队列,异步执行
+- (void)test2222
+{
+//    UITouchPhase
+    dispatch_queue_t queue = dispatch_queue_create("11111", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(queue, ^{
+        NSLog(@"1");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"2");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"3");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"4");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"5");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"6");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"7");
+    });
+}
+
+- (void)testMain11
+{
+    NSThread *thread = [NSThread mainThread];
+    NSLog(@"thread name:%@---end", thread.name);
+    
+    dispatch_queue_t main_queue = dispatch_get_main_queue();
+    const char *name = dispatch_queue_get_label(main_queue);
+    NSLog(@"dispatch_queue_t name:%s---end", name);
+    
+    const char *name2 = dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL);
+    NSLog(@"DISPATCH_CURRENT_QUEUE_LABEL name2:%s---end", name2);
+    
+    
+    NSThread *newThread = [[NSThread alloc] initWithBlock:^{
+        NSLog(@"newThread");
+    }];
+    [newThread start];
+    
+}
+
+- (void)testSD_GCD
+{
     
     
     
+//    void(^block22)() = ^void(){
+//        NSLog(@"111111");
+//    };
     
+    NSLog(@"ccc:%p", NULL);
+    NSLog(@"ccc1:%p", dispatch_get_main_queue());
+    NSLog(@"ccc:%p", dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL));
+    NSLog(@"ccc:%p", dispatch_queue_get_label(dispatch_get_main_queue()));
     
+    if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(dispatch_get_main_queue())) == 0) {
+        NSLog(@"111111");
+    } else {
+        dispatch_async(dispatch_get_main_queue(), ^void() {
+            NSLog(@"222222222");
+        });
+    }
 }
 
 - (void)test_completion
