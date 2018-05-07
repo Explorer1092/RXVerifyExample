@@ -16,6 +16,7 @@
 
 // 原始文章
 // https://www.cnblogs.com/allencelee/p/6023213.html
+// http://www.knowsky.com/884482.html
 
 // 新文章
 // https://www.jianshu.com/p/e27d9f48bfb8
@@ -81,6 +82,8 @@
     dispatch_async(queue, ^{
         printf("任务3---%s\n", [[[NSThread currentThread] description] UTF8String]);
     });
+    // 这一段代码可以证明end输出的顺序不确定,主要是看哪个先执行完毕
+//    sleep(1);
     printf("---end---\n");
 }
 

@@ -44,7 +44,8 @@
                            @"RVWeb", @"RVStock", @"RVCopy",
                            @"RVOCData", @"RVQQ", @"RVThread",
                            @"RVTDW", @"RVLLDB", @"RXMethodForward",
-                           @"RVEventResponseList", @"RXObjectCreate", @"RVGCD2"];
+                           @"RVEventResponseList", @"RXObjectCreate", @"RVGCD2",
+                           @"RXMRSW"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];

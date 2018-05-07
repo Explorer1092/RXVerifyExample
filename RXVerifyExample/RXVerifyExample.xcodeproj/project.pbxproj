@@ -110,6 +110,8 @@
 		E811CA921FED09FD003157E9 /* RVEventResponseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E811CA901FED09FD003157E9 /* RVEventResponseListViewController.xib */; };
 		E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */; };
 		E86050B2209FFB900016F6C9 /* RVGCD2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B1209FFB900016F6C9 /* RVGCD2ViewController.m */; };
+		E86050B520A03DDF0016F6C9 /* RXMRSWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B420A03DDF0016F6C9 /* RXMRSWViewController.m */; };
+		E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B820A03E570016F6C9 /* RXMRSWPerson.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -281,6 +283,10 @@
 		E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXObjectCreateViewController.m; sourceTree = "<group>"; };
 		E86050B0209FFB900016F6C9 /* RVGCD2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVGCD2ViewController.h; sourceTree = "<group>"; };
 		E86050B1209FFB900016F6C9 /* RVGCD2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVGCD2ViewController.m; sourceTree = "<group>"; };
+		E86050B320A03DDF0016F6C9 /* RXMRSWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMRSWViewController.h; sourceTree = "<group>"; };
+		E86050B420A03DDF0016F6C9 /* RXMRSWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMRSWViewController.m; sourceTree = "<group>"; };
+		E86050B720A03E570016F6C9 /* RXMRSWPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMRSWPerson.h; sourceTree = "<group>"; };
+		E86050B820A03E570016F6C9 /* RXMRSWPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMRSWPerson.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -484,6 +490,8 @@
 				E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */,
 				E86050B0209FFB900016F6C9 /* RVGCD2ViewController.h */,
 				E86050B1209FFB900016F6C9 /* RVGCD2ViewController.m */,
+				E86050B320A03DDF0016F6C9 /* RXMRSWViewController.h */,
+				E86050B420A03DDF0016F6C9 /* RXMRSWViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -491,6 +499,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E86050B620A03E460016F6C9 /* RXMRSW */,
 				C97881BA1FC6AE4A00083ADF /* RXMethodForward */,
 				C966DB881FAEB5B3003BC1B4 /* RXLog */,
 				C9A711091D7BA06C0002E703 /* RXCopy */,
@@ -633,6 +642,15 @@
 				70BA962DE41383DAC9D079B9 /* Pods-RXVerifyExample.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E86050B620A03E460016F6C9 /* RXMRSW */ = {
+			isa = PBXGroup;
+			children = (
+				E86050B720A03E570016F6C9 /* RXMRSWPerson.h */,
+				E86050B820A03E570016F6C9 /* RXMRSWPerson.m */,
+			);
+			path = RXMRSW;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -812,6 +830,7 @@
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
 				C9A711141D7BA1240002E703 /* RXBObject.m in Sources */,
+				E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
 				C92923421D339F02009D6875 /* DMLine.m in Sources */,
 				C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */,
@@ -858,6 +877,7 @@
 				C937947D1CE331D30065F68C /* RVViewCycleViewController.m in Sources */,
 				C928B26E1FB93E530038ECE6 /* RVLLDBViewController.m in Sources */,
 				C9D397A01CF59D3500D8569C /* RVRunTimeViewController.m in Sources */,
+				E86050B520A03DDF0016F6C9 /* RXMRSWViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
