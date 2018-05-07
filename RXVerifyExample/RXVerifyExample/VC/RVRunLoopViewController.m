@@ -9,8 +9,6 @@
 #import "RVRunLoopViewController.h"
 
 
-NS_ENUM(...)
-
 void RunLoopSourceScheduleRoutine (void *info, CFRunLoopRef rl, CFStringRef mode)
 {
     

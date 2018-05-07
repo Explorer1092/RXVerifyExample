@@ -106,6 +106,10 @@
 		C9E8B7B11D23B74A00A3D16F /* RVOSSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E8B7AF1D23B74A00A3D16F /* RVOSSViewController.xib */; };
 		C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F53E211CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m */; };
 		C9F53E241CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F53E221CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib */; };
+		E811CA911FED09FD003157E9 /* RVEventResponseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E811CA8F1FED09FD003157E9 /* RVEventResponseListViewController.m */; };
+		E811CA921FED09FD003157E9 /* RVEventResponseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E811CA901FED09FD003157E9 /* RVEventResponseListViewController.xib */; };
+		E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */; };
+		E86050B2209FFB900016F6C9 /* RVGCD2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B1209FFB900016F6C9 /* RVGCD2ViewController.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -270,6 +274,13 @@
 		C9F53E201CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVStrongWeakSelfViewController.h; sourceTree = "<group>"; };
 		C9F53E211CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVStrongWeakSelfViewController.m; sourceTree = "<group>"; };
 		C9F53E221CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVStrongWeakSelfViewController.xib; sourceTree = "<group>"; };
+		E811CA8E1FED09FD003157E9 /* RVEventResponseListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVEventResponseListViewController.h; sourceTree = "<group>"; };
+		E811CA8F1FED09FD003157E9 /* RVEventResponseListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVEventResponseListViewController.m; sourceTree = "<group>"; };
+		E811CA901FED09FD003157E9 /* RVEventResponseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RVEventResponseListViewController.xib; sourceTree = "<group>"; };
+		E86050AD209C67630016F6C9 /* RXObjectCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXObjectCreateViewController.h; sourceTree = "<group>"; };
+		E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXObjectCreateViewController.m; sourceTree = "<group>"; };
+		E86050B0209FFB900016F6C9 /* RVGCD2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVGCD2ViewController.h; sourceTree = "<group>"; };
+		E86050B1209FFB900016F6C9 /* RVGCD2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVGCD2ViewController.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -466,6 +477,13 @@
 				C97881BB1FC6AE6200083ADF /* RXMethodForwardViewController.h */,
 				C97881BC1FC6AE6200083ADF /* RXMethodForwardViewController.m */,
 				C97881BD1FC6AE6200083ADF /* RXMethodForwardViewController.xib */,
+				E811CA8E1FED09FD003157E9 /* RVEventResponseListViewController.h */,
+				E811CA8F1FED09FD003157E9 /* RVEventResponseListViewController.m */,
+				E811CA901FED09FD003157E9 /* RVEventResponseListViewController.xib */,
+				E86050AD209C67630016F6C9 /* RXObjectCreateViewController.h */,
+				E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */,
+				E86050B0209FFB900016F6C9 /* RVGCD2ViewController.h */,
+				E86050B1209FFB900016F6C9 /* RVGCD2ViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -712,6 +730,7 @@
 				5803F0D01C190FFC0071FDDA /* RVRefreshViewController.xib in Resources */,
 				C9C326081CA28E9F00E65090 /* RVGCDViewController.xib in Resources */,
 				5803F0D51C1913260071FDDA /* RVScrollViewController.xib in Resources */,
+				E811CA921FED09FD003157E9 /* RVEventResponseListViewController.xib in Resources */,
 				C9C58B6E1CD8AE4400448350 /* RVDebugViewController.xib in Resources */,
 				5803F0DA1C196F520071FDDA /* RVRectViewController.xib in Resources */,
 				58CA8D5C1C1ABEFB00A507BE /* RVTransformViewController.xib in Resources */,
@@ -762,7 +781,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/RX3_TencentLiteSDK/Paramount.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/RX3_TencentLiteSDK/Paramount.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -788,6 +807,7 @@
 				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
 				C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */,
 				C9A7110D1D7BA0880002E703 /* RVCopyViewController.m in Sources */,
+				E86050B2209FFB900016F6C9 /* RVGCD2ViewController.m in Sources */,
 				C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */,
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
@@ -796,6 +816,7 @@
 				C92923421D339F02009D6875 /* DMLine.m in Sources */,
 				C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */,
 				C9D397A51CF5A29200D8569C /* RXRunTimeDemoObject.m in Sources */,
+				E811CA911FED09FD003157E9 /* RVEventResponseListViewController.m in Sources */,
 				58AAC3141C38CDF20023D2EA /* RVButtonViewController.m in Sources */,
 				C93E6AF31CF684CE00E7B193 /* RXRunTimeDemoBaseObject.m in Sources */,
 				58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */,
@@ -814,6 +835,7 @@
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */,
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
+				E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
 				C9D397941CF535E400D8569C /* RVRunLoop2ViewController.m in Sources */,

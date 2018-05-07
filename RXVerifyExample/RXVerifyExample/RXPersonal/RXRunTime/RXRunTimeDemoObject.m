@@ -65,11 +65,6 @@
     for (unsigned int i = 0; i < count; i++) {
         Method method = methodList[i];
         NSLog(@"method-->%@", NSStringFromSelector(method_getName(method)));
-        
-        
-//        IMP imp = method_getImplementation(method);
-        
-        
     }
     
     
