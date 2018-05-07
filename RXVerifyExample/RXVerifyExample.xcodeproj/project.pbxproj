@@ -112,6 +112,9 @@
 		E86050B2209FFB900016F6C9 /* RVGCD2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B1209FFB900016F6C9 /* RVGCD2ViewController.m */; };
 		E86050B520A03DDF0016F6C9 /* RXMRSWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B420A03DDF0016F6C9 /* RXMRSWViewController.m */; };
 		E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B820A03E570016F6C9 /* RXMRSWPerson.m */; };
+		E86050BC20A051170016F6C9 /* RXCurrentQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050BB20A051170016F6C9 /* RXCurrentQueueViewController.m */; };
+		E86050BF20A05A070016F6C9 /* RXTargetQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050BE20A05A070016F6C9 /* RXTargetQueueViewController.m */; };
+		E86050C220A060510016F6C9 /* RXQueueSpecialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050C120A060510016F6C9 /* RXQueueSpecialViewController.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -287,6 +290,12 @@
 		E86050B420A03DDF0016F6C9 /* RXMRSWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMRSWViewController.m; sourceTree = "<group>"; };
 		E86050B720A03E570016F6C9 /* RXMRSWPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMRSWPerson.h; sourceTree = "<group>"; };
 		E86050B820A03E570016F6C9 /* RXMRSWPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMRSWPerson.m; sourceTree = "<group>"; };
+		E86050BA20A051170016F6C9 /* RXCurrentQueueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCurrentQueueViewController.h; sourceTree = "<group>"; };
+		E86050BB20A051170016F6C9 /* RXCurrentQueueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCurrentQueueViewController.m; sourceTree = "<group>"; };
+		E86050BD20A05A070016F6C9 /* RXTargetQueueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTargetQueueViewController.h; sourceTree = "<group>"; };
+		E86050BE20A05A070016F6C9 /* RXTargetQueueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTargetQueueViewController.m; sourceTree = "<group>"; };
+		E86050C020A060510016F6C9 /* RXQueueSpecialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXQueueSpecialViewController.h; sourceTree = "<group>"; };
+		E86050C120A060510016F6C9 /* RXQueueSpecialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXQueueSpecialViewController.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -492,6 +501,12 @@
 				E86050B1209FFB900016F6C9 /* RVGCD2ViewController.m */,
 				E86050B320A03DDF0016F6C9 /* RXMRSWViewController.h */,
 				E86050B420A03DDF0016F6C9 /* RXMRSWViewController.m */,
+				E86050BA20A051170016F6C9 /* RXCurrentQueueViewController.h */,
+				E86050BB20A051170016F6C9 /* RXCurrentQueueViewController.m */,
+				E86050BD20A05A070016F6C9 /* RXTargetQueueViewController.h */,
+				E86050BE20A05A070016F6C9 /* RXTargetQueueViewController.m */,
+				E86050C020A060510016F6C9 /* RXQueueSpecialViewController.h */,
+				E86050C120A060510016F6C9 /* RXQueueSpecialViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -799,11 +814,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/RX3_TencentLiteSDK/Paramount.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/RX3_TencentLiteSDK/Paramount.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Paramount.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -856,6 +871,8 @@
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
 				E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
+				E86050BF20A05A070016F6C9 /* RXTargetQueueViewController.m in Sources */,
+				E86050C220A060510016F6C9 /* RXQueueSpecialViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
 				C9D397941CF535E400D8569C /* RVRunLoop2ViewController.m in Sources */,
 				C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */,
@@ -865,6 +882,7 @@
 				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
+				E86050BC20A051170016F6C9 /* RXCurrentQueueViewController.m in Sources */,
 				C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
