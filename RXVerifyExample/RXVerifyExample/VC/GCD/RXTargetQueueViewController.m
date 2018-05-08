@@ -36,11 +36,6 @@
 - (void)testTargetQueue {
     dispatch_queue_t targetQueue = dispatch_queue_create("test.target.queue", DISPATCH_QUEUE_SERIAL);
 //    dispatch_queue_t targetQueue = dispatch_queue_create("test.target.queue", DISPATCH_QUEUE_CONCURRENT);
-    
-    
-    
-    
-    
     dispatch_queue_t queue1 = dispatch_queue_create("test.1", DISPATCH_QUEUE_SERIAL);
     dispatch_queue_t queue2 = dispatch_queue_create("test.2", DISPATCH_QUEUE_SERIAL);
     dispatch_queue_t queue3 = dispatch_queue_create("test.3", DISPATCH_QUEUE_SERIAL);
@@ -72,7 +67,6 @@
         [NSThread sleepForTimeInterval:1.f];
         NSLog(@"3 out");
     });
-    
     
     
 }

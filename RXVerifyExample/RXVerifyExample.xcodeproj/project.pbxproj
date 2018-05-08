@@ -115,6 +115,7 @@
 		E86050E720A07A1B0016F6C9 /* RVRunTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050E520A07A1A0016F6C9 /* RVRunTimeViewController.m */; };
 		E86050E820A07A1B0016F6C9 /* RVRunTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E86050E620A07A1B0016F6C9 /* RVRunTimeViewController.xib */; };
 		E86050EB20A07B0D0016F6C9 /* RXCurrentQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050E920A07B0C0016F6C9 /* RXCurrentQueueViewController.m */; };
+		E86050EF20A191360016F6C9 /* RVAutoReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050EE20A191360016F6C9 /* RVAutoReleaseViewController.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -296,6 +297,8 @@
 		E86050E620A07A1B0016F6C9 /* RVRunTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVRunTimeViewController.xib; sourceTree = "<group>"; };
 		E86050E920A07B0C0016F6C9 /* RXCurrentQueueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCurrentQueueViewController.m; sourceTree = "<group>"; };
 		E86050EA20A07B0D0016F6C9 /* RXCurrentQueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCurrentQueueViewController.h; sourceTree = "<group>"; };
+		E86050ED20A191360016F6C9 /* RVAutoReleaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVAutoReleaseViewController.h; sourceTree = "<group>"; };
+		E86050EE20A191360016F6C9 /* RVAutoReleaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVAutoReleaseViewController.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -386,6 +389,7 @@
 		5886CDAA1C18235B00013C76 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				E86050EC20A191230016F6C9 /* AutoRelease */,
 				E86050D920A079E20016F6C9 /* Runloop */,
 				E86050D820A079E20016F6C9 /* Runtime */,
 				E86050C320A079040016F6C9 /* GCD */,
@@ -692,6 +696,15 @@
 			path = Runloop;
 			sourceTree = "<group>";
 		};
+		E86050EC20A191230016F6C9 /* AutoRelease */ = {
+			isa = PBXGroup;
+			children = (
+				E86050ED20A191360016F6C9 /* RVAutoReleaseViewController.h */,
+				E86050EE20A191360016F6C9 /* RVAutoReleaseViewController.m */,
+			);
+			path = AutoRelease;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -897,6 +910,7 @@
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
 				E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */,
 				E86050D620A079050016F6C9 /* RVGCDViewController.m in Sources */,
+				E86050EF20A191360016F6C9 /* RVAutoReleaseViewController.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
 				E86050E220A079E30016F6C9 /* RVRunLoopViewController.m in Sources */,

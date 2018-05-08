@@ -113,7 +113,7 @@ void myRunLoopObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity
     [self.view addSubview:button];
     
     
-    
+//    CFRunLoopGetMain()
     
     
 //    [self testCommonMode];

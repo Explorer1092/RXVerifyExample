@@ -46,7 +46,7 @@
                            @"RVTDW", @"RVLLDB", @"RXMethodForward",
                            @"RVEventResponseList", @"RXObjectCreate", @"RVGCD2",
                            @"RXMRSW", @"RXCurrentQueue", @"RXTargetQueue",
-                           @"RXQueueSpecial"];
+                           @"RXQueueSpecial", @"RVAutoRelease"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];

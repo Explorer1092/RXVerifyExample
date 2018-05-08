@@ -17,12 +17,14 @@ static const void * const abc = &abc;
 
 @implementation RXQueueSpecialViewController
 
+// https://www.jianshu.com/p/f9e01c69a46f 搜索dispatch_queue_set_specific 关键词
+// https://blog.csdn.net/yiyaaixuexi/article/details/17752925
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self inSameQueue];
-//    [self testkkk];
+    [self inSameQueue];
+    [self notInSameQueue];
     
 }
 
@@ -35,7 +37,7 @@ static const void * const abc = &abc;
 
 - (BOOL)isCurQueueEqualQueue:(dispatch_queue_t)queue {
     NSString *specificKey = @"com.specific.specificKey";
-    NSString *specificValue = @"com.specific.sepcificValue";
+    NSString *specificValue = [NSString stringWithFormat:@"com.specific.sepcificValue.%@", [NSDate new]];
     dispatch_queue_set_specific(queue, &specificKey, (__bridge void *)specificValue, NULL);
     NSString *retrievedValue = (__bridge NSString *)dispatch_get_specific(&specificKey);
     return [retrievedValue isEqualToString:specificValue];
@@ -43,25 +45,36 @@ static const void * const abc = &abc;
 - (void)inSameQueue
 {
     __weak __typeof(self) weakSelf = self;
-    printf("\n================\n");
+    printf("\n=======inSameQueue=========\n");
     dispatch_queue_t queueA = dispatch_queue_create("com.yiyaaixuexi.queueA", NULL);
     dispatch_queue_t queueB = dispatch_queue_create("com.yiyaaixuexi.queueB", NULL);
     
     printf("queue1:%s\n", dispatch_queue_get_label(dispatch_get_current_queue()));
     
     dispatch_sync(queueA, ^{
-        
         printf("queue2:%s\n", dispatch_queue_get_label(dispatch_get_current_queue()));
-        
-        dispatch_block_t block = ^{
-            printf("queue4:%s\n", dispatch_queue_get_label(dispatch_get_current_queue()));
-            
-        };
-        if ([weakSelf isCurQueueEqualQueue:queueA]) {
-            block();
-        }
+        BOOL same = [weakSelf isCurQueueEqualQueue:queueA];
+        NSLog(@"same value: %@", same ? @"Same" : @"Not Same");
     });
 }
+
+- (void)notInSameQueue
+{
+    __weak __typeof(self) weakSelf = self;
+    printf("\n=======notInSameQueue=========\n");
+    dispatch_queue_t queueA = dispatch_queue_create("com.yiyaaixuexi.queueA", NULL);
+    dispatch_queue_t queueB = dispatch_queue_create("com.yiyaaixuexi.queueB", NULL);
+    
+    printf("queue1:%s\n", dispatch_queue_get_label(dispatch_get_current_queue()));
+    
+    dispatch_sync(queueB, ^{
+        printf("queue2:%s\n", dispatch_queue_get_label(dispatch_get_current_queue()));
+        BOOL same = [weakSelf isCurQueueEqualQueue:queueA];
+        NSLog(@"same value: %@", same ? @"Same" : @"Not Same");
+        
+    });
+}
+
 /*
 #pragma mark - Navigation
 

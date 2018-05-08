@@ -17,6 +17,9 @@ void func(dispatch_queue_t queue, dispatch_block_t block)
     } else {
         dispatch_sync(queue, block);
     }
+    
+    
+    
 }
 
 
@@ -43,7 +46,6 @@ void func(dispatch_queue_t queue, dispatch_block_t block)
 
 
 - (void)testMain {
-    
     
     
     dispatch_queue_t mainQueue = dispatch_get_main_queue();

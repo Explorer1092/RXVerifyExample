@@ -9,7 +9,7 @@
 #import "RXMRSWViewController.h"
 #import "RXMRSWPerson.h"
 
-
+// multiply read signal write
 @interface RXMRSWViewController ()
 
 @end
