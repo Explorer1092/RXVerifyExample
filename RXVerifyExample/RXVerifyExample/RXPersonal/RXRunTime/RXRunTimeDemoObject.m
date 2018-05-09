@@ -37,12 +37,64 @@
 {
     
 }
-
-
 - (void)testPrint
 {
     
     Class cls = [RXRunTimeDemoObject class];
+    
+    unsigned int count;
+    
+    
+    
+    NSLog(@"property");
+    objc_property_t *propertyList = class_copyPropertyList(cls, &count);
+    for (unsigned int i = 0; i < count; i++) {
+        
+        objc_property_t property = propertyList[i];
+        const char *propertyName = property_getName(property);
+        NSLog(@"property-->%@", [NSString stringWithUTF8String:propertyName]);
+        
+        const char *propertAttributs = property_getAttributes(property);
+        NSLog(@"propertAttributs-->%@", [NSString stringWithUTF8String:propertAttributs]);
+    }
+    
+    NSLog(@"method");
+    Method *methodList = class_copyMethodList(cls, &count);
+    for (unsigned int i = 0; i < count; i++) {
+        Method method = methodList[i];
+        NSLog(@"method-->%@", NSStringFromSelector(method_getName(method)));
+    }
+    
+    
+    
+    
+    
+    NSLog(@"ivar");
+    Ivar *ivarList = class_copyIvarList(cls, &count);
+    for (unsigned int i = 0; i < count; i++) {
+        Ivar ivar = ivarList[i];
+        const char *ivarName = ivar_getName(ivar);
+        NSLog(@"ivar-->%@", [NSString stringWithUTF8String:ivarName]);
+        
+    }
+    
+    NSLog(@"protocol");
+    __unsafe_unretained Protocol **protocolList = class_copyProtocolList(cls, &count);
+    for (unsigned int i = 0; i < count; i++) {
+        Protocol *protocol = protocolList[i];
+        const char *protocolName = protocol_getName(protocol);
+        NSLog(@"protocol-->%@", [NSString stringWithUTF8String:protocolName]);
+        
+    }
+    
+    
+    
+}
+
+- (void)testPrint2
+{
+    
+    Class cls = objc_getMetaClass("RXRunTimeDemoObject");
     
     unsigned int count;
     

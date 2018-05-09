@@ -46,7 +46,8 @@
                            @"RVTDW", @"RVLLDB", @"RXMethodForward",
                            @"RVEventResponseList", @"RXObjectCreate", @"RVGCD2",
                            @"RXMRSW", @"RXCurrentQueue", @"RXTargetQueue",
-                           @"RXQueueSpecial", @"RVAutoRelease"];
+                           @"RXQueueSpecial", @"RVAutoRelease", @"RVRTPrint",
+                           @"RVMsgForward", @"RVAddMethod", @"RVArrayCopy"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -54,7 +55,8 @@
     NSString *object = self.functionItems.firstObject;
     
 #if 1
-//    object = @"RXCurrentQueue";
+//    object = @"RVMsgForward";
+//    object = @"RVRunTime";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];

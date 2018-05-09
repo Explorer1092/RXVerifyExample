@@ -116,6 +116,12 @@
 		E86050E820A07A1B0016F6C9 /* RVRunTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E86050E620A07A1B0016F6C9 /* RVRunTimeViewController.xib */; };
 		E86050EB20A07B0D0016F6C9 /* RXCurrentQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050E920A07B0C0016F6C9 /* RXCurrentQueueViewController.m */; };
 		E86050EF20A191360016F6C9 /* RVAutoReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050EE20A191360016F6C9 /* RVAutoReleaseViewController.m */; };
+		E86050F220A2965C0016F6C9 /* RVRTPrintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050F120A2965C0016F6C9 /* RVRTPrintViewController.m */; };
+		E86050F520A298B60016F6C9 /* RVMsgForwardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050F420A298B60016F6C9 /* RVMsgForwardViewController.m */; };
+		E86050F820A298DA0016F6C9 /* RVMsgForward.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050F720A298DA0016F6C9 /* RVMsgForward.m */; };
+		E86050FB20A29A9D0016F6C9 /* RVMsgForwardProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050FA20A29A9D0016F6C9 /* RVMsgForwardProxy.m */; };
+		E86050FE20A2A1840016F6C9 /* RVAddMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050FD20A2A1840016F6C9 /* RVAddMethodViewController.m */; };
+		E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E860510120A2E4CA0016F6C9 /* RVArrayCopyViewController.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -299,6 +305,18 @@
 		E86050EA20A07B0D0016F6C9 /* RXCurrentQueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCurrentQueueViewController.h; sourceTree = "<group>"; };
 		E86050ED20A191360016F6C9 /* RVAutoReleaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVAutoReleaseViewController.h; sourceTree = "<group>"; };
 		E86050EE20A191360016F6C9 /* RVAutoReleaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVAutoReleaseViewController.m; sourceTree = "<group>"; };
+		E86050F020A2965C0016F6C9 /* RVRTPrintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVRTPrintViewController.h; sourceTree = "<group>"; };
+		E86050F120A2965C0016F6C9 /* RVRTPrintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVRTPrintViewController.m; sourceTree = "<group>"; };
+		E86050F320A298B60016F6C9 /* RVMsgForwardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVMsgForwardViewController.h; sourceTree = "<group>"; };
+		E86050F420A298B60016F6C9 /* RVMsgForwardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVMsgForwardViewController.m; sourceTree = "<group>"; };
+		E86050F620A298DA0016F6C9 /* RVMsgForward.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVMsgForward.h; sourceTree = "<group>"; };
+		E86050F720A298DA0016F6C9 /* RVMsgForward.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVMsgForward.m; sourceTree = "<group>"; };
+		E86050F920A29A9D0016F6C9 /* RVMsgForwardProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVMsgForwardProxy.h; sourceTree = "<group>"; };
+		E86050FA20A29A9D0016F6C9 /* RVMsgForwardProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVMsgForwardProxy.m; sourceTree = "<group>"; };
+		E86050FC20A2A1840016F6C9 /* RVAddMethodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVAddMethodViewController.h; sourceTree = "<group>"; };
+		E86050FD20A2A1840016F6C9 /* RVAddMethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVAddMethodViewController.m; sourceTree = "<group>"; };
+		E860510020A2E4CA0016F6C9 /* RVArrayCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVArrayCopyViewController.h; sourceTree = "<group>"; };
+		E860510120A2E4CA0016F6C9 /* RVArrayCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVArrayCopyViewController.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -389,6 +407,7 @@
 		5886CDAA1C18235B00013C76 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				E86050FF20A2E4BB0016F6C9 /* CoreFoundation */,
 				E86050EC20A191230016F6C9 /* AutoRelease */,
 				E86050D920A079E20016F6C9 /* Runloop */,
 				E86050D820A079E20016F6C9 /* Runtime */,
@@ -631,6 +650,10 @@
 				C9D397A41CF5A29200D8569C /* RXRunTimeDemoObject.m */,
 				C93E6AF41CF6A14F00E7B193 /* RXRunTimeDemo1Object.h */,
 				C93E6AF51CF6A14F00E7B193 /* RXRunTimeDemo1Object.m */,
+				E86050F620A298DA0016F6C9 /* RVMsgForward.h */,
+				E86050F720A298DA0016F6C9 /* RVMsgForward.m */,
+				E86050F920A29A9D0016F6C9 /* RVMsgForwardProxy.h */,
+				E86050FA20A29A9D0016F6C9 /* RVMsgForwardProxy.m */,
 			);
 			path = RXRunTime;
 			sourceTree = "<group>";
@@ -679,6 +702,12 @@
 				E86050E420A07A1A0016F6C9 /* RVRunTimeViewController.h */,
 				E86050E520A07A1A0016F6C9 /* RVRunTimeViewController.m */,
 				E86050E620A07A1B0016F6C9 /* RVRunTimeViewController.xib */,
+				E86050F020A2965C0016F6C9 /* RVRTPrintViewController.h */,
+				E86050F120A2965C0016F6C9 /* RVRTPrintViewController.m */,
+				E86050F320A298B60016F6C9 /* RVMsgForwardViewController.h */,
+				E86050F420A298B60016F6C9 /* RVMsgForwardViewController.m */,
+				E86050FC20A2A1840016F6C9 /* RVAddMethodViewController.h */,
+				E86050FD20A2A1840016F6C9 /* RVAddMethodViewController.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -703,6 +732,15 @@
 				E86050EE20A191360016F6C9 /* RVAutoReleaseViewController.m */,
 			);
 			path = AutoRelease;
+			sourceTree = "<group>";
+		};
+		E86050FF20A2E4BB0016F6C9 /* CoreFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				E860510020A2E4CA0016F6C9 /* RVArrayCopyViewController.h */,
+				E860510120A2E4CA0016F6C9 /* RVArrayCopyViewController.m */,
+			);
+			path = CoreFoundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -871,6 +909,7 @@
 			files = (
 				5803F0CF1C190FFC0071FDDA /* RVRefreshViewController.m in Sources */,
 				C929233F1D339C65009D6875 /* RVDUMAView.m in Sources */,
+				E86050FB20A29A9D0016F6C9 /* RVMsgForwardProxy.m in Sources */,
 				C9BDAFB91E4AC4B8006CCD0E /* RVThreadViewController.m in Sources */,
 				C9C2B3391E0BB2AD0087C718 /* RVOCDataViewController.m in Sources */,
 				58D660391C2571A700912786 /* RXMenuView.m in Sources */,
@@ -879,8 +918,10 @@
 				C9A7110D1D7BA0880002E703 /* RVCopyViewController.m in Sources */,
 				C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */,
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
+				E86050FE20A2A1840016F6C9 /* RVAddMethodViewController.m in Sources */,
 				E86050EB20A07B0D0016F6C9 /* RXCurrentQueueViewController.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
+				E86050F220A2965C0016F6C9 /* RVRTPrintViewController.m in Sources */,
 				C9A711141D7BA1240002E703 /* RXBObject.m in Sources */,
 				E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
@@ -911,6 +952,7 @@
 				E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */,
 				E86050D620A079050016F6C9 /* RVGCDViewController.m in Sources */,
 				E86050EF20A191360016F6C9 /* RVAutoReleaseViewController.m in Sources */,
+				E86050F820A298DA0016F6C9 /* RVMsgForward.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
 				E86050E220A079E30016F6C9 /* RVRunLoopViewController.m in Sources */,
@@ -918,6 +960,7 @@
 				C985F6181D5030EC004D654D /* RVStockViewController.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
+				E86050F520A298B60016F6C9 /* RVMsgForwardViewController.m in Sources */,
 				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
@@ -928,6 +971,7 @@
 				C9D474531D16543F000C14E3 /* RVUtilityViewController.m in Sources */,
 				E86050D220A079050016F6C9 /* RXTargetQueueViewController.m in Sources */,
 				C98FD0F21D210F960024854D /* RVLayerViewController.m in Sources */,
+				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.mm in Sources */,

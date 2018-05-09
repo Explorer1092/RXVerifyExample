@@ -21,7 +21,8 @@
     // Do any additional setup after loading the view from its nib.
     self.rxRunTimeDemoObject = [[RXRunTimeDemoObject alloc] init];
     
-    [self.rxRunTimeDemoObject testPrint];
+//    [self.rxRunTimeDemoObject testPrint];
+    [self.rxRunTimeDemoObject testPrint2];
     
 //    Class cls;
     
