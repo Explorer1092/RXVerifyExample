@@ -31,9 +31,9 @@
     
     [self printDeviceInfo];
     
-    [self asyncConcurrent];
+//    [self asyncConcurrent];
     
-//    [self asyncSerial];
+    [self asyncSerial];
     
 //    [self syncConcurrent];
     
