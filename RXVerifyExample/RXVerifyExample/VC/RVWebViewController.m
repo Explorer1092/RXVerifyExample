@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.webView.delegate = self;
-    NSURL *url = [NSURL rx_URLWithString:@"http://activity.yiyizuche.cn/home/activity/"];
+    NSURL *url = [NSURL rx_URLWithString:@"http://p7qmrcmbc.bkt.clouddn.com/speiyou_h5.png"];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:urlRequest];
 }

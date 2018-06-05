@@ -44,6 +44,7 @@ void test2() {
     NSLog(@"%@--------%@", NSStringFromSelector(_cmd), NSStringFromSelector(aSelector));
     return nil;
 }
+
 - (void)forwardInvocation:(NSInvocation *)anInvocation
 {
     NSLog(@"%@--------%@", NSStringFromSelector(_cmd), anInvocation);
