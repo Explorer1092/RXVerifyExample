@@ -135,6 +135,7 @@
 		E86050FB20A29A9D0016F6C9 /* RVMsgForwardProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050FA20A29A9D0016F6C9 /* RVMsgForwardProxy.m */; };
 		E86050FE20A2A1840016F6C9 /* RVAddMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050FD20A2A1840016F6C9 /* RVAddMethodViewController.m */; };
 		E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E860510120A2E4CA0016F6C9 /* RVArrayCopyViewController.m */; };
+		E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = E8701FA820C957F100752211 /* UIImageView+RXCornerRadius.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -356,6 +357,8 @@
 		E86050FD20A2A1840016F6C9 /* RVAddMethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVAddMethodViewController.m; sourceTree = "<group>"; };
 		E860510020A2E4CA0016F6C9 /* RVArrayCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVArrayCopyViewController.h; sourceTree = "<group>"; };
 		E860510120A2E4CA0016F6C9 /* RVArrayCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVArrayCopyViewController.m; sourceTree = "<group>"; };
+		E8701FA720C957F100752211 /* UIImageView+RXCornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RXCornerRadius.h"; sourceTree = "<group>"; };
+		E8701FA820C957F100752211 /* UIImageView+RXCornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RXCornerRadius.m"; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -446,6 +449,7 @@
 		5886CDAA1C18235B00013C76 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				E8701FA420C9573A00752211 /* Performance */,
 				E86050FF20A2E4BB0016F6C9 /* CoreFoundation */,
 				E86050EC20A191230016F6C9 /* AutoRelease */,
 				E86050D920A079E20016F6C9 /* Runloop */,
@@ -880,6 +884,31 @@
 			path = CoreFoundation;
 			sourceTree = "<group>";
 		};
+		E8701FA420C9573A00752211 /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				E8701FA520C9575500752211 /* UIList */,
+			);
+			path = Performance;
+			sourceTree = "<group>";
+		};
+		E8701FA520C9575500752211 /* UIList */ = {
+			isa = PBXGroup;
+			children = (
+				E8701FA620C957A700752211 /* CornerRadius */,
+			);
+			path = UIList;
+			sourceTree = "<group>";
+		};
+		E8701FA620C957A700752211 /* CornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				E8701FA720C957F100752211 /* UIImageView+RXCornerRadius.h */,
+				E8701FA820C957F100752211 /* UIImageView+RXCornerRadius.m */,
+			);
+			path = CornerRadius;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1107,6 +1136,7 @@
 				C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */,
 				C985F6181D5030EC004D654D /* RVStockViewController.m in Sources */,
 				E818F0F720B9046E00F94127 /* RXMVVMViewModel.m in Sources */,
+				E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
