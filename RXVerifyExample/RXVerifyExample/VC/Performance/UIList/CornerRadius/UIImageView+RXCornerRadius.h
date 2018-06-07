@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+// https://github.com/liuzhiyi1992/ZYCornerRadius
+// https://blog.csdn.net/qxuewei/article/details/51602518
 @interface UIImageView (RXCornerRadius)
 - (instancetype)initWithCornerRadiusAdvance:(CGFloat)cornerRadius rectCornerType:(UIRectCorner)rectCornerType;
 
