@@ -136,6 +136,7 @@
 		E86050FE20A2A1840016F6C9 /* RVAddMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050FD20A2A1840016F6C9 /* RVAddMethodViewController.m */; };
 		E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E860510120A2E4CA0016F6C9 /* RVArrayCopyViewController.m */; };
 		E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = E8701FA820C957F100752211 /* UIImageView+RXCornerRadius.m */; };
+		E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8701FAB20CA5C4000752211 /* RXCornerRadiusViewController.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -359,6 +360,8 @@
 		E860510120A2E4CA0016F6C9 /* RVArrayCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVArrayCopyViewController.m; sourceTree = "<group>"; };
 		E8701FA720C957F100752211 /* UIImageView+RXCornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RXCornerRadius.h"; sourceTree = "<group>"; };
 		E8701FA820C957F100752211 /* UIImageView+RXCornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RXCornerRadius.m"; sourceTree = "<group>"; };
+		E8701FAA20CA5C4000752211 /* RXCornerRadiusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCornerRadiusViewController.h; sourceTree = "<group>"; };
+		E8701FAB20CA5C4000752211 /* RXCornerRadiusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCornerRadiusViewController.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -905,6 +908,8 @@
 			children = (
 				E8701FA720C957F100752211 /* UIImageView+RXCornerRadius.h */,
 				E8701FA820C957F100752211 /* UIImageView+RXCornerRadius.m */,
+				E8701FAA20CA5C4000752211 /* RXCornerRadiusViewController.h */,
+				E8701FAB20CA5C4000752211 /* RXCornerRadiusViewController.m */,
 			);
 			path = CornerRadius;
 			sourceTree = "<group>";
@@ -1124,6 +1129,7 @@
 				E818F0FA20B93FED00F94127 /* RXMVVMListViewController.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */,
+				E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */,
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
 				E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */,
 				E818F0F420B9045C00F94127 /* RXMVVMView.m in Sources */,
