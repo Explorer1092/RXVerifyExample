@@ -137,6 +137,7 @@
 		E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E860510120A2E4CA0016F6C9 /* RVArrayCopyViewController.m */; };
 		E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = E8701FA820C957F100752211 /* UIImageView+RXCornerRadius.m */; };
 		E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8701FAB20CA5C4000752211 /* RXCornerRadiusViewController.m */; };
+		E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E870202120D0F3EC00752211 /* RXMultNotificationViewController.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -362,6 +363,8 @@
 		E8701FA820C957F100752211 /* UIImageView+RXCornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RXCornerRadius.m"; sourceTree = "<group>"; };
 		E8701FAA20CA5C4000752211 /* RXCornerRadiusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCornerRadiusViewController.h; sourceTree = "<group>"; };
 		E8701FAB20CA5C4000752211 /* RXCornerRadiusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCornerRadiusViewController.m; sourceTree = "<group>"; };
+		E870202020D0F3EC00752211 /* RXMultNotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMultNotificationViewController.h; sourceTree = "<group>"; };
+		E870202120D0F3EC00752211 /* RXMultNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMultNotificationViewController.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -452,6 +455,7 @@
 		5886CDAA1C18235B00013C76 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				E870201F20D0F3D000752211 /* Notification */,
 				E8701FA420C9573A00752211 /* Performance */,
 				E86050FF20A2E4BB0016F6C9 /* CoreFoundation */,
 				E86050EC20A191230016F6C9 /* AutoRelease */,
@@ -914,6 +918,15 @@
 			path = CornerRadius;
 			sourceTree = "<group>";
 		};
+		E870201F20D0F3D000752211 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				E870202020D0F3EC00752211 /* RXMultNotificationViewController.h */,
+				E870202120D0F3EC00752211 /* RXMultNotificationViewController.m */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1151,6 +1164,7 @@
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
 				C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */,
+				E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
 				C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */,
