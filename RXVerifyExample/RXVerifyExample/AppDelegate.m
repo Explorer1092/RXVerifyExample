@@ -22,21 +22,21 @@
 - (void)config
 {
     
-    @try {
-        NSString *jsonString = nil;
-        NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-        NSError *err;
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
-        if(err) {
-            NSLog(@"json解析失败：%@",err);
-        } else {
-            NSLog(@"json解析失败22222222：%@",err);
-        }
-    }
-    
-    @catch (NSException *exception) {
-        NSLog(@"exception:%@", exception);
-    }
+//    @try {
+//        NSString *jsonString = nil;
+//        NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+//        NSError *err;
+//        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
+//        if(err) {
+//            NSLog(@"json解析失败：%@",err);
+//        } else {
+//            NSLog(@"json解析失败22222222：%@",err);
+//        }
+//    }
+//    
+//    @catch (NSException *exception) {
+//        NSLog(@"exception:%@", exception);
+//    }
     
     
     

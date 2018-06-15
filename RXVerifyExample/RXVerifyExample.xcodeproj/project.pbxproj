@@ -138,6 +138,7 @@
 		E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = E8701FA820C957F100752211 /* UIImageView+RXCornerRadius.m */; };
 		E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8701FAB20CA5C4000752211 /* RXCornerRadiusViewController.m */; };
 		E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E870202120D0F3EC00752211 /* RXMultNotificationViewController.m */; };
+		E870202620D39A3800752211 /* RXSYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E870202520D39A3800752211 /* RXSYViewController.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -365,6 +366,8 @@
 		E8701FAB20CA5C4000752211 /* RXCornerRadiusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCornerRadiusViewController.m; sourceTree = "<group>"; };
 		E870202020D0F3EC00752211 /* RXMultNotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMultNotificationViewController.h; sourceTree = "<group>"; };
 		E870202120D0F3EC00752211 /* RXMultNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMultNotificationViewController.m; sourceTree = "<group>"; };
+		E870202420D39A3800752211 /* RXSYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXSYViewController.h; sourceTree = "<group>"; };
+		E870202520D39A3800752211 /* RXSYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXSYViewController.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -455,6 +458,7 @@
 		5886CDAA1C18235B00013C76 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				E870202320D39A1D00752211 /* Block */,
 				E870201F20D0F3D000752211 /* Notification */,
 				E8701FA420C9573A00752211 /* Performance */,
 				E86050FF20A2E4BB0016F6C9 /* CoreFoundation */,
@@ -927,6 +931,15 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		E870202320D39A1D00752211 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				E870202420D39A3800752211 /* RXSYViewController.h */,
+				E870202520D39A3800752211 /* RXSYViewController.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1095,6 +1108,7 @@
 				5803F0CF1C190FFC0071FDDA /* RVRefreshViewController.m in Sources */,
 				E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */,
 				C929233F1D339C65009D6875 /* RVDUMAView.m in Sources */,
+				E870202620D39A3800752211 /* RXSYViewController.m in Sources */,
 				E86050FB20A29A9D0016F6C9 /* RVMsgForwardProxy.m in Sources */,
 				C9BDAFB91E4AC4B8006CCD0E /* RVThreadViewController.m in Sources */,
 				C9C2B3391E0BB2AD0087C718 /* RVOCDataViewController.m in Sources */,

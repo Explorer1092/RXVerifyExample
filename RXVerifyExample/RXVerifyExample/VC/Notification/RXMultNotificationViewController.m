@@ -35,7 +35,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (void)__private_kkk
+{
+    
+}
 
 - (void)nkey_RXMultNotificationViewController_Demo:(id)sender
 {
