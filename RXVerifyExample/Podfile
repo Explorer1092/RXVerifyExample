@@ -44,7 +44,7 @@ pod 'Aspects'
 
 pod 'RX3_TencentLiteSDK'
 
-
+pod 'fishhook'
 
 
 inhibit_all_warnings!
