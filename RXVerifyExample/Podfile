@@ -47,6 +47,9 @@ pod 'RX3_TencentLiteSDK'
 pod 'fishhook'
 
 
+pod 'RXTableViewImpl'
+
+
 inhibit_all_warnings!
 
 end
