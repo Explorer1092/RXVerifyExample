@@ -14,9 +14,9 @@
 
 #pragma mark - Override
 #ifdef __IPHONE_7_0
-- (UIRectEdge)edgesForExtendedLayout {
-    return UIRectEdgeNone;
-}
+//- (UIRectEdge)edgesForExtendedLayout {
+//    return UIRectEdgeNone;
+//}
 #endif
 
 

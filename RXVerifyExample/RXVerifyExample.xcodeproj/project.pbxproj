@@ -140,6 +140,8 @@
 		E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E870202120D0F3EC00752211 /* RXMultNotificationViewController.m */; };
 		E870202620D39A3800752211 /* RXSYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E870202520D39A3800752211 /* RXSYViewController.m */; };
 		E870202920D8E10B00752211 /* RVGCDQueuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E870202820D8E10B00752211 /* RVGCDQueuesViewController.m */; };
+		E870203120DA617200752211 /* RXUIListPerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E870203020DA617200752211 /* RXUIListPerformanceViewController.m */; };
+		E870203420DA61AA00752211 /* RXUIListPerformanceTableViewImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E870203320DA61AA00752211 /* RXUIListPerformanceTableViewImpl.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -371,6 +373,10 @@
 		E870202520D39A3800752211 /* RXSYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXSYViewController.m; sourceTree = "<group>"; };
 		E870202720D8E10B00752211 /* RVGCDQueuesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVGCDQueuesViewController.h; sourceTree = "<group>"; };
 		E870202820D8E10B00752211 /* RVGCDQueuesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVGCDQueuesViewController.m; sourceTree = "<group>"; };
+		E870202F20DA617200752211 /* RXUIListPerformanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXUIListPerformanceViewController.h; sourceTree = "<group>"; };
+		E870203020DA617200752211 /* RXUIListPerformanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXUIListPerformanceViewController.m; sourceTree = "<group>"; };
+		E870203220DA61AA00752211 /* RXUIListPerformanceTableViewImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXUIListPerformanceTableViewImpl.h; sourceTree = "<group>"; };
+		E870203320DA61AA00752211 /* RXUIListPerformanceTableViewImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXUIListPerformanceTableViewImpl.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -911,6 +917,10 @@
 		E8701FA520C9575500752211 /* UIList */ = {
 			isa = PBXGroup;
 			children = (
+				E870203220DA61AA00752211 /* RXUIListPerformanceTableViewImpl.h */,
+				E870203320DA61AA00752211 /* RXUIListPerformanceTableViewImpl.m */,
+				E870202F20DA617200752211 /* RXUIListPerformanceViewController.h */,
+				E870203020DA617200752211 /* RXUIListPerformanceViewController.m */,
 				E8701FA620C957A700752211 /* CornerRadius */,
 			);
 			path = UIList;
@@ -1134,6 +1144,7 @@
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
 				E826367520A96BDC0081F4A8 /* RXMVPGreetingPresenter.m in Sources */,
 				C92923421D339F02009D6875 /* DMLine.m in Sources */,
+				E870203420DA61AA00752211 /* RXUIListPerformanceTableViewImpl.m in Sources */,
 				C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */,
 				E826367120A96BB00081F4A8 /* RXMVPPerson.m in Sources */,
 				E818F0F120B9044A00F94127 /* RXMVVMModel.m in Sources */,
@@ -1192,6 +1203,7 @@
 				E86050D220A079050016F6C9 /* RXTargetQueueViewController.m in Sources */,
 				C98FD0F21D210F960024854D /* RVLayerViewController.m in Sources */,
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
+				E870203120DA617200752211 /* RXUIListPerformanceViewController.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.mm in Sources */,
