@@ -98,6 +98,7 @@
 		C9E8B7B11D23B74A00A3D16F /* RVOSSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E8B7AF1D23B74A00A3D16F /* RVOSSViewController.xib */; };
 		C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F53E211CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m */; };
 		C9F53E241CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F53E221CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib */; };
+		E810791D20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E810791C20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.m */; };
 		E811CA911FED09FD003157E9 /* RVEventResponseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E811CA8F1FED09FD003157E9 /* RVEventResponseListViewController.m */; };
 		E811CA921FED09FD003157E9 /* RVEventResponseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E811CA901FED09FD003157E9 /* RVEventResponseListViewController.xib */; };
 		E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */; };
@@ -297,6 +298,8 @@
 		C9F53E201CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVStrongWeakSelfViewController.h; sourceTree = "<group>"; };
 		C9F53E211CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVStrongWeakSelfViewController.m; sourceTree = "<group>"; };
 		C9F53E221CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVStrongWeakSelfViewController.xib; sourceTree = "<group>"; };
+		E810791B20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCompressWhitSpaceViewController.h; sourceTree = "<group>"; };
+		E810791C20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCompressWhitSpaceViewController.m; sourceTree = "<group>"; };
 		E811CA8E1FED09FD003157E9 /* RVEventResponseListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVEventResponseListViewController.h; sourceTree = "<group>"; };
 		E811CA8F1FED09FD003157E9 /* RVEventResponseListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVEventResponseListViewController.m; sourceTree = "<group>"; };
 		E811CA901FED09FD003157E9 /* RVEventResponseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RVEventResponseListViewController.xib; sourceTree = "<group>"; };
@@ -585,6 +588,8 @@
 				E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */,
 				E826367920A96FF00081F4A8 /* RXFrameworkViewController.h */,
 				E826367A20A96FF00081F4A8 /* RXFrameworkViewController.m */,
+				E810791B20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.h */,
+				E810791C20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1231,6 +1236,7 @@
 				E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
+				E810791D20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.m in Sources */,
 				C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */,
 				E870202920D8E10B00752211 /* RVGCDQueuesViewController.m in Sources */,
 				C9D474531D16543F000C14E3 /* RVUtilityViewController.m in Sources */,
