@@ -49,6 +49,8 @@ pod 'fishhook'
 
 pod 'RXTableViewImpl'
 
+pod 'RXUserManager'
+
 
 inhibit_all_warnings!
 

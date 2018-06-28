@@ -113,6 +113,8 @@
 		E826367520A96BDC0081F4A8 /* RXMVPGreetingPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E826367420A96BDC0081F4A8 /* RXMVPGreetingPresenter.m */; };
 		E826367820A96BEF0081F4A8 /* RXMVPGreetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E826367720A96BEF0081F4A8 /* RXMVPGreetingViewController.m */; };
 		E826367B20A96FF00081F4A8 /* RXFrameworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E826367A20A96FF00081F4A8 /* RXFrameworkViewController.m */; };
+		E8433D6720E39A34004A7FBC /* RXMVVMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D6620E39A34004A7FBC /* RXMVVMLoginViewController.m */; };
+		E8433D6A20E39C83004A7FBC /* RXMVVMLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D6920E39C83004A7FBC /* RXMVVMLoginViewModel.m */; };
 		E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */; };
 		E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */; };
 		E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B820A03E570016F6C9 /* RXMRSWPerson.m */; };
@@ -327,6 +329,10 @@
 		E826367720A96BEF0081F4A8 /* RXMVPGreetingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVPGreetingViewController.m; sourceTree = "<group>"; };
 		E826367920A96FF00081F4A8 /* RXFrameworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXFrameworkViewController.h; sourceTree = "<group>"; };
 		E826367A20A96FF00081F4A8 /* RXFrameworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXFrameworkViewController.m; sourceTree = "<group>"; };
+		E8433D6520E39A34004A7FBC /* RXMVVMLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMVVMLoginViewController.h; sourceTree = "<group>"; };
+		E8433D6620E39A34004A7FBC /* RXMVVMLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVVMLoginViewController.m; sourceTree = "<group>"; };
+		E8433D6820E39C83004A7FBC /* RXMVVMLoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMVVMLoginViewModel.h; sourceTree = "<group>"; };
+		E8433D6920E39C83004A7FBC /* RXMVVMLoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVVMLoginViewModel.m; sourceTree = "<group>"; };
 		E858AA4920B9496000BAAFD6 /* RXMVVMCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMVVMCell.h; sourceTree = "<group>"; };
 		E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVVMCell.m; sourceTree = "<group>"; };
 		E86050AD209C67630016F6C9 /* RXObjectCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXObjectCreateViewController.h; sourceTree = "<group>"; };
@@ -777,6 +783,8 @@
 				E818F0ED20B9043400F94127 /* RXMVVMViewController.m */,
 				E818F0F820B93FED00F94127 /* RXMVVMListViewController.h */,
 				E818F0F920B93FED00F94127 /* RXMVVMListViewController.m */,
+				E8433D6520E39A34004A7FBC /* RXMVVMLoginViewController.h */,
+				E8433D6620E39A34004A7FBC /* RXMVVMLoginViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -788,6 +796,8 @@
 				E818F0F620B9046E00F94127 /* RXMVVMViewModel.m */,
 				E818F0FE20B9413600F94127 /* RXMVVMListViewModel.h */,
 				E818F0FF20B9413600F94127 /* RXMVVMListViewModel.m */,
+				E8433D6820E39C83004A7FBC /* RXMVVMLoginViewModel.h */,
+				E8433D6920E39C83004A7FBC /* RXMVVMLoginViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1239,6 +1249,7 @@
 				E810791D20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.m in Sources */,
 				C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */,
 				E870202920D8E10B00752211 /* RVGCDQueuesViewController.m in Sources */,
+				E8433D6A20E39C83004A7FBC /* RXMVVMLoginViewModel.m in Sources */,
 				C9D474531D16543F000C14E3 /* RVUtilityViewController.m in Sources */,
 				E86050D220A079050016F6C9 /* RXTargetQueueViewController.m in Sources */,
 				C98FD0F21D210F960024854D /* RVLayerViewController.m in Sources */,
@@ -1249,6 +1260,7 @@
 				5850B26C1BF47F2A00EC9144 /* main.mm in Sources */,
 				C937947D1CE331D30065F68C /* RVViewCycleViewController.m in Sources */,
 				C928B26E1FB93E530038ECE6 /* RVLLDBViewController.m in Sources */,
+				E8433D6720E39A34004A7FBC /* RXMVVMLoginViewController.m in Sources */,
 				E86050E320A079E30016F6C9 /* RVRunLoop2ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
