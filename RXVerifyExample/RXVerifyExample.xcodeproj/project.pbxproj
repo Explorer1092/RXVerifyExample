@@ -115,6 +115,7 @@
 		E826367B20A96FF00081F4A8 /* RXFrameworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E826367A20A96FF00081F4A8 /* RXFrameworkViewController.m */; };
 		E8433D6720E39A34004A7FBC /* RXMVVMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D6620E39A34004A7FBC /* RXMVVMLoginViewController.m */; };
 		E8433D6A20E39C83004A7FBC /* RXMVVMLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D6920E39C83004A7FBC /* RXMVVMLoginViewModel.m */; };
+		E8433D7B20EA51D9004A7FBC /* RXRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D7A20EA51D9004A7FBC /* RXRACViewController.m */; };
 		E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */; };
 		E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */; };
 		E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B820A03E570016F6C9 /* RXMRSWPerson.m */; };
@@ -333,6 +334,8 @@
 		E8433D6620E39A34004A7FBC /* RXMVVMLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVVMLoginViewController.m; sourceTree = "<group>"; };
 		E8433D6820E39C83004A7FBC /* RXMVVMLoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMVVMLoginViewModel.h; sourceTree = "<group>"; };
 		E8433D6920E39C83004A7FBC /* RXMVVMLoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVVMLoginViewModel.m; sourceTree = "<group>"; };
+		E8433D7920EA51D9004A7FBC /* RXRACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRACViewController.h; sourceTree = "<group>"; };
+		E8433D7A20EA51D9004A7FBC /* RXRACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRACViewController.m; sourceTree = "<group>"; };
 		E858AA4920B9496000BAAFD6 /* RXMVVMCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMVVMCell.h; sourceTree = "<group>"; };
 		E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVVMCell.m; sourceTree = "<group>"; };
 		E86050AD209C67630016F6C9 /* RXObjectCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXObjectCreateViewController.h; sourceTree = "<group>"; };
@@ -603,6 +606,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E8433D7820EA51CA004A7FBC /* RXRAC */,
 				E818F0E120B6C06A00F94127 /* RXNSObject */,
 				E826366B20A940AD0081F4A8 /* RXFramework */,
 				E86050B620A03E460016F6C9 /* RXMRSW */,
@@ -850,6 +854,15 @@
 				E818F0EA20B9040D00F94127 /* ViewModel */,
 			);
 			path = RXMVVM;
+			sourceTree = "<group>";
+		};
+		E8433D7820EA51CA004A7FBC /* RXRAC */ = {
+			isa = PBXGroup;
+			children = (
+				E8433D7920EA51D9004A7FBC /* RXRACViewController.h */,
+				E8433D7A20EA51D9004A7FBC /* RXRACViewController.m */,
+			);
+			path = RXRAC;
 			sourceTree = "<group>";
 		};
 		E86050B620A03E460016F6C9 /* RXMRSW */ = {
@@ -1234,6 +1247,7 @@
 				E870203720DA77E700752211 /* RXUIListSheelViewController.m in Sources */,
 				C985F6181D5030EC004D654D /* RVStockViewController.m in Sources */,
 				E818F0F720B9046E00F94127 /* RXMVVMViewModel.m in Sources */,
+				E8433D7B20EA51D9004A7FBC /* RXRACViewController.m in Sources */,
 				E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */,
