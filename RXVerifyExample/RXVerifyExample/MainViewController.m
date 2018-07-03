@@ -50,7 +50,8 @@
                            @"RVMsgForward", @"RVAddMethod", @"RVArrayCopy",
                            @"RXFramework", @"RXNSObjectForSelector", @"RXMVVMList",
                            @"RXMultNotification", @"RXSY", @"RVGCDQueues",
-                           @"RXUIListPerformance", @"RXCompressWhitSpace", @"RXMVVMLogin"];
+                           @"RXUIListPerformance", @"RXCompressWhitSpace", @"RXMVVMLogin",
+                           @"RXRAC"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];

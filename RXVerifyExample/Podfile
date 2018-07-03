@@ -36,7 +36,12 @@ pod 'RXAppDefine'
 
 pod 'RXTableViewItem'
 
-pod 'ReactiveCocoa', '2.1.8'
+# 没有自动引入 RACEXTScope.h
+#pod 'ReactiveCocoa', '2.1.8'
+#pod 'ReactiveCocoa', '2.2.4'
+
+# 自动引入:RACEXTScope.h
+pod 'ReactiveObjC'
 
 pod 'AFNetworking'
 
