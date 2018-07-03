@@ -15,6 +15,10 @@
 
 @interface RXRACViewController ()
 
+@property (nonatomic, strong) UITextField *textField;
+
+@property (nonatomic, strong) RACSignal *textFieldSignal;
+
 @end
 
 @implementation RXRACViewController
@@ -32,20 +36,29 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 100, 200, 40)];
+    
+    [self.view addSubview:self.textField];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     @weakify(self)
     void (^testBlock)(void) = ^void(void) {
 
     };
-//
-    RAC(self, view) = nil;
+    
+    self.textFieldSignal = [[self.textField rac_textSignal] map:^id _Nullable(NSString * _Nullable value) {
+        return @(value.length > 3);
+    }];
     
     
     
-    [self test_signalSharp];
+    [self test_singleSharp];
     
     [self test_doubleSharp];
     
     [self test_commaInC];
+    
+    [self test_strchr];
     
     [self test_metamacro_concat];
     
@@ -70,53 +83,63 @@
     
     [self test_metamacro_if_eq];
     
+    [self test_doubleAnd];
+    
+    [self test_keypath2];
+    
+    [self test_keypath1];
+    
+    [self test_keypath];
+    
+    [self test_RAC];
+    
     [self test_NSLog];
     
 }
 
 
-#define RACTest_SignalSharp1(A)  # A
-#define RACTest_SignalSharp2(A)  #A
-#define RACTest_SignalSharp3(A)  (# A)
-#define RACTest_SignalSharp4(A)  (#A)
-#define RACTest_SignalSharp5(A)  @#A
-#define RACTest_SignalSharp6(A)  @# A
-#define RACTest_SignalSharp7(A)  @(# A)
-#define RACTest_SignalSharp8(A)  (@# A)
-- (void)test_signalSharp
+#define RACTest_SingleSharp1(A)  # A
+#define RACTest_SingleSharp2(A)  #A
+#define RACTest_SingleSharp3(A)  (# A)
+#define RACTest_SingleSharp4(A)  (#A)
+#define RACTest_SingleSharp5(A)  @#A
+#define RACTest_SingleSharp6(A)  @# A
+#define RACTest_SingleSharp7(A)  @(# A)
+#define RACTest_SingleSharp8(A)  (@# A)
+- (void)test_singleSharp
 {
-    NSString *k1 = @RACTest_SignalSharp1(abc);
+    NSString *k1 = @RACTest_SingleSharp1(abc);
     NSLog(@"k1:111%@111", k1);
     
-    NSString *k2 = @RACTest_SignalSharp2(abc);
+    NSString *k2 = @RACTest_SingleSharp2(abc);
     NSLog(@"k2:111%@111", k2);
     
-    NSString *k3 = @RACTest_SignalSharp3(abc);
+    NSString *k3 = @RACTest_SingleSharp3(abc);
     NSLog(@"k3:111%@111", k3);
     
-    NSString *k4 = @RACTest_SignalSharp4(abc);
+    NSString *k4 = @RACTest_SingleSharp4(abc);
     NSLog(@"k4:111%@111", k4);
     
-    NSString *k5 = RACTest_SignalSharp5(abc);
+    NSString *k5 = RACTest_SingleSharp5(abc);
     NSLog(@"k5:111%@111", k5);
     
-    NSString *k6 = RACTest_SignalSharp6(abc);
+    NSString *k6 = RACTest_SingleSharp6(abc);
     NSLog(@"k6:111%@111", k6);
     
-    NSString *k7 = RACTest_SignalSharp7(abc);
+    NSString *k7 = RACTest_SingleSharp7(abc);
     NSLog(@"k7:111%@111", k7);
     
-    NSString *k8 = RACTest_SignalSharp8(abc);
+    NSString *k8 = RACTest_SingleSharp8(abc);
     NSLog(@"k8:111%@111", k8);
     
     
-    NSString *k9 = RACTest_SignalSharp8(@"abc");
+    NSString *k9 = RACTest_SingleSharp8(@"abc");
     NSLog(@"k9:111%@111", k9);
     
-    NSString *k10 = RACTest_SignalSharp8("abc");
+    NSString *k10 = RACTest_SingleSharp8("abc");
     NSLog(@"k10:111%@111", k10);
     
-    NSString *k11 = [NSString stringWithUTF8String:RACTest_SignalSharp1(abc)];
+    NSString *k11 = [NSString stringWithUTF8String:RACTest_SingleSharp1(abc)];
     NSLog(@"k11:111%@111", k11);
     
 }
@@ -172,6 +195,20 @@
     // 没有warning d=2
     int d = ((void)a, b);
     NSLog(@"c:%zd, d:%zd", c, d);
+}
+
+- (void)test_strchr
+{
+    const char *source = "self.view";
+    
+    char *strchrResult1 = strchr(source, '.');
+    NSLog(@"strchrResult1:%s", strchrResult1);
+    
+    char *strchrResult2 = strchr(source, '.') + 1;
+    NSLog(@"strchrResult2:%s", strchrResult2);
+    
+    char *strchrResult3 = strchr(source, 'z');
+    NSLog(@"strchrResult3:%s", strchrResult3);
 }
 
 - (void)test_metamacro_concat
@@ -366,11 +403,117 @@
 
 - (void)test_metamacro_if_eq
 {
-    NSString *eq1 = metamacro_if_eq(1, 1)(@"YES")(@"NO");;
+    NSString *eq1 = metamacro_if_eq(1, 1)(@"YES")(@"NO");
     NSLog(@"eq1:%@", eq1);
     
-    NSString *eq2 = metamacro_if_eq(1, 2)(@"YES")(@"NO");;
+    NSString *eq2 = metamacro_if_eq(1, 2)(@"YES")(@"NO");
     NSLog(@"eq2:%@", eq2);
+}
+
+// NO && ((void)OBJ.PATH, NO)
+
+- (void)test_doubleAnd
+{
+    // self.view这里会有warning Code will newver be excuted
+    NSInteger doubleAnd1 = NO &&((void)self.view, NO);
+    NSLog(@"doubleAnd1:%zd", doubleAnd1);
+    
+    // self.view这里会有warning Code will newver be excuted
+    NSString *doubleAnd2 = ((void)(NO &&((void)self.view, NO)), @"testValue");
+    NSLog(@"doubleAnd2:%@", doubleAnd2);
+    
+}
+
+- (void)test_keypath2
+{
+    NSString *keypath2_1 = @keypath2(self, view);
+    NSLog(@"keypath2_1:%@", keypath2_1);
+    
+    NSString *keypath2_2 = @keypath2(self.navigationController, navigationBar);
+    NSLog(@"keypath2_2:%@", keypath2_2);
+    
+    NSString *keypath2_3 = [NSString stringWithUTF8String:keypath2(self.navigationController, navigationBar)];
+    NSLog(@"keypath2_3:%@", keypath2_3);
+}
+
+- (void)test_keypath1
+{
+    NSString *keypath1_1 = @keypath1(self.view);
+    NSLog(@"keypath1_1:%@", keypath1_1);
+    
+    NSString *keypath1_2 = @keypath1(self.navigationController.navigationBar);
+    NSLog(@"keypath1_2:%@", keypath1_2);
+    
+    NSString *keypath1_3 = [NSString stringWithUTF8String:keypath1(self.navigationController.navigationBar)];
+    NSLog(@"keypath1_3:%@", keypath1_3);
+}
+
+- (void)test_keypath
+{
+    NSString *keypath_1 = @keypath(self, view);
+    NSLog(@"keypath_1:%@", keypath_1);
+    
+    NSString *keypath_2 = @keypath(self.navigationController, navigationBar);
+    NSLog(@"keypath_2:%@", keypath_2);
+    
+    NSString *keypath_3 = @keypath(self.view);
+    NSLog(@"keypath_3:%@", keypath_3);
+    
+    NSString *keypath_4 = @keypath(self.navigationController.navigationBar);
+    NSLog(@"keypath_4:%@", keypath_4);
+}
+
+// https://developer.apple.com/documentation/foundation/nsmutabledictionary/1574187-setobject
+
+- (void)test_RAC
+{
+    RACSignal *signal = [self.textFieldSignal map:^id _Nullable(id  _Nullable value) {
+        return [value boolValue] ? [UIColor redColor] : [UIColor greenColor];
+    }];
+    
+    // 编译错误
+//    RAC(self.textField) = signal;
+    
+    // 代码1
+    RAC(self.textField, backgroundColor, [UIColor blueColor]) = signal;
+    
+//    // 代码2
+//    RAC(self.textField, backgroundColor) = signal;
+//
+//    // 代码3
+//    RAC_(self.textField, backgroundColor, [UIColor blueColor]) = signal;
+    
+    // 代码4
+//    [[RACSubscriptingAssignmentTrampoline alloc] initWithTarget:(self.textField) nilValue:[UIColor blueColor]][@"backgroundColor"] = signal;
+    
+    // 代码5
+//    RACSubscriptingAssignmentTrampoline *tmp = [[RACSubscriptingAssignmentTrampoline alloc] initWithTarget:(self.textField) nilValue:[UIColor blueColor]];
+//    tmp[@"backgroundColor"] = signal;
+    
+    // 代码6
+//    RACSubscriptingAssignmentTrampoline *tmp = [[RACSubscriptingAssignmentTrampoline alloc] initWithTarget:(self.textField) nilValue:[UIColor blueColor]];
+//    [tmp setObject:signal forKeyedSubscript:@"backgroundColor"];
+    
+    // 代码7:crash
+//    RACSubscriptingAssignmentTrampoline *tmp1 = [[RACSubscriptingAssignmentTrampoline alloc] initWithTarget:(self.textField) nilValue:[UIColor blueColor]];
+//    [tmp1 setValue:signal forKey:@"backgroundColor"];
+//
+    // 代码8:crash
+//    RACSubscriptingAssignmentTrampoline *tmp2 = [[RACSubscriptingAssignmentTrampoline alloc] initWithTarget:(self.textField) nilValue:[UIColor blueColor]];
+//    [tmp2 setValue:signal forKeyPath:@"backgroundColor"];
+    
+    // 代码9 验证defaultValue的
+//    RACSignal *signal2 = [self.textFieldSignal map:^id _Nullable(id  _Nullable value) {
+//        return [value boolValue] ? [UIColor redColor] : nil;
+//    }];
+//    RACSubscriptingAssignmentTrampoline *tmp = [[RACSubscriptingAssignmentTrampoline alloc] initWithTarget:(self.textField) nilValue:[UIColor blueColor]];
+//    tmp[@"backgroundColor"] = signal2;
+}
+
+- (void)test_try_catch_finally
+{
+    @try {}
+    @catch(...) {}
 }
 
 //#define NSLog(...)
