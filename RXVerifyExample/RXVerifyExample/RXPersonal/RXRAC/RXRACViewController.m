@@ -41,10 +41,7 @@
     [self.view addSubview:self.textField];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    @weakify(self)
-    void (^testBlock)(void) = ^void(void) {
 
-    };
     
     self.textFieldSignal = [[self.textField rac_textSignal] map:^id _Nullable(NSString * _Nullable value) {
         return @(value.length > 3);
@@ -92,6 +89,16 @@
     [self test_keypath];
     
     [self test_RAC];
+    
+    [self test_rac_weakify_And_rac_strongify_];
+    [self test_redefineVar];
+    
+    [self test_rac_keywordify];
+    
+    [self test_metamacro_foreach_cxtN];
+    [self test_metamacro_foreach_cxt];
+    
+    [self test_weakify];
     
     [self test_NSLog];
     
@@ -291,7 +298,6 @@
 //    int count11 = metamacro_head_(0);
 //    NSLog(@"count11:%zd", count11);
 }
-
 
 
 
@@ -510,10 +516,146 @@
 //    tmp[@"backgroundColor"] = signal2;
 }
 
-- (void)test_try_catch_finally
+- (void)test_rac_weakify_And_rac_strongify_
 {
+    // 这个放在block外面
+    rac_weakify_(0, __weak, self) // 展开后: __weak __typeof__(self) self_weak_ = (self);
+    self_weak_.view.backgroundColor = [UIColor grayColor];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 如果这一行代码如果放到block外面会出现重复定义self这个error
+        rac_strongify_(100, self) // 展开后: __strong __typeof__(self) self = self_weak_;
+        // 这个self 相当于重新定义成了 __strong, 不是原来定义的那个self了
+        self.view.backgroundColor = [UIColor orangeColor];
+    });
+    
+    // rac_weakify_ 有两种使用方法,1:__weak 2:__unsafe_unretained
+//    rac_weakify_(0, __unsafe_unretained, self)
+}
+- (void)test_redefineVar
+{
+    int a = 0;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        int a = 4;
+        NSLog(@"a in block:%zd", a);
+    });
+    NSLog(@"a not in block:%zd", a);
+}
+
+
+#define RACTest_rac_keywordify try {} @catch (...) {}
+- (void)test_rac_keywordify
+{
+    @rac_keywordify
+    NSLog(@"do something after rac_keywordify");
+    
+    @autoreleasepool{}
+    NSLog(@"do something after autoreleasepool");
+    
+    @RACTest_rac_keywordify
+    NSLog(@"do something after RACTest_rac_keywordify");
+    
     @try {}
     @catch(...) {}
+    NSLog(@"do something after try/catch");
+}
+
+// 先定义一个类似rac_weakify_ 的宏, #VAR 是转C字符串, @#VAR 是一个OC字符串
+#define RACTest_rac_weakify_(INDEX, CONTEXT, VAR)  NSString *metamacro_concat(CONTEXT, metamacro_concat(VAR, INDEX)) = @#VAR;
+- (void)test_metamacro_foreach_cxtN
+{
+    // 测试这个宏
+    RACTest_rac_weakify_(10, tmp, Abc)
+    NSLog(@"value:%@", tmpAbc10);
+    
+    // 什么也没有
+    metamacro_foreach_cxt0(RACTest_rac_weakify_,, testContext)
+    
+    NSString *object = @"abc";
+    NSLog(@"object:%@", object);
+    // 生成了1个变量
+    metamacro_foreach_cxt1(RACTest_rac_weakify_,, testContext, object)
+    NSLog(@"testContextobject0:%@", testContextobject0);
+    
+    NSString *objectA = @"abc";
+    NSString *objectB = @"abc";
+    NSString *objectC = @"abc";
+    NSString *objectD = @"abc";
+    NSLog(@"objectA:%@, objectB:%@, objectC:%@, objectD:%@", objectA, objectB, objectC, objectD);
+    // 生成了4个变量
+    metamacro_foreach_cxt4(RACTest_rac_weakify_,, testContext, objectA, objectB, objectC, objectD)
+    NSLog(@"testContextobjectA0:%@", testContextobjectA0);
+    NSLog(@"testContextobjectB1:%@", testContextobjectB1);
+    NSLog(@"testContextobjectC2:%@", testContextobjectC2);
+    NSLog(@"testContextobjectD3:%@", testContextobjectD3);
+}
+
+- (void)test_metamacro_foreach_cxt
+{
+    // 虽然编译没有问题,但是不能这么使用,因为在metamacro_foreach_cxt使用到了metamacro_argcount,所以在这里这个宏的参数最少是4个,要不然使用会有问题
+    // 证明就是在无法编译: @weakify()
+    metamacro_foreach_cxt(RACTest_rac_weakify_,,testContext)
+//    metamacro_foreach_cxt0(RACTest_rac_weakify_,,testContext)
+    
+    NSString *objectA = @"abc";
+    NSString *objectB = @"abc";
+    NSString *objectC = @"abc";
+    NSString *objectD = @"abc";
+    NSLog(@"objectA:%@, objectB:%@, objectC:%@, objectD:%@", objectA, objectB, objectC, objectD);
+    // 生成了4个变量
+    metamacro_foreach_cxt(RACTest_rac_weakify_,, testContext, objectA, objectB, objectC, objectD)
+    NSLog(@"testContextobjectA0:%@", testContextobjectA0);
+    NSLog(@"testContextobjectB1:%@", testContextobjectB1);
+    NSLog(@"testContextobjectC2:%@", testContextobjectC2);
+    NSLog(@"testContextobjectD3:%@", testContextobjectD3);
+}
+
+- (void)test_weakify
+{
+    // 代码1
+//    @weakify(self)
+    
+    // 代码2
+//    @autoreleasepool{}
+//    metamacro_foreach_cxt(rac_weakify_,, __weak, self)
+
+    // 代码3
+//    @autoreleasepool{}
+//    metamacro_concat(metamacro_foreach_cxt, 1)(rac_weakify_,, __weak, self)
+
+    // 代码4
+//    @autoreleasepool{}
+//    metamacro_foreach_cxt1(rac_weakify_,, __weak, self)
+    
+    // 代码5
+//    @autoreleasepool{}
+//    rac_weakify_(0, __weak, self)
+    
+    // 代码6:无法编译
+//    @weakify()
+    
+    // 代码7:无法编译
+//    @weakify(self.view)
+    
+    
+    // 代码8
+    NSObject *tmpObject = [NSObject new];
+    @weakify(tmpObject, self);
+    NSLog(@"tmpObject_weak_:%@", tmpObject_weak_);
+    NSLog(@"self_weak_:%@", self_weak_);
+}
+
+- (void)test_strongify
+{
+    @weakify(self)
+    
+    self_weak_.view.backgroundColor = [UIColor grayColor];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        @strongify(self)
+        self.view.backgroundColor = [UIColor orangeColor];
+    });
+    
 }
 
 //#define NSLog(...)
