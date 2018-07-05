@@ -85,12 +85,12 @@ void HookBlockToPrintHelloWorld(id block) {
     // 要不然获取的内存地址不正确
     RX_block_impl *impl = &(main_block_impl->impl);
     void *exchang = (void *)__private_HookBlockToPrintHelloWorld;
-    printf("Hook block %p\n", block);
-    printf("Hook main_block_impl %p\n", main_block_impl);
-    printf("Hook impl %p\n", impl);
-    printf("Hook FuncPtr before %p\n", impl->FuncPtr);
+//    printf("Hook block %p\n", block);
+//    printf("Hook main_block_impl %p\n", main_block_impl);
+//    printf("Hook impl %p\n", impl);
+//    printf("Hook FuncPtr before %p\n", impl->FuncPtr);
     impl->FuncPtr = exchang;
-    printf("Hook FuncPtr after %p\n", impl->FuncPtr);
+//    printf("Hook FuncPtr after %p\n", impl->FuncPtr);
 }
 
 void HookBlockToPrintHelloWorld2(id block) {
@@ -100,11 +100,11 @@ void HookBlockToPrintHelloWorld2(id block) {
     // 要不然获取的内存地址不正确
     RX_block_impl *impl = &(main_block_impl->impl);
     
-    printf("Hook block %p\n", block);
-    printf("Hook main_block_impl %p\n", main_block_impl);
-    printf("Hook impl %p\n", impl);
-    printf("Hook FuncPtr before %p\n", impl->FuncPtr);
-    rebind_symbols((struct rebinding[2]){{"close", __private_HookBlockToPrintHelloWorld, &(impl->FuncPtr)}}, 1);
+//    printf("Hook block %p\n", block);
+//    printf("Hook main_block_impl %p\n", main_block_impl);
+//    printf("Hook impl %p\n", impl);
+//    printf("Hook FuncPtr before %p\n", impl->FuncPtr);
+    rebind_symbols((struct rebinding[2]){{impl->FuncPtr, __private_HookBlockToPrintHelloWorld, &(impl->FuncPtr)}}, 1);
 
 }
 
@@ -172,9 +172,9 @@ void HookEveryBlockToPrintArguments(void) {
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-//    [self testHookBlockToPrintHelloWorld];
+    [self testHookBlockToPrintHelloWorld];
     
-    [self testHookBlockToPrintArguments];
+//    [self testHookBlockToPrintArguments];
     
     
 }
@@ -186,11 +186,11 @@ void HookEveryBlockToPrintArguments(void) {
 
 - (void)testHookBlockToPrintHelloWorld {
     
-    void (^block1)(int a, NSString *b) = ^(int a, NSString *b) {
-        NSLog(@"block1 invoke");
-    };
-    HookBlockToPrintHelloWorld(block1);
-    block1(123, @"aaa");
+//    void (^block1)(int a, NSString *b) = ^(int a, NSString *b) {
+//        NSLog(@"block1 invoke");
+//    };
+//    HookBlockToPrintHelloWorld(block1);
+//    block1(123, @"aaa");
     
     
     void (^block2)(void) = ^() {

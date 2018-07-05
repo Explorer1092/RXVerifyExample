@@ -51,7 +51,7 @@
                            @"RXFramework", @"RXNSObjectForSelector", @"RXMVVMList",
                            @"RXMultNotification", @"RXSY", @"RVGCDQueues",
                            @"RXUIListPerformance", @"RXCompressWhitSpace", @"RXMVVMLogin",
-                           @"RXRAC"];
+                           @"RXRAC", @"RXMacro"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -62,6 +62,7 @@
 //    object = @"RVMsgForward";
 //    object = @"RVGCD2";
 //    object = @"RVWeb";
+//    object = @"RXSY";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];

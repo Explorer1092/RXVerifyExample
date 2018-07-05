@@ -116,6 +116,7 @@
 		E8433D6720E39A34004A7FBC /* RXMVVMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D6620E39A34004A7FBC /* RXMVVMLoginViewController.m */; };
 		E8433D6A20E39C83004A7FBC /* RXMVVMLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D6920E39C83004A7FBC /* RXMVVMLoginViewModel.m */; };
 		E8433D7B20EA51D9004A7FBC /* RXRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D7A20EA51D9004A7FBC /* RXRACViewController.m */; };
+		E8433D7E20EDBE78004A7FBC /* RXMacroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D7D20EDBE78004A7FBC /* RXMacroViewController.m */; };
 		E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */; };
 		E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */; };
 		E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B820A03E570016F6C9 /* RXMRSWPerson.m */; };
@@ -336,6 +337,8 @@
 		E8433D6920E39C83004A7FBC /* RXMVVMLoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVVMLoginViewModel.m; sourceTree = "<group>"; };
 		E8433D7920EA51D9004A7FBC /* RXRACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRACViewController.h; sourceTree = "<group>"; };
 		E8433D7A20EA51D9004A7FBC /* RXRACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRACViewController.m; sourceTree = "<group>"; };
+		E8433D7C20EDBE78004A7FBC /* RXMacroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMacroViewController.h; sourceTree = "<group>"; };
+		E8433D7D20EDBE78004A7FBC /* RXMacroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMacroViewController.m; sourceTree = "<group>"; };
 		E858AA4920B9496000BAAFD6 /* RXMVVMCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMVVMCell.h; sourceTree = "<group>"; };
 		E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVVMCell.m; sourceTree = "<group>"; };
 		E86050AD209C67630016F6C9 /* RXObjectCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXObjectCreateViewController.h; sourceTree = "<group>"; };
@@ -861,6 +864,8 @@
 			children = (
 				E8433D7920EA51D9004A7FBC /* RXRACViewController.h */,
 				E8433D7A20EA51D9004A7FBC /* RXRACViewController.m */,
+				E8433D7C20EDBE78004A7FBC /* RXMacroViewController.h */,
+				E8433D7D20EDBE78004A7FBC /* RXMacroViewController.m */,
 			);
 			path = RXRAC;
 			sourceTree = "<group>";
@@ -1195,6 +1200,7 @@
 				C9A7110D1D7BA0880002E703 /* RVCopyViewController.m in Sources */,
 				C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */,
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
+				E8433D7E20EDBE78004A7FBC /* RXMacroViewController.m in Sources */,
 				E86050FE20A2A1840016F6C9 /* RVAddMethodViewController.m in Sources */,
 				E86050EB20A07B0D0016F6C9 /* RXCurrentQueueViewController.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
