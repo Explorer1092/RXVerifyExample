@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+// http://clang.llvm.org/docs/Block-ABI-Apple.html
+// http://clang.llvm.org/docs/UsersManual.html#gcc-extensions-not-implemented-yet
 typedef struct RX_block_impl {
     void *isa;  // 8字节
     int Flags; // 4字节
