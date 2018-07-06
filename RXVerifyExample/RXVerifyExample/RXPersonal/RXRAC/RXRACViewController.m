@@ -485,8 +485,7 @@
 //    RAC(self.textField) = signal;
     
     // 代码1
-    R
-    AC(self.textField, backgroundColor, [UIColor blueColor]) = signal;
+    RAC(self.textField, backgroundColor, [UIColor blueColor]) = signal;
     
 //    // 代码2
 //    RAC(self.textField, backgroundColor) = signal;

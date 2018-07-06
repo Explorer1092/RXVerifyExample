@@ -89,6 +89,12 @@ void HookBlockToPrintHelloWorld(id block) {
 //    printf("Hook main_block_impl %p\n", main_block_impl);
 //    printf("Hook impl %p\n", impl);
 //    printf("Hook FuncPtr before %p\n", impl->FuncPtr);
+//    printf("kkk:%s\n", (char *)impl->FuncPtr);
+//
+//    printf("kkk2:%s\n", (char *)exchang);
+
+    
+    
     impl->FuncPtr = exchang;
 //    printf("Hook FuncPtr after %p\n", impl->FuncPtr);
 }
@@ -100,11 +106,13 @@ void HookBlockToPrintHelloWorld2(id block) {
     // 要不然获取的内存地址不正确
     RX_block_impl *impl = &(main_block_impl->impl);
     
+    
+    printf("kkk:%s", (char *)impl->FuncPtr);
 //    printf("Hook block %p\n", block);
 //    printf("Hook main_block_impl %p\n", main_block_impl);
 //    printf("Hook impl %p\n", impl);
 //    printf("Hook FuncPtr before %p\n", impl->FuncPtr);
-    rebind_symbols((struct rebinding[2]){{impl->FuncPtr, __private_HookBlockToPrintHelloWorld, &(impl->FuncPtr)}}, 1);
+//    rebind_symbols((struct rebinding[2]){{impl->FuncPtr, __private_HookBlockToPrintHelloWorld, &(impl->FuncPtr)}}, 1);
 
 }
 
@@ -116,6 +124,9 @@ void HookBlockToPrintHelloWorld2(id block) {
 // HookBlockToPrintArguments(block);
 // block(123, @"aaa");
 // 输出 "123, aaa" 和  block invoke
+
+// 第二题的可能思路
+// https://www.jianshu.com/p/18ca0f43b3cf
 void HookBlockToPrintArguments(id block) {
     NSLog(@"%@", block);
     RX_main_block_impl *main_block_impl = (__bridge RX_main_block_impl *)block;
@@ -186,11 +197,11 @@ void HookEveryBlockToPrintArguments(void) {
 
 - (void)testHookBlockToPrintHelloWorld {
     
-//    void (^block1)(int a, NSString *b) = ^(int a, NSString *b) {
-//        NSLog(@"block1 invoke");
-//    };
-//    HookBlockToPrintHelloWorld(block1);
-//    block1(123, @"aaa");
+    void (^block1)(int a, NSString *b) = ^(int a, NSString *b) {
+        NSLog(@"block1 invoke");
+    };
+    HookBlockToPrintHelloWorld(block1);
+    block1(123, @"aaa");
     
     
     void (^block2)(void) = ^() {
