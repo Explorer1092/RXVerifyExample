@@ -90,6 +90,8 @@
     
     [self test_RAC];
     
+    [self test_RACObserve];
+    
     [self test_rac_weakify_And_rac_strongify_];
     [self test_redefineVar];
     
@@ -99,6 +101,8 @@
     [self test_metamacro_foreach_cxt];
     
     [self test_weakify];
+    
+    [self test_metamacro_foreach_iter];
     
     [self test_NSLog];
     
@@ -481,7 +485,8 @@
 //    RAC(self.textField) = signal;
     
     // 代码1
-    RAC(self.textField, backgroundColor, [UIColor blueColor]) = signal;
+    R
+    AC(self.textField, backgroundColor, [UIColor blueColor]) = signal;
     
 //    // 代码2
 //    RAC(self.textField, backgroundColor) = signal;
@@ -515,6 +520,23 @@
 //    RACSubscriptingAssignmentTrampoline *tmp = [[RACSubscriptingAssignmentTrampoline alloc] initWithTarget:(self.textField) nilValue:[UIColor blueColor]];
 //    tmp[@"backgroundColor"] = signal2;
 }
+
+
+
+- (void)test_RACObserve
+{
+    // 代码1
+    [RACObserve(self.view, backgroundColor) subscribeNext:^(id  _Nullable x) {
+        NSLog(@"RACObserve:%@", x);
+    }];
+    
+    // 代码2
+//    [[self.view rac_valuesForKeyPath:@"backgroundColor" observer:self] subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"rac_valuesForKeyPath:%@", x);
+//    }];
+}
+
+
 
 - (void)test_rac_weakify_And_rac_strongify_
 {
@@ -645,17 +667,42 @@
     NSLog(@"self_weak_:%@", self_weak_);
 }
 
+
+#define RACTest_Incream(INDEX, ARG) (INDEX + ARG - 1)
+- (void)test_metamacro_foreach_iter
+{
+    NSInteger iter1 = metamacro_foreach_iter(5, RACTest_Incream, 10);
+    NSLog(@"iter1:%zd", iter1);
+}
+
+
+
 - (void)test_strongify
 {
     @weakify(self)
-    
     self_weak_.view.backgroundColor = [UIColor grayColor];
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        @strongify(self)
+        
+        // 代码1
+//        @strongify(self)
+        
+        // 代码2
+//        metamacro_foreach(rac_strongify_,, self)
+        
+        // 代码3
+//        metamacro_foreach_cxt(metamacro_foreach_iter,, rac_strongify_, self)
+        
+        // 代码4
+//        metamacro_foreach_cxt1(metamacro_foreach_iter,, rac_strongify_, self)
+        
+        // 代码5
+//        metamacro_foreach_iter(0, rac_strongify_, self)
+        
+        // 代码6
+        rac_strongify_(0, self)
+        
         self.view.backgroundColor = [UIColor orangeColor];
     });
-    
 }
 
 //#define NSLog(...)
