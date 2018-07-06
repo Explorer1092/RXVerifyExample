@@ -11,6 +11,7 @@
 #import <objc/runtime.h>
 #import "fishhook.h"
 
+#import "RXHookBlockManager.h"
 
 
 //
@@ -26,18 +27,116 @@
 //@end
 static NSMutableDictionary *mutDic = nil;
 
+static void __private_test(int a, int b, int c)
+{
+    
+}
 
-static void __private_HookBlockToPrintHelloWorld()
+static void __private_test2222(void *cself, ...)
+{
+    NSLog(@"111111");
+    
+//    va_list args;
+//    va_start(args, cself);
+//    void *value = nil;
+//
+//
+//
+//    while (YES) {
+////        @try {
+////            NSString *test = va_arg(args, NSString *);
+////            NSLog(@"value:%@", @"abc");
+////
+////        } @catch(...) {
+//            int a = va_arg(args, int);
+//            NSLog(@"value:%@", @"abc");
+////        }
+//
+//    }
+//
+////    [NSMethodSignature signatureWithObjCTypes:<#(nonnull const char *)#>]
+//
+//    ((void (*)(void *, ...))(originFun))(cself, args);
+//
+//    va_end(args);
+
+}
+
+
+static void __private_HookBlockToPrintHelloWorld(RX_block_impl *cSelf, int a, int b, int c, int d, int e, int f)
 {
     NSLog(@"hello world");
 }
 
-static void __private_HookBlockToPrintArguments(void *cSelf, ...)
+static void __private_HookBlockToPrintArguments(RX_block_impl *cSelf, /*void *_0, void *_1, void *_2, void *_3, void *_4, void *_5, void *_6, void *_7, void *_8, void *_9, void *_10, void *_11, void *_12, void *_13,*/ ...)
 {
-    printf("__private: %p", cSelf);
-    NSString *key = [NSString stringWithFormat:@"%p", cSelf];
-    va_list ap = {0};
-    NSLog(@"hello world22222");
+    
+//    int b = (int)_0;
+    
+    va_list args;
+    va_start(args, cSelf);
+    
+    
+//    void * dddd = va_arg(args, void *);
+
+    RX_block_impl *block_impl = cSelf;
+    NSMethodSignature *methodSignature = [NSMethodSignature signatureWithObjCTypes:(char *)block_impl->block_descriptor->copy_helper];
+
+
+    NSInteger argCount = [methodSignature numberOfArguments];
+    // 第一个参数是 block指针,所以从第二个开始循环
+
+    //    i:1, value:i
+    //    i:2, value:@"NSString"
+    //    i:3, value:@"NSDictionary"
+    //    i:4, value:@"NSArray"
+    //    i:5, value:f
+    //    i:6, value:d
+    //    i:7, value:B
+    //    i:8, value:^i
+
+    for (int i = 1; i < argCount; i++) {
+        const char *value = [methodSignature getArgumentTypeAtIndex:i];
+
+        if (strcmp(value, "i") == 0) {
+            int param = va_arg(args, int);
+            printf("第%d个参数:%d\n", i, param);
+        } else if (strcmp(value, "@\"NSString\"") == 0) {
+            NSString *param = va_arg(args, NSString *);
+//            printf("第%d个参数:%s\n", i, [param UTF8String]);
+        } else if (strcmp(value, "@\"NSDictionary\"") == 0) {
+            NSDictionary *param = va_arg(args, NSDictionary *);
+            NSString *str = [NSString stringWithFormat:@"%@", param];
+            printf("第%d个参数:%s\n", i, [str UTF8String]);
+        } else if (strcmp(value, "@\"NSArray\"") == 0) {
+            NSArray *param = va_arg(args, NSArray *);
+            NSString *str = [NSString stringWithFormat:@"%@", param];
+            printf("第%d个参数:%s\n", i, [str UTF8String]);
+        } else if (strcmp(value, "f") == 0) {
+            // 使用float会有警告
+            double param = va_arg(args, double);
+            printf("第%d个参数:%.2f\n", i, param);
+        } else if (strcmp(value, "d") == 0) {
+            double param = va_arg(args, double);
+            printf("第%d个参数:%.4f\n", i, param);
+        } else if (strcmp(value, "B") == 0) {
+            // 使用BOOL/bool会有警告
+            int param = va_arg(args, int);
+            printf("第%d个参数:%s\n", i, param == 1 ? "YES" : "NO");
+        } else if (strcmp(value, "^i") == 0) {
+            int *param = va_arg(args, int*);
+            printf("第%d个参数:%p\n", i, param);
+        } else {
+            printf("第%d个参数:未处理的参数类型", i);
+        }
+//        printf("i:%d, value:%s\n", i, value);
+    }
+    
+    
+    RXHookBlockItem *item = [RXHookBlockManager hookBlockItemFromBlockImpl:block_impl];
+    ((void (*)(void *, ...))(item.originFuncPtr))(cSelf, args);
+    
+    va_end(args);
     
 }
 
@@ -62,18 +161,44 @@ static void __private_HookBlockToPrintArguments(void *cSelf, ...)
 //};
 
 
-typedef struct RX_block_impl {
-    void *isa;
-    int Flags;
-    int Reserved;
-    void *FuncPtr;
-}RX_block_impl;
-
-typedef struct RX_main_block_impl {
-    struct RX_block_impl impl;
-}RX_main_block_impl;
 
 
+void test_tmp(id block)
+{
+    int t = sizeof(size_t);
+    NSLog(@"t:%zd", t);
+    
+    
+    
+    int a0 = sizeof(struct RX_main_block_desc);
+    int a1 = sizeof(struct RX_block_impl);
+    int a2 = sizeof(struct RX_main_block_desc*);
+    
+    NSLog(@"a0:%zd, a1:%zd, a2:%zd", a0, a1, a2);
+    
+    RX_main_block_impl *main_block_impl = (__bridge RX_main_block_impl *)block;
+    // 这里千万不能用 RX_block_impl impl = main_block_impl->impl;
+    // 要不然获取的内存地址不正确
+    RX_block_impl *impl = &(main_block_impl->impl);
+    
+    //RXVerifyExample`__52-[RXSYViewController testHookBlockToPrintHelloWorld]_block_invoke:
+    
+    
+    // 0x000000010074062c
+    // RXVerifyExample`__private_HookBlockToPrintHelloWorld:
+    // RXVerifyExample`-[RVMsgForwardProxy test]:
+
+    void *exchang = (void *)__private_test2222;
+    
+    impl->FuncPtr = exchang;
+    
+    char *value = (char *)exchang;
+//    printf("kkk2:%s\n", value);
+    
+    NSString *str = [NSString stringWithUTF8String:value];
+//    NSLog(@"str:%@", str);
+    
+}
 
 
 // 以下题目都针对于任意 void (^)() 形式的block
@@ -112,7 +237,7 @@ void HookBlockToPrintHelloWorld2(id block) {
 //    printf("Hook main_block_impl %p\n", main_block_impl);
 //    printf("Hook impl %p\n", impl);
 //    printf("Hook FuncPtr before %p\n", impl->FuncPtr);
-//    rebind_symbols((struct rebinding[2]){{impl->FuncPtr, __private_HookBlockToPrintHelloWorld, &(impl->FuncPtr)}}, 1);
+    rebind_symbols((struct rebinding[2]){{impl->block_descriptor->signature, __private_HookBlockToPrintHelloWorld, &(impl->FuncPtr)}}, 1);
 
 }
 
@@ -128,15 +253,20 @@ void HookBlockToPrintHelloWorld2(id block) {
 // 第二题的可能思路
 // https://www.jianshu.com/p/18ca0f43b3cf
 void HookBlockToPrintArguments(id block) {
-    NSLog(@"%@", block);
+//    NSLog(@"%@", block);
     RX_main_block_impl *main_block_impl = (__bridge RX_main_block_impl *)block;
     RX_block_impl *impl = &(main_block_impl->impl);
     
-    NSString *key = [NSString stringWithFormat:@"%p", block];
-//    id value = (__bridge id)impl->FuncPtr;
-    [mutDic setObject:CFBridgingRelease(impl->FuncPtr) forKey:key];
+    [RXHookBlockManager addBlockImpl:impl];
     
-    rebind_symbols((struct rebinding[2]){{"func", __private_HookBlockToPrintArguments, &(impl->FuncPtr)}}, 1);
+    void *exchang = (void *)__private_HookBlockToPrintArguments;
+    impl->FuncPtr = exchang;
+    
+//    NSString *key = [NSString stringWithFormat:@"%p", block];
+//    id value = (__bridge id)impl->FuncPtr;
+//    [mutDic setObject:CFBridgingRelease(impl->FuncPtr) forKey:key];
+    
+//    rebind_symbols((struct rebinding[2]){{"func", __private_HookBlockToPrintArguments, &(impl->FuncPtr)}}, 1);
 }
 
 // 3. 实现下面的函数,使的调用这个函数之后,后面创建的任意block都能自动实现第二题的功能
@@ -183,9 +313,9 @@ void HookEveryBlockToPrintArguments(void) {
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    [self testHookBlockToPrintHelloWorld];
+//    [self testHookBlockToPrintHelloWorld];
     
-//    [self testHookBlockToPrintArguments];
+    [self testHookBlockToPrintArguments];
     
     
 }
@@ -197,11 +327,14 @@ void HookEveryBlockToPrintArguments(void) {
 
 - (void)testHookBlockToPrintHelloWorld {
     
-    void (^block1)(int a, NSString *b) = ^(int a, NSString *b) {
-        NSLog(@"block1 invoke");
-    };
-    HookBlockToPrintHelloWorld(block1);
-    block1(123, @"aaa");
+    
+//    __private_test2222(nil, 0, 0);
+//
+//    void (^block1)(int a, NSString *b) = ^(int a, NSString *b) {
+//        NSLog(@"block1 invoke");
+//    };
+//    HookBlockToPrintHelloWorld(block1);
+//    block1(123, @"aaa");
     
     
     void (^block2)(void) = ^() {
@@ -209,22 +342,31 @@ void HookEveryBlockToPrintArguments(void) {
     };
     HookBlockToPrintHelloWorld2(block2);
     block2();
+    
+    
+    
+//    block1(10, @"abc");
 }
 - (void)testHookBlockToPrintArguments
 {
-    void (^block1)(int a, NSString *b) = ^(int a, NSString *b) {
+//    __private_HookBlockToPrintArguments(nil, 100);
+    
+    
+    
+    void (^block1)(int a, NSString *b, NSDictionary *c, NSArray *d, float e, double f, BOOL g, int *h) = ^(int a, NSString *b, NSDictionary *c, NSArray *d, float e, double f, BOOL g, int *h) {
         NSLog(@"block1 invoke");
     };
     HookBlockToPrintArguments(block1);
-    block1(123, @"aaa");
+    int h;
+    block1(2, @"aaa", @{@"key1":@"value1"}, @[@(1)], 1.1f, 2.0123123f, YES, &h);
     
     
     
-    void (^block2)(void) = ^() {
+    void (^block2)(int a) = ^(int a) {
         NSLog(@"block2 invoke");
     };
     HookBlockToPrintArguments(block2);
-    block2();
+    block2(100);
 }
 /*
 #pragma mark - Navigation
