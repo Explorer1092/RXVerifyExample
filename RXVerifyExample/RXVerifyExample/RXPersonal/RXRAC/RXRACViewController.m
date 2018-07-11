@@ -22,6 +22,14 @@
 @end
 
 @implementation RXRACViewController
+
+//""
+//'', ""
+//@""
+
+#define Add(A, B) A + B
+
+
 #define TestSharp1(x)     (# x)
 #define TestSharp2(x)     (@# x)
 #define TestSharp3(x)     (@#x)
@@ -33,6 +41,9 @@
 
 
 - (void)viewDidLoad {
+    
+    int a = Add(3, 5);
+    NSLog(@"%zd", a);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
@@ -161,6 +172,13 @@
 #define RACTest_DoubleSharp4(A, B)   (A##B)
 - (void)test_doubleSharp
 {
+    
+//    NSString *ab = @"111"
+    
+    NSString *RACTest_DoubleSharp1(a, b) = @"aaaa";
+    
+    
+    
     NSString *RACTest_DoubleSharp1(test, String1) = @"abc";
     NSLog(@"testString1:%@", testString1);
     
@@ -224,9 +242,9 @@
 
 - (void)test_metamacro_concat
 {
+    // #
     NSString *metamacro_concat(test, StringA) = @"abc";
     NSLog(@"%@", testStringA);
-    
     int c = metamacro_concat(RACTest_, Add)(1, 2);
     NSLog(@"c:%zd", c);
 }
@@ -267,8 +285,18 @@
 
 - (void)test_metamacro_argcount
 {
+    
+//#define metamacro_argcount(...) \
+//metamacro_at(20, __VA_ARGS__, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+
+    
+    
     int count1 = metamacro_argcount(@"1", @"2");
     NSLog(@"count1:%zd", count1);
+    
+//#define metamacro_at(N, ...) \
+//metamacro_concat(metamacro_at, N)(__VA_ARGS__)
+    
     
     int count2 = metamacro_at(20, @"1", @"2", 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
     NSLog(@"count2:%zd", count2);
@@ -372,6 +400,7 @@
 - (void)test_metamacro_consume_
 {
     NSString *consume1 = metamacro_consume_(@"abc")@"def";
+//    NSString *consume1 = @"def";
     NSLog(@"consume1:%@", consume1);
     
     NSInteger consume2 = metamacro_consume_(123)456;
@@ -379,7 +408,10 @@
 }
 - (void)test_metamacro_if_eq0_N
 {
-    NSString *equal0_N_1 = metamacro_if_eq0_0(@"YES")(@"NO");
+//    NSString *equal0_N_1 = metamacro_if_eq0_0(@"YES")(@"NO");
+    
+    
+    NSString *equal0_N_1 = @"YES"metamacro_consume_(@"NO");
     NSLog(@"equal0_N_1:%@", equal0_N_1);
     
     NSString *equal0_N_2 = metamacro_if_eq0_1(@"YES")(@"NO");
@@ -436,7 +468,9 @@
 
 - (void)test_keypath2
 {
+    
     NSString *keypath2_1 = @keypath2(self, view);
+//    RACTest_Add(self, view)
     NSLog(@"keypath2_1:%@", keypath2_1);
     
     NSString *keypath2_2 = @keypath2(self.navigationController, navigationBar);
@@ -605,6 +639,7 @@
     NSLog(@"objectA:%@, objectB:%@, objectC:%@, objectD:%@", objectA, objectB, objectC, objectD);
     // 生成了4个变量
     metamacro_foreach_cxt4(RACTest_rac_weakify_,, testContext, objectA, objectB, objectC, objectD)
+    
     NSLog(@"testContextobjectA0:%@", testContextobjectA0);
     NSLog(@"testContextobjectB1:%@", testContextobjectB1);
     NSLog(@"testContextobjectC2:%@", testContextobjectC2);

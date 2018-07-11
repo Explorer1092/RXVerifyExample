@@ -32,6 +32,7 @@
 - (void)test_MIN1
 {
     int a = RXMACRO_MIN1(1, 2);
+//    int a = 1 < 2 ? 1 : 2;
     printf("test_MIN1:min1:%d\n", a);
     
     int b = 2 * RXMACRO_MIN1(3, 4);
@@ -66,9 +67,16 @@
     int c = RXMACRO_MIN3(3, RXMACRO_MIN2(4, 5));
     printf("test_MIN3:min3:%d\n", c);
     
+    
+    int d = RXMACRO_MIN3(3, 4 < 5 ? 4 : 5);
+    printf("test_MIN3:min3:%d\n", d);
+    
 }
 
 #define RXMACRO_MIN4(A,B) ({ __typeof__(A) __a = (A); __typeof__(B) __b = (B); __a < __b ? __a : __b; })
+
+// ({})
+
 #define RXMACRO_MIN4_2(A,B) \
     ({ \
         __typeof__(A) __a = (A); \
@@ -77,6 +85,11 @@
     })
 - (void)test_MIN4
 {
+//    int __a = 1;
+//    int __b = 2;
+//    RXMACRO_MIN4_2(__a, __b);
+    
+    
     float a = 1;
     float b = RXMACRO_MIN3(a++, 0.9f);
     // => float b = ((a++) < (0.9f) ? (a++) : (0.9f))
@@ -104,12 +117,19 @@
         printf("test_MIN4:min4:__a:%.2f,__b:%.2f\n", __a, __b);
     }
 }
-//#define __NSX_PASTE__(A,B) A##B
-//
-//#if !defined(MIN)
-//#define __NSMIN_IMPL__(A,B,L) ({ __typeof__(A) __NSX_PASTE__(__a,L) = (A); __typeof__(B) __NSX_PASTE__(__b,L) = (B); (__NSX_PASTE__(__a,L) < __NSX_PASTE__(__b,L)) ? __NSX_PASTE__(__a,L) : __NSX_PASTE__(__b,L); })
-//#define MIN(A,B) __NSMIN_IMPL__(A,B,__COUNTER__)
-//#endif
+#define __NSX_PASTE__(A,B) A##B
+
+
+//__a1110;
+//__b1110;
+#if !defined(MIN)
+#define __NSMIN_IMPL__(A,B,L) \
+        ({ __typeof__(A) __NSX_PASTE__(__a,L) = (A); \
+            __typeof__(B) __NSX_PASTE__(__b,L) = (B); \
+            (__NSX_PASTE__(__a,L) < __NSX_PASTE__(__b,L)) ? __NSX_PASTE__(__a,L) : __NSX_PASTE__(__b,L); \
+        })
+#define MIN(A,B) __NSMIN_IMPL__(A,B,__COUNTER__)
+#endif
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
