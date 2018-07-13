@@ -118,6 +118,7 @@
 		E8433D7B20EA51D9004A7FBC /* RXRACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D7A20EA51D9004A7FBC /* RXRACViewController.m */; };
 		E8433D7E20EDBE78004A7FBC /* RXMacroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D7D20EDBE78004A7FBC /* RXMacroViewController.m */; };
 		E8433D8120EF6959004A7FBC /* RXHookBlockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D8020EF6959004A7FBC /* RXHookBlockManager.m */; };
+		E8433D8420F885D8004A7FBC /* RXRACClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D8320F885D8004A7FBC /* RXRACClassViewController.m */; };
 		E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */; };
 		E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */; };
 		E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B820A03E570016F6C9 /* RXMRSWPerson.m */; };
@@ -342,6 +343,8 @@
 		E8433D7D20EDBE78004A7FBC /* RXMacroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMacroViewController.m; sourceTree = "<group>"; };
 		E8433D7F20EF6959004A7FBC /* RXHookBlockManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXHookBlockManager.h; sourceTree = "<group>"; };
 		E8433D8020EF6959004A7FBC /* RXHookBlockManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXHookBlockManager.m; sourceTree = "<group>"; };
+		E8433D8220F885D8004A7FBC /* RXRACClassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRACClassViewController.h; sourceTree = "<group>"; };
+		E8433D8320F885D8004A7FBC /* RXRACClassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRACClassViewController.m; sourceTree = "<group>"; };
 		E858AA4920B9496000BAAFD6 /* RXMVVMCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMVVMCell.h; sourceTree = "<group>"; };
 		E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVVMCell.m; sourceTree = "<group>"; };
 		E86050AD209C67630016F6C9 /* RXObjectCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXObjectCreateViewController.h; sourceTree = "<group>"; };
@@ -869,6 +872,8 @@
 				E8433D7A20EA51D9004A7FBC /* RXRACViewController.m */,
 				E8433D7C20EDBE78004A7FBC /* RXMacroViewController.h */,
 				E8433D7D20EDBE78004A7FBC /* RXMacroViewController.m */,
+				E8433D8220F885D8004A7FBC /* RXRACClassViewController.h */,
+				E8433D8320F885D8004A7FBC /* RXRACClassViewController.m */,
 			);
 			path = RXRAC;
 			sourceTree = "<group>";
@@ -1244,6 +1249,7 @@
 				E870204220DA7B2800752211 /* RXCornerRadiusTableViewImpl.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */,
+				E8433D8420F885D8004A7FBC /* RXRACClassViewController.m in Sources */,
 				E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */,
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
 				E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */,
