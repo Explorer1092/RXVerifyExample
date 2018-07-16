@@ -20,9 +20,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self test_signal];
+//    [self test_signal];
     
-    [self test_signal_cancel];
+//    [self test_signal_cancel];
+    
+//    [self test_subject];
+//    [self test_subject_none];
+    
+    [self test_replaySubject_firstSend_thenSubscribe];
+//    [self test_replaySubject_firstSubscribe_thenSend];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,13 +59,14 @@
         }];
     }];
     
-    
-    // 如果要取消就拿到RACDisposable
     // 2.订阅信号
     [signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@:x:%@", NSStringFromSelector(_cmd), x);
+    } error:^(NSError * _Nullable error) {
+        NSLog(@"%@:error:%@", NSStringFromSelector(_cmd), error);
+    } completed:^{
+        NSLog(@"%@:complete", NSStringFromSelector(_cmd));
     }];
-    
 }
 
 - (void)test_signal_cancel
@@ -80,10 +88,113 @@
     // 2.订阅信号
     RACDisposable *disposable = [signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@:x:%@", NSStringFromSelector(_cmd), x);
+    } error:^(NSError * _Nullable error) {
+        NSLog(@"%@:error:%@", NSStringFromSelector(_cmd), error);
+    } completed:^{
+        NSLog(@"%@:complete", NSStringFromSelector(_cmd));
     }];
     // 取消订阅
     [disposable dispose];
 }
+
+
+// RACSubject使用步骤
+// 1.创建信号 [RACSubject subject]，跟RACSiganl不一样，创建信号时没有block。
+// 2.订阅信号 - (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock
+// 3.发送信号 sendNext:(id)value
+
+// 先订阅后发送
+- (void)test_subject_firstSubscribe_thenSend
+{
+    RACSubject *subject = [RACSubject subject];
+    // 订阅信号
+    [subject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"订阅者一%@", x);
+    }];
+    
+    
+    [subject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"订阅者二%@", x);
+    }];
+    
+    // 发送信号
+    [subject sendNext:@"123"];
+}
+
+// 先发送后订阅
+- (void)test_subject_firstSend_thenSubscribe
+{
+    RACSubject *subject = [RACSubject subject];
+
+    
+    // 发送信号
+    [subject sendNext:@"123"];
+    
+    
+    // 订阅信号
+    [subject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"订阅者一%@", x);
+    }];
+    
+    
+    [subject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"订阅者二%@", x);
+    }];
+}
+
+
+
+// RACReplaySubject使用步骤:
+// 1.创建信号 [RACSubject subject]，跟RACSiganl不一样，创建信号时没有block。
+// 2.可以先订阅信号，也可以先发送信号。
+// 2.1 订阅信号 - (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock
+// 2.2 发送信号 sendNext:(id)value
+
+- (void)test_replaySubject_firstSend_thenSubscribe
+{
+    RACReplaySubject *replaySubject = [RACReplaySubject subject];
+    // 发送信号
+    [replaySubject sendNext:@"222"];
+    [replaySubject sendNext:@"333"];
+    
+    // 订阅信号
+    [replaySubject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"第一个订阅者:%@", x);
+    }];
+    [replaySubject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"第二个订阅者:%@", x);
+    }];
+}
+
+- (void)test_replaySubject_firstSubscribe_thenSend
+{
+    RACReplaySubject *replaySubject = [RACReplaySubject subject];
+
+    // 订阅信号
+    [replaySubject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"第一个订阅者:%@", x);
+    }];
+    [replaySubject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"第二个订阅者:%@", x);
+    }];
+    
+    // 发送信号
+    [replaySubject sendNext:@"222"];
+    [replaySubject sendNext:@"333"];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 #pragma mark - Navigation

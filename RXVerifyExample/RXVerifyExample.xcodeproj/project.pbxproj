@@ -119,6 +119,9 @@
 		E8433D7E20EDBE78004A7FBC /* RXMacroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D7D20EDBE78004A7FBC /* RXMacroViewController.m */; };
 		E8433D8120EF6959004A7FBC /* RXHookBlockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D8020EF6959004A7FBC /* RXHookBlockManager.m */; };
 		E8433D8420F885D8004A7FBC /* RXRACClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D8320F885D8004A7FBC /* RXRACClassViewController.m */; };
+		E8433D8820FC7EF7004A7FBC /* RXRACDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D8620FC7EF6004A7FBC /* RXRACDemoViewController.m */; };
+		E8433D8920FC7EF7004A7FBC /* RXRACDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8433D8720FC7EF6004A7FBC /* RXRACDemoViewController.xib */; };
+		E8433D8C20FC7F7D004A7FBC /* RWDummySignInService.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D8B20FC7F7D004A7FBC /* RWDummySignInService.m */; };
 		E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */; };
 		E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */; };
 		E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B820A03E570016F6C9 /* RXMRSWPerson.m */; };
@@ -345,6 +348,11 @@
 		E8433D8020EF6959004A7FBC /* RXHookBlockManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXHookBlockManager.m; sourceTree = "<group>"; };
 		E8433D8220F885D8004A7FBC /* RXRACClassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRACClassViewController.h; sourceTree = "<group>"; };
 		E8433D8320F885D8004A7FBC /* RXRACClassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRACClassViewController.m; sourceTree = "<group>"; };
+		E8433D8520FC7EF6004A7FBC /* RXRACDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRACDemoViewController.h; sourceTree = "<group>"; };
+		E8433D8620FC7EF6004A7FBC /* RXRACDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRACDemoViewController.m; sourceTree = "<group>"; };
+		E8433D8720FC7EF6004A7FBC /* RXRACDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RXRACDemoViewController.xib; sourceTree = "<group>"; };
+		E8433D8A20FC7F7D004A7FBC /* RWDummySignInService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWDummySignInService.h; sourceTree = "<group>"; };
+		E8433D8B20FC7F7D004A7FBC /* RWDummySignInService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWDummySignInService.m; sourceTree = "<group>"; };
 		E858AA4920B9496000BAAFD6 /* RXMVVMCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMVVMCell.h; sourceTree = "<group>"; };
 		E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVVMCell.m; sourceTree = "<group>"; };
 		E86050AD209C67630016F6C9 /* RXObjectCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXObjectCreateViewController.h; sourceTree = "<group>"; };
@@ -874,6 +882,11 @@
 				E8433D7D20EDBE78004A7FBC /* RXMacroViewController.m */,
 				E8433D8220F885D8004A7FBC /* RXRACClassViewController.h */,
 				E8433D8320F885D8004A7FBC /* RXRACClassViewController.m */,
+				E8433D8520FC7EF6004A7FBC /* RXRACDemoViewController.h */,
+				E8433D8620FC7EF6004A7FBC /* RXRACDemoViewController.m */,
+				E8433D8720FC7EF6004A7FBC /* RXRACDemoViewController.xib */,
+				E8433D8A20FC7F7D004A7FBC /* RWDummySignInService.h */,
+				E8433D8B20FC7F7D004A7FBC /* RWDummySignInService.m */,
 			);
 			path = RXRAC;
 			sourceTree = "<group>";
@@ -1090,6 +1103,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8433D8920FC7EF7004A7FBC /* RXRACDemoViewController.xib in Resources */,
 				C97881BF1FC6AE6200083ADF /* RXMethodForwardViewController.xib in Resources */,
 				C9C2B33A1E0BB2AD0087C718 /* RVOCDataViewController.xib in Resources */,
 				C985F6191D5030EC004D654D /* RVStockViewController.xib in Resources */,
@@ -1244,6 +1258,7 @@
 				E86050E720A07A1B0016F6C9 /* RVRunTimeViewController.m in Sources */,
 				58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */,
 				C9BDAD671CC62E6E00CBB1CA /* RVPushPopAnimation.m in Sources */,
+				E8433D8C20FC7F7D004A7FBC /* RWDummySignInService.m in Sources */,
 				C966DB8B1FAEB5DF003BC1B4 /* RXLogManager.m in Sources */,
 				E818F0FA20B93FED00F94127 /* RXMVVMListViewController.m in Sources */,
 				E870204220DA7B2800752211 /* RXCornerRadiusTableViewImpl.m in Sources */,
@@ -1281,6 +1296,7 @@
 				E8433D8120EF6959004A7FBC /* RXHookBlockManager.m in Sources */,
 				C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */,
 				E870202920D8E10B00752211 /* RVGCDQueuesViewController.m in Sources */,
+				E8433D8820FC7EF7004A7FBC /* RXRACDemoViewController.m in Sources */,
 				E8433D6A20E39C83004A7FBC /* RXMVVMLoginViewModel.m in Sources */,
 				C9D474531D16543F000C14E3 /* RVUtilityViewController.m in Sources */,
 				E86050D220A079050016F6C9 /* RXTargetQueueViewController.m in Sources */,
