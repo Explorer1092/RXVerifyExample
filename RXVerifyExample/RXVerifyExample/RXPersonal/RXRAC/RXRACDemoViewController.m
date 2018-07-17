@@ -168,6 +168,11 @@
     
     
     
+    RACSignal *testSignal = self.usernameTextField.rac_textSignal;
+    [testSignal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    }];
+    
     
 }
 

@@ -49,24 +49,35 @@
 {
     // 1.创建信号
     RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber> _Nonnull subscriber) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 3.发送信号
-            NSLog(@"%@:发送信号", NSStringFromSelector(_cmd));
-            [subscriber sendNext:@(1)];
-        });
-        return [RACDisposable disposableWithBlock:^{
-            NSLog(@"%@:信号发送完毕", NSStringFromSelector(_cmd));
-        }];
+        // 3.发送信号
+        NSLog(@"%@:发送信号", NSStringFromSelector(_cmd));
+        [subscriber sendNext:@(1)];
+        return nil;
     }];
-    
     // 2.订阅信号
     [signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@:x:%@", NSStringFromSelector(_cmd), x);
-    } error:^(NSError * _Nullable error) {
-        NSLog(@"%@:error:%@", NSStringFromSelector(_cmd), error);
-    } completed:^{
-        NSLog(@"%@:complete", NSStringFromSelector(_cmd));
     }];
+}
+
+- (void)test_signal_detail
+{
+    // 当订阅信号的时候,需要处理的事情,这里面会发送信号
+    RACDisposable *(^doSomethingWhenSubscribeSignal)(id<RACSubscriber>) = ^RACDisposable *(id<RACSubscriber> subscriber) {
+        // 3.发送信号
+        NSLog(@"%@:发送信号", NSStringFromSelector(_cmd));
+        [subscriber sendNext:@(1)];
+        return nil;
+    };
+    
+    // 1.创建信号
+    RACSignal *signal = [RACSignal createSignal:doSomethingWhenSubscribeSignal];
+    // 当收到信号的时候,需要处理的事情
+    void (^doSomethingWhenReceiveSignal)(id) = ^void (id x) {
+        NSLog(@"%@:x:%@", NSStringFromSelector(_cmd), x);
+    };
+    // 2.订阅信号
+    [signal subscribeNext:doSomethingWhenReceiveSignal];
 }
 
 - (void)test_signal_cancel
