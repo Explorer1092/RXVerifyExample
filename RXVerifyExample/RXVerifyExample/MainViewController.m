@@ -52,7 +52,7 @@
                            @"RXMultNotification", @"RXSY", @"RVGCDQueues",
                            @"RXUIListPerformance", @"RXCompressWhitSpace", @"RXMVVMLogin",
                            @"RXRAC", @"RXMacro", @"RXRACClass",
-                           @"RXRACDemo", @"RXOCKeywordMethodName"];
+                           @"RXRACDemo", @"RXOCKeywordMethodName", @"RXRACMT"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -66,7 +66,7 @@
 //    object = @"RXSY";
     
 //    object = @"RXRAC";
-    object = @"RXRACClass";
+//    object = @"RXRACClass";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
