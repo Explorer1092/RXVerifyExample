@@ -66,7 +66,7 @@
 //    object = @"RXSY";
     
 //    object = @"RXRAC";
-    object = @"RXRACDemo";
+    object = @"RXRACClass";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];

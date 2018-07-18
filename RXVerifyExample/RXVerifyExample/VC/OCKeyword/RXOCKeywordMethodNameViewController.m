@@ -75,6 +75,7 @@
 }
 - (id)self
 {
+    // 有一个warning, 目前还不知道怎么解决
     return [NSString stringWithFormat:@"instance method name: %@", NSStringFromSelector(_cmd)];
 }
 
@@ -109,6 +110,15 @@
     NSLog(@"%@", [object strong]);
     NSLog(@"%@", [object self]);
     NSLog(@"%@", [object super]);
+    
+    
+    NSLog(@"%@", [RXOCKeywordMethodNameObject return]);
+    NSLog(@"%@", [RXOCKeywordMethodNameObject void]);
+    NSLog(@"%@", [RXOCKeywordMethodNameObject id]);
+    NSLog(@"%@", [RXOCKeywordMethodNameObject weak]);
+    NSLog(@"%@", [RXOCKeywordMethodNameObject strong]);
+    NSLog(@"%@", [RXOCKeywordMethodNameObject self]);
+    NSLog(@"%@", [RXOCKeywordMethodNameObject super]);
 }
 
 - (void)didReceiveMemoryWarning {

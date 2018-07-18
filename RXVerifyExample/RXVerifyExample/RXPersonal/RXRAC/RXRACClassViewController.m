@@ -6,8 +6,15 @@
 //  Copyright © 2018 Rush.D.Xzj. All rights reserved.
 //
 
+
+
 #import "RXRACClassViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+
+
+// 介绍multicastconnection
+// https://blog.csdn.net/wsh604/article/details/78513222
+
 
 @interface RXRACClassViewController ()
 
@@ -24,10 +31,10 @@
     
 //    [self test_signal_cancel];
     
-//    [self test_subject];
-//    [self test_subject_none];
+    [self test_subject_firstSubscribe_thenSend];
+//    [self test_subject_firstSend_thenSubscribe];
     
-    [self test_replaySubject_firstSend_thenSubscribe];
+//    [self test_replaySubject_firstSend_thenSubscribe];
 //    [self test_replaySubject_firstSubscribe_thenSend];
     
 }
@@ -54,6 +61,7 @@
         [subscriber sendNext:@(1)];
         return nil;
     }];
+    
     // 2.订阅信号
     [signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@:x:%@", NSStringFromSelector(_cmd), x);
@@ -133,6 +141,7 @@
 }
 
 // 先发送后订阅
+// 无法成功
 - (void)test_subject_firstSend_thenSubscribe
 {
     RACSubject *subject = [RACSubject subject];
@@ -161,6 +170,7 @@
 // 2.1 订阅信号 - (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock
 // 2.2 发送信号 sendNext:(id)value
 
+// 先发送后订阅,正常用法
 - (void)test_replaySubject_firstSend_thenSubscribe
 {
     RACReplaySubject *replaySubject = [RACReplaySubject subject];
@@ -177,6 +187,7 @@
     }];
 }
 
+// 先订阅后发送,也可以成功,因为RACReplaySubject是RACSubject的子类?
 - (void)test_replaySubject_firstSubscribe_thenSend
 {
     RACReplaySubject *replaySubject = [RACReplaySubject subject];
