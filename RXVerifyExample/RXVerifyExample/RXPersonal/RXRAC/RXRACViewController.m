@@ -8,7 +8,7 @@
 
 #import "RXRACViewController.h"
 #import <ReactiveObjC/ReactiveObjC.h>
-
+#import <Foundation/Foundation.h>
 //#import <ReactiveCocoa/ReactiveCocoa.h>
 
 //http://www.cocoachina.com/industry/20140621/8905.html

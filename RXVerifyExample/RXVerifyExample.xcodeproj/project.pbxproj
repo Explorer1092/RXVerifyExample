@@ -125,6 +125,8 @@
 		E8433D9020FC9C81004A7FBC /* RXOCKWKindofViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D8F20FC9C81004A7FBC /* RXOCKWKindofViewController.m */; };
 		E8433D9320FD90A5004A7FBC /* RXOCKeywordMethodNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D9220FD90A5004A7FBC /* RXOCKeywordMethodNameViewController.m */; };
 		E8433D9620FEDA86004A7FBC /* RXRACMTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8433D9520FEDA86004A7FBC /* RXRACMTViewController.m */; };
+		E851587F2140CC99006E23D5 /* RXUncaughtExceptionHandlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E851587B2140CC99006E23D5 /* RXUncaughtExceptionHandlerViewController.m */; };
+		E85158802140CC99006E23D5 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E851587E2140CC99006E23D5 /* UncaughtExceptionHandler.m */; };
 		E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */; };
 		E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050AE209C67630016F6C9 /* RXObjectCreateViewController.m */; };
 		E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050B820A03E570016F6C9 /* RXMRSWPerson.m */; };
@@ -158,6 +160,8 @@
 		E870203720DA77E700752211 /* RXUIListSheelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E870203620DA77E700752211 /* RXUIListSheelViewController.m */; };
 		E870204220DA7B2800752211 /* RXCornerRadiusTableViewImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E870204020DA7B2800752211 /* RXCornerRadiusTableViewImpl.m */; };
 		E870204520DA7B3F00752211 /* RXImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E870204420DA7B3F00752211 /* RXImageCell.m */; };
+		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
+		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -362,6 +366,10 @@
 		E8433D9220FD90A5004A7FBC /* RXOCKeywordMethodNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXOCKeywordMethodNameViewController.m; sourceTree = "<group>"; };
 		E8433D9420FEDA86004A7FBC /* RXRACMTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRACMTViewController.h; sourceTree = "<group>"; };
 		E8433D9520FEDA86004A7FBC /* RXRACMTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRACMTViewController.m; sourceTree = "<group>"; };
+		E851587B2140CC99006E23D5 /* RXUncaughtExceptionHandlerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXUncaughtExceptionHandlerViewController.m; sourceTree = "<group>"; };
+		E851587C2140CC99006E23D5 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		E851587D2140CC99006E23D5 /* RXUncaughtExceptionHandlerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXUncaughtExceptionHandlerViewController.h; sourceTree = "<group>"; };
+		E851587E2140CC99006E23D5 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		E858AA4920B9496000BAAFD6 /* RXMVVMCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMVVMCell.h; sourceTree = "<group>"; };
 		E858AA4A20B9496000BAAFD6 /* RXMVVMCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMVVMCell.m; sourceTree = "<group>"; };
 		E86050AD209C67630016F6C9 /* RXObjectCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXObjectCreateViewController.h; sourceTree = "<group>"; };
@@ -424,6 +432,10 @@
 		E870204120DA7B2800752211 /* RXCornerRadiusTableViewImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCornerRadiusTableViewImpl.h; sourceTree = "<group>"; };
 		E870204320DA7B3F00752211 /* RXImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXImageCell.h; sourceTree = "<group>"; };
 		E870204420DA7B3F00752211 /* RXImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXImageCell.m; sourceTree = "<group>"; };
+		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
+		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
+		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
+		E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RXVerifyExample.m"; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -633,6 +645,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E85158792140CC99006E23D5 /* RXCrash */,
 				E8433D7820EA51CA004A7FBC /* RXRAC */,
 				E818F0E120B6C06A00F94127 /* RXNSObject */,
 				E826366B20A940AD0081F4A8 /* RXFramework */,
@@ -724,6 +737,10 @@
 				C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */,
 				C95B6AF41CF7EF9A00E9FC0F /* NSObject+RXExt.h */,
 				C95B6AF51CF7EF9A00E9FC0F /* NSObject+RXExt.m */,
+				E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */,
+				E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */,
+				E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */,
+				E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -912,6 +929,25 @@
 				E8433D9220FD90A5004A7FBC /* RXOCKeywordMethodNameViewController.m */,
 			);
 			path = OCKeyword;
+			sourceTree = "<group>";
+		};
+		E85158792140CC99006E23D5 /* RXCrash */ = {
+			isa = PBXGroup;
+			children = (
+				E851587A2140CC99006E23D5 /* CatchedHelper */,
+			);
+			path = RXCrash;
+			sourceTree = "<group>";
+		};
+		E851587A2140CC99006E23D5 /* CatchedHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E851587C2140CC99006E23D5 /* UncaughtExceptionHandler.h */,
+				E851587E2140CC99006E23D5 /* UncaughtExceptionHandler.m */,
+				E851587D2140CC99006E23D5 /* RXUncaughtExceptionHandlerViewController.h */,
+				E851587B2140CC99006E23D5 /* RXUncaughtExceptionHandlerViewController.m */,
+			);
+			path = CatchedHelper;
 			sourceTree = "<group>";
 		};
 		E86050B620A03E460016F6C9 /* RXMRSW */ = {
@@ -1235,6 +1271,7 @@
 				5803F0CF1C190FFC0071FDDA /* RVRefreshViewController.m in Sources */,
 				E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */,
 				C929233F1D339C65009D6875 /* RVDUMAView.m in Sources */,
+				E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */,
 				E870202620D39A3800752211 /* RXSYViewController.m in Sources */,
 				E86050FB20A29A9D0016F6C9 /* RVMsgForwardProxy.m in Sources */,
 				C9BDAFB91E4AC4B8006CCD0E /* RVThreadViewController.m in Sources */,
@@ -1243,6 +1280,7 @@
 				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
 				E826367820A96BEF0081F4A8 /* RXMVPGreetingViewController.m in Sources */,
 				C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */,
+				E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */,
 				E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */,
 				C9A7110D1D7BA0880002E703 /* RVCopyViewController.m in Sources */,
 				C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */,
@@ -1259,6 +1297,7 @@
 				C92923421D339F02009D6875 /* DMLine.m in Sources */,
 				E870203420DA61AA00752211 /* RXUIListPerformanceTableViewImpl.m in Sources */,
 				C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */,
+				E851587F2140CC99006E23D5 /* RXUncaughtExceptionHandlerViewController.m in Sources */,
 				E826367120A96BB00081F4A8 /* RXMVPPerson.m in Sources */,
 				E818F0F120B9044A00F94127 /* RXMVVMModel.m in Sources */,
 				C9D397A51CF5A29200D8569C /* RXRunTimeDemoObject.m in Sources */,
@@ -1288,6 +1327,7 @@
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */,
 				E8433D8420F885D8004A7FBC /* RXRACClassViewController.m in Sources */,
+				E85158802140CC99006E23D5 /* UncaughtExceptionHandler.m in Sources */,
 				E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */,
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
 				E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */,
@@ -1449,7 +1489,7 @@
 				DEVELOPMENT_TEAM = BMW986WME7;
 				GCC_PREFIX_HEADER = "RXVerifyExample/RXVerifyExample-Prefix.pch";
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1470,7 +1510,7 @@
 				DEVELOPMENT_TEAM = BMW986WME7;
 				GCC_PREFIX_HEADER = "RXVerifyExample/RXVerifyExample-Prefix.pch";
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

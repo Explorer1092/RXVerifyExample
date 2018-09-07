@@ -11,6 +11,7 @@
 #import "MainViewController.h"
 #import <RX3_TencentLiteSDK/TencentOpenAPI/TencentOAuth.h>
 
+#import "UncaughtExceptionHandler.h"
 @interface AppDelegate ()
 @property (nonatomic, strong) UINavigationController *mainNC;
 
@@ -21,7 +22,6 @@
 
 - (void)config
 {
-    
 //    @try {
 //        NSString *jsonString = nil;
 //        NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
@@ -89,6 +89,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [UncaughtExceptionHandler installUncaughtExceptionHandler:YES showAlert:YES];
+
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self config];
     [self showMain];
