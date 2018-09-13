@@ -7,7 +7,7 @@
 //
 
 #import "RXUncaughtExceptionHandlerViewController.h"
-
+#import "JLRoutes.h"
 @interface RXUncaughtExceptionHandlerViewController ()
 
 @end
@@ -40,6 +40,9 @@
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
 //        [weakSelf test];
 //    });
+//    NSURL *viewUserURL = [NSURL URLWithString:@"myapp://user/view/joeldev"];
+//    [JLRoutes routeURL:viewUserURL];
+    
 }
 
 - (void)test {

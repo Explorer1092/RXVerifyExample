@@ -12,6 +12,7 @@
 #import <RX3_TencentLiteSDK/TencentOpenAPI/TencentOAuth.h>
 
 #import "UncaughtExceptionHandler.h"
+#import "RXServiceManager.h"
 @interface AppDelegate ()
 @property (nonatomic, strong) UINavigationController *mainNC;
 
@@ -22,51 +23,8 @@
 
 - (void)config
 {
-//    @try {
-//        NSString *jsonString = nil;
-//        NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-//        NSError *err;
-//        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&err];
-//        if(err) {
-//            NSLog(@"json解析失败：%@",err);
-//        } else {
-//            NSLog(@"json解析失败22222222：%@",err);
-//        }
-//    }
-//    
-//    @catch (NSException *exception) {
-//        NSLog(@"exception:%@", exception);
-//    }
-    
-    
-    
-//    [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info) {
-//        NSLog(@"viewDidLoad:%@", info.instance);
-//    } error:NULL];
-//    
-//    [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, BOOL animation) {
-//        NSLog(@"viewWillAppear:%@", info.instance);
-//    } error:NULL];
-//    
-//    
-//    
-//    
-//    [UIViewController aspect_hookSelector:@selector(viewDidAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, BOOL animation) {
-//        NSLog(@"viewDidAppear:%@", info.instance);
-//    } error:NULL];
-//    
-//    
-//    
-//    [UIViewController aspect_hookSelector:@selector(viewWillDisappear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> info, BOOL animation) {
-//        NSLog(@"viewWillDisappear:%@", info.instance);
-//    } error:NULL];
-//    
-//    
-//    
-
-    
-    
-    
+    [RXServiceManager addServiceName:@"RXCrashService" enable:YES async:YES];
+    [RXServiceManager addServiceName:@"RXJLRoutesService" enable:YES async:NO];
 }
 
 
@@ -79,40 +37,39 @@
 
 - (void)showMain
 {
-    
     UIViewController *vc = nil;
     vc = [[MainViewController alloc] init];
     self.mainNC = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = self.mainNC;
 }
 
-
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // third part 第三方初始化
+    [self config];
+    [RXServiceManager application:application willFinishLaunchingWithOptions:launchOptions];
+    return YES;
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [UncaughtExceptionHandler installUncaughtExceptionHandler:YES showAlert:YES];
-
+    [RXServiceManager application:application didFinishLaunchingWithOptions:launchOptions];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self config];
     [self showMain];
     [self.window makeKeyAndVisible];
-    
-    
-    
-//    CFRunLoopRef runLoopRef = CFRunLoopGetMain();
-//    NSLog(@"%@", runLoopRef);
-    
     
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [RXServiceManager executeSelector:_cmd paramArray:@[application]];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -128,12 +85,22 @@
 }
 
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    return [TencentOAuth HandleOpenURL:url];
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSArray *paramArray = @[application,
+                            url ? url : [NSNull null],
+                            sourceApplication ? sourceApplication : [NSNull null],
+                            annotation ? annotation : [NSNull null]];
+    return [RXServiceManager boolReturnExecuteSelector:_cmd paramArray:paramArray];
 }
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-    return [TencentOAuth HandleOpenURL:url];
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    
+    NSArray *paramArray = @[application,
+                            url ? url : [NSNull null]];
+    return [RXServiceManager boolReturnExecuteSelector:_cmd paramArray:paramArray];
+}
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    return [RXServiceManager application:application supportedInterfaceOrientationsForWindow:window];
 }
 
 @end
