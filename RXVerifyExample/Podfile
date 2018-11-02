@@ -51,6 +51,7 @@ pod 'RX3_TencentLiteSDK'
 
 pod 'fishhook'
 
+pod 'AFNetworking+RX'
 
 pod 'RXTableViewImpl'
 
