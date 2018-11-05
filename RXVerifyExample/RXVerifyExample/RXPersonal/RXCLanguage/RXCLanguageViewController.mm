@@ -1,33 +1,27 @@
 //
-//  RVThreadViewController.m
+//  RXCLanguageViewController.m
 //  RXVerifyExample
 //
-//  Created by ceshi on 17/2/8.
-//  Copyright © 2017年 Rush.D.Xzj. All rights reserved.
+//  Created by Rush.D.Xzj on 2018/11/5.
+//  Copyright © 2018 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RVThreadViewController.h"
-
-@interface RVThreadViewController ()
+#import "RXCLanguageViewController.h"
+#import "rx-objc-runtime-new.h"
+@interface RXCLanguageViewController ()
 
 @end
 
-@implementation RVThreadViewController
+@implementation RXCLanguageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-- (void)test1
-{
-//    NSThread *thread;
 }
 
 /*

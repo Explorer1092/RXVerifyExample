@@ -103,7 +103,7 @@ static void __private_HookBlockToPrintArguments(RX_block_impl *cSelf, /*void *_0
             printf("第%d个参数:%d\n", i, param);
         } else if (strcmp(value, "@\"NSString\"") == 0) {
             NSString *param = va_arg(args, NSString *);
-//            printf("第%d个参数:%s\n", i, [param UTF8String]);
+            printf("第%d个参数:%s\n", i, [param UTF8String]);
         } else if (strcmp(value, "@\"NSDictionary\"") == 0) {
             NSDictionary *param = va_arg(args, NSDictionary *);
             NSString *str = [NSString stringWithFormat:@"%@", param];
@@ -195,7 +195,7 @@ void test_tmp(id block)
     char *value = (char *)exchang;
 //    printf("kkk2:%s\n", value);
     
-    NSString *str = [NSString stringWithUTF8String:value];
+//    NSString *str = [NSString stringWithUTF8String:value];
 //    NSLog(@"str:%@", str);
     
 }

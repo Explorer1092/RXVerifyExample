@@ -170,6 +170,9 @@
 		E8F8D7A92187E399007AB027 /* RXMethodListDemoObject+MethodList.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A82187E399007AB027 /* RXMethodListDemoObject+MethodList.m */; };
 		E8F8D7AC2187E5B4007AB027 /* RXMethodListDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7AB2187E5B4007AB027 /* RXMethodListDemoViewController.m */; };
 		E8F8D7D5218C3A16007AB027 /* RXAspects.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7D4218C3A16007AB027 /* RXAspects.m */; };
+		E8F8D7D8218C3B29007AB027 /* RXAspectsTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7D7218C3B29007AB027 /* RXAspectsTestObject.m */; };
+		E8F8D7DB218C42B3007AB027 /* RXAspectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7DA218C42B3007AB027 /* RXAspectsViewController.m */; };
+		E8F8D7DF218FD6AC007AB027 /* RXCLanguageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7DE218FD6AC007AB027 /* RXCLanguageViewController.mm */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -460,6 +463,14 @@
 		E8F8D7AB2187E5B4007AB027 /* RXMethodListDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMethodListDemoViewController.m; sourceTree = "<group>"; };
 		E8F8D7D3218C3A16007AB027 /* RXAspects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAspects.h; sourceTree = "<group>"; };
 		E8F8D7D4218C3A16007AB027 /* RXAspects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAspects.m; sourceTree = "<group>"; };
+		E8F8D7D6218C3B29007AB027 /* RXAspectsTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAspectsTestObject.h; sourceTree = "<group>"; };
+		E8F8D7D7218C3B29007AB027 /* RXAspectsTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAspectsTestObject.m; sourceTree = "<group>"; };
+		E8F8D7D9218C42B3007AB027 /* RXAspectsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAspectsViewController.h; sourceTree = "<group>"; };
+		E8F8D7DA218C42B3007AB027 /* RXAspectsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAspectsViewController.m; sourceTree = "<group>"; };
+		E8F8D7DD218FD6AC007AB027 /* RXCLanguageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCLanguageViewController.h; sourceTree = "<group>"; };
+		E8F8D7DE218FD6AC007AB027 /* RXCLanguageViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RXCLanguageViewController.mm; sourceTree = "<group>"; };
+		E8F8D7E2218FD93B007AB027 /* rx-runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "rx-runtime.h"; sourceTree = "<group>"; };
+		E8F8D7E4218FDB98007AB027 /* rx-objc-runtime-new.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rx-objc-runtime-new.h"; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -671,6 +682,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E8F8D7DC218FD699007AB027 /* RXCLanguage */,
 				E8F8D7D2218C3A01007AB027 /* RXAspects */,
 				E85158792140CC99006E23D5 /* RXCrash */,
 				E8433D7820EA51CA004A7FBC /* RXRAC */,
@@ -1169,8 +1181,39 @@
 			children = (
 				E8F8D7D3218C3A16007AB027 /* RXAspects.h */,
 				E8F8D7D4218C3A16007AB027 /* RXAspects.m */,
+				E8F8D7D6218C3B29007AB027 /* RXAspectsTestObject.h */,
+				E8F8D7D7218C3B29007AB027 /* RXAspectsTestObject.m */,
+				E8F8D7D9218C42B3007AB027 /* RXAspectsViewController.h */,
+				E8F8D7DA218C42B3007AB027 /* RXAspectsViewController.m */,
 			);
 			path = RXAspects;
+			sourceTree = "<group>";
+		};
+		E8F8D7DC218FD699007AB027 /* RXCLanguage */ = {
+			isa = PBXGroup;
+			children = (
+				E8F8D7E3218FDB1E007AB027 /* Project Headers */,
+				E8F8D7E1218FD92B007AB027 /* Public Headers */,
+				E8F8D7DD218FD6AC007AB027 /* RXCLanguageViewController.h */,
+				E8F8D7DE218FD6AC007AB027 /* RXCLanguageViewController.mm */,
+			);
+			path = RXCLanguage;
+			sourceTree = "<group>";
+		};
+		E8F8D7E1218FD92B007AB027 /* Public Headers */ = {
+			isa = PBXGroup;
+			children = (
+				E8F8D7E2218FD93B007AB027 /* rx-runtime.h */,
+			);
+			path = "Public Headers";
+			sourceTree = "<group>";
+		};
+		E8F8D7E3218FDB1E007AB027 /* Project Headers */ = {
+			isa = PBXGroup;
+			children = (
+				E8F8D7E4218FDB98007AB027 /* rx-objc-runtime-new.h */,
+			);
+			path = "Project Headers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1401,6 +1444,7 @@
 				E870204220DA7B2800752211 /* RXCornerRadiusTableViewImpl.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */,
+				E8F8D7D8218C3B29007AB027 /* RXAspectsTestObject.m in Sources */,
 				E8433D8420F885D8004A7FBC /* RXRACClassViewController.m in Sources */,
 				E85158802140CC99006E23D5 /* UncaughtExceptionHandler.m in Sources */,
 				E85159CD215890CD006E23D5 /* RXOPMQViewController.m in Sources */,
@@ -1449,7 +1493,9 @@
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
 				E8433D9020FC9C81004A7FBC /* RXOCKWKindofViewController.m in Sources */,
 				E870203120DA617200752211 /* RXUIListPerformanceViewController.m in Sources */,
+				E8F8D7DB218C42B3007AB027 /* RXAspectsViewController.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
+				E8F8D7DF218FD6AC007AB027 /* RXCLanguageViewController.mm in Sources */,
 				C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.mm in Sources */,
 				C937947D1CE331D30065F68C /* RVViewCycleViewController.m in Sources */,

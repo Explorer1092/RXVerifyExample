@@ -32,7 +32,7 @@
 - (void)test {
     RXMethodListDemoObject *object = [RXMethodListDemoObject new];
     unsigned int methodCount = 0;
-    Class
+    
     Method *methodList = class_copyMethodList([object class], &methodCount);
     NSMutableArray *mutArray = [NSMutableArray new];
     for (int i = 0; i < methodCount; i++) {

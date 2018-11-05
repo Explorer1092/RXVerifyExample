@@ -48,7 +48,7 @@
     UITapGestureRecognizer *tgr = sender;
     UIView *view = tgr.view;
     NSInteger tag = view.tag;
-    NSString *text = self.items[tag];
+//    NSString *text = self.items[tag];
     
     RXMVPPerson *person = [RXMVPPerson new];
     person.firstName = @"111";

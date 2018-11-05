@@ -25,38 +25,38 @@
     
     RXNSObjectForSelectorAObject *object = [RXNSObjectForSelectorAObject new];
     
-    IMP k1 = [object methodForSelector:sel1];
-    IMP k2 = [object methodForSelector:sel2];
-    IMP k3 = [object methodForSelector:sel3];
+//    IMP k1 = [object methodForSelector:sel1];
+//    IMP k2 = [object methodForSelector:sel2];
+//    IMP k3 = [object methodForSelector:sel3];
     
     
 
     
-    Class c1 = [object class];
-    Class c2 = [RXNSObjectForSelectorAObject class];
+//    Class c1 = [object class];
+//    Class c2 = [RXNSObjectForSelectorAObject class];
     // 编译报错
     //    Class c3 = RXNSObjectForSelectorAObject;
     
-    IMP k14 = [c1 methodForSelector:sel1];
-    IMP k15 = [c1 methodForSelector:sel2];
-    IMP k16 = [c1 methodForSelector:sel3];
-    
-    IMP k4 = [c2 methodForSelector:sel1];
-    IMP k5 = [c2 methodForSelector:sel2];
-    IMP k6 = [c2 methodForSelector:sel3];
-    
-    IMP k7 = [RXNSObjectForSelectorAObject methodForSelector:sel1];
-    IMP k8 = [RXNSObjectForSelectorAObject methodForSelector:sel2];
-    IMP k9 = [RXNSObjectForSelectorAObject methodForSelector:sel3];
+//    IMP k14 = [c1 methodForSelector:sel1];
+//    IMP k15 = [c1 methodForSelector:sel2];
+//    IMP k16 = [c1 methodForSelector:sel3];
+//    
+//    IMP k4 = [c2 methodForSelector:sel1];
+//    IMP k5 = [c2 methodForSelector:sel2];
+//    IMP k6 = [c2 methodForSelector:sel3];
+//    
+//    IMP k7 = [RXNSObjectForSelectorAObject methodForSelector:sel1];
+//    IMP k8 = [RXNSObjectForSelectorAObject methodForSelector:sel2];
+//    IMP k9 = [RXNSObjectForSelectorAObject methodForSelector:sel3];
     
     // 报错
 //    IMP k11 = [object instanceMethodForSelector:NSSelectorFromString(@"abc")];
 //    IMP k12 = [object instanceMethodForSelector:sel2];
 //    IMP k13 = [object instanceMethodForSelector:sel3];
     
-    IMP k11 = [RXNSObjectForSelectorAObject instanceMethodForSelector:sel1];
-    IMP k12 = [RXNSObjectForSelectorAObject instanceMethodForSelector:sel2];
-    IMP k13 = [RXNSObjectForSelectorAObject instanceMethodForSelector:sel3];
+//    IMP k11 = [RXNSObjectForSelectorAObject instanceMethodForSelector:sel1];
+//    IMP k12 = [RXNSObjectForSelectorAObject instanceMethodForSelector:sel2];
+//    IMP k13 = [RXNSObjectForSelectorAObject instanceMethodForSelector:sel3];
     
     
     
