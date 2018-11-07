@@ -173,6 +173,11 @@
 		E8F8D7D8218C3B29007AB027 /* RXAspectsTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7D7218C3B29007AB027 /* RXAspectsTestObject.m */; };
 		E8F8D7DB218C42B3007AB027 /* RXAspectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7DA218C42B3007AB027 /* RXAspectsViewController.m */; };
 		E8F8D7DF218FD6AC007AB027 /* RXCLanguageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7DE218FD6AC007AB027 /* RXCLanguageViewController.mm */; };
+		E8F8D7E8218FE5B4007AB027 /* rx-objc-cache.mm in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7E7218FE5B4007AB027 /* rx-objc-cache.mm */; };
+		E8F8D7F7219133F8007AB027 /* RXAFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7F6219133F8007AB027 /* RXAFSecurityPolicy.m */; };
+		E8F8D7FA21916FFC007AB027 /* RXAFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7F921916FFC007AB027 /* RXAFNetworkingViewController.m */; };
+		E8F8D7FE21917038007AB027 /* RXAFNTest1Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7FD21917038007AB027 /* RXAFNTest1Object.m */; };
+		E8F8D80121917041007AB027 /* RXAFNTest2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D80021917041007AB027 /* RXAFNTest2Object.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -471,6 +476,15 @@
 		E8F8D7DE218FD6AC007AB027 /* RXCLanguageViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RXCLanguageViewController.mm; sourceTree = "<group>"; };
 		E8F8D7E2218FD93B007AB027 /* rx-runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "rx-runtime.h"; sourceTree = "<group>"; };
 		E8F8D7E4218FDB98007AB027 /* rx-objc-runtime-new.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rx-objc-runtime-new.h"; sourceTree = "<group>"; };
+		E8F8D7E7218FE5B4007AB027 /* rx-objc-cache.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "rx-objc-cache.mm"; sourceTree = "<group>"; };
+		E8F8D7F5219133F8007AB027 /* RXAFSecurityPolicy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFSecurityPolicy.h; sourceTree = "<group>"; };
+		E8F8D7F6219133F8007AB027 /* RXAFSecurityPolicy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFSecurityPolicy.m; sourceTree = "<group>"; };
+		E8F8D7F821916FFC007AB027 /* RXAFNetworkingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNetworkingViewController.h; sourceTree = "<group>"; };
+		E8F8D7F921916FFC007AB027 /* RXAFNetworkingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNetworkingViewController.m; sourceTree = "<group>"; };
+		E8F8D7FC21917038007AB027 /* RXAFNTest1Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNTest1Object.h; sourceTree = "<group>"; };
+		E8F8D7FD21917038007AB027 /* RXAFNTest1Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNTest1Object.m; sourceTree = "<group>"; };
+		E8F8D7FF21917041007AB027 /* RXAFNTest2Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNTest2Object.h; sourceTree = "<group>"; };
+		E8F8D80021917041007AB027 /* RXAFNTest2Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNTest2Object.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -682,6 +696,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E8F8D7F3219133C5007AB027 /* RXAFNetworking */,
 				E8F8D7DC218FD699007AB027 /* RXCLanguage */,
 				E8F8D7D2218C3A01007AB027 /* RXAspects */,
 				E85158792140CC99006E23D5 /* RXCrash */,
@@ -1192,6 +1207,7 @@
 		E8F8D7DC218FD699007AB027 /* RXCLanguage */ = {
 			isa = PBXGroup;
 			children = (
+				E8F8D7E5218FE57D007AB027 /* Source */,
 				E8F8D7E3218FDB1E007AB027 /* Project Headers */,
 				E8F8D7E1218FD92B007AB027 /* Public Headers */,
 				E8F8D7DD218FD6AC007AB027 /* RXCLanguageViewController.h */,
@@ -1214,6 +1230,45 @@
 				E8F8D7E4218FDB98007AB027 /* rx-objc-runtime-new.h */,
 			);
 			path = "Project Headers";
+			sourceTree = "<group>";
+		};
+		E8F8D7E5218FE57D007AB027 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				E8F8D7E7218FE5B4007AB027 /* rx-objc-cache.mm */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		E8F8D7F3219133C5007AB027 /* RXAFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				E8F8D7FB21917020007AB027 /* Test */,
+				E8F8D7F4219133DE007AB027 /* Security */,
+				E8F8D7F821916FFC007AB027 /* RXAFNetworkingViewController.h */,
+				E8F8D7F921916FFC007AB027 /* RXAFNetworkingViewController.m */,
+			);
+			path = RXAFNetworking;
+			sourceTree = "<group>";
+		};
+		E8F8D7F4219133DE007AB027 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				E8F8D7F5219133F8007AB027 /* RXAFSecurityPolicy.h */,
+				E8F8D7F6219133F8007AB027 /* RXAFSecurityPolicy.m */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		E8F8D7FB21917020007AB027 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				E8F8D7FC21917038007AB027 /* RXAFNTest1Object.h */,
+				E8F8D7FD21917038007AB027 /* RXAFNTest1Object.m */,
+				E8F8D7FF21917041007AB027 /* RXAFNTest2Object.h */,
+				E8F8D80021917041007AB027 /* RXAFNTest2Object.m */,
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1398,9 +1453,11 @@
 				E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */,
 				E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */,
 				E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */,
+				E8F8D7F7219133F8007AB027 /* RXAFSecurityPolicy.m in Sources */,
 				C9A7110D1D7BA0880002E703 /* RVCopyViewController.m in Sources */,
 				C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */,
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
+				E8F8D80121917041007AB027 /* RXAFNTest2Object.m in Sources */,
 				E8433D7E20EDBE78004A7FBC /* RXMacroViewController.m in Sources */,
 				E86050FE20A2A1840016F6C9 /* RVAddMethodViewController.m in Sources */,
 				E86050EB20A07B0D0016F6C9 /* RXCurrentQueueViewController.m in Sources */,
@@ -1419,6 +1476,7 @@
 				E818F0F120B9044A00F94127 /* RXMVVMModel.m in Sources */,
 				C9D397A51CF5A29200D8569C /* RXRunTimeDemoObject.m in Sources */,
 				E811CA911FED09FD003157E9 /* RVEventResponseListViewController.m in Sources */,
+				E8F8D7FE21917038007AB027 /* RXAFNTest1Object.m in Sources */,
 				58AAC3141C38CDF20023D2EA /* RVButtonViewController.m in Sources */,
 				C93E6AF31CF684CE00E7B193 /* RXRunTimeDemoBaseObject.m in Sources */,
 				E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */,
@@ -1469,6 +1527,7 @@
 				E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
 				E86050F520A298B60016F6C9 /* RVMsgForwardViewController.m in Sources */,
+				E8F8D7E8218FE5B4007AB027 /* rx-objc-cache.mm in Sources */,
 				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
@@ -1480,6 +1539,7 @@
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
 				E8433D9620FEDA86004A7FBC /* RXRACMTViewController.m in Sources */,
 				E810791D20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.m in Sources */,
+				E8F8D7FA21916FFC007AB027 /* RXAFNetworkingViewController.m in Sources */,
 				E8433D8120EF6959004A7FBC /* RXHookBlockManager.m in Sources */,
 				C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */,
 				E870202920D8E10B00752211 /* RVGCDQueuesViewController.m in Sources */,

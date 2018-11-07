@@ -54,7 +54,7 @@
                            @"RXRAC", @"RXMacro", @"RXRACClass",
                            @"RXRACDemo", @"RXOCKeywordMethodName", @"RXRACMT",
                            @"RXUncaughtExceptionHandler", @"RXOPMQ", @"RXMethodListDemo",
-                           @"RXAspects", @"RXCLanguage"];
+                           @"RXAspects", @"RXCLanguage", @"RXAFNetworking"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];

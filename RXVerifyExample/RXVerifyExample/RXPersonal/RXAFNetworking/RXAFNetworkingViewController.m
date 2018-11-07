@@ -1,42 +1,34 @@
 //
-//  RXCLanguageViewController.m
+//  RXAFNetworkingViewController.m
 //  RXVerifyExample
 //
-//  Created by Rush.D.Xzj on 2018/11/5.
+//  Created by Rush.D.Xzj on 2018/11/6.
 //  Copyright © 2018 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXCLanguageViewController.h"
-#import "rx-objc-runtime-new.h"
-@interface RXCLanguageViewController ()
+#import "RXAFNetworkingViewController.h"
+#import "RXAFNTest1Object.h"
+#import "RXAFNTest2Object.h"
+
+@interface RXAFNetworkingViewController ()
 
 @end
 
-@implementation RXCLanguageViewController
+@implementation RXAFNetworkingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self test_rx_bucket_t];
+    
+    [[RXAFNTest1Object new] test];
+    [[RXAFNTest2Object new] test];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)test_rx_bucket_t
-{
-    struct rx_bucket_t bucket;
-    bucket.set(10, 20);
-    NSLog(@"%zd", bucket.a());
-    
-    struct rx_bucket_t *bucket2 = NULL;
-    NSObject *obj = nil;
-    NSObject *obj2 = Nil;
-    NSLog(@"%zd", bucket.a());
-    
-    
 }
 
 /*
