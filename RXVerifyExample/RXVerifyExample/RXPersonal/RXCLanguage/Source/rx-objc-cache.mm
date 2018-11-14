@@ -10,11 +10,11 @@
 // MORE:
 #include "rx-objc-runtime-new.h"
 
-#if __arm64__
-
-
-
-#else
+//#if __arm64__
+//
+//
+//
+//#else
 
 void rx_bucket_t::set(int newA, int newB)
 {
@@ -22,5 +22,5 @@ void rx_bucket_t::set(int newA, int newB)
     _b = newB;
 }
 
-#endif
+//#endif
 
