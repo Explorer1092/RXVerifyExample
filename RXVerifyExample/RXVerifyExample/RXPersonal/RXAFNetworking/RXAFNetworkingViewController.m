@@ -10,8 +10,13 @@
 #import "RXAFNTest1Object.h"
 #import "RXAFNTest2Object.h"
 #import "RXAFNTest3Object.h"
+#import "RXAFNTest4Object.h"
+#import "RXAFNTest5Object.h"
 
 @interface RXAFNetworkingViewController ()
+
+@property (nonatomic, strong) RXAFNTest4Object *test4Object;
+@property (nonatomic, strong) RXAFNTest5Object *test5Object;
 
 @end
 
@@ -28,7 +33,10 @@
     
 //    [self test_mainQueue_dispathAsync_GlobalQueue];
     
-    [self test_classProperty];
+//    [self test_classProperty];
+    
+//    [self test_dependProperty];
+    [self test_dependProperty2];
 
     
     
@@ -57,6 +65,32 @@
 - (void)test_classProperty {
     [RXAFNTest3Object setValue:4];
     NSLog(@"%zd", [RXAFNTest3Object value]);
+}
+
+- (void)test_dependProperty {
+    self.test4Object = [RXAFNTest4Object new];
+    [self.test4Object addObserver:self forKeyPath:@"a" options:NSKeyValueObservingOptionNew context:nil];
+//    [self.test4Object addObserver:self forKeyPath:@"b" options:NSKeyValueObservingOptionNew context:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.test4Object.a = 5;
+    });
+}
+
+- (void)test_dependProperty2 {
+    self.test5Object = [RXAFNTest5Object new];
+//    [self.test5Object addObserver:self forKeyPath:@"a" options:NSKeyValueObservingOptionNew context:nil];
+    [self.test5Object addObserver:self forKeyPath:@"b" options:NSKeyValueObservingOptionNew context:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.test5Object.a = 5;
+    });
+}
+
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    NSLog(@"observeValueForKeyPath:%@, change:%@", keyPath, change);
 }
 
 /*

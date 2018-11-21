@@ -180,6 +180,8 @@
 		E8F8D80121917041007AB027 /* RXAFNTest2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D80021917041007AB027 /* RXAFNTest2Object.m */; };
 		E8F8D808219BB437007AB027 /* RXAFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D807219BB437007AB027 /* RXAFNetworkReachabilityManager.m */; };
 		E8F8D80B219BFC44007AB027 /* RXAFNTest3Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D80A219BFC44007AB027 /* RXAFNTest3Object.m */; };
+		E8F8D80E219C0074007AB027 /* RXAFNTest4Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D80D219C0074007AB027 /* RXAFNTest4Object.m */; };
+		E8F8D811219C0822007AB027 /* RXAFNTest5Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D810219C0822007AB027 /* RXAFNTest5Object.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -491,6 +493,10 @@
 		E8F8D807219BB437007AB027 /* RXAFNetworkReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		E8F8D809219BFC44007AB027 /* RXAFNTest3Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNTest3Object.h; sourceTree = "<group>"; };
 		E8F8D80A219BFC44007AB027 /* RXAFNTest3Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNTest3Object.m; sourceTree = "<group>"; };
+		E8F8D80C219C0074007AB027 /* RXAFNTest4Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNTest4Object.h; sourceTree = "<group>"; };
+		E8F8D80D219C0074007AB027 /* RXAFNTest4Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNTest4Object.m; sourceTree = "<group>"; };
+		E8F8D80F219C0822007AB027 /* RXAFNTest5Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNTest5Object.h; sourceTree = "<group>"; };
+		E8F8D810219C0822007AB027 /* RXAFNTest5Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNTest5Object.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1276,6 +1282,10 @@
 				E8F8D80021917041007AB027 /* RXAFNTest2Object.m */,
 				E8F8D809219BFC44007AB027 /* RXAFNTest3Object.h */,
 				E8F8D80A219BFC44007AB027 /* RXAFNTest3Object.m */,
+				E8F8D80C219C0074007AB027 /* RXAFNTest4Object.h */,
+				E8F8D80D219C0074007AB027 /* RXAFNTest4Object.m */,
+				E8F8D80F219C0822007AB027 /* RXAFNTest5Object.h */,
+				E8F8D810219C0822007AB027 /* RXAFNTest5Object.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1544,6 +1554,7 @@
 				E8433D7B20EA51D9004A7FBC /* RXRACViewController.m in Sources */,
 				E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
+				E8F8D811219C0822007AB027 /* RXAFNTest5Object.m in Sources */,
 				E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
 				E86050F520A298B60016F6C9 /* RVMsgForwardViewController.m in Sources */,
@@ -1553,6 +1564,7 @@
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
 				C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */,
 				E85159B62148B195006E23D5 /* RXCrashService.m in Sources */,
+				E8F8D80E219C0074007AB027 /* RXAFNTest4Object.m in Sources */,
 				E8433D9320FD90A5004A7FBC /* RXOCKeywordMethodNameViewController.m in Sources */,
 				E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
