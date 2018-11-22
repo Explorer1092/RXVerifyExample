@@ -36,7 +36,9 @@
 //    [self test_classProperty];
     
 //    [self test_dependProperty];
-    [self test_dependProperty2];
+//    [self test_dependProperty2];
+    
+    [self test_dispatch_async];
 
     
     
@@ -92,6 +94,22 @@
 {
     NSLog(@"observeValueForKeyPath:%@, change:%@", keyPath, change);
 }
+
+
+- (void)test_dispatch_async
+{
+    __block int a = 0;
+    for (int i = 0; i < 10; i++) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            int arc = arc4random() % 3;
+            sleep(arc);
+            a++;
+            NSLog(@"a:%zd in block, i:%zd", a, i);
+        });
+    }
+    NSLog(@"a:%zd", a);
+}
+
 
 /*
 #pragma mark - Navigation
