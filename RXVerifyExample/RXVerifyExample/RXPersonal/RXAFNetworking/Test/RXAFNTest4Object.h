@@ -10,11 +10,22 @@
 
 @interface RXAFNTest4Object : NSObject
 
+
+// b的值依赖a, b是只读的
 @property (nonatomic, assign) int a;
-@property (nonatomic, assign) int b;
+@property (nonatomic, readonly) int b;
 
 
 
+// d的值依赖c,在c的赋值过程中会重新赋值d
+@property (nonatomic, assign) int c;
+@property (nonatomic, assign) int d;
+
+
+// e,f之间的关系就相当于AFN中的 AFSecurityPolicy中
+// e: pinnedCertificates
+// f: pinnedPublicKeys
+@property (nonatomic, assign) int e;
 
 
 

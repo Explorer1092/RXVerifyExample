@@ -8,22 +8,49 @@
 
 #import "RXAFNTest4Object.h"
 
+@interface RXAFNTest4Object ()
+
+@property (nonatomic, assign) int f;
+
+@end
+
 @implementation RXAFNTest4Object
 
 - (void)setA:(int)a
 {
     _a = a;
-//    self.b = a + 4;
 }
 
-//- (int)b
-//{
-//    return _b + self.a;
-//}
+- (int)b
+{
+    return self.a + 1;
+}
+
+- (void)setC:(int)c
+{
+    _c = c;
+    self.d = _c + 2;
+}
+
+- (void)setE:(int)e
+{
+    _e = e;
+    self.f = _e + 3;
+}
 
 + (NSSet *)keyPathsForValuesAffectingB
 {
     return [NSSet setWithObjects:@"a", nil];
+}
+
++ (NSSet *)keyPathsForValuesAffectingD
+{
+    return [NSSet setWithObjects:@"c", nil];
+}
+
++ (NSSet *)keyPathsForValuesAffectingF
+{
+    return [NSSet setWithObjects:@"e", nil];
 }
 
 @end
