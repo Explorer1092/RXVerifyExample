@@ -16,21 +16,30 @@
 
 @implementation RXAFNTest4Object
 
-- (void)setA:(int)a
-{
-    _a = a;
-}
 
 - (int)b
 {
     return self.a + 1;
 }
++ (NSSet *)keyPathsForValuesAffectingB
+{
+    return [NSSet setWithObjects:@"a", nil];
+}
+
+
+
 
 - (void)setC:(int)c
 {
     _c = c;
     self.d = _c + 2;
 }
++ (NSSet *)keyPathsForValuesAffectingD
+{
+    return [NSSet setWithObjects:@"c", nil];
+}
+
+
 
 - (void)setE:(int)e
 {
@@ -38,19 +47,19 @@
     self.f = _e + 3;
 }
 
-+ (NSSet *)keyPathsForValuesAffectingB
-{
-    return [NSSet setWithObjects:@"a", nil];
-}
-
-+ (NSSet *)keyPathsForValuesAffectingD
-{
-    return [NSSet setWithObjects:@"c", nil];
-}
-
 + (NSSet *)keyPathsForValuesAffectingF
 {
     return [NSSet setWithObjects:@"e", nil];
+}
+
+
+// 注意这里的区别,g影响h,这里要返回g,并指明是g的变化影响h
++ (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
+    if ([key isEqualToString:@"h"]) {
+        return [NSSet setWithObject:@"g"];
+    }
+    
+    return [super keyPathsForValuesAffectingValueForKey:key];
 }
 
 @end

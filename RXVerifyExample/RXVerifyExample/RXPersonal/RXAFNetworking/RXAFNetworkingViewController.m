@@ -41,7 +41,9 @@
     
 //    [self.dependPropertyObject test_dependProperty_C_D];
     
-    [self.dependPropertyObject test_dependProperty_E_F];
+//    [self.dependPropertyObject test_dependProperty_E_F];
+    
+    [self.dependPropertyObject test_dependProperty_G_H];
 
     
     

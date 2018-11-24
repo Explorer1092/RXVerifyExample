@@ -47,6 +47,17 @@
         self.test4Object.e = 5;
     });
 }
+
+
+- (void)test_dependProperty_G_H
+{
+    [self.test4Object addObserver:self forKeyPath:@"h" options:NSKeyValueObservingOptionNew context:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.test4Object.g = 5;
+    });
+}
+
+
 - (void)test_dependProperty2 {
     //    [self.test5Object addObserver:self forKeyPath:@"a" options:NSKeyValueObservingOptionNew context:nil];
     [self.test5Object addObserver:self forKeyPath:@"b" options:NSKeyValueObservingOptionNew context:nil];

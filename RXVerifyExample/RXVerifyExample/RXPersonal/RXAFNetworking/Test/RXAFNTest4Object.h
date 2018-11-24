@@ -30,6 +30,10 @@
 
 
 
+@property (nonatomic, assign) int g;
+@property (nonatomic, assign) int h;
+
+
 
 
 
