@@ -22,6 +22,12 @@
 @property (nonatomic, assign) int d;
 
 
+// 多个影响1个
+@property (nonatomic, assign) int c1;
+@property (nonatomic, assign) int c2;
+@property (nonatomic, assign) int c3;
+@property (nonatomic, assign) int d1;
+
 // e,f之间的关系就相当于AFN中的 AFSecurityPolicy中
 // e: pinnedCertificates
 // f: pinnedPublicKeys
@@ -30,8 +36,18 @@
 
 
 
+
+
+
+
 @property (nonatomic, assign) int g;
 @property (nonatomic, assign) int h;
+
+// 一个影响多个
+@property (nonatomic, assign) int g1;
+@property (nonatomic, assign) int h1;
+@property (nonatomic, assign) int h2;
+@property (nonatomic, readonly) int h3;
 
 
 

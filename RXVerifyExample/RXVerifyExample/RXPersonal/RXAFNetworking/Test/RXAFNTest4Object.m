@@ -41,6 +41,13 @@
 
 
 
++ (NSSet *)keyPathsForValuesAffectingD1
+{
+    return [NSSet setWithObjects:@"c1", @"c2", @"c3", nil];
+}
+
+
+
 - (void)setE:(int)e
 {
     _e = e;
@@ -59,7 +66,19 @@
         return [NSSet setWithObject:@"g"];
     }
     
+    if ([key isEqualToString:@"h1"] || [key isEqualToString:@"h2"] || [key isEqualToString:@"h3"]) {
+        return [NSSet setWithObject:@"g1"];
+    }
+    
     return [super keyPathsForValuesAffectingValueForKey:key];
+}
+
+
+
+
+- (int)h3
+{
+    return self.g1 + 3;
 }
 
 @end

@@ -39,6 +39,16 @@
         self.test4Object.c = 5;
     });
 }
+
+- (void)test_dependProperty_C1_C2_C3_D1
+{
+    [self.test4Object addObserver:self forKeyPath:@"d1" options:NSKeyValueObservingOptionNew context:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.test4Object.c1 = 10;
+        self.test4Object.c2 = 20;
+        self.test4Object.c3 = 30;
+    });
+}
 - (void)test_dependProperty_E_F
 {
     
@@ -56,7 +66,15 @@
         self.test4Object.g = 5;
     });
 }
-
+- (void)test_dependProperty_G1_H1_H2_H3
+{
+    [self.test4Object addObserver:self forKeyPath:@"h1" options:NSKeyValueObservingOptionNew context:nil];
+    [self.test4Object addObserver:self forKeyPath:@"h2" options:NSKeyValueObservingOptionNew context:nil];
+    [self.test4Object addObserver:self forKeyPath:@"h3" options:NSKeyValueObservingOptionNew context:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.test4Object.g1 = 10;
+    });
+}
 
 - (void)test_dependProperty2 {
     //    [self.test5Object addObserver:self forKeyPath:@"a" options:NSKeyValueObservingOptionNew context:nil];
