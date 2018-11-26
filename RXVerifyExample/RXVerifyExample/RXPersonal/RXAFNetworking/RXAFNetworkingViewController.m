@@ -47,8 +47,17 @@
     
 //    [self.dependPropertyObject test_dependProperty_G_H];
     
-    [self.dependPropertyObject test_dependProperty_G1_H1_H2_H3];
+//    [self.dependPropertyObject test_dependProperty_G1_H1_H2_H3];
+    
+//    [self.dependPropertyObject test_dependProperty_I_J_1];
+    
+    [self.dependPropertyObject test_dependProperty_I_J_2];
+    
+//    [self.dependPropertyObject test_dependProperty_L1_L2_M1_M2];
+    
+//    [self.dependPropertyObject test_dependProperty_P1_P2_Q1_Q2];
 
+//    [self.dependPropertyObject test_dependProperty_R1_R2_S1_S2];
     
     
 }

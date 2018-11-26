@@ -75,6 +75,56 @@
         self.test4Object.g1 = 10;
     });
 }
+- (void)test_dependProperty_I_J_1
+{
+    [self.test4Object addObserver:self forKeyPath:@"i" options:NSKeyValueObservingOptionNew context:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.test4Object.j = 10;
+    });
+}
+
+- (void)test_dependProperty_I_J_2
+{
+    [self.test4Object addObserver:self forKeyPath:@"j" options:NSKeyValueObservingOptionNew context:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.test4Object.i = 10;
+    });
+}
+
+
+
+
+- (void)test_dependProperty_L1_L2_M1_M2
+{
+    [self.test4Object addObserver:self forKeyPath:@"m1" options:NSKeyValueObservingOptionNew context:nil];
+    [self.test4Object addObserver:self forKeyPath:@"m2" options:NSKeyValueObservingOptionNew context:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.test4Object.l1 = 10;
+        self.test4Object.l2 = 10;
+    });
+}
+- (void)test_dependProperty_P1_P2_Q1_Q2
+{
+    [self.test4Object addObserver:self forKeyPath:@"q1" options:NSKeyValueObservingOptionNew context:nil];
+    [self.test4Object addObserver:self forKeyPath:@"q2" options:NSKeyValueObservingOptionNew context:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.test4Object.p1 = 10;
+        self.test4Object.p2 = 10;
+    });
+}
+- (void)test_dependProperty_R1_R2_S1_S2
+{
+    [self.test4Object addObserver:self forKeyPath:@"s1" options:NSKeyValueObservingOptionNew context:nil];
+    [self.test4Object addObserver:self forKeyPath:@"s2" options:NSKeyValueObservingOptionNew context:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.test4Object.r1 = 10;
+        self.test4Object.r2 = 10;
+    });
+}
+
+
+
+
 
 - (void)test_dependProperty2 {
     //    [self.test5Object addObserver:self forKeyPath:@"a" options:NSKeyValueObservingOptionNew context:nil];

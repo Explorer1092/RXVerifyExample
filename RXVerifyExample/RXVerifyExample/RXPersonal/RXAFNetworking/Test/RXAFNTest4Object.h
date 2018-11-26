@@ -49,6 +49,32 @@
 @property (nonatomic, assign) int h2;
 @property (nonatomic, readonly) int h3;
 
+// 互相影响
+@property (nonatomic, assign) int i;
+@property (nonatomic, assign) int j;
+
+// 多个影响多个-- 方法一: 使用keyPathsForValuesAffectingXXX
+@property (nonatomic, assign) int l1;
+@property (nonatomic, assign) int l2;
+@property (nonatomic, assign) int m1;
+@property (nonatomic, assign) int m2;
+
+
+
+
+// 多个影响多个-- 方法二: 使用keyPathsForValuesAffectingValueForKey
+
+@property (nonatomic, assign) int p1;
+@property (nonatomic, assign) int p2;
+@property (nonatomic, assign) int q1;
+@property (nonatomic, assign) int q2;
+
+
+// 多个影响多个  keyPathsForValuesAffectingXXX  与  keyPathsForValuesAffectingValueForKey 一起使用
+@property (nonatomic, assign) int r1;
+@property (nonatomic, assign) int r2;
+@property (nonatomic, assign) int s1;
+@property (nonatomic, assign) int s2;
 
 
 
