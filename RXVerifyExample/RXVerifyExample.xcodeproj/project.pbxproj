@@ -180,9 +180,9 @@
 		E8F8D80121917041007AB027 /* RXAFNTest2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D80021917041007AB027 /* RXAFNTest2Object.m */; };
 		E8F8D808219BB437007AB027 /* RXAFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D807219BB437007AB027 /* RXAFNetworkReachabilityManager.m */; };
 		E8F8D80B219BFC44007AB027 /* RXAFNTest3Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D80A219BFC44007AB027 /* RXAFNTest3Object.m */; };
-		E8F8D80E219C0074007AB027 /* RXAFNTest4Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D80D219C0074007AB027 /* RXAFNTest4Object.m */; };
-		E8F8D811219C0822007AB027 /* RXAFNTest5Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D810219C0822007AB027 /* RXAFNTest5Object.m */; };
-		E8F8D81421A799B6007AB027 /* RXAFNTestDependPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D81321A799B6007AB027 /* RXAFNTestDependPropertyObject.m */; };
+		E8F8D81C21ACF36F007AB027 /* RXAFNTest5Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D81621ACF36F007AB027 /* RXAFNTest5Object.m */; };
+		E8F8D81D21ACF36F007AB027 /* RXAFNTestDependPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D81721ACF36F007AB027 /* RXAFNTestDependPropertyObject.m */; };
+		E8F8D81E21ACF36F007AB027 /* RXAFNTest4Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D81821ACF36F007AB027 /* RXAFNTest4Object.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -494,12 +494,12 @@
 		E8F8D807219BB437007AB027 /* RXAFNetworkReachabilityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		E8F8D809219BFC44007AB027 /* RXAFNTest3Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNTest3Object.h; sourceTree = "<group>"; };
 		E8F8D80A219BFC44007AB027 /* RXAFNTest3Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNTest3Object.m; sourceTree = "<group>"; };
-		E8F8D80C219C0074007AB027 /* RXAFNTest4Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNTest4Object.h; sourceTree = "<group>"; };
-		E8F8D80D219C0074007AB027 /* RXAFNTest4Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNTest4Object.m; sourceTree = "<group>"; };
-		E8F8D80F219C0822007AB027 /* RXAFNTest5Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNTest5Object.h; sourceTree = "<group>"; };
-		E8F8D810219C0822007AB027 /* RXAFNTest5Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNTest5Object.m; sourceTree = "<group>"; };
-		E8F8D81221A799B6007AB027 /* RXAFNTestDependPropertyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNTestDependPropertyObject.h; sourceTree = "<group>"; };
-		E8F8D81321A799B6007AB027 /* RXAFNTestDependPropertyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNTestDependPropertyObject.m; sourceTree = "<group>"; };
+		E8F8D81621ACF36F007AB027 /* RXAFNTest5Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXAFNTest5Object.m; sourceTree = "<group>"; };
+		E8F8D81721ACF36F007AB027 /* RXAFNTestDependPropertyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXAFNTestDependPropertyObject.m; sourceTree = "<group>"; };
+		E8F8D81821ACF36F007AB027 /* RXAFNTest4Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXAFNTest4Object.m; sourceTree = "<group>"; };
+		E8F8D81921ACF36F007AB027 /* RXAFNTestDependPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAFNTestDependPropertyObject.h; sourceTree = "<group>"; };
+		E8F8D81A21ACF36F007AB027 /* RXAFNTest5Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAFNTest5Object.h; sourceTree = "<group>"; };
+		E8F8D81B21ACF36F007AB027 /* RXAFNTest4Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAFNTest4Object.h; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1279,18 +1279,13 @@
 		E8F8D7FB21917020007AB027 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				E8F8D81521ACF36F007AB027 /* dependProperty */,
 				E8F8D7FC21917038007AB027 /* RXAFNTest1Object.h */,
 				E8F8D7FD21917038007AB027 /* RXAFNTest1Object.m */,
 				E8F8D7FF21917041007AB027 /* RXAFNTest2Object.h */,
 				E8F8D80021917041007AB027 /* RXAFNTest2Object.m */,
 				E8F8D809219BFC44007AB027 /* RXAFNTest3Object.h */,
 				E8F8D80A219BFC44007AB027 /* RXAFNTest3Object.m */,
-				E8F8D80C219C0074007AB027 /* RXAFNTest4Object.h */,
-				E8F8D80D219C0074007AB027 /* RXAFNTest4Object.m */,
-				E8F8D80F219C0822007AB027 /* RXAFNTest5Object.h */,
-				E8F8D810219C0822007AB027 /* RXAFNTest5Object.m */,
-				E8F8D81221A799B6007AB027 /* RXAFNTestDependPropertyObject.h */,
-				E8F8D81321A799B6007AB027 /* RXAFNTestDependPropertyObject.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1302,6 +1297,19 @@
 				E8F8D807219BB437007AB027 /* RXAFNetworkReachabilityManager.m */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		E8F8D81521ACF36F007AB027 /* dependProperty */ = {
+			isa = PBXGroup;
+			children = (
+				E8F8D81B21ACF36F007AB027 /* RXAFNTest4Object.h */,
+				E8F8D81821ACF36F007AB027 /* RXAFNTest4Object.m */,
+				E8F8D81A21ACF36F007AB027 /* RXAFNTest5Object.h */,
+				E8F8D81621ACF36F007AB027 /* RXAFNTest5Object.m */,
+				E8F8D81921ACF36F007AB027 /* RXAFNTestDependPropertyObject.h */,
+				E8F8D81721ACF36F007AB027 /* RXAFNTestDependPropertyObject.m */,
+			);
+			path = dependProperty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1520,6 +1528,8 @@
 				C9A711111D7BA1130002E703 /* RXAObject.m in Sources */,
 				C9D3979C1CF5483700D8569C /* RXRunLoopExeObject.m in Sources */,
 				E826367B20A96FF00081F4A8 /* RXFrameworkViewController.m in Sources */,
+				E8F8D81E21ACF36F007AB027 /* RXAFNTest4Object.m in Sources */,
+				E8F8D81D21ACF36F007AB027 /* RXAFNTestDependPropertyObject.m in Sources */,
 				58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */,
 				E86050D420A079050016F6C9 /* RXQueueSpecialViewController.m in Sources */,
 				C9D397991CF53BF200D8569C /* RXRunLoop.m in Sources */,
@@ -1527,7 +1537,6 @@
 				C9C2B33E1E0BD92D0087C718 /* RVQQViewController.m in Sources */,
 				58FF7D851C4624E000F06976 /* RVUPPayViewController.m in Sources */,
 				E8F8D7D5218C3A16007AB027 /* RXAspects.m in Sources */,
-				E8F8D81421A799B6007AB027 /* RXAFNTestDependPropertyObject.m in Sources */,
 				E86050E720A07A1B0016F6C9 /* RVRunTimeViewController.m in Sources */,
 				58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */,
 				C9BDAD671CC62E6E00CBB1CA /* RVPushPopAnimation.m in Sources */,
@@ -1560,7 +1569,6 @@
 				E8433D7B20EA51D9004A7FBC /* RXRACViewController.m in Sources */,
 				E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
-				E8F8D811219C0822007AB027 /* RXAFNTest5Object.m in Sources */,
 				E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
 				E86050F520A298B60016F6C9 /* RVMsgForwardViewController.m in Sources */,
@@ -1570,7 +1578,6 @@
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
 				C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */,
 				E85159B62148B195006E23D5 /* RXCrashService.m in Sources */,
-				E8F8D80E219C0074007AB027 /* RXAFNTest4Object.m in Sources */,
 				E8433D9320FD90A5004A7FBC /* RXOCKeywordMethodNameViewController.m in Sources */,
 				E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
@@ -1593,6 +1600,7 @@
 				E870203120DA617200752211 /* RXUIListPerformanceViewController.m in Sources */,
 				E8F8D7DB218C42B3007AB027 /* RXAspectsViewController.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
+				E8F8D81C21ACF36F007AB027 /* RXAFNTest5Object.m in Sources */,
 				E8F8D7DF218FD6AC007AB027 /* RXCLanguageViewController.mm in Sources */,
 				C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.mm in Sources */,

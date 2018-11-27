@@ -14,6 +14,7 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 
 typedef NS_ENUM(NSInteger, RXAFNetworkReachabilityStatus) {
+    // TODOAFN_M_2_K_0_1 Unknown终于知道在哪里使用了
     RXAFNetworkReachabilityStatusUnknown          = -1,
     RXAFNetworkReachabilityStatusNotReachable     = 0,
     // TODOAFN_M_2_K_0
