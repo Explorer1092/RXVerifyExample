@@ -183,6 +183,7 @@
 		E8F8D81C21ACF36F007AB027 /* RXAFNTest5Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D81621ACF36F007AB027 /* RXAFNTest5Object.m */; };
 		E8F8D81D21ACF36F007AB027 /* RXAFNTestDependPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D81721ACF36F007AB027 /* RXAFNTestDependPropertyObject.m */; };
 		E8F8D81E21ACF36F007AB027 /* RXAFNTest4Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D81821ACF36F007AB027 /* RXAFNTest4Object.m */; };
+		E8F8D82221ACF428007AB027 /* RXAFNTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D82121ACF428007AB027 /* RXAFNTestManager.m */; };
 		F8C34580F42759622BE5E61B /* libPods-RXVerifyExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */; };
 /* End PBXBuildFile section */
 
@@ -500,6 +501,8 @@
 		E8F8D81921ACF36F007AB027 /* RXAFNTestDependPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAFNTestDependPropertyObject.h; sourceTree = "<group>"; };
 		E8F8D81A21ACF36F007AB027 /* RXAFNTest5Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAFNTest5Object.h; sourceTree = "<group>"; };
 		E8F8D81B21ACF36F007AB027 /* RXAFNTest4Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXAFNTest4Object.h; sourceTree = "<group>"; };
+		E8F8D82021ACF428007AB027 /* RXAFNTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNTestManager.h; sourceTree = "<group>"; };
+		E8F8D82121ACF428007AB027 /* RXAFNTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNTestManager.m; sourceTree = "<group>"; };
 		F90ADBE89334D755128A389D /* libPods-RXVerifyExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RXVerifyExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1279,7 +1282,8 @@
 		E8F8D7FB21917020007AB027 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				E8F8D81521ACF36F007AB027 /* dependProperty */,
+				E8F8D81F21ACF3CC007AB027 /* ReachabilityContext */,
+				E8F8D81521ACF36F007AB027 /* DependProperty */,
 				E8F8D7FC21917038007AB027 /* RXAFNTest1Object.h */,
 				E8F8D7FD21917038007AB027 /* RXAFNTest1Object.m */,
 				E8F8D7FF21917041007AB027 /* RXAFNTest2Object.h */,
@@ -1299,7 +1303,7 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
-		E8F8D81521ACF36F007AB027 /* dependProperty */ = {
+		E8F8D81521ACF36F007AB027 /* DependProperty */ = {
 			isa = PBXGroup;
 			children = (
 				E8F8D81B21ACF36F007AB027 /* RXAFNTest4Object.h */,
@@ -1309,7 +1313,16 @@
 				E8F8D81921ACF36F007AB027 /* RXAFNTestDependPropertyObject.h */,
 				E8F8D81721ACF36F007AB027 /* RXAFNTestDependPropertyObject.m */,
 			);
-			path = dependProperty;
+			path = DependProperty;
+			sourceTree = "<group>";
+		};
+		E8F8D81F21ACF3CC007AB027 /* ReachabilityContext */ = {
+			isa = PBXGroup;
+			children = (
+				E8F8D82021ACF428007AB027 /* RXAFNTestManager.h */,
+				E8F8D82121ACF428007AB027 /* RXAFNTestManager.m */,
+			);
+			path = ReachabilityContext;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1508,6 +1521,7 @@
 				C9A711141D7BA1240002E703 /* RXBObject.m in Sources */,
 				E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */,
 				E85159B32148B109006E23D5 /* RXServiceManager.m in Sources */,
+				E8F8D82221ACF428007AB027 /* RXAFNTestManager.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
 				E826367520A96BDC0081F4A8 /* RXMVPGreetingPresenter.m in Sources */,
 				C92923421D339F02009D6875 /* DMLine.m in Sources */,
