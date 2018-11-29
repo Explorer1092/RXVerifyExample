@@ -10,4 +10,6 @@
 
 @interface RXAFNTestManager : NSObject
 
+- (void)test;
+
 @end

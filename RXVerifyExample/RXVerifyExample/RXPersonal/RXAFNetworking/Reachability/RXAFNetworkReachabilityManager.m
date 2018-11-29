@@ -228,11 +228,14 @@ static void RXAFNetworkReachabilityReleaseCallback(const void *info) {
     
     // TODOAFN_M_2_K_7_11 设计一套类似于这个context
     SCNetworkReachabilityContext context = {0, (__bridge void *)callback, RXAFNetworkReachabilityRetainCallback, RXAFNetworkReachabilityReleaseCallback, NULL};
+    
+    // 当有网络变成无网络或者从无网络变成有网络的时候会触发这个回调
     SCNetworkReachabilitySetCallback(self.networkReachability, RXAFNetworkReachabilityCallback, &context);
+//    SCNetworkReachabilitySetCallback(self.networkReachability, NULL, &context);
     
     // TODOAFN_M_2_K_8 知识点
+    // 这个是监听网络通的时候从wifi到蜂窝网络变化或者蜂窝网络到wifi变化
     SCNetworkReachabilityScheduleWithRunLoop(self.networkReachability, CFRunLoopGetMain(), kCFRunLoopCommonModes);
-    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),^{
         SCNetworkReachabilityFlags flags;
         if (SCNetworkReachabilityGetFlags(self.networkReachability, &flags)) {

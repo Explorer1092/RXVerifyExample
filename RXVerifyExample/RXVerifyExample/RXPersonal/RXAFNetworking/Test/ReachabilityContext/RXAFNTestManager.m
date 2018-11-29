@@ -7,7 +7,9 @@
 //
 
 #import "RXAFNTestManager.h"
+#import "RXAFNetworkReachabilityManager.h"
 
+/**** 先废弃 start *****/
 //typedef struct {
 //    CFIndex        version;
 //    void *        __nullable info;
@@ -43,13 +45,29 @@ typedef struct {
     void        (* __nullable release)(const void *info);
     CFStringRef    __nonnull (* __nullable copyDescription)(const void *info);
 }RXAFNContext;
+/**** 先废弃 end *****/
 
 
+
+
+@interface RXAFNTestManager()
+@property (nonatomic, strong) RXAFNetworkReachabilityManager *manager;
+@end
 
 @implementation RXAFNTestManager
 
-- (void)startMonitoring {
+
+- (void)test
+{
+    self.manager = [RXAFNetworkReachabilityManager manager];
     
+    void (^block)(RXAFNetworkReachabilityStatus) = ^(RXAFNetworkReachabilityStatus status) {
+        NSLog(@"status:%zd", status);
+    };
+    
+    [self.manager setReachabilityStatusChangeBlock:block];
+    
+    [self.manager startMonitoring];
 }
 
 @end
