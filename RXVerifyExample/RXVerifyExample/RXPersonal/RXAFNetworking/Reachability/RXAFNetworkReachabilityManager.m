@@ -85,6 +85,7 @@ static void RXAFPostReachabilityStatusChange(SCNetworkReachabilityFlags flags, R
 }
 
 static void RXAFNetworkReachabilityCallback(SCNetworkReachabilityRef __unused target, SCNetworkReachabilityFlags flags, void *info) {
+    NSLog(@"我的网络从无连接到有连接,或者从有连接到无连接");
     RXAFPostReachabilityStatusChange(flags, (__bridge RXAFNetworkReachabilityStatusBlock)info);
 }
 
@@ -218,7 +219,7 @@ static void RXAFNetworkReachabilityReleaseCallback(const void *info) {
     __weak __typeof(self)weakSelf = self;
     RXAFNetworkReachabilityStatusBlock callback = ^(RXAFNetworkReachabilityStatus status) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
-        
+        NSLog(@"触发callback");
         strongSelf.networkReachabilityStatus = status;
         if (strongSelf.networkReachabilityStatusBlock) {
             strongSelf.networkReachabilityStatusBlock(status);
@@ -230,16 +231,27 @@ static void RXAFNetworkReachabilityReleaseCallback(const void *info) {
     SCNetworkReachabilityContext context = {0, (__bridge void *)callback, RXAFNetworkReachabilityRetainCallback, RXAFNetworkReachabilityReleaseCallback, NULL};
     
     // 当有网络变成无网络或者从无网络变成有网络的时候会触发这个回调
+    // 这个是监听网络通的时候从wifi到蜂窝网络变化或者蜂窝网络到wifi变化
     SCNetworkReachabilitySetCallback(self.networkReachability, RXAFNetworkReachabilityCallback, &context);
 //    SCNetworkReachabilitySetCallback(self.networkReachability, NULL, &context);
     
     // TODOAFN_M_2_K_8 知识点
-    // 这个是监听网络通的时候从wifi到蜂窝网络变化或者蜂窝网络到wifi变化
     SCNetworkReachabilityScheduleWithRunLoop(self.networkReachability, CFRunLoopGetMain(), kCFRunLoopCommonModes);
+    //
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),^{
+        // 这一段代码怎么只有在start的时候才会调用一次,其中无论是怎么切换wifi啊,切换4G啊,切换飞行模式都不会触发这个函数
+        // 难道这个是需要在
+        // 1. 连接一个ip地址
+        // 2. 此ip地址是好的,然后突然坏掉了这种情况?
+        // 才会触发这里面的调用吗?????
         SCNetworkReachabilityFlags flags;
+        // 这个是监听网络通的时候从wifi到蜂窝网络变化或者蜂窝网络到wifi变化???
+        // 这个作用有可能是在连接状态下,一些其他状态变化导致的,需要一个特定的wifi
         if (SCNetworkReachabilityGetFlags(self.networkReachability, &flags)) {
+            NSLog(@"111111,我的网络状态变化了");
             RXAFPostReachabilityStatusChange(flags, callback);
+        } else {
+            NSLog(@"111111,我的网络状态没有变化了??");
         }
     });
 }
