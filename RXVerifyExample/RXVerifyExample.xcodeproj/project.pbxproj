@@ -154,6 +154,7 @@
 		E86050FB20A29A9D0016F6C9 /* RVMsgForwardProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050FA20A29A9D0016F6C9 /* RVMsgForwardProxy.m */; };
 		E86050FE20A2A1840016F6C9 /* RVAddMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E86050FD20A2A1840016F6C9 /* RVAddMethodViewController.m */; };
 		E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E860510120A2E4CA0016F6C9 /* RVArrayCopyViewController.m */; };
+		E86B170F21B291C3007D555B /* RXAFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E86B170E21B291C3007D555B /* RXAFURLRequestSerialization.m */; };
 		E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = E8701FA820C957F100752211 /* UIImageView+RXCornerRadius.m */; };
 		E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8701FAB20CA5C4000752211 /* RXCornerRadiusViewController.m */; };
 		E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E870202120D0F3EC00752211 /* RXMultNotificationViewController.m */; };
@@ -442,6 +443,8 @@
 		E86050FD20A2A1840016F6C9 /* RVAddMethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVAddMethodViewController.m; sourceTree = "<group>"; };
 		E860510020A2E4CA0016F6C9 /* RVArrayCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVArrayCopyViewController.h; sourceTree = "<group>"; };
 		E860510120A2E4CA0016F6C9 /* RVArrayCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVArrayCopyViewController.m; sourceTree = "<group>"; };
+		E86B170D21B291C3007D555B /* RXAFURLRequestSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFURLRequestSerialization.h; sourceTree = "<group>"; };
+		E86B170E21B291C3007D555B /* RXAFURLRequestSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFURLRequestSerialization.m; sourceTree = "<group>"; };
 		E8701FA720C957F100752211 /* UIImageView+RXCornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RXCornerRadius.h"; sourceTree = "<group>"; };
 		E8701FA820C957F100752211 /* UIImageView+RXCornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RXCornerRadius.m"; sourceTree = "<group>"; };
 		E8701FAA20CA5C4000752211 /* RXCornerRadiusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCornerRadiusViewController.h; sourceTree = "<group>"; };
@@ -1123,6 +1126,15 @@
 			path = CoreFoundation;
 			sourceTree = "<group>";
 		};
+		E86B170C21B29180007D555B /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				E86B170D21B291C3007D555B /* RXAFURLRequestSerialization.h */,
+				E86B170E21B291C3007D555B /* RXAFURLRequestSerialization.m */,
+			);
+			path = Serialization;
+			sourceTree = "<group>";
+		};
 		E8701FA420C9573A00752211 /* Performance */ = {
 			isa = PBXGroup;
 			children = (
@@ -1261,6 +1273,7 @@
 		E8F8D7F3219133C5007AB027 /* RXAFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				E86B170C21B29180007D555B /* Serialization */,
 				E8F8D802219BB402007AB027 /* Reachability */,
 				E8F8D7FB21917020007AB027 /* Test */,
 				E8F8D7F4219133DE007AB027 /* Security */,
@@ -1543,6 +1556,7 @@
 				C9D3979C1CF5483700D8569C /* RXRunLoopExeObject.m in Sources */,
 				E826367B20A96FF00081F4A8 /* RXFrameworkViewController.m in Sources */,
 				E8F8D81E21ACF36F007AB027 /* RXAFNTest4Object.m in Sources */,
+				E86B170F21B291C3007D555B /* RXAFURLRequestSerialization.m in Sources */,
 				E8F8D81D21ACF36F007AB027 /* RXAFNTestDependPropertyObject.m in Sources */,
 				58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */,
 				E86050D420A079050016F6C9 /* RXQueueSpecialViewController.m in Sources */,
