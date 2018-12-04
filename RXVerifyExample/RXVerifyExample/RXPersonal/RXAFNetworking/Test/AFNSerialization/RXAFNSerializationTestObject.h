@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface RXAFNSerializationTestObject : NSObject
-
+- (void)test1;
+- (void)test2;
 @end
