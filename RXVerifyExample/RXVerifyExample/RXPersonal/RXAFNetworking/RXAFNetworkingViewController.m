@@ -81,7 +81,12 @@
     
     self.afnAutoreleasingTestObject = [RXAFNAutoreleasingTestObject new];
 //    [self.afnAutoreleasingTestObject test1];
-    [self.afnAutoreleasingTestObject test3];
+//    [self.afnAutoreleasingTestObject test2];
+//    [self.afnAutoreleasingTestObject test3];
+//    [self.afnAutoreleasingTestObject test4];
+//    [self.afnAutoreleasingTestObject test5];
+//    [self.afnAutoreleasingTestObject test6];
+    [self.afnAutoreleasingTestObject test7];
     
     
 }
