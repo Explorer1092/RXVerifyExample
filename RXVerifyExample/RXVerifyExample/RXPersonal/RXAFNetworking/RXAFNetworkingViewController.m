@@ -13,6 +13,7 @@
 #import "RXAFNTestDependPropertyObject.h"
 #import "RXAFNTestManager.h"
 #import "RXAFNSerializationTestObject.h"
+#import "RXAFNAutoreleasingTestObject.h"
 
 @interface RXAFNetworkingViewController ()
 
@@ -22,6 +23,9 @@
 @property (nonatomic, strong) RXAFNTestManager *afnTestManager;
 
 @property (nonatomic, strong) RXAFNSerializationTestObject *afnSerializationTestObject;
+@property (nonatomic, strong) RXAFNAutoreleasingTestObject *afnAutoreleasingTestObject;
+
+
 @end
 
 @implementation RXAFNetworkingViewController
@@ -46,7 +50,7 @@
     
 //    [self.afnSerializationTestObject test1];
     
-    [self.afnSerializationTestObject test2];
+//    [self.afnSerializationTestObject test2];
     
     self.dependPropertyObject = [RXAFNTestDependPropertyObject new];
 //    [self.dependPropertyObject test_dependProperty_A_B];
@@ -74,6 +78,9 @@
     
     self.afnTestManager = [RXAFNTestManager new];
 //    [self.afnTestManager test];
+    
+    self.afnAutoreleasingTestObject = [RXAFNAutoreleasingTestObject new];
+    [self.afnAutoreleasingTestObject test1];
     
     
 }
