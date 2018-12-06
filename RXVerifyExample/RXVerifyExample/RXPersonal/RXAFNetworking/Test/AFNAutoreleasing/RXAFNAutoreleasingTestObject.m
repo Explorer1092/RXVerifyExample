@@ -30,4 +30,14 @@
     NSLog(@"obj1=%@", obj1);
 }
 
+- (void)test3 {
+    id __unsafe_unretained obj1 = nil;
+    {
+        id obj0 = [NSMutableArray arrayWithObjects:@"123", nil];
+        obj1 = obj0;
+        NSLog(@"obj0=%@", obj0);
+    }
+    NSLog(@"obj1=%@", obj1);
+}
+
 @end
