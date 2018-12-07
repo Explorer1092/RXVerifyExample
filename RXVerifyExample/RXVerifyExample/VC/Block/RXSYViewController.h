@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+// clang -rewrite-objc
 @interface RXSYViewController : UIViewController
 
 @end
