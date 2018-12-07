@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-//https://blog.csdn.net/junjun150013652/article/details/53149145
+// https://blog.csdn.net/junjun150013652/article/details/53149145
+// http://clang.llvm.org/docs/AutomaticReferenceCounting.html#arc-runtime-objc-retain
 @interface RXAFNAutoreleasingTestObject : NSObject
 
 - (void)test1;
