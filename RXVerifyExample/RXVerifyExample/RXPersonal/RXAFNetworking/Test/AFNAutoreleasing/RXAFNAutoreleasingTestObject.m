@@ -104,5 +104,17 @@
     NSLog(@"obj1=%@", obj1);
 }
 
+- (void)test8 {
+    
+}
+- (void)test9 {
+    
+}
+- (void)test10 {
+    
+}
+- (void)test11 {
+    
+}
 
 @end
