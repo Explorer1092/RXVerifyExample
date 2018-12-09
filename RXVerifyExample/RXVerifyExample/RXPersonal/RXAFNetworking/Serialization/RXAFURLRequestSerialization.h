@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <TargetConditionals.h>
-
+#import "RXAFURLRequestSerializationProtocol.h"
+#import "RXAFURLRequestSerializationDefine.h"
 #if TARGET_OS_IOS || TARGET_OS_TV
 #import <UIKit/UIKit.h>
 #elif TARGET_OS_WATCH
@@ -18,46 +19,193 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-// TODOAFN_M_3_K_1
+
+
+// TODOAFN_M_3_K_4
+@interface RXAFURLRequestSerialization : NSObject <RXAFURLRequestSerialization>
+
 /**
- Returns a percent-escaped string following RFC 3986 for a query string key or value.
- RFC 3986 states that the following characters are "reserved" characters.
- - General Delimiters: ":", "#", "[", "]", "@", "?", "/"
- - Sub-Delimiters: "!", "$", "&", "'", "(", ")", "*", "+", ",", ";", "="
- 
- In RFC 3986 - Section 3.4, it states that the "?" and "/" characters should not be escaped to allow
- query strings to include a URL. Therefore, all "reserved" characters with the exception of "?" and "/"
- should be percent-escaped in the query string.
- 
- @param string The string to be percent-escaped.
- 
- @return The percent-escaped string.
+ The string encoding used to serialize parameters. `NSUTF8StringEncoding` by default.
  */
-FOUNDATION_EXPORT NSString * RXAFPercentEscapedStringFromString(NSString *string);
+@property (nonatomic, assign) NSStringEncoding stringEncoding;
 
-
-// TODOAFN_M_3_K_2
 /**
- A helper method to generate encoded url query parameters for appending to the end of a URL.
+ Whether created requests can use the device’s cellular radio (if present). `YES` by default.
  
- @param parameters A dictionary of key/values to be encoded.
- 
- @return A url encoded query string
+ @see NSMutableURLRequest -setAllowsCellularAccess:
  */
-FOUNDATION_EXPORT NSString * RXAFQueryStringFromParameters(NSDictionary *parameters);
+@property (nonatomic, assign) BOOL allowsCellularAccess;
 
+/**
+ The cache policy of created requests. `NSURLRequestUseProtocolCachePolicy` by default.
+ 
+ @see NSMutableURLRequest -setCachePolicy:
+ */
+@property (nonatomic, assign) NSURLRequestCachePolicy cachePolicy;
 
-// 在.m文件中,临时放在.h中
-FOUNDATION_EXPORT NSArray * RXAFQueryStringPairsFromDictionary(NSDictionary *dictionary);
+/**
+ Whether created requests should use the default cookie handling. `YES` by default.
+ 
+ @see NSMutableURLRequest -setHTTPShouldHandleCookies:
+ */
+@property (nonatomic, assign) BOOL HTTPShouldHandleCookies;
 
-FOUNDATION_EXPORT NSArray * RXAFQueryStringPairsFromKeyAndValue(NSString *key, id value);
+/**
+ Whether created requests can continue transmitting data before receiving a response from an earlier transmission. `NO` by default
+ 
+ @see NSMutableURLRequest -setHTTPShouldUsePipelining:
+ */
+@property (nonatomic, assign) BOOL HTTPShouldUsePipelining;
 
+/**
+ The network service type for created requests. `NSURLNetworkServiceTypeDefault` by default.
+ 
+ @see NSMutableURLRequest -setNetworkServiceType:
+ */
+@property (nonatomic, assign) NSURLRequestNetworkServiceType networkServiceType;
 
+/**
+ The timeout interval, in seconds, for created requests. The default timeout interval is 60 seconds.
+ 
+ @see NSMutableURLRequest -setTimeoutInterval:
+ */
+@property (nonatomic, assign) NSTimeInterval timeoutInterval;
 
+///---------------------------------------
+/// @name Configuring HTTP Request Headers
+///---------------------------------------
 
+/**
+ Default HTTP header field values to be applied to serialized requests. By default, these include the following:
+ 
+ - `Accept-Language` with the contents of `NSLocale +preferredLanguages`
+ - `User-Agent` with the contents of various bundle identifiers and OS designations
+ 
+ @discussion To add or remove default request headers, use `setValue:forHTTPHeaderField:`.
+ */
+@property (readonly, nonatomic, strong) NSDictionary <NSString *, NSString *> *HTTPRequestHeaders;
 
-@interface RXAFURLRequestSerialization : NSObject
+/**
+ Creates and returns a serializer with default configuration.
+ */
++ (instancetype)serializer;
+
+/**
+ Sets the value for the HTTP headers set in request objects made by the HTTP client. If `nil`, removes the existing value for that header.
+ 
+ @param field The HTTP header to set a default value for
+ @param value The value set as default for the specified header, or `nil`
+ */
+- (void)setValue:(nullable NSString *)value
+forHTTPHeaderField:(NSString *)field;
+
+/**
+ Returns the value for the HTTP headers set in the request serializer.
+ 
+ @param field The HTTP header to retrieve the default value for
+ 
+ @return The value set as default for the specified header, or `nil`
+ */
+- (nullable NSString *)valueForHTTPHeaderField:(NSString *)field;
+
+/**
+ Sets the "Authorization" HTTP header set in request objects made by the HTTP client to a basic authentication value with Base64-encoded username and password. This overwrites any existing value for this header.
+ 
+ @param username The HTTP basic auth username
+ @param password The HTTP basic auth password
+ */
+- (void)setAuthorizationHeaderFieldWithUsername:(NSString *)username
+                                       password:(NSString *)password;
+
+/**
+ Clears any existing value for the "Authorization" HTTP header.
+ */
+- (void)clearAuthorizationHeader;
+
+///-------------------------------------------------------
+/// @name Configuring Query String Parameter Serialization
+///-------------------------------------------------------
+
+/**
+ HTTP methods for which serialized requests will encode parameters as a query string. `GET`, `HEAD`, and `DELETE` by default.
+ */
+@property (nonatomic, strong) NSSet <NSString *> *HTTPMethodsEncodingParametersInURI;
+
+/**
+ Set the method of query string serialization according to one of the pre-defined styles.
+ 
+ @param style The serialization style.
+ 
+ @see AFHTTPRequestQueryStringSerializationStyle
+ */
+- (void)setQueryStringSerializationWithStyle:(RXAFHTTPRequestQueryStringSerializationStyle)style;
+
+/**
+ Set the a custom method of query string serialization according to the specified block.
+ 
+ @param block A block that defines a process of encoding parameters into a query string. This block returns the query string and takes three arguments: the request, the parameters to encode, and the error that occurred when attempting to encode parameters for the given request.
+ */
+- (void)setQueryStringSerializationWithBlock:(nullable NSString * (^)(NSURLRequest *request, id parameters, NSError * __autoreleasing *error))block;
+
+///-------------------------------
+/// @name Creating Request Objects
+///-------------------------------
+
+/**
+ Creates an `NSMutableURLRequest` object with the specified HTTP method and URL string.
+ 
+ If the HTTP method is `GET`, `HEAD`, or `DELETE`, the parameters will be used to construct a url-encoded query string that is appended to the request's URL. Otherwise, the parameters will be encoded according to the value of the `parameterEncoding` property, and set as the request body.
+ 
+ @param method The HTTP method for the request, such as `GET`, `POST`, `PUT`, or `DELETE`. This parameter must not be `nil`.
+ @param URLString The URL string used to create the request URL.
+ @param parameters The parameters to be either set as a query string for `GET` requests, or the request HTTP body.
+ @param error The error that occurred while constructing the request.
+ 
+ @return An `NSMutableURLRequest` object.
+ */
+- (NSMutableURLRequest *)requestWithMethod:(NSString *)method
+                                 URLString:(NSString *)URLString
+                                parameters:(nullable id)parameters
+                                     error:(NSError * _Nullable __autoreleasing *)error;
+
+/**
+ Creates an `NSMutableURLRequest` object with the specified HTTP method and URLString, and constructs a `multipart/form-data` HTTP body, using the specified parameters and multipart form data block. See http://www.w3.org/TR/html4/interact/forms.html#h-17.13.4.2
+ 
+ Multipart form requests are automatically streamed, reading files directly from disk along with in-memory data in a single HTTP body. The resulting `NSMutableURLRequest` object has an `HTTPBodyStream` property, so refrain from setting `HTTPBodyStream` or `HTTPBody` on this request object, as it will clear out the multipart form body stream.
+ 
+ @param method The HTTP method for the request. This parameter must not be `GET` or `HEAD`, or `nil`.
+ @param URLString The URL string used to create the request URL.
+ @param parameters The parameters to be encoded and set in the request HTTP body.
+ @param block A block that takes a single argument and appends data to the HTTP body. The block argument is an object adopting the `AFMultipartFormData` protocol.
+ @param error The error that occurred while constructing the request.
+ 
+ @return An `NSMutableURLRequest` object
+ */
+- (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)method
+                                              URLString:(NSString *)URLString
+                                             parameters:(nullable NSDictionary <NSString *, id> *)parameters
+                              constructingBodyWithBlock:(nullable void (^)(id <RXAFMultipartFormData> formData))block
+                                                  error:(NSError * _Nullable __autoreleasing *)error;
+
+/**
+ Creates an `NSMutableURLRequest` by removing the `HTTPBodyStream` from a request, and asynchronously writing its contents into the specified file, invoking the completion handler when finished.
+ 
+ @param request The multipart form request. The `HTTPBodyStream` property of `request` must not be `nil`.
+ @param fileURL The file URL to write multipart form contents to.
+ @param handler A handler block to execute.
+ 
+ @discussion There is a bug in `NSURLSessionTask` that causes requests to not send a `Content-Length` header when streaming contents from an HTTP body, which is notably problematic when interacting with the Amazon S3 webservice. As a workaround, this method takes a request constructed with `multipartFormRequestWithMethod:URLString:parameters:constructingBodyWithBlock:error:`, or any other request with an `HTTPBodyStream`, writes the contents to the specified file and returns a copy of the original request with the `HTTPBodyStream` property set to `nil`. From here, the file can either be passed to `AFURLSessionManager -uploadTaskWithRequest:fromFile:progress:completionHandler:`, or have its contents read into an `NSData` that's assigned to the `HTTPBody` property of the request.
+ 
+ @see https://github.com/AFNetworking/AFNetworking/issues/1398
+ */
+- (NSMutableURLRequest *)requestWithMultipartFormRequest:(NSURLRequest *)request
+                             writingStreamContentsToFile:(NSURL *)fileURL
+                                       completionHandler:(nullable void (^)(NSError * _Nullable error))handler;
 
 @end
+
+
+
+
 
 NS_ASSUME_NONNULL_END

@@ -86,7 +86,15 @@
 //    [self.afnAutoreleasingTestObject test4];
 //    [self.afnAutoreleasingTestObject test5];
 //    [self.afnAutoreleasingTestObject test6];
-    [self.afnAutoreleasingTestObject test7];
+//    [self.afnAutoreleasingTestObject test7];
+    
+    
+    void (^block2)(void) = ^() {
+        NSLog(@"block2 invoke");
+    };
+    Class cls = [block2 class];
+    NSString *str = NSStringFromClass(cls);
+    NSLog(@"str:%@", str);
     
     
 }

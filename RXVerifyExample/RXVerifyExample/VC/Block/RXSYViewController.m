@@ -361,7 +361,6 @@ void HookEveryBlockToPrintArguments(void) {
     block1(2, @"aaa", @{@"key1":@"value1"}, @[@(1)], 1.1f, 2.0123123f, YES, &h);
     
     
-    
     void (^block2)(int a) = ^(int a) {
         NSLog(@"block2 invoke");
     };
