@@ -171,6 +171,7 @@
 		E872491521BD407100EA6A3D /* RXAFJSONRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872491421BD407100EA6A3D /* RXAFJSONRequestSerializer.m */; };
 		E872491821BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872491721BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m */; };
 		E872491B21BD438200EA6A3D /* RXAFURLRequestSerializationDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = E872491A21BD438200EA6A3D /* RXAFURLRequestSerializationDefine.m */; };
+		E872491E21BE91C400EA6A3D /* RXAFQueryStringPair.m in Sources */ = {isa = PBXBuildFile; fileRef = E872491D21BE91C400EA6A3D /* RXAFQueryStringPair.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -483,6 +484,8 @@
 		E872491721BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFPropertyListRequestSerializer.m; sourceTree = "<group>"; };
 		E872491921BD438200EA6A3D /* RXAFURLRequestSerializationDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFURLRequestSerializationDefine.h; sourceTree = "<group>"; };
 		E872491A21BD438200EA6A3D /* RXAFURLRequestSerializationDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFURLRequestSerializationDefine.m; sourceTree = "<group>"; };
+		E872491C21BE91C400EA6A3D /* RXAFQueryStringPair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFQueryStringPair.h; sourceTree = "<group>"; };
+		E872491D21BE91C400EA6A3D /* RXAFQueryStringPair.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFQueryStringPair.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -1157,6 +1160,8 @@
 				E872491721BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m */,
 				E872491921BD438200EA6A3D /* RXAFURLRequestSerializationDefine.h */,
 				E872491A21BD438200EA6A3D /* RXAFURLRequestSerializationDefine.m */,
+				E872491C21BE91C400EA6A3D /* RXAFQueryStringPair.h */,
+				E872491D21BE91C400EA6A3D /* RXAFQueryStringPair.m */,
 			);
 			path = Serialization;
 			sourceTree = "<group>";
@@ -1615,6 +1620,7 @@
 				E86050E720A07A1B0016F6C9 /* RVRunTimeViewController.m in Sources */,
 				58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */,
 				C9BDAD671CC62E6E00CBB1CA /* RVPushPopAnimation.m in Sources */,
+				E872491E21BE91C400EA6A3D /* RXAFQueryStringPair.m in Sources */,
 				E8433D8C20FC7F7D004A7FBC /* RWDummySignInService.m in Sources */,
 				C966DB8B1FAEB5DF003BC1B4 /* RXLogManager.m in Sources */,
 				E818F0FA20B93FED00F94127 /* RXMVVMListViewController.m in Sources */,

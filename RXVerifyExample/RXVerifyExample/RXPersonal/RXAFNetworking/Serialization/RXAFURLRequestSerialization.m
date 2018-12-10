@@ -7,45 +7,9 @@
 //
 
 #import "RXAFURLRequestSerialization.h"
+#import "RXAFQueryStringPair.h"
 
 
-
-
-// TODOAFN_M_3_K_2
-#pragma mark - AFQueryStringPair
-
-@interface RXAFQueryStringPair : NSObject
-@property (readwrite, nonatomic, strong) id field;
-@property (readwrite, nonatomic, strong) id value;
-
-- (instancetype)initWithField:(id)field value:(id)value;
-
-- (NSString *)URLEncodedStringValue;
-@end
-
-@implementation RXAFQueryStringPair
-
-- (instancetype)initWithField:(id)field value:(id)value {
-    self = [super init];
-    if (!self) {
-        return nil;
-    }
-    
-    self.field = field;
-    self.value = value;
-    
-    return self;
-}
-
-- (NSString *)URLEncodedStringValue {
-    if (!self.value || [self.value isEqual:[NSNull null]]) {
-        return RXAFPercentEscapedStringFromString([self.field description]);
-    } else {
-        return [NSString stringWithFormat:@"%@=%@", RXAFPercentEscapedStringFromString([self.field description]), RXAFPercentEscapedStringFromString([self.value description])];
-    }
-}
-
-@end
 
 #pragma mark - RXAFQueryStringFromParameters
 
