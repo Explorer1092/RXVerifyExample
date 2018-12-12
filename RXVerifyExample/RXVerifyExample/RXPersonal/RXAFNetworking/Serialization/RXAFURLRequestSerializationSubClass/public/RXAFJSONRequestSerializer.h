@@ -7,10 +7,10 @@
 //
 
 #import "RXAFURLRequestSerialization.h"
-
+#import "RXAFHTTPRequestSerializer.h"
 
 // TODOAFN_M_3_K_5
-@interface RXAFJSONRequestSerializer : RXAFURLRequestSerialization
+@interface RXAFJSONRequestSerializer : RXAFHTTPRequestSerializer
 
 /**
  Options for writing the request JSON data from Foundation objects. For possible values, see the `NSJSONSerialization` documentation section "NSJSONWritingOptions". `0` by default.

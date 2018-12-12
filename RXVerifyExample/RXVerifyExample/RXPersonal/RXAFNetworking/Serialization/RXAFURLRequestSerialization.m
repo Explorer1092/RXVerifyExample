@@ -11,9 +11,5 @@
 
 
 
-#pragma mark - RXAFQueryStringFromParameters
 
 
-@implementation RXAFURLRequestSerialization
-
-@end

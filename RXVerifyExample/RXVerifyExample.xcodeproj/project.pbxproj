@@ -175,6 +175,7 @@
 		E872492121BFDC3900EA6A3D /* RXAFStreamingMultipartFormData.m in Sources */ = {isa = PBXBuildFile; fileRef = E872492021BFDC3900EA6A3D /* RXAFStreamingMultipartFormData.m */; };
 		E872492521BFDD3600EA6A3D /* RXAFMultipartBodyStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E872492421BFDD3600EA6A3D /* RXAFMultipartBodyStream.m */; };
 		E872492821BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m in Sources */ = {isa = PBXBuildFile; fileRef = E872492721BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m */; };
+		E872492D21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872492C21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -495,6 +496,8 @@
 		E872492421BFDD3600EA6A3D /* RXAFMultipartBodyStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFMultipartBodyStream.m; sourceTree = "<group>"; };
 		E872492621BFDD8C00EA6A3D /* RXAFHTTPBodyPart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFHTTPBodyPart.h; sourceTree = "<group>"; };
 		E872492721BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFHTTPBodyPart.m; sourceTree = "<group>"; };
+		E872492B21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFHTTPRequestSerializer.h; sourceTree = "<group>"; };
+		E872492C21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFHTTPRequestSerializer.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -1266,10 +1269,6 @@
 			children = (
 				E872492A21BFE32000EA6A3D /* private */,
 				E872492921BFE31F00EA6A3D /* public */,
-				E872491621BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.h */,
-				E872491721BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m */,
-				E872491321BD407100EA6A3D /* RXAFJSONRequestSerializer.h */,
-				E872491421BD407100EA6A3D /* RXAFJSONRequestSerializer.m */,
 			);
 			path = RXAFURLRequestSerializationSubClass;
 			sourceTree = "<group>";
@@ -1277,6 +1276,12 @@
 		E872492921BFE31F00EA6A3D /* public */ = {
 			isa = PBXGroup;
 			children = (
+				E872491621BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.h */,
+				E872491721BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m */,
+				E872491321BD407100EA6A3D /* RXAFJSONRequestSerializer.h */,
+				E872491421BD407100EA6A3D /* RXAFJSONRequestSerializer.m */,
+				E872492B21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.h */,
+				E872492C21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.m */,
 			);
 			path = public;
 			sourceTree = "<group>";
@@ -1715,6 +1720,7 @@
 				C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */,
 				E870202920D8E10B00752211 /* RVGCDQueuesViewController.m in Sources */,
 				E85159B92148B1CC006E23D5 /* RXJLRoutesService.m in Sources */,
+				E872492D21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.m in Sources */,
 				E8433D8820FC7EF7004A7FBC /* RXRACDemoViewController.m in Sources */,
 				E8F8D7A92187E399007AB027 /* RXMethodListDemoObject+MethodList.m in Sources */,
 				E8433D6A20E39C83004A7FBC /* RXMVVMLoginViewModel.m in Sources */,

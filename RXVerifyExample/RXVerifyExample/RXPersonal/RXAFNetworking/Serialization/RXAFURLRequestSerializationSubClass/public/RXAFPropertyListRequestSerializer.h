@@ -7,10 +7,10 @@
 //
 
 #import "RXAFURLRequestSerialization.h"
-
+#import "RXAFHTTPRequestSerializer.h"
 
 // TODOAFN_M_3_K_6
-@interface RXAFPropertyListRequestSerializer : RXAFURLRequestSerialization
+@interface RXAFPropertyListRequestSerializer : RXAFHTTPRequestSerializer
 
 /**
  The property list format. Possible values are described in "NSPropertyListFormat".
