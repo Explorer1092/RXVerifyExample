@@ -8,6 +8,3 @@
 
 #import "RXAFURLResponseSerialization.h"
 
-@implementation RXAFURLResponseSerialization
-
-@end

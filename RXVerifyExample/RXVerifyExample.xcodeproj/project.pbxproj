@@ -177,6 +177,14 @@
 		E872492821BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m in Sources */ = {isa = PBXBuildFile; fileRef = E872492721BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m */; };
 		E872492D21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872492C21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.m */; };
 		E872493321C3E09F00EA6A3D /* RXAFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E872493221C3E09F00EA6A3D /* RXAFURLResponseSerialization.m */; };
+		E872493621C5286100EA6A3D /* RXAFHTTPResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872493521C5286100EA6A3D /* RXAFHTTPResponseSerializer.m */; };
+		E872493921C528D100EA6A3D /* RXAFJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872493821C528D100EA6A3D /* RXAFJSONResponseSerializer.m */; };
+		E872493C21C5290300EA6A3D /* RXAFXMLParserResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872493B21C5290300EA6A3D /* RXAFXMLParserResponseSerializer.m */; };
+		E872493F21C5291100EA6A3D /* RXAFXMLDocumentResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872493E21C5291100EA6A3D /* RXAFXMLDocumentResponseSerializer.m */; };
+		E872494221C5293300EA6A3D /* RXAFPropertyListResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872494121C5293300EA6A3D /* RXAFPropertyListResponseSerializer.m */; };
+		E872494521C5294900EA6A3D /* RXAFImageResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872494421C5294900EA6A3D /* RXAFImageResponseSerializer.m */; };
+		E872494821C5296500EA6A3D /* RXAFCompoundResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872494721C5296500EA6A3D /* RXAFCompoundResponseSerializer.m */; };
+		E872494B21C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = E872494A21C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -501,6 +509,22 @@
 		E872492C21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFHTTPRequestSerializer.m; sourceTree = "<group>"; };
 		E872493121C3E09F00EA6A3D /* RXAFURLResponseSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFURLResponseSerialization.h; sourceTree = "<group>"; };
 		E872493221C3E09F00EA6A3D /* RXAFURLResponseSerialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFURLResponseSerialization.m; sourceTree = "<group>"; };
+		E872493421C5286100EA6A3D /* RXAFHTTPResponseSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFHTTPResponseSerializer.h; sourceTree = "<group>"; };
+		E872493521C5286100EA6A3D /* RXAFHTTPResponseSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFHTTPResponseSerializer.m; sourceTree = "<group>"; };
+		E872493721C528D100EA6A3D /* RXAFJSONResponseSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFJSONResponseSerializer.h; sourceTree = "<group>"; };
+		E872493821C528D100EA6A3D /* RXAFJSONResponseSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFJSONResponseSerializer.m; sourceTree = "<group>"; };
+		E872493A21C5290300EA6A3D /* RXAFXMLParserResponseSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFXMLParserResponseSerializer.h; sourceTree = "<group>"; };
+		E872493B21C5290300EA6A3D /* RXAFXMLParserResponseSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFXMLParserResponseSerializer.m; sourceTree = "<group>"; };
+		E872493D21C5291100EA6A3D /* RXAFXMLDocumentResponseSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFXMLDocumentResponseSerializer.h; sourceTree = "<group>"; };
+		E872493E21C5291100EA6A3D /* RXAFXMLDocumentResponseSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFXMLDocumentResponseSerializer.m; sourceTree = "<group>"; };
+		E872494021C5293300EA6A3D /* RXAFPropertyListResponseSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFPropertyListResponseSerializer.h; sourceTree = "<group>"; };
+		E872494121C5293300EA6A3D /* RXAFPropertyListResponseSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFPropertyListResponseSerializer.m; sourceTree = "<group>"; };
+		E872494321C5294900EA6A3D /* RXAFImageResponseSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFImageResponseSerializer.h; sourceTree = "<group>"; };
+		E872494421C5294900EA6A3D /* RXAFImageResponseSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFImageResponseSerializer.m; sourceTree = "<group>"; };
+		E872494621C5296500EA6A3D /* RXAFCompoundResponseSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFCompoundResponseSerializer.h; sourceTree = "<group>"; };
+		E872494721C5296500EA6A3D /* RXAFCompoundResponseSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFCompoundResponseSerializer.m; sourceTree = "<group>"; };
+		E872494921C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFURLResponseSerializationDefine.h; sourceTree = "<group>"; };
+		E872494A21C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFURLResponseSerializationDefine.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -1319,6 +1343,22 @@
 		E872492F21C3E06500EA6A3D /* public */ = {
 			isa = PBXGroup;
 			children = (
+				E872493421C5286100EA6A3D /* RXAFHTTPResponseSerializer.h */,
+				E872493521C5286100EA6A3D /* RXAFHTTPResponseSerializer.m */,
+				E872493721C528D100EA6A3D /* RXAFJSONResponseSerializer.h */,
+				E872493821C528D100EA6A3D /* RXAFJSONResponseSerializer.m */,
+				E872493A21C5290300EA6A3D /* RXAFXMLParserResponseSerializer.h */,
+				E872493B21C5290300EA6A3D /* RXAFXMLParserResponseSerializer.m */,
+				E872493D21C5291100EA6A3D /* RXAFXMLDocumentResponseSerializer.h */,
+				E872493E21C5291100EA6A3D /* RXAFXMLDocumentResponseSerializer.m */,
+				E872494021C5293300EA6A3D /* RXAFPropertyListResponseSerializer.h */,
+				E872494121C5293300EA6A3D /* RXAFPropertyListResponseSerializer.m */,
+				E872494321C5294900EA6A3D /* RXAFImageResponseSerializer.h */,
+				E872494421C5294900EA6A3D /* RXAFImageResponseSerializer.m */,
+				E872494621C5296500EA6A3D /* RXAFCompoundResponseSerializer.h */,
+				E872494721C5296500EA6A3D /* RXAFCompoundResponseSerializer.m */,
+				E872494921C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.h */,
+				E872494A21C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.m */,
 			);
 			path = public;
 			sourceTree = "<group>";
@@ -1640,6 +1680,7 @@
 				C9C2B3391E0BB2AD0087C718 /* RVOCDataViewController.m in Sources */,
 				58D660391C2571A700912786 /* RXMenuView.m in Sources */,
 				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
+				E872493F21C5291100EA6A3D /* RXAFXMLDocumentResponseSerializer.m in Sources */,
 				E826367820A96BEF0081F4A8 /* RXMVPGreetingViewController.m in Sources */,
 				C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */,
 				E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */,
@@ -1653,6 +1694,7 @@
 				E8F8D80121917041007AB027 /* RXAFNTest2Object.m in Sources */,
 				E8433D7E20EDBE78004A7FBC /* RXMacroViewController.m in Sources */,
 				E86050FE20A2A1840016F6C9 /* RVAddMethodViewController.m in Sources */,
+				E872493921C528D100EA6A3D /* RXAFJSONResponseSerializer.m in Sources */,
 				E86050EB20A07B0D0016F6C9 /* RXCurrentQueueViewController.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
 				E86050F220A2965C0016F6C9 /* RVRTPrintViewController.m in Sources */,
@@ -1672,6 +1714,8 @@
 				E811CA911FED09FD003157E9 /* RVEventResponseListViewController.m in Sources */,
 				E8F8D7FE21917038007AB027 /* RXAFNTest1Object.m in Sources */,
 				58AAC3141C38CDF20023D2EA /* RVButtonViewController.m in Sources */,
+				E872493621C5286100EA6A3D /* RXAFHTTPResponseSerializer.m in Sources */,
+				E872494B21C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.m in Sources */,
 				C93E6AF31CF684CE00E7B193 /* RXRunTimeDemoBaseObject.m in Sources */,
 				E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */,
 				E86050D120A079050016F6C9 /* RVGCD2ViewController.m in Sources */,
@@ -1708,6 +1752,7 @@
 				E872492121BFDC3900EA6A3D /* RXAFStreamingMultipartFormData.m in Sources */,
 				E85159CD215890CD006E23D5 /* RXOPMQViewController.m in Sources */,
 				E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */,
+				E872494521C5294900EA6A3D /* RXAFImageResponseSerializer.m in Sources */,
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
 				E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */,
 				E818F0F420B9045C00F94127 /* RXMVVMView.m in Sources */,
@@ -1728,6 +1773,7 @@
 				E872491821BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m in Sources */,
 				E8433D7B20EA51D9004A7FBC /* RXRACViewController.m in Sources */,
 				E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */,
+				E872494221C5293300EA6A3D /* RXAFPropertyListResponseSerializer.m in Sources */,
 				E872490E21B94B2200EA6A3D /* RXAFURLRequestSerializationProtocol.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */,
@@ -1737,6 +1783,8 @@
 				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
+				E872493C21C5290300EA6A3D /* RXAFXMLParserResponseSerializer.m in Sources */,
+				E872494821C5296500EA6A3D /* RXAFCompoundResponseSerializer.m in Sources */,
 				C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */,
 				E85159B62148B195006E23D5 /* RXCrashService.m in Sources */,
 				E8433D9320FD90A5004A7FBC /* RXOCKeywordMethodNameViewController.m in Sources */,
