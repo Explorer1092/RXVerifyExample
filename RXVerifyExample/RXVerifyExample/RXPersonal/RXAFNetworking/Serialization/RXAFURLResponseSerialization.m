@@ -7,4 +7,18 @@
 //
 
 #import "RXAFURLResponseSerialization.h"
-
+// 原来是static的
+NSError * RXAFErrorWithUnderlyingError(NSError *error, NSError *underlyingError) {
+    if (!error) {
+        return underlyingError;
+    }
+    
+    if (!underlyingError || error.userInfo[NSUnderlyingErrorKey]) {
+        return error;
+    }
+    
+    NSMutableDictionary *mutableUserInfo = [error.userInfo mutableCopy];
+    mutableUserInfo[NSUnderlyingErrorKey] = underlyingError;
+    
+    return [[NSError alloc] initWithDomain:error.domain code:error.code userInfo:mutableUserInfo];
+}

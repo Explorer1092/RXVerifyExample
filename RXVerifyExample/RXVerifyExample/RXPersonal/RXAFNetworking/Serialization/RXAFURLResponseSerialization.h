@@ -30,4 +30,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+NSError * RXAFErrorWithUnderlyingError(NSError *error, NSError *underlyingError);
 NS_ASSUME_NONNULL_END
