@@ -11,13 +11,17 @@
 @interface RXAFNTest4Object : NSObject
 
 
-// b的值依赖a, b是只读的
+// 一对一的影响:b的值依赖a, b是只读的
 @property (nonatomic, assign) int a;
 @property (nonatomic, readonly) int b;
 
+// 一对一的影响:b1的值依赖a1, 注意b1与b的区别
+@property (nonatomic, assign) int a1;
+@property (nonatomic, assign) int b1;
 
 
-// d的值依赖c,在c的赋值过程中会重新赋值d
+
+// 一对一的影响:d的值依赖c,在c的赋值过程中会重新赋值d
 @property (nonatomic, assign) int c;
 @property (nonatomic, assign) int d;
 
@@ -39,7 +43,7 @@
 
 
 
-
+// 一对一的影响:另一种实现方法
 @property (nonatomic, assign) int g;
 @property (nonatomic, assign) int h;
 

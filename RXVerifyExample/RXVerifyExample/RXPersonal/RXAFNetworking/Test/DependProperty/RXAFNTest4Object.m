@@ -28,6 +28,13 @@
 
 
 
++ (NSSet *)keyPathsForValuesAffectingB1
+{
+    return [NSSet setWithObjects:@"a1", nil];
+}
+
+
+
 
 - (void)setC:(int)c
 {

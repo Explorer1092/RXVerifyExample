@@ -55,6 +55,8 @@
     self.dependPropertyObject = [RXAFNTestDependPropertyObject new];
 //    [self.dependPropertyObject test_dependProperty_A_B];
     
+//    [self.dependPropertyObject test_dependProperty_A1_B1];
+    
 //    [self.dependPropertyObject test_dependProperty_C_D];
     
 //    [self.dependPropertyObject test_dependProperty_C1_C2_C3_D1];

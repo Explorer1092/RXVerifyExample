@@ -10,6 +10,7 @@
 
 @interface RXAFNTestDependPropertyObject : NSObject
 - (void)test_dependProperty_A_B;
+- (void)test_dependProperty_A1_B1;
 - (void)test_dependProperty_C_D;
 - (void)test_dependProperty_C1_C2_C3_D1;
 - (void)test_dependProperty_E_F;

@@ -26,14 +26,18 @@
 }
 - (void)test_dependProperty_A_B {
     [self.test4Object addObserver:self forKeyPath:@"b" options:NSKeyValueObservingOptionNew context:nil];
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.test4Object.a = 5;
     });
 }
+- (void)test_dependProperty_A1_B1 {
+    [self.test4Object addObserver:self forKeyPath:@"b1" options:NSKeyValueObservingOptionNew context:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.test4Object.a1 = 5;
+    });
+}
 - (void)test_dependProperty_C_D
 {
-    
     [self.test4Object addObserver:self forKeyPath:@"d" options:NSKeyValueObservingOptionNew context:nil];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.test4Object.c = 5;
@@ -51,7 +55,6 @@
 }
 - (void)test_dependProperty_E_F
 {
-    
     [self.test4Object addObserver:self forKeyPath:@"f" options:NSKeyValueObservingOptionNew context:nil];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.test4Object.e = 5;
@@ -138,6 +141,6 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
-    NSLog(@"observeValueForKeyPath:%@, change:%@", keyPath, change);
+    NSLog(@"KeyPath:%@, change.new:%@", keyPath, change[@"new"]);
 }
 @end
