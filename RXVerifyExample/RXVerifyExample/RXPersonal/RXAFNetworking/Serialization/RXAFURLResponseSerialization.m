@@ -22,3 +22,13 @@ NSError * RXAFErrorWithUnderlyingError(NSError *error, NSError *underlyingError)
     
     return [[NSError alloc] initWithDomain:error.domain code:error.code userInfo:mutableUserInfo];
 }
+
+BOOL RXAFErrorOrUnderlyingErrorHasCodeInDomain(NSError *error, NSInteger code, NSString *domain) {
+    if ([error.domain isEqualToString:domain] && error.code == code) {
+        return YES;
+    } else if (error.userInfo[NSUnderlyingErrorKey]) {
+        return RXAFErrorOrUnderlyingErrorHasCodeInDomain(error.userInfo[NSUnderlyingErrorKey], code, domain);
+    }
+    
+    return NO;
+}

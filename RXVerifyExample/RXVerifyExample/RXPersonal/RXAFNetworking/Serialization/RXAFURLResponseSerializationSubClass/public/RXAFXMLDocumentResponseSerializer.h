@@ -7,7 +7,7 @@
 //
 
 #import "RXAFHTTPResponseSerializer.h"
-
+#ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
 @interface RXAFXMLDocumentResponseSerializer : RXAFHTTPResponseSerializer
 
 - (instancetype)init;
@@ -25,3 +25,5 @@
 + (instancetype)serializerWithXMLDocumentOptions:(NSUInteger)mask;
 
 @end
+
+#endif

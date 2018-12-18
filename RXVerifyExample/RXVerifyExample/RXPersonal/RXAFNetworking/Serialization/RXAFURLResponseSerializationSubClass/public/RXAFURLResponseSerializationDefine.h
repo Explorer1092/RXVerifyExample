@@ -46,3 +46,5 @@ FOUNDATION_EXPORT NSString * const RXAFNetworkingOperationFailingURLResponseErro
 
 FOUNDATION_EXPORT NSString * const RXAFNetworkingOperationFailingURLResponseDataErrorKey;
 
+
+id RXAFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingOptions readingOptions);

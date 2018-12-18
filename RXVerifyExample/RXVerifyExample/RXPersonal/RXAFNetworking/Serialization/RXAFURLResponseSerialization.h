@@ -32,4 +32,5 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 NSError * RXAFErrorWithUnderlyingError(NSError *error, NSError *underlyingError);
+BOOL RXAFErrorOrUnderlyingErrorHasCodeInDomain(NSError *error, NSInteger code, NSString *domain);
 NS_ASSUME_NONNULL_END
