@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface RXRuntimeUtil : NSObject
-+ (void)printProperty:(id)value;
++ (void)printPropertyList:(id)value;
++ (void)printMethodList:(id)value;
++ (void)printIvarList:(id)value;
++ (void)printProtocolList:(id)value;
 @end

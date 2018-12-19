@@ -11,7 +11,7 @@
 #import <objc/message.h>
 @implementation RXRuntimeUtil
 
-+ (void)printProperty:(id)value {
++ (void)printPropertyList:(id)value {
     NSMutableArray *array = [NSMutableArray new];
     [array addObject:@""];
     [array addObject:@"property list:"];
@@ -23,39 +23,64 @@
         objc_property_t property = propertyList[i];
         const char *propertyName = property_getName(property);
         const char *propertAttributs = property_getAttributes(property);
-        NSString *tmp = [NSString stringWithFormat:@"%s, %s", propertyName, propertAttributs];
+        NSString *tmp = [NSString stringWithFormat:@"%s | %s", propertyName, propertAttributs];
         [array addObject:tmp];
     }
     NSLog(@"%@", [array componentsJoinedByString:@"\n"]);
+}
+
++ (void)printMethodList:(id)value {
+    NSMutableArray *array = [NSMutableArray new];
+    [array addObject:@""];
+    [array addObject:@"method list:"];
+    [array addObject:@"methodName"];
+    Class cls = [value class];
+    unsigned int count;
     
-    
-    
-    NSLog(@"method");
     Method *methodList = class_copyMethodList(cls, &count);
     for (unsigned int i = 0; i < count; i++) {
         Method method = methodList[i];
-        NSLog(@"method-->%@", NSStringFromSelector(method_getName(method)));
+        NSString *methodName = NSStringFromSelector(method_getName(method));
+        [array addObject:methodName];
     }
-    
-    
+    NSLog(@"%@", [array componentsJoinedByString:@"\n"]);
+}
 
-    NSLog(@"ivar");
++ (void)printIvarList:(id)value {
+    NSMutableArray *array = [NSMutableArray new];
+    [array addObject:@""];
+    [array addObject:@"ivar list:"];
+    [array addObject:@"ivarName | typeEncoding"];
+    Class cls = [value class];
+    unsigned int count;
     Ivar *ivarList = class_copyIvarList(cls, &count);
     for (unsigned int i = 0; i < count; i++) {
         Ivar ivar = ivarList[i];
         const char *ivarName = ivar_getName(ivar);
-        NSLog(@"ivar-->%@", [NSString stringWithUTF8String:ivarName]);
-        
+        const char *ivarTypeEncoding = ivar_getTypeEncoding(ivar);
+        NSString *tmp = [NSString stringWithFormat:@"%s | %s", ivarName, ivarTypeEncoding];
+        [array addObject:tmp];
     }
-    
-    NSLog(@"protocol");
+    NSLog(@"%@", [array componentsJoinedByString:@"\n"]);
+}
+
+
++ (void)printProtocolList:(id)value {
+    NSMutableArray *array = [NSMutableArray new];
+    [array addObject:@""];
+    [array addObject:@"protocol list:"];
+    [array addObject:@"protocolName"];
+    Class cls = [value class];
+    unsigned int count;
     __unsafe_unretained Protocol **protocolList = class_copyProtocolList(cls, &count);
     for (unsigned int i = 0; i < count; i++) {
         Protocol *protocol = protocolList[i];
         const char *protocolName = protocol_getName(protocol);
-        NSLog(@"protocol-->%@", [NSString stringWithUTF8String:protocolName]);
-        
+        NSString *tmp = [NSString stringWithFormat:@"%s", protocolName];
+        [array addObject:tmp];
     }
+    NSLog(@"%@", [array componentsJoinedByString:@"\n"]);
 }
+
 
 @end

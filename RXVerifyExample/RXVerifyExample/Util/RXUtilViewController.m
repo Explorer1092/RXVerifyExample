@@ -27,7 +27,11 @@
 }
 
 - (void)test_runtimeUtil {
-    [RXRuntimeUtil printProperty:[RXRuntime1Object new]];
+    RXRuntime1Object *object = [RXRuntime1Object new];
+    [RXRuntimeUtil printPropertyList:object];
+    [RXRuntimeUtil printMethodList:object];
+    [RXRuntimeUtil printIvarList:object];
+    [RXRuntimeUtil printProtocolList:object];
 }
 
 /*
