@@ -1367,8 +1367,6 @@
 				E872494421C5294900EA6A3D /* RXAFImageResponseSerializer.m */,
 				E872494621C5296500EA6A3D /* RXAFCompoundResponseSerializer.h */,
 				E872494721C5296500EA6A3D /* RXAFCompoundResponseSerializer.m */,
-				E872494921C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.h */,
-				E872494A21C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.m */,
 			);
 			path = public;
 			sourceTree = "<group>";
@@ -1376,6 +1374,8 @@
 		E872493021C3E06500EA6A3D /* private */ = {
 			isa = PBXGroup;
 			children = (
+				E872494921C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.h */,
+				E872494A21C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.m */,
 			);
 			path = private;
 			sourceTree = "<group>";

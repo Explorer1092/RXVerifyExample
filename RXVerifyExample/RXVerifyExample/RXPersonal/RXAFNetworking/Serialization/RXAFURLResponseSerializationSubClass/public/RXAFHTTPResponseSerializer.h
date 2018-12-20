@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "RXAFURLResponseSerialization.h"
 
+NS_ASSUME_NONNULL_BEGIN
 @interface RXAFHTTPResponseSerializer : NSObject <RXAFURLResponseSerialization>
 
 - (instancetype)init;
@@ -52,3 +53,5 @@
                    error:(NSError * _Nullable __autoreleasing *)error;
 
 @end
+
+NS_ASSUME_NONNULL_END

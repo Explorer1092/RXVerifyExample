@@ -9,11 +9,7 @@
 #import "RXAFURLResponseSerializationDefine.h"
 
 
-
-NSString * const RXAFURLResponseSerializationErrorDomain = @"com.alamofire.error.serialization.response";
-NSString * const RXAFNetworkingOperationFailingURLResponseErrorKey = @"com.alamofire.serialization.response.error.response";
-NSString * const RXAFNetworkingOperationFailingURLResponseDataErrorKey = @"com.alamofire.serialization.response.error.data";
-
+// 原来是static的
 
 id RXAFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingOptions readingOptions) {
     if ([JSONObject isKindOfClass:[NSArray class]]) {
@@ -38,6 +34,34 @@ id RXAFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingOption
     }
     
     return JSONObject;
+}
+
+
+
+
+NSError * RXAFErrorWithUnderlyingError(NSError *error, NSError *underlyingError) {
+    if (!error) {
+        return underlyingError;
+    }
+    
+    if (!underlyingError || error.userInfo[NSUnderlyingErrorKey]) {
+        return error;
+    }
+    
+    NSMutableDictionary *mutableUserInfo = [error.userInfo mutableCopy];
+    mutableUserInfo[NSUnderlyingErrorKey] = underlyingError;
+    
+    return [[NSError alloc] initWithDomain:error.domain code:error.code userInfo:mutableUserInfo];
+}
+
+BOOL RXAFErrorOrUnderlyingErrorHasCodeInDomain(NSError *error, NSInteger code, NSString *domain) {
+    if ([error.domain isEqualToString:domain] && error.code == code) {
+        return YES;
+    } else if (error.userInfo[NSUnderlyingErrorKey]) {
+        return RXAFErrorOrUnderlyingErrorHasCodeInDomain(error.userInfo[NSUnderlyingErrorKey], code, domain);
+    }
+    
+    return NO;
 }
 
 

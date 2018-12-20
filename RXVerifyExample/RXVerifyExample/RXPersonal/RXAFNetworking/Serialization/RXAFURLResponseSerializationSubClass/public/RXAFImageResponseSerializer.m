@@ -7,7 +7,6 @@
 //
 
 #import "RXAFImageResponseSerializer.h"
-#import "RXAFURLResponseSerialization.h"
 #import "RXAFURLResponseSerializationDefine.h"
 #if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
 #import <CoreGraphics/CoreGraphics.h>

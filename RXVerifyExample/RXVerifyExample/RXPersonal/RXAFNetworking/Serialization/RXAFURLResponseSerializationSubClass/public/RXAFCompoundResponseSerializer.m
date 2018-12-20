@@ -7,6 +7,7 @@
 //
 
 #import "RXAFCompoundResponseSerializer.h"
+#import "RXAFURLResponseSerializationDefine.h"
 @interface RXAFCompoundResponseSerializer ()
 @property (readwrite, nonatomic, copy) NSArray *responseSerializers;
 @end

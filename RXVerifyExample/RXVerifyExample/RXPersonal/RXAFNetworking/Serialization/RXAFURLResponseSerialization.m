@@ -7,28 +7,11 @@
 //
 
 #import "RXAFURLResponseSerialization.h"
-// 原来是static的
-NSError * RXAFErrorWithUnderlyingError(NSError *error, NSError *underlyingError) {
-    if (!error) {
-        return underlyingError;
-    }
-    
-    if (!underlyingError || error.userInfo[NSUnderlyingErrorKey]) {
-        return error;
-    }
-    
-    NSMutableDictionary *mutableUserInfo = [error.userInfo mutableCopy];
-    mutableUserInfo[NSUnderlyingErrorKey] = underlyingError;
-    
-    return [[NSError alloc] initWithDomain:error.domain code:error.code userInfo:mutableUserInfo];
-}
+NSString * const RXAFURLResponseSerializationErrorDomain = @"com.alamofire.error.serialization.response";
+NSString * const RXAFNetworkingOperationFailingURLResponseErrorKey = @"com.alamofire.serialization.response.error.response";
+NSString * const RXAFNetworkingOperationFailingURLResponseDataErrorKey = @"com.alamofire.serialization.response.error.data";
 
-BOOL RXAFErrorOrUnderlyingErrorHasCodeInDomain(NSError *error, NSInteger code, NSString *domain) {
-    if ([error.domain isEqualToString:domain] && error.code == code) {
-        return YES;
-    } else if (error.userInfo[NSUnderlyingErrorKey]) {
-        return RXAFErrorOrUnderlyingErrorHasCodeInDomain(error.userInfo[NSUnderlyingErrorKey], code, domain);
-    }
-    
-    return NO;
-}
+
+
+
+
