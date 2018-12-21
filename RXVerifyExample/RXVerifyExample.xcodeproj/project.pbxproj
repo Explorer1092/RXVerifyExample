@@ -187,6 +187,9 @@
 		E872494F21C9EEAB00EA6A3D /* RXRuntimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E872494E21C9EEAB00EA6A3D /* RXRuntimeUtil.m */; };
 		E872495221C9EFF800EA6A3D /* RXUtilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E872495121C9EFF800EA6A3D /* RXUtilViewController.m */; };
 		E872495621C9F39A00EA6A3D /* RXRuntime1Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E872495521C9F39A00EA6A3D /* RXRuntime1Object.m */; };
+		E872495A21CCEA0000EA6A3D /* RXReadonlyProperty1Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E872495921CCEA0000EA6A3D /* RXReadonlyProperty1Object.m */; };
+		E872495D21CCEA2000EA6A3D /* RXReadonlyProperty2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E872495C21CCEA2000EA6A3D /* RXReadonlyProperty2Object.m */; };
+		E872496021CCEA2C00EA6A3D /* RXReadonlyProperty3Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E872495F21CCEA2C00EA6A3D /* RXReadonlyProperty3Object.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -532,6 +535,12 @@
 		E872495121C9EFF800EA6A3D /* RXUtilViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXUtilViewController.m; sourceTree = "<group>"; };
 		E872495421C9F39A00EA6A3D /* RXRuntime1Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRuntime1Object.h; sourceTree = "<group>"; };
 		E872495521C9F39A00EA6A3D /* RXRuntime1Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRuntime1Object.m; sourceTree = "<group>"; };
+		E872495821CCEA0000EA6A3D /* RXReadonlyProperty1Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXReadonlyProperty1Object.h; sourceTree = "<group>"; };
+		E872495921CCEA0000EA6A3D /* RXReadonlyProperty1Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXReadonlyProperty1Object.m; sourceTree = "<group>"; };
+		E872495B21CCEA2000EA6A3D /* RXReadonlyProperty2Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXReadonlyProperty2Object.h; sourceTree = "<group>"; };
+		E872495C21CCEA2000EA6A3D /* RXReadonlyProperty2Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXReadonlyProperty2Object.m; sourceTree = "<group>"; };
+		E872495E21CCEA2C00EA6A3D /* RXReadonlyProperty3Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXReadonlyProperty3Object.h; sourceTree = "<group>"; };
+		E872495F21CCEA2C00EA6A3D /* RXReadonlyProperty3Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXReadonlyProperty3Object.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -1398,6 +1407,19 @@
 			path = runtime;
 			sourceTree = "<group>";
 		};
+		E872495721CCE9EA00EA6A3D /* ReadonlyProperty */ = {
+			isa = PBXGroup;
+			children = (
+				E872495821CCEA0000EA6A3D /* RXReadonlyProperty1Object.h */,
+				E872495921CCEA0000EA6A3D /* RXReadonlyProperty1Object.m */,
+				E872495B21CCEA2000EA6A3D /* RXReadonlyProperty2Object.h */,
+				E872495C21CCEA2000EA6A3D /* RXReadonlyProperty2Object.m */,
+				E872495E21CCEA2C00EA6A3D /* RXReadonlyProperty3Object.h */,
+				E872495F21CCEA2C00EA6A3D /* RXReadonlyProperty3Object.m */,
+			);
+			path = ReadonlyProperty;
+			sourceTree = "<group>";
+		};
 		E8F8D7A32187E357007AB027 /* MethodList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1485,6 +1507,7 @@
 		E8F8D7FB21917020007AB027 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				E872495721CCE9EA00EA6A3D /* ReadonlyProperty */,
 				E872490F21B94E6100EA6A3D /* AFNAutoreleasing */,
 				E872490821B5531B00EA6A3D /* AFNSerialization */,
 				E8F8D81F21ACF3CC007AB027 /* ReachabilityContext */,
@@ -1726,6 +1749,7 @@
 				E86050EB20A07B0D0016F6C9 /* RXCurrentQueueViewController.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
 				E86050F220A2965C0016F6C9 /* RVRTPrintViewController.m in Sources */,
+				E872495A21CCEA0000EA6A3D /* RXReadonlyProperty1Object.m in Sources */,
 				C9A711141D7BA1240002E703 /* RXBObject.m in Sources */,
 				E86050B920A03E570016F6C9 /* RXMRSWPerson.m in Sources */,
 				E85159B32148B109006E23D5 /* RXServiceManager.m in Sources */,
@@ -1787,6 +1811,7 @@
 				E86050D620A079050016F6C9 /* RVGCDViewController.m in Sources */,
 				E86050EF20A191360016F6C9 /* RVAutoReleaseViewController.m in Sources */,
 				E872491B21BD438200EA6A3D /* RXAFURLRequestSerializationDefine.m in Sources */,
+				E872496021CCEA2C00EA6A3D /* RXReadonlyProperty3Object.m in Sources */,
 				E86050F820A298DA0016F6C9 /* RVMsgForward.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
@@ -1813,6 +1838,7 @@
 				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
+				E872495D21CCEA2000EA6A3D /* RXReadonlyProperty2Object.m in Sources */,
 				E872493C21C5290300EA6A3D /* RXAFXMLParserResponseSerializer.m in Sources */,
 				E872494821C5296500EA6A3D /* RXAFCompoundResponseSerializer.m in Sources */,
 				C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */,

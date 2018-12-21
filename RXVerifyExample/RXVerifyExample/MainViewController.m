@@ -68,7 +68,7 @@
 //    object = @"RVWeb";
 //    object = @"RXSY";
     
-//    object = @"RXRAC";
+    object = @"RXAFNetworking";
 //    object = @"RXRACClass";
 #endif
     
