@@ -8,7 +8,7 @@
 
 #import "RXAFHTTPRequestSerializer.h"
 #import "RXAFURLRequestSerializationDefine.h"
-#import "RXAFURLRequestSerializationProtocol.h"
+#import "RXAFMultipartFormData.h"
 #import "RXAFQueryStringPair.h"
 #import "RXAFStreamingMultipartFormData.h"
 static NSArray * RXAFHTTPRequestSerializerObservedKeyPaths() {

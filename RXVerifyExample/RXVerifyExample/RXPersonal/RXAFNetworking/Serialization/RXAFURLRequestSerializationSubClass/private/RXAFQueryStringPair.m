@@ -8,6 +8,7 @@
 
 #import "RXAFQueryStringPair.h"
 #import "RXAFURLRequestSerializationDefine.h"
+#import "RXAFURLRequestSerialization.h"
 @implementation RXAFQueryStringPair
 
 - (instancetype)initWithField:(id)field value:(id)value {

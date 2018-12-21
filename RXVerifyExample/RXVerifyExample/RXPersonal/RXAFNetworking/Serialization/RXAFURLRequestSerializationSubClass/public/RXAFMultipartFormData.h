@@ -1,5 +1,5 @@
 //
-//  RXAFURLRequestSerializationProtocol.h
+//  RXAFMultipartFormData.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2018/12/6.
@@ -12,10 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-// TODOAFN_M_3_K_5
-typedef NS_ENUM(NSUInteger, RXAFHTTPRequestQueryStringSerializationStyle) {
-    AFHTTPRequestQueryStringDefaultStyle = 0,
-};
+
 
 
 /**

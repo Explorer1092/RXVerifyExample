@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RXAFURLRequestSerializationProtocol.h"
+#import "RXAFMultipartFormData.h"
 
 // TODOAFN_M_3_K_12
 @interface RXAFStreamingMultipartFormData : NSObject<RXAFMultipartFormData>

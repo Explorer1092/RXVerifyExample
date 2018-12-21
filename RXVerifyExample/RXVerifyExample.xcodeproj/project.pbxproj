@@ -166,7 +166,6 @@
 		E870204220DA7B2800752211 /* RXCornerRadiusTableViewImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E870204020DA7B2800752211 /* RXCornerRadiusTableViewImpl.m */; };
 		E870204520DA7B3F00752211 /* RXImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E870204420DA7B3F00752211 /* RXImageCell.m */; };
 		E872490B21B5533800EA6A3D /* RXAFNSerializationTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E872490A21B5533800EA6A3D /* RXAFNSerializationTestObject.m */; };
-		E872490E21B94B2200EA6A3D /* RXAFURLRequestSerializationProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E872490D21B94B2200EA6A3D /* RXAFURLRequestSerializationProtocol.m */; };
 		E872491221B94EA500EA6A3D /* RXAFNAutoreleasingTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E872491121B94EA500EA6A3D /* RXAFNAutoreleasingTestObject.m */; };
 		E872491521BD407100EA6A3D /* RXAFJSONRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872491421BD407100EA6A3D /* RXAFJSONRequestSerializer.m */; };
 		E872491821BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872491721BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m */; };
@@ -490,8 +489,7 @@
 		E870204420DA7B3F00752211 /* RXImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXImageCell.m; sourceTree = "<group>"; };
 		E872490921B5533800EA6A3D /* RXAFNSerializationTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNSerializationTestObject.h; sourceTree = "<group>"; };
 		E872490A21B5533800EA6A3D /* RXAFNSerializationTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNSerializationTestObject.m; sourceTree = "<group>"; };
-		E872490C21B94B2200EA6A3D /* RXAFURLRequestSerializationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFURLRequestSerializationProtocol.h; sourceTree = "<group>"; };
-		E872490D21B94B2200EA6A3D /* RXAFURLRequestSerializationProtocol.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFURLRequestSerializationProtocol.m; sourceTree = "<group>"; };
+		E872490C21B94B2200EA6A3D /* RXAFMultipartFormData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFMultipartFormData.h; sourceTree = "<group>"; };
 		E872491021B94EA500EA6A3D /* RXAFNAutoreleasingTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNAutoreleasingTestObject.h; sourceTree = "<group>"; };
 		E872491121B94EA500EA6A3D /* RXAFNAutoreleasingTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNAutoreleasingTestObject.m; sourceTree = "<group>"; };
 		E872491321BD407100EA6A3D /* RXAFJSONRequestSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFJSONRequestSerializer.h; sourceTree = "<group>"; };
@@ -1312,10 +1310,7 @@
 		E872492921BFE31F00EA6A3D /* public */ = {
 			isa = PBXGroup;
 			children = (
-				E872490C21B94B2200EA6A3D /* RXAFURLRequestSerializationProtocol.h */,
-				E872490D21B94B2200EA6A3D /* RXAFURLRequestSerializationProtocol.m */,
-				E872491921BD438200EA6A3D /* RXAFURLRequestSerializationDefine.h */,
-				E872491A21BD438200EA6A3D /* RXAFURLRequestSerializationDefine.m */,
+				E872490C21B94B2200EA6A3D /* RXAFMultipartFormData.h */,
 				E872491621BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.h */,
 				E872491721BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m */,
 				E872491321BD407100EA6A3D /* RXAFJSONRequestSerializer.h */,
@@ -1329,6 +1324,8 @@
 		E872492A21BFE32000EA6A3D /* private */ = {
 			isa = PBXGroup;
 			children = (
+				E872491921BD438200EA6A3D /* RXAFURLRequestSerializationDefine.h */,
+				E872491A21BD438200EA6A3D /* RXAFURLRequestSerializationDefine.m */,
 				E872491F21BFDC3900EA6A3D /* RXAFStreamingMultipartFormData.h */,
 				E872492021BFDC3900EA6A3D /* RXAFStreamingMultipartFormData.m */,
 				E872491C21BE91C400EA6A3D /* RXAFQueryStringPair.h */,
@@ -1808,7 +1805,6 @@
 				E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */,
 				E872495221C9EFF800EA6A3D /* RXUtilViewController.m in Sources */,
 				E872494221C5293300EA6A3D /* RXAFPropertyListResponseSerializer.m in Sources */,
-				E872490E21B94B2200EA6A3D /* RXAFURLRequestSerializationProtocol.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
