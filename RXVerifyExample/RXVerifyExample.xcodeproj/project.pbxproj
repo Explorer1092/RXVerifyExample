@@ -541,6 +541,7 @@
 		E872495C21CCEA2000EA6A3D /* RXReadonlyProperty2Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXReadonlyProperty2Object.m; sourceTree = "<group>"; };
 		E872495E21CCEA2C00EA6A3D /* RXReadonlyProperty3Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXReadonlyProperty3Object.h; sourceTree = "<group>"; };
 		E872495F21CCEA2C00EA6A3D /* RXReadonlyProperty3Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXReadonlyProperty3Object.m; sourceTree = "<group>"; };
+		E872496221CE5E3900EA6A3D /* RXAFCompatibilityMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFCompatibilityMacros.h; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -1420,6 +1421,14 @@
 			path = ReadonlyProperty;
 			sourceTree = "<group>";
 		};
+		E872496121CE5E0900EA6A3D /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				E872496221CE5E3900EA6A3D /* RXAFCompatibilityMacros.h */,
+			);
+			path = NSURLSession;
+			sourceTree = "<group>";
+		};
 		E8F8D7A32187E357007AB027 /* MethodList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1485,6 +1494,7 @@
 		E8F8D7F3219133C5007AB027 /* RXAFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				E872496121CE5E0900EA6A3D /* NSURLSession */,
 				E86B170C21B29180007D555B /* Serialization */,
 				E8F8D802219BB402007AB027 /* Reachability */,
 				E8F8D7FB21917020007AB027 /* Test */,
