@@ -194,6 +194,7 @@
 		E872496921CFAC5B00EA6A3D /* RXAFURLSessionManagerTaskDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E872496821CFAC5B00EA6A3D /* RXAFURLSessionManagerTaskDelegate.m */; };
 		E872496D21CFACF700EA6A3D /* RXAFURLSessionManagerPublicDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = E872496C21CFACF700EA6A3D /* RXAFURLSessionManagerPublicDefine.m */; };
 		E872497021CFAD8500EA6A3D /* RXAFURLSessionManagerPrivateDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = E872496F21CFAD8500EA6A3D /* RXAFURLSessionManagerPrivateDefine.m */; };
+		E872497321D12E0A00EA6A3D /* RXAFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E872497221D12E0A00EA6A3D /* RXAFHTTPSessionManager.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -554,6 +555,8 @@
 		E872496C21CFACF700EA6A3D /* RXAFURLSessionManagerPublicDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFURLSessionManagerPublicDefine.m; sourceTree = "<group>"; };
 		E872496E21CFAD8500EA6A3D /* RXAFURLSessionManagerPrivateDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFURLSessionManagerPrivateDefine.h; sourceTree = "<group>"; };
 		E872496F21CFAD8500EA6A3D /* RXAFURLSessionManagerPrivateDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFURLSessionManagerPrivateDefine.m; sourceTree = "<group>"; };
+		E872497121D12E0A00EA6A3D /* RXAFHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFHTTPSessionManager.h; sourceTree = "<group>"; };
+		E872497221D12E0A00EA6A3D /* RXAFHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFHTTPSessionManager.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -1441,6 +1444,8 @@
 				E872496221CE5E3900EA6A3D /* RXAFCompatibilityMacros.h */,
 				E872496321CFAB8100EA6A3D /* RXAFURLSessionManager.h */,
 				E872496421CFAB8100EA6A3D /* RXAFURLSessionManager.m */,
+				E872497121D12E0A00EA6A3D /* RXAFHTTPSessionManager.h */,
+				E872497221D12E0A00EA6A3D /* RXAFHTTPSessionManager.m */,
 			);
 			path = NSURLSession;
 			sourceTree = "<group>";
@@ -1890,6 +1895,7 @@
 				E872493C21C5290300EA6A3D /* RXAFXMLParserResponseSerializer.m in Sources */,
 				E872494821C5296500EA6A3D /* RXAFCompoundResponseSerializer.m in Sources */,
 				C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */,
+				E872497321D12E0A00EA6A3D /* RXAFHTTPSessionManager.m in Sources */,
 				E85159B62148B195006E23D5 /* RXCrashService.m in Sources */,
 				E8433D9320FD90A5004A7FBC /* RXOCKeywordMethodNameViewController.m in Sources */,
 				E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */,
