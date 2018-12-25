@@ -195,6 +195,7 @@
 		E872496D21CFACF700EA6A3D /* RXAFURLSessionManagerPublicDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = E872496C21CFACF700EA6A3D /* RXAFURLSessionManagerPublicDefine.m */; };
 		E872497021CFAD8500EA6A3D /* RXAFURLSessionManagerPrivateDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = E872496F21CFAD8500EA6A3D /* RXAFURLSessionManagerPrivateDefine.m */; };
 		E872497321D12E0A00EA6A3D /* RXAFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E872497221D12E0A00EA6A3D /* RXAFHTTPSessionManager.m */; };
+		E87C042321D24C1800B90D74 /* AFN.graffle in Resources */ = {isa = PBXBuildFile; fileRef = E87C042221D24C1800B90D74 /* AFN.graffle */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -557,6 +558,7 @@
 		E872496F21CFAD8500EA6A3D /* RXAFURLSessionManagerPrivateDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFURLSessionManagerPrivateDefine.m; sourceTree = "<group>"; };
 		E872497121D12E0A00EA6A3D /* RXAFHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFHTTPSessionManager.h; sourceTree = "<group>"; };
 		E872497221D12E0A00EA6A3D /* RXAFHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFHTTPSessionManager.m; sourceTree = "<group>"; };
+		E87C042221D24C1800B90D74 /* AFN.graffle */ = {isa = PBXFileReference; lastKnownFileType = file; path = AFN.graffle; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -1470,6 +1472,14 @@
 			path = public;
 			sourceTree = "<group>";
 		};
+		E87C042121D24C1800B90D74 /* design */ = {
+			isa = PBXGroup;
+			children = (
+				E87C042221D24C1800B90D74 /* AFN.graffle */,
+			);
+			path = design;
+			sourceTree = "<group>";
+		};
 		E8F8D7A32187E357007AB027 /* MethodList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1535,6 +1545,7 @@
 		E8F8D7F3219133C5007AB027 /* RXAFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				E87C042121D24C1800B90D74 /* design */,
 				E872496121CE5E0900EA6A3D /* NSURLSession */,
 				E86B170C21B29180007D555B /* Serialization */,
 				E8F8D802219BB402007AB027 /* Reachability */,
@@ -1668,6 +1679,7 @@
 				E8433D8920FC7EF7004A7FBC /* RXRACDemoViewController.xib in Resources */,
 				C97881BF1FC6AE6200083ADF /* RXMethodForwardViewController.xib in Resources */,
 				C9C2B33A1E0BB2AD0087C718 /* RVOCDataViewController.xib in Resources */,
+				E87C042321D24C1800B90D74 /* AFN.graffle in Resources */,
 				C985F6191D5030EC004D654D /* RVStockViewController.xib in Resources */,
 				5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */,
 				C9BDAD641CC6237A00CBB1CA /* RVAnimation2ViewController.xib in Resources */,
