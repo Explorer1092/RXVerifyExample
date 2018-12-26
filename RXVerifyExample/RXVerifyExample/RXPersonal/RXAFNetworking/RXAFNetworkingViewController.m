@@ -15,6 +15,7 @@
 #import "RXAFNSerializationTestObject.h"
 #import "RXAFNAutoreleasingTestObject.h"
 #import "RXReadonlyProperty3Object.h"
+#import "RXNSArrayTestObject.h"
 @interface RXAFNetworkingViewController ()
 
 @property (nonatomic, strong) RXAFNTestDependPropertyObject *dependPropertyObject;
@@ -25,6 +26,8 @@
 @property (nonatomic, strong) RXAFNSerializationTestObject *afnSerializationTestObject;
 @property (nonatomic, strong) RXAFNAutoreleasingTestObject *afnAutoreleasingTestObject;
 @property (nonatomic, strong) RXReadonlyProperty3Object *rxReadonlyProperty3Object;
+@property (nonatomic, strong) RXNSArrayTestObject *rxNSArrayTestObject;
+
 
 
 @end
@@ -92,16 +95,19 @@
 //    [self.afnAutoreleasingTestObject test7];
     
     
-    void (^block2)(void) = ^() {
-        NSLog(@"block2 invoke");
-    };
-    Class cls = [block2 class];
-    NSString *str = NSStringFromClass(cls);
-    NSLog(@"str:%@", str);
+//    void (^block2)(void) = ^() {
+//        NSLog(@"block2 invoke");
+//    };
+//    Class cls = [block2 class];
+//    NSString *str = NSStringFromClass(cls);
+//    NSLog(@"str:%@", str);
     
     self.rxReadonlyProperty3Object = [RXReadonlyProperty3Object new];
-    [self.rxReadonlyProperty3Object printValue];
-    [self.rxReadonlyProperty3Object print2Value];
+//    [self.rxReadonlyProperty3Object printValue];
+//    [self.rxReadonlyProperty3Object print2Value];
+    
+    self.rxNSArrayTestObject = [RXNSArrayTestObject new];
+    [self.rxNSArrayTestObject test];
     
     
 }

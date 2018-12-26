@@ -196,6 +196,7 @@
 		E872497021CFAD8500EA6A3D /* RXAFURLSessionManagerPrivateDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = E872496F21CFAD8500EA6A3D /* RXAFURLSessionManagerPrivateDefine.m */; };
 		E872497321D12E0A00EA6A3D /* RXAFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E872497221D12E0A00EA6A3D /* RXAFHTTPSessionManager.m */; };
 		E87C042321D24C1800B90D74 /* AFN.graffle in Resources */ = {isa = PBXBuildFile; fileRef = E87C042221D24C1800B90D74 /* AFN.graffle */; };
+		E87C042721D2599600B90D74 /* RXNSArrayTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C042621D2599600B90D74 /* RXNSArrayTestObject.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -559,6 +560,8 @@
 		E872497121D12E0A00EA6A3D /* RXAFHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFHTTPSessionManager.h; sourceTree = "<group>"; };
 		E872497221D12E0A00EA6A3D /* RXAFHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFHTTPSessionManager.m; sourceTree = "<group>"; };
 		E87C042221D24C1800B90D74 /* AFN.graffle */ = {isa = PBXFileReference; lastKnownFileType = file; path = AFN.graffle; sourceTree = "<group>"; };
+		E87C042521D2599600B90D74 /* RXNSArrayTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSArrayTestObject.h; sourceTree = "<group>"; };
+		E87C042621D2599600B90D74 /* RXNSArrayTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNSArrayTestObject.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -812,6 +815,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E87C042421D2597B00B90D74 /* RXArray */,
 				E8F8D7F3219133C5007AB027 /* RXAFNetworking */,
 				E8F8D7DC218FD699007AB027 /* RXCLanguage */,
 				E8F8D7D2218C3A01007AB027 /* RXAspects */,
@@ -1480,6 +1484,15 @@
 			path = design;
 			sourceTree = "<group>";
 		};
+		E87C042421D2597B00B90D74 /* RXArray */ = {
+			isa = PBXGroup;
+			children = (
+				E87C042521D2599600B90D74 /* RXNSArrayTestObject.h */,
+				E87C042621D2599600B90D74 /* RXNSArrayTestObject.m */,
+			);
+			path = RXArray;
+			sourceTree = "<group>";
+		};
 		E8F8D7A32187E357007AB027 /* MethodList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1918,6 +1931,7 @@
 				E8F8D7FA21916FFC007AB027 /* RXAFNetworkingViewController.m in Sources */,
 				E8433D8120EF6959004A7FBC /* RXHookBlockManager.m in Sources */,
 				E872496521CFAB8100EA6A3D /* RXAFURLSessionManager.m in Sources */,
+				E87C042721D2599600B90D74 /* RXNSArrayTestObject.m in Sources */,
 				C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */,
 				E870202920D8E10B00752211 /* RVGCDQueuesViewController.m in Sources */,
 				E85159B92148B1CC006E23D5 /* RXJLRoutesService.m in Sources */,
