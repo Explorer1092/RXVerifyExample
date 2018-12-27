@@ -16,6 +16,7 @@
 #import "RXAFNAutoreleasingTestObject.h"
 #import "RXReadonlyProperty3Object.h"
 #import "RXNSArrayTestObject.h"
+#import "RXLoadInitializeTestObject.h"
 @interface RXAFNetworkingViewController ()
 
 @property (nonatomic, strong) RXAFNTestDependPropertyObject *dependPropertyObject;
@@ -27,6 +28,9 @@
 @property (nonatomic, strong) RXAFNAutoreleasingTestObject *afnAutoreleasingTestObject;
 @property (nonatomic, strong) RXReadonlyProperty3Object *rxReadonlyProperty3Object;
 @property (nonatomic, strong) RXNSArrayTestObject *rxNSArrayTestObject;
+
+@property (nonatomic, strong) RXLoadInitializeTestObject *rxLoadInitializeTestObject;
+
 
 
 
@@ -107,8 +111,17 @@
 //    [self.rxReadonlyProperty3Object print2Value];
     
     self.rxNSArrayTestObject = [RXNSArrayTestObject new];
-    [self.rxNSArrayTestObject test];
+//    [self.rxNSArrayTestObject test];
     
+    
+    self.rxLoadInitializeTestObject = [RXLoadInitializeTestObject new];
+//    [self.rxLoadInitializeTestObject test2];
+    
+    [self.rxLoadInitializeTestObject test2_22];
+    
+//    [self.rxLoadInitializeTestObject test2_222];
+    
+//    [self.rxLoadInitializeTestObject test3];
     
 }
 
