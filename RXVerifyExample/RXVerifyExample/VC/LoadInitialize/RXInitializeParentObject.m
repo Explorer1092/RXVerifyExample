@@ -11,7 +11,7 @@
 @implementation RXInitializeParentObject
 + (void)initialize
 {
-    NSLog(@"1-1-1 initialize");
+    NSLog(@"Parent initialize");
 }
 - (void)print
 {

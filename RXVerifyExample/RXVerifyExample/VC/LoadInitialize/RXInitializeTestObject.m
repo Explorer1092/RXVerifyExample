@@ -14,10 +14,10 @@
 #import "RXInitializeSuperCustomObject.h"
 @interface RXInitializeTestObject()
 
-@property (nonatomic, strong) RXInitializeCustomObject *rxLoadInitialize2Object;
-@property (nonatomic, strong) RXInitializeEmptyObject *rxLoadInitialize22Object;
-@property (nonatomic, strong) RXInitializeCustom2Object *rxLoadInitialize222Object;
-@property (nonatomic, strong) RXInitializeSuperCustomObject *rxLoadInitialize3Object;
+@property (nonatomic, strong) RXInitializeEmptyObject *rxInitializeEmptyObject;
+@property (nonatomic, strong) RXInitializeCustomObject *rxInitializeCustomObject;
+@property (nonatomic, strong) RXInitializeCustom2Object *rxInitializeCustom2Object;
+@property (nonatomic, strong) RXInitializeSuperCustomObject *rxInitializeSuperCustomObject;
 @end
 @implementation RXInitializeTestObject
 
@@ -31,38 +31,38 @@
     return self;
 }
 
-- (void)test2
+- (void)test_custom
 {
     
-    self.rxLoadInitialize2Object = [RXInitializeCustomObject new];
-    [self.rxLoadInitialize2Object print];
+    self.rxInitializeCustomObject = [RXInitializeCustomObject new];
+    [self.rxInitializeCustomObject print];
 }
 
-- (void)test2_22
+- (void)test_custom_empty
 {
     
-    self.rxLoadInitialize2Object = [RXInitializeCustomObject new];
-    [self.rxLoadInitialize2Object print];
+    self.rxInitializeCustomObject = [RXInitializeCustomObject new];
+    [self.rxInitializeCustomObject print];
     
-    self.rxLoadInitialize22Object = [RXInitializeEmptyObject new];
-    [self.rxLoadInitialize22Object print];
+    self.rxInitializeEmptyObject = [RXInitializeEmptyObject new];
+    [self.rxInitializeEmptyObject print];
 }
 
 
-- (void)test2_222
+- (void)test_custom_custom2
 {
-    self.rxLoadInitialize2Object = [RXInitializeCustomObject new];
-    [self.rxLoadInitialize2Object print];
+    self.rxInitializeCustomObject = [RXInitializeCustomObject new];
+    [self.rxInitializeCustomObject print];
     
-    self.rxLoadInitialize222Object = [RXInitializeCustom2Object new];
-    [self.rxLoadInitialize222Object print];
+    self.rxInitializeCustom2Object = [RXInitializeCustom2Object new];
+    [self.rxInitializeCustom2Object print];
 }
 
-- (void)test3
+- (void)test_superCustom
 {
     
-    self.rxLoadInitialize3Object = [RXInitializeSuperCustomObject new];
-    [self.rxLoadInitialize3Object print];
+    self.rxInitializeSuperCustomObject = [RXInitializeSuperCustomObject new];
+    [self.rxInitializeSuperCustomObject print];
 }
 
 @end

@@ -11,6 +11,6 @@
 @implementation RXInitializeCustom2Object
 + (void)initialize
 {
-    NSLog(@"222-222-222-222 initialize");
+    NSLog(@"Custom 2 initialize");
 }
 @end

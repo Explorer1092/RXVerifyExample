@@ -119,13 +119,13 @@
     
     
     self.rxInitializeTestObject = [RXInitializeTestObject new];
-//    [self.rxInitializeTestObject test2];
+//    [self.rxInitializeTestObject test_custom];
     
-    [self.rxInitializeTestObject test2_22];
+//    [self.rxInitializeTestObject test_custom_empty];
     
-//    [self.rxInitializeTestObject test2_222];
+//    [self.rxInitializeTestObject test_custom_custom2];
     
-//    [self.rxInitializeTestObject test3];
+    [self.rxInitializeTestObject test_superCustom];
     
     self.rxMethodSwizzleTestObject = [RXMethodSwizzleTestObject new];
 //    [self.rxMethodSwizzleTestObject test_roughly_after_parent];

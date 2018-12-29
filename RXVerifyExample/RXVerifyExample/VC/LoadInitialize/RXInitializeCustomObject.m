@@ -11,7 +11,7 @@
 @implementation RXInitializeCustomObject
 + (void)initialize
 {
-    NSLog(@"2-2-2-2 initialize");
+    NSLog(@"Custom initialize");
 }
 
 

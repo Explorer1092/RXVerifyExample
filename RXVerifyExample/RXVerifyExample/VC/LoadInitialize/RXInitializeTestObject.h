@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface RXInitializeTestObject : NSObject
-- (void)test2;
+- (void)test_custom;
 
-- (void)test2_22;
+- (void)test_custom_empty;
 
-- (void)test2_222;
+- (void)test_custom_custom2;
 
-- (void)test3;
+- (void)test_superCustom;
 @end

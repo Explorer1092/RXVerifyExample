@@ -12,6 +12,6 @@
 + (void)initialize
 {
     [super initialize];
-    NSLog(@"3-3-3 initialize");
+    NSLog(@"Super Custom initialize");
 }
 @end
