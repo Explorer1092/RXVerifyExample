@@ -1,14 +1,14 @@
 //
-//  RXLoadInitialize2Object.m
+//  RXInitializeCustomObject.m
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2018/12/27.
 //  Copyright © 2018 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXLoadInitialize2Object.h"
+#import "RXInitializeCustomObject.h"
 
-@implementation RXLoadInitialize2Object
+@implementation RXInitializeCustomObject
 + (void)initialize
 {
     NSLog(@"2-2-2-2 initialize");

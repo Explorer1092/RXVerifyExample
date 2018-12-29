@@ -16,7 +16,7 @@
 #import "RXAFNAutoreleasingTestObject.h"
 #import "RXReadonlyProperty3Object.h"
 #import "RXNSArrayTestObject.h"
-#import "RXLoadInitializeTestObject.h"
+#import "RXInitializeTestObject.h"
 
 #import "RXMethodSwizzleTestObject.h"
 @interface RXAFNetworkingViewController ()
@@ -31,7 +31,9 @@
 @property (nonatomic, strong) RXReadonlyProperty3Object *rxReadonlyProperty3Object;
 @property (nonatomic, strong) RXNSArrayTestObject *rxNSArrayTestObject;
 
-@property (nonatomic, strong) RXLoadInitializeTestObject *rxLoadInitializeTestObject;
+@property (nonatomic, strong) RXInitializeTestObject *rxInitializeTestObject;
+
+@property (nonatomic, strong) RXMethodSwizzleTestObject *rxMethodSwizzleTestObject;
 
 
 
@@ -116,19 +118,19 @@
 //    [self.rxNSArrayTestObject test];
     
     
-    self.rxLoadInitializeTestObject = [RXLoadInitializeTestObject new];
-//    [self.rxLoadInitializeTestObject test2];
+    self.rxInitializeTestObject = [RXInitializeTestObject new];
+//    [self.rxInitializeTestObject test2];
     
-    [self.rxLoadInitializeTestObject test2_22];
+    [self.rxInitializeTestObject test2_22];
     
-//    [self.rxLoadInitializeTestObject test2_222];
+//    [self.rxInitializeTestObject test2_222];
     
-//    [self.rxLoadInitializeTestObject test3];
+//    [self.rxInitializeTestObject test3];
     
-    RXMethodSwizzleTestObject *obj = [RXMethodSwizzleTestObject new];
-//    [obj test_roughly_after_parent];
+    self.rxMethodSwizzleTestObject = [RXMethodSwizzleTestObject new];
+//    [self.rxMethodSwizzleTestObject test_roughly_after_parent];
     
-    [obj test_roughly_before_parent];
+//    [self.rxMethodSwizzleTestObject test_roughly_before_parent];
     
 }
 

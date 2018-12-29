@@ -1,5 +1,5 @@
 //
-//  RXLoadInitialize1Object.h
+//  RXInitializeParentObject.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2018/12/27.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RXLoadInitialize1Object : NSObject
+@interface RXInitializeParentObject : NSObject
 - (void)print;
 @end

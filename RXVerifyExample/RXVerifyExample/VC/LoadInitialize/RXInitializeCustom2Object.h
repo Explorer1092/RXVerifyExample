@@ -1,13 +1,13 @@
 //
-//  RXLoadInitialize22Object.h
+//  RXInitializeCustom2Object.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2018/12/27.
 //  Copyright © 2018 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXLoadInitialize1Object.h"
+#import "RXInitializeParentObject.h"
 
-@interface RXLoadInitialize22Object : RXLoadInitialize1Object
+@interface RXInitializeCustom2Object : RXInitializeParentObject
 
 @end

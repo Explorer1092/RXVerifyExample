@@ -1,14 +1,14 @@
 //
-//  RXLoadInitialize3Object.m
+//  RXInitializeSuperCustomObject.m
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2018/12/27.
 //  Copyright © 2018 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXLoadInitialize3Object.h"
+#import "RXInitializeSuperCustomObject.h"
 
-@implementation RXLoadInitialize3Object
+@implementation RXInitializeSuperCustomObject
 + (void)initialize
 {
     [super initialize];

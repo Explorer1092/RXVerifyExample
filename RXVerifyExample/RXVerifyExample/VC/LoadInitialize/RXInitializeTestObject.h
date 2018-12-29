@@ -1,5 +1,5 @@
 //
-//  RXLoadInitializeTestObject.h
+//  RXInitializeTestObject.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2018/12/27.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RXLoadInitializeTestObject : NSObject
+@interface RXInitializeTestObject : NSObject
 - (void)test2;
 
 - (void)test2_22;
