@@ -17,6 +17,8 @@
 #import "RXReadonlyProperty3Object.h"
 #import "RXNSArrayTestObject.h"
 #import "RXLoadInitializeTestObject.h"
+
+#import "RXMethodSwizzleTestObject.h"
 @interface RXAFNetworkingViewController ()
 
 @property (nonatomic, strong) RXAFNTestDependPropertyObject *dependPropertyObject;
@@ -122,6 +124,11 @@
 //    [self.rxLoadInitializeTestObject test2_222];
     
 //    [self.rxLoadInitializeTestObject test3];
+    
+    RXMethodSwizzleTestObject *obj = [RXMethodSwizzleTestObject new];
+//    [obj test_roughly_after_parent];
+    
+    [obj test_roughly_before_parent];
     
 }
 

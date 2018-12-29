@@ -83,4 +83,24 @@
 }
 
 
++ (void)exchangeMethodRoughly:(Class)cls originSel:(SEL)originSel newSel:(SEL)newSel
+{
+    Method originalMethod = class_getInstanceMethod(cls, originSel);
+    Method swizzledMethod = class_getInstanceMethod(cls, newSel);
+    method_exchangeImplementations(originalMethod, swizzledMethod);
+    
+}
++ (void)exchangeMethodSafely:(Class)cls originSel:(SEL)originSel newSel:(SEL)newSel
+{
+    Method originalMethod = class_getInstanceMethod(cls, originSel);
+    Method swizzledMethod = class_getInstanceMethod(cls, newSel);
+    
+    BOOL didAddMethod = class_addMethod(cls, originSel, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+    if (didAddMethod) {
+        class_replaceMethod(cls, newSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
+}
+
 @end

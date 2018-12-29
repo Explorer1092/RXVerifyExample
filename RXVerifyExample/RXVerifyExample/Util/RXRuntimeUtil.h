@@ -13,4 +13,10 @@
 + (void)printMethodList:(id)value;
 + (void)printIvarList:(id)value;
 + (void)printProtocolList:(id)value;
+
+
+
++ (void)exchangeMethodRoughly:(Class)cls originSel:(SEL)originSel newSel:(SEL)newSel;
++ (void)exchangeMethodSafely:(Class)cls originSel:(SEL)originSel newSel:(SEL)newSel;
+
 @end
