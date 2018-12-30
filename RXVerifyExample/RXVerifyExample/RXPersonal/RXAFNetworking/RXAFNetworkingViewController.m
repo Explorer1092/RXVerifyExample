@@ -19,6 +19,8 @@
 #import "RXInitializeTestObject.h"
 
 #import "RXMethodSwizzleTestObject.h"
+
+#import "RXCharacterSetTestObject.h"
 @interface RXAFNetworkingViewController ()
 
 @property (nonatomic, strong) RXAFNTestDependPropertyObject *dependPropertyObject;
@@ -34,6 +36,7 @@
 @property (nonatomic, strong) RXInitializeTestObject *rxInitializeTestObject;
 
 @property (nonatomic, strong) RXMethodSwizzleTestObject *rxMethodSwizzleTestObject;
+@property (nonatomic, strong) RXCharacterSetTestObject *rxCharacterSetTestObject;
 
 
 
@@ -131,6 +134,10 @@
 //    [self.rxMethodSwizzleTestObject test_roughly_after_parent];
     
 //    [self.rxMethodSwizzleTestObject test_roughly_before_parent];
+    
+    
+    self.rxCharacterSetTestObject = [RXCharacterSetTestObject new];
+    [self.rxCharacterSetTestObject test];
     
 }
 

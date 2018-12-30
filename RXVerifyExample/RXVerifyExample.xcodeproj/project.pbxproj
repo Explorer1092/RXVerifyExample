@@ -209,6 +209,7 @@
 		E87C044821D7127600B90D74 /* RXMethodSwizzleOverrideRoughlyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C044721D7127600B90D74 /* RXMethodSwizzleOverrideRoughlyObject.m */; };
 		E87C044B21D7133B00B90D74 /* RXMethodSwizzleSafelyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C044A21D7133B00B90D74 /* RXMethodSwizzleSafelyObject.m */; };
 		E87C044E21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C044D21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m */; };
+		E87C045221D9051000B90D74 /* RXCharacterSetTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C045121D9051000B90D74 /* RXCharacterSetTestObject.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -598,6 +599,8 @@
 		E87C044A21D7133B00B90D74 /* RXMethodSwizzleSafelyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMethodSwizzleSafelyObject.m; sourceTree = "<group>"; };
 		E87C044C21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMethodSwizzleOverrideSafelyObject.h; sourceTree = "<group>"; };
 		E87C044D21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMethodSwizzleOverrideSafelyObject.m; sourceTree = "<group>"; };
+		E87C045021D9051000B90D74 /* RXCharacterSetTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCharacterSetTestObject.h; sourceTree = "<group>"; };
+		E87C045121D9051000B90D74 /* RXCharacterSetTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCharacterSetTestObject.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -1155,6 +1158,7 @@
 		E86050FF20A2E4BB0016F6C9 /* CoreFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				E87C044F21D904F100B90D74 /* CharacterSet */,
 				E860510020A2E4CA0016F6C9 /* RVArrayCopyViewController.h */,
 				E860510120A2E4CA0016F6C9 /* RVArrayCopyViewController.m */,
 			);
@@ -1577,6 +1581,15 @@
 			path = MethodSwizzle;
 			sourceTree = "<group>";
 		};
+		E87C044F21D904F100B90D74 /* CharacterSet */ = {
+			isa = PBXGroup;
+			children = (
+				E87C045021D9051000B90D74 /* RXCharacterSetTestObject.h */,
+				E87C045121D9051000B90D74 /* RXCharacterSetTestObject.m */,
+			);
+			path = CharacterSet;
+			sourceTree = "<group>";
+		};
 		E8F8D7A32187E357007AB027 /* MethodList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1907,6 +1920,7 @@
 				E8F8D80121917041007AB027 /* RXAFNTest2Object.m in Sources */,
 				E8433D7E20EDBE78004A7FBC /* RXMacroViewController.m in Sources */,
 				E86050FE20A2A1840016F6C9 /* RVAddMethodViewController.m in Sources */,
+				E87C045221D9051000B90D74 /* RXCharacterSetTestObject.m in Sources */,
 				E872493921C528D100EA6A3D /* RXAFJSONResponseSerializer.m in Sources */,
 				E86050EB20A07B0D0016F6C9 /* RXCurrentQueueViewController.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
