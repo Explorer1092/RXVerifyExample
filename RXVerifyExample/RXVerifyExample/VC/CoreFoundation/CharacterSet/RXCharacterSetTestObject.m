@@ -7,7 +7,7 @@
 //
 
 #import "RXCharacterSetTestObject.h"
-
+#import "RXRuntimeUtil.h"
 @implementation RXCharacterSetTestObject
 - (void)test
 {
@@ -16,6 +16,12 @@
     NSCharacterSet *characterSet = [NSCharacterSet whitespaceCharacterSet];
     NSLog(@"%@", characterSet);
     
-    NSArray *ary;
+//    NSArray *ary;
+    
+    [RXRuntimeUtil printIvarList:characterSet];
+    
+    [RXRuntimeUtil printMethodList:characterSet];
+    
+    [RXRuntimeUtil printPropertyList:characterSet];
 }
 @end
