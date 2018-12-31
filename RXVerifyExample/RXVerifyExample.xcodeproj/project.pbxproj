@@ -210,6 +210,7 @@
 		E87C044B21D7133B00B90D74 /* RXMethodSwizzleSafelyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C044A21D7133B00B90D74 /* RXMethodSwizzleSafelyObject.m */; };
 		E87C044E21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C044D21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m */; };
 		E87C045221D9051000B90D74 /* RXCharacterSetTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C045121D9051000B90D74 /* RXCharacterSetTestObject.m */; };
+		E87C045721DA183100B90D74 /* RXCountryWeatherApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C045621DA183100B90D74 /* RXCountryWeatherApi.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -601,6 +602,8 @@
 		E87C044D21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMethodSwizzleOverrideSafelyObject.m; sourceTree = "<group>"; };
 		E87C045021D9051000B90D74 /* RXCharacterSetTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCharacterSetTestObject.h; sourceTree = "<group>"; };
 		E87C045121D9051000B90D74 /* RXCharacterSetTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCharacterSetTestObject.m; sourceTree = "<group>"; };
+		E87C045521DA183100B90D74 /* RXCountryWeatherApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCountryWeatherApi.h; sourceTree = "<group>"; };
+		E87C045621DA183100B90D74 /* RXCountryWeatherApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCountryWeatherApi.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -802,6 +805,7 @@
 		58FF7D721C4623A200F06976 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				E87C045321DA181400B90D74 /* Api */,
 				58FF7D731C4623A200F06976 /* UnionPay */,
 			);
 			path = Third;
@@ -1590,6 +1594,23 @@
 			path = CharacterSet;
 			sourceTree = "<group>";
 		};
+		E87C045321DA181400B90D74 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				E87C045421DA181400B90D74 /* WeatherApi */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		E87C045421DA181400B90D74 /* WeatherApi */ = {
+			isa = PBXGroup;
+			children = (
+				E87C045521DA183100B90D74 /* RXCountryWeatherApi.h */,
+				E87C045621DA183100B90D74 /* RXCountryWeatherApi.m */,
+			);
+			path = WeatherApi;
+			sourceTree = "<group>";
+		};
 		E8F8D7A32187E357007AB027 /* MethodList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1899,6 +1920,7 @@
 				E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */,
 				E870202620D39A3800752211 /* RXSYViewController.m in Sources */,
 				E872496921CFAC5B00EA6A3D /* RXAFURLSessionManagerTaskDelegate.m in Sources */,
+				E87C045721DA183100B90D74 /* RXCountryWeatherApi.m in Sources */,
 				E86050FB20A29A9D0016F6C9 /* RVMsgForwardProxy.m in Sources */,
 				C9BDAFB91E4AC4B8006CCD0E /* RVThreadViewController.m in Sources */,
 				E872492521BFDD3600EA6A3D /* RXAFMultipartBodyStream.m in Sources */,
