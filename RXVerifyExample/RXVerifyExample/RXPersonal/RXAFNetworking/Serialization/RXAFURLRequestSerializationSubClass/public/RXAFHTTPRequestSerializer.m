@@ -348,7 +348,7 @@ forHTTPHeaderField:(NSString *)field
             }
         } else {
             switch (self.queryStringSerializationStyle) {
-                case AFHTTPRequestQueryStringDefaultStyle:
+                case RXAFHTTPRequestQueryStringDefaultStyle:
                     query = RXAFQueryStringFromParameters(parameters);
                     break;
             }

@@ -21,6 +21,7 @@
 #import "RXMethodSwizzleTestObject.h"
 
 #import "RXCharacterSetTestObject.h"
+#import "RXCountryWeatherApiTestObject.h"
 @interface RXAFNetworkingViewController ()
 
 @property (nonatomic, strong) RXAFNTestDependPropertyObject *dependPropertyObject;
@@ -38,6 +39,7 @@
 @property (nonatomic, strong) RXMethodSwizzleTestObject *rxMethodSwizzleTestObject;
 @property (nonatomic, strong) RXCharacterSetTestObject *rxCharacterSetTestObject;
 
+@property (nonatomic, strong) RXCountryWeatherApiTestObject *rxCountryWeatherApiTestObject;
 
 
 
@@ -137,7 +139,10 @@
     
     
     self.rxCharacterSetTestObject = [RXCharacterSetTestObject new];
-    [self.rxCharacterSetTestObject test];
+//    [self.rxCharacterSetTestObject test];
+    
+    self.rxCountryWeatherApiTestObject = [RXCountryWeatherApiTestObject new];
+    [self.rxCountryWeatherApiTestObject test];
     
 }
 

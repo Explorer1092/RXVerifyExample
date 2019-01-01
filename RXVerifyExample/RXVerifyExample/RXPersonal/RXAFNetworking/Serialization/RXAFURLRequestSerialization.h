@@ -104,7 +104,7 @@ FOUNDATION_EXPORT NSString * RXAFQueryStringFromParameters(NSDictionary *paramet
 
 // TODOAFN_M_3_K_5
 typedef NS_ENUM(NSUInteger, RXAFHTTPRequestQueryStringSerializationStyle) {
-    AFHTTPRequestQueryStringDefaultStyle = 0,
+    RXAFHTTPRequestQueryStringDefaultStyle = 0,
 };
 
 // TODOAFN_M_3_K_3
