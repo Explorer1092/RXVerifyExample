@@ -12,8 +12,7 @@
 // TODOAFN_M_3_K_12
 @interface RXAFStreamingMultipartFormData : NSObject<RXAFMultipartFormData>
 
-- (instancetype)initWithURLRequest:(NSMutableURLRequest *)urlRequest
-                    stringEncoding:(NSStringEncoding)encoding;
+- (instancetype)initWithURLRequest:(NSMutableURLRequest *)urlRequest stringEncoding:(NSStringEncoding)encoding;
 
 - (NSMutableURLRequest *)requestByFinalizingMultipartFormData;
 @end

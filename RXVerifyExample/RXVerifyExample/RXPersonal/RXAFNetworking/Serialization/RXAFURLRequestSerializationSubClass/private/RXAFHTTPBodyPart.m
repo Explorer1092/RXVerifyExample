@@ -129,8 +129,7 @@ static inline NSString * RXAFMultipartFormFinalBoundary(NSString *boundary) {
     }
 }
 
-- (NSInteger)read:(uint8_t *)buffer
-        maxLength:(NSUInteger)length
+- (NSInteger)read:(uint8_t *)buffer maxLength:(NSUInteger)length
 {
     NSInteger totalNumberOfBytesRead = 0;
     
@@ -167,9 +166,7 @@ static inline NSString * RXAFMultipartFormFinalBoundary(NSString *boundary) {
     return totalNumberOfBytesRead;
 }
 
-- (NSInteger)readData:(NSData *)data
-           intoBuffer:(uint8_t *)buffer
-            maxLength:(NSUInteger)length
+- (NSInteger)readData:(NSData *)data intoBuffer:(uint8_t *)buffer maxLength:(NSUInteger)length
 {
     NSRange range = NSMakeRange((NSUInteger)_phaseReadOffset, MIN([data length] - ((NSUInteger)_phaseReadOffset), length));
     [data getBytes:buffer range:range];
