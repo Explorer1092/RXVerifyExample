@@ -22,6 +22,8 @@
 
 #import "RXCharacterSetTestObject.h"
 #import "RXCountryWeatherApiTestObject.h"
+
+#import "RXObserveTestObject.h"
 @interface RXAFNetworkingViewController ()
 
 @property (nonatomic, strong) RXAFNTestDependPropertyObject *dependPropertyObject;
@@ -40,6 +42,7 @@
 @property (nonatomic, strong) RXCharacterSetTestObject *rxCharacterSetTestObject;
 
 @property (nonatomic, strong) RXCountryWeatherApiTestObject *rxCountryWeatherApiTestObject;
+@property (nonatomic, strong) RXObserveTestObject *rxObserveTestObject;
 
 
 
@@ -142,7 +145,19 @@
 //    [self.rxCharacterSetTestObject test];
     
     self.rxCountryWeatherApiTestObject = [RXCountryWeatherApiTestObject new];
-    [self.rxCountryWeatherApiTestObject test];
+//    [self.rxCountryWeatherApiTestObject test];
+    
+    self.rxObserveTestObject = [RXObserveTestObject new];
+    [self.rxObserveTestObject test_notSameObject];
+//    [self.rxObserveTestObject test_remove_notExist];
+//    [self.rxObserveTestObject test_remove_multiple];
+//    [self.rxObserveTestObject test];
+//    [self.rxObserveTestObject test_after_call_test];
+    
+//
+//    [self addObserver:self forKeyPath:@"sss" options:NSKeyValueObservingOptionNew context:nil];
+//
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:nil name:@"111" object:nil];
     
 }
 

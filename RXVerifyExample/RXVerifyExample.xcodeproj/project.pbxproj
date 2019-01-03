@@ -212,6 +212,9 @@
 		E87C045221D9051000B90D74 /* RXCharacterSetTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C045121D9051000B90D74 /* RXCharacterSetTestObject.m */; };
 		E87C045721DA183100B90D74 /* RXCountryWeatherApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C045621DA183100B90D74 /* RXCountryWeatherApi.m */; };
 		E87C045A21DB86F800B90D74 /* RXCountryWeatherApiTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C045921DB86F800B90D74 /* RXCountryWeatherApiTestObject.m */; };
+		E87C045E21DDE55D00B90D74 /* RXObserverObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C045D21DDE55D00B90D74 /* RXObserverObject.m */; };
+		E87C046121DDE58600B90D74 /* RXObservedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C046021DDE58600B90D74 /* RXObservedObject.m */; };
+		E87C046421DDE5A500B90D74 /* RXObserveTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C046321DDE5A500B90D74 /* RXObserveTestObject.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -607,6 +610,12 @@
 		E87C045621DA183100B90D74 /* RXCountryWeatherApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCountryWeatherApi.m; sourceTree = "<group>"; };
 		E87C045821DB86F800B90D74 /* RXCountryWeatherApiTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCountryWeatherApiTestObject.h; sourceTree = "<group>"; };
 		E87C045921DB86F800B90D74 /* RXCountryWeatherApiTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCountryWeatherApiTestObject.m; sourceTree = "<group>"; };
+		E87C045C21DDE55D00B90D74 /* RXObserverObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXObserverObject.h; sourceTree = "<group>"; };
+		E87C045D21DDE55D00B90D74 /* RXObserverObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXObserverObject.m; sourceTree = "<group>"; };
+		E87C045F21DDE58600B90D74 /* RXObservedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXObservedObject.h; sourceTree = "<group>"; };
+		E87C046021DDE58600B90D74 /* RXObservedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXObservedObject.m; sourceTree = "<group>"; };
+		E87C046221DDE5A500B90D74 /* RXObserveTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXObserveTestObject.h; sourceTree = "<group>"; };
+		E87C046321DDE5A500B90D74 /* RXObserveTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXObserveTestObject.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -760,6 +769,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E87C045B21DDE54600B90D74 /* RXObserve */,
 				E87C042421D2597B00B90D74 /* RXArray */,
 				E8F8D7F3219133C5007AB027 /* RXAFNetworking */,
 				E8F8D7DC218FD699007AB027 /* RXCLanguage */,
@@ -1616,6 +1626,19 @@
 			path = WeatherApi;
 			sourceTree = "<group>";
 		};
+		E87C045B21DDE54600B90D74 /* RXObserve */ = {
+			isa = PBXGroup;
+			children = (
+				E87C045C21DDE55D00B90D74 /* RXObserverObject.h */,
+				E87C045D21DDE55D00B90D74 /* RXObserverObject.m */,
+				E87C045F21DDE58600B90D74 /* RXObservedObject.h */,
+				E87C046021DDE58600B90D74 /* RXObservedObject.m */,
+				E87C046221DDE5A500B90D74 /* RXObserveTestObject.h */,
+				E87C046321DDE5A500B90D74 /* RXObserveTestObject.m */,
+			);
+			path = RXObserve;
+			sourceTree = "<group>";
+		};
 		E8F8D7A32187E357007AB027 /* MethodList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1932,6 +1955,7 @@
 				C9C2B3391E0BB2AD0087C718 /* RVOCDataViewController.m in Sources */,
 				58D660391C2571A700912786 /* RXMenuView.m in Sources */,
 				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
+				E87C045E21DDE55D00B90D74 /* RXObserverObject.m in Sources */,
 				E872493F21C5291100EA6A3D /* RXAFXMLDocumentResponseSerializer.m in Sources */,
 				E826367820A96BEF0081F4A8 /* RXMVPGreetingViewController.m in Sources */,
 				C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */,
@@ -2007,6 +2031,7 @@
 				E870204220DA7B2800752211 /* RXCornerRadiusTableViewImpl.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */,
+				E87C046421DDE5A500B90D74 /* RXObserveTestObject.m in Sources */,
 				E8F8D7D8218C3B29007AB027 /* RXAspectsTestObject.m in Sources */,
 				E8433D8420F885D8004A7FBC /* RXRACClassViewController.m in Sources */,
 				E85158802140CC99006E23D5 /* UncaughtExceptionHandler.m in Sources */,
@@ -2082,6 +2107,7 @@
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
 				E8433D9020FC9C81004A7FBC /* RXOCKWKindofViewController.m in Sources */,
 				E870203120DA617200752211 /* RXUIListPerformanceViewController.m in Sources */,
+				E87C046121DDE58600B90D74 /* RXObservedObject.m in Sources */,
 				E8F8D7DB218C42B3007AB027 /* RXAspectsViewController.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				E87C044E21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m in Sources */,
