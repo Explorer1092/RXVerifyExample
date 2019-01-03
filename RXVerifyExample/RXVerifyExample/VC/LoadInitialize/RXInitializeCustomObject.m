@@ -9,10 +9,7 @@
 #import "RXInitializeCustomObject.h"
 
 @implementation RXInitializeCustomObject
-+ (void)initialize
-{
++ (void)initialize {
     NSLog(@"Custom initialize");
 }
-
-
 @end

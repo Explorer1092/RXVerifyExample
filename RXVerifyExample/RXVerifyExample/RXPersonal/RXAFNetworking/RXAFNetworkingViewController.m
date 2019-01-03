@@ -127,12 +127,12 @@
     
     
     self.rxInitializeTestObject = [RXInitializeTestObject new];
+//    [self.rxInitializeTestObject test_doNoting];
+//    [self.rxInitializeTestObject test_empty];
 //    [self.rxInitializeTestObject test_custom];
-    
+//    [self.rxInitializeTestObject test_empty_custom];
 //    [self.rxInitializeTestObject test_custom_empty];
-    
 //    [self.rxInitializeTestObject test_custom_custom2];
-    
     [self.rxInitializeTestObject test_superCustom];
     
     self.rxMethodSwizzleTestObject = [RXMethodSwizzleTestObject new];
@@ -148,7 +148,7 @@
 //    [self.rxCountryWeatherApiTestObject test];
     
     self.rxObserveTestObject = [RXObserveTestObject new];
-    [self.rxObserveTestObject test_notSameObject];
+//    [self.rxObserveTestObject test_notSameObject];
 //    [self.rxObserveTestObject test_remove_notExist];
 //    [self.rxObserveTestObject test_remove_multiple];
 //    [self.rxObserveTestObject test];

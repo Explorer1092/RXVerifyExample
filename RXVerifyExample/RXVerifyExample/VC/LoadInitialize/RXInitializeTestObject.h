@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface RXInitializeTestObject : NSObject
+- (void)test_doNoting;
+- (void)test_empty;
 - (void)test_custom;
 
+- (void)test_empty_custom;
 - (void)test_custom_empty;
 
 - (void)test_custom_custom2;

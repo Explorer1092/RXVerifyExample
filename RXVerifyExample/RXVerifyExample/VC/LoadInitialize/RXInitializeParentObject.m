@@ -9,12 +9,9 @@
 #import "RXInitializeParentObject.h"
 
 @implementation RXInitializeParentObject
-+ (void)initialize
-{
++ (void)initialize {
     NSLog(@"Parent initialize");
 }
-- (void)print
-{
-    
+- (void)print {
 }
 @end

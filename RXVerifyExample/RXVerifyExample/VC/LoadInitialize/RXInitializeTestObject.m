@@ -24,23 +24,29 @@
 - (id)init
 {
     if (self = [super init]) {
-        
-        
-        
     }
     return self;
 }
 
-- (void)test_custom
-{
-    
+- (void)test_doNoting {
+}
+- (void)test_empty {
+    self.rxInitializeEmptyObject = [RXInitializeEmptyObject new];
+    [self.rxInitializeEmptyObject print];
+}
+- (void)test_custom {
     self.rxInitializeCustomObject = [RXInitializeCustomObject new];
     [self.rxInitializeCustomObject print];
 }
 
-- (void)test_custom_empty
-{
+- (void)test_empty_custom {
+    self.rxInitializeEmptyObject = [RXInitializeEmptyObject new];
+    [self.rxInitializeEmptyObject print];
     
+    self.rxInitializeCustomObject = [RXInitializeCustomObject new];
+    [self.rxInitializeCustomObject print];
+}
+- (void)test_custom_empty {
     self.rxInitializeCustomObject = [RXInitializeCustomObject new];
     [self.rxInitializeCustomObject print];
     
