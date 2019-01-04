@@ -76,9 +76,9 @@
     
     [self test];
     
-    RXObserverObject *observerObject = [RXObserverObject new];
-    RXObservedObject *observedObject = [RXObservedObject new];
-    NSLog(@"mess memory:%@ %@", observerObject, observedObject);
+    UIView *view = [UIView new];
+    NSDate *date = [NSDate new];
+    NSLog(@"mess memory:%@ %@", view, date);
     // 这里会崩溃,因为观察者对象已经被释放了
     self.observedObject.value = 20;
 }

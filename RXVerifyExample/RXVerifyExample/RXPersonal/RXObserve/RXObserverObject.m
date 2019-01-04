@@ -7,7 +7,7 @@
 //
 
 #import "RXObserverObject.h"
-
+// 观察者对象
 @implementation RXObserverObject
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {

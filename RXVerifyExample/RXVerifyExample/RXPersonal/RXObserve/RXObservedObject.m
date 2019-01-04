@@ -7,7 +7,7 @@
 //
 
 #import "RXObservedObject.h"
-
+// 被观察者对象
 @implementation RXObservedObject
 
 @end
