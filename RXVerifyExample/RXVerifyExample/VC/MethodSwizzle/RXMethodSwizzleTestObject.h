@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface RXMethodSwizzleTestObject : NSObject
+- (void)test_roughly;
 - (void)test_roughly_after_parent;
 - (void)test_roughly_before_parent;
 - (void)test_safely;

@@ -24,6 +24,8 @@
 #import "RXCountryWeatherApiTestObject.h"
 
 #import "RXObserveTestObject.h"
+// 子线程中的通知问题
+//https://www.jianshu.com/p/208568075b4f
 @interface RXAFNetworkingViewController ()
 
 @property (nonatomic, strong) RXAFNTestDependPropertyObject *dependPropertyObject;
@@ -133,12 +135,13 @@
 //    [self.rxInitializeTestObject test_empty_custom];
 //    [self.rxInitializeTestObject test_custom_empty];
 //    [self.rxInitializeTestObject test_custom_custom2];
-    [self.rxInitializeTestObject test_superCustom];
+//    [self.rxInitializeTestObject test_superCustom];
     
     self.rxMethodSwizzleTestObject = [RXMethodSwizzleTestObject new];
+//    [self.rxMethodSwizzleTestObject test_roughly];
 //    [self.rxMethodSwizzleTestObject test_roughly_after_parent];
     
-//    [self.rxMethodSwizzleTestObject test_roughly_before_parent];
+    [self.rxMethodSwizzleTestObject test_roughly_before_parent];
     
     
     self.rxCharacterSetTestObject = [RXCharacterSetTestObject new];
@@ -204,6 +207,8 @@
         });
     }
     NSLog(@"a:%zd", a);
+    
+//    [[NSNotificationQueue defaultQueue] enqueueNotification:nil postingStyle:NSPostWhenIdle];
 }
 
 

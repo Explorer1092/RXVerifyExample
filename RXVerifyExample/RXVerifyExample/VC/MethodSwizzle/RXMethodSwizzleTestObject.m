@@ -18,6 +18,12 @@
     RXMethodSwizzleParentObject *obj = [RXMethodSwizzleParentObject new];
     [obj print];
 }
+
+- (void)test_roughly
+{
+    RXMethodSwizzleRoughlyObject *obj = [RXMethodSwizzleRoughlyObject new];
+    [obj print];
+}
 - (void)test_roughly_after_parent
 {
     [self private_test_parent];
@@ -26,9 +32,9 @@
 }
 - (void)test_roughly_before_parent
 {
-    // 居然会崩溃!!!!好样的
     RXMethodSwizzleRoughlyObject *obj = [RXMethodSwizzleRoughlyObject new];
     [obj print];
+    // 居然会崩溃!!!!好样的,是这一行崩溃!
     [self private_test_parent];
 }
 - (void)test_safely

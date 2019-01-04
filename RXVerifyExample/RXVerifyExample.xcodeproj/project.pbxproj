@@ -184,7 +184,7 @@
 		E872494521C5294900EA6A3D /* RXAFImageResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872494421C5294900EA6A3D /* RXAFImageResponseSerializer.m */; };
 		E872494821C5296500EA6A3D /* RXAFCompoundResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E872494721C5296500EA6A3D /* RXAFCompoundResponseSerializer.m */; };
 		E872494B21C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = E872494A21C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.m */; };
-		E872494F21C9EEAB00EA6A3D /* RXRuntimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E872494E21C9EEAB00EA6A3D /* RXRuntimeUtil.m */; };
+		E872494F21C9EEAB00EA6A3D /* RXRuntimeUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = E872494E21C9EEAB00EA6A3D /* RXRuntimeUtil.mm */; };
 		E872495221C9EFF800EA6A3D /* RXUtilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E872495121C9EFF800EA6A3D /* RXUtilViewController.m */; };
 		E872495621C9F39A00EA6A3D /* RXRuntime1Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E872495521C9F39A00EA6A3D /* RXRuntime1Object.m */; };
 		E872495A21CCEA0000EA6A3D /* RXReadonlyProperty1Object.m in Sources */ = {isa = PBXBuildFile; fileRef = E872495921CCEA0000EA6A3D /* RXReadonlyProperty1Object.m */; };
@@ -555,7 +555,7 @@
 		E872494921C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFURLResponseSerializationDefine.h; sourceTree = "<group>"; };
 		E872494A21C529AD00EA6A3D /* RXAFURLResponseSerializationDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFURLResponseSerializationDefine.m; sourceTree = "<group>"; };
 		E872494D21C9EEAB00EA6A3D /* RXRuntimeUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRuntimeUtil.h; sourceTree = "<group>"; };
-		E872494E21C9EEAB00EA6A3D /* RXRuntimeUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRuntimeUtil.m; sourceTree = "<group>"; };
+		E872494E21C9EEAB00EA6A3D /* RXRuntimeUtil.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RXRuntimeUtil.mm; sourceTree = "<group>"; };
 		E872495021C9EFF800EA6A3D /* RXUtilViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXUtilViewController.h; sourceTree = "<group>"; };
 		E872495121C9EFF800EA6A3D /* RXUtilViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXUtilViewController.m; sourceTree = "<group>"; };
 		E872495421C9F39A00EA6A3D /* RXRuntime1Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRuntime1Object.h; sourceTree = "<group>"; };
@@ -1370,7 +1370,7 @@
 			children = (
 				E872495321C9F38700EA6A3D /* runtime */,
 				E872494D21C9EEAB00EA6A3D /* RXRuntimeUtil.h */,
-				E872494E21C9EEAB00EA6A3D /* RXRuntimeUtil.m */,
+				E872494E21C9EEAB00EA6A3D /* RXRuntimeUtil.mm */,
 				E872495021C9EFF800EA6A3D /* RXUtilViewController.h */,
 				E872495121C9EFF800EA6A3D /* RXUtilViewController.m */,
 			);
@@ -2050,7 +2050,7 @@
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
 				E872491521BD407100EA6A3D /* RXAFJSONRequestSerializer.m in Sources */,
-				E872494F21C9EEAB00EA6A3D /* RXRuntimeUtil.m in Sources */,
+				E872494F21C9EEAB00EA6A3D /* RXRuntimeUtil.mm in Sources */,
 				E87C045A21DB86F800B90D74 /* RXCountryWeatherApiTestObject.m in Sources */,
 				E86050E220A079E30016F6C9 /* RVRunLoopViewController.m in Sources */,
 				C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */,

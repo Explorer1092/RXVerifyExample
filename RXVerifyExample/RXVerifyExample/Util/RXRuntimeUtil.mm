@@ -64,7 +64,6 @@
     NSLog(@"%@", [array componentsJoinedByString:@"\n"]);
 }
 
-
 + (void)printProtocolList:(id)value {
     NSMutableArray *array = [NSMutableArray new];
     [array addObject:@""];
@@ -87,6 +86,8 @@
 {
     Method originalMethod = class_getInstanceMethod(cls, originSel);
     Method swizzledMethod = class_getInstanceMethod(cls, newSel);
+    
+    [self printMethodInfo:originalMethod];
     method_exchangeImplementations(originalMethod, swizzledMethod);
     
 }
@@ -95,12 +96,33 @@
     Method originalMethod = class_getInstanceMethod(cls, originSel);
     Method swizzledMethod = class_getInstanceMethod(cls, newSel);
     
+    [self printMethodInfo:originalMethod];
+    
     BOOL didAddMethod = class_addMethod(cls, originSel, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
     if (didAddMethod) {
         class_replaceMethod(cls, newSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
     } else {
         method_exchangeImplementations(originalMethod, swizzledMethod);
     }
+}
+
++ (void)printMethodInfo:(Method)method
+{
+    SEL sel = method_getName(method);
+    IMP imp = method_getImplementation(method);
+    const char *typeEncoding = method_getTypeEncoding(method);
+    unsigned int numberOfArguments = method_getNumberOfArguments(method);
+    char *copyReturnType = method_copyReturnType(method);
+    
+    for (unsigned int index = 0; index < numberOfArguments; index++) {
+        char *copyArgumentType = method_copyArgumentType(method, index);
+        char argumentType[512] = {};
+        method_getArgumentType(method, index, argumentType, 512);
+    }
+    
+    char returnType[512] = {};
+    method_getReturnType(method, returnType, 512);
+    
 }
 
 @end

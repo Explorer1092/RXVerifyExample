@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+// https://blog.csdn.net/qq_31810357/article/details/70622276
 @interface RXInitializeTestObject : NSObject
 - (void)test_doNoting;
 - (void)test_empty;
