@@ -18,6 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self test_rx_bucket_t];
+    
+    UIView *view;
 }
 
 - (void)didReceiveMemoryWarning {

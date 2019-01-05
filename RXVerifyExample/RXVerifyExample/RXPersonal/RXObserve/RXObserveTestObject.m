@@ -69,6 +69,8 @@
     [self.observedObject addObserver:observerObject forKeyPath:@"value" options:NSKeyValueObservingOptionNew context:nil];
     
     self.observedObject.value = 10;
+    
+//    [RXObserveTestObject methodForSelector:@selector(kkk:)];
 }
 
 - (void)test_after_call_test
