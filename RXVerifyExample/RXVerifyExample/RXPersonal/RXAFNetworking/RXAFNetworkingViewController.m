@@ -26,6 +26,8 @@
 
 #import "RXObserveTestObject.h"
 #import "RXClassMetaClassTestObject.h"
+
+#import "RXBlockTestObject.h"
 // 子线程中的通知问题
 //https://www.jianshu.com/p/208568075b4f
 @interface RXAFNetworkingViewController ()
@@ -48,6 +50,7 @@
 @property (nonatomic, strong) RXCountryWeatherApiTestObject *rxCountryWeatherApiTestObject;
 @property (nonatomic, strong) RXObserveTestObject *rxObserveTestObject;
 @property (nonatomic, strong) RXClassMetaClassTestObject *rxClassMetaClassTestObject;
+@property (nonatomic, strong) RXBlockTestObject *rxBlockTestObject;
 
 
 
@@ -176,6 +179,9 @@
     
     self.rxClassMetaClassTestObject = [RXClassMetaClassTestObject new];
     [self.rxClassMetaClassTestObject mainTest];
+    
+    self.rxBlockTestObject = [RXBlockTestObject new];
+    [self.rxBlockTestObject mainTest];
     
 }
 

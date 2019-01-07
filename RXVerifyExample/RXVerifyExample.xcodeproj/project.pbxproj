@@ -220,6 +220,8 @@
 		E87C047321E3391800B90D74 /* RXClassMetaClassTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C047221E3391800B90D74 /* RXClassMetaClassTestObject.m */; };
 		E87C047621E33C4C00B90D74 /* RXClassMetaClassOverrideObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C047521E33C4C00B90D74 /* RXClassMetaClassOverrideObject.m */; };
 		E87C047921E3421A00B90D74 /* RXClassMetaClassResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C047821E3421A00B90D74 /* RXClassMetaClassResponseObject.m */; };
+		E87C047D21E34B0300B90D74 /* RXBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C047C21E34B0300B90D74 /* RXBlockObject.m */; };
+		E87C048021E34B0F00B90D74 /* RXBlockTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C047F21E34B0F00B90D74 /* RXBlockTestObject.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -631,6 +633,10 @@
 		E87C047521E33C4C00B90D74 /* RXClassMetaClassOverrideObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassMetaClassOverrideObject.m; sourceTree = "<group>"; };
 		E87C047721E3421A00B90D74 /* RXClassMetaClassResponseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXClassMetaClassResponseObject.h; sourceTree = "<group>"; };
 		E87C047821E3421A00B90D74 /* RXClassMetaClassResponseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassMetaClassResponseObject.m; sourceTree = "<group>"; };
+		E87C047B21E34B0300B90D74 /* RXBlockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBlockObject.h; sourceTree = "<group>"; };
+		E87C047C21E34B0300B90D74 /* RXBlockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockObject.m; sourceTree = "<group>"; };
+		E87C047E21E34B0F00B90D74 /* RXBlockTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBlockTestObject.h; sourceTree = "<group>"; };
+		E87C047F21E34B0F00B90D74 /* RXBlockTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockTestObject.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -784,6 +790,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E87C047A21E34AF700B90D74 /* RXBlock */,
 				E87C046521E32C9200B90D74 /* RXEventList */,
 				E87C045B21DDE54600B90D74 /* RXObserve */,
 				E87C042421D2597B00B90D74 /* RXArray */,
@@ -1712,6 +1719,17 @@
 			path = ivar;
 			sourceTree = "<group>";
 		};
+		E87C047A21E34AF700B90D74 /* RXBlock */ = {
+			isa = PBXGroup;
+			children = (
+				E87C047B21E34B0300B90D74 /* RXBlockObject.h */,
+				E87C047C21E34B0300B90D74 /* RXBlockObject.m */,
+				E87C047E21E34B0F00B90D74 /* RXBlockTestObject.h */,
+				E87C047F21E34B0F00B90D74 /* RXBlockTestObject.m */,
+			);
+			path = RXBlock;
+			sourceTree = "<group>";
+		};
 		E8F8D7A32187E357007AB027 /* MethodList */ = {
 			isa = PBXGroup;
 			children = (
@@ -2124,9 +2142,11 @@
 				E86050F820A298DA0016F6C9 /* RVMsgForward.m in Sources */,
 				58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */,
 				5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */,
+				E87C048021E34B0F00B90D74 /* RXBlockTestObject.m in Sources */,
 				E872491521BD407100EA6A3D /* RXAFJSONRequestSerializer.m in Sources */,
 				E872494F21C9EEAB00EA6A3D /* RXRuntimeUtil.mm in Sources */,
 				E87C045A21DB86F800B90D74 /* RXCountryWeatherApiTestObject.m in Sources */,
+				E87C047D21E34B0300B90D74 /* RXBlockObject.m in Sources */,
 				E86050E220A079E30016F6C9 /* RVRunLoopViewController.m in Sources */,
 				C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */,
 				E87C044821D7127600B90D74 /* RXMethodSwizzleOverrideRoughlyObject.m in Sources */,
