@@ -219,6 +219,7 @@
 		E87C047021E3390A00B90D74 /* RXClassMetaClassObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C046F21E3390A00B90D74 /* RXClassMetaClassObject.m */; };
 		E87C047321E3391800B90D74 /* RXClassMetaClassTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C047221E3391800B90D74 /* RXClassMetaClassTestObject.m */; };
 		E87C047621E33C4C00B90D74 /* RXClassMetaClassOverrideObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C047521E33C4C00B90D74 /* RXClassMetaClassOverrideObject.m */; };
+		E87C047921E3421A00B90D74 /* RXClassMetaClassResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C047821E3421A00B90D74 /* RXClassMetaClassResponseObject.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -628,6 +629,8 @@
 		E87C047221E3391800B90D74 /* RXClassMetaClassTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassMetaClassTestObject.m; sourceTree = "<group>"; };
 		E87C047421E33C4C00B90D74 /* RXClassMetaClassOverrideObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXClassMetaClassOverrideObject.h; sourceTree = "<group>"; };
 		E87C047521E33C4C00B90D74 /* RXClassMetaClassOverrideObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassMetaClassOverrideObject.m; sourceTree = "<group>"; };
+		E87C047721E3421A00B90D74 /* RXClassMetaClassResponseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXClassMetaClassResponseObject.h; sourceTree = "<group>"; };
+		E87C047821E3421A00B90D74 /* RXClassMetaClassResponseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassMetaClassResponseObject.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -1680,6 +1683,8 @@
 				E87C046F21E3390A00B90D74 /* RXClassMetaClassObject.m */,
 				E87C047421E33C4C00B90D74 /* RXClassMetaClassOverrideObject.h */,
 				E87C047521E33C4C00B90D74 /* RXClassMetaClassOverrideObject.m */,
+				E87C047721E3421A00B90D74 /* RXClassMetaClassResponseObject.h */,
+				E87C047821E3421A00B90D74 /* RXClassMetaClassResponseObject.m */,
 				E87C047121E3391800B90D74 /* RXClassMetaClassTestObject.h */,
 				E87C047221E3391800B90D74 /* RXClassMetaClassTestObject.m */,
 			);
@@ -2058,6 +2063,7 @@
 				C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */,
 				E851587F2140CC99006E23D5 /* RXUncaughtExceptionHandlerViewController.m in Sources */,
 				E826367120A96BB00081F4A8 /* RXMVPPerson.m in Sources */,
+				E87C047921E3421A00B90D74 /* RXClassMetaClassResponseObject.m in Sources */,
 				E818F0F120B9044A00F94127 /* RXMVVMModel.m in Sources */,
 				C9D397A51CF5A29200D8569C /* RXRunTimeDemoObject.m in Sources */,
 				E811CA911FED09FD003157E9 /* RVEventResponseListViewController.m in Sources */,
