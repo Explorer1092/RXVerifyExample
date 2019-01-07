@@ -14,7 +14,10 @@
 + (void)printIvarList:(id)value;
 + (void)printProtocolList:(id)value;
 
-
++ (void)printPropertyListWithClass:(Class)cls;
++ (void)printMethodListWithClass:(Class)cls;
++ (void)printIvarListWithClass:(Class)cls;
++ (void)printProtocolListWithClass:(Class)cls;
 
 
 + (void)exchangeMethodRoughly:(Class)cls originSel:(SEL)originSel newSel:(SEL)newSel;

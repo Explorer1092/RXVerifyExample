@@ -7,6 +7,7 @@
 //
 
 #import "RXAFNetworkingViewController.h"
+#import "RXRuntimeUtil.h"
 #import "RXAFNTest1Object.h"
 #import "RXAFNTest2Object.h"
 #import "RXAFNTest3Object.h"
@@ -24,6 +25,7 @@
 #import "RXCountryWeatherApiTestObject.h"
 
 #import "RXObserveTestObject.h"
+#import "RXClassMetaClassTestObject.h"
 // 子线程中的通知问题
 //https://www.jianshu.com/p/208568075b4f
 @interface RXAFNetworkingViewController ()
@@ -45,6 +47,7 @@
 
 @property (nonatomic, strong) RXCountryWeatherApiTestObject *rxCountryWeatherApiTestObject;
 @property (nonatomic, strong) RXObserveTestObject *rxObserveTestObject;
+@property (nonatomic, strong) RXClassMetaClassTestObject *rxClassMetaClassTestObject;
 
 
 
@@ -141,7 +144,7 @@
 //    [self.rxMethodSwizzleTestObject test_roughly];
 //    [self.rxMethodSwizzleTestObject test_roughly_after_parent];
     
-    [self.rxMethodSwizzleTestObject test_roughly_before_parent];
+//    [self.rxMethodSwizzleTestObject test_roughly_before_parent];
     
     
     self.rxCharacterSetTestObject = [RXCharacterSetTestObject new];
@@ -150,7 +153,7 @@
     self.rxCountryWeatherApiTestObject = [RXCountryWeatherApiTestObject new];
 //    [self.rxCountryWeatherApiTestObject test];
     
-    self.rxObserveTestObject = [RXObserveTestObject new];
+//    self.rxObserveTestObject = [RXObserveTestObject new];
 //    [self.rxObserveTestObject test_notSameObject];
 //    [self.rxObserveTestObject test_remove_notExist];
 //    [self.rxObserveTestObject test_remove_multiple];
@@ -161,6 +164,18 @@
 //    [self addObserver:self forKeyPath:@"sss" options:NSKeyValueObservingOptionNew context:nil];
 //
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:nil name:@"111" object:nil];
+    
+    
+//    Class cls1 = [UIView class];
+//    Class cls2 = [self.view class];
+//
+//    [RXRuntimeUtil printMethodListWithClass:cls1];
+//    NSLog(@"-------");
+//    [RXRuntimeUtil printMethodListWithClass:cls2];
+//    NSLog(@"cls1:%@, cls2:%@", NSStringFromClass(cls1), NSStringFromClass(cls2));
+    
+    self.rxClassMetaClassTestObject = [RXClassMetaClassTestObject new];
+    [self.rxClassMetaClassTestObject mainTest];
     
 }
 

@@ -12,11 +12,29 @@
 @implementation RXRuntimeUtil
 
 + (void)printPropertyList:(id)value {
+    [self printMethodListWithClass:[value class]];
+}
+
++ (void)printMethodList:(id)value {
+    [self printMethodListWithClass:[value class]];
+}
+
++ (void)printIvarList:(id)value {
+    [self printIvarListWithClass:[value class]];
+}
+
++ (void)printProtocolList:(id)value {
+    [self printProtocolListWithClass:[value class]];
+}
+
+
+
++ (void)printPropertyListWithClass:(Class)cls
+{
     NSMutableArray *array = [NSMutableArray new];
     [array addObject:@""];
     [array addObject:@"property list:"];
     [array addObject:@"propertyName | propertyAttributes"];
-    Class cls = [value class];
     unsigned int count;
     objc_property_t *propertyList = class_copyPropertyList(cls, &count);
     for (unsigned int i = 0; i < count; i++) {
@@ -28,13 +46,12 @@
     }
     NSLog(@"%@", [array componentsJoinedByString:@"\n"]);
 }
-
-+ (void)printMethodList:(id)value {
++ (void)printMethodListWithClass:(Class)cls
+{
     NSMutableArray *array = [NSMutableArray new];
     [array addObject:@""];
     [array addObject:@"method list:"];
     [array addObject:@"methodName"];
-    Class cls = [value class];
     unsigned int count;
     
     Method *methodList = class_copyMethodList(cls, &count);
@@ -45,13 +62,12 @@
     }
     NSLog(@"%@", [array componentsJoinedByString:@"\n"]);
 }
-
-+ (void)printIvarList:(id)value {
++ (void)printIvarListWithClass:(Class)cls
+{
     NSMutableArray *array = [NSMutableArray new];
     [array addObject:@""];
     [array addObject:@"ivar list:"];
     [array addObject:@"ivarName | typeEncoding"];
-    Class cls = [value class];
     unsigned int count;
     Ivar *ivarList = class_copyIvarList(cls, &count);
     for (unsigned int i = 0; i < count; i++) {
@@ -63,13 +79,12 @@
     }
     NSLog(@"%@", [array componentsJoinedByString:@"\n"]);
 }
-
-+ (void)printProtocolList:(id)value {
++ (void)printProtocolListWithClass:(Class)cls
+{
     NSMutableArray *array = [NSMutableArray new];
     [array addObject:@""];
     [array addObject:@"protocol list:"];
     [array addObject:@"protocolName"];
-    Class cls = [value class];
     unsigned int count;
     __unsafe_unretained Protocol **protocolList = class_copyProtocolList(cls, &count);
     for (unsigned int i = 0; i < count; i++) {
@@ -80,7 +95,6 @@
     }
     NSLog(@"%@", [array componentsJoinedByString:@"\n"]);
 }
-
 
 + (void)exchangeMethodRoughly:(Class)cls originSel:(SEL)originSel newSel:(SEL)newSel
 {
