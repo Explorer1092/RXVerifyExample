@@ -9,9 +9,17 @@
 #import "RXCountryWeatherApiTestObject.h"
 #import "RXCountryWeatherApi.h"
 @implementation RXCountryWeatherApiTestObject
-
+- (id)kkkkkkk {
+    return [NSObject new];
+}
 - (void)test
 {
     [RXCountryWeatherApi gettkkk];
+    
+    // 有警告
+    [self performSelector:NSSelectorFromString(@"kkkkkkk") withObject:nil];
+    
+    // 没有警告
+    [self performSelector:NSSelectorFromString(@"kkkkkkk") withObject:nil afterDelay:0];
 }
 @end
