@@ -153,7 +153,7 @@
 - (void)asyncMain {
     printf("\n================%s================\n", [NSStringFromSelector(_cmd) UTF8String]);
     printf("main: %s\n", [[[NSThread mainThread] description] UTF8String]);
-    //获取主队列
+    // 获取主队列
     dispatch_queue_t queue = dispatch_get_main_queue();
     
     printf("---start---\n");
@@ -168,6 +168,11 @@
         printf("任务3---%s\n", [[[NSThread currentThread] description] UTF8String]);
     });
     printf("---end---\n");
+    
+//    dispatch_main();
+    
+  
+//    UIApplicationMain();
 }
 // 同步执行 + 主队列
 - (void)syncMain {

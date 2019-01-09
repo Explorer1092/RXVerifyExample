@@ -222,6 +222,9 @@
 		E87C047921E3421A00B90D74 /* RXClassMetaClassResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C047821E3421A00B90D74 /* RXClassMetaClassResponseObject.m */; };
 		E87C047D21E34B0300B90D74 /* RXBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C047C21E34B0300B90D74 /* RXBlockObject.m */; };
 		E87C048021E34B0F00B90D74 /* RXBlockTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C047F21E34B0F00B90D74 /* RXBlockTestObject.m */; };
+		E87C048421E5DE0500B90D74 /* RXLockTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C048321E5DE0500B90D74 /* RXLockTestObject.m */; };
+		E87C048721E5DE8B00B90D74 /* RXSynchronizedLockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C048621E5DE8B00B90D74 /* RXSynchronizedLockObject.m */; };
+		E87C048A21E5E21D00B90D74 /* RXParentLockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C048921E5E21D00B90D74 /* RXParentLockObject.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -637,6 +640,12 @@
 		E87C047C21E34B0300B90D74 /* RXBlockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockObject.m; sourceTree = "<group>"; };
 		E87C047E21E34B0F00B90D74 /* RXBlockTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBlockTestObject.h; sourceTree = "<group>"; };
 		E87C047F21E34B0F00B90D74 /* RXBlockTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockTestObject.m; sourceTree = "<group>"; };
+		E87C048221E5DE0500B90D74 /* RXLockTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXLockTestObject.h; sourceTree = "<group>"; };
+		E87C048321E5DE0500B90D74 /* RXLockTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXLockTestObject.m; sourceTree = "<group>"; };
+		E87C048521E5DE8B00B90D74 /* RXSynchronizedLockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXSynchronizedLockObject.h; sourceTree = "<group>"; };
+		E87C048621E5DE8B00B90D74 /* RXSynchronizedLockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXSynchronizedLockObject.m; sourceTree = "<group>"; };
+		E87C048821E5E21D00B90D74 /* RXParentLockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXParentLockObject.h; sourceTree = "<group>"; };
+		E87C048921E5E21D00B90D74 /* RXParentLockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXParentLockObject.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -790,6 +799,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E87C048121E5DDF100B90D74 /* RXLock */,
 				E87C047A21E34AF700B90D74 /* RXBlock */,
 				E87C046521E32C9200B90D74 /* RXEventList */,
 				E87C045B21DDE54600B90D74 /* RXObserve */,
@@ -1730,6 +1740,19 @@
 			path = RXBlock;
 			sourceTree = "<group>";
 		};
+		E87C048121E5DDF100B90D74 /* RXLock */ = {
+			isa = PBXGroup;
+			children = (
+				E87C048821E5E21D00B90D74 /* RXParentLockObject.h */,
+				E87C048921E5E21D00B90D74 /* RXParentLockObject.m */,
+				E87C048521E5DE8B00B90D74 /* RXSynchronizedLockObject.h */,
+				E87C048621E5DE8B00B90D74 /* RXSynchronizedLockObject.m */,
+				E87C048221E5DE0500B90D74 /* RXLockTestObject.h */,
+				E87C048321E5DE0500B90D74 /* RXLockTestObject.m */,
+			);
+			path = RXLock;
+			sourceTree = "<group>";
+		};
 		E8F8D7A32187E357007AB027 /* MethodList */ = {
 			isa = PBXGroup;
 			children = (
@@ -2130,6 +2153,7 @@
 				E85158802140CC99006E23D5 /* UncaughtExceptionHandler.m in Sources */,
 				E872492121BFDC3900EA6A3D /* RXAFStreamingMultipartFormData.m in Sources */,
 				E85159CD215890CD006E23D5 /* RXOPMQViewController.m in Sources */,
+				E87C048A21E5E21D00B90D74 /* RXParentLockObject.m in Sources */,
 				E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */,
 				E872494521C5294900EA6A3D /* RXAFImageResponseSerializer.m in Sources */,
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
@@ -2184,6 +2208,7 @@
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
 				E8433D9620FEDA86004A7FBC /* RXRACMTViewController.m in Sources */,
 				E810791D20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.m in Sources */,
+				E87C048721E5DE8B00B90D74 /* RXSynchronizedLockObject.m in Sources */,
 				E8F8D7FA21916FFC007AB027 /* RXAFNetworkingViewController.m in Sources */,
 				E8433D8120EF6959004A7FBC /* RXHookBlockManager.m in Sources */,
 				E872496521CFAB8100EA6A3D /* RXAFURLSessionManager.m in Sources */,
@@ -2220,6 +2245,7 @@
 				E872496D21CFACF700EA6A3D /* RXAFURLSessionManagerPublicDefine.m in Sources */,
 				E8433D6720E39A34004A7FBC /* RXMVVMLoginViewController.m in Sources */,
 				E86050E320A079E30016F6C9 /* RVRunLoop2ViewController.m in Sources */,
+				E87C048421E5DE0500B90D74 /* RXLockTestObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

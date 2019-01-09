@@ -69,7 +69,7 @@
 //    object = @"RXSY";
     
     object = @"RXAFNetworking";
-//    object = @"RXRACClass";
+//    object = @"RVGCD2";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
