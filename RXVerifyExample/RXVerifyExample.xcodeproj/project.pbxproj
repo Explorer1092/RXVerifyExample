@@ -225,6 +225,8 @@
 		E87C048421E5DE0500B90D74 /* RXLockTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C048321E5DE0500B90D74 /* RXLockTestObject.m */; };
 		E87C048721E5DE8B00B90D74 /* RXSynchronizedLockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C048621E5DE8B00B90D74 /* RXSynchronizedLockObject.m */; };
 		E87C048A21E5E21D00B90D74 /* RXParentLockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C048921E5E21D00B90D74 /* RXParentLockObject.m */; };
+		E87C048E21E72C3900B90D74 /* RXMasonryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C048D21E72C3900B90D74 /* RXMasonryObject.m */; };
+		E87C049121E72DE700B90D74 /* RXMasonryTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E87C049021E72DE700B90D74 /* RXMasonryTestObject.m */; };
 		E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */; };
 		E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E89C219A213D332700913992 /* NSArray+RXVerifyExample.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
@@ -646,6 +648,10 @@
 		E87C048621E5DE8B00B90D74 /* RXSynchronizedLockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXSynchronizedLockObject.m; sourceTree = "<group>"; };
 		E87C048821E5E21D00B90D74 /* RXParentLockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXParentLockObject.h; sourceTree = "<group>"; };
 		E87C048921E5E21D00B90D74 /* RXParentLockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXParentLockObject.m; sourceTree = "<group>"; };
+		E87C048C21E72C3900B90D74 /* RXMasonryObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMasonryObject.h; sourceTree = "<group>"; };
+		E87C048D21E72C3900B90D74 /* RXMasonryObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMasonryObject.m; sourceTree = "<group>"; };
+		E87C048F21E72DE700B90D74 /* RXMasonryTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMasonryTestObject.h; sourceTree = "<group>"; };
+		E87C049021E72DE700B90D74 /* RXMasonryTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMasonryTestObject.m; sourceTree = "<group>"; };
 		E89C2196213D32F400913992 /* NSError+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+RXVerifyExample.h"; sourceTree = "<group>"; };
 		E89C2197213D32F400913992 /* NSError+RXVerifyExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+RXVerifyExample.m"; sourceTree = "<group>"; };
 		E89C2199213D332700913992 /* NSArray+RXVerifyExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+RXVerifyExample.h"; sourceTree = "<group>"; };
@@ -799,6 +805,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E87C048B21E72B9600B90D74 /* RXMasonry */,
 				E87C048121E5DDF100B90D74 /* RXLock */,
 				E87C047A21E34AF700B90D74 /* RXBlock */,
 				E87C046521E32C9200B90D74 /* RXEventList */,
@@ -1753,6 +1760,17 @@
 			path = RXLock;
 			sourceTree = "<group>";
 		};
+		E87C048B21E72B9600B90D74 /* RXMasonry */ = {
+			isa = PBXGroup;
+			children = (
+				E87C048C21E72C3900B90D74 /* RXMasonryObject.h */,
+				E87C048D21E72C3900B90D74 /* RXMasonryObject.m */,
+				E87C048F21E72DE700B90D74 /* RXMasonryTestObject.h */,
+				E87C049021E72DE700B90D74 /* RXMasonryTestObject.m */,
+			);
+			path = RXMasonry;
+			sourceTree = "<group>";
+		};
 		E8F8D7A32187E357007AB027 /* MethodList */ = {
 			isa = PBXGroup;
 			children = (
@@ -2122,6 +2140,7 @@
 				E87C046821E32CB800B90D74 /* RXEventListCategory.m in Sources */,
 				C9BDAD631CC6237A00CBB1CA /* RVAnimation2ViewController.m in Sources */,
 				C9A711111D7BA1130002E703 /* RXAObject.m in Sources */,
+				E87C049121E72DE700B90D74 /* RXMasonryTestObject.m in Sources */,
 				C9D3979C1CF5483700D8569C /* RXRunLoopExeObject.m in Sources */,
 				E826367B20A96FF00081F4A8 /* RXFrameworkViewController.m in Sources */,
 				E8F8D81E21ACF36F007AB027 /* RXAFNTest4Object.m in Sources */,
@@ -2157,6 +2176,7 @@
 				E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */,
 				E872494521C5294900EA6A3D /* RXAFImageResponseSerializer.m in Sources */,
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
+				E87C048E21E72C3900B90D74 /* RXMasonryObject.m in Sources */,
 				E86050AF209C67630016F6C9 /* RXObjectCreateViewController.m in Sources */,
 				E818F0F420B9045C00F94127 /* RXMVVMView.m in Sources */,
 				E86050D620A079050016F6C9 /* RVGCDViewController.m in Sources */,

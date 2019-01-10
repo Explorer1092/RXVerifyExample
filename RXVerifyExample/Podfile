@@ -61,6 +61,8 @@ pod 'MSWeakTimer'
 
 pod 'JLRoutes'
 
+pod 'Masonry'
+
 
 inhibit_all_warnings!
 

@@ -56,6 +56,8 @@
 @property (nonatomic, strong) RXLockTestObject *rxLockTestObject;
 
 
+@property (nonatomic, copy) NSMutableArray *array;
+
 
 @end
 
@@ -63,6 +65,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    void (^block)(void) = ^{
+        _array = [NSMutableArray new];
+    };
+    block();
+    
+//    NSMutableArray *tmp = [NSMutableArray arrayWithObjects:@"1", @"2", nil];
+//    self.array = tmp;
+//    [self.array removeObjectAtIndex:0];
+//    NSLog(@"11");
+    
     // Do any additional setup after loading the view.
     
 //    [[RXAFNTest1Object new] test];
@@ -187,7 +200,10 @@
 //    [self.rxBlockTestObject mainTest];
     
     self.rxLockTestObject = [RXLockTestObject new];
-    [self.rxLockTestObject mainTest];
+//    [self.rxLockTestObject mainTest];
+    
+    
+    
     
 }
 
