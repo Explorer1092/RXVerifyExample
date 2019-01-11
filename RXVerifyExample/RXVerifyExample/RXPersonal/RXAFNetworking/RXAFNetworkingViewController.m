@@ -66,10 +66,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    void (^block)(void) = ^{
-        _array = [NSMutableArray new];
-    };
-    block();
+//    void (^block)(void) = ^{
+//        _array = [NSMutableArray new];
+//    };
+//    block();
+    
+    
     
 //    NSMutableArray *tmp = [NSMutableArray arrayWithObjects:@"1", @"2", nil];
 //    self.array = tmp;
@@ -197,7 +199,7 @@
     [self.rxClassMetaClassTestObject mainTest];
     
     self.rxBlockTestObject = [RXBlockTestObject new];
-//    [self.rxBlockTestObject mainTest];
+    [self.rxBlockTestObject mainTest];
     
     self.rxLockTestObject = [RXLockTestObject new];
 //    [self.rxLockTestObject mainTest];
