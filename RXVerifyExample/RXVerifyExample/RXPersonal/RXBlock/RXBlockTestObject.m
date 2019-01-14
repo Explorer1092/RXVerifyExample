@@ -9,6 +9,8 @@
 #import "RXBlockTestObject.h"
 #import "RXBlockQSortBRObject.h"
 #import "RXBlockArrayObject.h"
+#import "RXBlockVariableTypeObject.h"
+NSInteger CounterGlobal = 0;
 
 @implementation RXBlockTestObject
 - (void)mainTest
@@ -16,7 +18,9 @@
     
 //    [self _test_qsort_b_r];
     
-    [self _test_block_array];
+//    [self _test_block_array];
+    
+    [self _test_variable_type];
 }
 
 - (void)_test_for_mass
@@ -30,11 +34,22 @@
         block();
     }
     
+//    // Warning: This block declaration is not a prototype
 //    void (^block2)() = ^{
 //        a++;
 //        NSLog(@"%zd", a);
 //    };
 //    block2();
+    
+    
+    
+//    int n = 10;
+//    int aaaaa[n];
+    
+//    __block NSMutableArray *ary = [NSMutableArray new];
+//    void (^block4)(int) = ^(int b) {
+//        ary = [NSMutableArray new];
+//    };
     
 //    void (^block3)(int) = ^(int b){
 ////        return b + 4;
@@ -62,6 +77,12 @@
 {
     RXBlockArrayObject *rxBlockArrayObject = [RXBlockArrayObject new];
     [rxBlockArrayObject test];
+}
+
+- (void)_test_variable_type
+{
+    RXBlockVariableTypeObject *rxBlockVariableTypeObject = [RXBlockVariableTypeObject new];
+    [rxBlockVariableTypeObject test];
 }
 
 
