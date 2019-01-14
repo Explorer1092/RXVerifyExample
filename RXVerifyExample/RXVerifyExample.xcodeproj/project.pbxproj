@@ -106,6 +106,8 @@
 		E818A07721EC38FF0053ED3E /* RXBlockInferReturnTypeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A07621EC38FF0053ED3E /* RXBlockInferReturnTypeObject.m */; };
 		E818A07A21EC92640053ED3E /* RXBlockC99VariableLengthArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A07921EC92640053ED3E /* RXBlockC99VariableLengthArrayObject.m */; };
 		E818A07D21EC968C0053ED3E /* RXBlockVariableTypeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A07C21EC968C0053ED3E /* RXBlockVariableTypeObject.m */; };
+		E818A08021ECAB290053ED3E /* RXBlockReferenceValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A07F21ECAB290053ED3E /* RXBlockReferenceValueObject.m */; };
+		E818A08321ECAFEF0053ED3E /* RXBlockTmpObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A08221ECAFEF0053ED3E /* RXBlockTmpObject.m */; };
 		E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */; };
 		E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E620B6C0D800F94127 /* RXNSObjectForSelectorAObject.m */; };
 		E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0ED20B9043400F94127 /* RXMVVMViewController.m */; };
@@ -419,6 +421,10 @@
 		E818A07921EC92640053ED3E /* RXBlockC99VariableLengthArrayObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockC99VariableLengthArrayObject.m; sourceTree = "<group>"; };
 		E818A07B21EC968C0053ED3E /* RXBlockVariableTypeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBlockVariableTypeObject.h; sourceTree = "<group>"; };
 		E818A07C21EC968C0053ED3E /* RXBlockVariableTypeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockVariableTypeObject.m; sourceTree = "<group>"; };
+		E818A07E21ECAB290053ED3E /* RXBlockReferenceValueObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBlockReferenceValueObject.h; sourceTree = "<group>"; };
+		E818A07F21ECAB290053ED3E /* RXBlockReferenceValueObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockReferenceValueObject.m; sourceTree = "<group>"; };
+		E818A08121ECAFEF0053ED3E /* RXBlockTmpObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBlockTmpObject.h; sourceTree = "<group>"; };
+		E818A08221ECAFEF0053ED3E /* RXBlockTmpObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockTmpObject.m; sourceTree = "<group>"; };
 		E818F0E220B6C0A300F94127 /* RXNSObjectForSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorViewController.h; sourceTree = "<group>"; };
 		E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNSObjectForSelectorViewController.m; sourceTree = "<group>"; };
 		E818F0E520B6C0D800F94127 /* RXNSObjectForSelectorAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorAObject.h; sourceTree = "<group>"; };
@@ -1768,6 +1774,10 @@
 				E818A07921EC92640053ED3E /* RXBlockC99VariableLengthArrayObject.m */,
 				E818A07B21EC968C0053ED3E /* RXBlockVariableTypeObject.h */,
 				E818A07C21EC968C0053ED3E /* RXBlockVariableTypeObject.m */,
+				E818A07E21ECAB290053ED3E /* RXBlockReferenceValueObject.h */,
+				E818A07F21ECAB290053ED3E /* RXBlockReferenceValueObject.m */,
+				E818A08121ECAFEF0053ED3E /* RXBlockTmpObject.h */,
+				E818A08221ECAFEF0053ED3E /* RXBlockTmpObject.m */,
 			);
 			path = RXBlock;
 			sourceTree = "<group>";
@@ -2281,6 +2291,7 @@
 				E870203120DA617200752211 /* RXUIListPerformanceViewController.m in Sources */,
 				E87C046121DDE58600B90D74 /* RXObservedObject.m in Sources */,
 				E8F8D7DB218C42B3007AB027 /* RXAspectsViewController.m in Sources */,
+				E818A08021ECAB290053ED3E /* RXBlockReferenceValueObject.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				E87C044E21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m in Sources */,
 				E8F8D81C21ACF36F007AB027 /* RXAFNTest5Object.m in Sources */,
@@ -2295,6 +2306,7 @@
 				E872496D21CFACF700EA6A3D /* RXAFURLSessionManagerPublicDefine.m in Sources */,
 				E8433D6720E39A34004A7FBC /* RXMVVMLoginViewController.m in Sources */,
 				E86050E320A079E30016F6C9 /* RVRunLoop2ViewController.m in Sources */,
+				E818A08321ECAFEF0053ED3E /* RXBlockTmpObject.m in Sources */,
 				E87C048421E5DE0500B90D74 /* RXLockTestObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

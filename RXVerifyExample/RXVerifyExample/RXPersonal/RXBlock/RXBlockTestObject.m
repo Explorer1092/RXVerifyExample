@@ -10,6 +10,8 @@
 #import "RXBlockQSortBRObject.h"
 #import "RXBlockArrayObject.h"
 #import "RXBlockVariableTypeObject.h"
+#import "RXBlockReferenceValueObject.h"
+
 NSInteger CounterGlobal = 0;
 
 @implementation RXBlockTestObject
@@ -20,7 +22,9 @@ NSInteger CounterGlobal = 0;
     
 //    [self _test_block_array];
     
-    [self _test_variable_type];
+//    [self _test_variable_type];
+    
+    [self _test_reference_value];
 }
 
 - (void)_test_for_mass
@@ -83,6 +87,13 @@ NSInteger CounterGlobal = 0;
 {
     RXBlockVariableTypeObject *rxBlockVariableTypeObject = [RXBlockVariableTypeObject new];
     [rxBlockVariableTypeObject test];
+}
+- (void)_test_reference_value
+{
+    // tmp 对象没有别调用,理论上这个函数结束的时候,tmp应该会在第一时间释放
+    RXBlockReferenceValueObject *tmp = [RXBlockReferenceValueObject new];
+    [tmp test];
+    NSLog(@"_test_reference_value end");
 }
 
 
