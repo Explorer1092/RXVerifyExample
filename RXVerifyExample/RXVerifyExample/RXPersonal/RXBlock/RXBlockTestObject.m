@@ -29,6 +29,24 @@
         };
         block();
     }
+    
+//    void (^block2)() = ^{
+//        a++;
+//        NSLog(@"%zd", a);
+//    };
+//    block2();
+    
+//    void (^block3)(int) = ^(int b){
+////        return b + 4;
+//        NSLog(@"111");
+//    };
+//    int d = block3(10 );
+    
+//    id (^block3)(void) = ^(void) {
+////        return nil;
+//        return [NSObject new];
+//    };
+//    block3();
 
 }
 
