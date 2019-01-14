@@ -11,7 +11,7 @@
 #import "RXBlockArrayObject.h"
 #import "RXBlockVariableTypeObject.h"
 #import "RXBlockReferenceValueObject.h"
-
+#import "RXBlockBlockObject.h"
 NSInteger CounterGlobal = 0;
 
 @implementation RXBlockTestObject
@@ -24,7 +24,9 @@ NSInteger CounterGlobal = 0;
     
 //    [self _test_variable_type];
     
-    [self _test_reference_value];
+//    [self _test_reference_value];
+    
+    [self _test_block];
 }
 
 - (void)_test_for_mass
@@ -94,6 +96,12 @@ NSInteger CounterGlobal = 0;
     RXBlockReferenceValueObject *tmp = [RXBlockReferenceValueObject new];
     [tmp test];
     NSLog(@"_test_reference_value end");
+}
+
+- (void)_test_block
+{
+    RXBlockBlockObject *tmp = [RXBlockBlockObject new];
+    [tmp test];
 }
 
 
