@@ -26,7 +26,11 @@ static void _s_test_name(NSString *prefix, RXBlockTmpObject *tmpObject)
 - (void)test
 {
 //    [self _test_normal];
-    [self _test_normal_mut];
+//    [self _test_normal_mut];
+    
+//    [self _test_self_instance_variable];
+    
+    [self _test_weakself_strongself_instance_variable];
 }
 
 - (void)_test_normal
@@ -39,9 +43,9 @@ static void _s_test_name(NSString *prefix, RXBlockTmpObject *tmpObject)
     NSLog(@"2 address in object:%@", self.tmpObject);
     
     // 代码1: 2秒后执行一个任务
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 2), queue, ^{
-        _s_test_name(@"instance variable", _tmpObject);
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 2), queue, ^{
+//        _s_test_name(@"instance variable", _tmpObject);
+//    });
     
     self.tmpObject = [RXBlockTmpObject tmpObjectWithName:@"3"];
     NSLog(@"3 address in object:%@", self.tmpObject);
@@ -57,6 +61,8 @@ static void _s_test_name(NSString *prefix, RXBlockTmpObject *tmpObject)
     self.tmpObject = [RXBlockTmpObject tmpObjectWithName:@"4"];
     NSLog(@"4 address in object:%@", self.tmpObject);
 }
+
+
 
 - (void)_test_normal_mut
 {
@@ -88,6 +94,38 @@ static void _s_test_name(NSString *prefix, RXBlockTmpObject *tmpObject)
     self.tmpObject = [RXBlockTmpObject tmpObjectWithName:@"4"];
     [self.mutableArray addObject:self.tmpObject];
     NSLog(@"4 address in object:%@", self.tmpObject);
+}
+
+- (void)_test_self_instance_variable
+{
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    self.tmpObject = [RXBlockTmpObject tmpObjectWithName:@"4"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 2), queue, ^{
+        _s_test_name(@"instance variable", self->_tmpObject);
+    });
+}
+
+
+- (void)_test_weakself_instance_variable
+{
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    self.tmpObject = [RXBlockTmpObject tmpObjectWithName:@"4"];
+//    __weak typeof(self) weakSelf = self;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 2), queue, ^{
+//        // Error: Dereferencing a __weak pointer is not allowed due to possible null value cased by race condition, assign it to strong variable first
+//        _s_test_name(@"instance variable", weakSelf->_tmpObject);
+//    });
+}
+- (void)_test_weakself_strongself_instance_variable
+{
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    self.tmpObject = [RXBlockTmpObject tmpObjectWithName:@"4"];
+    __weak typeof(self) weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 2), queue, ^{
+        __strong typeof(self) strongSelf = weakSelf;
+        // 崩溃的概率极高
+        _s_test_name(@"instance variable", strongSelf->_tmpObject);
+    });
 }
 
 - (void)dealloc

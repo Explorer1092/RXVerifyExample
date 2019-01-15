@@ -17,6 +17,7 @@
 }
 - (NSString *)description
 {
+    // 输出内存地址，监控内存变化
     return [NSString stringWithFormat:@"address:%p, name:%@", self, self.name];
 }
 @end

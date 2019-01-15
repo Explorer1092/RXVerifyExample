@@ -24,9 +24,9 @@ NSInteger CounterGlobal = 0;
     
 //    [self _test_variable_type];
     
-//    [self _test_reference_value];
+    [self _test_reference_value];
     
-    [self _test_block];
+//    [self _test_block];
 }
 
 - (void)_test_for_mass
@@ -92,7 +92,7 @@ NSInteger CounterGlobal = 0;
 }
 - (void)_test_reference_value
 {
-    // tmp 对象没有别调用,理论上这个函数结束的时候,tmp应该会在第一时间释放
+    // tmp 对象没有别的地方被引用,理论上这个函数结束的时候,tmp应该会在第一时间释放
     RXBlockReferenceValueObject *tmp = [RXBlockReferenceValueObject new];
     [tmp test];
     NSLog(@"_test_reference_value end");
