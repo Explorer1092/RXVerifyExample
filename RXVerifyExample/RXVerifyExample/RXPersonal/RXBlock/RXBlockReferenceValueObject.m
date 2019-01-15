@@ -30,7 +30,19 @@ static void _s_test_name(NSString *prefix, RXBlockTmpObject *tmpObject)
     
 //    [self _test_self_instance_variable];
     
-    [self _test_weakself_strongself_instance_variable];
+//    [self _test_weakself_strongself_instance_variable];
+    
+//    dispatch_apply(10, nil, ^(size_t index) {
+//        
+//    });
+    
+//    int (^block1)(int) = ^(int m) {
+//        return m + 1;
+//    };
+//    
+//    id (^block4)(int) = (id)^(int m) {
+//        return [NSObject new];
+//    };
 }
 
 - (void)_test_normal

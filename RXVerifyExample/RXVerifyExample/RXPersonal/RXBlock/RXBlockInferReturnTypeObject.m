@@ -48,6 +48,7 @@
         return [NSObject new];
     };
     // 在block表达式中,明确的指出了返回值类型
+    // 不是明确的指出了,是强制转为id类型
     id (^block4)(void) = (id)^(void) {
         return [NSObject new];
     };

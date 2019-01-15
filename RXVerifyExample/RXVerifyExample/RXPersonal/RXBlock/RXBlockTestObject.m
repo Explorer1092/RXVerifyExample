@@ -14,6 +14,9 @@
 #import "RXBlockBlockObject.h"
 NSInteger CounterGlobal = 0;
 
+
+
+
 @implementation RXBlockTestObject
 - (void)mainTest
 {
@@ -27,6 +30,28 @@ NSInteger CounterGlobal = 0;
     [self _test_reference_value];
     
 //    [self _test_block];
+    
+    
+    
+}
+
+- (void)dontDoThis {
+//    void (^blockArray[3])(void);  // an array of 3 block references
+//
+//    for (int i = 0; i < 3; ++i) {
+//        blockArray[i] = ^{ printf("hello, %d\n", i); };
+//        // WRONG: The block literal scope is the "for" loop.
+//    }
+    
+    void (^block)(void);
+    
+    long i = random();
+    if (i > 1000) {
+        block = ^{ printf("got i at: %d\n", i); };
+        // WRONG: The block literal scope is the "then" clause.
+    }
+    
+    
 }
 
 - (void)_test_for_mass
