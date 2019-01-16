@@ -12,6 +12,7 @@
 #import "RXBlockVariableTypeObject.h"
 #import "RXBlockReferenceValueObject.h"
 #import "RXBlockBlockObject.h"
+#import "RXBlockChangeOverTimeObject.h"
 NSInteger CounterGlobal = 0;
 
 
@@ -27,12 +28,12 @@ NSInteger CounterGlobal = 0;
     
 //    [self _test_variable_type];
     
-    [self _test_reference_value];
+//    [self _test_reference_value];
     
 //    [self _test_block];
     
     
-    
+    [self _test_change_over_time];
 }
 
 - (void)dontDoThis {
@@ -126,6 +127,12 @@ NSInteger CounterGlobal = 0;
 - (void)_test_block
 {
     RXBlockBlockObject *tmp = [RXBlockBlockObject new];
+    [tmp test];
+    // tmp 会被释放的
+}
+- (void)_test_change_over_time
+{
+    RXBlockChangeOverTimeObject *tmp = [RXBlockChangeOverTimeObject new];
     [tmp test];
 }
 

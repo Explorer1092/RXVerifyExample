@@ -114,6 +114,10 @@
         return m + 4;
     };
     
+    int (^block12)(void) = ^int {
+        return 4;
+    };
+    
     
     block2();
     block3();
@@ -127,6 +131,7 @@
     block_transf9(1);
     block10();
     block11(2);
+    block12();
 }
 
 @end

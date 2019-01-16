@@ -112,6 +112,7 @@
 		E818A08A21EDE5EB0053ED3E /* RXARCRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A08921EDE5EB0053ED3E /* RXARCRequestObject.m */; };
 		E818A08D21EDE6DC0053ED3E /* RXARCCallObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A08C21EDE6DC0053ED3E /* RXARCCallObject.m */; };
 		E818A09021EDE7DF0053ED3E /* RXARCTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A08F21EDE7DF0053ED3E /* RXARCTestObject.m */; };
+		E818A09321EF0F640053ED3E /* RXBlockChangeOverTimeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A09221EF0F640053ED3E /* RXBlockChangeOverTimeObject.m */; };
 		E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */; };
 		E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E620B6C0D800F94127 /* RXNSObjectForSelectorAObject.m */; };
 		E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0ED20B9043400F94127 /* RXMVVMViewController.m */; };
@@ -437,6 +438,8 @@
 		E818A08C21EDE6DC0053ED3E /* RXARCCallObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCCallObject.m; sourceTree = "<group>"; };
 		E818A08E21EDE7DF0053ED3E /* RXARCTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCTestObject.h; sourceTree = "<group>"; };
 		E818A08F21EDE7DF0053ED3E /* RXARCTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCTestObject.m; sourceTree = "<group>"; };
+		E818A09121EF0F640053ED3E /* RXBlockChangeOverTimeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBlockChangeOverTimeObject.h; sourceTree = "<group>"; };
+		E818A09221EF0F640053ED3E /* RXBlockChangeOverTimeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockChangeOverTimeObject.m; sourceTree = "<group>"; };
 		E818F0E220B6C0A300F94127 /* RXNSObjectForSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorViewController.h; sourceTree = "<group>"; };
 		E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNSObjectForSelectorViewController.m; sourceTree = "<group>"; };
 		E818F0E520B6C0D800F94127 /* RXNSObjectForSelectorAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorAObject.h; sourceTree = "<group>"; };
@@ -1786,14 +1789,14 @@
 		E87C047A21E34AF700B90D74 /* RXBlock */ = {
 			isa = PBXGroup;
 			children = (
+				E87C047E21E34B0F00B90D74 /* RXBlockTestObject.h */,
+				E87C047F21E34B0F00B90D74 /* RXBlockTestObject.m */,
 				E87C047B21E34B0300B90D74 /* RXBlockObject.h */,
 				E87C047C21E34B0300B90D74 /* RXBlockObject.m */,
 				E818A06F21E88EA00053ED3E /* RXBlockQSortBRObject.h */,
 				E818A07021E88EA00053ED3E /* RXBlockQSortBRObject.m */,
 				E818A07221E894520053ED3E /* RXBlockArrayObject.h */,
 				E818A07321E894520053ED3E /* RXBlockArrayObject.m */,
-				E87C047E21E34B0F00B90D74 /* RXBlockTestObject.h */,
-				E87C047F21E34B0F00B90D74 /* RXBlockTestObject.m */,
 				E818A07521EC38FF0053ED3E /* RXBlockInferReturnTypeObject.h */,
 				E818A07621EC38FF0053ED3E /* RXBlockInferReturnTypeObject.m */,
 				E818A07821EC92640053ED3E /* RXBlockC99VariableLengthArrayObject.h */,
@@ -1806,6 +1809,8 @@
 				E818A08221ECAFEF0053ED3E /* RXBlockTmpObject.m */,
 				E818A08421ECBCDA0053ED3E /* RXBlockBlockObject.h */,
 				E818A08521ECBCDA0053ED3E /* RXBlockBlockObject.m */,
+				E818A09121EF0F640053ED3E /* RXBlockChangeOverTimeObject.h */,
+				E818A09221EF0F640053ED3E /* RXBlockChangeOverTimeObject.m */,
 			);
 			path = RXBlock;
 			sourceTree = "<group>";
@@ -2316,6 +2321,7 @@
 				E818A08A21EDE5EB0053ED3E /* RXARCRequestObject.m in Sources */,
 				E86050D220A079050016F6C9 /* RXTargetQueueViewController.m in Sources */,
 				C98FD0F21D210F960024854D /* RVLayerViewController.m in Sources */,
+				E818A09321EF0F640053ED3E /* RXBlockChangeOverTimeObject.m in Sources */,
 				E872492821BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m in Sources */,
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
 				E8433D9020FC9C81004A7FBC /* RXOCKWKindofViewController.m in Sources */,
