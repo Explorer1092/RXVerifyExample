@@ -30,6 +30,7 @@
 #import "RXBlockTestObject.h"
 
 #import "RXLockTestObject.h"
+#import "RXARCTestObject.h"
 // 子线程中的通知问题
 //https://www.jianshu.com/p/208568075b4f
 @interface RXAFNetworkingViewController ()
@@ -54,6 +55,7 @@
 @property (nonatomic, strong) RXClassMetaClassTestObject *rxClassMetaClassTestObject;
 @property (nonatomic, strong) RXBlockTestObject *rxBlockTestObject;
 @property (nonatomic, strong) RXLockTestObject *rxLockTestObject;
+@property (nonatomic, strong) RXARCTestObject *rxARCTestObject;
 
 
 @property (nonatomic, copy) NSMutableArray *array;
@@ -196,13 +198,16 @@
 //    NSLog(@"cls1:%@, cls2:%@", NSStringFromClass(cls1), NSStringFromClass(cls2));
     
     self.rxClassMetaClassTestObject = [RXClassMetaClassTestObject new];
-    [self.rxClassMetaClassTestObject mainTest];
+//    [self.rxClassMetaClassTestObject mainTest];
     
     self.rxBlockTestObject = [RXBlockTestObject new];
-    [self.rxBlockTestObject mainTest];
+//    [self.rxBlockTestObject mainTest];
     
     self.rxLockTestObject = [RXLockTestObject new];
 //    [self.rxLockTestObject mainTest];
+    
+    self.rxARCTestObject = [RXARCTestObject new];
+    [self.rxARCTestObject mainTest];
     
     
     

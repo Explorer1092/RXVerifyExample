@@ -9,6 +9,8 @@ target 'RXVerifyExample' do
 #pod 'YYAsyncLayer'
 #pod 'YYDispatchQueuePool'
 
+pod 'YTKNetwork'
+
 pod 'RXView'
 
 pod 'RXImagePickManager'
@@ -62,6 +64,8 @@ pod 'MSWeakTimer'
 pod 'JLRoutes'
 
 pod 'Masonry'
+
+pod 'MBProgressHUD'
 
 
 inhibit_all_warnings!

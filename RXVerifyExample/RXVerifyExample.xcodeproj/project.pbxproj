@@ -109,6 +109,9 @@
 		E818A08021ECAB290053ED3E /* RXBlockReferenceValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A07F21ECAB290053ED3E /* RXBlockReferenceValueObject.m */; };
 		E818A08321ECAFEF0053ED3E /* RXBlockTmpObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A08221ECAFEF0053ED3E /* RXBlockTmpObject.m */; };
 		E818A08621ECBCDA0053ED3E /* RXBlockBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A08521ECBCDA0053ED3E /* RXBlockBlockObject.m */; };
+		E818A08A21EDE5EB0053ED3E /* RXARCRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A08921EDE5EB0053ED3E /* RXARCRequestObject.m */; };
+		E818A08D21EDE6DC0053ED3E /* RXARCCallObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A08C21EDE6DC0053ED3E /* RXARCCallObject.m */; };
+		E818A09021EDE7DF0053ED3E /* RXARCTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A08F21EDE7DF0053ED3E /* RXARCTestObject.m */; };
 		E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */; };
 		E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E620B6C0D800F94127 /* RXNSObjectForSelectorAObject.m */; };
 		E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0ED20B9043400F94127 /* RXMVVMViewController.m */; };
@@ -428,6 +431,12 @@
 		E818A08221ECAFEF0053ED3E /* RXBlockTmpObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockTmpObject.m; sourceTree = "<group>"; };
 		E818A08421ECBCDA0053ED3E /* RXBlockBlockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBlockBlockObject.h; sourceTree = "<group>"; };
 		E818A08521ECBCDA0053ED3E /* RXBlockBlockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBlockBlockObject.m; sourceTree = "<group>"; };
+		E818A08821EDE5EB0053ED3E /* RXARCRequestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCRequestObject.h; sourceTree = "<group>"; };
+		E818A08921EDE5EB0053ED3E /* RXARCRequestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCRequestObject.m; sourceTree = "<group>"; };
+		E818A08B21EDE6DC0053ED3E /* RXARCCallObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCCallObject.h; sourceTree = "<group>"; };
+		E818A08C21EDE6DC0053ED3E /* RXARCCallObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCCallObject.m; sourceTree = "<group>"; };
+		E818A08E21EDE7DF0053ED3E /* RXARCTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCTestObject.h; sourceTree = "<group>"; };
+		E818A08F21EDE7DF0053ED3E /* RXARCTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCTestObject.m; sourceTree = "<group>"; };
 		E818F0E220B6C0A300F94127 /* RXNSObjectForSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorViewController.h; sourceTree = "<group>"; };
 		E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNSObjectForSelectorViewController.m; sourceTree = "<group>"; };
 		E818F0E520B6C0D800F94127 /* RXNSObjectForSelectorAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorAObject.h; sourceTree = "<group>"; };
@@ -829,6 +838,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E818A08721EDE5BC0053ED3E /* RXARC */,
 				E87C048B21E72B9600B90D74 /* RXMasonry */,
 				E87C048121E5DDF100B90D74 /* RXLock */,
 				E87C047A21E34AF700B90D74 /* RXBlock */,
@@ -995,6 +1005,19 @@
 				70BA962DE41383DAC9D079B9 /* Pods-RXVerifyExample.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E818A08721EDE5BC0053ED3E /* RXARC */ = {
+			isa = PBXGroup;
+			children = (
+				E818A08821EDE5EB0053ED3E /* RXARCRequestObject.h */,
+				E818A08921EDE5EB0053ED3E /* RXARCRequestObject.m */,
+				E818A08B21EDE6DC0053ED3E /* RXARCCallObject.h */,
+				E818A08C21EDE6DC0053ED3E /* RXARCCallObject.m */,
+				E818A08E21EDE7DF0053ED3E /* RXARCTestObject.h */,
+				E818A08F21EDE7DF0053ED3E /* RXARCTestObject.m */,
+			);
+			path = RXARC;
 			sourceTree = "<group>";
 		};
 		E818F0E120B6C06A00F94127 /* RXNSObject */ = {
@@ -2157,6 +2180,7 @@
 				E87C044521D7126D00B90D74 /* RXMethodSwizzleRoughlyObject.m in Sources */,
 				E8F8D82221ACF428007AB027 /* RXAFNTestManager.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
+				E818A09021EDE7DF0053ED3E /* RXARCTestObject.m in Sources */,
 				E826367520A96BDC0081F4A8 /* RXMVPGreetingPresenter.m in Sources */,
 				E818A08621ECBCDA0053ED3E /* RXBlockBlockObject.m in Sources */,
 				C92923421D339F02009D6875 /* DMLine.m in Sources */,
@@ -2255,6 +2279,7 @@
 				E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
 				E818A07421E894520053ED3E /* RXBlockArrayObject.m in Sources */,
+				E818A08D21EDE6DC0053ED3E /* RXARCCallObject.m in Sources */,
 				E86050F520A298B60016F6C9 /* RVMsgForwardViewController.m in Sources */,
 				E8F8D7E8218FE5B4007AB027 /* rx-objc-cache.mm in Sources */,
 				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
@@ -2288,6 +2313,7 @@
 				E8F8D7A92187E399007AB027 /* RXMethodListDemoObject+MethodList.m in Sources */,
 				E8433D6A20E39C83004A7FBC /* RXMVVMLoginViewModel.m in Sources */,
 				C9D474531D16543F000C14E3 /* RVUtilityViewController.m in Sources */,
+				E818A08A21EDE5EB0053ED3E /* RXARCRequestObject.m in Sources */,
 				E86050D220A079050016F6C9 /* RXTargetQueueViewController.m in Sources */,
 				C98FD0F21D210F960024854D /* RVLayerViewController.m in Sources */,
 				E872492821BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m in Sources */,

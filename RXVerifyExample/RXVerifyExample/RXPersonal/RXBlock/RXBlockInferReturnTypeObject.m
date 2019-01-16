@@ -106,6 +106,15 @@
         return 5 + m;
     };
     
+    // 正确的方法:显示的指明返回值类型
+    void (^block10)(void) = ^void(void) {
+        NSLog(@"11");
+    };
+    int (^block11)(int m) = ^int(int m) {
+        return m + 4;
+    };
+    
+    
     block2();
     block3();
     block4();
@@ -116,6 +125,8 @@
     block_transf8(1);
     int (^block_transf9)(int) = block9;
     block_transf9(1);
+    block10();
+    block11(2);
 }
 
 @end
