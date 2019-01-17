@@ -1,17 +1,20 @@
 //
-//  RXBlockChangeOverTimeObject.m
+//  RXBlockChangeOverTimeMRCObject.m
 //  RXVerifyExample
 //
-//  Created by Rush.D.Xzj on 2019/1/16.
+//  Created by Rush.D.Xzj on 2019/1/17.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXBlockChangeOverTimeObject.h"
+#import "RXBlockChangeOverTimeMRCObject.h"
+
 #import "RXPrintUtil.h"
+#include <malloc/malloc.h>
+
 
 static NSInteger globalVariable = 1;
 
-@interface RXBlockChangeOverTimeObject()
+@interface RXBlockChangeOverTimeMRCObject()
 @property (nonatomic, copy) NSInteger(^block)(NSInteger);
 
 @property (nonatomic, assign) NSInteger instanceVariable;
@@ -20,11 +23,10 @@ static NSInteger globalVariable = 1;
 
 
 
-@implementation RXBlockChangeOverTimeObject
-
+@implementation RXBlockChangeOverTimeMRCObject
 - (void)test
 {
-    NSLog(@"--------RXBlockChangeOverTimeObject--------");
+    NSLog(@"--------RXBlockChangeOverTimeMRCObject--------");
     self.instanceVariable = 10;
     NSInteger localVariable = 100;
     __block NSInteger blockVariable = 1000;
@@ -43,13 +45,19 @@ static NSInteger globalVariable = 1;
     self.block = block_globalVariable;
     [RXPrintUtil printBlockWithPrefix:@"self block_globalVariable" block:self.block];
     
-    __weak typeof(self) weakSelf = self;
+    // MRC解决循环引用
+    __block __typeof(self) weakSelf = self;
     NSInteger (^block_instanceVariable)(NSInteger) = ^(NSInteger m) {
-        return m + weakSelf.instanceVariable;
+        if (malloc_zone_from_ptr(weakSelf)) {
+            return m + weakSelf.instanceVariable;
+        } else {
+            return m;
+        }
     };
     [RXPrintUtil printBlockWithPrefix:@"block_instanceVariable" block:block_instanceVariable];
     self.block = block_instanceVariable;
     [RXPrintUtil printBlockWithPrefix:@"self block_instanceVariable" block:self.block];
+    
     
     NSInteger (^block_localVariable)(NSInteger) = ^(NSInteger m) {
         return m + localVariable;
@@ -69,6 +77,7 @@ static NSInteger globalVariable = 1;
 }
 - (void)dealloc
 {
+    [super dealloc];
     NSLog(@"RXBlockChangeOverTimeMRCObject dealloc");
 }
 @end

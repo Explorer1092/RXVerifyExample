@@ -25,6 +25,10 @@ typedef struct RXBlockC99VariableLengthArrayStruct {
 //    int n = 10;
 //    // Error: __block attribute not allowed on declaration with a varialby modified type
 //    __block int a[n];
+    
+//    char * gc_string = "1111";
+//    char * string_walker = gc_string + 0;
+//    char * wannabe_walk = gc_string;
 }
 - (void)_test_oc_variable_lenth_array
 {

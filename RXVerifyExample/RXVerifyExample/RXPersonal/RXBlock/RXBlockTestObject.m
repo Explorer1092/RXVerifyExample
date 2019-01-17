@@ -13,6 +13,7 @@
 #import "RXBlockReferenceValueObject.h"
 #import "RXBlockBlockObject.h"
 #import "RXBlockChangeOverTimeObject.h"
+#import "RXBlockChangeOverTimeMRCObject.h"
 NSInteger CounterGlobal = 0;
 
 
@@ -34,6 +35,8 @@ NSInteger CounterGlobal = 0;
     
     
     [self _test_change_over_time];
+    
+    [self _test_change_over_time_mrc];
 }
 
 - (void)dontDoThis {
@@ -133,6 +136,11 @@ NSInteger CounterGlobal = 0;
 - (void)_test_change_over_time
 {
     RXBlockChangeOverTimeObject *tmp = [RXBlockChangeOverTimeObject new];
+    [tmp test];
+}
+- (void)_test_change_over_time_mrc
+{
+    RXBlockChangeOverTimeMRCObject *tmp = [RXBlockChangeOverTimeMRCObject new];
     [tmp test];
 }
 

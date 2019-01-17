@@ -132,6 +132,13 @@
     block10();
     block11(2);
     block12();
+    
+    id block20 = ^void (void) { printf("hello world\n"); };
+    id block21 = ^(void) { printf("hello world\n"); };
+    id block22 = ^{ printf("hello world\n"); };
+    id block23 = ^void { printf("hello world\n"); };
+    
+    NSLog(@"%@, %@, %@, %@", block20, block21, block22, block23);
 }
 
 @end
