@@ -10,6 +10,7 @@
 #import "RXARCCallObject.h"
 #import "RXARCCategoryMethodSubObject.h"
 #import "RXRuntimeUtil.h"
+#import "RXARCPrintMemoryAddressObject.h"
 @interface RXARCTestObject()
 @property (nonatomic, strong) RXARCCallObject *rxARCCallObject;
 @end
@@ -77,7 +78,9 @@
 //    [self.rxARCCallObject test];
 //    [self.rxARCCallObject test2];
     
-    [self _test_category_method];
+//    [self _test_category_method];
+    
+    [self _test_print_memory_address];
 }
 
 - (void)_test_category_method
@@ -85,5 +88,10 @@
     
     [RXRuntimeUtil printMethodListWithClass:[RXARCCategoryMethodParentObject class]];
     [RXRuntimeUtil printMethodListWithClass:[RXARCCategoryMethodSubObject class]];
+}
+- (void)_test_print_memory_address
+{
+    RXARCPrintMemoryAddressObject *tmp = [RXARCPrintMemoryAddressObject new];
+    [tmp test];
 }
 @end

@@ -119,6 +119,7 @@
 		E818A0A021F079600053ED3E /* RXARCCategoryMethodSubObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A09F21F079600053ED3E /* RXARCCategoryMethodSubObject.m */; };
 		E818A0A321F079DB0053ED3E /* RXARCCategoryMethodSubObject+C1.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0A221F079DB0053ED3E /* RXARCCategoryMethodSubObject+C1.m */; };
 		E818A0A621F079E60053ED3E /* RXARCCategoryMethodSubObject+C2.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0A521F079E60053ED3E /* RXARCCategoryMethodSubObject+C2.m */; };
+		E818A0A921F086530053ED3E /* RXARCPrintMemoryAddressObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0A821F086530053ED3E /* RXARCPrintMemoryAddressObject.m */; };
 		E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */; };
 		E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E620B6C0D800F94127 /* RXNSObjectForSelectorAObject.m */; };
 		E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0ED20B9043400F94127 /* RXMVVMViewController.m */; };
@@ -458,6 +459,8 @@
 		E818A0A221F079DB0053ED3E /* RXARCCategoryMethodSubObject+C1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RXARCCategoryMethodSubObject+C1.m"; sourceTree = "<group>"; };
 		E818A0A421F079E60053ED3E /* RXARCCategoryMethodSubObject+C2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RXARCCategoryMethodSubObject+C2.h"; sourceTree = "<group>"; };
 		E818A0A521F079E60053ED3E /* RXARCCategoryMethodSubObject+C2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RXARCCategoryMethodSubObject+C2.m"; sourceTree = "<group>"; };
+		E818A0A721F086530053ED3E /* RXARCPrintMemoryAddressObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCPrintMemoryAddressObject.h; sourceTree = "<group>"; };
+		E818A0A821F086530053ED3E /* RXARCPrintMemoryAddressObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCPrintMemoryAddressObject.m; sourceTree = "<group>"; };
 		E818F0E220B6C0A300F94127 /* RXNSObjectForSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorViewController.h; sourceTree = "<group>"; };
 		E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNSObjectForSelectorViewController.m; sourceTree = "<group>"; };
 		E818F0E520B6C0D800F94127 /* RXNSObjectForSelectorAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorAObject.h; sourceTree = "<group>"; };
@@ -1038,6 +1041,8 @@
 				E818A08C21EDE6DC0053ED3E /* RXARCCallObject.m */,
 				E818A08E21EDE7DF0053ED3E /* RXARCTestObject.h */,
 				E818A08F21EDE7DF0053ED3E /* RXARCTestObject.m */,
+				E818A0A721F086530053ED3E /* RXARCPrintMemoryAddressObject.h */,
+				E818A0A821F086530053ED3E /* RXARCPrintMemoryAddressObject.m */,
 			);
 			path = RXARC;
 			sourceTree = "<group>";
@@ -2223,6 +2228,7 @@
 				E87C044521D7126D00B90D74 /* RXMethodSwizzleRoughlyObject.m in Sources */,
 				E8F8D82221ACF428007AB027 /* RXAFNTestManager.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
+				E818A0A921F086530053ED3E /* RXARCPrintMemoryAddressObject.m in Sources */,
 				E818A09021EDE7DF0053ED3E /* RXARCTestObject.m in Sources */,
 				E826367520A96BDC0081F4A8 /* RXMVPGreetingPresenter.m in Sources */,
 				E818A08621ECBCDA0053ED3E /* RXBlockBlockObject.m in Sources */,
