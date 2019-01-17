@@ -8,8 +8,8 @@
 
 #import "RXARCTestObject.h"
 #import "RXARCCallObject.h"
-
-
+#import "RXARCCategoryMethodSubObject.h"
+#import "RXRuntimeUtil.h"
 @interface RXARCTestObject()
 @property (nonatomic, strong) RXARCCallObject *rxARCCallObject;
 @end
@@ -74,7 +74,16 @@
     
     
     self.rxARCCallObject = [RXARCCallObject new];
-    [self.rxARCCallObject test];
+//    [self.rxARCCallObject test];
 //    [self.rxARCCallObject test2];
+    
+    [self _test_category_method];
+}
+
+- (void)_test_category_method
+{
+    
+    [RXRuntimeUtil printMethodListWithClass:[RXARCCategoryMethodParentObject class]];
+    [RXRuntimeUtil printMethodListWithClass:[RXARCCategoryMethodSubObject class]];
 }
 @end

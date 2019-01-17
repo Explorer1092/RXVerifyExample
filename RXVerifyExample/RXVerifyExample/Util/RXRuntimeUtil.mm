@@ -51,14 +51,16 @@
     NSMutableArray *array = [NSMutableArray new];
     [array addObject:@""];
     [array addObject:@"method list:"];
-    [array addObject:@"methodName"];
+    [array addObject:@"methodName address"];
     unsigned int count;
     
     Method *methodList = class_copyMethodList(cls, &count);
     for (unsigned int i = 0; i < count; i++) {
         Method method = methodList[i];
         NSString *methodName = NSStringFromSelector(method_getName(method));
-        [array addObject:methodName];
+        IMP methodIMP = method_getImplementation(method);
+        NSString *str = [NSString stringWithFormat:@"%@ %p", methodName, methodIMP];
+        [array addObject:str];
     }
     NSLog(@"%@", [array componentsJoinedByString:@"\n"]);
 }

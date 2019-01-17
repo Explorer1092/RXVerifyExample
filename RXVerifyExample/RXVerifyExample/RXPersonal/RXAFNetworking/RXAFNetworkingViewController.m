@@ -201,13 +201,13 @@
 //    [self.rxClassMetaClassTestObject mainTest];
     
     self.rxBlockTestObject = [RXBlockTestObject new];
-    [self.rxBlockTestObject mainTest];
+//    [self.rxBlockTestObject mainTest];
     
     self.rxLockTestObject = [RXLockTestObject new];
 //    [self.rxLockTestObject mainTest];
     
     self.rxARCTestObject = [RXARCTestObject new];
-//    [self.rxARCTestObject mainTest];
+    [self.rxARCTestObject mainTest];
     
     
     
