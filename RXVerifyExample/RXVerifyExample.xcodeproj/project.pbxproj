@@ -120,6 +120,9 @@
 		E818A0A321F079DB0053ED3E /* RXARCCategoryMethodSubObject+C1.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0A221F079DB0053ED3E /* RXARCCategoryMethodSubObject+C1.m */; };
 		E818A0A621F079E60053ED3E /* RXARCCategoryMethodSubObject+C2.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0A521F079E60053ED3E /* RXARCCategoryMethodSubObject+C2.m */; };
 		E818A0A921F086530053ED3E /* RXARCPrintMemoryAddressObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0A821F086530053ED3E /* RXARCPrintMemoryAddressObject.m */; };
+		E818A0AC21F3009D0053ED3E /* RXARCNSConsumedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0AB21F3009D0053ED3E /* RXARCNSConsumedObject.m */; };
+		E818A0B221F303B80053ED3E /* RXMRCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0B121F303B80053ED3E /* RXMRCObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E818A0B521F307830053ED3E /* RXMRCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0B421F307830053ED3E /* RXMRCUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */; };
 		E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E620B6C0D800F94127 /* RXNSObjectForSelectorAObject.m */; };
 		E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0ED20B9043400F94127 /* RXMVVMViewController.m */; };
@@ -461,6 +464,12 @@
 		E818A0A521F079E60053ED3E /* RXARCCategoryMethodSubObject+C2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RXARCCategoryMethodSubObject+C2.m"; sourceTree = "<group>"; };
 		E818A0A721F086530053ED3E /* RXARCPrintMemoryAddressObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCPrintMemoryAddressObject.h; sourceTree = "<group>"; };
 		E818A0A821F086530053ED3E /* RXARCPrintMemoryAddressObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCPrintMemoryAddressObject.m; sourceTree = "<group>"; };
+		E818A0AA21F3009D0053ED3E /* RXARCNSConsumedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCNSConsumedObject.h; sourceTree = "<group>"; };
+		E818A0AB21F3009D0053ED3E /* RXARCNSConsumedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCNSConsumedObject.m; sourceTree = "<group>"; };
+		E818A0B021F303B80053ED3E /* RXMRCObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMRCObject.h; sourceTree = "<group>"; };
+		E818A0B121F303B80053ED3E /* RXMRCObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMRCObject.m; sourceTree = "<group>"; };
+		E818A0B321F307830053ED3E /* RXMRCUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMRCUtil.h; sourceTree = "<group>"; };
+		E818A0B421F307830053ED3E /* RXMRCUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMRCUtil.m; sourceTree = "<group>"; };
 		E818F0E220B6C0A300F94127 /* RXNSObjectForSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorViewController.h; sourceTree = "<group>"; };
 		E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNSObjectForSelectorViewController.m; sourceTree = "<group>"; };
 		E818F0E520B6C0D800F94127 /* RXNSObjectForSelectorAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorAObject.h; sourceTree = "<group>"; };
@@ -1043,6 +1052,10 @@
 				E818A08F21EDE7DF0053ED3E /* RXARCTestObject.m */,
 				E818A0A721F086530053ED3E /* RXARCPrintMemoryAddressObject.h */,
 				E818A0A821F086530053ED3E /* RXARCPrintMemoryAddressObject.m */,
+				E818A0AA21F3009D0053ED3E /* RXARCNSConsumedObject.h */,
+				E818A0AB21F3009D0053ED3E /* RXARCNSConsumedObject.m */,
+				E818A0B021F303B80053ED3E /* RXMRCObject.h */,
+				E818A0B121F303B80053ED3E /* RXMRCObject.m */,
 			);
 			path = RXARC;
 			sourceTree = "<group>";
@@ -1504,6 +1517,8 @@
 				E872495121C9EFF800EA6A3D /* RXUtilViewController.m */,
 				E818A09721F05C480053ED3E /* RXPrintUtil.h */,
 				E818A09821F05C480053ED3E /* RXPrintUtil.m */,
+				E818A0B321F307830053ED3E /* RXMRCUtil.h */,
+				E818A0B421F307830053ED3E /* RXMRCUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -2258,6 +2273,7 @@
 				C9A711111D7BA1130002E703 /* RXAObject.m in Sources */,
 				E87C049121E72DE700B90D74 /* RXMasonryTestObject.m in Sources */,
 				C9D3979C1CF5483700D8569C /* RXRunLoopExeObject.m in Sources */,
+				E818A0B221F303B80053ED3E /* RXMRCObject.m in Sources */,
 				E826367B20A96FF00081F4A8 /* RXFrameworkViewController.m in Sources */,
 				E8F8D81E21ACF36F007AB027 /* RXAFNTest4Object.m in Sources */,
 				E86B170F21B291C3007D555B /* RXAFURLRequestSerialization.m in Sources */,
@@ -2391,10 +2407,12 @@
 				C937947D1CE331D30065F68C /* RVViewCycleViewController.m in Sources */,
 				C928B26E1FB93E530038ECE6 /* RVLLDBViewController.m in Sources */,
 				E87C047621E33C4C00B90D74 /* RXClassMetaClassOverrideObject.m in Sources */,
+				E818A0B521F307830053ED3E /* RXMRCUtil.m in Sources */,
 				E872496D21CFACF700EA6A3D /* RXAFURLSessionManagerPublicDefine.m in Sources */,
 				E8433D6720E39A34004A7FBC /* RXMVVMLoginViewController.m in Sources */,
 				E86050E320A079E30016F6C9 /* RVRunLoop2ViewController.m in Sources */,
 				E818A08321ECAFEF0053ED3E /* RXBlockTmpObject.m in Sources */,
+				E818A0AC21F3009D0053ED3E /* RXARCNSConsumedObject.m in Sources */,
 				E87C048421E5DE0500B90D74 /* RXLockTestObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
