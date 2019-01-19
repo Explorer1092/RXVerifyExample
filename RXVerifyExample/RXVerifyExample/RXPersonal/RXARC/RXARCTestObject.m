@@ -70,6 +70,14 @@
 //    NSLog(@"MRC");
 //    
 //# endif
+    
+//    CGPoint point;
+//    point.x = 4;
+//    point.y = 5;
+    
+//    void * p = (void *)(&point);
+//    id q = (__bridge id)p;
+//    self.rxARCCallObject = q;
 
     
     
@@ -80,7 +88,7 @@
     
 //    [self _test_category_method];
     
-    [self _test_print_memory_address];
+//    [self _test_print_memory_address];
 }
 
 - (void)_test_category_method

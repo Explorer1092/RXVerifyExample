@@ -23,7 +23,7 @@ NSInteger CounterGlobal = 0;
 - (void)mainTest
 {
     
-//    [self _test_qsort_b_r];
+    [self _test_qsort_b_r];
     
 //    [self _test_block_array];
     
@@ -34,9 +34,9 @@ NSInteger CounterGlobal = 0;
 //    [self _test_block];
     
     
-    [self _test_change_over_time];
-    
-    [self _test_change_over_time_mrc];
+//    [self _test_change_over_time];
+//    
+//    [self _test_change_over_time_mrc];
 }
 
 - (void)dontDoThis {
