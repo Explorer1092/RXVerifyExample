@@ -123,6 +123,8 @@
 		E818A0AC21F3009D0053ED3E /* RXARCNSConsumedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0AB21F3009D0053ED3E /* RXARCNSConsumedObject.m */; };
 		E818A0B221F303B80053ED3E /* RXMRCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0B121F303B80053ED3E /* RXMRCObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E818A0B521F307830053ED3E /* RXMRCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0B421F307830053ED3E /* RXMRCUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E818A0B821F30C890053ED3E /* RXARCNSReturnsRetainedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0B721F30C890053ED3E /* RXARCNSReturnsRetainedObject.m */; };
+		E818A0BB21F310CB0053ED3E /* RXARCTmpObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0BA21F310CB0053ED3E /* RXARCTmpObject.m */; };
 		E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */; };
 		E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E620B6C0D800F94127 /* RXNSObjectForSelectorAObject.m */; };
 		E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0ED20B9043400F94127 /* RXMVVMViewController.m */; };
@@ -470,6 +472,10 @@
 		E818A0B121F303B80053ED3E /* RXMRCObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMRCObject.m; sourceTree = "<group>"; };
 		E818A0B321F307830053ED3E /* RXMRCUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMRCUtil.h; sourceTree = "<group>"; };
 		E818A0B421F307830053ED3E /* RXMRCUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMRCUtil.m; sourceTree = "<group>"; };
+		E818A0B621F30C890053ED3E /* RXARCNSReturnsRetainedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCNSReturnsRetainedObject.h; sourceTree = "<group>"; };
+		E818A0B721F30C890053ED3E /* RXARCNSReturnsRetainedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCNSReturnsRetainedObject.m; sourceTree = "<group>"; };
+		E818A0B921F310CB0053ED3E /* RXARCTmpObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCTmpObject.h; sourceTree = "<group>"; };
+		E818A0BA21F310CB0053ED3E /* RXARCTmpObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCTmpObject.m; sourceTree = "<group>"; };
 		E818F0E220B6C0A300F94127 /* RXNSObjectForSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorViewController.h; sourceTree = "<group>"; };
 		E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNSObjectForSelectorViewController.m; sourceTree = "<group>"; };
 		E818F0E520B6C0D800F94127 /* RXNSObjectForSelectorAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorAObject.h; sourceTree = "<group>"; };
@@ -1052,10 +1058,14 @@
 				E818A08F21EDE7DF0053ED3E /* RXARCTestObject.m */,
 				E818A0A721F086530053ED3E /* RXARCPrintMemoryAddressObject.h */,
 				E818A0A821F086530053ED3E /* RXARCPrintMemoryAddressObject.m */,
-				E818A0AA21F3009D0053ED3E /* RXARCNSConsumedObject.h */,
-				E818A0AB21F3009D0053ED3E /* RXARCNSConsumedObject.m */,
 				E818A0B021F303B80053ED3E /* RXMRCObject.h */,
 				E818A0B121F303B80053ED3E /* RXMRCObject.m */,
+				E818A0AA21F3009D0053ED3E /* RXARCNSConsumedObject.h */,
+				E818A0AB21F3009D0053ED3E /* RXARCNSConsumedObject.m */,
+				E818A0B621F30C890053ED3E /* RXARCNSReturnsRetainedObject.h */,
+				E818A0B721F30C890053ED3E /* RXARCNSReturnsRetainedObject.m */,
+				E818A0B921F310CB0053ED3E /* RXARCTmpObject.h */,
+				E818A0BA21F310CB0053ED3E /* RXARCTmpObject.m */,
 			);
 			path = RXARC;
 			sourceTree = "<group>";
@@ -2331,6 +2341,7 @@
 				E818A0A621F079E60053ED3E /* RXARCCategoryMethodSubObject+C2.m in Sources */,
 				C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */,
 				E87C044821D7127600B90D74 /* RXMethodSwizzleOverrideRoughlyObject.m in Sources */,
+				E818A0B821F30C890053ED3E /* RXARCNSReturnsRetainedObject.m in Sources */,
 				E818A0A321F079DB0053ED3E /* RXARCCategoryMethodSubObject+C1.m in Sources */,
 				E818A07A21EC92640053ED3E /* RXBlockC99VariableLengthArrayObject.m in Sources */,
 				E870203720DA77E700752211 /* RXUIListSheelViewController.m in Sources */,
@@ -2398,6 +2409,7 @@
 				E818A08021ECAB290053ED3E /* RXBlockReferenceValueObject.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				E87C044E21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m in Sources */,
+				E818A0BB21F310CB0053ED3E /* RXARCTmpObject.m in Sources */,
 				E8F8D81C21ACF36F007AB027 /* RXAFNTest5Object.m in Sources */,
 				E8F8D7DF218FD6AC007AB027 /* RXCLanguageViewController.mm in Sources */,
 				C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */,

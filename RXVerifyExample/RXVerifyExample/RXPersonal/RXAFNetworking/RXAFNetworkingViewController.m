@@ -207,7 +207,7 @@
 //    [self.rxLockTestObject mainTest];
     
     self.rxARCTestObject = [RXARCTestObject new];
-    [self.rxARCTestObject mainTest];
+//    [self.rxARCTestObject mainTest];
     
     
     

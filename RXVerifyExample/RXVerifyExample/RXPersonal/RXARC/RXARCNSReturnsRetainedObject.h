@@ -1,5 +1,5 @@
 //
-//  RXMRCObject.h
+//  RXARCNSReturnsRetainedObject.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/1/19.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RXMRCObject : NSObject
-- (void)test_ns_consumed;
-- (void)test_ns_retain_count;
+@interface RXARCNSReturnsRetainedObject : NSObject
+- (void)test;
+- (void)test2;
 @end

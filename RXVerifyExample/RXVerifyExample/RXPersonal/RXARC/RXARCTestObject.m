@@ -13,6 +13,8 @@
 #import "RXARCPrintMemoryAddressObject.h"
 #import "RXARCNSConsumedObject.h"
 #import "RXMRCObject.h"
+#import "RXARCNSReturnsRetainedObject.h"
+#import "RXARCNSReturnsRetainedObject.h"
 @interface RXARCTestObject()
 @property (nonatomic, strong) RXARCCallObject *rxARCCallObject;
 @end
@@ -94,6 +96,8 @@
     
 //    [self _test_ns_consumed];
     
+//    [self _test_ns_returns_retained];
+    
     [self _test_mrc_object];
 }
 
@@ -113,9 +117,17 @@
     RXARCNSConsumedObject *tmp = [RXARCNSConsumedObject new];
     [tmp test];
 }
+- (void)_test_ns_returns_retained
+{
+    RXARCNSReturnsRetainedObject *tmp = [RXARCNSReturnsRetainedObject new];
+    [tmp test];
+}
 - (void)_test_mrc_object
 {
     RXMRCObject *tmp = [RXMRCObject new];
-    [tmp test];
+//    [tmp test_ns_consumed];
+    
+    [tmp test_ns_retain_count];
 }
+
 @end

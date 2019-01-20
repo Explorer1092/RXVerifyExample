@@ -1,19 +1,50 @@
 //
-//  RXMRCObject.m
+//  RXARCNSReturnsRetainedObject.m
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/1/19.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXMRCObject.h"
-#import "RXARCTmpObject.h"
+#import "RXARCNSReturnsRetainedObject.h"
 #import "RXMRCUtil.h"
-@interface RXMRCObject()
-@property (nonatomic, retain) RXARCTmpObject *tmpObject;
+#import "RXARCTmpObject.h"
+@interface RXARCNSReturnsRetainedObject()
+@property (nonatomic, strong) RXARCTmpObject *tmpObject;
 @end
 
-@implementation RXMRCObject
+@implementation RXARCNSReturnsRetainedObject
+- (id)_foo_have_attribute __attribute((ns_returns_retained))
+{
+#if __has_attribute(ns_returns_retained)
+    NSLog(@"__has_attribute ns_returns_retained");
+#else
+    NSLog(@"not __has_attribute ns_returns_retained");
+#endif
+    RXARCTmpObject *object = [RXARCTmpObject new];
+    NSUInteger count = [RXMRCUtil objectRetainCount:object];
+    NSLog(@"count in _foo_have_attribute:%zd", count);
+    return object;
+}
+- (id)_foo_have_attribute_not_retains __attribute((ns_returns_not_retained))
+{
+#if __has_attribute(ns_returns_not_retained)
+    NSLog(@"__has_attribute ns_returns_not_retained");
+#else
+    NSLog(@"not __has_attribute ns_returns_not_retained");
+#endif
+    RXARCTmpObject *object = [RXARCTmpObject new];
+    NSUInteger count = [RXMRCUtil objectRetainCount:object];
+    NSLog(@"count in _foo_have_attribute:%zd", count);
+    return object;
+}
+- (id)_foo_not_attribute
+{
+    RXARCTmpObject *object = [RXARCTmpObject new];
+    NSUInteger count = [RXMRCUtil objectRetainCount:object];
+    NSLog(@"count in _foo_not_attribute:%zd", count);
+    return object;
+}
 - (void)_print_tmpObject_info:(NSString *)prefix
 {
     NSUInteger count = [RXMRCUtil objectRetainCount:self.tmpObject];
@@ -81,51 +112,27 @@
     //NSDefaultRunLoopMode == kCFRunLoopDefaultMode
     //NSRunLoopCommonModes == kCFRunLoopCommonModes
 }
-
-- (void)_foo:(id)x
+- (void)test
 {
-    NSUInteger count = [x retainCount];
-    NSLog(@"count in foo method:%zd", count);
-}
-- (void)test_ns_consumed
-{
-    NSObject *object = [[NSObject alloc] init];
     
-    NSUInteger count = [object retainCount];
-    NSLog(@"count after alloc init:%zd", count);
-    
-    [self _foo:object];
-    
-    count = [object retainCount];
-    NSLog(@"count before release:%zd", count);
-    [object release];
-}
-
-- (id)_foo_return_value
-{
-    RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
-    NSUInteger count = [object retainCount];
-    NSLog(@"count after alloc init:%zd", count);
-    return [object autorelease];
-}
-- (void)test_ns_retain_count
-{
     [self _add_runloop_observer];
     
-    id object = [self _foo_return_value];
-    
-    NSUInteger count = [object retainCount];
-    NSLog(@"count after foo:%zd", count);
-    
+//    id object = [self _foo_have_attribute];
+//    id object = [self _foo_have_attribute_not_retains];
+    id object = [self _foo_not_attribute];
+    NSUInteger count = [RXMRCUtil objectRetainCount:object];
+    NSLog(@"count in after call foo:%zd", count);
     self.tmpObject = object;
-    count = [object retainCount];
-    NSLog(@"count after self.tmp:%zd", count);
-//    // 这里self会出现循环引用,会出现self内存泄漏
+    count = [RXMRCUtil objectRetainCount:object];
+    NSLog(@"count in after self.tmpObject:%zd", count);
+    
+    self.tmpObject = nil;
+    
+    count = [RXMRCUtil objectRetainCount:object];
+    NSLog(@"count in after self.tmpObject = nil:%zd", count);
+    
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        NSUInteger count2 = [self.tmpObject retainCount];
-//        NSLog(@"count in dispatch:%zd", count2);
+//        [self _print_tmpObject_info:@"dispatch"];
 //    });
 }
-
-
 @end

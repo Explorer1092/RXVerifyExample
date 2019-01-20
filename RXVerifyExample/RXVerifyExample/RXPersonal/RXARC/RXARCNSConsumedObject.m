@@ -8,44 +8,48 @@
 
 #import "RXARCNSConsumedObject.h"
 #import "RXMRCUtil.h"
+#import "RXARCTmpObject.h"
 @implementation RXARCNSConsumedObject
 
-- (void)foo:(id) __attribute((ns_consumed))x
-{
-    
-    NSUInteger count = [RXMRCUtil objectRetainCount:x];
-    NSLog(@"start count in foo method:%zd", count);
-    
-    
-    count = [RXMRCUtil objectRetainCount:x];
-    NSLog(@"end count in foo method:%zd", count);
-}
-
-- (void)foo2:(id)x
-{
-    NSUInteger count = [RXMRCUtil objectRetainCount:x];
-    NSLog(@"start count foo2 in method:%zd", count);
-    
-    
-    count = [RXMRCUtil objectRetainCount:x];
-    NSLog(@"end count in foo2 method:%zd", count);
-}
-
-- (void)test
+- (void)_foo_have_attribute:(id) __attribute((ns_consumed))x
 {
 #if __has_attribute(ns_consumed)
     NSLog(@"__has_attribute ns_consumed");
 #else
     NSLog(@"not __has_attribute ns_consumed");
 #endif
-    NSObject *object = [NSObject new];
+    
+    NSUInteger count = [RXMRCUtil objectRetainCount:x];
+    NSLog(@"start count in _foo_have_attribute:%zd", count);
+    
+    
+    count = [RXMRCUtil objectRetainCount:x];
+    NSLog(@"end count in _foo_have_attribute:%zd", count);
+}
+
+- (void)_foo_not_attribute:(id)x
+{
+    NSUInteger count = [RXMRCUtil objectRetainCount:x];
+    NSLog(@"start count _foo_not_attribute:%zd", count);
+    
+    
+    count = [RXMRCUtil objectRetainCount:x];
+    NSLog(@"end count in _foo_not_attribute:%zd", count);
+}
+
+- (void)test
+{
+
+    
+    
+    RXARCTmpObject *object = [RXARCTmpObject new];
     
     NSUInteger count = [RXMRCUtil objectRetainCount:object];
     NSLog(@"start count outside method:%zd", count);
     
     
-//    [self foo:object];
-    [self foo2:object];
+//    [self _foo_have_attribute:object];
+    [self _foo_not_attribute:object];
     
     count = [RXMRCUtil objectRetainCount:object];
     NSLog(@"end count outside method:%zd", count);

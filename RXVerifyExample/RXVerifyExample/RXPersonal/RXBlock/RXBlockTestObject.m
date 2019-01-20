@@ -23,11 +23,11 @@ NSInteger CounterGlobal = 0;
 - (void)mainTest
 {
     
-    [self _test_qsort_b_r];
+//    [self _test_qsort_b_r];
     
 //    [self _test_block_array];
     
-//    [self _test_variable_type];
+    [self _test_variable_type];
     
 //    [self _test_reference_value];
     

@@ -31,6 +31,5 @@ static NSInteger CounterStatic = 0;
     NSLog(@"after outside block: CounterGlobal:%zd, CounterStatic:%zd, localCounter:%zd, localCharacter:%c", CounterGlobal, CounterStatic, localCounter, localCharacter);
     
     aBlock(); // execute the block
-    // localCharacter now 'a'
 }
 @end
