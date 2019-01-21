@@ -90,7 +90,7 @@
 //    [self.rxARCCallObject test];
 //    [self.rxARCCallObject test2];
     
-//    [self _test_category_method];
+    [self _test_category_method];
     
 //    [self _test_print_memory_address];
     
@@ -98,12 +98,11 @@
     
 //    [self _test_ns_returns_retained];
     
-    [self _test_mrc_object];
+//    [self _test_mrc_object];
 }
 
 - (void)_test_category_method
 {
-    
     [RXRuntimeUtil printMethodListWithClass:[RXARCCategoryMethodParentObject class]];
     [RXRuntimeUtil printMethodListWithClass:[RXARCCategoryMethodSubObject class]];
 }

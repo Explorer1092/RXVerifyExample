@@ -53,7 +53,6 @@
     [array addObject:@"method list:"];
     [array addObject:@"methodName address"];
     unsigned int count;
-    
     Method *methodList = class_copyMethodList(cls, &count);
     for (unsigned int i = 0; i < count; i++) {
         Method method = methodList[i];

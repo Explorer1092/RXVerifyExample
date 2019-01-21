@@ -12,14 +12,19 @@
 - (void)test
 {
     NSObject *obj = [NSObject new];
-    NSLog(@"%p", obj);
-    NSLog(@"%p", &obj);
-    NSLog(@"123");
+    NSLog(@"指针指向的地址:%p", obj);
+    NSLog(@"指针所在的地址:%p", &obj);
+    NSLog(@"指针所在的地址:%x", (unsigned int)&obj);
+    NSLog(@"obj end");
     
     NSObject *obj2 = self;
-    NSLog(@"%p", self);
-    NSLog(@"%p", obj2);
-    NSLog(@"%p", &obj2);
-    NSLog(@"456");
+    NSLog(@"指针指向的地址:%p", self);
+    NSLog(@"指针指向的地址:%p", obj2);
+    NSLog(@"指针所在的地址:%p", &obj2);
+    NSLog(@"指针所在的地址:%x", (unsigned int)&obj2);
+    NSLog(@"obj2 end");
+    
+    int a = 10;
+    NSLog(@"指针所在的地址:%p", &a);
 }
 @end
