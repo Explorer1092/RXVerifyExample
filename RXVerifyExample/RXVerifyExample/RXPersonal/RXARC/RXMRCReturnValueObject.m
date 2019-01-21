@@ -24,6 +24,7 @@
 //    [self _test_ownership_from_callee_to_caller];
     
     [self _test_ownership_from_callee_to_caller_2];
+    
 }
 
 
@@ -60,7 +61,7 @@
     RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
     NSUInteger count = [object retainCount];
     NSLog(@"count after alloc init:%zd", count);
-    id returnValue = [object retain];
+    id returnValue = [object retain]; // 因为需要返回,所以先retain一次
     [object release]; // 谁申请谁释放原则,有一个alloc init,就有一个release
     return returnValue;
 }
@@ -69,7 +70,7 @@
     id object = [self _foo_ownership_from_callee_to_caller_2];
     NSLog(@"%@", object);
     NSLog(@"before release");
-    [object release];
+    [object release]; // 如果没有这一行,object会内存泄漏
 }
 
 

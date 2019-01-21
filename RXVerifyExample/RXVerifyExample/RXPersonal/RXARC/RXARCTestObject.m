@@ -16,6 +16,7 @@
 #import "RXARCNSReturnsRetainedObject.h"
 #import "RXARCNSReturnsRetainedObject.h"
 #import "RXMRCReturnValueObject.h"
+#import "RXARCBridgeCastObject.h"
 @interface RXARCTestObject()
 @property (nonatomic, strong) RXARCCallObject *rxARCCallObject;
 @end
@@ -101,7 +102,9 @@
     
 //    [self _test_mrc_object];
     
-    [self _test_mrc_return_value_object];
+//    [self _test_mrc_return_value_object];
+    
+    [self _test_bridge_cast];
 }
 
 - (void)_test_category_method
@@ -132,6 +135,11 @@
 - (void)_test_mrc_return_value_object
 {
     RXMRCReturnValueObject *tmp = [RXMRCReturnValueObject new];
+    [tmp test];
+}
+- (void)_test_bridge_cast
+{
+    RXARCBridgeCastObject *tmp = [RXARCBridgeCastObject new];
     [tmp test];
 }
 
