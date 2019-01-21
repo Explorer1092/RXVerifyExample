@@ -125,6 +125,8 @@
 		E818A0B521F307830053ED3E /* RXMRCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0B421F307830053ED3E /* RXMRCUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E818A0B821F30C890053ED3E /* RXARCNSReturnsRetainedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0B721F30C890053ED3E /* RXARCNSReturnsRetainedObject.m */; };
 		E818A0BB21F310CB0053ED3E /* RXARCTmpObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0BA21F310CB0053ED3E /* RXARCTmpObject.m */; };
+		E818A0BE21F56D7C0053ED3E /* RXRunloopUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0BD21F56D7C0053ED3E /* RXRunloopUtil.m */; };
+		E818A0C121F56EFB0053ED3E /* RXMRCReturnValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0C021F56EFB0053ED3E /* RXMRCReturnValueObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */; };
 		E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E620B6C0D800F94127 /* RXNSObjectForSelectorAObject.m */; };
 		E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0ED20B9043400F94127 /* RXMVVMViewController.m */; };
@@ -476,6 +478,10 @@
 		E818A0B721F30C890053ED3E /* RXARCNSReturnsRetainedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCNSReturnsRetainedObject.m; sourceTree = "<group>"; };
 		E818A0B921F310CB0053ED3E /* RXARCTmpObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCTmpObject.h; sourceTree = "<group>"; };
 		E818A0BA21F310CB0053ED3E /* RXARCTmpObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCTmpObject.m; sourceTree = "<group>"; };
+		E818A0BC21F56D7C0053ED3E /* RXRunloopUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRunloopUtil.h; sourceTree = "<group>"; };
+		E818A0BD21F56D7C0053ED3E /* RXRunloopUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRunloopUtil.m; sourceTree = "<group>"; };
+		E818A0BF21F56EFB0053ED3E /* RXMRCReturnValueObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMRCReturnValueObject.h; sourceTree = "<group>"; };
+		E818A0C021F56EFB0053ED3E /* RXMRCReturnValueObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMRCReturnValueObject.m; sourceTree = "<group>"; };
 		E818F0E220B6C0A300F94127 /* RXNSObjectForSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorViewController.h; sourceTree = "<group>"; };
 		E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNSObjectForSelectorViewController.m; sourceTree = "<group>"; };
 		E818F0E520B6C0D800F94127 /* RXNSObjectForSelectorAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorAObject.h; sourceTree = "<group>"; };
@@ -1060,6 +1066,8 @@
 				E818A0A821F086530053ED3E /* RXARCPrintMemoryAddressObject.m */,
 				E818A0B021F303B80053ED3E /* RXMRCObject.h */,
 				E818A0B121F303B80053ED3E /* RXMRCObject.m */,
+				E818A0BF21F56EFB0053ED3E /* RXMRCReturnValueObject.h */,
+				E818A0C021F56EFB0053ED3E /* RXMRCReturnValueObject.m */,
 				E818A0AA21F3009D0053ED3E /* RXARCNSConsumedObject.h */,
 				E818A0AB21F3009D0053ED3E /* RXARCNSConsumedObject.m */,
 				E818A0B621F30C890053ED3E /* RXARCNSReturnsRetainedObject.h */,
@@ -1529,6 +1537,8 @@
 				E818A09821F05C480053ED3E /* RXPrintUtil.m */,
 				E818A0B321F307830053ED3E /* RXMRCUtil.h */,
 				E818A0B421F307830053ED3E /* RXMRCUtil.m */,
+				E818A0BC21F56D7C0053ED3E /* RXRunloopUtil.h */,
+				E818A0BD21F56D7C0053ED3E /* RXRunloopUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -2219,6 +2229,7 @@
 				E87C045721DA183100B90D74 /* RXCountryWeatherApi.m in Sources */,
 				E86050FB20A29A9D0016F6C9 /* RVMsgForwardProxy.m in Sources */,
 				C9BDAFB91E4AC4B8006CCD0E /* RVThreadViewController.m in Sources */,
+				E818A0C121F56EFB0053ED3E /* RXMRCReturnValueObject.m in Sources */,
 				E872492521BFDD3600EA6A3D /* RXAFMultipartBodyStream.m in Sources */,
 				C9C2B3391E0BB2AD0087C718 /* RVOCDataViewController.m in Sources */,
 				58D660391C2571A700912786 /* RXMenuView.m in Sources */,
@@ -2255,6 +2266,7 @@
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
 				E818A0A921F086530053ED3E /* RXARCPrintMemoryAddressObject.m in Sources */,
 				E818A09021EDE7DF0053ED3E /* RXARCTestObject.m in Sources */,
+				E818A0BE21F56D7C0053ED3E /* RXRunloopUtil.m in Sources */,
 				E826367520A96BDC0081F4A8 /* RXMVPGreetingPresenter.m in Sources */,
 				E818A08621ECBCDA0053ED3E /* RXBlockBlockObject.m in Sources */,
 				C92923421D339F02009D6875 /* DMLine.m in Sources */,

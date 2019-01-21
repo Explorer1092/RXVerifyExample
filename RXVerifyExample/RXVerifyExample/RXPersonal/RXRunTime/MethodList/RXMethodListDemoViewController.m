@@ -39,8 +39,8 @@
         Method tmp = methodList[i];
         SEL sel = method_getName(tmp);
         const char *name = sel_getName(sel);
-        int argumentNumber = method_getNumberOfArguments(tmp);
-        const char *encoding = method_getTypeEncoding(tmp);
+//        int argumentNumber = method_getNumberOfArguments(tmp);
+//        const char *encoding = method_getTypeEncoding(tmp);
         [mutArray addObject:[NSString stringWithUTF8String:name]];
     }
     free(methodList);

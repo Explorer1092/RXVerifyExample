@@ -74,7 +74,7 @@
     begin = CACurrentMediaTime();
     @autoreleasepool {
         for (NSInteger i = 0; i < count; i++) {
-            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         }
     }
     end = CACurrentMediaTime();

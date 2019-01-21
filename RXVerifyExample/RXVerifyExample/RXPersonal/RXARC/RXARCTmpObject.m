@@ -9,6 +9,10 @@
 #import "RXARCTmpObject.h"
 
 @implementation RXARCTmpObject
+- (NSString *)description
+{
+    return NSStringFromClass([self class]);
+}
 - (void)dealloc
 {
     NSLog(@"RXARCTmpObject dealloc");

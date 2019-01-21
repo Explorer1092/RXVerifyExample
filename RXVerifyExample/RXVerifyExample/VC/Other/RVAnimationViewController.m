@@ -145,7 +145,7 @@
     basicAnimation.duration = 2;
     basicAnimation.fromValue = [NSValue valueWithCGPoint:view.layer.position];
     basicAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(200, 400)];
-    basicAnimation.delegate = self;
+    basicAnimation.delegate = (id<CAAnimationDelegate>)self;
 //    basicAnimation.timingFunction
     NSLog(@"anim:%p", basicAnimation);
     NSLog(@"anim.delegate:%p", basicAnimation.delegate);

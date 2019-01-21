@@ -10,5 +10,4 @@
 
 @interface RXMRCObject : NSObject
 - (void)test_ns_consumed;
-- (void)test_ns_retain_count;
 @end

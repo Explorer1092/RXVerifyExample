@@ -15,6 +15,7 @@
 #import "RXMRCObject.h"
 #import "RXARCNSReturnsRetainedObject.h"
 #import "RXARCNSReturnsRetainedObject.h"
+#import "RXMRCReturnValueObject.h"
 @interface RXARCTestObject()
 @property (nonatomic, strong) RXARCCallObject *rxARCCallObject;
 @end
@@ -90,7 +91,7 @@
 //    [self.rxARCCallObject test];
 //    [self.rxARCCallObject test2];
     
-    [self _test_category_method];
+//    [self _test_category_method];
     
 //    [self _test_print_memory_address];
     
@@ -99,6 +100,8 @@
 //    [self _test_ns_returns_retained];
     
 //    [self _test_mrc_object];
+    
+    [self _test_mrc_return_value_object];
 }
 
 - (void)_test_category_method
@@ -124,9 +127,12 @@
 - (void)_test_mrc_object
 {
     RXMRCObject *tmp = [RXMRCObject new];
-//    [tmp test_ns_consumed];
-    
-    [tmp test_ns_retain_count];
+    [tmp test_ns_consumed];
+}
+- (void)_test_mrc_return_value_object
+{
+    RXMRCReturnValueObject *tmp = [RXMRCReturnValueObject new];
+    [tmp test];
 }
 
 @end

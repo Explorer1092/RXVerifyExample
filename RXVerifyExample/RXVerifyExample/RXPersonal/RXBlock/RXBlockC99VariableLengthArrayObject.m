@@ -45,8 +45,8 @@ typedef struct RXBlockC99VariableLengthArrayStruct {
 }
 - (void)_test_struct
 {
-    __block RXBlockCommonStruct struct1 = {0};
-    
-    __block RXBlockC99VariableLengthArrayStruct struct2 = {0};
+//    __block RXBlockCommonStruct struct1 = {0};
+//    
+//    __block RXBlockC99VariableLengthArrayStruct struct2 = {0};
 }
 @end

@@ -51,17 +51,17 @@ typedef struct RX_objc_class {
     
 }
 
-static void add_test(id self, NSString *desc)
-{
-    NSLog(@"%@: %@, %p", desc, self, self);
-    BOOL flag1 = [self respondsToSelector:@selector(objFunc)];
-    BOOL flag2 = [self instancesRespondToSelector:@selector(objFunc)];
-    BOOL flag3 = NO;
-    BOOL flag4 = NO;
-//    BOOL flag3 = [((NSObject *)self).class respondsToSelector:@selector(objFunc)];
-//    BOOL flag4 = [((NSObject *)self).class instancesRespondToSelector:@selector(objFunc)];
-    NSLog(@"flag1:%zd, flag2:%zd, flag3:%zd, flag4:%zd", flag1, flag2, flag3, flag4);
-}
+//static void add_test(id self, NSString *desc)
+//{
+//    NSLog(@"%@: %@, %p", desc, self, self);
+//    BOOL flag1 = [self respondsToSelector:@selector(objFunc)];
+//    BOOL flag2 = [self instancesRespondToSelector:@selector(objFunc)];
+//    BOOL flag3 = NO;
+//    BOOL flag4 = NO;
+////    BOOL flag3 = [((NSObject *)self).class respondsToSelector:@selector(objFunc)];
+////    BOOL flag4 = [((NSObject *)self).class instancesRespondToSelector:@selector(objFunc)];
+//    NSLog(@"flag1:%zd, flag2:%zd, flag3:%zd, flag4:%zd", flag1, flag2, flag3, flag4);
+//}
 
 static void add_test2(id instanceObject, id classObject)
 {
