@@ -11,17 +11,15 @@
 @implementation RXARCBridgeCastObject
 - (void)test
 {
-    
 //    [self _test_over_release];
     
 //    [self _test_bridge_T_from_NonRetainablePointerType_to_RetainablePointerType];
     
 //    [self _test_bridge_T_from_RetainablePointerType_to_NonRetainablePointerType];
     
-//    [self _test_bridge_retained_from_RetainablePointerType_to_NonRetainablePointerType];
+    [self _test_bridge_retained_from_RetainablePointerType_to_NonRetainablePointerType];
     
-    [self _test_bridge_transfer_from_NonRetainablePointerType_to_RetainablePointerType];
-    
+//    [self _test_bridge_transfer_from_NonRetainablePointerType_to_RetainablePointerType];
 }
 
 
@@ -48,30 +46,38 @@
     
     // 在这里不会崩溃,相当于过渡释放了
     CFRelease(stringRef);
+    // 这里会崩溃,此时string是野指针了
+//    NSLog(@"after string release twice:%@, count3:%zd", string, [RXMRCUtil objectRetainCount:string]);
 } // 在这里会崩溃,因为ARC最后会添加  [string release]
 
 - (void)_test_bridge_T_from_RetainablePointerType_to_NonRetainablePointerType
 {
     NSString *string = [[NSString alloc] initWithFormat:@"123-%zd-abc", 456];
-    CFStringRef stringRef = (__bridge CFStringRef)string;
     NSLog(@"before string release:%@, count1:%zd", string, [RXMRCUtil objectRetainCount:string]);
+    CFStringRef stringRef = (__bridge CFStringRef)string;
+    NSLog(@"before string release:%@, count2:%zd", string, [RXMRCUtil objectRetainCount:string]);
     // 这里不会崩溃
     CFRelease(stringRef);
-//    NSLog(@"after string release:%@, count2:%zd", string, [RXMRCUtil objectRetainCount:string]);
+//    NSLog(@"after string release:%@, count3:%zd", string, [RXMRCUtil objectRetainCount:string]);
 } // 这里会崩溃, arc 加了 [string release]
 
 - (void)_test_bridge_retained_from_RetainablePointerType_to_NonRetainablePointerType
 {
     NSString *string = [[NSString alloc] initWithFormat:@"123-%zd-abc", 456];
-    CFStringRef stringRef = (__bridge_retained CFStringRef)string;
     NSLog(@"before string release:%@, count1:%zd", string, [RXMRCUtil objectRetainCount:string]);
+    // 这一行是不是让string脱离ARC的控制,是让stringRef强引用!
+    CFStringRef stringRef = (__bridge_retained CFStringRef)string;
+    NSLog(@"before string release:%@, count2:%zd", string, [RXMRCUtil objectRetainCount:string]);
     // 这里不会崩溃
     CFRelease(stringRef);
+    
+    // __bridge_retained YYLabel的子线程释放对象
 } // 这里也不会崩溃
 
 - (void)_test_bridge_transfer_from_NonRetainablePointerType_to_RetainablePointerType
 {
     CFStringRef stringRef = CFStringCreateWithCString(CFAllocatorGetDefault(), "123-%d-abc", kCFStringEncodingUTF8);
+    // 把stringRef加入到ARC的控制中
     NSString *string = (__bridge_transfer NSString *)stringRef;
     NSLog(@"before string release:%@, count1:%zd", string, [RXMRCUtil objectRetainCount:string]);
     CFRelease(stringRef);

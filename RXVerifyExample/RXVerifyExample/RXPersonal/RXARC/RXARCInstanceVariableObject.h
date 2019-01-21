@@ -1,5 +1,5 @@
 //
-//  RXARCBridgeCastObject.h
+//  RXARCInstanceVariableObject.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/1/21.
@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RXARCBridgeCastObject : NSObject
-- (void)test;
+@interface RXARCInstanceVariableObject : NSObject
 
 @end

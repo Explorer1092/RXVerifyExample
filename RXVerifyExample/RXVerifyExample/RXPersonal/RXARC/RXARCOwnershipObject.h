@@ -1,5 +1,5 @@
 //
-//  RXARCBridgeCastObject.h
+//  RXARCOwnershipObject.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/1/21.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RXARCBridgeCastObject : NSObject
-- (void)test;
+@interface RXARCOwnershipObject : NSObject
+
 
 @end
