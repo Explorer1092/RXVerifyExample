@@ -18,6 +18,7 @@
 #import "RXMRCReturnValueObject.h"
 #import "RXARCBridgeCastObject.h"
 #import "RXARCOwnershipQualifiedObject.h"
+#import "RXARCObject.h"
 @interface RXARCTestObject()
 @property (nonatomic, strong) RXARCCallObject *rxARCCallObject;
 @end
@@ -101,13 +102,15 @@
     
 //    [self _test_ns_returns_retained];
     
-//    [self _test_mrc_object];
+    [self _test_mrc_object];
+    
+    [self _test_arc_object];
     
 //    [self _test_mrc_return_value_object];
     
 //    [self _test_bridge_cast];
     
-    [self _test_ownership_qualified];
+//    [self _test_ownership_qualified];
 }
 
 - (void)_test_category_method
@@ -133,7 +136,12 @@
 - (void)_test_mrc_object
 {
     RXMRCObject *tmp = [RXMRCObject new];
-    [tmp test_ns_consumed];
+    [tmp test];
+}
+- (void)_test_arc_object
+{
+    RXARCObject *tmp = [RXARCObject new];
+    [tmp test];
 }
 - (void)_test_mrc_return_value_object
 {

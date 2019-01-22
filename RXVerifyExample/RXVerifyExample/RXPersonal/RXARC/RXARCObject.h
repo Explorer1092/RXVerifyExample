@@ -1,13 +1,13 @@
 //
-//  RXMRCObject.h
+//  RXARCObject.h
 //  RXVerifyExample
 //
-//  Created by Rush.D.Xzj on 2019/1/19.
+//  Created by Rush.D.Xzj on 2019/1/22.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface RXMRCObject : NSObject
+@interface RXARCObject : NSObject
 - (void)test;
 @end

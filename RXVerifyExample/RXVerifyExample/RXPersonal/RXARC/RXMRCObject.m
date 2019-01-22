@@ -8,7 +8,7 @@
 
 #import "RXMRCObject.h"
 #import "RXMRCUtil.h"
-
+#import "RXARCTmpObject.h"
 
 @implementation RXMRCObject
 
@@ -17,9 +17,9 @@
     NSUInteger count = [x retainCount];
     NSLog(@"count in foo method:%zd", count);
 }
-- (void)test_ns_consumed
+- (void)test
 {
-    NSObject *object = [[NSObject alloc] init];
+    RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
     
     NSUInteger count = [object retainCount];
     NSLog(@"count after alloc init:%zd", count);

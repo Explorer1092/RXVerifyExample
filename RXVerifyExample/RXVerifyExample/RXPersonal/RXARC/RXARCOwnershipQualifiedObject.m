@@ -41,7 +41,6 @@
 }
 - (void)_test_protocol
 {
-    
     NSLog(@"before _test_protocol");
     RXARCTmpObject *object = [RXARCTmpObject new];
     NSLog(@"count after new:%zd", [RXMRCUtil objectRetainCount:object]);

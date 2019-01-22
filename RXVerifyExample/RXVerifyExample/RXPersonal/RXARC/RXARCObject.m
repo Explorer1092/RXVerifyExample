@@ -1,32 +1,16 @@
 //
-//  RXARCNSConsumedObject.m
+//  RXARCObject.m
 //  RXVerifyExample
 //
-//  Created by Rush.D.Xzj on 2019/1/19.
+//  Created by Rush.D.Xzj on 2019/1/22.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXARCNSConsumedObject.h"
+#import "RXARCObject.h"
+
 #import "RXMRCUtil.h"
 #import "RXARCTmpObject.h"
-@implementation RXARCNSConsumedObject
-
-- (void)_foo_have_attribute:(id) __attribute((ns_consumed))x
-{
-#if __has_attribute(ns_consumed)
-    NSLog(@"__has_attribute ns_consumed");
-#else
-    NSLog(@"not __has_attribute ns_consumed");
-#endif
-    
-    NSUInteger count = [RXMRCUtil objectRetainCount:x];
-    NSLog(@"start count in _foo_have_attribute:%zd", count);
-    
-    
-    count = [RXMRCUtil objectRetainCount:x];
-    NSLog(@"end count in _foo_have_attribute:%zd", count);
-}
-
+@implementation RXARCObject
 - (void)_foo:(id)x
 {
     NSUInteger count = [RXMRCUtil objectRetainCount:x];
@@ -40,11 +24,11 @@
 - (void)test
 {
     RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
-
+    
     NSUInteger count = [RXMRCUtil objectRetainCount:object];
     NSLog(@"start count outside method:%zd", count);
     
-//    [self _foo_have_attribute:object];
+    //    [self _foo_have_attribute:object];
     [self _foo:object];
     
     count = [RXMRCUtil objectRetainCount:object];
