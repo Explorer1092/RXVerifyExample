@@ -29,6 +29,13 @@
     count = [object retainCount];
     NSLog(@"count before release:%zd", count);
     [object release];
+    
+    #if __has_feature(objc_arc)
+        NSLog(@"ARC");
+    #else
+        NSLog(@"MRC");
+    
+    # endif
 }
 
 
