@@ -128,8 +128,9 @@
 		E818A0BE21F56D7C0053ED3E /* RXRunloopUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0BD21F56D7C0053ED3E /* RXRunloopUtil.m */; };
 		E818A0C121F56EFB0053ED3E /* RXMRCReturnValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0C021F56EFB0053ED3E /* RXMRCReturnValueObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E818A0C421F578330053ED3E /* RXARCBridgeCastObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0C321F578330053ED3E /* RXARCBridgeCastObject.m */; };
-		E818A0C721F5B84A0053ED3E /* RXARCOwnershipObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0C621F5B84A0053ED3E /* RXARCOwnershipObject.m */; };
+		E818A0C721F5B84A0053ED3E /* RXARCPropertyOwnershipObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0C621F5B84A0053ED3E /* RXARCPropertyOwnershipObject.m */; };
 		E818A0CA21F5BBEF0053ED3E /* RXARCInstanceVariableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0C921F5BBEF0053ED3E /* RXARCInstanceVariableObject.m */; };
+		E818A0CD21F5CE720053ED3E /* RXARCOwnershipQualifiedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0CC21F5CE720053ED3E /* RXARCOwnershipQualifiedObject.m */; };
 		E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */; };
 		E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E620B6C0D800F94127 /* RXNSObjectForSelectorAObject.m */; };
 		E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0ED20B9043400F94127 /* RXMVVMViewController.m */; };
@@ -487,10 +488,12 @@
 		E818A0C021F56EFB0053ED3E /* RXMRCReturnValueObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMRCReturnValueObject.m; sourceTree = "<group>"; };
 		E818A0C221F578330053ED3E /* RXARCBridgeCastObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCBridgeCastObject.h; sourceTree = "<group>"; };
 		E818A0C321F578330053ED3E /* RXARCBridgeCastObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCBridgeCastObject.m; sourceTree = "<group>"; };
-		E818A0C521F5B84A0053ED3E /* RXARCOwnershipObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCOwnershipObject.h; sourceTree = "<group>"; };
-		E818A0C621F5B84A0053ED3E /* RXARCOwnershipObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCOwnershipObject.m; sourceTree = "<group>"; };
+		E818A0C521F5B84A0053ED3E /* RXARCPropertyOwnershipObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCPropertyOwnershipObject.h; sourceTree = "<group>"; };
+		E818A0C621F5B84A0053ED3E /* RXARCPropertyOwnershipObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCPropertyOwnershipObject.m; sourceTree = "<group>"; };
 		E818A0C821F5BBEF0053ED3E /* RXARCInstanceVariableObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCInstanceVariableObject.h; sourceTree = "<group>"; };
 		E818A0C921F5BBEF0053ED3E /* RXARCInstanceVariableObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCInstanceVariableObject.m; sourceTree = "<group>"; };
+		E818A0CB21F5CE720053ED3E /* RXARCOwnershipQualifiedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCOwnershipQualifiedObject.h; sourceTree = "<group>"; };
+		E818A0CC21F5CE720053ED3E /* RXARCOwnershipQualifiedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCOwnershipQualifiedObject.m; sourceTree = "<group>"; };
 		E818F0E220B6C0A300F94127 /* RXNSObjectForSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorViewController.h; sourceTree = "<group>"; };
 		E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNSObjectForSelectorViewController.m; sourceTree = "<group>"; };
 		E818F0E520B6C0D800F94127 /* RXNSObjectForSelectorAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorAObject.h; sourceTree = "<group>"; };
@@ -1085,10 +1088,12 @@
 				E818A0BA21F310CB0053ED3E /* RXARCTmpObject.m */,
 				E818A0C221F578330053ED3E /* RXARCBridgeCastObject.h */,
 				E818A0C321F578330053ED3E /* RXARCBridgeCastObject.m */,
-				E818A0C521F5B84A0053ED3E /* RXARCOwnershipObject.h */,
-				E818A0C621F5B84A0053ED3E /* RXARCOwnershipObject.m */,
+				E818A0C521F5B84A0053ED3E /* RXARCPropertyOwnershipObject.h */,
+				E818A0C621F5B84A0053ED3E /* RXARCPropertyOwnershipObject.m */,
 				E818A0C821F5BBEF0053ED3E /* RXARCInstanceVariableObject.h */,
 				E818A0C921F5BBEF0053ED3E /* RXARCInstanceVariableObject.m */,
+				E818A0CB21F5CE720053ED3E /* RXARCOwnershipQualifiedObject.h */,
+				E818A0CC21F5CE720053ED3E /* RXARCOwnershipQualifiedObject.m */,
 			);
 			path = RXARC;
 			sourceTree = "<group>";
@@ -2237,6 +2242,7 @@
 				E870204520DA7B3F00752211 /* RXImageCell.m in Sources */,
 				5803F0CF1C190FFC0071FDDA /* RVRefreshViewController.m in Sources */,
 				E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */,
+				E818A0CD21F5CE720053ED3E /* RXARCOwnershipQualifiedObject.m in Sources */,
 				C929233F1D339C65009D6875 /* RVDUMAView.m in Sources */,
 				E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */,
 				E870202620D39A3800752211 /* RXSYViewController.m in Sources */,
@@ -2254,7 +2260,7 @@
 				E872493F21C5291100EA6A3D /* RXAFXMLDocumentResponseSerializer.m in Sources */,
 				E826367820A96BEF0081F4A8 /* RXMVPGreetingViewController.m in Sources */,
 				C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */,
-				E818A0C721F5B84A0053ED3E /* RXARCOwnershipObject.m in Sources */,
+				E818A0C721F5B84A0053ED3E /* RXARCPropertyOwnershipObject.m in Sources */,
 				E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */,
 				E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */,
 				E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */,

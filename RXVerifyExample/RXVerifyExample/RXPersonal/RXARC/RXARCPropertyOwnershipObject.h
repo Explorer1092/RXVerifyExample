@@ -1,5 +1,5 @@
 //
-//  RXARCOwnershipObject.h
+//  RXARCPropertyOwnershipObject.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/1/21.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RXARCOwnershipObject : NSObject
+@interface RXARCPropertyOwnershipObject : NSObject
 
 
 @end

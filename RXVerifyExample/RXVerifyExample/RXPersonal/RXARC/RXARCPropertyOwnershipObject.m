@@ -1,14 +1,14 @@
 //
-//  RXARCOwnershipObject.m
+//  RXARCPropertyOwnershipObject.m
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/1/21.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXARCOwnershipObject.h"
+#import "RXARCPropertyOwnershipObject.h"
 
-@interface RXARCOwnershipObject() {
+@interface RXARCPropertyOwnershipObject() {
     __strong NSObject *_strongObject;
 //    // 默认的是__strong
 //    NSObject *_strong2Object;
@@ -20,8 +20,6 @@
     __unsafe_unretained NSObject *_unsafeUnretainedObject;
     // ERROR: instance variable cannot have __autoreleasing ownership
 //    __autoreleasing NSObject *_autoreleasingObject;
-    
-    
 }
 
 // 如果改成了其他的(assign,weak,unsafe_unretained),那么在__strong NSObject *_strongObject;会出现:
@@ -39,6 +37,13 @@
 @property (nonatomic, unsafe_unretained) NSInteger b;
 @end
 
-@implementation RXARCOwnershipObject
-
+@implementation RXARCPropertyOwnershipObject
+//- (id)init
+//{
+//    return [NSString stringWithFormat:@"123"];
+//}
+- (void)test
+{
+//    __strong NSObject *a = _strongObject;
+}
 @end
