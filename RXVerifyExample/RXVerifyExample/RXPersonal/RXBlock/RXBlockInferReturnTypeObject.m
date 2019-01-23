@@ -125,7 +125,8 @@
     block5();
     block6();
     block7();
-    int (^block_transf8)(int) = block8;
+    int (^block_transf8)(int) = (int(^)(int))block8;
+//    int (^block_transf8)(int) = block8;
     block_transf8(1);
     int (^block_transf9)(int) = block9;
     block_transf9(1);

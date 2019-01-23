@@ -109,11 +109,11 @@
     
 //    [self _test_mrc_return_value_object];
     
-//    [self _test_bridge_cast];
+    [self _test_bridge_cast];
     
 //    [self _test_ownership_qualified];
     
-    [self _test_clang_attribute];
+//    [self _test_clang_attribute];
 }
 
 - (void)_test_category_method
