@@ -165,6 +165,14 @@
 {
     RXARCClangAttributeObject *tmp = [RXARCClangAttributeObject new];
     [tmp test];
+    
+//    __weak typeof(self) weakSelf = self;
+    // ERROR: Cannot assign to variable 'weakSelf' with const-qualified type 'XXXX *const __weak'
+//    weakSelf = self;
+    
+//    __weak typeof(NSObject *) weakSelf2 = self;
+//    weakSelf2 = self;
+    
 }
 
 @end
