@@ -19,6 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self test_runtimeUtil];
+    
+//    objc_autorelease(11);
 }
 
 - (void)didReceiveMemoryWarning {

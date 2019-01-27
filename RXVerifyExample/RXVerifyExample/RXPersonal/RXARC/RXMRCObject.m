@@ -17,7 +17,7 @@
     NSUInteger count = [x retainCount];
     NSLog(@"count in foo method:%zd", count);
 }
-- (void)test
+- (void)_test_method_argument
 {
     RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
     
@@ -29,13 +29,21 @@
     count = [object retainCount];
     NSLog(@"count before release:%zd", count);
     [object release];
+}
+- (void)_test_variable
+{
+    RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
+    NSLog(@"count after alloc init:%zd", [object retainCount]);
+    id value = object;
+    NSLog(@"count after variable:%zd", [value retainCount]);
+    [object release];
+}
+- (void)test
+{
     
-    #if __has_feature(objc_arc)
-        NSLog(@"ARC");
-    #else
-        NSLog(@"MRC");
+//    [self _test_method_argument];
     
-    # endif
+    [self _test_variable];
 }
 
 

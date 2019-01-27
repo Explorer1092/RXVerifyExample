@@ -103,13 +103,12 @@
     
 //    [self _test_ns_returns_retained];
     
-//    [self _test_mrc_object];
-    
-//    [self _test_arc_object];
+    [self _test_mrc_object];
+    [self _test_arc_object];
     
 //    [self _test_mrc_return_value_object];
     
-    [self _test_bridge_cast];
+//    [self _test_bridge_cast];
     
 //    [self _test_ownership_qualified];
     

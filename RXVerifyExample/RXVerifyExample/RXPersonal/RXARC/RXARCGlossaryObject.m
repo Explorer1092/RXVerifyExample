@@ -25,7 +25,7 @@ void printString(NSString *string) {
 // Objective-C类中的instance method 或者 class method 叫做 method(方法)
 + (void)classMethodTest
 {
-    // baidu .com 
+    // baidu .com
 }
 - (void)test
 {

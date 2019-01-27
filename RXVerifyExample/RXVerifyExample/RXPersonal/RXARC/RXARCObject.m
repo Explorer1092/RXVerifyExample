@@ -20,18 +20,28 @@
     count = [RXMRCUtil objectRetainCount:x];
     NSLog(@"end count in _foo_not_attribute:%zd", count);
 }
-
-- (void)test
+- (void)_test_method_argument
 {
     RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
     
     NSUInteger count = [RXMRCUtil objectRetainCount:object];
     NSLog(@"start count outside method:%zd", count);
     
-    //    [self _foo_have_attribute:object];
     [self _foo:object];
     
     count = [RXMRCUtil objectRetainCount:object];
     NSLog(@"end count outside method:%zd", count);
+}
+- (void)_test_variable
+{
+    RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
+    NSLog(@"count after alloc init:%zd", [RXMRCUtil objectRetainCount:object]);
+    id value = object;
+    NSLog(@"count after variable:%zd", [RXMRCUtil objectRetainCount:value]);
+}
+- (void)test
+{
+//    [self _test_method_argument];
+    [self _test_variable];
 }
 @end
