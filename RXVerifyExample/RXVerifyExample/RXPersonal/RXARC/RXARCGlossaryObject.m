@@ -8,6 +8,13 @@
 
 #import "RXARCGlossaryObject.h"
 
+/*
+ 1. function
+ 2. method
+ 3. retainable object pointer (retainable pointer)
+ 4. retainable object pointer type
+ 
+ */
 
 // 非Objective-C类中的任何function,叫做 function(函数)
 void printString(NSString *string) {

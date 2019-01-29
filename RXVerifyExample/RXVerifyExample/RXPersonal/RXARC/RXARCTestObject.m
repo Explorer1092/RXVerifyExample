@@ -20,6 +20,7 @@
 #import "RXARCOwnershipQualifiedObject.h"
 #import "RXARCObject.h"
 #import "RXARCClangAttributeObject.h"
+#import "RXARCAttributeNSObjectObject.h"
 @interface RXARCTestObject()
 @property (nonatomic, strong) RXARCCallObject *rxARCCallObject;
 @end
@@ -103,8 +104,8 @@
     
 //    [self _test_ns_returns_retained];
     
-    [self _test_mrc_object];
-    [self _test_arc_object];
+//    [self _test_mrc_object];
+//    [self _test_arc_object];
     
 //    [self _test_mrc_return_value_object];
     
@@ -113,6 +114,8 @@
 //    [self _test_ownership_qualified];
     
 //    [self _test_clang_attribute];
+    
+    [self _test_attribute_nsobject];
 }
 
 - (void)_test_category_method
@@ -172,6 +175,11 @@
 //    __weak typeof(NSObject *) weakSelf2 = self;
 //    weakSelf2 = self;
     
+}
+- (void)_test_attribute_nsobject
+{
+    RXARCAttributeNSObjectObject *tmp = [RXARCAttributeNSObjectObject new];
+    [tmp test];
 }
 
 @end
