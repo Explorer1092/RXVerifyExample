@@ -55,7 +55,7 @@
                            @"RXRACDemo", @"RXOCKeywordMethodName", @"RXRACMT",
                            @"RXUncaughtExceptionHandler", @"RXOPMQ", @"RXMethodListDemo",
                            @"RXAspects", @"RXCLanguage", @"RXAFNetworking",
-                           @"RXUtil"];
+                           @"RXUtil", @"RXLayout"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -70,6 +70,7 @@
     
     object = @"RXAFNetworking";
 //    object = @"RVGCD2";
+    object = @"RXLayout";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
