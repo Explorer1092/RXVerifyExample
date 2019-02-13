@@ -21,6 +21,7 @@
 #import "RXARCObject.h"
 #import "RXARCClangAttributeObject.h"
 #import "RXARCAttributeNSObjectObject.h"
+#import "RXARCAutoreleasingObject.h"
 @interface RXARCTestObject()
 @property (nonatomic, strong) RXARCCallObject *rxARCCallObject;
 @end
@@ -115,7 +116,9 @@
     
 //    [self _test_clang_attribute];
     
-    [self _test_attribute_nsobject];
+//    [self _test_attribute_nsobject];
+    
+    [self _test_autoreleasing];
 }
 
 - (void)_test_category_method
@@ -179,6 +182,11 @@
 - (void)_test_attribute_nsobject
 {
     RXARCAttributeNSObjectObject *tmp = [RXARCAttributeNSObjectObject new];
+    [tmp test];
+}
+- (void)_test_autoreleasing
+{
+    RXARCAutoreleasingObject *tmp = [RXARCAutoreleasingObject new];
     [tmp test];
 }
 

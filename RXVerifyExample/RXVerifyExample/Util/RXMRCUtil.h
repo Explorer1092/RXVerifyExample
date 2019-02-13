@@ -10,4 +10,6 @@
 
 @interface RXMRCUtil : NSObject
 + (NSUInteger)objectRetainCount:(id)object;
+
++ (void)objectRelease:(id)object;
 @end

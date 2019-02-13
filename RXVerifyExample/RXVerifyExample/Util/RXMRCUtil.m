@@ -13,4 +13,9 @@
 {
     return [object retainCount];
 }
+
++ (void)objectRelease:(id)object
+{
+    [object release];
+}
 @end
