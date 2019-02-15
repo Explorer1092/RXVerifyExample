@@ -34,9 +34,9 @@
     
 //    [self _test_layoutSubviews_noneZeroFrame_setNeedsLayout];
     
-    [self _test_layoutSubviews_noneZeroFrame_changeFrame_setNeedsLayout];
+//    [self _test_layoutSubviews_noneZeroFrame_changeFrame_setNeedsLayout];
     
-    _objc_autoreleasePoolPrint();
+//    _objc_autoreleasePoolPrint();
 }
 
 - (void)didReceiveMemoryWarning {

@@ -108,7 +108,7 @@
 //    [self _test_mrc_object];
 //    [self _test_arc_object];
     
-//    [self _test_mrc_return_value_object];
+    [self _test_mrc_return_value_object];
     
 //    [self _test_bridge_cast];
     
@@ -118,7 +118,7 @@
     
 //    [self _test_attribute_nsobject];
     
-    [self _test_autoreleasing];
+//    [self _test_autoreleasing];
 }
 
 - (void)_test_category_method

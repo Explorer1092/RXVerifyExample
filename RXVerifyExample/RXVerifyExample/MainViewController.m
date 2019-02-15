@@ -71,7 +71,7 @@
     object = @"RXAFNetworking";
 //    object = @"RVGCD2";
 //    object = @"RXLayout";
-    object = @"RXJLRouter";
+//    object = @"RXJLRouter";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];

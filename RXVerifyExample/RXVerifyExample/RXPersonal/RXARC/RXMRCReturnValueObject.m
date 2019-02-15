@@ -23,7 +23,9 @@
     
 //    [self _test_ownership_from_callee_to_caller];
     
-    [self _test_ownership_from_callee_to_caller_2];
+//    [self _test_ownership_from_callee_to_caller_2];
+    
+    [self _test_kkk];
     
 }
 
@@ -31,36 +33,36 @@
 - (id)_foo_ownership_from_callee_to_autorelease
 {
     RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
-    NSUInteger count = [object retainCount];
-    NSLog(@"count after alloc init:%zd", count);
+    NSLog(@"count after alloc init:%zd", [object retainCount]);
     return [object autorelease];
 }
 - (void)_test_ownership_from_callee_to_autorelease
 {
     id object = [self _foo_ownership_from_callee_to_autorelease];
+    NSLog(@"count after call method:%zd", [object retainCount]);
     NSLog(@"%@", object);
 }
 
 - (id)_foo_ownership_from_callee_to_caller
 {
     RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
-    NSUInteger count = [object retainCount];
-    NSLog(@"count after alloc init:%zd", count);
+    NSLog(@"count after alloc init:%zd", [object retainCount]);
     return object;
 }
 - (void)_test_ownership_from_callee_to_caller
 {
     id object = [self _foo_ownership_from_callee_to_caller];
+    NSLog(@"count after call method:%zd", [object retainCount]);
     NSLog(@"%@", object);
     NSLog(@"before release");
-    [object release];
+    [object release]; // 如果没有这一行,object会内存泄漏
+    NSLog(@"after release");
 }
 
 - (id)_foo_ownership_from_callee_to_caller_2
 {
     RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
-    NSUInteger count = [object retainCount];
-    NSLog(@"count after alloc init:%zd", count);
+    NSLog(@"count after alloc init:%zd", [object retainCount]);
     id returnValue = [object retain]; // 因为需要返回,所以先retain一次
     [object release]; // 谁申请谁释放原则,有一个alloc init,就有一个release
     return returnValue;
@@ -68,14 +70,37 @@
 - (void)_test_ownership_from_callee_to_caller_2
 {
     id object = [self _foo_ownership_from_callee_to_caller_2];
+    NSLog(@"count after call method:%zd", [object retainCount]);
     NSLog(@"%@", object);
     NSLog(@"before release");
     [object release]; // 如果没有这一行,object会内存泄漏
+    NSLog(@"after release");
+}
+
+
+- (id)_foo_ownership_noChange
+{
+    
+    RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
+    NSString *str = [NSString stringWithFormat:@"%@", object]; // 这个内存是由 stringWithFormat 方法管理的
+    [object release];
+    NSLog(@"count after product:%zd", [str retainCount]);
+    return str;
+}
+- (void)_test_ownership_noChange
+{
+    NSString *str = [self _foo_ownership_noChange];
+    NSLog(@"count after call method:%zd", [str retainCount]);
+    NSLog(@"str:%@", str);
 }
 
 
 
 
+
+
+
+//  可以做其他用处:
 
 
 
