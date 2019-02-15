@@ -13,6 +13,11 @@
  2. method
  3. retainable object pointer (retainable pointer)
  4. retainable object pointer type
+ 5. non-retainable pointer type
+ 6. object point type : id & Class
+ 5. callee和caller
+ 10. Class extensions
+ 11. Categories
  
  */
 
@@ -32,11 +37,18 @@ void printString(NSString *string) {
 // Objective-C类中的instance method 或者 class method 叫做 method(方法)
 + (void)classMethodTest
 {
-    // baidu .com
 }
+- (void)instanceTest
+{
+    int a = 0;
+    void *b = &a;
+    id c = (__bridge id)b;
+}
+
+
+
 - (void)test
 {
-    
 }
 
 
@@ -49,7 +61,6 @@ void printString(NSString *string) {
 }
 - (void)_callee
 {
-    
 }
 
 @end

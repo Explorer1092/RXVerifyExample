@@ -22,8 +22,13 @@
 #import "RXARCClangAttributeObject.h"
 #import "RXARCAttributeNSObjectObject.h"
 #import "RXARCAutoreleasingObject.h"
+#import "RXARCUndefinedBehaviorObject.h"
+#import "RXARCReturnValueObject.h"
 @interface RXARCTestObject()
 @property (nonatomic, strong) RXARCCallObject *rxARCCallObject;
+
+
+@property (nonatomic, strong) id tmpObject;
 @end
 
 @implementation RXARCTestObject
@@ -79,7 +84,7 @@
 //    NSLog(@"ARC");
 //#else
 //    NSLog(@"MRC");
-//    
+//
 //# endif
     
 //    CGPoint point;
@@ -108,7 +113,8 @@
 //    [self _test_mrc_object];
 //    [self _test_arc_object];
     
-    [self _test_mrc_return_value_object];
+//    [self _test_mrc_return_value_object];
+    [self _test_arc_return_value_object];
     
 //    [self _test_bridge_cast];
     
@@ -119,6 +125,8 @@
 //    [self _test_attribute_nsobject];
     
 //    [self _test_autoreleasing];
+    
+//    [self _test_undefinedBehavior];
 }
 
 - (void)_test_category_method
@@ -156,6 +164,13 @@
     RXMRCReturnValueObject *tmp = [RXMRCReturnValueObject new];
     [tmp test];
 }
+- (void)_test_arc_return_value_object
+{
+    RXARCReturnValueObject *tmp = [RXARCReturnValueObject new];
+    // 防止提前释放
+    self.tmpObject = tmp;
+    [tmp test];
+}
 - (void)_test_bridge_cast
 {
     RXARCBridgeCastObject *tmp = [RXARCBridgeCastObject new];
@@ -189,5 +204,9 @@
     RXARCAutoreleasingObject *tmp = [RXARCAutoreleasingObject new];
     [tmp test];
 }
-
+- (void)_test_undefinedBehavior
+{
+    RXARCUndefinedBehaviorObject *tmp = [RXARCUndefinedBehaviorObject new];
+    [tmp test];
+}
 @end
