@@ -142,6 +142,7 @@
 		E818A0EB2214192E0053ED3E /* RXJLRouterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0EA2214192E0053ED3E /* RXJLRouterViewController.m */; };
 		E818A0EE2216B52C0053ED3E /* RXARCUndefinedBehaviorObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0ED2216B52C0053ED3E /* RXARCUndefinedBehaviorObject.m */; };
 		E818A0F12216CC8A0053ED3E /* RXARCReturnValueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0F02216CC8A0053ED3E /* RXARCReturnValueObject.m */; };
+		E818A0F42217B9440053ED3E /* RXARCHasAttributeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0F32217B9440053ED3E /* RXARCHasAttributeObject.m */; };
 		E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */; };
 		E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E620B6C0D800F94127 /* RXNSObjectForSelectorAObject.m */; };
 		E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0ED20B9043400F94127 /* RXMVVMViewController.m */; };
@@ -527,6 +528,8 @@
 		E818A0ED2216B52C0053ED3E /* RXARCUndefinedBehaviorObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCUndefinedBehaviorObject.m; sourceTree = "<group>"; };
 		E818A0EF2216CC8A0053ED3E /* RXARCReturnValueObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCReturnValueObject.h; sourceTree = "<group>"; };
 		E818A0F02216CC8A0053ED3E /* RXARCReturnValueObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCReturnValueObject.m; sourceTree = "<group>"; };
+		E818A0F22217B9440053ED3E /* RXARCHasAttributeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXARCHasAttributeObject.h; sourceTree = "<group>"; };
+		E818A0F32217B9440053ED3E /* RXARCHasAttributeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXARCHasAttributeObject.m; sourceTree = "<group>"; };
 		E818F0E220B6C0A300F94127 /* RXNSObjectForSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorViewController.h; sourceTree = "<group>"; };
 		E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNSObjectForSelectorViewController.m; sourceTree = "<group>"; };
 		E818F0E520B6C0D800F94127 /* RXNSObjectForSelectorAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorAObject.h; sourceTree = "<group>"; };
@@ -1144,6 +1147,8 @@
 				E818A0E62213C3470053ED3E /* RXARCAutoreleasingObject.m */,
 				E818A0EC2216B52C0053ED3E /* RXARCUndefinedBehaviorObject.h */,
 				E818A0ED2216B52C0053ED3E /* RXARCUndefinedBehaviorObject.m */,
+				E818A0F22217B9440053ED3E /* RXARCHasAttributeObject.h */,
+				E818A0F32217B9440053ED3E /* RXARCHasAttributeObject.m */,
 			);
 			path = RXARC;
 			sourceTree = "<group>";
@@ -2352,6 +2357,7 @@
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
 				E8F8D808219BB437007AB027 /* RXAFNetworkReachabilityManager.m in Sources */,
 				E8F8D80121917041007AB027 /* RXAFNTest2Object.m in Sources */,
+				E818A0F42217B9440053ED3E /* RXARCHasAttributeObject.m in Sources */,
 				E8433D7E20EDBE78004A7FBC /* RXMacroViewController.m in Sources */,
 				E86050FE20A2A1840016F6C9 /* RVAddMethodViewController.m in Sources */,
 				E87C045221D9051000B90D74 /* RXCharacterSetTestObject.m in Sources */,

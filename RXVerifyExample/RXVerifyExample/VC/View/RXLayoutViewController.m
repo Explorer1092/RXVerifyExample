@@ -47,8 +47,6 @@
 
 - (void)_test_layoutSubviews_zeroFrame
 {
-    [self.view rx_removeAllSubviews];
-    
     RXLayoutView *view = [[RXLayoutView alloc] init];
     printf("after alloc init\n");
     [self.view addSubview:view];
@@ -56,8 +54,6 @@
 }
 - (void)_test_layoutSubviews_noneZeroFrame
 {
-    [self.view rx_removeAllSubviews];
-    
     RXLayoutView *view = [[RXLayoutView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
     printf("after alloc initWithFrame\n");
     [self.view addSubview:view];
@@ -66,8 +62,6 @@
 
 - (void)_test_layoutSubviews_noneZeroFrame_changeFrame
 {
-    [self.view rx_removeAllSubviews];
-    
     RXLayoutView *view = [[RXLayoutView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
     printf("after alloc initWithFrame\n");
     [self.view addSubview:view];
@@ -84,8 +78,6 @@
 
 - (void)_test_layoutSubviews_noneZeroFrame_layoutIfNeeded
 {
-    [self.view rx_removeAllSubviews];
-    
     RXLayoutView *view = [[RXLayoutView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
     printf("after alloc initWithFrame\n");
     [self.view addSubview:view];
@@ -102,8 +94,6 @@
 
 - (void)_test_layoutSubviews_noneZeroFrame_changeFrame_layoutIfNeeded
 {
-    [self.view rx_removeAllSubviews];
-    
     RXLayoutView *view = [[RXLayoutView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
     printf("after alloc initWithFrame\n");
     [self.view addSubview:view];
@@ -121,8 +111,6 @@
 
 - (void)_test_layoutSubviews_noneZeroFrame_setNeedsLayout
 {
-    [self.view rx_removeAllSubviews];
-    
     RXLayoutView *view = [[RXLayoutView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
     printf("after alloc initWithFrame\n");
     [self.view addSubview:view];
@@ -140,8 +128,6 @@
 
 - (void)_test_layoutSubviews_noneZeroFrame_changeFrame_setNeedsLayout
 {
-    [self.view rx_removeAllSubviews];
-    
     RXLayoutView *view = [[RXLayoutView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
     printf("after alloc initWithFrame\n");
     [self.view addSubview:view];

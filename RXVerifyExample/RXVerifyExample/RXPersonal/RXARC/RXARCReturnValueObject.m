@@ -19,9 +19,14 @@
 {
     RXARCTmpObject *tmp = [[RXARCTmpObject alloc] init];
     id object = [NSString stringWithFormat:@"%@", tmp];
+    // count=2
+    // stringWithFormat 产生一次
+    // object = 也产生一次
     NSLog(@"count after product:%zd", [RXMRCUtil objectRetainCount:object]);
     
     self.recordObject = object;
+    // count=3
+    // self.recordObject =  也产生一次
     NSLog(@"count after =:%zd", [RXMRCUtil objectRetainCount:object]);
     return object;
 }
@@ -33,8 +38,6 @@
     NSLog(@"object: %p", object);
     _objc_autoreleasePoolPrint();
     NSLog(@"count after call method:%zd", [RXMRCUtil objectRetainCount:object]);
-    //    [RXMRCUtil objectRelease:object];
-    
     
     __weak typeof(self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

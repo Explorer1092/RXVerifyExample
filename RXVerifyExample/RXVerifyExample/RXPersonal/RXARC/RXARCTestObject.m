@@ -24,6 +24,7 @@
 #import "RXARCAutoreleasingObject.h"
 #import "RXARCUndefinedBehaviorObject.h"
 #import "RXARCReturnValueObject.h"
+#import "RXARCHasAttributeObject.h"
 @interface RXARCTestObject()
 @property (nonatomic, strong) RXARCCallObject *rxARCCallObject;
 
@@ -106,7 +107,7 @@
     
 //    [self _test_print_memory_address];
     
-//    [self _test_ns_consumed];
+    [self _test_ns_consumed];
     
 //    [self _test_ns_returns_retained];
     
@@ -114,7 +115,7 @@
 //    [self _test_arc_object];
     
 //    [self _test_mrc_return_value_object];
-    [self _test_arc_return_value_object];
+//    [self _test_arc_return_value_object];
     
 //    [self _test_bridge_cast];
     
@@ -207,6 +208,12 @@
 - (void)_test_undefinedBehavior
 {
     RXARCUndefinedBehaviorObject *tmp = [RXARCUndefinedBehaviorObject new];
+    [tmp test];
+}
+
+- (void)_test_has_attribute_object
+{
+    RXARCHasAttributeObject *tmp = [RXARCHasAttributeObject new];
     [tmp test];
 }
 @end
