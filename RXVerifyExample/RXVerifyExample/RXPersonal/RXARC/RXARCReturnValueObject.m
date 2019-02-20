@@ -10,6 +10,7 @@
 #import "RXARCTmpObject.h"
 #import "RXMRCUtil.h"
 #import "RXExternUtil.h"
+#import "RXRuntimeFishHookUtil.h"
 @interface RXARCReturnValueObject()
 @property (nonatomic, strong) id recordObject;
 @end
@@ -32,11 +33,9 @@
 }
 - (void)_test_return_value
 {
-    NSLog(@"count before call method:%zd", [RXMRCUtil objectRetainCount:self.recordObject]);
-    id object = [self _foo_return_value];
     
-    NSLog(@"object: %p", object);
-    _objc_autoreleasePoolPrint();
+    id object = [self _foo_return_value];
+    // count = 3, 不会产生
     NSLog(@"count after call method:%zd", [RXMRCUtil objectRetainCount:object]);
     
     __weak typeof(self) weakSelf = self;
@@ -48,5 +47,15 @@
 - (void)test
 {
     [self _test_return_value];
+    NSLog(@"-------------------------------\n");
+    __weak typeof(self) weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        
+        [RXRuntimeFishHookUtil hook];
+        
+        [weakSelf _test_return_value];
+        
+    });
 }
 @end

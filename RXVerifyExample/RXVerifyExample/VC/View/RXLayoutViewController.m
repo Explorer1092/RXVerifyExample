@@ -24,7 +24,7 @@
     
 //    [self _test_layoutSubviews_zeroFrame];
     
-//    [self _test_layoutSubviews_noneZeroFrame];
+    [self _test_layoutSubviews_noneZeroFrame];
     
 //    [self _test_layoutSubviews_noneZeroFrame_changeFrame];
     
@@ -57,6 +57,7 @@
     RXLayoutView *view = [[RXLayoutView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
     printf("after alloc initWithFrame\n");
     [self.view addSubview:view];
+    
     printf("after add\n");
 }
 
@@ -70,7 +71,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
             printf("before change frame\n");
-            view.frame = CGRectMake(100, 200, 200, 200);
+            view.frame = CGRectMake(50, 200, 100, 200);
             printf("after change frame\n");
         });
     });
