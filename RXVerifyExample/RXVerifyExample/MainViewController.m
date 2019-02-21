@@ -55,7 +55,8 @@
                            @"RXRACDemo", @"RXOCKeywordMethodName", @"RXRACMT",
                            @"RXUncaughtExceptionHandler", @"RXOPMQ", @"RXMethodListDemo",
                            @"RXAspects", @"RXCLanguage", @"RXAFNetworking",
-                           @"RXUtil", @"RXLayout", @"RXJLRouter"];
+                           @"RXUtil", @"RXLayout", @"RXJLRouter",
+                           @"RXAnimation"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -72,6 +73,7 @@
 //    object = @"RVGCD2";
 //    object = @"RXLayout";
 //    object = @"RXJLRouter";
+    object = @"RXAnimation";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];

@@ -145,6 +145,9 @@
 		E818A0F42217B9440053ED3E /* RXARCHasAttributeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0F32217B9440053ED3E /* RXARCHasAttributeObject.m */; };
 		E818A0F722199E8B0053ED3E /* table.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = E818A0F622199E8B0053ED3E /* table.xlsx */; };
 		E818A0FA221A468B0053ED3E /* RXRuntimeFishHookUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0F9221A468B0053ED3E /* RXRuntimeFishHookUtil.m */; };
+		E818A0FE221D4B020053ED3E /* RXAnimationTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A0FD221D4B020053ED3E /* RXAnimationTestObject.m */; };
+		E818A101221D4C890053ED3E /* RXBasicAnimationTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A100221D4C890053ED3E /* RXBasicAnimationTestObject.m */; };
+		E818A104221D4DCE0053ED3E /* RXAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818A103221D4DCE0053ED3E /* RXAnimationViewController.m */; };
 		E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */; };
 		E818F0E720B6C0D800F94127 /* RXNSObjectForSelectorAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0E620B6C0D800F94127 /* RXNSObjectForSelectorAObject.m */; };
 		E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E818F0ED20B9043400F94127 /* RXMVVMViewController.m */; };
@@ -535,6 +538,12 @@
 		E818A0F622199E8B0053ED3E /* table.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = table.xlsx; sourceTree = "<group>"; };
 		E818A0F8221A468B0053ED3E /* RXRuntimeFishHookUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRuntimeFishHookUtil.h; sourceTree = "<group>"; };
 		E818A0F9221A468B0053ED3E /* RXRuntimeFishHookUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRuntimeFishHookUtil.m; sourceTree = "<group>"; };
+		E818A0FC221D4B020053ED3E /* RXAnimationTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAnimationTestObject.h; sourceTree = "<group>"; };
+		E818A0FD221D4B020053ED3E /* RXAnimationTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAnimationTestObject.m; sourceTree = "<group>"; };
+		E818A0FF221D4C890053ED3E /* RXBasicAnimationTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXBasicAnimationTestObject.h; sourceTree = "<group>"; };
+		E818A100221D4C890053ED3E /* RXBasicAnimationTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBasicAnimationTestObject.m; sourceTree = "<group>"; };
+		E818A102221D4DCE0053ED3E /* RXAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAnimationViewController.h; sourceTree = "<group>"; };
+		E818A103221D4DCE0053ED3E /* RXAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAnimationViewController.m; sourceTree = "<group>"; };
 		E818F0E220B6C0A300F94127 /* RXNSObjectForSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorViewController.h; sourceTree = "<group>"; };
 		E818F0E320B6C0A300F94127 /* RXNSObjectForSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNSObjectForSelectorViewController.m; sourceTree = "<group>"; };
 		E818F0E520B6C0D800F94127 /* RXNSObjectForSelectorAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNSObjectForSelectorAObject.h; sourceTree = "<group>"; };
@@ -938,6 +947,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				E818A0FB221D4A100053ED3E /* RXAnimation */,
 				E818A0E8221419170053ED3E /* RXJLRouter */,
 				E818A0DA2213B5FF0053ED3E /* RXView */,
 				E818A08721EDE5BC0053ED3E /* RXARC */,
@@ -1207,6 +1217,19 @@
 				E818A0F622199E8B0053ED3E /* table.xlsx */,
 			);
 			path = doc;
+			sourceTree = "<group>";
+		};
+		E818A0FB221D4A100053ED3E /* RXAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E818A0FC221D4B020053ED3E /* RXAnimationTestObject.h */,
+				E818A0FD221D4B020053ED3E /* RXAnimationTestObject.m */,
+				E818A0FF221D4C890053ED3E /* RXBasicAnimationTestObject.h */,
+				E818A100221D4C890053ED3E /* RXBasicAnimationTestObject.m */,
+				E818A102221D4DCE0053ED3E /* RXAnimationViewController.h */,
+				E818A103221D4DCE0053ED3E /* RXAnimationViewController.m */,
+			);
+			path = RXAnimation;
 			sourceTree = "<group>";
 		};
 		E818F0E120B6C06A00F94127 /* RXNSObject */ = {
@@ -2450,6 +2473,7 @@
 				E818A09621F059990053ED3E /* RXBlockChangeOverTimeMRCObject.m in Sources */,
 				E872491E21BE91C400EA6A3D /* RXAFQueryStringPair.m in Sources */,
 				E8433D8C20FC7F7D004A7FBC /* RWDummySignInService.m in Sources */,
+				E818A104221D4DCE0053ED3E /* RXAnimationViewController.m in Sources */,
 				E818A0F12216CC8A0053ED3E /* RXARCReturnValueObject.m in Sources */,
 				C966DB8B1FAEB5DF003BC1B4 /* RXLogManager.m in Sources */,
 				E818F0FA20B93FED00F94127 /* RXMVVMListViewController.m in Sources */,
@@ -2509,6 +2533,7 @@
 				E818A07421E894520053ED3E /* RXBlockArrayObject.m in Sources */,
 				E818A08D21EDE6DC0053ED3E /* RXARCCallObject.m in Sources */,
 				E86050F520A298B60016F6C9 /* RVMsgForwardViewController.m in Sources */,
+				E818A101221D4C890053ED3E /* RXBasicAnimationTestObject.m in Sources */,
 				E8F8D7E8218FE5B4007AB027 /* rx-objc-cache.mm in Sources */,
 				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
@@ -2526,6 +2551,7 @@
 				E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
+				E818A0FE221D4B020053ED3E /* RXAnimationTestObject.m in Sources */,
 				E8433D9620FEDA86004A7FBC /* RXRACMTViewController.m in Sources */,
 				E810791D20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.m in Sources */,
 				E87C048721E5DE8B00B90D74 /* RXSynchronizedLockObject.m in Sources */,
