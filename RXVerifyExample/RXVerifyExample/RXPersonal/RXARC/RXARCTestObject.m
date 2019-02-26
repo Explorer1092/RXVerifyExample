@@ -107,7 +107,7 @@
     
 //    [self _test_print_memory_address];
     
-//    [self _test_ns_consumed];
+    [self _test_ns_consumed];
     
 //    [self _test_ns_returns_retained];
     
@@ -115,7 +115,7 @@
 //    [self _test_arc_object];
     
 //    [self _test_mrc_return_value_object];
-    [self _test_arc_return_value_object];
+//    [self _test_arc_return_value_object];
     
 //    [self _test_bridge_cast];
     

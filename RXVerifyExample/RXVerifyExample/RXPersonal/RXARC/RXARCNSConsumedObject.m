@@ -11,22 +11,19 @@
 #import "RXARCTmpObject.h"
 @implementation RXARCNSConsumedObject
 
-- (void)_foo_have_attribute:(id) __attribute((ns_consumed))x
-{
+- (void)_foo_have_attribute:(id) __attribute((ns_consumed))x {
     NSLog(@"start count in _foo_have_attribute:%zd", [RXMRCUtil objectRetainCount:x]);
     NSLog(@"Do something");
     NSLog(@"end count in _foo_have_attribute:%zd", [RXMRCUtil objectRetainCount:x]);
 }
 
-- (void)_foo:(id)x
-{
+- (void)_foo:(id)x {
     NSLog(@"start count _foo_not_attribute:%zd", [RXMRCUtil objectRetainCount:x]);
     NSLog(@"Do something");
     NSLog(@"end count in _foo_not_attribute:%zd", [RXMRCUtil objectRetainCount:x]);
 }
 
-- (void)test
-{
+- (void)test {
     RXARCTmpObject *object = [[RXARCTmpObject alloc] init];
     NSLog(@"start count outside method:%zd", [RXMRCUtil objectRetainCount:object]);
     

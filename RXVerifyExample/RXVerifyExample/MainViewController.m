@@ -73,7 +73,7 @@
 //    object = @"RVGCD2";
 //    object = @"RXLayout";
 //    object = @"RXJLRouter";
-    object = @"RXAnimation";
+//    object = @"RXAnimation";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
