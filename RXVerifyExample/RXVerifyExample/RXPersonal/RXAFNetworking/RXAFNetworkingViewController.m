@@ -31,6 +31,7 @@
 
 #import "RXLockTestObject.h"
 #import "RXARCTestObject.h"
+#import "RXSelfSuperClassB.h"
 // 子线程中的通知问题
 //https://www.jianshu.com/p/208568075b4f
 @interface RXAFNetworkingViewController ()
@@ -209,7 +210,7 @@
     self.rxARCTestObject = [RXARCTestObject new];
     [self.rxARCTestObject mainTest];
     
-    
+    [self test_self_super];
     
     
 }
@@ -237,6 +238,11 @@
 - (void)test_classProperty {
     [RXAFNTest3Object setValue:4];
     NSLog(@"%zd", [RXAFNTest3Object value]);
+}
+
+- (void)test_self_super {
+    RXSelfSuperClassB *tmp = [RXSelfSuperClassB new];
+    [tmp test];
 }
 
 

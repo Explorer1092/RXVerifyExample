@@ -67,6 +67,8 @@ pod 'Masonry'
 
 pod 'MBProgressHUD'
 
+pod 'coobjc'
+
 
 inhibit_all_warnings!
 
