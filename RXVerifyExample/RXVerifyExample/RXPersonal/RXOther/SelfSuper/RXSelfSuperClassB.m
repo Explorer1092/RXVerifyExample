@@ -16,10 +16,13 @@
     [self _test2];
     
     [self _test3];
+    
 }
 
 - (void)_test1 {
     NSLog(@"selfClass:%@, superClass:%@", [self class], [super class]);
+    
+    NSLog(@"1111%@2222", NSFullUserName());
 }
 - (void)_test2 {
     RXSelfSuperClassA *cA = [[RXSelfSuperClassA alloc] init];

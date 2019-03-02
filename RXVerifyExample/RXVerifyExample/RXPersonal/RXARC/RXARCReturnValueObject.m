@@ -13,6 +13,8 @@
 #import "RXRuntimeFishHookUtil.h"
 @interface RXARCReturnValueObject()
 @property (nonatomic, strong) id recordObject;
+@property (nonatomic, weak) id weakObject1;
+@property (nonatomic, weak) id weakObject2;
 @end
 @implementation RXARCReturnValueObject
 
@@ -46,16 +48,19 @@
 
 - (void)test
 {
+    [RXRuntimeFishHookUtil hook];
+    
+
     [self _test_return_value];
-    NSLog(@"-------------------------------\n");
-    __weak typeof(self) weakSelf = self;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        
-        
-        [RXRuntimeFishHookUtil hook];
-        
-        [weakSelf _test_return_value];
-        
-    });
+//    NSLog(@"-------------------------------\n");
+//    __weak typeof(self) weakSelf = self;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        
+//        
+//        [RXRuntimeFishHookUtil hook];
+//        
+//        [weakSelf _test_return_value];
+//        
+//    });
 }
 @end
