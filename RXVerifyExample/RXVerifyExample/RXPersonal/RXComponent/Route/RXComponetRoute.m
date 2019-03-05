@@ -7,8 +7,11 @@
 //
 
 #import "RXComponetRoute.h"
+#import "RXRouteRequest.h"
+#import "RXRouteDefinition.h"
+#import "RXRouteResponse.h"
 
-const NSString *kRXComponetRouteErrorRoute = @"com.kRXComponetRoute.error.route";
+const NSString *kRXComponetRouteErrorRoute = @"error://route";
 const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.async.data.completion.key";
 
 
@@ -22,6 +25,7 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
 @implementation RXComponetRoute
 
 + (void)updateStrategy {
+//    NSString *strategy = @"asdk://AHomeVC?error";
     
 }
 
@@ -39,8 +43,10 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
 
 
 + (void)_register:(NSString *)route block:(id)block {
+    RXRouteDefinition *routeDefinition = [[RXRouteDefinition alloc] initWithRoute:route];
+    RXRouteResponse * routeResponse = [[RXRouteResponse alloc] initWithRouteDefinition:routeDefinition block:block];
     RXComponetRoute *manger = [RXComponetRoute sharedInstance];
-    [manger.globalRoute setObject:block forKey:route];
+    [manger.globalRoute setObject:routeResponse forKey:routeDefinition];
 }
 #pragma mark - route
 + (id)routeViewController:(NSString *)route params:(NSDictionary *)params {
@@ -50,14 +56,17 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
     return [self _route:route params:params useError:NO];
 }
 + (void)routeDataAsync:(NSString *)route params:(NSDictionary *)params competion:(void(^)(NSDictionary *))competion {
+    RXRouteRequest *request = [[RXRouteRequest alloc] initWithRoute:route];
     RXComponetRoute *manger = [RXComponetRoute sharedInstance];
-    void(^block)(NSDictionary *) = (void(^)(NSDictionary *))(manger.globalRoute[route]);
+    RXRouteResponse *response = manger.globalRoute[request.routeDefinition];
+    void(^block)(NSDictionary *) = (void(^)(NSDictionary *))(response.block);
     if (block == nil) {
         if (competion != nil) {
             competion(nil);
         }
     } else {
         NSMutableDictionary *realParams = [NSMutableDictionary dictionaryWithDictionary:params];
+        [realParams addEntriesFromDictionary:request.urlParams];
         if (competion != nil) {
             realParams[kRXComponetRouteAsyncDataCompletionKey] = competion;
         }
@@ -69,12 +78,16 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
 #pragma mark - Private
 + (id)_route:(NSString *)route params:(NSDictionary *)params useError:(BOOL)useError
 {
+    RXRouteRequest *request = [[RXRouteRequest alloc] initWithRoute:route];
     RXComponetRoute *manger = [RXComponetRoute sharedInstance];
-    id(^block)(NSDictionary *) = (id(^)(NSDictionary *))(manger.globalRoute[route]);
+    RXRouteResponse *response = manger.globalRoute[request.routeDefinition];
+    id(^block)(NSDictionary *) = (id(^)(NSDictionary *))(response.block);
     if (block == nil && useError) {
         block = manger.globalRoute[kRXComponetRouteErrorRoute];
     }
-    return block != nil ? block(params) : nil;
+    NSMutableDictionary *realParams = [NSMutableDictionary dictionaryWithDictionary:params];
+    [realParams addEntriesFromDictionary:request.urlParams];
+    return block != nil ? block(realParams) : nil;
 }
 
 
