@@ -61,6 +61,7 @@
     [RXASDK register];
     [RXBSDK register];
     [RXCSDK register];
+    [RXComponetRoute updateStrategy];
     
     
     self.array = @[@"AHome", @"BHome", @"CHome"];

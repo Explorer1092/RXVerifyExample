@@ -40,17 +40,25 @@
  以上这些问题其实都可以通过在App端设计一个路由来解决。那么我们怎么设计一个路由呢？
  **/
 
-extern NSString *kRXComponetRouteErrorRoute;
-extern NSString *kRXComponetRouteAsyncData;
+extern NSString *kRXComponetRouteErrorRoute; // 当页面跳转路由没有找到的时候,需要跳转到的错误页面
+extern NSString *kRXComponetRouteAsyncDataCompletionKey; // 组件间异步获取数据
 
 
 @interface RXComponetRoute : NSObject
 
-// 可以在这里获取同步还是异步的
-+ (void)registerWithRoute:(NSString *)route block:(id(^)(NSDictionary *))block;
+
++ (void)updateStrategy;
+
+
+#pragma mark - register
++ (void)registerViewController:(NSString *)route block:(UIViewController *(^)(NSDictionary *))block;
++ (void)registerSyncData:(NSString *)route block:(NSDictionary *(^)(NSDictionary *))block;
++ (void)registerAsyncData:(NSString *)route block:(void(^)(NSDictionary *))block;
 
 
 
+
+#pragma mark - route
 + (id)routeViewController:(NSString *)route params:(NSDictionary *)params;
 + (id)routeDataSync:(NSString *)route params:(NSDictionary *)params;
 + (void)routeDataAsync:(NSString *)route params:(NSDictionary *)params competion:(void(^)(NSDictionary *))competion;
