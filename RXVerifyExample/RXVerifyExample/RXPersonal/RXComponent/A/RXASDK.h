@@ -10,4 +10,6 @@
 
 @interface RXASDK : NSObject
 
++ (void)register;
+
 @end

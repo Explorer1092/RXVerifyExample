@@ -13,7 +13,12 @@
 @end
 
 @implementation RXCHomeViewController
-
+- (id)initWithParams:(NSDictionary *)params {
+    if (self = [super init]) {
+        NSLog(@"params in CHomeViewController:%@", params);
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

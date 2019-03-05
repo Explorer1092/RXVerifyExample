@@ -1,5 +1,5 @@
 //
-//  RXBHomeViewController.h
+//  RXErrorViewController.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/3/5.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RXBHomeViewController : UIViewController
+@interface RXErrorViewController : UIViewController
 - (id)initWithParams:(NSDictionary *)params;
 
 @end

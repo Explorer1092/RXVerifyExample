@@ -7,16 +7,63 @@
 //
 
 #import "RXShellHomeViewController.h"
-
+#import "RXComponetRoute.h"
+#import "RXASDK.h"
+#import "RXBSDK.h"
+#import "RXCSDK.h"
+#import "RXErrorSDK.h"
 @interface RXShellHomeViewController ()
-
+@property (nonatomic, strong) NSArray *array;
 @end
 
 @implementation RXShellHomeViewController
 
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.array.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *identify = @"cellIdentify";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        cell.textLabel.text = self.array[indexPath.row];
+    }
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+//    UIViewController *vc = [RXComponetRoute routeViewController:@"asdk://AHomeVC" params:@{@"akey": @"11111"}];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+//    UIViewController *vc = [RXComponetRoute routeViewController:@"asdk://errorVC" params:@{@"akey": @"11111"}];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+//    id value = [RXComponetRoute routeDataSync:@"asdk://syncData" params:@{@"akey": @"11111"}];
+//    NSLog(@"value:%@", value);
+    
+    [RXComponetRoute routeDataAsync:@"asdk://asyncData" params:@{@"akey": @"11111"} competion:^(NSDictionary *result) {
+        NSLog(@"result:%@", result);
+    }];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [RXErrorSDK register];
+    [RXASDK register];
+    [RXBSDK register];
+    [RXCSDK register];
+    
+    
+    self.array = @[@"AHome", @"BHome", @"CHome"];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,22 +1,21 @@
 //
-//  RXAHomeViewController.m
+//  RXErrorViewController.m
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/3/5.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXAHomeViewController.h"
+#import "RXErrorViewController.h"
 
-@interface RXAHomeViewController ()
+@interface RXErrorViewController ()
 
 @end
 
-@implementation RXAHomeViewController
-
+@implementation RXErrorViewController
 - (id)initWithParams:(NSDictionary *)params {
     if (self = [super init]) {
-        NSLog(@"params in AHomeViewController:%@", params);
+        NSLog(@"params in ErrorHomeViewController:%@", params);
     }
     return self;
 }

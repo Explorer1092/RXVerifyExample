@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RXCHomeViewController : UIViewController
+- (id)initWithParams:(NSDictionary *)params;
 
 @end

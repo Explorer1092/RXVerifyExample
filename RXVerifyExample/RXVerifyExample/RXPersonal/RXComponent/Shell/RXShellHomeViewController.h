@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RXShellHomeViewController : UIViewController
+@interface RXShellHomeViewController : UITableViewController
 
 @end

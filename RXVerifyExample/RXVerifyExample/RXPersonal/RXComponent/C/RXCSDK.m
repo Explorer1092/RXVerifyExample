@@ -9,5 +9,6 @@
 #import "RXCSDK.h"
 
 @implementation RXCSDK
-
++ (void)register {
+}
 @end

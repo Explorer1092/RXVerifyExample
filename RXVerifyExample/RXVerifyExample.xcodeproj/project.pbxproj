@@ -286,6 +286,9 @@
 		E8B65867222E07E5007C0E42 /* RXASDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B65866222E07E5007C0E42 /* RXASDK.m */; };
 		E8B6586A222E07F0007C0E42 /* RXBSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B65869222E07F0007C0E42 /* RXBSDK.m */; };
 		E8B6586D222E07FD007C0E42 /* RXCSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B6586C222E07FD007C0E42 /* RXCSDK.m */; };
+		E8B65870222E096B007C0E42 /* RXComponetRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B6586F222E096B007C0E42 /* RXComponetRoute.m */; };
+		E8B65874222E151E007C0E42 /* RXErrorSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B65873222E151E007C0E42 /* RXErrorSDK.m */; };
+		E8B65877222E1530007C0E42 /* RXErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B65876222E1530007C0E42 /* RXErrorViewController.m */; };
 		E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */; };
 		E8F8D7A92187E399007AB027 /* RXMethodListDemoObject+MethodList.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7A82187E399007AB027 /* RXMethodListDemoObject+MethodList.m */; };
 		E8F8D7AC2187E5B4007AB027 /* RXMethodListDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F8D7AB2187E5B4007AB027 /* RXMethodListDemoViewController.m */; };
@@ -826,6 +829,12 @@
 		E8B65869222E07F0007C0E42 /* RXBSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBSDK.m; sourceTree = "<group>"; };
 		E8B6586B222E07FD007C0E42 /* RXCSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCSDK.h; sourceTree = "<group>"; };
 		E8B6586C222E07FD007C0E42 /* RXCSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCSDK.m; sourceTree = "<group>"; };
+		E8B6586E222E096B007C0E42 /* RXComponetRoute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXComponetRoute.h; sourceTree = "<group>"; };
+		E8B6586F222E096B007C0E42 /* RXComponetRoute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXComponetRoute.m; sourceTree = "<group>"; };
+		E8B65872222E151E007C0E42 /* RXErrorSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXErrorSDK.h; sourceTree = "<group>"; };
+		E8B65873222E151E007C0E42 /* RXErrorSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXErrorSDK.m; sourceTree = "<group>"; };
+		E8B65875222E1530007C0E42 /* RXErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXErrorViewController.h; sourceTree = "<group>"; };
+		E8B65876222E1530007C0E42 /* RXErrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXErrorViewController.m; sourceTree = "<group>"; };
 		E8F8D7A42187E377007AB027 /* RXMethodListDemoObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMethodListDemoObject.h; sourceTree = "<group>"; };
 		E8F8D7A52187E377007AB027 /* RXMethodListDemoObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMethodListDemoObject.m; sourceTree = "<group>"; };
 		E8F8D7A72187E399007AB027 /* RXMethodListDemoObject+MethodList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RXMethodListDemoObject+MethodList.h"; sourceTree = "<group>"; };
@@ -2132,6 +2141,7 @@
 		E8B65853222E0727007C0E42 /* RXComponent */ = {
 			isa = PBXGroup;
 			children = (
+				E8B65871222E14AF007C0E42 /* Error */,
 				E8B65861222E07AC007C0E42 /* Shell */,
 				E8B65854222E0758007C0E42 /* A */,
 				E8B65855222E0758007C0E42 /* B */,
@@ -2177,6 +2187,8 @@
 		E8B65857222E0758007C0E42 /* Route */ = {
 			isa = PBXGroup;
 			children = (
+				E8B6586E222E096B007C0E42 /* RXComponetRoute.h */,
+				E8B6586F222E096B007C0E42 /* RXComponetRoute.m */,
 			);
 			path = Route;
 			sourceTree = "<group>";
@@ -2188,6 +2200,17 @@
 				E8B65863222E07BD007C0E42 /* RXShellHomeViewController.m */,
 			);
 			path = Shell;
+			sourceTree = "<group>";
+		};
+		E8B65871222E14AF007C0E42 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				E8B65872222E151E007C0E42 /* RXErrorSDK.h */,
+				E8B65873222E151E007C0E42 /* RXErrorSDK.m */,
+				E8B65875222E1530007C0E42 /* RXErrorViewController.h */,
+				E8B65876222E1530007C0E42 /* RXErrorViewController.m */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		E8F8D7A32187E357007AB027 /* MethodList */ = {
@@ -2566,6 +2589,7 @@
 				E811CA911FED09FD003157E9 /* RVEventResponseListViewController.m in Sources */,
 				E8F8D7FE21917038007AB027 /* RXAFNTest1Object.m in Sources */,
 				58AAC3141C38CDF20023D2EA /* RVButtonViewController.m in Sources */,
+				E8B65877222E1530007C0E42 /* RXErrorViewController.m in Sources */,
 				E818A0D021F6C0270053ED3E /* RXARCObject.m in Sources */,
 				E87C044221D7126300B90D74 /* RXMethodSwizzleParentObject.m in Sources */,
 				E872493621C5286100EA6A3D /* RXAFHTTPResponseSerializer.m in Sources */,
@@ -2605,6 +2629,7 @@
 				C9BDAD671CC62E6E00CBB1CA /* RVPushPopAnimation.m in Sources */,
 				E87C043F21D7125200B90D74 /* RXMethodSwizzleTestObject.m in Sources */,
 				E818A09621F059990053ED3E /* RXBlockChangeOverTimeMRCObject.m in Sources */,
+				E8B65870222E096B007C0E42 /* RXComponetRoute.m in Sources */,
 				E8B65867222E07E5007C0E42 /* RXASDK.m in Sources */,
 				E872491E21BE91C400EA6A3D /* RXAFQueryStringPair.m in Sources */,
 				E8433D8C20FC7F7D004A7FBC /* RWDummySignInService.m in Sources */,
@@ -2716,6 +2741,7 @@
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
 				E8433D9020FC9C81004A7FBC /* RXOCKWKindofViewController.m in Sources */,
 				E87C047321E3391800B90D74 /* RXClassMetaClassTestObject.m in Sources */,
+				E8B65874222E151E007C0E42 /* RXErrorSDK.m in Sources */,
 				E818A0E72213C3470053ED3E /* RXARCAutoreleasingObject.m in Sources */,
 				E8B6585D222E0792007C0E42 /* RXBHomeViewController.m in Sources */,
 				E870203120DA617200752211 /* RXUIListPerformanceViewController.m in Sources */,

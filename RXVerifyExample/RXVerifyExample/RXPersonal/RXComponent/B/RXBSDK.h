@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface RXBSDK : NSObject
-
++ (void)register;
 @end
