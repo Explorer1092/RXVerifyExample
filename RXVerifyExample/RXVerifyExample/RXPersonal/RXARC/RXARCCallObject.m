@@ -7,14 +7,19 @@
 //
 
 #import "RXARCCallObject.h"
-
+#import "RXMRCUtil.h"
 @implementation RXARCCallObject
 
 - (void)test
 {
+    
+    
     self.requestObject = [RXARCRequestObject new];
+    NSLog(@"1111 count:%zd", [RXMRCUtil objectRetainCount:self.requestObject]);
     self.requestObject.delegate = self;
-    [self.requestObject start];
+//    [self.requestObject start];
+    
+    [_requestObject start];
 }
 
 - (void)test2

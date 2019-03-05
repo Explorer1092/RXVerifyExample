@@ -31,7 +31,7 @@
     NSLog(@"begin sleep");
     [NSThread sleepForTimeInterval:1];
     NSLog(@"after sleep");
-//    [self _print_value];
+    [self _print_value];
     
     
 //    [self.delegate requestFinished:self];
