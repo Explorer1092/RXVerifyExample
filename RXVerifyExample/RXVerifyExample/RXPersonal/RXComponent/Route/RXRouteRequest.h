@@ -15,6 +15,8 @@
 
 @property (nonatomic, readonly) NSDictionary *urlParams;
 
+//@property (nonatomic, readonly) RXRouteDefinition *realRouteDefinition;
+
 
 - (id)initWithRoute:(NSString *)route;
 

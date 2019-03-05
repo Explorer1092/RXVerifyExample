@@ -286,7 +286,7 @@
 		E8B65867222E07E5007C0E42 /* RXASDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B65866222E07E5007C0E42 /* RXASDK.m */; };
 		E8B6586A222E07F0007C0E42 /* RXBSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B65869222E07F0007C0E42 /* RXBSDK.m */; };
 		E8B6586D222E07FD007C0E42 /* RXCSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B6586C222E07FD007C0E42 /* RXCSDK.m */; };
-		E8B65870222E096B007C0E42 /* RXComponetRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B6586F222E096B007C0E42 /* RXComponetRoute.m */; };
+		E8B65870222E096B007C0E42 /* RXComponentRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B6586F222E096B007C0E42 /* RXComponentRoute.m */; };
 		E8B65874222E151E007C0E42 /* RXErrorSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B65873222E151E007C0E42 /* RXErrorSDK.m */; };
 		E8B65877222E1530007C0E42 /* RXErrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B65876222E1530007C0E42 /* RXErrorViewController.m */; };
 		E8B6587A222E4BDF007C0E42 /* RXRouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B65879222E4BDF007C0E42 /* RXRouteRequest.m */; };
@@ -832,8 +832,8 @@
 		E8B65869222E07F0007C0E42 /* RXBSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXBSDK.m; sourceTree = "<group>"; };
 		E8B6586B222E07FD007C0E42 /* RXCSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCSDK.h; sourceTree = "<group>"; };
 		E8B6586C222E07FD007C0E42 /* RXCSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCSDK.m; sourceTree = "<group>"; };
-		E8B6586E222E096B007C0E42 /* RXComponetRoute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXComponetRoute.h; sourceTree = "<group>"; };
-		E8B6586F222E096B007C0E42 /* RXComponetRoute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXComponetRoute.m; sourceTree = "<group>"; };
+		E8B6586E222E096B007C0E42 /* RXComponentRoute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXComponentRoute.h; sourceTree = "<group>"; };
+		E8B6586F222E096B007C0E42 /* RXComponentRoute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXComponentRoute.m; sourceTree = "<group>"; };
 		E8B65872222E151E007C0E42 /* RXErrorSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXErrorSDK.h; sourceTree = "<group>"; };
 		E8B65873222E151E007C0E42 /* RXErrorSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXErrorSDK.m; sourceTree = "<group>"; };
 		E8B65875222E1530007C0E42 /* RXErrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXErrorViewController.h; sourceTree = "<group>"; };
@@ -2196,8 +2196,8 @@
 		E8B65857222E0758007C0E42 /* Route */ = {
 			isa = PBXGroup;
 			children = (
-				E8B6586E222E096B007C0E42 /* RXComponetRoute.h */,
-				E8B6586F222E096B007C0E42 /* RXComponetRoute.m */,
+				E8B6586E222E096B007C0E42 /* RXComponentRoute.h */,
+				E8B6586F222E096B007C0E42 /* RXComponentRoute.m */,
 				E8B6587B222E527C007C0E42 /* RXRouteDefinition.h */,
 				E8B6587C222E527C007C0E42 /* RXRouteDefinition.m */,
 				E8B65878222E4BDF007C0E42 /* RXRouteRequest.h */,
@@ -2646,7 +2646,7 @@
 				C9BDAD671CC62E6E00CBB1CA /* RVPushPopAnimation.m in Sources */,
 				E87C043F21D7125200B90D74 /* RXMethodSwizzleTestObject.m in Sources */,
 				E818A09621F059990053ED3E /* RXBlockChangeOverTimeMRCObject.m in Sources */,
-				E8B65870222E096B007C0E42 /* RXComponetRoute.m in Sources */,
+				E8B65870222E096B007C0E42 /* RXComponentRoute.m in Sources */,
 				E8B65867222E07E5007C0E42 /* RXASDK.m in Sources */,
 				E872491E21BE91C400EA6A3D /* RXAFQueryStringPair.m in Sources */,
 				E8433D8C20FC7F7D004A7FBC /* RWDummySignInService.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "RXShellHomeViewController.h"
-#import "RXComponetRoute.h"
+#import "RXComponentRoute.h"
 #import "RXASDK.h"
 #import "RXBSDK.h"
 #import "RXCSDK.h"
@@ -37,18 +37,18 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UIViewController *vc = [RXComponetRoute routeViewController:@"asdk://AHomeVC?a=1&b=2&c=3" params:@{@"akey": @"11111"}];
+    UIViewController *vc = [RXComponentRoute routeViewController:@"asdk://AHomeVC?a=1&b=2&c=3" params:@{@"akey": @"11111"}];
     [self.navigationController pushViewController:vc animated:YES];
     
     
-//    UIViewController *vc = [RXComponetRoute routeViewController:@"asdk://errorVC" params:@{@"akey": @"11111"}];
+//    UIViewController *vc = [RXComponentRoute routeViewController:@"asdk://errorVC" params:@{@"akey": @"11111"}];
 //    [self.navigationController pushViewController:vc animated:YES];
     
     
-    id value = [RXComponetRoute routeDataSync:@"asdk://syncData?aaa=1&bbb=2&ccc=3" params:@{@"akey": @"11111"}];
+    id value = [RXComponentRoute routeDataSync:@"asdk://syncData?aaa=1&bbb=2&ccc=3" params:@{@"akey": @"11111"}];
     NSLog(@"value:%@", value);
     
-    [RXComponetRoute routeDataAsync:@"asdk://asyncData?aaaaa=1&bbbbb=2&ccccc=3" params:@{@"akey": @"11111"} competion:^(NSDictionary *result) {
+    [RXComponentRoute routeDataAsync:@"asdk://asyncData?aaaaa=1&bbbbb=2&ccccc=3" params:@{@"akey": @"11111"} competion:^(NSDictionary *result) {
         NSLog(@"result:%@", result);
     }];
 }
@@ -61,7 +61,7 @@
     [RXASDK register];
     [RXBSDK register];
     [RXCSDK register];
-    [RXComponetRoute updateStrategy];
+    [RXComponentRoute updateStrategy];
     
     
     self.array = @[@"AHome", @"BHome", @"CHome"];

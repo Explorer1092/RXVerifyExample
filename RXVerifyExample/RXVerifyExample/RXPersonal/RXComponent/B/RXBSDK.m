@@ -7,8 +7,14 @@
 //
 
 #import "RXBSDK.h"
+#import "RXBHomeViewController.h"
+#import "RXComponentRoute.h"
 
 @implementation RXBSDK
 + (void)register {
+    [RXComponentRoute registerViewController:@"bsdk://BHomeVC" block:^id(NSDictionary *params) {
+        RXBHomeViewController *vc = [[RXBHomeViewController alloc] initWithParams:params];
+        return vc;
+    }];
 }
 @end

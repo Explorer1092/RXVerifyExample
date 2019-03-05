@@ -28,7 +28,15 @@
                 for (NSString *tmp in ary2) {
                     NSArray *ary3 = [tmp componentsSeparatedByString:@"="];
                     if (ary3.count == 2) {
-                        dic[ary3[0]] = ary3[1];
+                        NSString *key = ary3[0];
+                        NSString *value = ary3[1];
+                        if ([key isEqualToString:@"redirect"]) {
+                            self.routeDefinition.redirectUrl = value;
+                            self.routeDefinition.redirect = YES;
+                        } else {
+                            dic[key] = value;
+                        }
+                        
                     }
                 }
                 self.urlParams = dic;
@@ -37,5 +45,12 @@
     }
     return self;
 }
+//- (RXRouteDefinition *)realRouteDefinition {
+//    if (self.routeDefinition.redirect) {
+//        return [[RXRouteDefinition alloc] initWithRoute:self.routeDefinition.redirectUrl];
+//    } else {
+//        return self.routeDefinition;
+//    }
+//}
 
 @end

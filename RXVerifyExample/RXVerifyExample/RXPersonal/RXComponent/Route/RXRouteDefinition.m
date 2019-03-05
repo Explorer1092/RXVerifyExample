@@ -7,7 +7,9 @@
 //
 
 #import "RXRouteDefinition.h"
+@interface RXRouteDefinition()
 
+@end
 @implementation RXRouteDefinition
 - (id)initWithRoute:(NSString *)route {
     if (self = [super init]) {
@@ -16,6 +18,7 @@
         self.scheme = url.scheme;
         self.host = url.host;
         self.redirect = NO;
+        self.redirectUrl = @"";
     }
     return self;
 }
@@ -23,15 +26,16 @@
 - (BOOL)valid {
     return self.scheme.length > 0 && self.host.length > 0;
 }
-- (id)copyWithZone:(NSZone *)zone {
-    return self;
+- (NSString *)key {
+    return [NSString stringWithFormat:@"%@://%@", self.scheme, self.host];
 }
+
 - (BOOL)isEqual:(id)object {
     if (![object isKindOfClass:[RXRouteDefinition class]]) {
         return NO;
     }
     RXRouteDefinition *tmp = (RXRouteDefinition *)object;
-    return [self.scheme isEqual:tmp.scheme] && [self.host isEqual:tmp.host] && (self.redirect == tmp.redirect);
+    return [self.scheme isEqual:tmp.scheme] && [self.host isEqual:tmp.host] && self.redirectUrl == tmp.redirectUrl;
 }
 - (NSUInteger)hash {
     return [self.scheme hash] / 2 + [self.host hash] / 2;
@@ -43,5 +47,9 @@
     result.host = @"";
     result.redirect = NO;
     return result;
+}
+extern NSString *kRXComponetRouteErrorRoute;
++ (id)defaultErrorDefinition {
+    return [[RXRouteDefinition alloc] initWithRoute:kRXComponetRouteErrorRoute];
 }
 @end

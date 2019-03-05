@@ -7,24 +7,24 @@
 //
 
 #import "RXASDK.h"
-#import "RXComponetRoute.h"
+#import "RXComponentRoute.h"
 #import "RXAHomeViewController.h"
 @implementation RXASDK
 
 + (void)register {
-    [RXComponetRoute registerViewController:@"asdk://AHomeVC" block:^id(NSDictionary *params) {
+    [RXComponentRoute registerViewController:@"asdk://AHomeVC" block:^id(NSDictionary *params) {
         RXAHomeViewController *vc = [[RXAHomeViewController alloc] initWithParams:params];
         return vc;
     }];
     
-    [RXComponetRoute registerSyncData:@"asdk://syncData" block:^id(NSDictionary *params) {
+    [RXComponentRoute registerSyncData:@"asdk://syncData" block:^id(NSDictionary *params) {
         NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:params];
         dic[@"otherKey"] = @"asglksgjslkd";
         return dic;
     }];
     
     
-    [RXComponetRoute registerAsyncData:@"asdk://asyncData" block:^void(NSDictionary *params) {
+    [RXComponentRoute registerAsyncData:@"asdk://asyncData" block:^void(NSDictionary *params) {
         void(^completion)(NSDictionary *) = params[kRXComponetRouteAsyncDataCompletionKey];
         if (completion == nil) {
             return;

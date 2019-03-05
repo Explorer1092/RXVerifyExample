@@ -1,12 +1,12 @@
 //
-//  RXComponetRoute.m
+//  RXComponentRoute.m
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/3/5.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXComponetRoute.h"
+#import "RXComponentRoute.h"
 #import "RXRouteRequest.h"
 #import "RXRouteDefinition.h"
 #import "RXRouteResponse.h"
@@ -16,16 +16,23 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
 
 
 
-@interface RXComponetRoute()
+@interface RXComponentRoute()
 
 @property (nonatomic, strong) NSMutableDictionary *globalRoute;
 
 @end
 
-@implementation RXComponetRoute
+@implementation RXComponentRoute
 
 + (void)updateStrategy {
-//    NSString *strategy = @"asdk://AHomeVC?error";
+//    NSString *strategy = @"asdk://AHomeVC?redirect=bsdk://BHomeVC";
+    NSString *strategy = @"asdk://AHomeVC?redirect=error://route";
+    RXRouteRequest *request = [[RXRouteRequest alloc] initWithRoute:strategy];
+    RXRouteDefinition *definition = request.routeDefinition;
+    RXComponentRoute *manager = [RXComponentRoute sharedInstance];
+    
+    RXRouteResponse *response = manager.globalRoute[definition.key];
+    response.routeDefinition = definition;
     
 }
 
@@ -44,9 +51,9 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
 
 + (void)_register:(NSString *)route block:(id)block {
     RXRouteDefinition *routeDefinition = [[RXRouteDefinition alloc] initWithRoute:route];
-    RXRouteResponse * routeResponse = [[RXRouteResponse alloc] initWithRouteDefinition:routeDefinition block:block];
-    RXComponetRoute *manger = [RXComponetRoute sharedInstance];
-    [manger.globalRoute setObject:routeResponse forKey:routeDefinition];
+    RXRouteResponse *routeResponse = [[RXRouteResponse alloc] initWithRouteDefinition:routeDefinition block:block];
+    RXComponentRoute *manger = [RXComponentRoute sharedInstance];
+    [manger.globalRoute setObject:routeResponse forKey:routeDefinition.key];
 }
 #pragma mark - route
 + (id)routeViewController:(NSString *)route params:(NSDictionary *)params {
@@ -57,8 +64,8 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
 }
 + (void)routeDataAsync:(NSString *)route params:(NSDictionary *)params competion:(void(^)(NSDictionary *))competion {
     RXRouteRequest *request = [[RXRouteRequest alloc] initWithRoute:route];
-    RXComponetRoute *manger = [RXComponetRoute sharedInstance];
-    RXRouteResponse *response = manger.globalRoute[request.routeDefinition];
+    RXComponentRoute *manger = [RXComponentRoute sharedInstance];
+    RXRouteResponse *response = [manger responseWithDefinition:request.routeDefinition];
     void(^block)(NSDictionary *) = (void(^)(NSDictionary *))(response.block);
     if (block == nil) {
         if (competion != nil) {
@@ -79,11 +86,12 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
 + (id)_route:(NSString *)route params:(NSDictionary *)params useError:(BOOL)useError
 {
     RXRouteRequest *request = [[RXRouteRequest alloc] initWithRoute:route];
-    RXComponetRoute *manger = [RXComponetRoute sharedInstance];
-    RXRouteResponse *response = manger.globalRoute[request.routeDefinition];
+    RXComponentRoute *manger = [RXComponentRoute sharedInstance];
+    RXRouteResponse *response = [manger responseWithDefinition:request.routeDefinition];
     id(^block)(NSDictionary *) = (id(^)(NSDictionary *))(response.block);
     if (block == nil && useError) {
-        block = manger.globalRoute[kRXComponetRouteErrorRoute];
+        RXRouteResponse *rep = manger.globalRoute[[RXRouteDefinition defaultErrorDefinition]];
+        block = (id(^)(NSDictionary *))(rep.block);
     }
     NSMutableDictionary *realParams = [NSMutableDictionary dictionaryWithDictionary:params];
     [realParams addEntriesFromDictionary:request.urlParams];
@@ -97,7 +105,7 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
 #pragma mark - Singleton Model
 + (instancetype)sharedInstance
 {
-    static RXComponetRoute *sharedInstance = nil;
+    static RXComponentRoute *sharedInstance = nil;
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
         sharedInstance = [[self alloc] init];
@@ -110,4 +118,19 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
     }
     return self;
 }
+- (RXRouteResponse *)responseWithDefinition:(RXRouteDefinition *)definition {
+    RXRouteResponse *response = self.globalRoute[definition.key];
+    // 最多循环10次
+    NSInteger maxLoopCount = 10;
+    for (NSInteger i = 0; i < maxLoopCount; i++) {
+        if (response.routeDefinition.redirect) {
+            response = self.globalRoute[response.routeDefinition.redirectUrl];
+        } else {
+            break;
+        }
+    }
+    
+    return response;
+}
+
 @end

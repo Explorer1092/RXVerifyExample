@@ -1,5 +1,5 @@
 //
-//  RXComponetRoute.h
+//  RXComponentRoute.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/3/5.
@@ -44,7 +44,7 @@ extern NSString *kRXComponetRouteErrorRoute; // 当页面跳转路由没有找�
 extern NSString *kRXComponetRouteAsyncDataCompletionKey; // 组件间异步获取数据
 
 
-@interface RXComponetRoute : NSObject
+@interface RXComponentRoute : NSObject
 
 
 + (void)updateStrategy;
