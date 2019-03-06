@@ -20,19 +20,41 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
 
 @property (nonatomic, strong) NSMutableDictionary *globalRoute;
 
+@property (nonatomic, weak) id<RXComponentRouteDelegate> delegate;
+
 @end
 
 @implementation RXComponentRoute
 
-+ (void)updateStrategy {
-//    NSString *strategy = @"asdk://AHomeVC?redirect=bsdk://BHomeVC";
-    NSString *strategy = @"asdk://AHomeVC?redirect=error://route";
-    RXRouteRequest *request = [[RXRouteRequest alloc] initWithRoute:strategy];
-    RXRouteDefinition *definition = request.routeDefinition;
+// 初始化
++ (void)setupWithComponents:(NSArray *)components delegate:(id<RXComponentRouteDelegate>)delegate {
     RXComponentRoute *manager = [RXComponentRoute sharedInstance];
-    
-    RXRouteResponse *response = manager.globalRoute[definition.key];
-    response.routeDefinition = definition;
+    manager.delegate = delegate;
+    for (NSString *className in components) {
+        Class cls = NSClassFromString(className);
+        if (cls != nil && [cls respondsToSelector:@selector(registerIntoRoute)]) {
+            [cls registerIntoRoute];
+        }
+    }
+    [self _updateStrategy];
+
+}
+
++ (void)updateStrategy:(NSArray *)strategyList {
+    RXComponentRoute *manager = [RXComponentRoute sharedInstance];
+    for (NSString *strategy in strategyList) {
+        RXRouteRequest *request = [[RXRouteRequest alloc] initWithRoute:strategy];
+        RXRouteDefinition *definition = request.routeDefinition;
+        RXRouteResponse *response = manager.globalRoute[definition.key];
+        response.routeDefinition = definition;
+    }
+}
++ (void)_updateStrategy {
+    RXComponentRoute *manager = [RXComponentRoute sharedInstance];
+    if ([manager.delegate respondsToSelector:@selector(routeStrategyList)]) {
+        NSArray *strategyList = [manager.delegate routeStrategyList];
+        [self updateStrategy:strategyList];
+    }
     
 }
 

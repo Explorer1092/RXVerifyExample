@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface RXBSDK : NSObject
-+ (void)register;
+#import "RXComponentRoute.h"
+@interface RXBSDK : NSObject<RXComponentRouteRegisterDelegate>
 @end

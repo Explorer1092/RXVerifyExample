@@ -25,9 +25,9 @@
  4.如何能统一iOS和Android两端的页面跳转逻辑？甚至如何能统一三端的请求资源的方式？
  项目里面某些模块会混合ReactNative，Weex，H5界面，这些界面还会调用Native的界面，以及Native的组件。那么，如何能统一Web端和Native端请求资源的方式？
  
- 5.如果使用了动态下发配置文件来配置App的跳转逻辑，那么如果做到iOS和Android两边只要共用一套配置文件？
+ 5.如果使用了动态下发配置文件来配置App的跳转逻辑，那么如果做到iOS和Android两边只要共用一套配置文件？ // 解决
  
- 6.如果App出现bug了，如何不用JSPatch，就能做到简单的热修复功能？
+ 6.如果App出现bug了，如何不用JSPatch，就能做到简单的热修复功能？   // 解决
  比如App上线突然遇到了紧急bug，能否把页面动态降级成H5，ReactNative，Weex？或者是直接换成一个本地的错误界面？
  
  7.如何在每个组件间调用和页面跳转时都进行埋点统计？每个跳转的地方都手写代码埋点？利用Runtime AOP ？
@@ -44,10 +44,27 @@ extern NSString *kRXComponetRouteErrorRoute; // 当页面跳转路由没有找�
 extern NSString *kRXComponetRouteAsyncDataCompletionKey; // 组件间异步获取数据
 
 
+
+
+@protocol RXComponentRouteDelegate <NSObject>
+@optional
+- (NSArray *)routeStrategyList;
+@end
+
+
+
+@protocol RXComponentRouteRegisterDelegate <NSObject>
++ (void)registerIntoRoute;
+@end
+
+
+
+
 @interface RXComponentRoute : NSObject
 
++ (void)setupWithComponents:(NSArray *)components delegate:(id<RXComponentRouteDelegate>)delegate;
 
-+ (void)updateStrategy;
++ (void)updateStrategy:(NSArray *)strategyList;
 
 
 #pragma mark - register

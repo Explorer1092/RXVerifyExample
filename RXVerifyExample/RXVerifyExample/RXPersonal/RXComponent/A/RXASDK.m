@@ -11,7 +11,7 @@
 #import "RXAHomeViewController.h"
 @implementation RXASDK
 
-+ (void)register {
++ (void)registerIntoRoute {
     [RXComponentRoute registerViewController:@"asdk://AHomeVC" block:^id(NSDictionary *params) {
         RXAHomeViewController *vc = [[RXAHomeViewController alloc] initWithParams:params];
         return vc;

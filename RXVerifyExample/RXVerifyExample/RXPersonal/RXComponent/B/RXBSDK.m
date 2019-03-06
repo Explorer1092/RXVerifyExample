@@ -11,7 +11,7 @@
 #import "RXComponentRoute.h"
 
 @implementation RXBSDK
-+ (void)register {
++ (void)registerIntoRoute {
     [RXComponentRoute registerViewController:@"bsdk://BHomeVC" block:^id(NSDictionary *params) {
         RXBHomeViewController *vc = [[RXBHomeViewController alloc] initWithParams:params];
         return vc;

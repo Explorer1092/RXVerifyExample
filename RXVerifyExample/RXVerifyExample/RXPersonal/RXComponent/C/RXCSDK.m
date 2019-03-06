@@ -9,6 +9,6 @@
 #import "RXCSDK.h"
 
 @implementation RXCSDK
-+ (void)register {
++ (void)registerIntoRoute {
 }
 @end

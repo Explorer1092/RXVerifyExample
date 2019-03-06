@@ -10,7 +10,7 @@
 #import "RXComponentRoute.h"
 #import "RXErrorViewController.h"
 @implementation RXErrorSDK
-+ (void)register {
++ (void)registerIntoRoute {
     [RXComponentRoute registerViewController:kRXComponetRouteErrorRoute block:^id(NSDictionary *params) {
         RXErrorViewController *vc = [[RXErrorViewController alloc] initWithParams:params];
         return vc;

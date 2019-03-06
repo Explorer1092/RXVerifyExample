@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RXComponentRoute.h"
+@interface RXASDK : NSObject<RXComponentRouteRegisterDelegate>
 
-@interface RXASDK : NSObject
-
-+ (void)register;
 
 @end
