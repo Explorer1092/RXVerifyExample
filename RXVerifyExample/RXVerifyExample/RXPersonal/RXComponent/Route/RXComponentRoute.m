@@ -20,23 +20,19 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
 
 @property (nonatomic, strong) NSMutableDictionary *globalRoute;
 
-@property (nonatomic, weak) id<RXComponentRouteDelegate> delegate;
 
 @end
 
 @implementation RXComponentRoute
 
 // 初始化
-+ (void)setupWithComponents:(NSArray *)components delegate:(id<RXComponentRouteDelegate>)delegate {
-    RXComponentRoute *manager = [RXComponentRoute sharedInstance];
-    manager.delegate = delegate;
++ (void)setupWithComponents:(NSArray *)components {
     for (NSString *className in components) {
         Class cls = NSClassFromString(className);
         if (cls != nil && [cls respondsToSelector:@selector(registerIntoRoute)]) {
             [cls registerIntoRoute];
         }
     }
-    [self _updateStrategy];
 
 }
 
@@ -48,14 +44,6 @@ const NSString *kRXComponetRouteAsyncDataCompletionKey = @"com.kRXComponetRoute.
         RXRouteResponse *response = manager.globalRoute[definition.key];
         response.routeDefinition = definition;
     }
-}
-+ (void)_updateStrategy {
-    RXComponentRoute *manager = [RXComponentRoute sharedInstance];
-    if ([manager.delegate respondsToSelector:@selector(routeStrategyList)]) {
-        NSArray *strategyList = [manager.delegate routeStrategyList];
-        [self updateStrategy:strategyList];
-    }
-    
 }
 
 #pragma mark - register

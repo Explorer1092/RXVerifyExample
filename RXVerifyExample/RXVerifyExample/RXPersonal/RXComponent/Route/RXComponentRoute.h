@@ -46,10 +46,10 @@ extern NSString *kRXComponetRouteAsyncDataCompletionKey; // 组件间异步获�
 
 
 
-@protocol RXComponentRouteDelegate <NSObject>
-@optional
-- (NSArray *)routeStrategyList;
-@end
+//@protocol RXComponentRouteDelegate <NSObject>
+//@optional
+//- (NSArray *)routeStrategyList;
+//@end
 
 
 
@@ -62,7 +62,7 @@ extern NSString *kRXComponetRouteAsyncDataCompletionKey; // 组件间异步获�
 
 @interface RXComponentRoute : NSObject
 
-+ (void)setupWithComponents:(NSArray *)components delegate:(id<RXComponentRouteDelegate>)delegate;
++ (void)setupWithComponents:(NSArray *)components;
 
 + (void)updateStrategy:(NSArray *)strategyList;
 

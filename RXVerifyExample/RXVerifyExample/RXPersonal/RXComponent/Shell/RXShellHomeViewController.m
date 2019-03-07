@@ -8,11 +8,7 @@
 
 #import "RXShellHomeViewController.h"
 #import "RXComponentRoute.h"
-//#import "RXASDK.h"
-//#import "RXBSDK.h"
-//#import "RXCSDK.h"
-//#import "RXErrorSDK.h"
-@interface RXShellHomeViewController () <RXComponentRouteDelegate>
+@interface RXShellHomeViewController ()
 @property (nonatomic, strong) NSArray *array;
 @end
 
@@ -58,7 +54,7 @@
     // Do any additional setup after loading the view.
     
     NSArray *components = @[@"RXErrorSDK", @"RXASDK", @"RXBSDK", @"RXCSDK"];
-    [RXComponentRoute setupWithComponents:components delegate:self];
+    [RXComponentRoute setupWithComponents:components];
     [self _asyn_update_strategyList];
     
     self.array = @[@"AHome", @"BHome", @"CHome"];
@@ -69,18 +65,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - RXComponentRouteDelegate
-- (NSArray *)routeStrategyList {
-    NSString *str1 = @"asdk://AHomeVC?redirect=bsdk://BHomeVC"; // 定位的BHomeVC
-    NSString *str2 = @"asdk://AHomeVC?redirect=error://route"; // 定位到error
-    NSString *strRedirectCancel = @"asdk://AHomeVC"; // 取消重定向
-    return @[str1, str2, strRedirectCancel];
-}
 #pragma mark - Private
 - (void)_asyn_update_strategyList {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        NSString *str1 = @"asdk://AHomeVC?redirect=bsdk://BHomeVC"; // 定位的BHomeVC
+        NSString *str2 = @"asdk://AHomeVC?redirect=error://route"; // 定位到error
         NSString *strRedirectCancel = @"asdk://AHomeVC"; // 取消重定向
-        NSArray *strategyList = @[strRedirectCancel];
+        NSArray *strategyList = @[str1, str2, strRedirectCancel];
         [RXComponentRoute updateStrategy:strategyList];
     });
 }

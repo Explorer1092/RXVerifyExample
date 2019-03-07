@@ -8,6 +8,10 @@
 
 #import "RXRouteResponse.h"
 
+@interface RXRouteResponse()
+
+@end
+
 @implementation RXRouteResponse
 
 - (id)initWithRouteDefinition:(RXRouteDefinition *)routeDefinition block:(id)block {
