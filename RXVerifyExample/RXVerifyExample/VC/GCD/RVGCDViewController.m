@@ -884,7 +884,23 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
 #pragma mark - Current Queue
 - (void)testGetCurrentQueue
 {
+//    dispatch_queue_t queue0 = dispatch_queue_create("1", DISPATCH_QUEUE_SERIAL);
+    NSMutableArray *ary = [NSMutableArray new];
+    for (int i = 0; i < 10; i++) {
+        [ary addObject:dispatch_queue_create("1", DISPATCH_QUEUE_SERIAL)];
+    }
     
+    dispatch_queue_t globalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    for (int i = 0; i < 10; i++) {
+        dispatch_queue_t queue = ary[i];
+        
+        // 这个只是假装有10个线程去处理，不能修改这里
+        dispatch_async(globalQueue, ^{
+            dispatch_sync(queue, ^{
+                // do a lot of thing
+            });
+        });
+    }
     
     dispatch_queue_t queue0 = dispatch_get_current_queue();
     dispatch_queue_t queue1 = dispatch_get_main_queue();

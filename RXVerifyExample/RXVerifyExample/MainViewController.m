@@ -74,7 +74,7 @@
 //    object = @"RXLayout";
 //    object = @"RXJLRouter";
 //    object = @"RXAnimation";
-    object = @"RXShellHome";
+//    object = @"RXShellHome";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];

@@ -9,7 +9,8 @@
 #import "AppDelegate.h"
 #import "XGPush.h"
 #import "MainViewController.h"
-#import <RX3_TencentLiteSDK/TencentOpenAPI/TencentOAuth.h>
+//#import <RX3_TencentLiteSDK/TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/TencentOAuth.h>
 
 #import "UncaughtExceptionHandler.h"
 #import "RXServiceManager.h"

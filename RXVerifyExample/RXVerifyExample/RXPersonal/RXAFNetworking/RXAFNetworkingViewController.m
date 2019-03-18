@@ -32,6 +32,7 @@
 #import "RXLockTestObject.h"
 #import "RXARCTestObject.h"
 #import "RXSelfSuperClassB.h"
+#import "RXPropertyTestObject.h"
 // 子线程中的通知问题
 //https://www.jianshu.com/p/208568075b4f
 @interface RXAFNetworkingViewController ()
@@ -202,15 +203,18 @@
 //    [self.rxClassMetaClassTestObject mainTest];
     
     self.rxBlockTestObject = [RXBlockTestObject new];
-    [self.rxBlockTestObject mainTest];
+//    [self.rxBlockTestObject mainTest];
     
     self.rxLockTestObject = [RXLockTestObject new];
 //    [self.rxLockTestObject mainTest];
     
     self.rxARCTestObject = [RXARCTestObject new];
-    [self.rxARCTestObject mainTest];
+//    [self.rxARCTestObject mainTest];
     
-    [self test_self_super];
+//    [self test_self_super];
+    
+    
+    [self test_RXPropertyTestObject];
     
     
 }
@@ -242,6 +246,12 @@
 
 - (void)test_self_super {
     RXSelfSuperClassB *tmp = [RXSelfSuperClassB new];
+    [tmp test];
+}
+
+- (void)test_RXPropertyTestObject
+{
+    RXPropertyTestObject *tmp = [RXPropertyTestObject new];
     [tmp test];
 }
 

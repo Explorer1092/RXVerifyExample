@@ -7,7 +7,10 @@
 //
 
 #import "RVQQViewController.h"
-#import <RX3_TencentLiteSDK/TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+//#import <RX3_TencentLiteSDK/TencentOpenAPI/TencentOAuth.h>
+//#import <RX3_XGPush/>
+//#import "TencentOAuth.h"
 @interface RVQQViewController () <TencentSessionDelegate>
 
 @property (nonatomic, strong) TencentOAuth *tencentOAuth;
