@@ -10,7 +10,7 @@
 #import "RXOptionalRequiredProtocol.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RXOptionalRequiredProtocolObject : NSObject<RXTestNoneProtocol, RXTestOptionalProtocol, RXTestRequiredProtocol>
+@interface RXOptionalRequiredProtocolObject : NSObject<RXTestNoneProtocol, RXTestOptionalProtocol, RXTestRequiredProtocol, RXTestPropertyProtocol>
 
 @end
 

@@ -12,19 +12,25 @@
 @protocol RXTestNoneProtocol <NSObject>
 // 默认的是 required 的
 - (void)testInNoneProtocol;
-
 @end
-@protocol RXTestOptionalProtocol <NSObject>
 
+
+@protocol RXTestOptionalProtocol <NSObject>
 @optional
 - (void)testInOptionalProtocol;
-
 @end
-@protocol RXTestRequiredProtocol <NSObject>
 
+
+
+@protocol RXTestRequiredProtocol <NSObject>
 @required
 - (void)testInRequiredProtocol;
+@end
 
+
+
+@protocol RXTestPropertyProtocol <NSObject>
+@property (nonatomic, readonly) NSObject *propertyData;
 @end
 
 #endif /* RXOptionalRequiredProtocol_h */

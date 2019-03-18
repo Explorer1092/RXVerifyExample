@@ -16,6 +16,10 @@
 		5821DB1D223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB1C223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m */; };
 		5821DB21223F381B002AA122 /* RXPropertyKeywordObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB20223F381B002AA122 /* RXPropertyKeywordObject.m */; };
 		5821DB24223F3827002AA122 /* RXPropertyTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB23223F3827002AA122 /* RXPropertyTestObject.m */; };
+		5821DB28223F8E0E002AA122 /* RXAVAudioTestManagerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB27223F8E0E002AA122 /* RXAVAudioTestManagerObject.m */; };
+		5821DB2B223F8E35002AA122 /* RBDMuteSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB2A223F8E35002AA122 /* RBDMuteSwitch.m */; };
+		5821DB2E223F8E40002AA122 /* RBDMuteSwitchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB2D223F8E40002AA122 /* RBDMuteSwitchObject.m */; };
+		5821DB30223F8F0F002AA122 /* detection.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 5821DB2F223F8F0F002AA122 /* detection.aiff */; };
 		5850B26C1BF47F2A00EC9144 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.mm */; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
@@ -333,6 +337,13 @@
 		5821DB20223F381B002AA122 /* RXPropertyKeywordObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPropertyKeywordObject.m; sourceTree = "<group>"; };
 		5821DB22223F3827002AA122 /* RXPropertyTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPropertyTestObject.h; sourceTree = "<group>"; };
 		5821DB23223F3827002AA122 /* RXPropertyTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPropertyTestObject.m; sourceTree = "<group>"; };
+		5821DB26223F8E0E002AA122 /* RXAVAudioTestManagerObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAVAudioTestManagerObject.h; sourceTree = "<group>"; };
+		5821DB27223F8E0E002AA122 /* RXAVAudioTestManagerObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAVAudioTestManagerObject.m; sourceTree = "<group>"; };
+		5821DB29223F8E35002AA122 /* RBDMuteSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBDMuteSwitch.h; sourceTree = "<group>"; };
+		5821DB2A223F8E35002AA122 /* RBDMuteSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBDMuteSwitch.m; sourceTree = "<group>"; };
+		5821DB2C223F8E40002AA122 /* RBDMuteSwitchObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBDMuteSwitchObject.h; sourceTree = "<group>"; };
+		5821DB2D223F8E40002AA122 /* RBDMuteSwitchObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBDMuteSwitchObject.m; sourceTree = "<group>"; };
+		5821DB2F223F8F0F002AA122 /* detection.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = detection.aiff; sourceTree = "<group>"; };
 		5850B2671BF47F2A00EC9144 /* RXVerifyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXVerifyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5850B26B1BF47F2A00EC9144 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		5850B26D1BF47F2A00EC9144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -944,6 +955,20 @@
 			path = RXProperty;
 			sourceTree = "<group>";
 		};
+		5821DB25223F8DF9002AA122 /* RXAVAudio */ = {
+			isa = PBXGroup;
+			children = (
+				5821DB2F223F8F0F002AA122 /* detection.aiff */,
+				5821DB26223F8E0E002AA122 /* RXAVAudioTestManagerObject.h */,
+				5821DB27223F8E0E002AA122 /* RXAVAudioTestManagerObject.m */,
+				5821DB29223F8E35002AA122 /* RBDMuteSwitch.h */,
+				5821DB2A223F8E35002AA122 /* RBDMuteSwitch.m */,
+				5821DB2C223F8E40002AA122 /* RBDMuteSwitchObject.h */,
+				5821DB2D223F8E40002AA122 /* RBDMuteSwitchObject.m */,
+			);
+			path = RXAVAudio;
+			sourceTree = "<group>";
+		};
 		5850B25E1BF47F2A00EC9144 = {
 			isa = PBXGroup;
 			children = (
@@ -1027,6 +1052,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				5821DB25223F8DF9002AA122 /* RXAVAudio */,
 				5821DB1E223F3808002AA122 /* RXProperty */,
 				5821DB19223CED39002AA122 /* RXProtocol */,
 				E8B65853222E0727007C0E42 /* RXComponent */,
@@ -2476,6 +2502,7 @@
 				C929233B1D339BCF009D6875 /* RVDUMAViewController.xib in Resources */,
 				C95B6AFB1CF81EE300E9FC0F /* RVLockViewController.xib in Resources */,
 				C9D474541D16543F000C14E3 /* RVUtilityViewController.xib in Resources */,
+				5821DB30223F8F0F002AA122 /* detection.aiff in Resources */,
 				C9BDAD5F1CC621EA00CBB1CA /* RVAnimationViewController.xib in Resources */,
 				58D6604A1C25A54A00912786 /* RVPopupBoxViewController.xib in Resources */,
 				C98FD0EE1D20CD1E0024854D /* RVYYKitViewController.xib in Resources */,
@@ -2675,6 +2702,7 @@
 				E818F0FA20B93FED00F94127 /* RXMVVMListViewController.m in Sources */,
 				E87C043221D4E7E300B90D74 /* RXInitializeTestObject.m in Sources */,
 				E870204220DA7B2800752211 /* RXCornerRadiusTableViewImpl.m in Sources */,
+				5821DB2E223F8E40002AA122 /* RBDMuteSwitchObject.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */,
 				5821DB21223F381B002AA122 /* RXPropertyKeywordObject.m in Sources */,
@@ -2774,9 +2802,11 @@
 				E818A08A21EDE5EB0053ED3E /* RXARCRequestObject.m in Sources */,
 				E86050D220A079050016F6C9 /* RXTargetQueueViewController.m in Sources */,
 				C98FD0F21D210F960024854D /* RVLayerViewController.m in Sources */,
+				5821DB2B223F8E35002AA122 /* RBDMuteSwitch.m in Sources */,
 				E818A09321EF0F640053ED3E /* RXBlockChangeOverTimeObject.m in Sources */,
 				E872492821BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m in Sources */,
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
+				5821DB28223F8E0E002AA122 /* RXAVAudioTestManagerObject.m in Sources */,
 				E8433D9020FC9C81004A7FBC /* RXOCKWKindofViewController.m in Sources */,
 				E87C047321E3391800B90D74 /* RXClassMetaClassTestObject.m in Sources */,
 				E8B65874222E151E007C0E42 /* RXErrorSDK.m in Sources */,

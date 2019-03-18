@@ -7,7 +7,18 @@
 //
 
 #import "RXOptionalRequiredProtocolObject.h"
-
+@interface RXOptionalRequiredProtocolObject()
+@property (nonatomic, strong, readwrite) NSObject *propertyData;
+@end
 @implementation RXOptionalRequiredProtocolObject
 
+
+#pragma mark - RXTestNoneProtocol
+- (void)testInNoneProtocol {
+    
+}
+#pragma mark - RXTestRequiredProtocol
+- (void)testInRequiredProtocol {
+    
+}
 @end

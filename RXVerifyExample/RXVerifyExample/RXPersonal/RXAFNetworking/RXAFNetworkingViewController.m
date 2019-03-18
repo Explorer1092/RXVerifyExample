@@ -33,6 +33,7 @@
 #import "RXARCTestObject.h"
 #import "RXSelfSuperClassB.h"
 #import "RXPropertyTestObject.h"
+#import "RXAVAudioTestManagerObject.h"
 // 子线程中的通知问题
 //https://www.jianshu.com/p/208568075b4f
 @interface RXAFNetworkingViewController ()
@@ -214,7 +215,9 @@
 //    [self test_self_super];
     
     
-    [self test_RXPropertyTestObject];
+//    [self test_RXPropertyTestObject];
+    
+    [[RXAVAudioTestManagerObject sharedInstance] test];
     
     
 }
