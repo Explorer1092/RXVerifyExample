@@ -15,5 +15,10 @@
     [super load];
     NSArray *ary = @[@(1)];
     NSLog(@"%@, ary:%@", [self class], ary);
+    
+    BOOL k = 5;
+    if (k == YES) {
+        NSLog(@"111");
+    }
 }
 @end

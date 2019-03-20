@@ -8,6 +8,10 @@
 
 #import "RXAVAudioTestManagerObject.h"
 #import "RBDMuteSwitchObject.h"
+#import "AudioToolbox/AudioToolbox.h"
+
+
+// https://www.cnblogs.com/knrainy/articles/3435739.html
 static RXAVAudioTestManagerObject *_sharedInstance;
 @interface RXAVAudioTestManagerObject()
 @property (nonatomic, strong) RBDMuteSwitchObject *muteSwitchObject;
@@ -23,7 +27,28 @@ static RXAVAudioTestManagerObject *_sharedInstance;
     return _sharedInstance;
 }
 - (void)test {
+//    [self test_mute];
+    
+    [self test_isSilent];
+}
+
+- (void)test_mute {
+    
     self.muteSwitchObject = [RBDMuteSwitchObject new];
     [self.muteSwitchObject test];
+}
+
+- (void)test_isSilent {
+    NSLog(@"silent:%d", [self isSilentMode]);
+}
+
+
+// 以下方法不对
+- (BOOL)isSilentMode {
+    CFStringRef state;
+    UInt32 propertySize = sizeof(CFStringRef);
+    AudioSessionInitialize(NULL, NULL, NULL, NULL);
+    AudioSessionGetProperty(kAudioSessionProperty_AudioRoute, &propertySize, &state);
+    return CFStringGetLength(state) == 0;
 }
 @end
