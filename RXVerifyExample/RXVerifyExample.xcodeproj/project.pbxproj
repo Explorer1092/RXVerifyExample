@@ -22,7 +22,7 @@
 		5821DB30223F8F0F002AA122 /* detection.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 5821DB2F223F8F0F002AA122 /* detection.aiff */; };
 		5821DB33223FA3DC002AA122 /* RXPropertyKeywordObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB32223FA3DC002AA122 /* RXPropertyKeywordObject+AssociatedObject.m */; };
 		5821DB382241D88A002AA122 /* RXRSATheoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB372241D88A002AA122 /* RXRSATheoryObject.m */; };
-		5821DB3B2241D8A4002AA122 /* RXEncryptDecryptTestManagerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB3A2241D8A4002AA122 /* RXEncryptDecryptTestManagerObject.m */; };
+		5821DB3B2241D8A4002AA122 /* RXEncryptDecryptTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB3A2241D8A4002AA122 /* RXEncryptDecryptTestManager.m */; };
 		5850B26C1BF47F2A00EC9144 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.mm */; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
@@ -31,6 +31,10 @@
 		5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5886CDAC1C182D7500013C76 /* RVMenuViewController.m */; };
 		5886CDAF1C182D7500013C76 /* RVMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5886CDAD1C182D7500013C76 /* RVMenuViewController.xib */; };
 		5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */ = {isa = PBXBuildFile; fileRef = 5886CDB11C182E4F00013C76 /* UIViewController+RV.m */; };
+		588805A722460F9E00A76039 /* RXKSCrashTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805A622460F9E00A76039 /* RXKSCrashTestManager.m */; };
+		588805AA2246102C00A76039 /* RXKSSizeofTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805A92246102C00A76039 /* RXKSSizeofTestObject.m */; };
+		588805DD224C66FF00A76039 /* RXStackOverflowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805DC224C66FF00A76039 /* RXStackOverflowManager.m */; };
+		588805E0224CA08800A76039 /* RXUrlDealObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805DF224CA08800A76039 /* RXUrlDealObject.m */; };
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
 		58AAC3141C38CDF20023D2EA /* RVButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAC3121C38CDF20023D2EA /* RVButtonViewController.m */; };
 		58AAC3151C38CDF20023D2EA /* RVButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58AAC3131C38CDF20023D2EA /* RVButtonViewController.xib */; };
@@ -351,8 +355,8 @@
 		5821DB32223FA3DC002AA122 /* RXPropertyKeywordObject+AssociatedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RXPropertyKeywordObject+AssociatedObject.m"; sourceTree = "<group>"; };
 		5821DB362241D88A002AA122 /* RXRSATheoryObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXRSATheoryObject.h; sourceTree = "<group>"; };
 		5821DB372241D88A002AA122 /* RXRSATheoryObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRSATheoryObject.m; sourceTree = "<group>"; };
-		5821DB392241D8A4002AA122 /* RXEncryptDecryptTestManagerObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXEncryptDecryptTestManagerObject.h; sourceTree = "<group>"; };
-		5821DB3A2241D8A4002AA122 /* RXEncryptDecryptTestManagerObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXEncryptDecryptTestManagerObject.m; sourceTree = "<group>"; };
+		5821DB392241D8A4002AA122 /* RXEncryptDecryptTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXEncryptDecryptTestManager.h; sourceTree = "<group>"; };
+		5821DB3A2241D8A4002AA122 /* RXEncryptDecryptTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXEncryptDecryptTestManager.m; sourceTree = "<group>"; };
 		5850B2671BF47F2A00EC9144 /* RXVerifyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXVerifyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5850B26B1BF47F2A00EC9144 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		5850B26D1BF47F2A00EC9144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -367,6 +371,14 @@
 		5886CDB01C182E4F00013C76 /* UIViewController+RV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RV.h"; sourceTree = "<group>"; };
 		5886CDB11C182E4F00013C76 /* UIViewController+RV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RV.m"; sourceTree = "<group>"; };
 		5886CDB31C182ED400013C76 /* RXVerifyExample-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RXVerifyExample-Prefix.pch"; sourceTree = "<group>"; };
+		588805A522460F9E00A76039 /* RXKSCrashTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXKSCrashTestManager.h; sourceTree = "<group>"; };
+		588805A622460F9E00A76039 /* RXKSCrashTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXKSCrashTestManager.m; sourceTree = "<group>"; };
+		588805A82246102C00A76039 /* RXKSSizeofTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXKSSizeofTestObject.h; sourceTree = "<group>"; };
+		588805A92246102C00A76039 /* RXKSSizeofTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXKSSizeofTestObject.m; sourceTree = "<group>"; };
+		588805DB224C66FF00A76039 /* RXStackOverflowManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXStackOverflowManager.h; sourceTree = "<group>"; };
+		588805DC224C66FF00A76039 /* RXStackOverflowManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXStackOverflowManager.m; sourceTree = "<group>"; };
+		588805DE224CA08800A76039 /* RXUrlDealObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXUrlDealObject.h; sourceTree = "<group>"; };
+		588805DF224CA08800A76039 /* RXUrlDealObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXUrlDealObject.m; sourceTree = "<group>"; };
 		5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		58AAC3111C38CDF20023D2EA /* RVButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVButtonViewController.h; sourceTree = "<group>"; };
 		58AAC3121C38CDF20023D2EA /* RVButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVButtonViewController.m; sourceTree = "<group>"; };
@@ -983,8 +995,8 @@
 		5821DB342241D836002AA122 /* RXEncryptDecrypt */ = {
 			isa = PBXGroup;
 			children = (
-				5821DB392241D8A4002AA122 /* RXEncryptDecryptTestManagerObject.h */,
-				5821DB3A2241D8A4002AA122 /* RXEncryptDecryptTestManagerObject.m */,
+				5821DB392241D8A4002AA122 /* RXEncryptDecryptTestManager.h */,
+				5821DB3A2241D8A4002AA122 /* RXEncryptDecryptTestManager.m */,
 				5821DB352241D836002AA122 /* RSA */,
 			);
 			path = RXEncryptDecrypt;
@@ -1079,9 +1091,33 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		588805A422460F8200A76039 /* RXKSCrash */ = {
+			isa = PBXGroup;
+			children = (
+				588805A522460F9E00A76039 /* RXKSCrashTestManager.h */,
+				588805A622460F9E00A76039 /* RXKSCrashTestManager.m */,
+				588805A82246102C00A76039 /* RXKSSizeofTestObject.h */,
+				588805A92246102C00A76039 /* RXKSSizeofTestObject.m */,
+			);
+			path = RXKSCrash;
+			sourceTree = "<group>";
+		};
+		588805DA224C66EE00A76039 /* RXStackOverflow */ = {
+			isa = PBXGroup;
+			children = (
+				588805DB224C66FF00A76039 /* RXStackOverflowManager.h */,
+				588805DC224C66FF00A76039 /* RXStackOverflowManager.m */,
+				588805DE224CA08800A76039 /* RXUrlDealObject.h */,
+				588805DF224CA08800A76039 /* RXUrlDealObject.m */,
+			);
+			path = RXStackOverflow;
+			sourceTree = "<group>";
+		};
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				588805DA224C66EE00A76039 /* RXStackOverflow */,
+				588805A422460F8200A76039 /* RXKSCrash */,
 				5821DB342241D836002AA122 /* RXEncryptDecrypt */,
 				5821DB25223F8DF9002AA122 /* RXAVAudio */,
 				5821DB1E223F3808002AA122 /* RXProperty */,
@@ -2744,7 +2780,7 @@
 				E8433D8420F885D8004A7FBC /* RXRACClassViewController.m in Sources */,
 				E8B65864222E07BD007C0E42 /* RXShellHomeViewController.m in Sources */,
 				E85158802140CC99006E23D5 /* UncaughtExceptionHandler.m in Sources */,
-				5821DB3B2241D8A4002AA122 /* RXEncryptDecryptTestManagerObject.m in Sources */,
+				5821DB3B2241D8A4002AA122 /* RXEncryptDecryptTestManager.m in Sources */,
 				E872492121BFDC3900EA6A3D /* RXAFStreamingMultipartFormData.m in Sources */,
 				E818A0E42213BF970053ED3E /* RXExternUtil.m in Sources */,
 				E85159CD215890CD006E23D5 /* RXOPMQViewController.m in Sources */,
@@ -2798,6 +2834,7 @@
 				E8F8D7E8218FE5B4007AB027 /* rx-objc-cache.mm in Sources */,
 				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
+				588805AA2246102C00A76039 /* RXKSSizeofTestObject.m in Sources */,
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
 				E87C043521D4E86D00B90D74 /* RXInitializeEmptyObject.m in Sources */,
 				E872495D21CCEA2000EA6A3D /* RXReadonlyProperty2Object.m in Sources */,
@@ -2816,6 +2853,7 @@
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
 				E818A0FE221D4B020053ED3E /* RXAnimationTestObject.m in Sources */,
 				E8433D9620FEDA86004A7FBC /* RXRACMTViewController.m in Sources */,
+				588805A722460F9E00A76039 /* RXKSCrashTestManager.m in Sources */,
 				E810791D20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.m in Sources */,
 				E87C048721E5DE8B00B90D74 /* RXSynchronizedLockObject.m in Sources */,
 				E8F8D7FA21916FFC007AB027 /* RXAFNetworkingViewController.m in Sources */,
@@ -2848,11 +2886,13 @@
 				E8B6585D222E0792007C0E42 /* RXBHomeViewController.m in Sources */,
 				E870203120DA617200752211 /* RXUIListPerformanceViewController.m in Sources */,
 				E87C046121DDE58600B90D74 /* RXObservedObject.m in Sources */,
+				588805E0224CA08800A76039 /* RXUrlDealObject.m in Sources */,
 				E8F8D7DB218C42B3007AB027 /* RXAspectsViewController.m in Sources */,
 				E818A09D21F079470053ED3E /* RXARCCategoryMethodParentObject.m in Sources */,
 				E818A08021ECAB290053ED3E /* RXBlockReferenceValueObject.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				E87C044E21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m in Sources */,
+				588805DD224C66FF00A76039 /* RXStackOverflowManager.m in Sources */,
 				E818A0BB21F310CB0053ED3E /* RXARCTmpObject.m in Sources */,
 				E8F8D81C21ACF36F007AB027 /* RXAFNTest5Object.m in Sources */,
 				E8F8D7DF218FD6AC007AB027 /* RXCLanguageViewController.mm in Sources */,

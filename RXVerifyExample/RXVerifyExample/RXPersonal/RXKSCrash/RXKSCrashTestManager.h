@@ -1,8 +1,8 @@
 //
-//  RXEncryptDecryptTestManagerObject.h
+//  RXKSCrashTestManager.h
 //  RXVerifyExample
 //
-//  Created by Rush.D.Xzj on 2019/3/20.
+//  Created by Rush.D.Xzj on 2019/3/23.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RXEncryptDecryptTestManagerObject : NSObject
+@interface RXKSCrashTestManager : NSObject
 + (instancetype)sharedInstance;
 
 - (void)test;

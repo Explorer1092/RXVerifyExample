@@ -18,6 +18,22 @@
 - (int)Euler_functionWithN:(int)n p:(int)p q:(int)q {
     return (p - 1) * (q - 1);
 }
+- (int)calculate_random_valueWithEulerFunctionResult:(int)eulerFunctionResult {
+    NSMutableArray *ary = [NSMutableArray new];
+    BOOL find17 = NO;
+    // 加一个i < 100 控制一下列出所有的数据了
+    for (int i = 2; i < eulerFunctionResult && i < 100; i++) {
+        if (eulerFunctionResult % i != 0) {
+            [ary addObject:@(i)];
+            if (!find17 && i == 17) {
+                find17 = YES;
+            }
+        }
+    }
+    NSLog(@"find17:%@", find17 ? @"YES" : @"NO");
+    NSLog(@"ary:%@", [ary componentsJoinedByString:@","]);
+    return 17;
+}
 // 计算模反元素
 - (int)calculate_Mofan_elementWith_eulerFunctionResult:(int)eulerFunctionResult andE:(int)e {
     int x = 0; int y = 0;
@@ -80,7 +96,7 @@
     // 第三步，计算n的欧拉函数得到eulerFunctionResult
     int eulerFunctionResult = [self Euler_functionWithN:n p:p q:q];
     // 第四步，随机选择一个整数e，1 < e < eulerFunctionResult， 且e与eulerFunctionResult互质
-    int e = 17;
+    int e = [self calculate_random_valueWithEulerFunctionResult:eulerFunctionResult];
     // 第五步，计算e与eulerFunctionResult的模反元素d
     int d = [self calculate_Mofan_elementWith_eulerFunctionResult:eulerFunctionResult andE:e];
     

@@ -34,7 +34,9 @@
 #import "RXSelfSuperClassB.h"
 #import "RXPropertyTestObject.h"
 #import "RXAVAudioTestManagerObject.h"
-#import "RXEncryptDecryptTestManagerObject.h"
+#import "RXEncryptDecryptTestManager.h"
+#import "RXKSCrashTestManager.h"
+#import "RXStackOverflowManager.h"
 // 子线程中的通知问题
 //https://www.jianshu.com/p/208568075b4f
 @interface RXAFNetworkingViewController ()
@@ -220,7 +222,11 @@
     
 //    [[RXAVAudioTestManagerObject sharedInstance] test];
     
-    [[RXEncryptDecryptTestManagerObject sharedInstance] test];
+    [[RXEncryptDecryptTestManager sharedInstance] test];
+    
+    [[RXKSCrashTestManager sharedInstance] test];
+    
+    [[RXStackOverflowManager sharedInstance] test];
 }
 
 - (void)didReceiveMemoryWarning {
