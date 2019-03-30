@@ -6,6 +6,9 @@
 //  Copyright © 2018 Rush.D.Xzj. All rights reserved.
 //
 
+// https://segmentfault.com/q/1010000008601569/a-1020000009122108/revision
+
+
 #import "RXAFNetworkingViewController.h"
 #import "RXRuntimeUtil.h"
 #import "RXAFNTest1Object.h"
@@ -37,6 +40,8 @@
 #import "RXEncryptDecryptTestManager.h"
 #import "RXKSCrashTestManager.h"
 #import "RXStackOverflowManager.h"
+#import "RXTimeoutIntervalManager.h"
+#import "UIView+VK.h"
 // 子线程中的通知问题
 //https://www.jianshu.com/p/208568075b4f
 @interface RXAFNetworkingViewController ()
@@ -74,6 +79,75 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+//    CGFloat viewWidth = 50;
+//    CGFloat viewHeight = 100;
+//    CGFloat viewY = 200;
+//
+//    UIView *v1 = [[UIView alloc] initWithFrame:CGRectZero];
+//    UIView *v2 = [[UIView alloc] initWithFrame:CGRectZero];
+//    UIView *v3 = [[UIView alloc] initWithFrame:CGRectZero];
+//    UIView *v4 = [[UIView alloc] initWithFrame:CGRectZero];
+//
+//    [self.view addSubview:v1];
+//    [self.view addSubview:v2];
+//    [self.view addSubview:v3];
+//    [self.view addSubview:v4];
+//
+//
+//    v1.backgroundColor = [UIColor redColor];
+//    [v1 vk_autoSetSize:CGSizeMake(viewWidth, viewHeight)];
+//    [v1 vk_autoTopToItem:self.view offset:viewY];
+//    [v1 vk_autoRightToItem:self.view];
+//
+//    v2.backgroundColor = [UIColor greenColor];
+//    [v2 vk_autoSetSize:CGSizeMake(viewWidth, viewHeight)];
+//    [v2 vk_autoTopToItem:self.view offset:viewY];
+//    [v2 vk_autoRightMarginLeft:v1 offset:0];
+//
+//    v3.backgroundColor = [UIColor blueColor];
+//    [v3 vk_autoSetSize:CGSizeMake(viewWidth, viewHeight)];
+//    [v3 vk_autoTopToItem:self.view offset:viewY];
+//    [v3 vk_autoRightMarginLeft:v2 offset:0];
+//
+//    v4.backgroundColor = [UIColor yellowColor];
+//    [v4 vk_autoSetSize:CGSizeMake(viewWidth, viewHeight)];
+//    [v4 vk_autoTopToItem:self.view offset:viewY];
+//    [v4 vk_autoRightMarginLeft:v3 offset:0];
+//
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [v2 vk_autoSetSize:CGSizeMake(0, 0)];
+//    });
+    
+//    v1.backgroundColor = [UIColor redColor];
+//    [v1 vk_autoSetSize:CGSizeMake(viewWidth, viewHeight)];
+//    [v1 vk_autoTopToItem:self.view offset:viewY];
+//    [v1 vk_autoRightToItem:self.view];
+//    
+//    v2.backgroundColor = [UIColor greenColor];
+//    [v2 vk_autoSetSize:CGSizeMake(viewWidth, viewHeight)];
+//    [v2 vk_autoTopToItem:self.view offset:viewY];
+//    [v2 vk_autoLeftToItem:v1 offset:-viewWidth];
+//    //
+//    //
+//    v3.backgroundColor = [UIColor blueColor];
+//    [v3 vk_autoSetSize:CGSizeMake(viewWidth, viewHeight)];
+//    [v3 vk_autoTopToItem:self.view offset:viewY];
+//    [v3 vk_autoLeftToItem:v2 offset:-viewWidth];
+////    //
+//    v4.backgroundColor = [UIColor yellowColor];
+//    [v4 vk_autoSetSize:CGSizeMake(viewWidth, viewHeight)];
+//    [v4 vk_autoTopToItem:self.view offset:viewY];
+//    [v4 vk_autoLeftToItem:v3 offset:-viewWidth];
+////
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [v2 vk_autoSetSize:CGSizeMake(30, viewHeight)];
+//    });
+    
+    
+    
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 //    void (^block)(void) = ^{
 //        _array = [NSMutableArray new];
 //    };
@@ -222,11 +296,14 @@
     
 //    [[RXAVAudioTestManagerObject sharedInstance] test];
     
-    [[RXEncryptDecryptTestManager sharedInstance] test];
+//    [[RXEncryptDecryptTestManager sharedInstance] test];
+//
+//    [[RXKSCrashTestManager sharedInstance] test];
+//
+//    [[RXStackOverflowManager sharedInstance] test];
     
-    [[RXKSCrashTestManager sharedInstance] test];
     
-    [[RXStackOverflowManager sharedInstance] test];
+    [[RXTimeoutIntervalManager sharedInstance] test];
 }
 
 - (void)didReceiveMemoryWarning {

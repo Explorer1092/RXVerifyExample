@@ -13,7 +13,7 @@
 @implementation RXRSATheoryObject
 
 
-// 数论中的欧拉函数证明过程非常复杂，结论是：
+// 数论中的欧拉函数证明过程非常复杂，其中之一的结论是：
 // 对n求欧拉函数，n = p * q, 且p和q都是质数
 - (int)Euler_functionWithN:(int)n p:(int)p q:(int)q {
     return (p - 1) * (q - 1);
@@ -39,14 +39,21 @@
     int x = 0; int y = 0;
     // 模反元素计算公式： (e * x) + eulerFunctionResult * y = 1;
     // 要保证x是正数，那么y就必须是负数，所以从y负一开始
-    for (y = -1; y > -1000000; y--) {
+    NSMutableArray *ary = [NSMutableArray new];
+    int d = 0;
+    int yMax = -200;
+    for (y = -1; y > yMax; y--) {
         int tmp = 1 - y * eulerFunctionResult;
         if (tmp % e == 0) {
             x = tmp / e;
-            break;
+            [ary addObject:@(x)];
+            if (x == 2753) {
+                d = 2753;
+            }
         }
     }
-    return x;
+    NSLog(@"possibility mofan:%@", ary);
+    return d;
 }
 
 // 计算加密
@@ -54,7 +61,7 @@
 // 参数： m: 明文，e：公钥的e，n：公钥的n
 // 返回值 c： 密文
 // 数据太大，pow(m, e)会溢出，所以采取如下的算法
-- (int)calculate_encryptWithM:(int)m e:(int)e n:(int)n {
+- (int)calculate_encryptWithM:(int)m n:(int)n e:(int)e {
     int c = m;
     for (int i = 1; i < e; i ++) {
         c = c * m;
@@ -68,7 +75,7 @@
 // decrypt = pow(c, d) % n
 // 参数： c: 密文，e：私钥的d，n：私钥的n(跟公钥的n是一样的)
 // 返回值 m： 明文
-- (int)calculate_decryptWithC:(int)c d:(int)d n:(int)n {
+- (int)calculate_decryptWithC:(int)c n:(int)n d:(int)d {
     int m = c;
     for (int i = 1; i < d; i ++) {
         m = m * c;
@@ -81,10 +88,10 @@
 
 - (void)test_encrypt_decrypt_exampleWithM:(int)m n:(int)n publicE:(int)e privateD:(int)d {
     // 密文
-    int c = [self calculate_encryptWithM:m e:e n:n];
+    int c = [self calculate_encryptWithM:m n:n e:e];
     NSLog(@"m:%d, c:%d", m, c);
     // 解密后的密文
-    int newM = [self calculate_decryptWithC:c d:d n:n];
+    int newM = [self calculate_decryptWithC:c n:n d:d];
     NSLog(@"m:%d, newM:%d", m, newM);
 }
 - (void)test {
@@ -106,7 +113,7 @@
     NSLog(@"publicKey:%@, privateKey:%@", publicKey, privateKey);
     
     // 明文 m
-    int m = 200;
+    int m = 65;
     
     [self test_encrypt_decrypt_exampleWithM:m n:n publicE:e privateD:d];
 }

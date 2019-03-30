@@ -48,9 +48,9 @@
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSString *str = @"\"OneV\", \"TwoV\", \"ThreeV\"";
-    NSArray *ary = [str componentsSeparatedByString:@","];
-    NSLog(@"%@", ary);
+//    NSString *str = @"\"OneV\", \"TwoV\", \"ThreeV\"";
+//    NSArray *ary = [str componentsSeparatedByString:@","];
+//    NSLog(@"%@", ary);
     // third part 第三方初始化
     [self config];
     [RXServiceManager application:application willFinishLaunchingWithOptions:launchOptions];

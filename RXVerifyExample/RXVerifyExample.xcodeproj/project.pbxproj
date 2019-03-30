@@ -35,9 +35,11 @@
 		588805AA2246102C00A76039 /* RXKSSizeofTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805A92246102C00A76039 /* RXKSSizeofTestObject.m */; };
 		588805DD224C66FF00A76039 /* RXStackOverflowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805DC224C66FF00A76039 /* RXStackOverflowManager.m */; };
 		588805E0224CA08800A76039 /* RXUrlDealObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805DF224CA08800A76039 /* RXUrlDealObject.m */; };
+		588805FC224D03CF00A76039 /* UIView+VK.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805FA224D03CE00A76039 /* UIView+VK.m */; };
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
 		58AAC3141C38CDF20023D2EA /* RVButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAC3121C38CDF20023D2EA /* RVButtonViewController.m */; };
 		58AAC3151C38CDF20023D2EA /* RVButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58AAC3131C38CDF20023D2EA /* RVButtonViewController.xib */; };
+		58B4629E224E517000C85EFD /* RXTimeoutIntervalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B4629D224E517000C85EFD /* RXTimeoutIntervalManager.m */; };
 		58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BF5F871C16BAC500E8AEF3 /* MainViewController.m */; };
 		58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */; };
 		58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CA8D591C1ABEFB00A507BE /* RVTransformViewController.m */; };
@@ -379,10 +381,14 @@
 		588805DC224C66FF00A76039 /* RXStackOverflowManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXStackOverflowManager.m; sourceTree = "<group>"; };
 		588805DE224CA08800A76039 /* RXUrlDealObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXUrlDealObject.h; sourceTree = "<group>"; };
 		588805DF224CA08800A76039 /* RXUrlDealObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXUrlDealObject.m; sourceTree = "<group>"; };
+		588805FA224D03CE00A76039 /* UIView+VK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VK.m"; sourceTree = "<group>"; };
+		588805FB224D03CE00A76039 /* UIView+VK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VK.h"; sourceTree = "<group>"; };
 		5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		58AAC3111C38CDF20023D2EA /* RVButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVButtonViewController.h; sourceTree = "<group>"; };
 		58AAC3121C38CDF20023D2EA /* RVButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVButtonViewController.m; sourceTree = "<group>"; };
 		58AAC3131C38CDF20023D2EA /* RVButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVButtonViewController.xib; sourceTree = "<group>"; };
+		58B4629C224E517000C85EFD /* RXTimeoutIntervalManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTimeoutIntervalManager.h; sourceTree = "<group>"; };
+		58B4629D224E517000C85EFD /* RXTimeoutIntervalManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTimeoutIntervalManager.m; sourceTree = "<group>"; };
 		58BF5F861C16BAC500E8AEF3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		58BF5F871C16BAC500E8AEF3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -1113,9 +1119,19 @@
 			path = RXStackOverflow;
 			sourceTree = "<group>";
 		};
+		58B4629B224E515B00C85EFD /* RXTimeoutInterval */ = {
+			isa = PBXGroup;
+			children = (
+				58B4629C224E517000C85EFD /* RXTimeoutIntervalManager.h */,
+				58B4629D224E517000C85EFD /* RXTimeoutIntervalManager.m */,
+			);
+			path = RXTimeoutInterval;
+			sourceTree = "<group>";
+		};
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				58B4629B224E515B00C85EFD /* RXTimeoutInterval */,
 				588805DA224C66EE00A76039 /* RXStackOverflow */,
 				588805A422460F8200A76039 /* RXKSCrash */,
 				5821DB342241D836002AA122 /* RXEncryptDecrypt */,
@@ -2419,6 +2435,8 @@
 		E8F8D7F3219133C5007AB027 /* RXAFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				588805FB224D03CE00A76039 /* UIView+VK.h */,
+				588805FA224D03CE00A76039 /* UIView+VK.m */,
 				E87C042121D24C1800B90D74 /* design */,
 				E872496121CE5E0900EA6A3D /* NSURLSession */,
 				E86B170C21B29180007D555B /* Serialization */,
@@ -2656,6 +2674,7 @@
 				C9BDAFB91E4AC4B8006CCD0E /* RVThreadViewController.m in Sources */,
 				E818A0C121F56EFB0053ED3E /* RXMRCReturnValueObject.m in Sources */,
 				E872492521BFDD3600EA6A3D /* RXAFMultipartBodyStream.m in Sources */,
+				58B4629E224E517000C85EFD /* RXTimeoutIntervalManager.m in Sources */,
 				5821DB24223F3827002AA122 /* RXPropertyTestObject.m in Sources */,
 				E818A0EE2216B52C0053ED3E /* RXARCUndefinedBehaviorObject.m in Sources */,
 				C9C2B3391E0BB2AD0087C718 /* RVOCDataViewController.m in Sources */,
@@ -2690,6 +2709,7 @@
 				E8B6585A222E0788007C0E42 /* RXAHomeViewController.m in Sources */,
 				E818A0DD2213B62A0053ED3E /* RXLayoutView.m in Sources */,
 				E86050F220A2965C0016F6C9 /* RVRTPrintViewController.m in Sources */,
+				588805FC224D03CF00A76039 /* UIView+VK.m in Sources */,
 				E872495A21CCEA0000EA6A3D /* RXReadonlyProperty1Object.m in Sources */,
 				E8B6587A222E4BDF007C0E42 /* RXRouteRequest.m in Sources */,
 				C9A711141D7BA1240002E703 /* RXBObject.m in Sources */,
