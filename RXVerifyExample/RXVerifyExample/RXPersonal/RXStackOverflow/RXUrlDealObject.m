@@ -15,43 +15,43 @@
 }
 
 // 支持如下url：
-// http://xxxxx.vipkid.com                                          http://xxxxx.vipkid.com?sessionId=newSessionId
-// http://xxxxx.vipkid.com?key1=value1(一个或多个keyvalue)                              http://xxxxx.vipkid.com?key1=value1(一个或多个keyvalue)&sessionId=newSessionId
-// http://xxxxx.vipkid.com?key1=value1(零个或多个keyvalue)&sessionId=oldSessionId       http://xxxxx.vipkid.com?key1=value1(零个或多个keyvalue)&sessionId=newSessionId
-// http://xxxxx.vipkid.com?key1=value1(零个或多个keyvalue)&sessionId=oldSessionId&keyA=valueA(一个或多个keyvalue)       http://xxxxx.vipkid.com?key1=value1(零个或多个keyvalue)&sessionId=newSessionId&keyA=valueA(一个或多个keyvalue)
+// http://xxxxx.xxxxx.com                                          http://xxxxx.xxxxx.com?sessionId=newSessionId
+// http://xxxxx.xxxxx.com?key1=value1(一个或多个keyvalue)                              http://xxxxx.xxxxx.com?key1=value1(一个或多个keyvalue)&sessionId=newSessionId
+// http://xxxxx.xxxxx.com?key1=value1(零个或多个keyvalue)&sessionId=oldSessionId       http://xxxxx.xxxxx.com?key1=value1(零个或多个keyvalue)&sessionId=newSessionId
+// http://xxxxx.xxxxx.com?key1=value1(零个或多个keyvalue)&sessionId=oldSessionId&keyA=valueA(一个或多个keyvalue)       http://xxxxx.xxxxx.com?key1=value1(零个或多个keyvalue)&sessionId=newSessionId&keyA=valueA(一个或多个keyvalue)
 
 - (void)test2 {
     NSString *sessionId = @"new_sessionId";
     NSString *key = @"sessionId";
-    NSString *url1 = @"http://www.vipkid.com";
-    NSString *expectUrl1 = [NSString stringWithFormat:@"http://www.vipkid.com?sessionId=%@", sessionId];
+    NSString *url1 = @"http://www.xxxxx.com";
+    NSString *expectUrl1 = [NSString stringWithFormat:@"http://www.xxxxx.com?sessionId=%@", sessionId];
     NSString *res1 = [self getRealDocUrlWithUrl:url1 key:key value:sessionId];
     NSLog(@"expect1:%@, res1:%@", expectUrl1, res1);
     //    NSAssert([expectUrl1 isEqualToString:res1], @"测试不通过");
     
     
-    NSString *url2 = @"http://www.vipkid.com?key1=value1";
-    NSString *expectUrl2 = [NSString stringWithFormat:@"http://www.vipkid.com?key1=value1&sessionId=%@", sessionId];
+    NSString *url2 = @"http://www.xxxxx.com?key1=value1";
+    NSString *expectUrl2 = [NSString stringWithFormat:@"http://www.xxxxx.com?key1=value1&sessionId=%@", sessionId];
     NSString *res2 = [self getRealDocUrlWithUrl:url2 key:key value:sessionId];
     NSLog(@"expect2:%@, res2:%@", expectUrl2, res2);
     //    NSAssert([expectUrl2 isEqualToString:res2], @"测试不通过");
     
     
-    NSString *url3 = @"http://www.vipkid.com?sessionId=old_sessionId";
+    NSString *url3 = @"http://www.xxxxx.com?sessionId=old_sessionId";
     NSString *expectUrl3 = url3;
     NSString *res3 = [self getRealDocUrlWithUrl:url3 key:key value:sessionId];
     NSLog(@"expect3:%@, res3:%@", expectUrl3, res3);
     //    NSAssert([expectUrl3 isEqualToString:res3], @"测试不通过");
     
     
-    NSString *url4 = @"http://www.vipkid.com?key1=value1&sessionId=old_sessionId";
+    NSString *url4 = @"http://www.xxxxx.com?key1=value1&sessionId=old_sessionId";
     NSString *expectUrl4 = url4;
     NSString *res4 = [self getRealDocUrlWithUrl:url4 key:key value:sessionId];
     NSLog(@"expect4:%@, res4:%@", expectUrl4, res4);
     //    NSAssert([expectUrl4 isEqualToString:res4], @"测试不通过");
     
     
-    NSString *url5 = @"http://www.vipkid.com?key1=value1&sessionId=old_sessionId&keyA=valueA";
+    NSString *url5 = @"http://www.xxxxx.com?key1=value1&sessionId=old_sessionId&keyA=valueA";
     NSString *expectUrl5 = url5;
     NSString *res5 = [self getRealDocUrlWithUrl:url5 key:key value:sessionId];
     NSLog(@"expect5:%@, res5:%@", expectUrl5, res5);
@@ -78,36 +78,36 @@
 - (void)test1 {
     NSString *sessionId = @"new_sessionId";
     
-    NSString *url1 = @"http://www.vipkid.com";
-    NSString *expectUrl1 = [NSString stringWithFormat:@"http://www.vipkid.com?sessionId=%@", sessionId];
+    NSString *url1 = @"http://www.xxxxx.com";
+    NSString *expectUrl1 = [NSString stringWithFormat:@"http://www.xxxxx.com?sessionId=%@", sessionId];
     NSString *res1 = [self getRealDocUrlWithUrl:url1 sessionId:sessionId];
     NSLog(@"expect1:%@, res1:%@", expectUrl1, res1);
     //    NSAssert([expectUrl1 isEqualToString:res1], @"测试不通过");
     
     
-    NSString *url2 = @"http://www.vipkid.com?key1=value1";
-    NSString *expectUrl2 = [NSString stringWithFormat:@"http://www.vipkid.com?key1=value1&sessionId=%@", sessionId];
+    NSString *url2 = @"http://www.xxxxx.com?key1=value1";
+    NSString *expectUrl2 = [NSString stringWithFormat:@"http://www.xxxxx.com?key1=value1&sessionId=%@", sessionId];
     NSString *res2 = [self getRealDocUrlWithUrl:url2 sessionId:sessionId];
     NSLog(@"expect2:%@, res2:%@", expectUrl2, res2);
     //    NSAssert([expectUrl2 isEqualToString:res2], @"测试不通过");
     
     
-    NSString *url3 = @"http://www.vipkid.com?sessionId=old_sessionId";
-    NSString *expectUrl3 = [NSString stringWithFormat:@"http://www.vipkid.com?sessionId=%@", sessionId];
+    NSString *url3 = @"http://www.xxxxx.com?sessionId=old_sessionId";
+    NSString *expectUrl3 = [NSString stringWithFormat:@"http://www.xxxxx.com?sessionId=%@", sessionId];
     NSString *res3 = [self getRealDocUrlWithUrl:url3 sessionId:sessionId];
     NSLog(@"expect3:%@, res3:%@", expectUrl3, res3);
     //    NSAssert([expectUrl3 isEqualToString:res3], @"测试不通过");
     
     
-    NSString *url4 = @"http://www.vipkid.com?key1=value1&sessionId=old_sessionId";
-    NSString *expectUrl4 = [NSString stringWithFormat:@"http://www.vipkid.com?key1=value1&sessionId=%@", sessionId];
+    NSString *url4 = @"http://www.xxxxx.com?key1=value1&sessionId=old_sessionId";
+    NSString *expectUrl4 = [NSString stringWithFormat:@"http://www.xxxxx.com?key1=value1&sessionId=%@", sessionId];
     NSString *res4 = [self getRealDocUrlWithUrl:url4 sessionId:sessionId];
     NSLog(@"expect4:%@, res4:%@", expectUrl4, res4);
     //    NSAssert([expectUrl4 isEqualToString:res4], @"测试不通过");
     
     
-    NSString *url5 = @"http://www.vipkid.com?key1=value1&sessionId=old_sessionId&keyA=valueA";
-    NSString *expectUrl5 = [NSString stringWithFormat:@"http://www.vipkid.com?key1=value1&sessionId=%@&keyA=valueA", sessionId];
+    NSString *url5 = @"http://www.xxxxx.com?key1=value1&sessionId=old_sessionId&keyA=valueA";
+    NSString *expectUrl5 = [NSString stringWithFormat:@"http://www.xxxxx.com?key1=value1&sessionId=%@&keyA=valueA", sessionId];
     NSString *res5 = [self getRealDocUrlWithUrl:url5 sessionId:sessionId];
     NSLog(@"expect5:%@, res5:%@", expectUrl5, res5);
     //    NSAssert([expectUrl5 isEqualToString:res5], @"测试不通过");
