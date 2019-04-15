@@ -41,8 +41,10 @@
 		588805E0224CA08800A76039 /* RXUrlDealObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805DF224CA08800A76039 /* RXUrlDealObject.m */; };
 		588805FC224D03CF00A76039 /* UIView+VK.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805FA224D03CE00A76039 /* UIView+VK.m */; };
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
-		58A1841C226461D90066C2D9 /* RXVolumnTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A1841B226461D90066C2D9 /* RXVolumnTestManager.m */; };
+		58A1841C226461D90066C2D9 /* RXVolumeTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A1841B226461D90066C2D9 /* RXVolumeTestManager.m */; };
 		58A1841E2264624E0066C2D9 /* ok.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 58A1841D2264624E0066C2D9 /* ok.mp3 */; };
+		58A18422226467F30066C2D9 /* RXVolumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A18420226467F30066C2D9 /* RXVolumeViewController.m */; };
+		58A18423226467F30066C2D9 /* RXVolumeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58A18421226467F30066C2D9 /* RXVolumeViewController.xib */; };
 		58AAC3141C38CDF20023D2EA /* RVButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAC3121C38CDF20023D2EA /* RVButtonViewController.m */; };
 		58AAC3151C38CDF20023D2EA /* RVButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58AAC3131C38CDF20023D2EA /* RVButtonViewController.xib */; };
 		58B4629E224E517000C85EFD /* RXTimeoutIntervalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B4629D224E517000C85EFD /* RXTimeoutIntervalManager.m */; };
@@ -399,9 +401,12 @@
 		588805FA224D03CE00A76039 /* UIView+VK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VK.m"; sourceTree = "<group>"; };
 		588805FB224D03CE00A76039 /* UIView+VK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VK.h"; sourceTree = "<group>"; };
 		5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		58A1841A226461D90066C2D9 /* RXVolumnTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVolumnTestManager.h; sourceTree = "<group>"; };
-		58A1841B226461D90066C2D9 /* RXVolumnTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVolumnTestManager.m; sourceTree = "<group>"; };
+		58A1841A226461D90066C2D9 /* RXVolumeTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVolumeTestManager.h; sourceTree = "<group>"; };
+		58A1841B226461D90066C2D9 /* RXVolumeTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVolumeTestManager.m; sourceTree = "<group>"; };
 		58A1841D2264624E0066C2D9 /* ok.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ok.mp3; sourceTree = "<group>"; };
+		58A1841F226467F30066C2D9 /* RXVolumeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVolumeViewController.h; sourceTree = "<group>"; };
+		58A18420226467F30066C2D9 /* RXVolumeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVolumeViewController.m; sourceTree = "<group>"; };
+		58A18421226467F30066C2D9 /* RXVolumeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RXVolumeViewController.xib; sourceTree = "<group>"; };
 		58AAC3111C38CDF20023D2EA /* RVButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVButtonViewController.h; sourceTree = "<group>"; };
 		58AAC3121C38CDF20023D2EA /* RVButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVButtonViewController.m; sourceTree = "<group>"; };
 		58AAC3131C38CDF20023D2EA /* RVButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVButtonViewController.xib; sourceTree = "<group>"; };
@@ -1036,8 +1041,11 @@
 				5821DB2A223F8E35002AA122 /* RBDMuteSwitch.m */,
 				5821DB2C223F8E40002AA122 /* RBDMuteSwitchObject.h */,
 				5821DB2D223F8E40002AA122 /* RBDMuteSwitchObject.m */,
-				58A1841A226461D90066C2D9 /* RXVolumnTestManager.h */,
-				58A1841B226461D90066C2D9 /* RXVolumnTestManager.m */,
+				58A1841A226461D90066C2D9 /* RXVolumeTestManager.h */,
+				58A1841B226461D90066C2D9 /* RXVolumeTestManager.m */,
+				58A1841F226467F30066C2D9 /* RXVolumeViewController.h */,
+				58A18420226467F30066C2D9 /* RXVolumeViewController.m */,
+				58A18421226467F30066C2D9 /* RXVolumeViewController.xib */,
 			);
 			path = RXAVAudio;
 			sourceTree = "<group>";
@@ -2655,6 +2663,7 @@
 				E86050E020A079E30016F6C9 /* RVRunLoop2ViewController.xib in Resources */,
 				58CA8D5C1C1ABEFB00A507BE /* RVTransformViewController.xib in Resources */,
 				58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */,
+				58A18423226467F30066C2D9 /* RXVolumeViewController.xib in Resources */,
 				58A1841E2264624E0066C2D9 /* ok.mp3 in Resources */,
 				E86050E820A07A1B0016F6C9 /* RVRunTimeViewController.xib in Resources */,
 			);
@@ -2771,7 +2780,7 @@
 				E818A0C421F578330053ED3E /* RXARCBridgeCastObject.m in Sources */,
 				E826367520A96BDC0081F4A8 /* RXMVPGreetingPresenter.m in Sources */,
 				E818A08621ECBCDA0053ED3E /* RXBlockBlockObject.m in Sources */,
-				58A1841C226461D90066C2D9 /* RXVolumnTestManager.m in Sources */,
+				58A1841C226461D90066C2D9 /* RXVolumeTestManager.m in Sources */,
 				C92923421D339F02009D6875 /* DMLine.m in Sources */,
 				E870203420DA61AA00752211 /* RXUIListPerformanceTableViewImpl.m in Sources */,
 				C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */,
@@ -2922,6 +2931,7 @@
 				E8B6586D222E07FD007C0E42 /* RXCSDK.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
+				58A18422226467F30066C2D9 /* RXVolumeViewController.m in Sources */,
 				E818A0FE221D4B020053ED3E /* RXAnimationTestObject.m in Sources */,
 				E8433D9620FEDA86004A7FBC /* RXRACMTViewController.m in Sources */,
 				588805A722460F9E00A76039 /* RXKSCrashTestManager.m in Sources */,

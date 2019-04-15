@@ -9,7 +9,7 @@
 #import "RXAVAudioTestManager.h"
 #import "RBDMuteSwitchObject.h"
 #import "AudioToolbox/AudioToolbox.h"
-#import "RXVolumnTestManager.h"
+#import "RXVolumeTestManager.h"
 
 // https://www.cnblogs.com/knrainy/articles/3435739.html
 @interface RXAVAudioTestManager()
@@ -32,7 +32,6 @@
     
 //    [self test_isSilent];
     
-    [[RXVolumnTestManager sharedInstance] test];
 }
 
 - (void)test_mute {

@@ -56,7 +56,7 @@
                            @"RXUncaughtExceptionHandler", @"RXOPMQ", @"RXMethodListDemo",
                            @"RXAspects", @"RXCLanguage", @"RXAFNetworking",
                            @"RXUtil", @"RXLayout", @"RXJLRouter",
-                           @"RXAnimation", @"RXShellHome"];
+                           @"RXAnimation", @"RXShellHome", @"RXVolume"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -75,6 +75,7 @@
 //    object = @"RXJLRouter";
 //    object = @"RXAnimation";
 //    object = @"RXShellHome";
+    object = @"RXVolume";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
