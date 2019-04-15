@@ -42,6 +42,8 @@
 #import "RXStackOverflowManager.h"
 #import "RXTimeoutIntervalManager.h"
 #import "UIView+VK.h"
+
+#import "RXClassExtensionManager.h"
 // 子线程中的通知问题
 //https://www.jianshu.com/p/208568075b4f
 @interface RXAFNetworkingViewController ()
@@ -75,9 +77,33 @@
 @end
 
 @implementation RXAFNetworkingViewController
+- (BOOL)test_value:(NSString *)source {
+    return ([source compare:@"iPad11.11.11" options:NSNumericSearch] == NSOrderedDescending);
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    http://pre-internal.diversion.vipkid.com.cn/api/diversion/service/test/changeDBtoVK/class/23567213019514?operatorId=20190306160033984&vendor=1
+    
+//    NSString *baseUrl = @"http://pre-internal.diversion.vipkid.com.cn/api/diversion/service/test/changeDBtoVK/class";
+//    NSString *url = @"23556475010956";
+//    NSDictionary *params = @{@"operatorId": @"20190306160033984",
+//                             @"vendor": @(1)
+//                             };
+//    [RXSimpleHttpManager postActionWithBaseUrl:baseUrl url:url parameters:params completion:^(RXBaseResponse *response) {
+//        NSLog(@"111");
+//    }];
+    
+//    NSString *kk = @"iPad12.9";
+//    BOOL aaa =  [self test_value:kk];
+//    
+//    NSLog(@"aa1:%zd", aaa);
+//    
+//    kk = @"iPad11.12";
+//    aaa =  [self test_value:kk];
+//    
+//    NSLog(@"aa2:%zd", aaa);
     
 //    CGFloat width = [UIScreen mainScreen].bounds.size.width;
 //    CGFloat viewWidth = 50;
@@ -303,7 +329,9 @@
 //    [[RXStackOverflowManager sharedInstance] test];
     
     
-    [[RXTimeoutIntervalManager sharedInstance] test];
+//    [[RXTimeoutIntervalManager sharedInstance] test];
+    
+    [[RXClassExtensionManager sharedInstance] test];
 }
 
 - (void)didReceiveMemoryWarning {

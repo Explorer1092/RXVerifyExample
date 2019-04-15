@@ -13,6 +13,10 @@
 		5803F0D51C1913260071FDDA /* RVScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5803F0D31C1913260071FDDA /* RVScrollViewController.xib */; };
 		5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5803F0D71C196F520071FDDA /* RVRectViewController.m */; };
 		5803F0DA1C196F520071FDDA /* RVRectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5803F0D81C196F520071FDDA /* RVRectViewController.xib */; };
+		581219282251A9710062B616 /* RXClassExtensionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 581219272251A9710062B616 /* RXClassExtensionManager.m */; };
+		5812192E2251AA350062B616 /* RXClassExtObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5812192D2251AA350062B616 /* RXClassExtObject.m */; };
+		581219332251AD9B0062B616 /* RXClassMethodSelfBlockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 581219322251AD9B0062B616 /* RXClassMethodSelfBlockManager.m */; };
+		581219362251ADAB0062B616 /* RXCMSBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 581219352251ADAB0062B616 /* RXCMSBObject.m */; };
 		5821DB1D223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB1C223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m */; };
 		5821DB21223F381B002AA122 /* RXPropertyKeywordObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB20223F381B002AA122 /* RXPropertyKeywordObject.m */; };
 		5821DB24223F3827002AA122 /* RXPropertyTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB23223F3827002AA122 /* RXPropertyTestObject.m */; };
@@ -339,6 +343,15 @@
 		5803F0D61C196F520071FDDA /* RVRectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVRectViewController.h; sourceTree = "<group>"; };
 		5803F0D71C196F520071FDDA /* RVRectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVRectViewController.m; sourceTree = "<group>"; };
 		5803F0D81C196F520071FDDA /* RVRectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVRectViewController.xib; sourceTree = "<group>"; };
+		581219262251A9710062B616 /* RXClassExtensionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXClassExtensionManager.h; sourceTree = "<group>"; };
+		581219272251A9710062B616 /* RXClassExtensionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassExtensionManager.m; sourceTree = "<group>"; };
+		5812192C2251AA350062B616 /* RXClassExtObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXClassExtObject.h; sourceTree = "<group>"; };
+		5812192D2251AA350062B616 /* RXClassExtObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassExtObject.m; sourceTree = "<group>"; };
+		5812192F2251AA720062B616 /* RXClassExtObject+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RXClassExtObject+Private.h"; sourceTree = "<group>"; };
+		581219312251AD9B0062B616 /* RXClassMethodSelfBlockManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXClassMethodSelfBlockManager.h; sourceTree = "<group>"; };
+		581219322251AD9B0062B616 /* RXClassMethodSelfBlockManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassMethodSelfBlockManager.m; sourceTree = "<group>"; };
+		581219342251ADAB0062B616 /* RXCMSBObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCMSBObject.h; sourceTree = "<group>"; };
+		581219352251ADAB0062B616 /* RXCMSBObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCMSBObject.m; sourceTree = "<group>"; };
 		5821DB1A223CED5E002AA122 /* RXOptionalRequiredProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXOptionalRequiredProtocol.h; sourceTree = "<group>"; };
 		5821DB1B223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXOptionalRequiredProtocolObject.h; sourceTree = "<group>"; };
 		5821DB1C223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXOptionalRequiredProtocolObject.m; sourceTree = "<group>"; };
@@ -961,6 +974,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		581219252251A94F0062B616 /* RXClassExtension */ = {
+			isa = PBXGroup;
+			children = (
+				581219262251A9710062B616 /* RXClassExtensionManager.h */,
+				581219272251A9710062B616 /* RXClassExtensionManager.m */,
+				5812192C2251AA350062B616 /* RXClassExtObject.h */,
+				5812192D2251AA350062B616 /* RXClassExtObject.m */,
+				5812192F2251AA720062B616 /* RXClassExtObject+Private.h */,
+			);
+			path = RXClassExtension;
+			sourceTree = "<group>";
+		};
+		581219302251AD8C0062B616 /* RXClassMethodSelfBlock */ = {
+			isa = PBXGroup;
+			children = (
+				581219312251AD9B0062B616 /* RXClassMethodSelfBlockManager.h */,
+				581219322251AD9B0062B616 /* RXClassMethodSelfBlockManager.m */,
+				581219342251ADAB0062B616 /* RXCMSBObject.h */,
+				581219352251ADAB0062B616 /* RXCMSBObject.m */,
+			);
+			path = RXClassMethodSelfBlock;
+			sourceTree = "<group>";
+		};
 		5821DB19223CED39002AA122 /* RXProtocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -1131,6 +1167,8 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				581219302251AD8C0062B616 /* RXClassMethodSelfBlock */,
+				581219252251A94F0062B616 /* RXClassExtension */,
 				58B4629B224E515B00C85EFD /* RXTimeoutInterval */,
 				588805DA224C66EE00A76039 /* RXStackOverflow */,
 				588805A422460F8200A76039 /* RXKSCrash */,
@@ -2767,6 +2805,7 @@
 				E818A09921F05C480053ED3E /* RXPrintUtil.m in Sources */,
 				58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */,
 				E86050D420A079050016F6C9 /* RXQueueSpecialViewController.m in Sources */,
+				581219282251A9710062B616 /* RXClassExtensionManager.m in Sources */,
 				C9D397991CF53BF200D8569C /* RXRunLoop.m in Sources */,
 				E86050D320A079050016F6C9 /* RXMRSWViewController.m in Sources */,
 				5821DB33223FA3DC002AA122 /* RXPropertyKeywordObject+AssociatedObject.m in Sources */,
@@ -2834,6 +2873,7 @@
 				E870203720DA77E700752211 /* RXUIListSheelViewController.m in Sources */,
 				E8F8D7AC2187E5B4007AB027 /* RXMethodListDemoViewController.m in Sources */,
 				C985F6181D5030EC004D654D /* RVStockViewController.m in Sources */,
+				581219362251ADAB0062B616 /* RXCMSBObject.m in Sources */,
 				E818F0F720B9046E00F94127 /* RXMVVMViewModel.m in Sources */,
 				E872497021CFAD8500EA6A3D /* RXAFURLSessionManagerPrivateDefine.m in Sources */,
 				E872495621C9F39A00EA6A3D /* RXRuntime1Object.m in Sources */,
@@ -2855,6 +2895,7 @@
 				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
 				588805AA2246102C00A76039 /* RXKSSizeofTestObject.m in Sources */,
+				581219332251AD9B0062B616 /* RXClassMethodSelfBlockManager.m in Sources */,
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
 				E87C043521D4E86D00B90D74 /* RXInitializeEmptyObject.m in Sources */,
 				E872495D21CCEA2000EA6A3D /* RXReadonlyProperty2Object.m in Sources */,
@@ -2928,6 +2969,7 @@
 				E8433D6720E39A34004A7FBC /* RXMVVMLoginViewController.m in Sources */,
 				E86050E320A079E30016F6C9 /* RVRunLoop2ViewController.m in Sources */,
 				E818A08321ECAFEF0053ED3E /* RXBlockTmpObject.m in Sources */,
+				5812192E2251AA350062B616 /* RXClassExtObject.m in Sources */,
 				E818A0AC21F3009D0053ED3E /* RXARCNSConsumedObject.m in Sources */,
 				E87C048421E5DE0500B90D74 /* RXLockTestObject.m in Sources */,
 			);
