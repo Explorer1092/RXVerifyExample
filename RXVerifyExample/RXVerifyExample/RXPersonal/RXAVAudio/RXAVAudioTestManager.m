@@ -1,35 +1,38 @@
 //
-//  RXAVAudioTestManagerObject.m
+//  RXAVAudioTestManager.m
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/3/18.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXAVAudioTestManagerObject.h"
+#import "RXAVAudioTestManager.h"
 #import "RBDMuteSwitchObject.h"
 #import "AudioToolbox/AudioToolbox.h"
-
+#import "RXVolumnTestManager.h"
 
 // https://www.cnblogs.com/knrainy/articles/3435739.html
-static RXAVAudioTestManagerObject *_sharedInstance;
-@interface RXAVAudioTestManagerObject()
+@interface RXAVAudioTestManager()
 @property (nonatomic, strong) RBDMuteSwitchObject *muteSwitchObject;
 
 
 @end
-@implementation RXAVAudioTestManagerObject
+@implementation RXAVAudioTestManager
 + (instancetype)sharedInstance
 {
-    if (!_sharedInstance) {
-        _sharedInstance = [[[self class] alloc] init];
-    }
-    return _sharedInstance;
+    static RXAVAudioTestManager *sharedInstance = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
 }
 - (void)test {
 //    [self test_mute];
     
-    [self test_isSilent];
+//    [self test_isSilent];
+    
+    [[RXVolumnTestManager sharedInstance] test];
 }
 
 - (void)test_mute {

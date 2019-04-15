@@ -36,7 +36,7 @@
 #import "RXARCTestObject.h"
 #import "RXSelfSuperClassB.h"
 #import "RXPropertyTestObject.h"
-#import "RXAVAudioTestManagerObject.h"
+#import "RXAVAudioTestManager.h"
 #import "RXEncryptDecryptTestManager.h"
 #import "RXKSCrashTestManager.h"
 #import "RXStackOverflowManager.h"
@@ -84,25 +84,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    http://pre-internal.diversion.vipkid.com.cn/api/diversion/service/test/changeDBtoVK/class/23567213019514?operatorId=20190306160033984&vendor=1
-    
-//    NSString *baseUrl = @"http://pre-internal.diversion.vipkid.com.cn/api/diversion/service/test/changeDBtoVK/class";
-//    NSString *url = @"23556475010956";
-//    NSDictionary *params = @{@"operatorId": @"20190306160033984",
-//                             @"vendor": @(1)
-//                             };
-//    [RXSimpleHttpManager postActionWithBaseUrl:baseUrl url:url parameters:params completion:^(RXBaseResponse *response) {
-//        NSLog(@"111");
-//    }];
+
     
 //    NSString *kk = @"iPad12.9";
 //    BOOL aaa =  [self test_value:kk];
-//    
+//
 //    NSLog(@"aa1:%zd", aaa);
-//    
+//
 //    kk = @"iPad11.12";
 //    aaa =  [self test_value:kk];
-//    
+//
 //    NSLog(@"aa2:%zd", aaa);
     
 //    CGFloat width = [UIScreen mainScreen].bounds.size.width;

@@ -20,7 +20,7 @@
 		5821DB1D223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB1C223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m */; };
 		5821DB21223F381B002AA122 /* RXPropertyKeywordObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB20223F381B002AA122 /* RXPropertyKeywordObject.m */; };
 		5821DB24223F3827002AA122 /* RXPropertyTestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB23223F3827002AA122 /* RXPropertyTestObject.m */; };
-		5821DB28223F8E0E002AA122 /* RXAVAudioTestManagerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB27223F8E0E002AA122 /* RXAVAudioTestManagerObject.m */; };
+		5821DB28223F8E0E002AA122 /* RXAVAudioTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB27223F8E0E002AA122 /* RXAVAudioTestManager.m */; };
 		5821DB2B223F8E35002AA122 /* RBDMuteSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB2A223F8E35002AA122 /* RBDMuteSwitch.m */; };
 		5821DB2E223F8E40002AA122 /* RBDMuteSwitchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB2D223F8E40002AA122 /* RBDMuteSwitchObject.m */; };
 		5821DB30223F8F0F002AA122 /* detection.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 5821DB2F223F8F0F002AA122 /* detection.aiff */; };
@@ -41,6 +41,8 @@
 		588805E0224CA08800A76039 /* RXUrlDealObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805DF224CA08800A76039 /* RXUrlDealObject.m */; };
 		588805FC224D03CF00A76039 /* UIView+VK.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805FA224D03CE00A76039 /* UIView+VK.m */; };
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
+		58A1841C226461D90066C2D9 /* RXVolumnTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A1841B226461D90066C2D9 /* RXVolumnTestManager.m */; };
+		58A1841E2264624E0066C2D9 /* ok.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 58A1841D2264624E0066C2D9 /* ok.mp3 */; };
 		58AAC3141C38CDF20023D2EA /* RVButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAC3121C38CDF20023D2EA /* RVButtonViewController.m */; };
 		58AAC3151C38CDF20023D2EA /* RVButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58AAC3131C38CDF20023D2EA /* RVButtonViewController.xib */; };
 		58B4629E224E517000C85EFD /* RXTimeoutIntervalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B4629D224E517000C85EFD /* RXTimeoutIntervalManager.m */; };
@@ -359,8 +361,8 @@
 		5821DB20223F381B002AA122 /* RXPropertyKeywordObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPropertyKeywordObject.m; sourceTree = "<group>"; };
 		5821DB22223F3827002AA122 /* RXPropertyTestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPropertyTestObject.h; sourceTree = "<group>"; };
 		5821DB23223F3827002AA122 /* RXPropertyTestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPropertyTestObject.m; sourceTree = "<group>"; };
-		5821DB26223F8E0E002AA122 /* RXAVAudioTestManagerObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAVAudioTestManagerObject.h; sourceTree = "<group>"; };
-		5821DB27223F8E0E002AA122 /* RXAVAudioTestManagerObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAVAudioTestManagerObject.m; sourceTree = "<group>"; };
+		5821DB26223F8E0E002AA122 /* RXAVAudioTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAVAudioTestManager.h; sourceTree = "<group>"; };
+		5821DB27223F8E0E002AA122 /* RXAVAudioTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAVAudioTestManager.m; sourceTree = "<group>"; };
 		5821DB29223F8E35002AA122 /* RBDMuteSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBDMuteSwitch.h; sourceTree = "<group>"; };
 		5821DB2A223F8E35002AA122 /* RBDMuteSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBDMuteSwitch.m; sourceTree = "<group>"; };
 		5821DB2C223F8E40002AA122 /* RBDMuteSwitchObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBDMuteSwitchObject.h; sourceTree = "<group>"; };
@@ -397,6 +399,9 @@
 		588805FA224D03CE00A76039 /* UIView+VK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VK.m"; sourceTree = "<group>"; };
 		588805FB224D03CE00A76039 /* UIView+VK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VK.h"; sourceTree = "<group>"; };
 		5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		58A1841A226461D90066C2D9 /* RXVolumnTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVolumnTestManager.h; sourceTree = "<group>"; };
+		58A1841B226461D90066C2D9 /* RXVolumnTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVolumnTestManager.m; sourceTree = "<group>"; };
+		58A1841D2264624E0066C2D9 /* ok.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ok.mp3; sourceTree = "<group>"; };
 		58AAC3111C38CDF20023D2EA /* RVButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVButtonViewController.h; sourceTree = "<group>"; };
 		58AAC3121C38CDF20023D2EA /* RVButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVButtonViewController.m; sourceTree = "<group>"; };
 		58AAC3131C38CDF20023D2EA /* RVButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVButtonViewController.xib; sourceTree = "<group>"; };
@@ -1023,13 +1028,16 @@
 		5821DB25223F8DF9002AA122 /* RXAVAudio */ = {
 			isa = PBXGroup;
 			children = (
+				58A1841D2264624E0066C2D9 /* ok.mp3 */,
 				5821DB2F223F8F0F002AA122 /* detection.aiff */,
-				5821DB26223F8E0E002AA122 /* RXAVAudioTestManagerObject.h */,
-				5821DB27223F8E0E002AA122 /* RXAVAudioTestManagerObject.m */,
+				5821DB26223F8E0E002AA122 /* RXAVAudioTestManager.h */,
+				5821DB27223F8E0E002AA122 /* RXAVAudioTestManager.m */,
 				5821DB29223F8E35002AA122 /* RBDMuteSwitch.h */,
 				5821DB2A223F8E35002AA122 /* RBDMuteSwitch.m */,
 				5821DB2C223F8E40002AA122 /* RBDMuteSwitchObject.h */,
 				5821DB2D223F8E40002AA122 /* RBDMuteSwitchObject.m */,
+				58A1841A226461D90066C2D9 /* RXVolumnTestManager.h */,
+				58A1841B226461D90066C2D9 /* RXVolumnTestManager.m */,
 			);
 			path = RXAVAudio;
 			sourceTree = "<group>";
@@ -2647,6 +2655,7 @@
 				E86050E020A079E30016F6C9 /* RVRunLoop2ViewController.xib in Resources */,
 				58CA8D5C1C1ABEFB00A507BE /* RVTransformViewController.xib in Resources */,
 				58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */,
+				58A1841E2264624E0066C2D9 /* ok.mp3 in Resources */,
 				E86050E820A07A1B0016F6C9 /* RVRunTimeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2762,6 +2771,7 @@
 				E818A0C421F578330053ED3E /* RXARCBridgeCastObject.m in Sources */,
 				E826367520A96BDC0081F4A8 /* RXMVPGreetingPresenter.m in Sources */,
 				E818A08621ECBCDA0053ED3E /* RXBlockBlockObject.m in Sources */,
+				58A1841C226461D90066C2D9 /* RXVolumnTestManager.m in Sources */,
 				C92923421D339F02009D6875 /* DMLine.m in Sources */,
 				E870203420DA61AA00752211 /* RXUIListPerformanceTableViewImpl.m in Sources */,
 				C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */,
@@ -2939,7 +2949,7 @@
 				E818A09321EF0F640053ED3E /* RXBlockChangeOverTimeObject.m in Sources */,
 				E872492821BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m in Sources */,
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
-				5821DB28223F8E0E002AA122 /* RXAVAudioTestManagerObject.m in Sources */,
+				5821DB28223F8E0E002AA122 /* RXAVAudioTestManager.m in Sources */,
 				E8433D9020FC9C81004A7FBC /* RXOCKWKindofViewController.m in Sources */,
 				E87C047321E3391800B90D74 /* RXClassMetaClassTestObject.m in Sources */,
 				E8B65874222E151E007C0E42 /* RXErrorSDK.m in Sources */,
