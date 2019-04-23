@@ -52,6 +52,12 @@
 //    NSArray *ary = [str componentsSeparatedByString:@","];
 //    NSLog(@"%@", ary);
     // third part 第三方初始化
+    
+    NSString *str = @"a&bbbbbbbbbbbbbb&cc&dd&ddd&";
+    NSRange rang = [str rangeOfString:@"&"];
+    NSLog(@"range");
+    
+    
     [self config];
     [RXServiceManager application:application willFinishLaunchingWithOptions:launchOptions];
     return YES;
