@@ -48,6 +48,7 @@
 		58AAC3141C38CDF20023D2EA /* RVButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58AAC3121C38CDF20023D2EA /* RVButtonViewController.m */; };
 		58AAC3151C38CDF20023D2EA /* RVButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58AAC3131C38CDF20023D2EA /* RVButtonViewController.xib */; };
 		58B4629E224E517000C85EFD /* RXTimeoutIntervalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B4629D224E517000C85EFD /* RXTimeoutIntervalManager.m */; };
+		58B7DE24227FCF5500068B70 /* RXDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B7DE23227FCF5500068B70 /* RXDeviceUtil.m */; };
 		58BF5F891C16BAC500E8AEF3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58BF5F871C16BAC500E8AEF3 /* MainViewController.m */; };
 		58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */; };
 		58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CA8D591C1ABEFB00A507BE /* RVTransformViewController.m */; };
@@ -60,6 +61,7 @@
 		58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660371C2571A700912786 /* RXRefreshView.m */; };
 		58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660471C25A54A00912786 /* RVPopupBoxViewController.m */; };
 		58D6604A1C25A54A00912786 /* RVPopupBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D660481C25A54A00912786 /* RVPopupBoxViewController.xib */; };
+		58DAF76222733A9E0008B543 /* RXYellowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAF76122733A9E0008B543 /* RXYellowView.m */; };
 		58FF7D761C4623A200F06976 /* libPaymentControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D741C4623A200F06976 /* libPaymentControl.a */; };
 		58FF7D781C4623DC00F06976 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D771C4623DC00F06976 /* CFNetwork.framework */; };
 		58FF7D7A1C4623E900F06976 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D791C4623E900F06976 /* SystemConfiguration.framework */; };
@@ -412,6 +414,8 @@
 		58AAC3131C38CDF20023D2EA /* RVButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVButtonViewController.xib; sourceTree = "<group>"; };
 		58B4629C224E517000C85EFD /* RXTimeoutIntervalManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTimeoutIntervalManager.h; sourceTree = "<group>"; };
 		58B4629D224E517000C85EFD /* RXTimeoutIntervalManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTimeoutIntervalManager.m; sourceTree = "<group>"; };
+		58B7DE22227FCF5500068B70 /* RXDeviceUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXDeviceUtil.h; sourceTree = "<group>"; };
+		58B7DE23227FCF5500068B70 /* RXDeviceUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXDeviceUtil.m; sourceTree = "<group>"; };
 		58BF5F861C16BAC500E8AEF3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		58BF5F871C16BAC500E8AEF3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -432,6 +436,8 @@
 		58D660461C25A54A00912786 /* RVPopupBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVPopupBoxViewController.h; sourceTree = "<group>"; };
 		58D660471C25A54A00912786 /* RVPopupBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVPopupBoxViewController.m; sourceTree = "<group>"; };
 		58D660481C25A54A00912786 /* RVPopupBoxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVPopupBoxViewController.xib; sourceTree = "<group>"; };
+		58DAF76022733A9E0008B543 /* RXYellowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXYellowView.h; sourceTree = "<group>"; };
+		58DAF76122733A9E0008B543 /* RXYellowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXYellowView.m; sourceTree = "<group>"; };
 		58FF7D741C4623A200F06976 /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
 		58FF7D751C4623A200F06976 /* UPPaymentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPaymentControl.h; sourceTree = "<group>"; };
 		58FF7D771C4623DC00F06976 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -1105,6 +1111,8 @@
 				58BF5F861C16BAC500E8AEF3 /* MainViewController.h */,
 				58BF5F871C16BAC500E8AEF3 /* MainViewController.m */,
 				58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */,
+				58DAF76022733A9E0008B543 /* RXYellowView.h */,
+				58DAF76122733A9E0008B543 /* RXYellowView.m */,
 			);
 			path = RXVerifyExample;
 			sourceTree = "<group>";
@@ -1929,6 +1937,8 @@
 				E818A0E32213BF970053ED3E /* RXExternUtil.m */,
 				E818A0F8221A468B0053ED3E /* RXRuntimeFishHookUtil.h */,
 				E818A0F9221A468B0053ED3E /* RXRuntimeFishHookUtil.m */,
+				58B7DE22227FCF5500068B70 /* RXDeviceUtil.h */,
+				58B7DE23227FCF5500068B70 /* RXDeviceUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -2594,7 +2604,8 @@
 				TargetAttributes = {
 					5850B2661BF47F2A00EC9144 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = J8QG2UR748;
+						DevelopmentTeam = TM3LD9DLW8;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -2603,6 +2614,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -2831,6 +2843,7 @@
 				C9C2B33E1E0BD92D0087C718 /* RVQQViewController.m in Sources */,
 				58FF7D851C4624E000F06976 /* RVUPPayViewController.m in Sources */,
 				E8F8D7D5218C3A16007AB027 /* RXAspects.m in Sources */,
+				58DAF76222733A9E0008B543 /* RXYellowView.m in Sources */,
 				E872493321C3E09F00EA6A3D /* RXAFURLResponseSerialization.m in Sources */,
 				E818A0EB2214192E0053ED3E /* RXJLRouterViewController.m in Sources */,
 				E86050E720A07A1B0016F6C9 /* RVRunTimeViewController.m in Sources */,
@@ -2961,6 +2974,7 @@
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
 				5821DB28223F8E0E002AA122 /* RXAVAudioTestManager.m in Sources */,
 				E8433D9020FC9C81004A7FBC /* RXOCKWKindofViewController.m in Sources */,
+				58B7DE24227FCF5500068B70 /* RXDeviceUtil.m in Sources */,
 				E87C047321E3391800B90D74 /* RXClassMetaClassTestObject.m in Sources */,
 				E8B65874222E151E007C0E42 /* RXErrorSDK.m in Sources */,
 				E818A0E72213C3470053ED3E /* RXARCAutoreleasingObject.m in Sources */,
@@ -3102,7 +3116,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = J8QG2UR748;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TM3LD9DLW8;
 				GCC_PREFIX_HEADER = "RXVerifyExample/RXVerifyExample-Prefix.pch";
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -3113,7 +3128,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzj.RXVerifyExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE_SPECIFIER = comAllProvisioning;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -3123,7 +3139,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = J8QG2UR748;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "RXVerifyExample/RXVerifyExample-Prefix.pch";
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -3134,7 +3151,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzj.RXVerifyExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

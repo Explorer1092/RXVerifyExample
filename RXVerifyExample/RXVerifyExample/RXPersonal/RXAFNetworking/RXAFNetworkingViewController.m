@@ -42,6 +42,7 @@
 #import "RXStackOverflowManager.h"
 #import "RXTimeoutIntervalManager.h"
 #import "UIView+VK.h"
+#import "RXDeviceUtil.h"
 
 #import "RXClassExtensionManager.h"
 // 子线程中的通知问题
@@ -322,7 +323,11 @@
     
 //    [[RXTimeoutIntervalManager sharedInstance] test];
     
-    [[RXClassExtensionManager sharedInstance] test];
+//    [[RXClassExtensionManager sharedInstance] test];
+    
+    NSString *tmp = [RXDeviceUtil deviceModel];
+    NSLog(@"tmp:%@", tmp);
+    
 }
 
 - (void)didReceiveMemoryWarning {

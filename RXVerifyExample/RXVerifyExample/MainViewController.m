@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-
+#import "RXYellowView.h"
 
 @interface MainViewController ()
 
@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) NSArray *functionItems;
 
-
+@property (nonatomic, strong) UIView *yellowView;
 
 
 @end
@@ -31,7 +31,9 @@
     
 //    self.view.backgroundColor = [UIColor redColor];
     
-    
+    self.yellowView = [[RXYellowView alloc] initWithFrame:CGRectMake(0, 0, RX_Window_Width, RX_Window_Height)];
+    self.yellowView.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.3];
+    [[UIApplication sharedApplication].keyWindow addSubview:self.yellowView];
     
     self.functionItems = @[@"RVMenu", @"RVRefresh", @"RVRect",
                            @"RVScroll", @"RVTrans", @"RVWY",
