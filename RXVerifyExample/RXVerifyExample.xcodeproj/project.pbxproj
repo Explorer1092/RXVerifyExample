@@ -27,6 +27,12 @@
 		5821DB33223FA3DC002AA122 /* RXPropertyKeywordObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB32223FA3DC002AA122 /* RXPropertyKeywordObject+AssociatedObject.m */; };
 		5821DB382241D88A002AA122 /* RXRSATheoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB372241D88A002AA122 /* RXRSATheoryObject.m */; };
 		5821DB3B2241D8A4002AA122 /* RXEncryptDecryptTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB3A2241D8A4002AA122 /* RXEncryptDecryptTestManager.m */; };
+		582F36DB229683A900AA84A8 /* VKProtectEyeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F36D7229683A800AA84A8 /* VKProtectEyeView.m */; };
+		582F36DC229683A900AA84A8 /* VKProtectEyeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F36D8229683A800AA84A8 /* VKProtectEyeManager.m */; };
+		582F36DF2296843B00AA84A8 /* RXVKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F36DE2296843B00AA84A8 /* RXVKViewController.m */; };
+		582F36E22296CC9D00AA84A8 /* VKProtectEyeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F36E12296CC9D00AA84A8 /* VKProtectEyeWindow.m */; };
+		582F36E62296D3BF00AA84A8 /* VKProtectEyeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F36E42296D3BE00AA84A8 /* VKProtectEyeViewController.m */; };
+		582F36E72296D3BF00AA84A8 /* VKProtectEyeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582F36E52296D3BE00AA84A8 /* VKProtectEyeViewController.xib */; };
 		5850B26C1BF47F2A00EC9144 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.mm */; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
@@ -62,6 +68,7 @@
 		58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660471C25A54A00912786 /* RVPopupBoxViewController.m */; };
 		58D6604A1C25A54A00912786 /* RVPopupBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D660481C25A54A00912786 /* RVPopupBoxViewController.xib */; };
 		58DAF76222733A9E0008B543 /* RXYellowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAF76122733A9E0008B543 /* RXYellowView.m */; };
+		58ED56062297D63B00CB91B6 /* UIWindow+VKProtectEye.m in Sources */ = {isa = PBXBuildFile; fileRef = 58ED56052297D63B00CB91B6 /* UIWindow+VKProtectEye.m */; };
 		58FF7D761C4623A200F06976 /* libPaymentControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D741C4623A200F06976 /* libPaymentControl.a */; };
 		58FF7D781C4623DC00F06976 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D771C4623DC00F06976 /* CFNetwork.framework */; };
 		58FF7D7A1C4623E900F06976 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D791C4623E900F06976 /* SystemConfiguration.framework */; };
@@ -378,6 +385,17 @@
 		5821DB372241D88A002AA122 /* RXRSATheoryObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXRSATheoryObject.m; sourceTree = "<group>"; };
 		5821DB392241D8A4002AA122 /* RXEncryptDecryptTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXEncryptDecryptTestManager.h; sourceTree = "<group>"; };
 		5821DB3A2241D8A4002AA122 /* RXEncryptDecryptTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXEncryptDecryptTestManager.m; sourceTree = "<group>"; };
+		582F36D7229683A800AA84A8 /* VKProtectEyeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKProtectEyeView.m; sourceTree = "<group>"; };
+		582F36D8229683A800AA84A8 /* VKProtectEyeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKProtectEyeManager.m; sourceTree = "<group>"; };
+		582F36D9229683A800AA84A8 /* VKProtectEyeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKProtectEyeManager.h; sourceTree = "<group>"; };
+		582F36DA229683A800AA84A8 /* VKProtectEyeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKProtectEyeView.h; sourceTree = "<group>"; };
+		582F36DD2296843B00AA84A8 /* RXVKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVKViewController.h; sourceTree = "<group>"; };
+		582F36DE2296843B00AA84A8 /* RXVKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVKViewController.m; sourceTree = "<group>"; };
+		582F36E02296CC9D00AA84A8 /* VKProtectEyeWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKProtectEyeWindow.h; sourceTree = "<group>"; };
+		582F36E12296CC9D00AA84A8 /* VKProtectEyeWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKProtectEyeWindow.m; sourceTree = "<group>"; };
+		582F36E32296D3BE00AA84A8 /* VKProtectEyeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKProtectEyeViewController.h; sourceTree = "<group>"; };
+		582F36E42296D3BE00AA84A8 /* VKProtectEyeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKProtectEyeViewController.m; sourceTree = "<group>"; };
+		582F36E52296D3BE00AA84A8 /* VKProtectEyeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VKProtectEyeViewController.xib; sourceTree = "<group>"; };
 		5850B2671BF47F2A00EC9144 /* RXVerifyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXVerifyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5850B26B1BF47F2A00EC9144 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		5850B26D1BF47F2A00EC9144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -438,6 +456,8 @@
 		58D660481C25A54A00912786 /* RVPopupBoxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVPopupBoxViewController.xib; sourceTree = "<group>"; };
 		58DAF76022733A9E0008B543 /* RXYellowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXYellowView.h; sourceTree = "<group>"; };
 		58DAF76122733A9E0008B543 /* RXYellowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXYellowView.m; sourceTree = "<group>"; };
+		58ED56042297D63B00CB91B6 /* UIWindow+VKProtectEye.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+VKProtectEye.h"; sourceTree = "<group>"; };
+		58ED56052297D63B00CB91B6 /* UIWindow+VKProtectEye.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+VKProtectEye.m"; sourceTree = "<group>"; };
 		58FF7D741C4623A200F06976 /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
 		58FF7D751C4623A200F06976 /* UPPaymentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPaymentControl.h; sourceTree = "<group>"; };
 		58FF7D771C4623DC00F06976 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -1075,6 +1095,26 @@
 			path = RSA;
 			sourceTree = "<group>";
 		};
+		582F36D6229683A800AA84A8 /* ProtectEye */ = {
+			isa = PBXGroup;
+			children = (
+				582F36D9229683A800AA84A8 /* VKProtectEyeManager.h */,
+				582F36D8229683A800AA84A8 /* VKProtectEyeManager.m */,
+				582F36DA229683A800AA84A8 /* VKProtectEyeView.h */,
+				582F36D7229683A800AA84A8 /* VKProtectEyeView.m */,
+				582F36DD2296843B00AA84A8 /* RXVKViewController.h */,
+				582F36DE2296843B00AA84A8 /* RXVKViewController.m */,
+				582F36E02296CC9D00AA84A8 /* VKProtectEyeWindow.h */,
+				582F36E12296CC9D00AA84A8 /* VKProtectEyeWindow.m */,
+				582F36E32296D3BE00AA84A8 /* VKProtectEyeViewController.h */,
+				582F36E42296D3BE00AA84A8 /* VKProtectEyeViewController.m */,
+				582F36E52296D3BE00AA84A8 /* VKProtectEyeViewController.xib */,
+				58ED56042297D63B00CB91B6 /* UIWindow+VKProtectEye.h */,
+				58ED56052297D63B00CB91B6 /* UIWindow+VKProtectEye.m */,
+			);
+			path = ProtectEye;
+			sourceTree = "<group>";
+		};
 		5850B25E1BF47F2A00EC9144 = {
 			isa = PBXGroup;
 			children = (
@@ -1139,6 +1179,7 @@
 		5886CDAA1C18235B00013C76 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				582F36D6229683A800AA84A8 /* ProtectEye */,
 				E818A0DE2213B6F10053ED3E /* View */,
 				E87C043C21D7123D00B90D74 /* MethodSwizzle */,
 				E87C042921D4E79900B90D74 /* LoadInitialize */,
@@ -2648,6 +2689,7 @@
 				C94EB78D1CC4E66600AFDADC /* RVAFNetworkingViewController.xib in Resources */,
 				E86050E120A079E30016F6C9 /* RVRunLoopViewController.xib in Resources */,
 				5886CDAF1C182D7500013C76 /* RVMenuViewController.xib in Resources */,
+				582F36E72296D3BF00AA84A8 /* VKProtectEyeViewController.xib in Resources */,
 				C9A7110E1D7BA0880002E703 /* RVCopyViewController.xib in Resources */,
 				C928B26F1FB93E530038ECE6 /* RVLLDBViewController.xib in Resources */,
 				C929233B1D339BCF009D6875 /* RVDUMAViewController.xib in Resources */,
@@ -2732,6 +2774,7 @@
 				5803F0CF1C190FFC0071FDDA /* RVRefreshViewController.m in Sources */,
 				E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */,
 				E818A0CD21F5CE720053ED3E /* RXARCOwnershipQualifiedObject.m in Sources */,
+				58ED56062297D63B00CB91B6 /* UIWindow+VKProtectEye.m in Sources */,
 				C929233F1D339C65009D6875 /* RVDUMAView.m in Sources */,
 				E8B6584A2227CBDF007C0E42 /* RXSelfSuperClassA.m in Sources */,
 				E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */,
@@ -2836,6 +2879,7 @@
 				E818A09921F05C480053ED3E /* RXPrintUtil.m in Sources */,
 				58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */,
 				E86050D420A079050016F6C9 /* RXQueueSpecialViewController.m in Sources */,
+				582F36DF2296843B00AA84A8 /* RXVKViewController.m in Sources */,
 				581219282251A9710062B616 /* RXClassExtensionManager.m in Sources */,
 				C9D397991CF53BF200D8569C /* RXRunLoop.m in Sources */,
 				E86050D320A079050016F6C9 /* RXMRSWViewController.m in Sources */,
@@ -2875,6 +2919,7 @@
 				E872492121BFDC3900EA6A3D /* RXAFStreamingMultipartFormData.m in Sources */,
 				E818A0E42213BF970053ED3E /* RXExternUtil.m in Sources */,
 				E85159CD215890CD006E23D5 /* RXOPMQViewController.m in Sources */,
+				582F36E22296CC9D00AA84A8 /* VKProtectEyeWindow.m in Sources */,
 				E87C048A21E5E21D00B90D74 /* RXParentLockObject.m in Sources */,
 				E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */,
 				E872494521C5294900EA6A3D /* RXAFImageResponseSerializer.m in Sources */,
@@ -2917,6 +2962,7 @@
 				E872494221C5293300EA6A3D /* RXAFPropertyListResponseSerializer.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */,
+				582F36DC229683A900AA84A8 /* VKProtectEyeManager.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
 				E818A07421E894520053ED3E /* RXBlockArrayObject.m in Sources */,
 				E818A08D21EDE6DC0053ED3E /* RXARCCallObject.m in Sources */,
@@ -2940,6 +2986,7 @@
 				E87C047021E3390A00B90D74 /* RXClassMetaClassObject.m in Sources */,
 				E8433D9320FD90A5004A7FBC /* RXOCKeywordMethodNameViewController.m in Sources */,
 				E818A0CA21F5BBEF0053ED3E /* RXARCInstanceVariableObject.m in Sources */,
+				582F36DB229683A900AA84A8 /* VKProtectEyeView.m in Sources */,
 				E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */,
 				E8B6586D222E07FD007C0E42 /* RXCSDK.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
@@ -2970,6 +3017,7 @@
 				C98FD0F21D210F960024854D /* RVLayerViewController.m in Sources */,
 				5821DB2B223F8E35002AA122 /* RBDMuteSwitch.m in Sources */,
 				E818A09321EF0F640053ED3E /* RXBlockChangeOverTimeObject.m in Sources */,
+				582F36E62296D3BF00AA84A8 /* VKProtectEyeViewController.m in Sources */,
 				E872492821BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m in Sources */,
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
 				5821DB28223F8E0E002AA122 /* RXAVAudioTestManager.m in Sources */,

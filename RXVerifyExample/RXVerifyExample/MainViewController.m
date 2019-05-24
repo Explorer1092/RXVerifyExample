@@ -31,9 +31,9 @@
     
 //    self.view.backgroundColor = [UIColor redColor];
     
-    self.yellowView = [[RXYellowView alloc] initWithFrame:CGRectMake(0, 0, RX_Window_Width, RX_Window_Height)];
-    self.yellowView.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.3];
-    [[UIApplication sharedApplication].keyWindow addSubview:self.yellowView];
+//    self.yellowView = [[RXYellowView alloc] initWithFrame:CGRectMake(0, 0, RX_Window_Width, RX_Window_Height)];
+//    self.yellowView.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.3];
+//    [[UIApplication sharedApplication].keyWindow addSubview:self.yellowView];
     
     self.functionItems = @[@"RVMenu", @"RVRefresh", @"RVRect",
                            @"RVScroll", @"RVTrans", @"RVWY",
@@ -58,7 +58,8 @@
                            @"RXUncaughtExceptionHandler", @"RXOPMQ", @"RXMethodListDemo",
                            @"RXAspects", @"RXCLanguage", @"RXAFNetworking",
                            @"RXUtil", @"RXLayout", @"RXJLRouter",
-                           @"RXAnimation", @"RXShellHome", @"RXVolume"];
+                           @"RXAnimation", @"RXShellHome", @"RXVolume",
+                           @"RXVK"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -71,13 +72,13 @@
 //    object = @"RVWeb";
 //    object = @"RXSY";
     
-    object = @"RXAFNetworking";
+//    object = @"RXAFNetworking";
 //    object = @"RVGCD2";
 //    object = @"RXLayout";
 //    object = @"RXJLRouter";
 //    object = @"RXAnimation";
 //    object = @"RXShellHome";
-    object = @"RXVolume";
+//    object = @"RXVolume";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
