@@ -25,6 +25,8 @@ pod 'RXVerifyButton'
 
 pod 'RXTextView'
 
+pod 'HWWeakTimer'
+
 pod 'RXPaddingView'
 
 pod 'RXCategory'
