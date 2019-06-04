@@ -33,6 +33,8 @@
 		582F36E22296CC9D00AA84A8 /* VKProtectEyeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F36E12296CC9D00AA84A8 /* VKProtectEyeWindow.m */; };
 		582F36E62296D3BF00AA84A8 /* VKProtectEyeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F36E42296D3BE00AA84A8 /* VKProtectEyeViewController.m */; };
 		582F36E72296D3BF00AA84A8 /* VKProtectEyeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582F36E52296D3BE00AA84A8 /* VKProtectEyeViewController.xib */; };
+		583E667422A60E670080597C /* RXSelfRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E667322A60E670080597C /* RXSelfRequestManager.m */; };
+		583E667722A60EB00080597C /* RXSelfRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E667622A60EB00080597C /* RXSelfRequestObject.m */; };
 		5850B26C1BF47F2A00EC9144 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.mm */; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
@@ -396,6 +398,10 @@
 		582F36E32296D3BE00AA84A8 /* VKProtectEyeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKProtectEyeViewController.h; sourceTree = "<group>"; };
 		582F36E42296D3BE00AA84A8 /* VKProtectEyeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKProtectEyeViewController.m; sourceTree = "<group>"; };
 		582F36E52296D3BE00AA84A8 /* VKProtectEyeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VKProtectEyeViewController.xib; sourceTree = "<group>"; };
+		583E667222A60E670080597C /* RXSelfRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXSelfRequestManager.h; sourceTree = "<group>"; };
+		583E667322A60E670080597C /* RXSelfRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXSelfRequestManager.m; sourceTree = "<group>"; };
+		583E667522A60EB00080597C /* RXSelfRequestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXSelfRequestObject.h; sourceTree = "<group>"; };
+		583E667622A60EB00080597C /* RXSelfRequestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXSelfRequestObject.m; sourceTree = "<group>"; };
 		5850B2671BF47F2A00EC9144 /* RXVerifyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXVerifyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5850B26B1BF47F2A00EC9144 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		5850B26D1BF47F2A00EC9144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1115,6 +1121,17 @@
 			path = ProtectEye;
 			sourceTree = "<group>";
 		};
+		583E667122A60DF60080597C /* RXSelfRequest */ = {
+			isa = PBXGroup;
+			children = (
+				583E667222A60E670080597C /* RXSelfRequestManager.h */,
+				583E667322A60E670080597C /* RXSelfRequestManager.m */,
+				583E667522A60EB00080597C /* RXSelfRequestObject.h */,
+				583E667622A60EB00080597C /* RXSelfRequestObject.m */,
+			);
+			path = RXSelfRequest;
+			sourceTree = "<group>";
+		};
 		5850B25E1BF47F2A00EC9144 = {
 			isa = PBXGroup;
 			children = (
@@ -1232,6 +1249,7 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				583E667122A60DF60080597C /* RXSelfRequest */,
 				581219302251AD8C0062B616 /* RXClassMethodSelfBlock */,
 				581219252251A94F0062B616 /* RXClassExtension */,
 				58B4629B224E515B00C85EFD /* RXTimeoutInterval */,
@@ -2920,6 +2938,7 @@
 				E818A0E42213BF970053ED3E /* RXExternUtil.m in Sources */,
 				E85159CD215890CD006E23D5 /* RXOPMQViewController.m in Sources */,
 				582F36E22296CC9D00AA84A8 /* VKProtectEyeWindow.m in Sources */,
+				583E667422A60E670080597C /* RXSelfRequestManager.m in Sources */,
 				E87C048A21E5E21D00B90D74 /* RXParentLockObject.m in Sources */,
 				E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */,
 				E872494521C5294900EA6A3D /* RXAFImageResponseSerializer.m in Sources */,
@@ -3026,6 +3045,7 @@
 				E87C047321E3391800B90D74 /* RXClassMetaClassTestObject.m in Sources */,
 				E8B65874222E151E007C0E42 /* RXErrorSDK.m in Sources */,
 				E818A0E72213C3470053ED3E /* RXARCAutoreleasingObject.m in Sources */,
+				583E667722A60EB00080597C /* RXSelfRequestObject.m in Sources */,
 				E8B6585D222E0792007C0E42 /* RXBHomeViewController.m in Sources */,
 				E870203120DA617200752211 /* RXUIListPerformanceViewController.m in Sources */,
 				E87C046121DDE58600B90D74 /* RXObservedObject.m in Sources */,
