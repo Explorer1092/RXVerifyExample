@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RXSelfRequestObject : NSObject
 
+// hook __block_copy问题  https://www.jianshu.com/p/0a3d00485c7f
 @property (nonatomic, copy, nullable) void(^completionBlock)(RXSelfRequestObject *request);
 @property (nonatomic, weak) id<RXSelfRequestObjectDelegate> delegate;
 - (void)start;

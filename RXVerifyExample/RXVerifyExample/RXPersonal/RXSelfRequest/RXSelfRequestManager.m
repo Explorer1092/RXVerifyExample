@@ -19,7 +19,8 @@
     self.request.completionBlock = ^(RXSelfRequestObject * _Nonnull request) {
         NSLog(@"1111");
     };
-    [self.request start];
+//    [self.request start];
+    [_request start];
 }
 
 #pragma mark - RXSelfRequestObjectDelegate

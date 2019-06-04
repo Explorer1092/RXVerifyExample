@@ -59,7 +59,7 @@
                            @"RXAspects", @"RXCLanguage", @"RXAFNetworking",
                            @"RXUtil", @"RXLayout", @"RXJLRouter",
                            @"RXAnimation", @"RXShellHome", @"RXVolume",
-                           @"RXVK"];
+                           @"RXVK", @"RXTestManager"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];

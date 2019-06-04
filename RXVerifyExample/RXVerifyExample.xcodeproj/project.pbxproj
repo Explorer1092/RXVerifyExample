@@ -35,6 +35,7 @@
 		582F36E72296D3BF00AA84A8 /* VKProtectEyeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582F36E52296D3BE00AA84A8 /* VKProtectEyeViewController.xib */; };
 		583E667422A60E670080597C /* RXSelfRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E667322A60E670080597C /* RXSelfRequestManager.m */; };
 		583E667722A60EB00080597C /* RXSelfRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E667622A60EB00080597C /* RXSelfRequestObject.m */; };
+		583E667D22A611EA0080597C /* RXTestManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E667C22A611EA0080597C /* RXTestManagerViewController.m */; };
 		5850B26C1BF47F2A00EC9144 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.mm */; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
@@ -402,6 +403,8 @@
 		583E667322A60E670080597C /* RXSelfRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXSelfRequestManager.m; sourceTree = "<group>"; };
 		583E667522A60EB00080597C /* RXSelfRequestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXSelfRequestObject.h; sourceTree = "<group>"; };
 		583E667622A60EB00080597C /* RXSelfRequestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXSelfRequestObject.m; sourceTree = "<group>"; };
+		583E667B22A611EA0080597C /* RXTestManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTestManagerViewController.h; sourceTree = "<group>"; };
+		583E667C22A611EA0080597C /* RXTestManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTestManagerViewController.m; sourceTree = "<group>"; };
 		5850B2671BF47F2A00EC9144 /* RXVerifyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXVerifyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5850B26B1BF47F2A00EC9144 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		5850B26D1BF47F2A00EC9144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1132,6 +1135,31 @@
 			path = RXSelfRequest;
 			sourceTree = "<group>";
 		};
+		583E667822A611D20080597C /* Verify */ = {
+			isa = PBXGroup;
+			children = (
+				583E667922A611D20080597C /* UI */,
+				583E667A22A611D20080597C /* NUI */,
+			);
+			path = Verify;
+			sourceTree = "<group>";
+		};
+		583E667922A611D20080597C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		583E667A22A611D20080597C /* NUI */ = {
+			isa = PBXGroup;
+			children = (
+				583E667B22A611EA0080597C /* RXTestManagerViewController.h */,
+				583E667C22A611EA0080597C /* RXTestManagerViewController.m */,
+			);
+			path = NUI;
+			sourceTree = "<group>";
+		};
 		5850B25E1BF47F2A00EC9144 = {
 			isa = PBXGroup;
 			children = (
@@ -1153,6 +1181,7 @@
 		5850B2691BF47F2A00EC9144 /* RXVerifyExample */ = {
 			isa = PBXGroup;
 			children = (
+				583E667822A611D20080597C /* Verify */,
 				E8B6584E222CCE3A007C0E42 /* Structure */,
 				E872494C21C9EE9900EA6A3D /* Util */,
 				E85159B02148B09D006E23D5 /* Service */,
@@ -3071,6 +3100,7 @@
 				E8433D6720E39A34004A7FBC /* RXMVVMLoginViewController.m in Sources */,
 				E86050E320A079E30016F6C9 /* RVRunLoop2ViewController.m in Sources */,
 				E818A08321ECAFEF0053ED3E /* RXBlockTmpObject.m in Sources */,
+				583E667D22A611EA0080597C /* RXTestManagerViewController.m in Sources */,
 				5812192E2251AA350062B616 /* RXClassExtObject.m in Sources */,
 				E818A0AC21F3009D0053ED3E /* RXARCNSConsumedObject.m in Sources */,
 				E87C048421E5DE0500B90D74 /* RXLockTestObject.m in Sources */,
