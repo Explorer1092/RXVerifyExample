@@ -8,6 +8,7 @@
 
 #import "RXTestManagerViewController.h"
 #import "RXSelfRequestManager.h"
+#import "RXClassExtensionManager.h"
 @interface RXTestManagerViewController ()
 
 @end
@@ -18,6 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [[RXSelfRequestManager sharedInstance] test];
+    
+    [[RXClassExtensionManager sharedInstance] test];
 }
 
 /*

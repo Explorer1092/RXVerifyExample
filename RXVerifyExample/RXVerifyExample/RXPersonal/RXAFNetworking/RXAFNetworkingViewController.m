@@ -44,7 +44,6 @@
 #import "UIView+VK.h"
 #import "RXDeviceUtil.h"
 
-#import "RXClassExtensionManager.h"
 // 子线程中的通知问题
 //https://www.jianshu.com/p/208568075b4f
 @interface RXAFNetworkingViewController ()
@@ -323,7 +322,6 @@
     
 //    [[RXTimeoutIntervalManager sharedInstance] test];
     
-//    [[RXClassExtensionManager sharedInstance] test];
     
     NSString *tmp = [RXDeviceUtil deviceModel];
     NSLog(@"tmp:%@", tmp);
