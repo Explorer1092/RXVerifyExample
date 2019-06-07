@@ -59,7 +59,7 @@
                            @"RXAspects", @"RXCLanguage", @"RXAFNetworking",
                            @"RXUtil", @"RXLayout", @"RXJLRouter",
                            @"RXAnimation", @"RXShellHome", @"RXVolume",
-                           @"RXVK", @"RXTestManager"];
+                           @"RXVK", @"RXTestManager", @"RXViewLevel"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -79,6 +79,7 @@
 //    object = @"RXAnimation";
 //    object = @"RXShellHome";
 //    object = @"RXVolume";
+    object = @"RXTestManager";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
