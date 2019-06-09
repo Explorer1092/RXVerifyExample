@@ -17,6 +17,7 @@
 // 释放一个对象
 + (void)objectRelease:(id)object
 {
+//    NSAutoreleasePool
     [object release];
 }
 @end

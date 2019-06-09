@@ -59,6 +59,10 @@
 		589019E222A90090005D0C4D /* VKAnimationLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589019E122A90090005D0C4D /* VKAnimationLevelView.m */; };
 		589019E822AB1E77005D0C4D /* RXThreadMemoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 589019E722AB1E77005D0C4D /* RXThreadMemoryManager.m */; };
 		589019EB22AB1F0F005D0C4D /* RXTMIntToIdObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 589019EA22AB1F0F005D0C4D /* RXTMIntToIdObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		58901C1522AB2EB8005D0C4D /* RXTMImpCachingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C1422AB2EB8005D0C4D /* RXTMImpCachingObject.m */; };
+		58901C1822AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C1722AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.m */; };
+		58901C1B22AC8F75005D0C4D /* RXTMImpCachingInstance2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C1A22AC8F75005D0C4D /* RXTMImpCachingInstance2Object.m */; };
+		58901C1E22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C1D22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.m */; };
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
 		58A1841C226461D90066C2D9 /* RXVolumeTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A1841B226461D90066C2D9 /* RXVolumeTestManager.m */; };
 		58A1841E2264624E0066C2D9 /* ok.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 58A1841D2264624E0066C2D9 /* ok.mp3 */; };
@@ -459,6 +463,14 @@
 		589019E722AB1E77005D0C4D /* RXThreadMemoryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXThreadMemoryManager.m; sourceTree = "<group>"; };
 		589019E922AB1F0F005D0C4D /* RXTMIntToIdObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMIntToIdObject.h; sourceTree = "<group>"; };
 		589019EA22AB1F0F005D0C4D /* RXTMIntToIdObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMIntToIdObject.m; sourceTree = "<group>"; };
+		58901C1322AB2EB8005D0C4D /* RXTMImpCachingObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingObject.h; sourceTree = "<group>"; };
+		58901C1422AB2EB8005D0C4D /* RXTMImpCachingObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingObject.m; sourceTree = "<group>"; };
+		58901C1622AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingInstanceObject.h; sourceTree = "<group>"; };
+		58901C1722AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingInstanceObject.m; sourceTree = "<group>"; };
+		58901C1922AC8F75005D0C4D /* RXTMImpCachingInstance2Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingInstance2Object.h; sourceTree = "<group>"; };
+		58901C1A22AC8F75005D0C4D /* RXTMImpCachingInstance2Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingInstance2Object.m; sourceTree = "<group>"; };
+		58901C1C22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingInstance3Object.h; sourceTree = "<group>"; };
+		58901C1D22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingInstance3Object.m; sourceTree = "<group>"; };
 		5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		58A1841A226461D90066C2D9 /* RXVolumeTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVolumeTestManager.h; sourceTree = "<group>"; };
 		58A1841B226461D90066C2D9 /* RXVolumeTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVolumeTestManager.m; sourceTree = "<group>"; };
@@ -1354,6 +1366,14 @@
 				589019E722AB1E77005D0C4D /* RXThreadMemoryManager.m */,
 				589019E922AB1F0F005D0C4D /* RXTMIntToIdObject.h */,
 				589019EA22AB1F0F005D0C4D /* RXTMIntToIdObject.m */,
+				58901C1322AB2EB8005D0C4D /* RXTMImpCachingObject.h */,
+				58901C1422AB2EB8005D0C4D /* RXTMImpCachingObject.m */,
+				58901C1622AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.h */,
+				58901C1722AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.m */,
+				58901C1922AC8F75005D0C4D /* RXTMImpCachingInstance2Object.h */,
+				58901C1A22AC8F75005D0C4D /* RXTMImpCachingInstance2Object.m */,
+				58901C1C22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.h */,
+				58901C1D22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.m */,
 			);
 			path = ThreadMemory;
 			sourceTree = "<group>";
@@ -3137,6 +3157,7 @@
 				5882A3E922A6AFA100449D47 /* RXClassExtObject.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
 				58A18422226467F30066C2D9 /* RXVolumeViewController.m in Sources */,
+				58901C1822AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.m in Sources */,
 				E818A0FE221D4B020053ED3E /* RXAnimationTestObject.m in Sources */,
 				E8433D9620FEDA86004A7FBC /* RXRACMTViewController.m in Sources */,
 				588805A722460F9E00A76039 /* RXKSCrashTestManager.m in Sources */,
@@ -3149,6 +3170,7 @@
 				E87C042721D2599600B90D74 /* RXNSArrayTestObject.m in Sources */,
 				C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */,
 				E8B65860222E079D007C0E42 /* RXCHomeViewController.m in Sources */,
+				58901C1522AB2EB8005D0C4D /* RXTMImpCachingObject.m in Sources */,
 				589019CF22A8FFEE005D0C4D /* VKRaptorView.m in Sources */,
 				5882A3EA22A6AFA100449D47 /* RXClassExtensionManager.m in Sources */,
 				E870202920D8E10B00752211 /* RVGCDQueuesViewController.m in Sources */,
@@ -3169,6 +3191,7 @@
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
 				589019DC22A9006E005D0C4D /* VKNormalLevelView.m in Sources */,
 				5821DB28223F8E0E002AA122 /* RXAVAudioTestManager.m in Sources */,
+				58901C1E22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.m in Sources */,
 				E8433D9020FC9C81004A7FBC /* RXOCKWKindofViewController.m in Sources */,
 				58B7DE24227FCF5500068B70 /* RXDeviceUtil.m in Sources */,
 				E87C047321E3391800B90D74 /* RXClassMetaClassTestObject.m in Sources */,
@@ -3184,6 +3207,7 @@
 				E818A09D21F079470053ED3E /* RXARCCategoryMethodParentObject.m in Sources */,
 				E818A08021ECAB290053ED3E /* RXBlockReferenceValueObject.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
+				58901C1B22AC8F75005D0C4D /* RXTMImpCachingInstance2Object.m in Sources */,
 				E87C044E21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m in Sources */,
 				588805DD224C66FF00A76039 /* RXStackOverflowManager.m in Sources */,
 				E818A0BB21F310CB0053ED3E /* RXARCTmpObject.m in Sources */,

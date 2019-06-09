@@ -8,11 +8,24 @@
 
 #import "RXThreadMemoryManager.h"
 #import "RXTMIntToIdObject.h"
+#import "RXTMImpCachingObject.h"
+#import "RXTMImpCachingInstanceObject.h"
+#import "RXTMImpCachingInstance2Object.h"
+#import "RXTMImpCachingInstance3Object.h"
+
 @implementation RXThreadMemoryManager
 
 
 - (void)test {
-    [[RXTMIntToIdObject new] test];
+//    [[RXTMIntToIdObject new] test];
+    
+//    [[RXTMImpCachingObject new] test];
+
+//    [[RXTMImpCachingInstanceObject new] test];
+    
+//    [[RXTMImpCachingInstance2Object new] test];
+    
+    [[RXTMImpCachingInstance3Object new] test];
 }
 
 
