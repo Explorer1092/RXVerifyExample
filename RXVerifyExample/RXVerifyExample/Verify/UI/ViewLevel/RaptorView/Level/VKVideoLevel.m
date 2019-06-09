@@ -1,19 +1,17 @@
 //
-//  VKGuideLevel.m
+//  VKVideoLevel.m
 //  RXVerifyExample
 //
-//  Created by Rush.D.Xzj on 2019/6/6.
+//  Created by Rush.D.Xzj on 2019/6/9.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "VKGuideLevel.h"
-@interface VKGuideLevel()
+#import "VKVideoLevel.h"
+@interface VKVideoLevel()
 
 @end
-@implementation VKGuideLevel
-
+@implementation VKVideoLevel
 - (NSArray *)possibleSubviews {
     return [NSArray new];
 }
-
 @end

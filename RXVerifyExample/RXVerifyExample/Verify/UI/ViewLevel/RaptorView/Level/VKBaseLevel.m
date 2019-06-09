@@ -20,5 +20,20 @@
     }
     return self;
 }
+- (NSArray *)possibleSubviews {
+    return [NSArray new];
+}
+- (NSArray *)subviews {
+    NSMutableArray *mutAry = [NSMutableArray new];
+    for (UIView *view in self.possibleSubviews) {
+        if (view.superview != nil) {
+            [mutAry addObject:view];
+        }
+    }
+    return [mutAry copy];
+}
+- (BOOL)empty {
+    return self.subviews.count == 0;
+}
 
 @end

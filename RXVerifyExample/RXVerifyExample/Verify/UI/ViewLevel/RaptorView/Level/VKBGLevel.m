@@ -8,7 +8,13 @@
 
 #import "VKBGLevel.h"
 
+@interface VKBGLevel()
+
+@end
+
 @implementation VKBGLevel
 
-
+- (NSArray *)possibleSubviews {
+    return [NSArray new];
+}
 @end

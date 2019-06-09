@@ -7,15 +7,13 @@
 //
 
 #import "VKAnimationLevel.h"
+@interface VKAnimationLevel()
 
+@end
 @implementation VKAnimationLevel
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (NSArray *)possibleSubviews {
+    return [NSArray new];
 }
-*/
 
 @end

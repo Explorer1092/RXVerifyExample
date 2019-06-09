@@ -11,9 +11,11 @@
 #import "VKNormalLevel.h"
 #import "VKGuideLevel.h"
 #import "VKAnimationLevel.h"
+#import "VKVideoLevel.h"
 #import "Masonry.h"
 @interface VKViewSchedule()
 @property (nonatomic, strong) VKBGLevel *bgLevel;
+@property (nonatomic, strong) VKVideoLevel *videoLevel;
 @property (nonatomic, strong) VKNormalLevel *normalLevel;
 @property (nonatomic, strong) VKGuideLevel *guideLevel;
 @property (nonatomic, strong) VKAnimationLevel *animationLevel;
@@ -26,9 +28,10 @@
 - (id)initWithRaptorView:(UIView *)raptorView {
     if (self = [super init]) {
         self.bgLevel = [[VKBGLevel alloc] initWithSuperview:raptorView];
+        self.videoLevel = [[VKVideoLevel alloc] initWithSuperview:raptorView];
         self.normalLevel = [[VKNormalLevel alloc] initWithSuperview:raptorView];
-        self.guideLevel = [[VKGuideLevel alloc] initWithSuperview:raptorView];
         self.animationLevel = [[VKAnimationLevel alloc] initWithSuperview:raptorView];
+        self.guideLevel = [[VKGuideLevel alloc] initWithSuperview:raptorView];
     }
     return self;
 }

@@ -14,7 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) UIView *placeholderView;
 
+@property (nonatomic, readonly) NSArray *subviews;
+@property (nonatomic, readonly) BOOL empty;
+
 - (id)initWithSuperview:(UIView *)superview;
+
+
+// Need Override
+@property (nonatomic, readonly) NSArray *possibleSubviews;
 
 @end
 

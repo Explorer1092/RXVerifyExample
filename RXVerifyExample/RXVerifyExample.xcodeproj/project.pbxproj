@@ -63,6 +63,7 @@
 		58901C2B22ACDD2F005D0C4D /* VKAnimationLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C2222ACDD2E005D0C4D /* VKAnimationLevel.m */; };
 		58901C2C22ACDD2F005D0C4D /* VKNormalLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C2422ACDD2E005D0C4D /* VKNormalLevel.m */; };
 		58901C2D22ACDD2F005D0C4D /* VKGuideLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C2522ACDD2E005D0C4D /* VKGuideLevel.m */; };
+		58901C3022ACE094005D0C4D /* VKVideoLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C2F22ACE094005D0C4D /* VKVideoLevel.m */; };
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
 		58A1841C226461D90066C2D9 /* RXVolumeTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A1841B226461D90066C2D9 /* RXVolumeTestManager.m */; };
 		58A1841E2264624E0066C2D9 /* ok.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 58A1841D2264624E0066C2D9 /* ok.mp3 */; };
@@ -471,6 +472,8 @@
 		58901C2622ACDD2E005D0C4D /* VKBGLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKBGLevel.h; sourceTree = "<group>"; };
 		58901C2722ACDD2E005D0C4D /* VKAnimationLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKAnimationLevel.h; sourceTree = "<group>"; };
 		58901C2822ACDD2F005D0C4D /* VKBaseLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKBaseLevel.h; sourceTree = "<group>"; };
+		58901C2E22ACE094005D0C4D /* VKVideoLevel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKVideoLevel.h; sourceTree = "<group>"; };
+		58901C2F22ACE094005D0C4D /* VKVideoLevel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKVideoLevel.m; sourceTree = "<group>"; };
 		5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		58A1841A226461D90066C2D9 /* RXVolumeTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVolumeTestManager.h; sourceTree = "<group>"; };
 		58A1841B226461D90066C2D9 /* RXVolumeTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVolumeTestManager.m; sourceTree = "<group>"; };
@@ -1337,16 +1340,18 @@
 		589019D322A90036005D0C4D /* Level */ = {
 			isa = PBXGroup;
 			children = (
-				58901C2722ACDD2E005D0C4D /* VKAnimationLevel.h */,
-				58901C2222ACDD2E005D0C4D /* VKAnimationLevel.m */,
 				58901C2822ACDD2F005D0C4D /* VKBaseLevel.h */,
 				58901C2122ACDD2E005D0C4D /* VKBaseLevel.m */,
 				58901C2622ACDD2E005D0C4D /* VKBGLevel.h */,
 				58901C2022ACDD2E005D0C4D /* VKBGLevel.m */,
-				58901C1F22ACDD2E005D0C4D /* VKGuideLevel.h */,
-				58901C2522ACDD2E005D0C4D /* VKGuideLevel.m */,
+				58901C2E22ACE094005D0C4D /* VKVideoLevel.h */,
+				58901C2F22ACE094005D0C4D /* VKVideoLevel.m */,
 				58901C2322ACDD2E005D0C4D /* VKNormalLevel.h */,
 				58901C2422ACDD2E005D0C4D /* VKNormalLevel.m */,
+				58901C2722ACDD2E005D0C4D /* VKAnimationLevel.h */,
+				58901C2222ACDD2E005D0C4D /* VKAnimationLevel.m */,
+				58901C1F22ACDD2E005D0C4D /* VKGuideLevel.h */,
+				58901C2522ACDD2E005D0C4D /* VKGuideLevel.m */,
 			);
 			path = Level;
 			sourceTree = "<group>";
@@ -3198,6 +3203,7 @@
 				E87C047321E3391800B90D74 /* RXClassMetaClassTestObject.m in Sources */,
 				E8B65874222E151E007C0E42 /* RXErrorSDK.m in Sources */,
 				E818A0E72213C3470053ED3E /* RXARCAutoreleasingObject.m in Sources */,
+				58901C3022ACE094005D0C4D /* VKVideoLevel.m in Sources */,
 				E8B6585D222E0792007C0E42 /* RXBHomeViewController.m in Sources */,
 				5882A3E122A6AF1500449D47 /* RXSelfRequestObject.m in Sources */,
 				E870203120DA617200752211 /* RXUIListPerformanceViewController.m in Sources */,
