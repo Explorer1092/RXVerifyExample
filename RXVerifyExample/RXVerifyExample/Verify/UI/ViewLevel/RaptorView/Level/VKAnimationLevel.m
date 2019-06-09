@@ -1,14 +1,14 @@
 //
-//  VKNormalLevelView.m
+//  VKAnimationLevel.m
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/6/6.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "VKNormalLevelView.h"
+#import "VKAnimationLevel.h"
 
-@implementation VKNormalLevelView
+@implementation VKAnimationLevel
 
 /*
 // Only override drawRect: if you perform custom drawing.

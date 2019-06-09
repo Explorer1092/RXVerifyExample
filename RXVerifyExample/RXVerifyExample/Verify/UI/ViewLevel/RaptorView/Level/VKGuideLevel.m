@@ -1,14 +1,14 @@
 //
-//  VKGuideLevelView.m
+//  VKGuideLevel.m
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/6/6.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "VKGuideLevelView.h"
+#import "VKGuideLevel.h"
 
-@implementation VKGuideLevelView
+@implementation VKGuideLevel
 
 /*
 // Only override drawRect: if you perform custom drawing.

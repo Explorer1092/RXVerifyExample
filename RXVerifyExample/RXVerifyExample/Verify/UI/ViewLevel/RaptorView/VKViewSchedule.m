@@ -7,70 +7,28 @@
 //
 
 #import "VKViewSchedule.h"
-#import "VKBGLevelView.h"
-#import "VKNormalLevelView.h"
-#import "VKGuideLevelView.h"
-#import "VKAnimationLevelView.h"
+#import "VKBGLevel.h"
+#import "VKNormalLevel.h"
+#import "VKGuideLevel.h"
+#import "VKAnimationLevel.h"
 #import "Masonry.h"
 @interface VKViewSchedule()
-@property (nonatomic, strong) VKBGLevelView *bgView;
-@property (nonatomic, strong) VKNormalLevelView *normalView;
-@property (nonatomic, strong) VKGuideLevelView *guideView;
-@property (nonatomic, strong) VKAnimationLevelView *animationView;
+@property (nonatomic, strong) VKBGLevel *bgLevel;
+@property (nonatomic, strong) VKNormalLevel *normalLevel;
+@property (nonatomic, strong) VKGuideLevel *guideLevel;
+@property (nonatomic, strong) VKAnimationLevel *animationLevel;
 @end
 
 @implementation VKViewSchedule
 
-#pragma mark - Public
-- (UIView *)addToBgViewWithView:(UIView *)view {
-    return [self _pvk_addView:view toView:self.bgView];
-}
-- (UIView *)addToNormalViewWithView:(UIView *)view {
-    return [self _pvk_addView:view toView:self.normalView];
-}
-- (UIView *)addToGuideViewWithView:(UIView *)view {
-    return [self _pvk_addView:view toView:self.guideView];
-}
-- (UIView *)addToAnimationViewWithView:(UIView *)view {
-    return [self _pvk_addView:view toView:self.animationView];
-}
-
-- (void)removeView:(UIView *)subView {
-    UIView *superView = subView.superview;
-    [subView removeFromSuperview];
-    NSArray *subViews = superView.subviews;
-    if (subViews.count == 0) {
-        superView.hidden = YES;
-    }
-}
-
-#pragma mark - Private
-- (UIView *)_pvk_addView:(UIView *)view toView:(UIView *)toView {
-    toView.hidden = NO;
-    [toView addSubview:view];
-    return toView;
-}
 
 #pragma mark - Constructor And Destructor
 - (id)initWithRaptorView:(UIView *)raptorView {
     if (self = [super init]) {
-        self.bgView = [VKBGLevelView new];
-        self.normalView = [VKNormalLevelView new];
-        self.guideView = [VKGuideLevelView new];
-        self.animationView = [VKAnimationLevelView new];
-        
-        NSArray *viewAry = @[self.bgView, self.normalView, self.guideView, self.animationView];
-        for (UIView *tmpView in viewAry) {
-            [raptorView addSubview:tmpView];
-            tmpView.hidden = YES;
-            [tmpView mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(raptorView).offset(0);
-                make.left.equalTo(raptorView).offset(0);
-                make.right.equalTo(raptorView).offset(0);
-                make.bottom.equalTo(raptorView).offset(0);
-            }];
-        }
-        
+        self.bgLevel = [[VKBGLevel alloc] initWithSuperview:raptorView];
+        self.normalLevel = [[VKNormalLevel alloc] initWithSuperview:raptorView];
+        self.guideLevel = [[VKGuideLevel alloc] initWithSuperview:raptorView];
+        self.animationLevel = [[VKAnimationLevel alloc] initWithSuperview:raptorView];
     }
     return self;
 }

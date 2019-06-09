@@ -1,16 +1,16 @@
 //
-//  VKNormalLevelView.h
+//  VKAnimationLevel.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/6/6.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "VKBaseLevelView.h"
+#import "VKBaseLevel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VKNormalLevelView : VKBaseLevelView
+@interface VKAnimationLevel : VKBaseLevel
 
 @end
 

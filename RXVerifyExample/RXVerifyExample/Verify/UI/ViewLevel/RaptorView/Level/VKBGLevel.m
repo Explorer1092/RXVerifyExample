@@ -1,14 +1,14 @@
 //
-//  VKBGLevelView.m
+//  VKBGLevel.m
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/6/6.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "VKBGLevelView.h"
+#import "VKBGLevel.h"
 
-@implementation VKBGLevelView
+@implementation VKBGLevel
 
 
 @end

@@ -1,20 +1,21 @@
 //
-//  VKViewSchedule.h
+//  VKBaseLevel.h
 //  RXVerifyExample
 //
 //  Created by Rush.D.Xzj on 2019/6/6.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VKViewSchedule : NSObject
+@interface VKBaseLevel : NSObject
 
+@property (nonatomic, readonly) UIView *placeholderView;
 
-#pragma mark - Public
-- (id)initWithRaptorView:(UIView *)raptorView;
+- (id)initWithSuperview:(UIView *)superview;
+
 @end
 
 NS_ASSUME_NONNULL_END
