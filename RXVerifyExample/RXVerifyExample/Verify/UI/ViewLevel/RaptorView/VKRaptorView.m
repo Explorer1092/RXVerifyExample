@@ -7,17 +7,19 @@
 //
 
 #import "VKRaptorView.h"
-#import "VKViewSchedule.h"
-#import "Masonry.h"
-@interface VKRaptorView()
 
-@property (nonatomic, strong) VKViewSchedule *viewSchedule;
+#import "VKBGLevel.h"
+#import "VKNormalLevel.h"
+#import "VKGuideLevel.h"
+#import "VKAnimationLevel.h"
+#import "VKVideoLevel.h"
+@interface VKRaptorView() <VKNormalLevelDelegate>
 
-//@property (nonatomic, strong) UIView *pptView;
-//@property (nonatomic, strong) UIView *teacherView;
-//@property (nonatomic, strong) UIView *studentView;
-//@property (nonatomic, strong) UIView *guideView;
-//@property (nonatomic, strong) UIView *animationView;
+@property (nonatomic, strong) VKBGLevel *bgLevel;
+@property (nonatomic, strong) VKVideoLevel *videoLevel;
+@property (nonatomic, strong) VKNormalLevel *normalLevel;
+@property (nonatomic, strong) VKGuideLevel *guideLevel;
+@property (nonatomic, strong) VKAnimationLevel *animationLevel;
 
 @end
 
@@ -26,59 +28,19 @@
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         
-        self.viewSchedule = [[VKViewSchedule alloc] initWithRaptorView:self];
-        
-//
-//
-//        self.pptView = [UIView new];
-//        self.pptView.backgroundColor = [UIColor redColor];
-//        UIView *bgLevel = [self.viewSchedule addToBgViewWithView:self.pptView];
-//        [self.pptView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(bgLevel).offset(0);
-//            make.left.equalTo(bgLevel).offset(0);
-//            make.right.equalTo(bgLevel).offset(0);
-//            make.bottom.equalTo(bgLevel).offset(0);
-//        }];
-//
-//
-////        [self.pptView convertRect:self.pptView.frame fromView:self];
-//
-//        self.teacherView = [UIView new];
-//        self.teacherView.backgroundColor = [UIColor greenColor];
-//        UIView *normalLevel = [self.viewSchedule addToNormalViewWithView:self.teacherView];
-//        [self.teacherView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(normalLevel).offset(0);
-//            make.left.equalTo(normalLevel).offset(0);
-//            make.width.equalTo(@(200));
-//            make.height.equalTo(@(200));
-//        }];
-//
-//
-//
-//
-//        self.guideView = [UIView new];
-//        self.guideView.backgroundColor = [UIColor blueColor];
-//        UIView *guideLevel = [self.viewSchedule addToGuideViewWithView:self.guideView];
-//        [self.guideView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(guideLevel).offset(0);
-//            make.right.equalTo(guideLevel).offset(0);
-//            make.width.equalTo(@(200));
-//            make.height.equalTo(@(200));
-//        }];
-//
-//        self.animationView = [UIView new];
-//        self.animationView.backgroundColor = [UIColor yellowColor];
-//        UIView *animationLevel = [self.viewSchedule addToAnimationViewWithView:self.animationView];
-//        [self.animationView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.left.equalTo(animationLevel).offset(0);
-//            make.bottom.equalTo(animationLevel).offset(0);
-//            make.width.equalTo(@(200));
-//            make.height.equalTo(@(200));
-//        }];
-//
+        self.bgLevel = [[VKBGLevel alloc] initWithSuperview:self];
+        self.videoLevel = [[VKVideoLevel alloc] initWithSuperview:self];
+        self.normalLevel = [[VKNormalLevel alloc] initWithSuperview:self];
+        self.normalLevel.delegate = self;
+        self.animationLevel = [[VKAnimationLevel alloc] initWithSuperview:self];
+        self.guideLevel = [[VKGuideLevel alloc] initWithSuperview:self];
         
     }
     return self;
 }
 
+#pragma mark - VKNormalLevelDelegate
+- (void)helpActionInNormalLevel:(VKNormalLevel *)bgLevel {
+    [self.guideLevel showHelp];
+}
 @end

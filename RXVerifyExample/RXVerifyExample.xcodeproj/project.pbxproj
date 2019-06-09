@@ -51,7 +51,6 @@
 		588805FC224D03CF00A76039 /* UIView+VK.m in Sources */ = {isa = PBXBuildFile; fileRef = 588805FA224D03CE00A76039 /* UIView+VK.m */; };
 		589019CB22A8FD1A005D0C4D /* RXViewLevelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589019CA22A8FD1A005D0C4D /* RXViewLevelViewController.m */; };
 		589019CF22A8FFEE005D0C4D /* VKRaptorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589019CE22A8FFEE005D0C4D /* VKRaptorView.m */; };
-		589019D222A90021005D0C4D /* VKViewSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 589019D122A90021005D0C4D /* VKViewSchedule.m */; };
 		589019E822AB1E77005D0C4D /* RXThreadMemoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 589019E722AB1E77005D0C4D /* RXThreadMemoryManager.m */; };
 		589019EB22AB1F0F005D0C4D /* RXTMIntToIdObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 589019EA22AB1F0F005D0C4D /* RXTMIntToIdObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		58901C1522AB2EB8005D0C4D /* RXTMImpCachingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C1422AB2EB8005D0C4D /* RXTMImpCachingObject.m */; };
@@ -448,8 +447,6 @@
 		589019CA22A8FD1A005D0C4D /* RXViewLevelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXViewLevelViewController.m; sourceTree = "<group>"; };
 		589019CD22A8FFEE005D0C4D /* VKRaptorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKRaptorView.h; sourceTree = "<group>"; };
 		589019CE22A8FFEE005D0C4D /* VKRaptorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKRaptorView.m; sourceTree = "<group>"; };
-		589019D022A90021005D0C4D /* VKViewSchedule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKViewSchedule.h; sourceTree = "<group>"; };
-		589019D122A90021005D0C4D /* VKViewSchedule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKViewSchedule.m; sourceTree = "<group>"; };
 		589019E622AB1E77005D0C4D /* RXThreadMemoryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXThreadMemoryManager.h; sourceTree = "<group>"; };
 		589019E722AB1E77005D0C4D /* RXThreadMemoryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXThreadMemoryManager.m; sourceTree = "<group>"; };
 		589019E922AB1F0F005D0C4D /* RXTMIntToIdObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMIntToIdObject.h; sourceTree = "<group>"; };
@@ -1331,8 +1328,6 @@
 				589019D322A90036005D0C4D /* Level */,
 				589019CD22A8FFEE005D0C4D /* VKRaptorView.h */,
 				589019CE22A8FFEE005D0C4D /* VKRaptorView.m */,
-				589019D022A90021005D0C4D /* VKViewSchedule.h */,
-				589019D122A90021005D0C4D /* VKViewSchedule.m */,
 			);
 			path = RaptorView;
 			sourceTree = "<group>";
@@ -2963,7 +2958,6 @@
 				E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */,
 				E8B6584D2227CBEE007C0E42 /* RXSelfSuperClassB.m in Sources */,
 				E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */,
-				589019D222A90021005D0C4D /* VKViewSchedule.m in Sources */,
 				E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */,
 				E87C044B21D7133B00B90D74 /* RXMethodSwizzleSafelyObject.m in Sources */,
 				E8F8D7F7219133F8007AB027 /* RXAFSecurityPolicy.m in Sources */,

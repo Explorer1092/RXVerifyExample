@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class VKBGLevel;
+@protocol VKBGLevelDelegate <NSObject>
+- (void)doSomethingInBgLevel:(VKBGLevel *)bgLevel;
+@end
+
 @interface VKBGLevel : VKBaseLevel
+
+
+@property (nonatomic, weak) id<VKBGLevelDelegate> delegate;
 
 @end
 
