@@ -20,7 +20,7 @@
         self.guideLabel.textAlignment = NSTextAlignmentCenter;
         self.guideLabel.backgroundColor = [UIColor yellowColor];
         [self.guideLabel rx_addGestureRecognizerWithTarget:self action:@selector(guideLabelAction:)];
-        [superview insertSubview:self.guideLabel belowSubview:self.placeholderView];
+        [self addSubview:self.guideLabel];
         
         [self.guideLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(superview).offset(0);

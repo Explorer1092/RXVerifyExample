@@ -9,28 +9,23 @@
 #import "VKBGLevel.h"
 #import "Masonry.h"
 @interface VKBGLevel()
-
 @property (nonatomic, strong) UILabel *pptLabel;
 @property (nonatomic, strong) UILabel *ppt2Label;
-
 @end
-
 @implementation VKBGLevel
-
 - (id)initWithSuperview:(UIView *)superview {
     if (self = [super initWithSuperview:superview]) {
         self.pptLabel = [UILabel new];
         self.pptLabel.text = @"我是背景图";
         self.pptLabel.textAlignment = NSTextAlignmentCenter;
         
-        [superview insertSubview:self.pptLabel belowSubview:self.placeholderView];
-        
+        [self addSubview:self.pptLabel];
         
         self.ppt2Label = [UILabel new];
         self.ppt2Label.text = @"我是背景图2";
         self.ppt2Label.backgroundColor = [UIColor whiteColor];
         self.ppt2Label.textAlignment = NSTextAlignmentCenter;
-        [superview insertSubview:self.ppt2Label belowSubview:self.placeholderView];
+        [self addSubview:self.ppt2Label];
         
         [self.pptLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(superview).offset(0);
@@ -45,8 +40,6 @@
             make.right.equalTo(superview).offset(0);
             make.bottom.equalTo(superview).offset(0);
         }];
-
-        
     }
     return self;
 }

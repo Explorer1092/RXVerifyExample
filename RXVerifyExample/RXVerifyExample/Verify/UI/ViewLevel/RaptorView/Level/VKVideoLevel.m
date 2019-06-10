@@ -20,14 +20,14 @@
         self.teacherLabel.textAlignment = NSTextAlignmentCenter;
         self.teacherLabel.backgroundColor = [UIColor redColor];
         
-        [superview insertSubview:self.teacherLabel belowSubview:self.placeholderView];
+        [self addSubview:self.teacherLabel];
         
         
         self.studentLabel = [UILabel new];
         self.studentLabel.text = @"我是学生";
         self.studentLabel.textAlignment = NSTextAlignmentCenter;
         self.studentLabel.backgroundColor = [UIColor redColor];
-        [superview insertSubview:self.studentLabel belowSubview:self.placeholderView];
+        [self addSubview:self.studentLabel];
         
         
         [self.teacherLabel mas_makeConstraints:^(MASConstraintMaker *make) {

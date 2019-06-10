@@ -20,24 +20,23 @@
         self.backLabel.text = @"后退";
         self.backLabel.textAlignment = NSTextAlignmentCenter;
         self.backLabel.backgroundColor = [UIColor redColor];
-        
-        [superview insertSubview:self.backLabel belowSubview:self.placeholderView];
-        
+        [self addSubview:self.backLabel];
+
         
         self.helpLabel = [UILabel new];
         self.helpLabel.text = @"帮助";
         self.helpLabel.textAlignment = NSTextAlignmentCenter;
         self.helpLabel.backgroundColor = [UIColor redColor];
         [self.helpLabel rx_addGestureRecognizerWithTarget:self action:@selector(helpAction:)];
-        [superview insertSubview:self.helpLabel belowSubview:self.placeholderView];
-        
+        [self addSubview:self.helpLabel];
+
         
         self.maskLabel = [UILabel new];
         self.maskLabel.text = @"我是NormalLevel,专门覆盖videoLevel";
         self.maskLabel.textAlignment = NSTextAlignmentCenter;
         self.maskLabel.backgroundColor = [UIColor greenColor];
-        [superview insertSubview:self.maskLabel belowSubview:self.placeholderView];
-        
+        [self addSubview:self.maskLabel];
+
         
         [self.backLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(superview).offset(64);

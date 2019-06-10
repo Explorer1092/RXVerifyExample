@@ -16,9 +16,10 @@
     if (self = [super initWithSuperview:superview]) {
         self.animationLabel = [UILabel new];
         self.animationLabel.text = @"我是动画level,5秒后我自动消失";
+        self.animationLabel.textColor = [UIColor whiteColor];
         self.animationLabel.textAlignment = NSTextAlignmentCenter;
         self.animationLabel.backgroundColor = [UIColor blueColor];
-        [superview insertSubview:self.animationLabel belowSubview:self.placeholderView];
+        [self addSubview:self.animationLabel];
         
         [self.animationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(superview).offset(0);

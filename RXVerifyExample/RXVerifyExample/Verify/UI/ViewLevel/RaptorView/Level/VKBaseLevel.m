@@ -8,18 +8,20 @@
 
 #import "VKBaseLevel.h"
 @interface VKBaseLevel()
-
 @property (nonatomic, readwrite, strong) UIView *placeholderView;
+@property (nonatomic, readwrite, weak) UIView *superview;
 @end
 @implementation VKBaseLevel
-
-
 - (id)initWithSuperview:(UIView *)superview {
     if (self = [super init]) {
         self.placeholderView = [UIView new];
+        self.superview = superview;
         [superview addSubview:self.placeholderView];
     }
     return self;
+}
+- (void)addSubview:(UIView *)view {
+    [self.superview insertSubview:view belowSubview:self.placeholderView];
 }
 - (NSArray *)possibleSubviews {
     return [NSArray new];
@@ -36,5 +38,4 @@
 - (BOOL)empty {
     return self.subviews.count == 0;
 }
-
 @end
