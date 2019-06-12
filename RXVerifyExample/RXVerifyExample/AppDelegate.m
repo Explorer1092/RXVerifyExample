@@ -14,6 +14,8 @@
 
 #import "UncaughtExceptionHandler.h"
 #import "RXServiceManager.h"
+#import "RXTidyMainViewController.h"
+
 @interface AppDelegate ()
 @property (nonatomic, strong) UINavigationController *mainNC;
 
@@ -24,7 +26,7 @@
 
 - (void)config
 {
-    [RXServiceManager addServiceName:@"RXCrashService" enable:YES async:YES];
+//    [RXServiceManager addServiceName:@"RXCrashService" enable:YES async:YES];
 //    [RXServiceManager addServiceName:@"RXJLRoutesService" enable:YES async:NO];
     
     
@@ -42,6 +44,7 @@
 {
     UIViewController *vc = nil;
     vc = [[MainViewController alloc] init];
+//    vc = [RXTidyMainViewController new];
     self.mainNC = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = self.mainNC;
 }
@@ -90,18 +93,17 @@
 //    NSLog(@"%@", ary);
     // third part 第三方初始化
     
-    NSString *str = @"a&bbbbbbbbbbbbbb&cc&dd&ddd&";
-    NSRange rang = [str rangeOfString:@"&"];
-    NSLog(@"range");
+//    NSString *str = @"a&bbbbbbbbbbbbbb&cc&dd&ddd&";
+//    NSRange rang = [str rangeOfString:@"&"];
+//    NSLog(@"range");
     
-    
-    [self config];
-    [RXServiceManager application:application willFinishLaunchingWithOptions:launchOptions];
+//    [self config];
+//    [RXServiceManager application:application willFinishLaunchingWithOptions:launchOptions];
     return YES;
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [RXServiceManager application:application didFinishLaunchingWithOptions:launchOptions];
+//    [RXServiceManager application:application didFinishLaunchingWithOptions:launchOptions];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self showMain];
@@ -118,7 +120,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    [RXServiceManager executeSelector:_cmd paramArray:@[application]];
+//    [RXServiceManager executeSelector:_cmd paramArray:@[application]];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -134,22 +136,22 @@
 }
 
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    NSArray *paramArray = @[application,
-                            url ? url : [NSNull null],
-                            sourceApplication ? sourceApplication : [NSNull null],
-                            annotation ? annotation : [NSNull null]];
-    return [RXServiceManager boolReturnExecuteSelector:_cmd paramArray:paramArray];
-}
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+//    NSArray *paramArray = @[application,
+//                            url ? url : [NSNull null],
+//                            sourceApplication ? sourceApplication : [NSNull null],
+//                            annotation ? annotation : [NSNull null]];
+//    return [RXServiceManager boolReturnExecuteSelector:_cmd paramArray:paramArray];
+//}
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    
-    NSArray *paramArray = @[application,
-                            url ? url : [NSNull null]];
-    return [RXServiceManager boolReturnExecuteSelector:_cmd paramArray:paramArray];
-}
-- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    return [RXServiceManager application:application supportedInterfaceOrientationsForWindow:window];
-}
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+
+//    NSArray *paramArray = @[application,
+//                            url ? url : [NSNull null]];
+//    return [RXServiceManager boolReturnExecuteSelector:_cmd paramArray:paramArray];
+//}
+//- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+//    return [RXServiceManager application:application supportedInterfaceOrientationsForWindow:window];
+//}
 
 @end

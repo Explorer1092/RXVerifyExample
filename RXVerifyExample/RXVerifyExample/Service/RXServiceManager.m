@@ -135,7 +135,7 @@
     }
 }
 
-+ (void)executeTarget:(id)target selector:(SEL)selector paramArray:(NSArray *)paramArray
++ (NSInvocation *)executeTarget:(id)target selector:(SEL)selector paramArray:(NSArray *)paramArray
 {
     NSMethodSignature *signature = [target methodSignatureForSelector:selector];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
@@ -148,39 +148,17 @@
         [invocation setArgument:&obj atIndex:idx + 2];
     }];
     [invocation invoke];
+    return invocation;
 }
 
 + (BOOL)boolReturnExecuteTarget:(id)target selector:(SEL)selector paramArray:(NSArray *)paramArray
 {
-    NSMethodSignature *signature = [target methodSignatureForSelector:selector];
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    invocation.target = target;
-    invocation.selector = selector;
-    [paramArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([obj isKindOfClass:[NSNull class]]) {
-            obj = nil;
-        }
-        [invocation setArgument:&obj atIndex:idx + 2];
-    }];
-    [invocation invoke];
-    BOOL result = NO;
-    [invocation getReturnValue:&result];
-    return result;
+    return [self intReturnExecuteTarget:self selector:selector paramArray:paramArray] != 0;
 }
 + (int)intReturnExecuteTarget:(id)target selector:(SEL)selector paramArray:(NSArray *)paramArray
 {
-    NSMethodSignature *signature = [target methodSignatureForSelector:selector];
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-    invocation.target = target;
-    invocation.selector = selector;
-    [paramArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([obj isKindOfClass:[NSNull class]]) {
-            obj = nil;
-        }
-        [invocation setArgument:&obj atIndex:idx + 2];
-    }];
-    [invocation invoke];
-    int result = NO;
+    NSInvocation *invocation = [self executeTarget:target selector:selector paramArray:paramArray];
+    int result = 0;
     [invocation getReturnValue:&result];
     return result;
 }

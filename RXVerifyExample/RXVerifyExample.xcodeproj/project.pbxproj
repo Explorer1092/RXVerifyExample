@@ -32,7 +32,7 @@
 		582F36E62296D3BF00AA84A8 /* VKProtectEyeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F36E42296D3BE00AA84A8 /* VKProtectEyeViewController.m */; };
 		582F36E72296D3BF00AA84A8 /* VKProtectEyeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582F36E52296D3BE00AA84A8 /* VKProtectEyeViewController.xib */; };
 		583E667D22A611EA0080597C /* RXTestManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E667C22A611EA0080597C /* RXTestManagerViewController.m */; };
-		5850B26C1BF47F2A00EC9144 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.mm */; };
+		5850B26C1BF47F2A00EC9144 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
 		5850B2841BF4803E00EC9144 /* coretext-image-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2821BF4803E00EC9144 /* coretext-image-1.jpg */; };
@@ -68,6 +68,8 @@
 		58901C3E22AE6125005D0C4D /* VKBaseLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C3D22AE6125005D0C4D /* VKBaseLevelView.m */; };
 		58901C4122AE613C005D0C4D /* VKBgLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C4022AE613C005D0C4D /* VKBgLevelView.m */; };
 		58901C4422AE6149005D0C4D /* VKNormalLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C4322AE6149005D0C4D /* VKNormalLevelView.m */; };
+		58901C6022B0A027005D0C4D /* RXTidyMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C5F22B0A027005D0C4D /* RXTidyMainViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		58901C6322B0A8F2005D0C4D /* RXCommentUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C6222B0A8F1005D0C4D /* RXCommentUtil.m */; };
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
 		58A1841C226461D90066C2D9 /* RXVolumeTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A1841B226461D90066C2D9 /* RXVolumeTestManager.m */; };
 		58A1841E2264624E0066C2D9 /* ok.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 58A1841D2264624E0066C2D9 /* ok.mp3 */; };
@@ -486,6 +488,10 @@
 		58901C4022AE613C005D0C4D /* VKBgLevelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKBgLevelView.m; sourceTree = "<group>"; };
 		58901C4222AE6149005D0C4D /* VKNormalLevelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKNormalLevelView.h; sourceTree = "<group>"; };
 		58901C4322AE6149005D0C4D /* VKNormalLevelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKNormalLevelView.m; sourceTree = "<group>"; };
+		58901C5E22B0A027005D0C4D /* RXTidyMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTidyMainViewController.h; sourceTree = "<group>"; };
+		58901C5F22B0A027005D0C4D /* RXTidyMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTidyMainViewController.m; sourceTree = "<group>"; };
+		58901C6122B0A8F1005D0C4D /* RXCommentUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCommentUtil.h; sourceTree = "<group>"; };
+		58901C6222B0A8F1005D0C4D /* RXCommentUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXCommentUtil.m; sourceTree = "<group>"; };
 		5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		58A1841A226461D90066C2D9 /* RXVolumeTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVolumeTestManager.h; sourceTree = "<group>"; };
 		58A1841B226461D90066C2D9 /* RXVolumeTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVolumeTestManager.m; sourceTree = "<group>"; };
@@ -1238,6 +1244,8 @@
 				58BF5F881C16BAC500E8AEF3 /* MainViewController.xib */,
 				58DAF76022733A9E0008B543 /* RXYellowView.h */,
 				58DAF76122733A9E0008B543 /* RXYellowView.m */,
+				58901C5E22B0A027005D0C4D /* RXTidyMainViewController.h */,
+				58901C5F22B0A027005D0C4D /* RXTidyMainViewController.m */,
 			);
 			path = RXVerifyExample;
 			sourceTree = "<group>";
@@ -2178,6 +2186,8 @@
 				E818A0F9221A468B0053ED3E /* RXRuntimeFishHookUtil.m */,
 				58B7DE22227FCF5500068B70 /* RXDeviceUtil.h */,
 				58B7DE23227FCF5500068B70 /* RXDeviceUtil.m */,
+				58901C6122B0A8F1005D0C4D /* RXCommentUtil.h */,
+				58901C6222B0A8F1005D0C4D /* RXCommentUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -2999,6 +3009,7 @@
 				E818A0C721F5B84A0053ED3E /* RXARCPropertyOwnershipObject.m in Sources */,
 				E89C219B213D332700913992 /* NSArray+RXVerifyExample.m in Sources */,
 				E8B6584D2227CBEE007C0E42 /* RXSelfSuperClassB.m in Sources */,
+				58901C6322B0A8F2005D0C4D /* RXCommentUtil.m in Sources */,
 				E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */,
 				E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */,
 				E87C044B21D7133B00B90D74 /* RXMethodSwizzleSafelyObject.m in Sources */,
@@ -3112,6 +3123,7 @@
 				E87C043221D4E7E300B90D74 /* RXInitializeTestObject.m in Sources */,
 				E870204220DA7B2800752211 /* RXCornerRadiusTableViewImpl.m in Sources */,
 				5821DB2E223F8E40002AA122 /* RBDMuteSwitchObject.m in Sources */,
+				58901C6022B0A027005D0C4D /* RXTidyMainViewController.m in Sources */,
 				589019CB22A8FD1A005D0C4D /* RXViewLevelViewController.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */,
