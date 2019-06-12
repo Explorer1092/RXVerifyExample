@@ -71,6 +71,8 @@ pod 'MBProgressHUD'
 
 pod 'coobjc'
 
+pod 'MTHawkeye'
+
 
 inhibit_all_warnings!
 

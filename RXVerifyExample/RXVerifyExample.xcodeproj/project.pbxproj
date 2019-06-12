@@ -63,6 +63,11 @@
 		58901C2C22ACDD2F005D0C4D /* VKNormalLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C2422ACDD2E005D0C4D /* VKNormalLevel.m */; };
 		58901C2D22ACDD2F005D0C4D /* VKGuideLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C2522ACDD2E005D0C4D /* VKGuideLevel.m */; };
 		58901C3022ACE094005D0C4D /* VKVideoLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C2F22ACE094005D0C4D /* VKVideoLevel.m */; };
+		58901C3422AE074E005D0C4D /* VKMonitorWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C3322AE074E005D0C4D /* VKMonitorWindow.m */; };
+		58901C3722AE075B005D0C4D /* VKMonitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C3622AE075B005D0C4D /* VKMonitorViewController.m */; };
+		58901C3E22AE6125005D0C4D /* VKBaseLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C3D22AE6125005D0C4D /* VKBaseLevelView.m */; };
+		58901C4122AE613C005D0C4D /* VKBgLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C4022AE613C005D0C4D /* VKBgLevelView.m */; };
+		58901C4422AE6149005D0C4D /* VKNormalLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C4322AE6149005D0C4D /* VKNormalLevelView.m */; };
 		5892A8231C1672FC00EEE3D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */; };
 		58A1841C226461D90066C2D9 /* RXVolumeTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A1841B226461D90066C2D9 /* RXVolumeTestManager.m */; };
 		58A1841E2264624E0066C2D9 /* ok.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 58A1841D2264624E0066C2D9 /* ok.mp3 */; };
@@ -471,6 +476,16 @@
 		58901C2822ACDD2F005D0C4D /* VKBaseLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKBaseLevel.h; sourceTree = "<group>"; };
 		58901C2E22ACE094005D0C4D /* VKVideoLevel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKVideoLevel.h; sourceTree = "<group>"; };
 		58901C2F22ACE094005D0C4D /* VKVideoLevel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKVideoLevel.m; sourceTree = "<group>"; };
+		58901C3222AE074E005D0C4D /* VKMonitorWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKMonitorWindow.h; sourceTree = "<group>"; };
+		58901C3322AE074E005D0C4D /* VKMonitorWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKMonitorWindow.m; sourceTree = "<group>"; };
+		58901C3522AE075B005D0C4D /* VKMonitorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKMonitorViewController.h; sourceTree = "<group>"; };
+		58901C3622AE075B005D0C4D /* VKMonitorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKMonitorViewController.m; sourceTree = "<group>"; };
+		58901C3C22AE6125005D0C4D /* VKBaseLevelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKBaseLevelView.h; sourceTree = "<group>"; };
+		58901C3D22AE6125005D0C4D /* VKBaseLevelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKBaseLevelView.m; sourceTree = "<group>"; };
+		58901C3F22AE613C005D0C4D /* VKBgLevelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKBgLevelView.h; sourceTree = "<group>"; };
+		58901C4022AE613C005D0C4D /* VKBgLevelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKBgLevelView.m; sourceTree = "<group>"; };
+		58901C4222AE6149005D0C4D /* VKNormalLevelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKNormalLevelView.h; sourceTree = "<group>"; };
+		58901C4322AE6149005D0C4D /* VKNormalLevelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKNormalLevelView.m; sourceTree = "<group>"; };
 		5892A8221C1672FC00EEE3D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		58A1841A226461D90066C2D9 /* RXVolumeTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVolumeTestManager.h; sourceTree = "<group>"; };
 		58A1841B226461D90066C2D9 /* RXVolumeTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVolumeTestManager.m; sourceTree = "<group>"; };
@@ -1166,6 +1181,7 @@
 		583E667922A611D20080597C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				58901C3122AE0737005D0C4D /* WindowLevel */,
 				589019C822A8FD09005D0C4D /* ViewLevel */,
 			);
 			path = UI;
@@ -1325,6 +1341,7 @@
 		589019CC22A8FFDE005D0C4D /* RaptorView */ = {
 			isa = PBXGroup;
 			children = (
+				58901C3B22AE610D005D0C4D /* LevelView */,
 				589019D322A90036005D0C4D /* Level */,
 				589019CD22A8FFEE005D0C4D /* VKRaptorView.h */,
 				589019CE22A8FFEE005D0C4D /* VKRaptorView.m */,
@@ -1376,6 +1393,30 @@
 				58901C1D22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.m */,
 			);
 			path = ThreadMemory;
+			sourceTree = "<group>";
+		};
+		58901C3122AE0737005D0C4D /* WindowLevel */ = {
+			isa = PBXGroup;
+			children = (
+				58901C3222AE074E005D0C4D /* VKMonitorWindow.h */,
+				58901C3322AE074E005D0C4D /* VKMonitorWindow.m */,
+				58901C3522AE075B005D0C4D /* VKMonitorViewController.h */,
+				58901C3622AE075B005D0C4D /* VKMonitorViewController.m */,
+			);
+			path = WindowLevel;
+			sourceTree = "<group>";
+		};
+		58901C3B22AE610D005D0C4D /* LevelView */ = {
+			isa = PBXGroup;
+			children = (
+				58901C3C22AE6125005D0C4D /* VKBaseLevelView.h */,
+				58901C3D22AE6125005D0C4D /* VKBaseLevelView.m */,
+				58901C3F22AE613C005D0C4D /* VKBgLevelView.h */,
+				58901C4022AE613C005D0C4D /* VKBgLevelView.m */,
+				58901C4222AE6149005D0C4D /* VKNormalLevelView.h */,
+				58901C4322AE6149005D0C4D /* VKNormalLevelView.m */,
+			);
+			path = LevelView;
 			sourceTree = "<group>";
 		};
 		58B4629B224E515B00C85EFD /* RXTimeoutInterval */ = {
@@ -2949,6 +2990,7 @@
 				58D660391C2571A700912786 /* RXMenuView.m in Sources */,
 				E818A0D921FFFA770053ED3E /* RXARCAttributeNSObjectObject.m in Sources */,
 				E818A07121E88EA00053ED3E /* RXBlockQSortBRObject.m in Sources */,
+				58901C4122AE613C005D0C4D /* VKBgLevelView.m in Sources */,
 				5886CDB21C182E4F00013C76 /* UIViewController+RV.m in Sources */,
 				E87C045E21DDE55D00B90D74 /* RXObserverObject.m in Sources */,
 				E872493F21C5291100EA6A3D /* RXAFXMLDocumentResponseSerializer.m in Sources */,
@@ -2962,6 +3004,7 @@
 				E87C044B21D7133B00B90D74 /* RXMethodSwizzleSafelyObject.m in Sources */,
 				E8F8D7F7219133F8007AB027 /* RXAFSecurityPolicy.m in Sources */,
 				C9A7110D1D7BA0880002E703 /* RVCopyViewController.m in Sources */,
+				58901C3E22AE6125005D0C4D /* VKBaseLevelView.m in Sources */,
 				C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */,
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
 				E8F8D808219BB437007AB027 /* RXAFNetworkReachabilityManager.m in Sources */,
@@ -2970,6 +3013,7 @@
 				E8433D7E20EDBE78004A7FBC /* RXMacroViewController.m in Sources */,
 				E86050FE20A2A1840016F6C9 /* RVAddMethodViewController.m in Sources */,
 				E87C045221D9051000B90D74 /* RXCharacterSetTestObject.m in Sources */,
+				58901C3722AE075B005D0C4D /* VKMonitorViewController.m in Sources */,
 				E872493921C528D100EA6A3D /* RXAFJSONResponseSerializer.m in Sources */,
 				E86050EB20A07B0D0016F6C9 /* RXCurrentQueueViewController.m in Sources */,
 				5803F0D41C1913260071FDDA /* RVScrollViewController.m in Sources */,
@@ -2980,6 +3024,7 @@
 				E86050F220A2965C0016F6C9 /* RVRTPrintViewController.m in Sources */,
 				588805FC224D03CF00A76039 /* UIView+VK.m in Sources */,
 				E872495A21CCEA0000EA6A3D /* RXReadonlyProperty1Object.m in Sources */,
+				58901C3422AE074E005D0C4D /* VKMonitorWindow.m in Sources */,
 				E8B6587A222E4BDF007C0E42 /* RXRouteRequest.m in Sources */,
 				C9A711141D7BA1240002E703 /* RXBObject.m in Sources */,
 				58901C2922ACDD2F005D0C4D /* VKBGLevel.m in Sources */,
@@ -3170,6 +3215,7 @@
 				E818A0D321F6F6390053ED3E /* RXARCClangAttributeObject.m in Sources */,
 				E87C042721D2599600B90D74 /* RXNSArrayTestObject.m in Sources */,
 				C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */,
+				58901C4422AE6149005D0C4D /* VKNormalLevelView.m in Sources */,
 				E8B65860222E079D007C0E42 /* RXCHomeViewController.m in Sources */,
 				58901C1522AB2EB8005D0C4D /* RXTMImpCachingObject.m in Sources */,
 				589019CF22A8FFEE005D0C4D /* VKRaptorView.m in Sources */,
