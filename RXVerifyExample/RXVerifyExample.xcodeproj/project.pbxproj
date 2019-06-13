@@ -32,6 +32,11 @@
 		582F36E62296D3BF00AA84A8 /* VKProtectEyeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 582F36E42296D3BE00AA84A8 /* VKProtectEyeViewController.m */; };
 		582F36E72296D3BF00AA84A8 /* VKProtectEyeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 582F36E52296D3BE00AA84A8 /* VKProtectEyeViewController.xib */; };
 		583E667D22A611EA0080597C /* RXTestManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583E667C22A611EA0080597C /* RXTestManagerViewController.m */; };
+		5841E55222B1E70A00DA4703 /* RXTMImpCachingInstance2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 5841E54A22B1E70A00DA4703 /* RXTMImpCachingInstance2Object.m */; };
+		5841E55322B1E70A00DA4703 /* RXTMImpCachingInstanceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5841E54C22B1E70A00DA4703 /* RXTMImpCachingInstanceObject.m */; };
+		5841E55422B1E70A00DA4703 /* RXTMImpCachingInstance3Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 5841E54D22B1E70A00DA4703 /* RXTMImpCachingInstance3Object.m */; };
+		5841E55522B1E70A00DA4703 /* RXTMImpCachingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5841E54E22B1E70A00DA4703 /* RXTMImpCachingObject.m */; };
+		5841E55822B1E7A300DA4703 /* RXTMOwnershipObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5841E55722B1E7A300DA4703 /* RXTMOwnershipObject.m */; };
 		5850B26C1BF47F2A00EC9144 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
@@ -53,10 +58,6 @@
 		589019CF22A8FFEE005D0C4D /* VKRaptorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589019CE22A8FFEE005D0C4D /* VKRaptorView.m */; };
 		589019E822AB1E77005D0C4D /* RXThreadMemoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 589019E722AB1E77005D0C4D /* RXThreadMemoryManager.m */; };
 		589019EB22AB1F0F005D0C4D /* RXTMIntToIdObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 589019EA22AB1F0F005D0C4D /* RXTMIntToIdObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		58901C1522AB2EB8005D0C4D /* RXTMImpCachingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C1422AB2EB8005D0C4D /* RXTMImpCachingObject.m */; };
-		58901C1822AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C1722AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.m */; };
-		58901C1B22AC8F75005D0C4D /* RXTMImpCachingInstance2Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C1A22AC8F75005D0C4D /* RXTMImpCachingInstance2Object.m */; };
-		58901C1E22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C1D22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.m */; };
 		58901C2922ACDD2F005D0C4D /* VKBGLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C2022ACDD2E005D0C4D /* VKBGLevel.m */; };
 		58901C2A22ACDD2F005D0C4D /* VKBaseLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C2122ACDD2E005D0C4D /* VKBaseLevel.m */; };
 		58901C2B22ACDD2F005D0C4D /* VKAnimationLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58901C2222ACDD2E005D0C4D /* VKAnimationLevel.m */; };
@@ -417,6 +418,16 @@
 		582F36E52296D3BE00AA84A8 /* VKProtectEyeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VKProtectEyeViewController.xib; sourceTree = "<group>"; };
 		583E667B22A611EA0080597C /* RXTestManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTestManagerViewController.h; sourceTree = "<group>"; };
 		583E667C22A611EA0080597C /* RXTestManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTestManagerViewController.m; sourceTree = "<group>"; };
+		5841E54A22B1E70A00DA4703 /* RXTMImpCachingInstance2Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingInstance2Object.m; sourceTree = "<group>"; };
+		5841E54B22B1E70A00DA4703 /* RXTMImpCachingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingObject.h; sourceTree = "<group>"; };
+		5841E54C22B1E70A00DA4703 /* RXTMImpCachingInstanceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingInstanceObject.m; sourceTree = "<group>"; };
+		5841E54D22B1E70A00DA4703 /* RXTMImpCachingInstance3Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingInstance3Object.m; sourceTree = "<group>"; };
+		5841E54E22B1E70A00DA4703 /* RXTMImpCachingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingObject.m; sourceTree = "<group>"; };
+		5841E54F22B1E70A00DA4703 /* RXTMImpCachingInstance2Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingInstance2Object.h; sourceTree = "<group>"; };
+		5841E55022B1E70A00DA4703 /* RXTMImpCachingInstance3Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingInstance3Object.h; sourceTree = "<group>"; };
+		5841E55122B1E70A00DA4703 /* RXTMImpCachingInstanceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingInstanceObject.h; sourceTree = "<group>"; };
+		5841E55622B1E7A300DA4703 /* RXTMOwnershipObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMOwnershipObject.h; sourceTree = "<group>"; };
+		5841E55722B1E7A300DA4703 /* RXTMOwnershipObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMOwnershipObject.m; sourceTree = "<group>"; };
 		5850B2671BF47F2A00EC9144 /* RXVerifyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXVerifyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5850B26B1BF47F2A00EC9144 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		5850B26D1BF47F2A00EC9144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -458,14 +469,6 @@
 		589019E722AB1E77005D0C4D /* RXThreadMemoryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXThreadMemoryManager.m; sourceTree = "<group>"; };
 		589019E922AB1F0F005D0C4D /* RXTMIntToIdObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMIntToIdObject.h; sourceTree = "<group>"; };
 		589019EA22AB1F0F005D0C4D /* RXTMIntToIdObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMIntToIdObject.m; sourceTree = "<group>"; };
-		58901C1322AB2EB8005D0C4D /* RXTMImpCachingObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingObject.h; sourceTree = "<group>"; };
-		58901C1422AB2EB8005D0C4D /* RXTMImpCachingObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingObject.m; sourceTree = "<group>"; };
-		58901C1622AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingInstanceObject.h; sourceTree = "<group>"; };
-		58901C1722AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingInstanceObject.m; sourceTree = "<group>"; };
-		58901C1922AC8F75005D0C4D /* RXTMImpCachingInstance2Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingInstance2Object.h; sourceTree = "<group>"; };
-		58901C1A22AC8F75005D0C4D /* RXTMImpCachingInstance2Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingInstance2Object.m; sourceTree = "<group>"; };
-		58901C1C22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingInstance3Object.h; sourceTree = "<group>"; };
-		58901C1D22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMImpCachingInstance3Object.m; sourceTree = "<group>"; };
 		58901C1F22ACDD2E005D0C4D /* VKGuideLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKGuideLevel.h; sourceTree = "<group>"; };
 		58901C2022ACDD2E005D0C4D /* VKBGLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKBGLevel.m; sourceTree = "<group>"; };
 		58901C2122ACDD2E005D0C4D /* VKBaseLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKBaseLevel.m; sourceTree = "<group>"; };
@@ -1205,6 +1208,21 @@
 			path = NUI;
 			sourceTree = "<group>";
 		};
+		5841E54922B1E70A00DA4703 /* IMPCaching */ = {
+			isa = PBXGroup;
+			children = (
+				5841E54B22B1E70A00DA4703 /* RXTMImpCachingObject.h */,
+				5841E54E22B1E70A00DA4703 /* RXTMImpCachingObject.m */,
+				5841E55122B1E70A00DA4703 /* RXTMImpCachingInstanceObject.h */,
+				5841E54C22B1E70A00DA4703 /* RXTMImpCachingInstanceObject.m */,
+				5841E54F22B1E70A00DA4703 /* RXTMImpCachingInstance2Object.h */,
+				5841E54A22B1E70A00DA4703 /* RXTMImpCachingInstance2Object.m */,
+				5841E55022B1E70A00DA4703 /* RXTMImpCachingInstance3Object.h */,
+				5841E54D22B1E70A00DA4703 /* RXTMImpCachingInstance3Object.m */,
+			);
+			path = IMPCaching;
+			sourceTree = "<group>";
+		};
 		5850B25E1BF47F2A00EC9144 = {
 			isa = PBXGroup;
 			children = (
@@ -1391,14 +1409,9 @@
 				589019E722AB1E77005D0C4D /* RXThreadMemoryManager.m */,
 				589019E922AB1F0F005D0C4D /* RXTMIntToIdObject.h */,
 				589019EA22AB1F0F005D0C4D /* RXTMIntToIdObject.m */,
-				58901C1322AB2EB8005D0C4D /* RXTMImpCachingObject.h */,
-				58901C1422AB2EB8005D0C4D /* RXTMImpCachingObject.m */,
-				58901C1622AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.h */,
-				58901C1722AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.m */,
-				58901C1922AC8F75005D0C4D /* RXTMImpCachingInstance2Object.h */,
-				58901C1A22AC8F75005D0C4D /* RXTMImpCachingInstance2Object.m */,
-				58901C1C22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.h */,
-				58901C1D22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.m */,
+				5841E54922B1E70A00DA4703 /* IMPCaching */,
+				5841E55622B1E7A300DA4703 /* RXTMOwnershipObject.h */,
+				5841E55722B1E7A300DA4703 /* RXTMOwnershipObject.m */,
 			);
 			path = ThreadMemory;
 			sourceTree = "<group>";
@@ -3061,6 +3074,7 @@
 				E818F0F120B9044A00F94127 /* RXMVVMModel.m in Sources */,
 				E818A0A021F079600053ED3E /* RXARCCategoryMethodSubObject.m in Sources */,
 				5821DB382241D88A002AA122 /* RXRSATheoryObject.m in Sources */,
+				5841E55322B1E70A00DA4703 /* RXTMImpCachingInstanceObject.m in Sources */,
 				C9D397A51CF5A29200D8569C /* RXRunTimeDemoObject.m in Sources */,
 				E811CA911FED09FD003157E9 /* RVEventResponseListViewController.m in Sources */,
 				E8F8D7FE21917038007AB027 /* RXAFNTest1Object.m in Sources */,
@@ -3123,12 +3137,14 @@
 				E87C043221D4E7E300B90D74 /* RXInitializeTestObject.m in Sources */,
 				E870204220DA7B2800752211 /* RXCornerRadiusTableViewImpl.m in Sources */,
 				5821DB2E223F8E40002AA122 /* RBDMuteSwitchObject.m in Sources */,
+				5841E55422B1E70A00DA4703 /* RXTMImpCachingInstance3Object.m in Sources */,
 				58901C6022B0A027005D0C4D /* RXTidyMainViewController.m in Sources */,
 				589019CB22A8FD1A005D0C4D /* RXViewLevelViewController.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */,
 				5821DB21223F381B002AA122 /* RXPropertyKeywordObject.m in Sources */,
 				E87C046421DDE5A500B90D74 /* RXObserveTestObject.m in Sources */,
+				5841E55222B1E70A00DA4703 /* RXTMImpCachingInstance2Object.m in Sources */,
 				E8F8D7D8218C3B29007AB027 /* RXAspectsTestObject.m in Sources */,
 				E8433D8420F885D8004A7FBC /* RXRACClassViewController.m in Sources */,
 				58901C2A22ACDD2F005D0C4D /* VKBaseLevel.m in Sources */,
@@ -3215,7 +3231,6 @@
 				5882A3E922A6AFA100449D47 /* RXClassExtObject.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
 				58A18422226467F30066C2D9 /* RXVolumeViewController.m in Sources */,
-				58901C1822AC8DC2005D0C4D /* RXTMImpCachingInstanceObject.m in Sources */,
 				E818A0FE221D4B020053ED3E /* RXAnimationTestObject.m in Sources */,
 				E8433D9620FEDA86004A7FBC /* RXRACMTViewController.m in Sources */,
 				588805A722460F9E00A76039 /* RXKSCrashTestManager.m in Sources */,
@@ -3229,7 +3244,6 @@
 				C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */,
 				58901C4422AE6149005D0C4D /* VKNormalLevelView.m in Sources */,
 				E8B65860222E079D007C0E42 /* RXCHomeViewController.m in Sources */,
-				58901C1522AB2EB8005D0C4D /* RXTMImpCachingObject.m in Sources */,
 				589019CF22A8FFEE005D0C4D /* VKRaptorView.m in Sources */,
 				5882A3EA22A6AFA100449D47 /* RXClassExtensionManager.m in Sources */,
 				E870202920D8E10B00752211 /* RVGCDQueuesViewController.m in Sources */,
@@ -3249,7 +3263,6 @@
 				E872492821BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m in Sources */,
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
 				5821DB28223F8E0E002AA122 /* RXAVAudioTestManager.m in Sources */,
-				58901C1E22AC8F7F005D0C4D /* RXTMImpCachingInstance3Object.m in Sources */,
 				E8433D9020FC9C81004A7FBC /* RXOCKWKindofViewController.m in Sources */,
 				58B7DE24227FCF5500068B70 /* RXDeviceUtil.m in Sources */,
 				E87C047321E3391800B90D74 /* RXClassMetaClassTestObject.m in Sources */,
@@ -3265,9 +3278,10 @@
 				E818A09D21F079470053ED3E /* RXARCCategoryMethodParentObject.m in Sources */,
 				E818A08021ECAB290053ED3E /* RXBlockReferenceValueObject.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
-				58901C1B22AC8F75005D0C4D /* RXTMImpCachingInstance2Object.m in Sources */,
 				E87C044E21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m in Sources */,
+				5841E55822B1E7A300DA4703 /* RXTMOwnershipObject.m in Sources */,
 				588805DD224C66FF00A76039 /* RXStackOverflowManager.m in Sources */,
+				5841E55522B1E70A00DA4703 /* RXTMImpCachingObject.m in Sources */,
 				E818A0BB21F310CB0053ED3E /* RXARCTmpObject.m in Sources */,
 				E8F8D81C21ACF36F007AB027 /* RXAFNTest5Object.m in Sources */,
 				E8F8D7DF218FD6AC007AB027 /* RXCLanguageViewController.mm in Sources */,

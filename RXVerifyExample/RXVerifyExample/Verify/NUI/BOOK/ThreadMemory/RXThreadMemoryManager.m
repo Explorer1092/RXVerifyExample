@@ -12,7 +12,7 @@
 #import "RXTMImpCachingInstanceObject.h"
 #import "RXTMImpCachingInstance2Object.h"
 #import "RXTMImpCachingInstance3Object.h"
-
+#import "RXTMOwnershipObject.h"
 @implementation RXThreadMemoryManager
 
 
@@ -25,7 +25,9 @@
     
 //    [[RXTMImpCachingInstance2Object new] test];
     
-    [[RXTMImpCachingInstance3Object new] test];
+//    [[RXTMImpCachingInstance3Object new] test];
+    
+    [[RXTMOwnershipObject new] test];
 }
 
 
