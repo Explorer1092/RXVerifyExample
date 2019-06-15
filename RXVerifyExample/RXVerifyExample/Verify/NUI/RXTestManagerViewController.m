@@ -10,6 +10,7 @@
 #import "RXSelfRequestManager.h"
 #import "RXClassExtensionManager.h"
 #import "RXThreadMemoryManager.h"
+#import "VKDownloadTestManager.h"
 @interface RXTestManagerViewController ()
 
 @end
@@ -23,7 +24,9 @@
     
 //    [[RXClassExtensionManager sharedInstance] test];
     
-    [[RXThreadMemoryManager sharedInstance] test];
+//    [[RXThreadMemoryManager sharedInstance] test];
+    
+    [[VKDownloadTestManager sharedInstance] test];
     
 }
 

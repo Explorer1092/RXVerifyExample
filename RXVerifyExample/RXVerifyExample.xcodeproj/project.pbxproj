@@ -92,8 +92,14 @@
 		58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660371C2571A700912786 /* RXRefreshView.m */; };
 		58D660491C25A54A00912786 /* RVPopupBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D660471C25A54A00912786 /* RVPopupBoxViewController.m */; };
 		58D6604A1C25A54A00912786 /* RVPopupBoxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D660481C25A54A00912786 /* RVPopupBoxViewController.xib */; };
+		58D89ED822B4C8E800687338 /* VKDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D89ED122B4C8E800687338 /* VKDownloadManager.m */; };
+		58D89ED922B4C8E800687338 /* VKDownloadDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D89ED422B4C8E800687338 /* VKDownloadDefine.m */; };
+		58D89EDA22B4C8E800687338 /* VKDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D89ED622B4C8E800687338 /* VKDownloadOperation.m */; };
+		58D89EDB22B4C8E800687338 /* VKDownloadCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D89ED722B4C8E800687338 /* VKDownloadCacheManager.m */; };
+		58D89EDE22B4C8FA00687338 /* VKDownloadTestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D89EDD22B4C8FA00687338 /* VKDownloadTestManager.m */; };
 		58DAF76222733A9E0008B543 /* RXYellowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58DAF76122733A9E0008B543 /* RXYellowView.m */; };
 		58ED56062297D63B00CB91B6 /* UIWindow+VKProtectEye.m in Sources */ = {isa = PBXBuildFile; fileRef = 58ED56052297D63B00CB91B6 /* UIWindow+VKProtectEye.m */; };
+		58F1C90D22B4FE3C00A83BD3 /* NSString+OnlineClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F1C90C22B4FE3C00A83BD3 /* NSString+OnlineClass.m */; };
 		58FF7D761C4623A200F06976 /* libPaymentControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D741C4623A200F06976 /* libPaymentControl.a */; };
 		58FF7D781C4623DC00F06976 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D771C4623DC00F06976 /* CFNetwork.framework */; };
 		58FF7D7A1C4623E900F06976 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D791C4623E900F06976 /* SystemConfiguration.framework */; };
@@ -529,10 +535,22 @@
 		58D660461C25A54A00912786 /* RVPopupBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVPopupBoxViewController.h; sourceTree = "<group>"; };
 		58D660471C25A54A00912786 /* RVPopupBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVPopupBoxViewController.m; sourceTree = "<group>"; };
 		58D660481C25A54A00912786 /* RVPopupBoxViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVPopupBoxViewController.xib; sourceTree = "<group>"; };
+		58D89ED022B4C8E800687338 /* VKDownloadDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKDownloadDefine.h; sourceTree = "<group>"; };
+		58D89ED122B4C8E800687338 /* VKDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKDownloadManager.m; sourceTree = "<group>"; };
+		58D89ED222B4C8E800687338 /* VKDownloadCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKDownloadCacheManager.h; sourceTree = "<group>"; };
+		58D89ED322B4C8E800687338 /* VKDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKDownloadOperation.h; sourceTree = "<group>"; };
+		58D89ED422B4C8E800687338 /* VKDownloadDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKDownloadDefine.m; sourceTree = "<group>"; };
+		58D89ED522B4C8E800687338 /* VKDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKDownloadManager.h; sourceTree = "<group>"; };
+		58D89ED622B4C8E800687338 /* VKDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKDownloadOperation.m; sourceTree = "<group>"; };
+		58D89ED722B4C8E800687338 /* VKDownloadCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKDownloadCacheManager.m; sourceTree = "<group>"; };
+		58D89EDC22B4C8FA00687338 /* VKDownloadTestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKDownloadTestManager.h; sourceTree = "<group>"; };
+		58D89EDD22B4C8FA00687338 /* VKDownloadTestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKDownloadTestManager.m; sourceTree = "<group>"; };
 		58DAF76022733A9E0008B543 /* RXYellowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXYellowView.h; sourceTree = "<group>"; };
 		58DAF76122733A9E0008B543 /* RXYellowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXYellowView.m; sourceTree = "<group>"; };
 		58ED56042297D63B00CB91B6 /* UIWindow+VKProtectEye.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+VKProtectEye.h"; sourceTree = "<group>"; };
 		58ED56052297D63B00CB91B6 /* UIWindow+VKProtectEye.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+VKProtectEye.m"; sourceTree = "<group>"; };
+		58F1C90B22B4FE3C00A83BD3 /* NSString+OnlineClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+OnlineClass.h"; sourceTree = "<group>"; };
+		58F1C90C22B4FE3C00A83BD3 /* NSString+OnlineClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+OnlineClass.m"; sourceTree = "<group>"; };
 		58FF7D741C4623A200F06976 /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
 		58FF7D751C4623A200F06976 /* UPPaymentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPaymentControl.h; sourceTree = "<group>"; };
 		58FF7D771C4623DC00F06976 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -1199,6 +1217,7 @@
 		583E667A22A611D20080597C /* NUI */ = {
 			isa = PBXGroup;
 			children = (
+				58D89ECF22B4C8E800687338 /* VKDownload */,
 				589019E422AB1E5E005D0C4D /* BOOK */,
 				5882A3E322A6AFA100449D47 /* RXClassExtension */,
 				5882A3DC22A6AF1500449D47 /* RXSelfRequest */,
@@ -1514,6 +1533,25 @@
 				58D660371C2571A700912786 /* RXRefreshView.m */,
 			);
 			path = RXRefreshView;
+			sourceTree = "<group>";
+		};
+		58D89ECF22B4C8E800687338 /* VKDownload */ = {
+			isa = PBXGroup;
+			children = (
+				58F1C90B22B4FE3C00A83BD3 /* NSString+OnlineClass.h */,
+				58F1C90C22B4FE3C00A83BD3 /* NSString+OnlineClass.m */,
+				58D89ED022B4C8E800687338 /* VKDownloadDefine.h */,
+				58D89ED422B4C8E800687338 /* VKDownloadDefine.m */,
+				58D89ED522B4C8E800687338 /* VKDownloadManager.h */,
+				58D89ED122B4C8E800687338 /* VKDownloadManager.m */,
+				58D89ED222B4C8E800687338 /* VKDownloadCacheManager.h */,
+				58D89ED722B4C8E800687338 /* VKDownloadCacheManager.m */,
+				58D89ED322B4C8E800687338 /* VKDownloadOperation.h */,
+				58D89ED622B4C8E800687338 /* VKDownloadOperation.m */,
+				58D89EDC22B4C8FA00687338 /* VKDownloadTestManager.h */,
+				58D89EDD22B4C8FA00687338 /* VKDownloadTestManager.m */,
+			);
+			path = VKDownload;
 			sourceTree = "<group>";
 		};
 		58FF7D721C4623A200F06976 /* Third */ = {
@@ -3027,6 +3065,7 @@
 				E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */,
 				E87C044B21D7133B00B90D74 /* RXMethodSwizzleSafelyObject.m in Sources */,
 				E8F8D7F7219133F8007AB027 /* RXAFSecurityPolicy.m in Sources */,
+				58D89EDA22B4C8E800687338 /* VKDownloadOperation.m in Sources */,
 				C9A7110D1D7BA0880002E703 /* RVCopyViewController.m in Sources */,
 				58901C3E22AE6125005D0C4D /* VKBaseLevelView.m in Sources */,
 				C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */,
@@ -3152,6 +3191,7 @@
 				589019E822AB1E77005D0C4D /* RXThreadMemoryManager.m in Sources */,
 				E85158802140CC99006E23D5 /* UncaughtExceptionHandler.m in Sources */,
 				5821DB3B2241D8A4002AA122 /* RXEncryptDecryptTestManager.m in Sources */,
+				58F1C90D22B4FE3C00A83BD3 /* NSString+OnlineClass.m in Sources */,
 				E872492121BFDC3900EA6A3D /* RXAFStreamingMultipartFormData.m in Sources */,
 				E818A0E42213BF970053ED3E /* RXExternUtil.m in Sources */,
 				E85159CD215890CD006E23D5 /* RXOPMQViewController.m in Sources */,
@@ -3207,6 +3247,7 @@
 				E8B65880222E5674007C0E42 /* RXRouteResponse.m in Sources */,
 				E86050F520A298B60016F6C9 /* RVMsgForwardViewController.m in Sources */,
 				E818A101221D4C890053ED3E /* RXBasicAnimationTestObject.m in Sources */,
+				58D89ED922B4C8E800687338 /* VKDownloadDefine.m in Sources */,
 				E8F8D7E8218FE5B4007AB027 /* rx-objc-cache.mm in Sources */,
 				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
@@ -3251,8 +3292,10 @@
 				E872492D21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.m in Sources */,
 				E87C042C21D4E7AB00B90D74 /* RXInitializeParentObject.m in Sources */,
 				E8433D8820FC7EF7004A7FBC /* RXRACDemoViewController.m in Sources */,
+				58D89EDB22B4C8E800687338 /* VKDownloadCacheManager.m in Sources */,
 				E8F8D7A92187E399007AB027 /* RXMethodListDemoObject+MethodList.m in Sources */,
 				E8433D6A20E39C83004A7FBC /* RXMVVMLoginViewModel.m in Sources */,
+				58D89EDE22B4C8FA00687338 /* VKDownloadTestManager.m in Sources */,
 				C9D474531D16543F000C14E3 /* RVUtilityViewController.m in Sources */,
 				E818A08A21EDE5EB0053ED3E /* RXARCRequestObject.m in Sources */,
 				E86050D220A079050016F6C9 /* RXTargetQueueViewController.m in Sources */,
@@ -3279,6 +3322,7 @@
 				E818A08021ECAB290053ED3E /* RXBlockReferenceValueObject.m in Sources */,
 				58CA8D5B1C1ABEFB00A507BE /* RVTransformViewController.m in Sources */,
 				E87C044E21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m in Sources */,
+				58D89ED822B4C8E800687338 /* VKDownloadManager.m in Sources */,
 				5841E55822B1E7A300DA4703 /* RXTMOwnershipObject.m in Sources */,
 				588805DD224C66FF00A76039 /* RXStackOverflowManager.m in Sources */,
 				5841E55522B1E70A00DA4703 /* RXTMImpCachingObject.m in Sources */,
