@@ -10,12 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^VKDownloadOperationCompletionBlock)(NSURL * _Nullable localURL, NSError * _Nullable error, NSURL * _Nullable redirectURL);
+typedef void(^VKDownloadOperationCompletionBlock)(NSURL * _Nullable localURL, NSError * _Nullable error, NSURL * _Nullable realURL, NSURL * _Nullable redirectURL);
 
 
 @interface VKDownloadOperation : NSOperation
 
-- (id)initWithURL:(NSURL *)url;
+- (id)initWithURLArray:(NSArray *)urlArray destFullPath:(NSString *)destFullPath;
 
 
 @property (assign, nonatomic, getter = isExecuting) BOOL executing;

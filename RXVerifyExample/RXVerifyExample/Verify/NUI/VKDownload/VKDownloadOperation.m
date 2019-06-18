@@ -6,7 +6,6 @@
 //
 
 #import "VKDownloadOperation.h"
-#import "VKDownloadCacheManager.h"
 #import "AFURLSessionManager.h"
 @interface VKDownloadOperation()
 @property (nonatomic, strong) NSURLSession *session;
@@ -18,8 +17,12 @@
 @property (nonatomic, strong) NSURLSessionDownloadTask *task2;
 
 
-
-@property (nonatomic, strong) NSURL *url;
+// 所有可供下载的url地址
+@property (nonatomic, copy) NSArray *urlArray;
+// 当前正在尝试第几个
+@property (nonatomic, assign) NSInteger currentIndex;
+// 存储的目的文件
+@property (nonatomic, copy) NSString *destFullPath;
 @end
 
 @implementation VKDownloadOperation
@@ -28,16 +31,25 @@
 @synthesize finished = _finished;
 
 
-- (id)initWithURL:(NSURL *)url {
+- (id)initWithURLArray:(NSArray *)urlArray destFullPath:(NSString *)destFullPath {
     if (self = [super init]) {
-        self.url = url;
+        self.urlArray = urlArray;
         self.progress = [[NSProgress alloc] initWithParent:nil userInfo:nil];
         self.progress.totalUnitCount = NSURLSessionTransferSizeUnknown;
+        self.currentIndex = 0;
+        self.destFullPath = destFullPath;
     }
     return self;
 }
 
 - (void)start {
+//    self.session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:nil];
+//    self.task = [self.session downloadTaskWithURL:self.url];
+//    [self.task resume];
+    [self startDownload];
+}
+    
+- (void)startDownload {
     if (self.isCancelled) {
         self.finished = YES;
         self.executing = NO;
@@ -45,29 +57,29 @@
     }
     self.executing = YES;
     
-
-//    self.session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:nil];
-//    self.task = [self.session downloadTaskWithURL:self.url];
-//    [self.task resume];
-    
-    
-    
+    NSURL *url = self.urlArray[self.currentIndex];
     NSURLSessionConfiguration *configuration  =  [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc]initWithSessionConfiguration:configuration];
-    NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     __weak typeof(self) weakSelf = self;
     self.task = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
         if (weakSelf.vk_progressBlock) {
             weakSelf.vk_progressBlock(downloadProgress);
         }
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        NSString *fullpath = [[VKDownloadCacheManager sharedInstance] tmpFullPathWithURL:weakSelf.url];
-        return [NSURL fileURLWithPath:fullpath];
-
+        return [NSURL fileURLWithPath:weakSelf.destFullPath];
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        weakSelf.finished = YES;
-        weakSelf.executing = NO;
-        [weakSelf _pvk_completionWithLocalURL:filePath error:error redirectURL:nil];
+        NSInteger nextIndex = weakSelf.currentIndex + 1;
+        // 取下一个备用地址
+        if (error && nextIndex < weakSelf.urlArray.count) {
+            weakSelf.currentIndex = nextIndex;
+            [weakSelf startDownload];
+        } else {
+            weakSelf.finished = YES;
+            weakSelf.executing = NO;
+            [weakSelf _pvk_completionWithLocalURL:filePath error:error realURL:url redirectURL:nil];
+        }
+        
     }];
     [self.task resume];
 }
@@ -110,11 +122,11 @@
 //}
 
 #pragma mark - Private
-- (void)_pvk_completionWithLocalURL:(NSURL *)localURL error:(NSError *)error redirectURL:(NSURL *)redirectURL {
+- (void)_pvk_completionWithLocalURL:(NSURL *)localURL error:(NSError *)error realURL:(NSURL *)realURL redirectURL:(NSURL *)redirectURL {
     __weak __typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
         if (weakSelf.vk_completionBlock) {
-            weakSelf.vk_completionBlock(localURL, error, redirectURL);
+            weakSelf.vk_completionBlock(localURL, error, realURL, redirectURL);
         }
     });
 }

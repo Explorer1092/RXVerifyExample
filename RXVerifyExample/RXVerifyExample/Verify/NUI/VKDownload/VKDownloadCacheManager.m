@@ -42,7 +42,7 @@
     }
     return find;
 }
-- (void)saveWithURL:(NSURL *)url fromURL:(NSURL *)fromURL completionBlock:(VKDownloadCompletionBlock)completionBlock {
+- (void)saveWithURL:(NSURL *)url fromURL:(NSURL *)fromURL completionBlock:(dispatch_block_t)completionBlock {
     __weak typeof(self) weakSelf = self;
     dispatch_async(self.ioQueue, ^{
         NSString *fileName = [weakSelf _pvk_fileNameWithURL:url];
@@ -57,6 +57,9 @@
             NSLog(@"vk_log_download: 移动文件成功 : %@", fileName);
         }
         [weakSelf _pvk_clearIfNeed];
+        if (completionBlock != nil) {
+            completionBlock();
+        }
     });
 }
 - (NSString *)tmpFullPathWithURL:(NSURL *)url {
@@ -191,6 +194,16 @@
     NSString *appCacheDir = [cacheDir stringByAppendingPathComponent:@"online_class"];
     return appCacheDir;
 }
+- (NSURL *)localURLWithURL:(NSURL *)url {
+    NSString *fileName = [self _pvk_fileNameWithURL:url];
+    NSString *fullPath = [self _pvk_fullPathWithFileName:fileName];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    if ([fm fileExistsAtPath:fullPath]) {
+        return [NSURL fileURLWithPath:fullPath];
+    } else {
+        return nil;
+    }
+}
 // 获取缓存临时目录
 - (NSString *)_pvk_tmpDirectory {
     NSString *cacheDir = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -217,7 +230,7 @@
     }
 }
 
-#pragma mark - Signal
+#pragma mark - Singleton
 - (id)init {
     if (self = [super init]) {
         self.cache = [NSCache new];

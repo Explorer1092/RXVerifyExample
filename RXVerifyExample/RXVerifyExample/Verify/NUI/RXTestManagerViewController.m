@@ -24,9 +24,9 @@
     
 //    [[RXClassExtensionManager sharedInstance] test];
     
-    [[RXThreadMemoryManager sharedInstance] test];
+//    [[RXThreadMemoryManager sharedInstance] test];
     
-//    [[VKDownloadTestManager sharedInstance] test];
+    [[VKDownloadTestManager sharedInstance] test];
     
 }
 
