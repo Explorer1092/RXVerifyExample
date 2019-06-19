@@ -56,10 +56,10 @@
 
     
     
-    NSArray *hostArray = @[@"abc.vipkid.com.cn",
-                           @"test-ic-static.vipkid.com.cn",
-                           @"ic-static-ali.vipkid.com.cn",
-                           @"ic-static.vipkid.com.cn"];
+    NSArray *hostArray = @[@"abc.vip_1_1_kid.com.cn",
+                           @"test-ic-static.vip_1_1_kid.com.cn",
+                           @"ic-static-ali.vip_1_1_kid.com.cn",
+                           @"ic-static.vip_1_1_kid.com.cn"];
     NSString *relativePath = @"course/material/DEMO1-U1-LC1-L1/e8680666d9fd646aa5334b62494940b9.mp3";
     [[VKDownloadManager sharedInstance] downloadWithHostArray:hostArray relativePath:relativePath progressBlock:nil completionBlock:^(NSURL * _Nullable localURL, NSError * _Nullable error, VKDownloadCacheType cacheType, NSURL * _Nullable downloadURL) {
         NSLog(@"111");
