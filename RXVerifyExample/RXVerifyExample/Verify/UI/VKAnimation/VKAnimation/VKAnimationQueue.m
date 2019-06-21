@@ -14,10 +14,7 @@
 @property (nonatomic, strong) NSMutableArray<VKAnimationItem *> *animationBlockArray;
 // 当前正在执行的动画
 @property (nonatomic, strong) VKAnimationItem *currentAnimationItem;
-
 @property (nonatomic, strong) NSTimer *timer;
-@property (nonatomic, strong) dispatch_queue_t timerQueue;
-
 @end
 @implementation VKAnimationQueue
 
@@ -54,7 +51,6 @@
 
 - (void)continueAnimation {
     self.currentAnimationItem = nil;
-    [self _pvk_stopTimer];
     @synchronized (self.animationBlockArray) {
         if (self.animationBlockArray.count == 0) {
             [self _pvk_stopTimer];
@@ -100,7 +96,7 @@
 #pragma mark - timer
 - (void)_pvk_startTimer {
     __weak typeof(self) weakSelf = self;
-    dispatch_async(self.timerQueue, ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (strongSelf.timer == nil) {
             strongSelf.timer = [VKWeakTimer scheduledTimerWithTimeInterval:10 target:strongSelf selector:@selector(_pvk_timerAction) userInfo:nil repeats:YES];
@@ -109,7 +105,7 @@
 }
 - (void)_pvk_stopTimer {
     __weak typeof(self) weakSelf = self;
-    dispatch_async(self.timerQueue, ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf.timer invalidate];
         strongSelf.timer = nil;
@@ -124,7 +120,6 @@
 - (id)init {
     if (self = [super init]) {
         self.animationBlockArray = [NSMutableArray new];
-        self.timerQueue = dispatch_queue_create("www.vk.animation.queue.timer", DISPATCH_QUEUE_SERIAL);
     }
     return self;
 }

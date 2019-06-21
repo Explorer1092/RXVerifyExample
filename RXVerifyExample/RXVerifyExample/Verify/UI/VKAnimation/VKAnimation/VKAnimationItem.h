@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 执行的动画任务
 @property (nonatomic, copy) dispatch_block_t executeBlock;
 // 当执行动画完成后(或者失败),需要清理的资源,此值可以为空
+// 这个是补偿机制,千万不要依赖这个,要不然会导致交互不流畅
 @property (nonatomic, copy, nullable) dispatch_block_t eliminateBlock;
 @property (nonatomic, readonly, strong) NSDate *createDate;
 // 动画开始执行时间

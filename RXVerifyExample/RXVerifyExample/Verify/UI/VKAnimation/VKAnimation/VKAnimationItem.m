@@ -17,7 +17,7 @@
 - (id)init {
     if (self = [super init]) {
         self.createDate = [NSDate new];
-        self.expiredSeconds = 60;
+        self.expiredSeconds = 20;
     }
     return self;
 }
