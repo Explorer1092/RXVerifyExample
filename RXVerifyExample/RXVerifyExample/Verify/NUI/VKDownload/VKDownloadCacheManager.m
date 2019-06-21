@@ -42,23 +42,27 @@
     }
     return find;
 }
-- (void)saveWithURL:(NSURL *)url fromURL:(NSURL *)fromURL completionBlock:(dispatch_block_t)completionBlock {
+- (void)saveWithURL:(NSURL *)url fromURL:(NSURL *)fromURL completionBlock:(void(^)(NSURL *newLocalURL))completionBlock {
     __weak typeof(self) weakSelf = self;
     dispatch_async(self.ioQueue, ^{
-        NSString *fileName = [weakSelf _pvk_fileNameWithURL:url];
-        NSString *fullPath = [weakSelf _pvk_fullPathWithFileName:fileName];
-        NSURL *fullPathURL = [NSURL fileURLWithPath:fullPath];
-        NSFileManager *fm = [NSFileManager defaultManager];
-        NSError *error = nil;
-        [fm moveItemAtURL:fromURL toURL:fullPathURL error:&error];
-        if (error != nil) {
-            NSLog(@"vk_log_download: 移动文件失败");
-        } else {
-            NSLog(@"vk_log_download: 移动文件成功 : %@", fileName);
+        NSURL *newURL = nil;
+        if (fromURL != nil) {
+            NSString *fileName = [weakSelf _pvk_fileNameWithURL:url];
+            NSString *fullPath = [weakSelf _pvk_fullPathWithFileName:fileName];
+            NSURL *fullPathURL = [NSURL fileURLWithPath:fullPath];
+            newURL = fullPathURL;
+            NSFileManager *fm = [NSFileManager defaultManager];
+            NSError *error = nil;
+            [fm moveItemAtURL:fromURL toURL:fullPathURL error:&error];
+            if (error != nil) {
+                NSLog(@"vk_log_download: 移动文件失败");
+            } else {
+                NSLog(@"vk_log_download: 移动文件成功 : %@", fileName);
+            }
+            [weakSelf _pvk_clearIfNeed];
         }
-        [weakSelf _pvk_clearIfNeed];
         if (completionBlock != nil) {
-            completionBlock();
+            completionBlock(newURL);
         }
     });
 }

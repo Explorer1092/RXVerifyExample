@@ -23,10 +23,11 @@
 - (NSOperation *)downloadWithURL:(nullable NSURL *)url progressBlock:(nullable VKDownloadProgressBlock)progressBlock completionBlock:(nullable VKDownloadCompletionBlock)completionBlock {
     return [self downloadWithURLArray:@[url] progressBlock:progressBlock completionBlock:completionBlock];
 }
+
 - (NSOperation *)downloadWithHostArray:(nullable NSArray *)hostArray relativePath:(NSString *)relativePath progressBlock:(nullable VKDownloadProgressBlock)progressBlock completionBlock:(nullable VKDownloadCompletionBlock)completionBlock {
     NSMutableArray *urlArray = [NSMutableArray new];
     for (NSString *host in hostArray) {
-        NSString *prefix = [host hasPrefix:@"http"] ? @"" : @"http://";
+        NSString *prefix = [self _pvk_maybePrefixWithPath:host];
         NSString *fullPath = [NSString stringWithFormat:@"%@%@/%@", prefix, host, relativePath];
         NSURL *url = [NSURL URLWithString:fullPath];
         [urlArray addObject:url];
@@ -34,7 +35,7 @@
     return [self downloadWithURLArray:urlArray progressBlock:progressBlock completionBlock:completionBlock];
 }
 - (NSOperation *)downloadWithPath:(NSString *)path progressBlock:(nullable VKDownloadProgressBlock)progressBlock completionBlock:(nullable VKDownloadCompletionBlock)completionBlock {
-    NSString *prefix = [path hasPrefix:@"http"] ? @"" : @"http://";
+    NSString *prefix = [self _pvk_maybePrefixWithPath:path];
     NSString *fullPath = [NSString stringWithFormat:@"%@%@", prefix, path];
     NSURL *url = [NSURL URLWithString:fullPath];
     NSArray *urlArray = @[url];
@@ -67,9 +68,9 @@
                 return;
             }
             [weakSelf _pvk_removeOperationWithKey:key];
-            [[VKDownloadCacheManager sharedInstance] saveWithURL:keyURL fromURL:localURL completionBlock:^{
+            [[VKDownloadCacheManager sharedInstance] saveWithURL:keyURL fromURL:localURL completionBlock:^(NSURL *newLocalURL){
                 VKDownloadCacheType cacheType = error != nil ? VKDownloadCacheType_None : VKDownloadCacheType_Network;
-                [weakSelf _pvk_main_executBlock:completionBlock localURL:localURL error:error cacheType:cacheType downloadURL:realURL];
+                [weakSelf _pvk_main_executBlock:completionBlock localURL:newLocalURL error:error cacheType:cacheType downloadURL:realURL];
             }];
         };
         operation.vk_progressBlock = progressBlock;
@@ -88,7 +89,13 @@
     
     
 #pragma mark - Private
-    
+- (NSString *)_pvk_maybePrefixWithPath:(NSString *)path {
+    NSString *prefix = [path hasPrefix:@"http"] ? @"" : @"http://";
+    if ([path hasPrefix:@"//"]) {
+        prefix = @"http:";
+    }
+    return prefix;
+}
 - (void)_pvk_main_executBlock:(VKDownloadCompletionBlock)block localURL:(NSURL *)localURL error:(NSError *)error cacheType:(VKDownloadCacheType)cacheType downloadURL:(NSURL *)downloadURL {
     if (block == nil) {
         return;
