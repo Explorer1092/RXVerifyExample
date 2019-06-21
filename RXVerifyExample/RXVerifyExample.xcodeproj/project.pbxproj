@@ -37,6 +37,11 @@
 		5841E55422B1E70A00DA4703 /* RXTMImpCachingInstance3Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 5841E54D22B1E70A00DA4703 /* RXTMImpCachingInstance3Object.m */; };
 		5841E55522B1E70A00DA4703 /* RXTMImpCachingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5841E54E22B1E70A00DA4703 /* RXTMImpCachingObject.m */; };
 		5841E55822B1E7A300DA4703 /* RXTMOwnershipObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5841E55722B1E7A300DA4703 /* RXTMOwnershipObject.m */; };
+		5849F89122BCC219002F29FF /* RXMaskViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5849F89022BCC219002F29FF /* RXMaskViewViewController.m */; };
+		5849F8AB22BCFFD7002F29FF /* VKAnimationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5849F8A622BCFFD7002F29FF /* VKAnimationItem.m */; };
+		5849F8AC22BCFFD7002F29FF /* VKAnimationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5849F8A922BCFFD7002F29FF /* VKAnimationQueue.m */; };
+		5849F8AD22BCFFD7002F29FF /* VKWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5849F8AA22BCFFD7002F29FF /* VKWeakTimer.m */; };
+		5849F8B022BCFFE9002F29FF /* VKAnimationQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5849F8AF22BCFFE9002F29FF /* VKAnimationQueueViewController.m */; };
 		5850B26C1BF47F2A00EC9144 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26B1BF47F2A00EC9144 /* main.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5850B26E1BF47F2A00EC9144 /* AppDelegate.m */; };
 		5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5850B2761BF47F2A00EC9144 /* Assets.xcassets */; };
@@ -434,6 +439,16 @@
 		5841E55122B1E70A00DA4703 /* RXTMImpCachingInstanceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXTMImpCachingInstanceObject.h; sourceTree = "<group>"; };
 		5841E55622B1E7A300DA4703 /* RXTMOwnershipObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTMOwnershipObject.h; sourceTree = "<group>"; };
 		5841E55722B1E7A300DA4703 /* RXTMOwnershipObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTMOwnershipObject.m; sourceTree = "<group>"; };
+		5849F88F22BCC219002F29FF /* RXMaskViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMaskViewViewController.h; sourceTree = "<group>"; };
+		5849F89022BCC219002F29FF /* RXMaskViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMaskViewViewController.m; sourceTree = "<group>"; };
+		5849F8A522BCFFD7002F29FF /* VKAnimationQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKAnimationQueue.h; sourceTree = "<group>"; };
+		5849F8A622BCFFD7002F29FF /* VKAnimationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKAnimationItem.m; sourceTree = "<group>"; };
+		5849F8A722BCFFD7002F29FF /* VKWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKWeakTimer.h; sourceTree = "<group>"; };
+		5849F8A822BCFFD7002F29FF /* VKAnimationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKAnimationItem.h; sourceTree = "<group>"; };
+		5849F8A922BCFFD7002F29FF /* VKAnimationQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKAnimationQueue.m; sourceTree = "<group>"; };
+		5849F8AA22BCFFD7002F29FF /* VKWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKWeakTimer.m; sourceTree = "<group>"; };
+		5849F8AE22BCFFE9002F29FF /* VKAnimationQueueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKAnimationQueueViewController.h; sourceTree = "<group>"; };
+		5849F8AF22BCFFE9002F29FF /* VKAnimationQueueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKAnimationQueueViewController.m; sourceTree = "<group>"; };
 		5850B2671BF47F2A00EC9144 /* RXVerifyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RXVerifyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5850B26B1BF47F2A00EC9144 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		5850B26D1BF47F2A00EC9144 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1208,6 +1223,8 @@
 		583E667922A611D20080597C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5849F89A22BCFF7F002F29FF /* VKAnimation */,
+				5849F88E22BCC207002F29FF /* MaskView */,
 				58901C3122AE0737005D0C4D /* WindowLevel */,
 				589019C822A8FD09005D0C4D /* ViewLevel */,
 			);
@@ -1240,6 +1257,38 @@
 				5841E54D22B1E70A00DA4703 /* RXTMImpCachingInstance3Object.m */,
 			);
 			path = IMPCaching;
+			sourceTree = "<group>";
+		};
+		5849F88E22BCC207002F29FF /* MaskView */ = {
+			isa = PBXGroup;
+			children = (
+				5849F88F22BCC219002F29FF /* RXMaskViewViewController.h */,
+				5849F89022BCC219002F29FF /* RXMaskViewViewController.m */,
+			);
+			path = MaskView;
+			sourceTree = "<group>";
+		};
+		5849F89A22BCFF7F002F29FF /* VKAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				5849F8A422BCFFD7002F29FF /* VKAnimation */,
+				5849F8AE22BCFFE9002F29FF /* VKAnimationQueueViewController.h */,
+				5849F8AF22BCFFE9002F29FF /* VKAnimationQueueViewController.m */,
+			);
+			path = VKAnimation;
+			sourceTree = "<group>";
+		};
+		5849F8A422BCFFD7002F29FF /* VKAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				5849F8A522BCFFD7002F29FF /* VKAnimationQueue.h */,
+				5849F8A922BCFFD7002F29FF /* VKAnimationQueue.m */,
+				5849F8A822BCFFD7002F29FF /* VKAnimationItem.h */,
+				5849F8A622BCFFD7002F29FF /* VKAnimationItem.m */,
+				5849F8A722BCFFD7002F29FF /* VKWeakTimer.h */,
+				5849F8AA22BCFFD7002F29FF /* VKWeakTimer.m */,
+			);
+			path = VKAnimation;
 			sourceTree = "<group>";
 		};
 		5850B25E1BF47F2A00EC9144 = {
@@ -3038,6 +3087,7 @@
 				E8B6584A2227CBDF007C0E42 /* RXSelfSuperClassA.m in Sources */,
 				E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */,
 				E870202620D39A3800752211 /* RXSYViewController.m in Sources */,
+				5849F8B022BCFFE9002F29FF /* VKAnimationQueueViewController.m in Sources */,
 				E872496921CFAC5B00EA6A3D /* RXAFURLSessionManagerTaskDelegate.m in Sources */,
 				E87C045721DA183100B90D74 /* RXCountryWeatherApi.m in Sources */,
 				E86050FB20A29A9D0016F6C9 /* RVMsgForwardProxy.m in Sources */,
@@ -3158,6 +3208,7 @@
 				E8F8D7D5218C3A16007AB027 /* RXAspects.m in Sources */,
 				58DAF76222733A9E0008B543 /* RXYellowView.m in Sources */,
 				E872493321C3E09F00EA6A3D /* RXAFURLResponseSerialization.m in Sources */,
+				5849F8AB22BCFFD7002F29FF /* VKAnimationItem.m in Sources */,
 				E818A0EB2214192E0053ED3E /* RXJLRouterViewController.m in Sources */,
 				E86050E720A07A1B0016F6C9 /* RVRunTimeViewController.m in Sources */,
 				58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */,
@@ -3237,6 +3288,7 @@
 				E8433D7B20EA51D9004A7FBC /* RXRACViewController.m in Sources */,
 				E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */,
 				E872495221C9EFF800EA6A3D /* RXUtilViewController.m in Sources */,
+				5849F8AD22BCFFD7002F29FF /* VKWeakTimer.m in Sources */,
 				E872494221C5293300EA6A3D /* RXAFPropertyListResponseSerializer.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				E818F0EE20B9043400F94127 /* RXMVVMViewController.m in Sources */,
@@ -3324,6 +3376,7 @@
 				E87C044E21D7134900B90D74 /* RXMethodSwizzleOverrideSafelyObject.m in Sources */,
 				58D89ED822B4C8E800687338 /* VKDownloadManager.m in Sources */,
 				5841E55822B1E7A300DA4703 /* RXTMOwnershipObject.m in Sources */,
+				5849F8AC22BCFFD7002F29FF /* VKAnimationQueue.m in Sources */,
 				588805DD224C66FF00A76039 /* RXStackOverflowManager.m in Sources */,
 				5841E55522B1E70A00DA4703 /* RXTMImpCachingObject.m in Sources */,
 				E818A0BB21F310CB0053ED3E /* RXARCTmpObject.m in Sources */,
@@ -3336,6 +3389,7 @@
 				C937947D1CE331D30065F68C /* RVViewCycleViewController.m in Sources */,
 				C928B26E1FB93E530038ECE6 /* RVLLDBViewController.m in Sources */,
 				E87C047621E33C4C00B90D74 /* RXClassMetaClassOverrideObject.m in Sources */,
+				5849F89122BCC219002F29FF /* RXMaskViewViewController.m in Sources */,
 				E818A0B521F307830053ED3E /* RXMRCUtil.m in Sources */,
 				E872496D21CFACF700EA6A3D /* RXAFURLSessionManagerPublicDefine.m in Sources */,
 				E8433D6720E39A34004A7FBC /* RXMVVMLoginViewController.m in Sources */,

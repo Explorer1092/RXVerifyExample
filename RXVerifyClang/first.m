@@ -1,25 +1,26 @@
+
 #import <Foundation/Foundation.h>
 
-@interface TmpObject : NSObject
-
-@end
-
-@implementation TmpObject
-
-+ (id)array {
-    return [[NSMutableArray alloc] init];
+typedef int (^blk_t)(int);
+blk_t funccccccccc(int rate)
+{
+    return ^(int count) {
+    	return rate * count;
+    };
 }
 
-@end
-
-
-
-
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-//        NSLog(@"你好世界!");
-        NSObject *obj = [[NSObject alloc] init];
-    }
-    return 0;
+id funbbbbbbbbbbbbb() {
+	NSObject *obj1 = [NSObject new];
+	NSLog(@"%@", obj1);
+	return [[NSObject alloc] init];
 }
+
+
+// int main(int argc, const char * argv[]) {
+//     @autoreleasepool {
+//         // insert code here...
+// //        NSLog(@"你好世界!");
+//         NSObject *obj = [[NSObject alloc] init];
+//     }
+//     return 0;
+// }
