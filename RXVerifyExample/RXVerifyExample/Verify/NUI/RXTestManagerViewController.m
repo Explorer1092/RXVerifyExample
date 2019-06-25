@@ -11,6 +11,18 @@
 #import "RXClassExtensionManager.h"
 #import "RXThreadMemoryManager.h"
 #import "VKDownloadTestManager.h"
+
+@interface RXAAAA : NSObject
+@end
+
+@implementation RXAAAA
++ (id)array {
+    return [[NSMutableArray alloc] init];
+}
+@end
+
+
+
 @interface RXTestManagerViewController ()
 
 @end
@@ -19,6 +31,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    __weak id value = [RXAAAA array];
+    NSLog(@"%@", value);
+    
     // Do any additional setup after loading the view.
 //    [[RXSelfRequestManager sharedInstance] test];
     

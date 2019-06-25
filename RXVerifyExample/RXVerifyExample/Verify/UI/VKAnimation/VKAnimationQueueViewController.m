@@ -22,7 +22,7 @@
     self.animationQueue = [VKAnimationQueue new];
     
     
-    [self test2];
+    [self test1];
     
 }
 
@@ -41,10 +41,12 @@
         NSLog(@"block4");
     };
     
-    [weakSelf.animationQueue addAnimation:block1];
-    [weakSelf.animationQueue addAnimation:block2];
-    [weakSelf.animationQueue addAnimation:block3];
-    [weakSelf.animationQueue addAnimation:block4];
+//    [weakSelf.animationQueue addAnimation:block1];
+//    [weakSelf.animationQueue addAnimation:block2];
+//    [weakSelf.animationQueue addAnimation:block3];
+//    [weakSelf.animationQueue addAnimation:block4];
+    
+    [weakSelf.animationQueue addAnimations:@[block1, block2, block3, block4]];
 }
 
 - (void)test2 {
@@ -68,6 +70,8 @@
         });
     }
 }
+
+
 
 /*
 #pragma mark - Navigation

@@ -68,7 +68,8 @@
                 return;
             }
             [weakSelf _pvk_removeOperationWithKey:key];
-            [[VKDownloadCacheManager sharedInstance] saveWithURL:keyURL fromURL:localURL completionBlock:^(NSURL *newLocalURL){
+            NSURL *fromURL = error ? nil : localURL;
+            [[VKDownloadCacheManager sharedInstance] saveWithURL:keyURL fromURL:fromURL completionBlock:^(NSURL *newLocalURL){
                 VKDownloadCacheType cacheType = error != nil ? VKDownloadCacheType_None : VKDownloadCacheType_Network;
                 [weakSelf _pvk_main_executBlock:completionBlock localURL:newLocalURL error:error cacheType:cacheType downloadURL:realURL];
             }];

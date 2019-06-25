@@ -67,14 +67,21 @@
             weakSelf.vk_progressBlock(downloadProgress);
         }
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        if ([url.path hasPrefix:@"http://ic-static-ali.vipkid.com.cn"]) {
+            NSLog(@"1111");
+        }
         return [NSURL fileURLWithPath:weakSelf.destFullPath];
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         NSInteger nextIndex = weakSelf.currentIndex + 1;
         // 取下一个备用地址
         if (error && nextIndex < weakSelf.urlArray.count) {
+            [[NSFileManager defaultManager] removeItemAtPath:weakSelf.destFullPath error:nil];
             weakSelf.currentIndex = nextIndex;
             [weakSelf startDownload];
         } else {
+            if ([url.path hasPrefix:@"http://ic-static-ali.vipkid.com.cn"]) {
+                NSLog(@"1111");
+            }
             weakSelf.finished = YES;
             weakSelf.executing = NO;
             [weakSelf _pvk_completionWithLocalURL:filePath error:error realURL:url redirectURL:nil];

@@ -8,6 +8,7 @@
 
 #import "VKDownloadTestManager.h"
 #import "VKDownloadManager.h"
+#import "VKDownloadCacheManager.h"
 @implementation VKDownloadTestManager
 
 - (void)test {
@@ -45,13 +46,13 @@
 //    str = @"";
 //    [self test_tmp:str];
     
-//    str = @"http://ic-static-ali.vipkid.com.cn/course/material/DEMO1-U1-LC1-L1/e8680666d9fd646aa5334b62494940b9.mp3";
+//    str = @"http://ic-static-ali.vip_1_1_kid.com.cn/course/material/DEMO1-U1-LC1-L1/e8680666d9fd646aa5334b62494940b9.mp3";
 //    [self test_tmp:str];
     
 //    [[VKDownloadManager sharedInstance] downloadWithURL:nil completionBlock:^(NSURL * _Nullable localURL, NSError * _Nullable error, VKDownloadCacheType cacheType, NSURL * _Nullable downloadURL) {
 //        NSLog(@"1111: %@", [NSThread currentThread]);
 //    }];
-//    NSString *str1 = @"ic-static-ali.vipkid.com.cn/course/material/DEMO1-U1-LC1-L1/e8680666d9fd646aa5334b62494940b9.mp3";
+//    NSString *str1 = @"ic-static-ali.vip_1_1_kid.com.cn/course/material/DEMO1-U1-LC1-L1/e8680666d9fd646aa5334b62494940b9.mp3";
 //    [[VKDownloadManager sharedInstance] downloadWithPath:str1 progressBlock:nil completionBlock:^(NSURL * _Nullable localURL, NSError * _Nullable error, VKDownloadCacheType cacheType, NSURL * _Nullable downloadURL) {
 //        NSLog(@"!1111");
 //    }];
@@ -68,9 +69,27 @@
 //        NSLog(@"111");
 //    }];
     
-    NSString *filePath = @"http://vps-ve.vipkid.com.cn/videoedit/beta/bench/separatevideoaudio/1140909470830825472/1140909470830825472_0.mp3";
-    [[VKDownloadManager sharedInstance] downloadWithPath:filePath progressBlock:nil completionBlock:^(NSURL * _Nullable localURL, NSError * _Nullable error, VKDownloadCacheType cacheType, NSURL * _Nullable downloadURL) {
-        NSLog(@"111");
+    NSString *filePath = @"http://vps-ve.vip_1_1_kid.com.cn/videoedit/beta/bench/separatevideoaudio/1140909470830825472/1140909470830825472_0.mp3";
+    
+    filePath = @"http://test-ic-static.vip_1_1_kid.com.cn/course/material/DEMO1-U1-LC1-L110/b825c00cf93ebe264734e6063003f7ab.mp3";
+    filePath = @"https://test-ic-static.vip_1_1_kid.com.cn/course/material/DEMO1-U1-LC1-L110/b825c00cf93ebe264734e6063003f7ab.mp3";
+    
+    
+    NSArray *ary = @[
+                     @"test-ic-static.vip_1_1_kid.com.cn",
+                     @"ic-static-ali.vip_1_1_kid.com.cn",
+                     @"ic-static.vip_1_1_kid.com.cn"
+                     ];
+    NSString *relate = @"/course/material/DEMO1-U1-LC1-L110/b825c00cf93ebe264734e6063003f7ab.mp3";
+//    [[VKDownloadManager sharedInstance] downloadWithPath:filePath progressBlock:nil completionBlock:^(NSURL * _Nullable localURL, NSError * _Nullable error, VKDownloadCacheType cacheType, NSURL * _Nullable downloadURL) {
+//        NSLog(@"111");
+//    }];
+    
+    [[VKDownloadCacheManager sharedInstance] clearAll];
+    [[VKDownloadManager sharedInstance] downloadWithHostArray:ary relativePath:relate progressBlock:nil completionBlock:^(NSURL * _Nullable localURL, NSError * _Nullable error, VKDownloadCacheType cacheType, NSURL * _Nullable downloadURL) {
+        NSInteger length = [NSData dataWithContentsOfURL:localURL].length;
+        
+        NSLog(@"length:%d", length);
     }];
 }
 - (void)test_tmp:(NSString *)str {

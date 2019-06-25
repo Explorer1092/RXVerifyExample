@@ -1,26 +1,43 @@
 
 #import <Foundation/Foundation.h>
 
-typedef int (^blk_t)(int);
-blk_t funccccccccc(int rate)
-{
-    return ^(int count) {
-    	return rate * count;
-    };
+
+@interface RXAAAA : NSObject
+@end
+
+@implementation RXAAAA
++ (id)array {
+    return [[NSMutableArray alloc] init];
+}
+@end
+
+
+int main1(int argc, const char * argv[]) {
+    id value = [RXAAAA array];
+    return 0;
+}
+int main1_1(int argc, const char * argv[]) {
+    id value = [RXAAAA array];
+    NSLog(@"%@", value);
+    return 0;
 }
 
-id funbbbbbbbbbbbbb() {
-	NSObject *obj1 = [NSObject new];
-	NSLog(@"%@", obj1);
-	return [[NSObject alloc] init];
+int main2(int argc, const char * argv[]) {
+    __weak id value = [RXAAAA array];
+    NSLog(@"%@", value);
+    return 0;
 }
-
-
-// int main(int argc, const char * argv[]) {
-//     @autoreleasepool {
-//         // insert code here...
-// //        NSLog(@"你好世界!");
-//         NSObject *obj = [[NSObject alloc] init];
-//     }
-//     return 0;
-// }
+int main2_2(int argc, const char * argv[]) {
+    __weak id value = [RXAAAA array];
+    return 0;
+}
+int main3(int argc, const char * argv[]) {
+    __autoreleasing id value = [RXAAAA array];
+    NSLog(@"%@", value);
+    return 0;
+}
+int main4(int argc, const char * argv[]) {
+    __unsafe_unretained id value = [RXAAAA array];
+    NSLog(@"%@", value);
+    return 0;
+}
