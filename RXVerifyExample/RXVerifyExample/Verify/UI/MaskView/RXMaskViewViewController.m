@@ -9,163 +9,100 @@
 #import "RXMaskViewViewController.h"
 
 @interface RXMaskViewViewController ()
+@property (nonatomic, strong) UIView *bgView;
+@property (nonatomic, strong) UIImageView *imageView;
+
+@property (nonatomic, assign) CGFloat imageWidth;
+@property (nonatomic, assign) CGFloat imageHeight;
 
 @end
 
 @implementation RXMaskViewViewController
-//- (void)resetTeacherViewLayer
-//{
-//    if(self.remoteLayer)
-//    {
-//        [self.remoteLayer removeFromSuperlayer];
-//    }
-//
-//    UIImage *img = [self.roomView skinImageWithKey:VKRoomSkinBackgroundImgKey];
-//    UIView *view = self.remoteVideoView.superview.superview.superview;
-//
-//    CGRect rect=[self.remoteVideoView convertRect:self.remoteVideoView.bounds toView:view];
-//
-//    CALayer *layer = [CALayer layer];
-//    self.remoteLayer = layer;
-//    layer.frame = self.remoteVideoView.bounds;
-//    [self.remoteVideoView.layer addSublayer:layer];
-//
-//    UIGraphicsBeginImageContextWithOptions(self.remoteVideoView.bounds.size, NO, [UIScreen mainScreen].scale);
-//    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:layer.bounds cornerRadius:VKRaptorRoomValue(20)];
-//    [[UIColor clearColor] setFill];
-//
-//    [img drawInRect:CGRectMake(-(rect.origin.x), -(rect.origin.y), view.size.width, view.size.height)];
-//
-//    [path fillWithBlendMode:kCGBlendModeClear alpha:0];
-//    layer.contents = (__bridge id)(UIGraphicsGetImageFromCurrentImageContext().CGImage);
-//    UIGraphicsEndImageContext();
-//}
-- (CAShapeLayer *)maskStyle1:(CGRect)rect {
-    CGFloat x = rect.size.width/2.0;
-    CGFloat y = rect.size.height/2.0;
-    CGFloat radius = MIN(x, y);
-    //
-    UIBezierPath *cycle = [UIBezierPath bezierPathWithArcCenter:CGPointMake(x, y)
-                                                         radius:radius
-                                                     startAngle:0.0
-                                                       endAngle:2*M_PI
-                                                      clockwise:YES];
-    //
-    CAShapeLayer *maskLayer = [CAShapeLayer layer];
-    maskLayer.path = [cycle CGPath];
-    maskLayer.fillRule = kCAFillRuleNonZero;
-    
-    return maskLayer;
-}
-- (CAShapeLayer *)maskStyle2:(CGRect)rect {
-    //
-    UIBezierPath *path = [UIBezierPath bezierPathWithRect:rect];
-    
-    CGFloat x = rect.size.width/2.0;
-    CGFloat y = rect.size.height/2.0;
-    CGFloat radius = MIN(x, y);
-    //
-    UIBezierPath *cycle = [UIBezierPath bezierPathWithArcCenter:CGPointMake(x, y)
-                                                         radius:radius
-                                                     startAngle:0.0
-                                                       endAngle:2*M_PI
-                                                      clockwise:YES];
-    [path appendPath:cycle];
-    //
-    CAShapeLayer *maskLayer = [CAShapeLayer layer];
-    maskLayer.path = [path CGPath];
-    maskLayer.fillRule = kCAFillRuleEvenOdd;
-    maskLayer.backgroundColor = [UIColor clearColor].CGColor;
-    
-    return maskLayer;
-}
-- (void)test1 {
-    CGFloat width = 200;
-    UIView *destView = [[UIView alloc] initWithFrame:CGRectMake(100, 300, width, width)];
-    destView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:destView];
-    
-    
-    
-    UIImage *img = [[UIColor blackColor] rx_imageWithSize:CGSizeMake(self.view.size.width, self.view.height)];
-    UIView *view = destView.superview;
-    CGRect rect = [destView convertRect:destView.bounds toView:view];
-    CALayer *layer = [CALayer layer];
-    [destView.layer addSublayer:layer];
-    layer.frame = destView.bounds;
-    UIGraphicsBeginImageContextWithOptions(destView.bounds.size, NO, [UIScreen mainScreen].scale);
-    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:layer.bounds cornerRadius:20];
-    [[UIColor clearColor] setFill];
-    [img drawInRect:CGRectMake(-(rect.origin.x), -(rect.origin.y), view.size.width, view.size.height)];
-    [path fillWithBlendMode:kCGBlendModeClear alpha:0];
-    layer.contents = (__bridge id)(UIGraphicsGetImageFromCurrentImageContext().CGImage);
-    UIGraphicsEndImageContext();
-}
-- (void)test2 {
-    CGFloat width = 200;
-    UIView *destView = [[UIView alloc] initWithFrame:CGRectMake(100, 300, 300, width)];
-    destView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:destView];
-    
-    
-    //创建layer
-    CALayer *layer = [CALayer layer];
-    //设置bounds
-    layer.bounds = destView.bounds;
-    //设置中心点位置（默认中心点）
-    layer.position = CGPointMake(width/ 2.0, width / 2.0);
-    //背景颜色
-    layer.backgroundColor = [UIColor orangeColor].CGColor;
-    //添加到视图上
-    [destView.layer addSublayer:layer];
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    UIImage *image = [UIImage imageNamed:@"logo250"];
+    self.imageWidth = 300;
+    self.imageHeight = 200;
     
-    [self test2];
+    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, self.imageWidth, self.imageHeight)];
+    self.bgView.backgroundColor = [UIColor blackColor];
     
-    
-    
-    
-    
-    
-//    CALayer *layer = [CALayer layer];
-//    layer.frame = CGRectMake(0, 0, width, width);
-//
-//    [view.layer addSublayer:layer];
-    
-//    uiview *view1 = [[uiview alloc]initwithframe:cgrectmake(10, 100, 300, 400)];
-//    view1.backgroundcolor = [uicolor redcolor];
-//    [self.view addsubview:view1];
-//    UIBezierPath *path = [UIBezierPath bezierpathwithroundedrect:view1.bounds byroundingcorners:uirectcornertopright| uirectcornertopleft cornerradii:cgsizemake(10, 10)];//指定圆角位置 大小
-//    NSLog(@"%@", NSStringFromCGRect(view.bounds));
-//    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:view.bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(100, 100)];
-//
-//    CAShapeLayer *masklayer = [[CAShapeLayer alloc] init];
-//    masklayer.frame = view.bounds;
-//    masklayer.path = path.CGPath;
-//    view.layer.mask = masklayer;
-    
-
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, self.imageWidth, self.imageHeight)];
+    self.imageView.image = image;
     
     
-//    CALayer *maskLayer = [self maskStyle2:CGRectMake(0, 0, width, width)];
-
+    [self.view addSubview:self.bgView];
+    [self.view addSubview:self.imageView];
     
-//    [view.layer addSublayer:maskLayer];
-    
-    
-//    UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(100, 300, width, width)];
-//    view2.backgroundColor = [UIColor greenColor];
-//
-//
-//    [self.view addSubview:view2];
-//    [self.view addSubview:destView];
+//    [self test1];
+//    [self test2];
+//    [self test3];
+    [self test4];
 }
+
+- (CGRect)layerFrame {
+    CGFloat squareWidth = MIN(self.imageWidth, self.imageHeight);
+    CGFloat x = (self.imageWidth - squareWidth) / 2.0f;
+    CGFloat y = (self.imageHeight - squareWidth) / 2.0f;
+    return CGRectMake(x, y, squareWidth, squareWidth);
+}
+
+- (CAShapeLayer *)triangleShapeLayer {
+    CGRect layerFrame = [self layerFrame];
+    CGFloat width = layerFrame.size.width;
+    CGFloat halfWidth = width / 2.0;
+    CGFloat x = layerFrame.origin.x;
+    CGFloat y = layerFrame.origin.y;
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathMoveToPoint(path, NULL, x, halfWidth + y);
+    CGPathAddLineToPoint(path, NULL, x + width, 0 + y);
+    CGPathAddLineToPoint(path, NULL, x + width, width + y);
+    CGPathAddLineToPoint(path, NULL, x, halfWidth + y);
+    CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
+    shapeLayer.bounds = CGRectMake(0, 0, width, width);
+    shapeLayer.fillColor = [[UIColor purpleColor] CGColor];
+    shapeLayer.position = CGPointMake(halfWidth, halfWidth);
+    shapeLayer.path = path;
+    return shapeLayer;
+}
+- (CAShapeLayer *)circleShapeLayer {
+    CGRect layerFrame = [self layerFrame];
+    CGFloat width = layerFrame.size.width;
+    CGFloat halfWidth = width / 2.0;
+    CGSize newSize = layerFrame.size;
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:layerFrame byRoundingCorners:UIRectCornerAllCorners cornerRadii:newSize];
+    CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
+    shapeLayer.bounds = CGRectMake(0, 0, width, width);
+    shapeLayer.fillColor = [[UIColor purpleColor] CGColor];
+    shapeLayer.position = CGPointMake(halfWidth, halfWidth);
+    shapeLayer.path = path.CGPath;
+    return shapeLayer;
+}
+
+
+- (void)test1 {
+    CAShapeLayer *shapeLayer = [self triangleShapeLayer];
+    [self.imageView.layer addSublayer:shapeLayer];
+}
+- (void)test2 {
+    CAShapeLayer *shapeLayer = [self triangleShapeLayer];
+    self.imageView.layer.mask = shapeLayer;
+}
+- (void)test3 {
+    CAShapeLayer *shapeLayer = [self circleShapeLayer];
+    [self.imageView.layer addSublayer:shapeLayer];
+}
+- (void)test4 {
+    CAShapeLayer *shapeLayer = [self circleShapeLayer];
+    self.imageView.layer.mask = shapeLayer;
+}
+
 
 /*
 #pragma mark - Navigation
