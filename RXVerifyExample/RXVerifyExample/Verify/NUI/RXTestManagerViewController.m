@@ -12,7 +12,7 @@
 #import "RXThreadMemoryManager.h"
 #import "VKDownloadTestManager.h"
 #import "RXStaticManager.h"
-
+#import "RXPCQueueBufferManager.h"
 @interface RXAAAA : NSObject
 @end
 
@@ -44,7 +44,9 @@
     
 //    [[VKDownloadTestManager sharedInstance] test];
     
-    [[RXStaticManager sharedInstance] test];
+//    [[RXStaticManager sharedInstance] test];
+    
+    [[RXPCQueueBufferManager sharedInstance] test];
     
 }
 

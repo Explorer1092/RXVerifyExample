@@ -17,6 +17,8 @@
 		580B835D22CC5DED00A0CE51 /* RXMethodStaticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B835C22CC5DED00A0CE51 /* RXMethodStaticObject.m */; };
 		580B836122CCA1C300A0CE51 /* RXPAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B836022CCA1C200A0CE51 /* RXPAObject.m */; };
 		580B836422CCA1D500A0CE51 /* RXPBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B836322CCA1D500A0CE51 /* RXPBObject.m */; };
+		580B836822CCE53400A0CE51 /* RXPCQueueBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B836722CCE53400A0CE51 /* RXPCQueueBuffer.m */; };
+		580B836B22CCE78B00A0CE51 /* RXPCQueueBufferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B836A22CCE78B00A0CE51 /* RXPCQueueBufferManager.m */; };
 		581219332251AD9B0062B616 /* RXClassMethodSelfBlockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 581219322251AD9B0062B616 /* RXClassMethodSelfBlockManager.m */; };
 		581219362251ADAB0062B616 /* RXCMSBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 581219352251ADAB0062B616 /* RXCMSBObject.m */; };
 		5821DB1D223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB1C223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m */; };
@@ -404,6 +406,10 @@
 		580B836022CCA1C200A0CE51 /* RXPAObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPAObject.m; sourceTree = "<group>"; };
 		580B836222CCA1D500A0CE51 /* RXPBObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPBObject.h; sourceTree = "<group>"; };
 		580B836322CCA1D500A0CE51 /* RXPBObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPBObject.m; sourceTree = "<group>"; };
+		580B836622CCE53400A0CE51 /* RXPCQueueBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPCQueueBuffer.h; sourceTree = "<group>"; };
+		580B836722CCE53400A0CE51 /* RXPCQueueBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPCQueueBuffer.m; sourceTree = "<group>"; };
+		580B836922CCE78B00A0CE51 /* RXPCQueueBufferManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPCQueueBufferManager.h; sourceTree = "<group>"; };
+		580B836A22CCE78B00A0CE51 /* RXPCQueueBufferManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPCQueueBufferManager.m; sourceTree = "<group>"; };
 		581219312251AD9B0062B616 /* RXClassMethodSelfBlockManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXClassMethodSelfBlockManager.h; sourceTree = "<group>"; };
 		581219322251AD9B0062B616 /* RXClassMethodSelfBlockManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassMethodSelfBlockManager.m; sourceTree = "<group>"; };
 		581219342251ADAB0062B616 /* RXCMSBObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCMSBObject.h; sourceTree = "<group>"; };
@@ -1152,6 +1158,17 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		580B836522CCE51600A0CE51 /* ProducerConsumer */ = {
+			isa = PBXGroup;
+			children = (
+				580B836622CCE53400A0CE51 /* RXPCQueueBuffer.h */,
+				580B836722CCE53400A0CE51 /* RXPCQueueBuffer.m */,
+				580B836922CCE78B00A0CE51 /* RXPCQueueBufferManager.h */,
+				580B836A22CCE78B00A0CE51 /* RXPCQueueBufferManager.m */,
+			);
+			path = ProducerConsumer;
+			sourceTree = "<group>";
+		};
 		581219302251AD8C0062B616 /* RXClassMethodSelfBlock */ = {
 			isa = PBXGroup;
 			children = (
@@ -1268,6 +1285,7 @@
 		583E667A22A611D20080597C /* NUI */ = {
 			isa = PBXGroup;
 			children = (
+				580B836522CCE51600A0CE51 /* ProducerConsumer */,
 				580B835E22CCA1AE00A0CE51 /* Protocol */,
 				580B835722CC5DA600A0CE51 /* Static */,
 				58D89ECF22B4C8E800687338 /* VKDownload */,
@@ -3120,6 +3138,7 @@
 				E818A0CD21F5CE720053ED3E /* RXARCOwnershipQualifiedObject.m in Sources */,
 				58ED56062297D63B00CB91B6 /* UIWindow+VKProtectEye.m in Sources */,
 				C929233F1D339C65009D6875 /* RVDUMAView.m in Sources */,
+				580B836B22CCE78B00A0CE51 /* RXPCQueueBufferManager.m in Sources */,
 				E8B6584A2227CBDF007C0E42 /* RXSelfSuperClassA.m in Sources */,
 				E89C2198213D32F400913992 /* NSError+RXVerifyExample.m in Sources */,
 				E870202620D39A3800752211 /* RXSYViewController.m in Sources */,
@@ -3429,6 +3448,7 @@
 				C937947D1CE331D30065F68C /* RVViewCycleViewController.m in Sources */,
 				C928B26E1FB93E530038ECE6 /* RVLLDBViewController.m in Sources */,
 				E87C047621E33C4C00B90D74 /* RXClassMetaClassOverrideObject.m in Sources */,
+				580B836822CCE53400A0CE51 /* RXPCQueueBuffer.m in Sources */,
 				5849F89122BCC219002F29FF /* RXMaskViewViewController.m in Sources */,
 				E818A0B521F307830053ED3E /* RXMRCUtil.m in Sources */,
 				E872496D21CFACF700EA6A3D /* RXAFURLSessionManagerPublicDefine.m in Sources */,
