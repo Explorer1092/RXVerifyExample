@@ -80,8 +80,8 @@
 //    object = @"RXAnimation";
 //    object = @"RXShellHome";
 //    object = @"RXVolume";
-//        object = @"RXTestManager";
-        object = @"RXMaskView";
+        object = @"RXTestManager";
+//        object = @"RXMaskView";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];

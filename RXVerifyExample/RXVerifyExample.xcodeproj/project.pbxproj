@@ -13,6 +13,10 @@
 		5803F0D51C1913260071FDDA /* RVScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5803F0D31C1913260071FDDA /* RVScrollViewController.xib */; };
 		5803F0D91C196F520071FDDA /* RVRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5803F0D71C196F520071FDDA /* RVRectViewController.m */; };
 		5803F0DA1C196F520071FDDA /* RVRectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5803F0D81C196F520071FDDA /* RVRectViewController.xib */; };
+		580B835A22CC5DB400A0CE51 /* RXStaticManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B835922CC5DB400A0CE51 /* RXStaticManager.m */; };
+		580B835D22CC5DED00A0CE51 /* RXMethodStaticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B835C22CC5DED00A0CE51 /* RXMethodStaticObject.m */; };
+		580B836122CCA1C300A0CE51 /* RXPAObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B836022CCA1C200A0CE51 /* RXPAObject.m */; };
+		580B836422CCA1D500A0CE51 /* RXPBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B836322CCA1D500A0CE51 /* RXPBObject.m */; };
 		581219332251AD9B0062B616 /* RXClassMethodSelfBlockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 581219322251AD9B0062B616 /* RXClassMethodSelfBlockManager.m */; };
 		581219362251ADAB0062B616 /* RXCMSBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 581219352251ADAB0062B616 /* RXCMSBObject.m */; };
 		5821DB1D223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB1C223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m */; };
@@ -392,6 +396,14 @@
 		5803F0D61C196F520071FDDA /* RVRectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVRectViewController.h; sourceTree = "<group>"; };
 		5803F0D71C196F520071FDDA /* RVRectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVRectViewController.m; sourceTree = "<group>"; };
 		5803F0D81C196F520071FDDA /* RVRectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVRectViewController.xib; sourceTree = "<group>"; };
+		580B835822CC5DB400A0CE51 /* RXStaticManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXStaticManager.h; sourceTree = "<group>"; };
+		580B835922CC5DB400A0CE51 /* RXStaticManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXStaticManager.m; sourceTree = "<group>"; };
+		580B835B22CC5DED00A0CE51 /* RXMethodStaticObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMethodStaticObject.h; sourceTree = "<group>"; };
+		580B835C22CC5DED00A0CE51 /* RXMethodStaticObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMethodStaticObject.m; sourceTree = "<group>"; };
+		580B835F22CCA1C200A0CE51 /* RXPAObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPAObject.h; sourceTree = "<group>"; };
+		580B836022CCA1C200A0CE51 /* RXPAObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPAObject.m; sourceTree = "<group>"; };
+		580B836222CCA1D500A0CE51 /* RXPBObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPBObject.h; sourceTree = "<group>"; };
+		580B836322CCA1D500A0CE51 /* RXPBObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPBObject.m; sourceTree = "<group>"; };
 		581219312251AD9B0062B616 /* RXClassMethodSelfBlockManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXClassMethodSelfBlockManager.h; sourceTree = "<group>"; };
 		581219322251AD9B0062B616 /* RXClassMethodSelfBlockManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassMethodSelfBlockManager.m; sourceTree = "<group>"; };
 		581219342251ADAB0062B616 /* RXCMSBObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCMSBObject.h; sourceTree = "<group>"; };
@@ -1118,6 +1130,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		580B835722CC5DA600A0CE51 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				580B835822CC5DB400A0CE51 /* RXStaticManager.h */,
+				580B835922CC5DB400A0CE51 /* RXStaticManager.m */,
+				580B835B22CC5DED00A0CE51 /* RXMethodStaticObject.h */,
+				580B835C22CC5DED00A0CE51 /* RXMethodStaticObject.m */,
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
+		580B835E22CCA1AE00A0CE51 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				580B835F22CCA1C200A0CE51 /* RXPAObject.h */,
+				580B836022CCA1C200A0CE51 /* RXPAObject.m */,
+				580B836222CCA1D500A0CE51 /* RXPBObject.h */,
+				580B836322CCA1D500A0CE51 /* RXPBObject.m */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		581219302251AD8C0062B616 /* RXClassMethodSelfBlock */ = {
 			isa = PBXGroup;
 			children = (
@@ -1234,6 +1268,8 @@
 		583E667A22A611D20080597C /* NUI */ = {
 			isa = PBXGroup;
 			children = (
+				580B835E22CCA1AE00A0CE51 /* Protocol */,
+				580B835722CC5DA600A0CE51 /* Static */,
 				58D89ECF22B4C8E800687338 /* VKDownload */,
 				589019E422AB1E5E005D0C4D /* BOOK */,
 				5882A3E322A6AFA100449D47 /* RXClassExtension */,
@@ -3282,6 +3318,7 @@
 				581219362251ADAB0062B616 /* RXCMSBObject.m in Sources */,
 				E818F0F720B9046E00F94127 /* RXMVVMViewModel.m in Sources */,
 				E872497021CFAD8500EA6A3D /* RXAFURLSessionManagerPrivateDefine.m in Sources */,
+				580B836122CCA1C300A0CE51 /* RXPAObject.m in Sources */,
 				E872495621C9F39A00EA6A3D /* RXRuntime1Object.m in Sources */,
 				E8F8D80B219BFC44007AB027 /* RXAFNTest3Object.m in Sources */,
 				E872491821BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m in Sources */,
@@ -3299,6 +3336,7 @@
 				E8B65880222E5674007C0E42 /* RXRouteResponse.m in Sources */,
 				E86050F520A298B60016F6C9 /* RVMsgForwardViewController.m in Sources */,
 				E818A101221D4C890053ED3E /* RXBasicAnimationTestObject.m in Sources */,
+				580B835D22CC5DED00A0CE51 /* RXMethodStaticObject.m in Sources */,
 				58D89ED922B4C8E800687338 /* VKDownloadDefine.m in Sources */,
 				E8F8D7E8218FE5B4007AB027 /* rx-objc-cache.mm in Sources */,
 				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
@@ -3325,6 +3363,7 @@
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
 				58A18422226467F30066C2D9 /* RXVolumeViewController.m in Sources */,
 				E818A0FE221D4B020053ED3E /* RXAnimationTestObject.m in Sources */,
+				580B836422CCA1D500A0CE51 /* RXPBObject.m in Sources */,
 				E8433D9620FEDA86004A7FBC /* RXRACMTViewController.m in Sources */,
 				588805A722460F9E00A76039 /* RXKSCrashTestManager.m in Sources */,
 				E810791D20E0D5680020DBA1 /* RXCompressWhitSpaceViewController.m in Sources */,
@@ -3338,6 +3377,7 @@
 				58901C4422AE6149005D0C4D /* VKNormalLevelView.m in Sources */,
 				E8B65860222E079D007C0E42 /* RXCHomeViewController.m in Sources */,
 				589019CF22A8FFEE005D0C4D /* VKRaptorView.m in Sources */,
+				580B835A22CC5DB400A0CE51 /* RXStaticManager.m in Sources */,
 				5882A3EA22A6AFA100449D47 /* RXClassExtensionManager.m in Sources */,
 				E870202920D8E10B00752211 /* RVGCDQueuesViewController.m in Sources */,
 				E85159B92148B1CC006E23D5 /* RXJLRoutesService.m in Sources */,
