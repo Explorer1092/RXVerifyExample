@@ -1,14 +1,13 @@
 //
-//  RXPCQueueBuffer.m
+//  RXPCDefectQueueBuffer.m
 //  RXVerifyExample
 //
-//  Created by Rush.D.Xzj on 2019/7/3.
+//  Created by Rush.D.Xzj on 2019/7/4.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
-#import "RXPCQueueBuffer.h"
-
-@interface RXPCQueueBuffer()
+#import "RXPCDefectQueueBuffer.h"
+@interface RXPCDefectQueueBuffer()
 
 @property (nonatomic, strong) NSMutableArray *bufferArray;
 @property (nonatomic, assign) NSInteger realLength;
@@ -18,14 +17,12 @@
 
 @property (nonatomic, strong) NSLock *lock;
 
-@property (nonatomic, strong) NSConditionLock *popConditionLock;
 @end
-
-@implementation RXPCQueueBuffer
+@implementation RXPCDefectQueueBuffer
 
 #pragma mark - Constructor And Destructor
 + (id)defaultQueueBuffer {
-    RXPCQueueBuffer *result = [[RXPCQueueBuffer alloc] initWithMaxLength:10];
+    RXPCDefectQueueBuffer *result = [[RXPCDefectQueueBuffer alloc] initWithMaxLength:10];
     return result;
 }
 - (id)initWithMaxLength:(NSInteger)maxLength {
@@ -41,7 +38,7 @@
         self.nextIn = 0;
         self.nextOut = 0;
         self.lock = [NSLock new];
-//        self.popConditionLock = [NSConditionLock alloc] initWithCondition:<#(NSInteger)#>
+        //        self.popConditionLock = [NSConditionLock alloc] initWithCondition:<#(NSInteger)#>
     }
     return self;
 }

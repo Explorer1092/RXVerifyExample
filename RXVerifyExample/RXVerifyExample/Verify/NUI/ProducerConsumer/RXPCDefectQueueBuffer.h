@@ -1,8 +1,8 @@
 //
-//  RXPCQueueBuffer.h
+//  RXPCDefectQueueBuffer.h
 //  RXVerifyExample
 //
-//  Created by Rush.D.Xzj on 2019/7/3.
+//  Created by Rush.D.Xzj on 2019/7/4.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RXPCQueueBuffer : NSObject
+@interface RXPCDefectQueueBuffer : NSObject
 #pragma mark - Constructor And Destructor
 
 @property (nonatomic, assign, readonly) NSInteger maxLength;

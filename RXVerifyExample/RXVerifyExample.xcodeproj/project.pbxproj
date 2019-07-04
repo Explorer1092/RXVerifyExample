@@ -19,6 +19,7 @@
 		580B836422CCA1D500A0CE51 /* RXPBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B836322CCA1D500A0CE51 /* RXPBObject.m */; };
 		580B836822CCE53400A0CE51 /* RXPCQueueBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B836722CCE53400A0CE51 /* RXPCQueueBuffer.m */; };
 		580B836B22CCE78B00A0CE51 /* RXPCQueueBufferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B836A22CCE78B00A0CE51 /* RXPCQueueBufferManager.m */; };
+		580B836E22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 580B836D22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.m */; };
 		581219332251AD9B0062B616 /* RXClassMethodSelfBlockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 581219322251AD9B0062B616 /* RXClassMethodSelfBlockManager.m */; };
 		581219362251ADAB0062B616 /* RXCMSBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 581219352251ADAB0062B616 /* RXCMSBObject.m */; };
 		5821DB1D223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5821DB1C223CEEA9002AA122 /* RXOptionalRequiredProtocolObject.m */; };
@@ -410,6 +411,8 @@
 		580B836722CCE53400A0CE51 /* RXPCQueueBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPCQueueBuffer.m; sourceTree = "<group>"; };
 		580B836922CCE78B00A0CE51 /* RXPCQueueBufferManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPCQueueBufferManager.h; sourceTree = "<group>"; };
 		580B836A22CCE78B00A0CE51 /* RXPCQueueBufferManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPCQueueBufferManager.m; sourceTree = "<group>"; };
+		580B836C22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPCDefectQueueBuffer.h; sourceTree = "<group>"; };
+		580B836D22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPCDefectQueueBuffer.m; sourceTree = "<group>"; };
 		581219312251AD9B0062B616 /* RXClassMethodSelfBlockManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXClassMethodSelfBlockManager.h; sourceTree = "<group>"; };
 		581219322251AD9B0062B616 /* RXClassMethodSelfBlockManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassMethodSelfBlockManager.m; sourceTree = "<group>"; };
 		581219342251ADAB0062B616 /* RXCMSBObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCMSBObject.h; sourceTree = "<group>"; };
@@ -1165,6 +1168,8 @@
 				580B836722CCE53400A0CE51 /* RXPCQueueBuffer.m */,
 				580B836922CCE78B00A0CE51 /* RXPCQueueBufferManager.h */,
 				580B836A22CCE78B00A0CE51 /* RXPCQueueBufferManager.m */,
+				580B836C22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.h */,
+				580B836D22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.m */,
 			);
 			path = ProducerConsumer;
 			sourceTree = "<group>";
@@ -3380,6 +3385,7 @@
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				5882A3E922A6AFA100449D47 /* RXClassExtObject.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
+				580B836E22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.m in Sources */,
 				58A18422226467F30066C2D9 /* RXVolumeViewController.m in Sources */,
 				E818A0FE221D4B020053ED3E /* RXAnimationTestObject.m in Sources */,
 				580B836422CCA1D500A0CE51 /* RXPBObject.m in Sources */,
