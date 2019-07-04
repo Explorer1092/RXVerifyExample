@@ -54,7 +54,7 @@
 - (void)push:(id)data {
     [self.lock lock];
     if (self.full) {
-        NSLog(@"full");
+        NSLog(@"push full");
         [self.lock unlock];
         return;
     }
@@ -66,7 +66,7 @@
 - (id)pop {
     [self.lock lock];
     if (self.empty) {
-        NSLog(@"empty");
+        NSLog(@"pop empty");
         [self.lock unlock];
         return nil;
     }
@@ -80,5 +80,9 @@
 
 - (NSInteger)increase:(NSInteger)next {
     return (next + 1) % self.realLength;
+}
+
+- (void)print {
+    NSLog(@"nextIn:%zd, nextOut:%zd, full:%zd, empty:%zd", self.nextIn, self.nextOut, self.full, self.empty);
 }
 @end

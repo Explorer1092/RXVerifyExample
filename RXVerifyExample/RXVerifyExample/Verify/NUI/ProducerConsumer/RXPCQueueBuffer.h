@@ -7,20 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RXPCQueueBufferProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RXPCQueueBuffer : NSObject
-#pragma mark - Constructor And Destructor
+@interface RXPCQueueBuffer : NSObject <RXPCQueueBufferProtocol>
 
-@property (nonatomic, assign, readonly) NSInteger maxLength;
-+ (id)defaultQueueBuffer;
-- (id)initWithMaxLength:(NSInteger)length;
-- (void)push:(id)data;
-- (id)pop;
-
-@property (nonatomic, readonly) BOOL empty;
-@property (nonatomic, readonly) BOOL full;
 
 @end
 

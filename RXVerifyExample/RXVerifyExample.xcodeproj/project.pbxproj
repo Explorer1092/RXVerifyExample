@@ -413,6 +413,7 @@
 		580B836A22CCE78B00A0CE51 /* RXPCQueueBufferManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPCQueueBufferManager.m; sourceTree = "<group>"; };
 		580B836C22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPCDefectQueueBuffer.h; sourceTree = "<group>"; };
 		580B836D22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXPCDefectQueueBuffer.m; sourceTree = "<group>"; };
+		580B836F22CDD33500A0CE51 /* RXPCQueueBufferProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPCQueueBufferProtocol.h; sourceTree = "<group>"; };
 		581219312251AD9B0062B616 /* RXClassMethodSelfBlockManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXClassMethodSelfBlockManager.h; sourceTree = "<group>"; };
 		581219322251AD9B0062B616 /* RXClassMethodSelfBlockManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXClassMethodSelfBlockManager.m; sourceTree = "<group>"; };
 		581219342251ADAB0062B616 /* RXCMSBObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXCMSBObject.h; sourceTree = "<group>"; };
@@ -1170,6 +1171,7 @@
 				580B836A22CCE78B00A0CE51 /* RXPCQueueBufferManager.m */,
 				580B836C22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.h */,
 				580B836D22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.m */,
+				580B836F22CDD33500A0CE51 /* RXPCQueueBufferProtocol.h */,
 			);
 			path = ProducerConsumer;
 			sourceTree = "<group>";
