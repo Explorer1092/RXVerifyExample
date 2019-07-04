@@ -38,7 +38,6 @@
         self.nextIn = 0;
         self.nextOut = 0;
         self.lock = [NSLock new];
-        //        self.popConditionLock = [NSConditionLock alloc] initWithCondition:<#(NSInteger)#>
     }
     return self;
 }

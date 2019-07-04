@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSLock *lock;
 
 @property (nonatomic, strong) NSConditionLock *popConditionLock;
+@property (nonatomic, strong) NSConditionLock *pushConditionLock;
 @end
 
 @implementation RXPCQueueBuffer
@@ -41,7 +42,7 @@
         self.nextIn = 0;
         self.nextOut = 0;
         self.lock = [NSLock new];
-//        self.popConditionLock = [NSConditionLock alloc] initWithCondition:<#(NSInteger)#>
+        self.popConditionLock = [[NSConditionLock alloc] initWithCondition:0];
     }
     return self;
 }
