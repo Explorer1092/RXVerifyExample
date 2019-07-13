@@ -12,7 +12,7 @@
 - (void)b1_doSomething_1 {
     
 }
-- (void)b2_doSomething_2 {
+- (void)b1_doSomething_2 {
     
 }
 

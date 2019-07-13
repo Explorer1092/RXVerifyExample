@@ -86,6 +86,6 @@
     return (next + 1) % self.realLength;
 }
 - (void)print {
-    NSLog(@"nextIn:%zd, nextOut:%zd, full:%zd, empty:%zd", self.nextIn, self.nextOut, self.full, self.empty);
+    NSLog(@"nextIn:%zd, nextOut:%zd, full:%@, empty:%@", self.nextIn, self.nextOut, self.full ? @"YES" : @"NO", self.empty ? @"YES" : @"NO");
 }
 @end

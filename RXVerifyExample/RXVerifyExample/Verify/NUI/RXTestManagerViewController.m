@@ -20,6 +20,24 @@
 + (id)array {
     return [[NSMutableArray alloc] init];
 }
++ (void)test1 {
+    __strong id value = [RXAAAA array];
+}
++ (void)test2 {
+    __weak id value = [RXAAAA array];
+    NSLog(@"value:%@", value);
+}
++ (void)test3 {
+    __autoreleasing id value = [RXAAAA array];
+}
++ (void)test4 {
+    __unsafe_unretained id value = [RXAAAA array];
+}
++ (void)test5 {
+    @autoreleasepool {
+        __autoreleasing id value = [RXAAAA array];
+    }
+}
 @end
 
 
@@ -32,8 +50,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    __weak id value = [RXAAAA array];
-    NSLog(@"%@", value);
+    
+    [RXAAAA test2];
     
     // Do any additional setup after loading the view.
 //    [[RXSelfRequestManager sharedInstance] test];
