@@ -15,4 +15,7 @@
 @property (nonatomic, assign) NSInteger m_a;
 
 
+- (void)abcTest;
+
+
 @end

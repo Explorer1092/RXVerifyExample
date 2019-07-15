@@ -42,6 +42,8 @@
 		58FF7D7C1C4623F000F06976 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D7B1C4623F000F06976 /* libz.tbd */; };
 		58FF7D851C4624E000F06976 /* RVUPPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FF7D831C4624E000F06976 /* RVUPPayViewController.m */; };
 		58FF7D861C4624E000F06976 /* RVUPPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */; };
+		C928B26E1FB93E530038ECE6 /* RVLLDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C928B26C1FB93E530038ECE6 /* RVLLDBViewController.m */; };
+		C928B26F1FB93E530038ECE6 /* RVLLDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C928B26D1FB93E530038ECE6 /* RVLLDBViewController.xib */; };
 		C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C92923381D339BCF009D6875 /* RVDUMAViewController.m */; };
 		C929233B1D339BCF009D6875 /* RVDUMAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C92923391D339BCF009D6875 /* RVDUMAViewController.xib */; };
 		C929233F1D339C65009D6875 /* RVDUMAView.m in Sources */ = {isa = PBXBuildFile; fileRef = C929233E1D339C65009D6875 /* RVDUMAView.m */; };
@@ -57,8 +59,11 @@
 		C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B6AF51CF7EF9A00E9FC0F /* NSObject+RXExt.m */; };
 		C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B6AF81CF81EE300E9FC0F /* RVLockViewController.m */; };
 		C95B6AFB1CF81EE300E9FC0F /* RVLockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95B6AF91CF81EE300E9FC0F /* RVLockViewController.xib */; };
+		C966DB8B1FAEB5DF003BC1B4 /* RXLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C966DB8A1FAEB5DF003BC1B4 /* RXLogManager.m */; };
 		C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96AD5201E94F0BA0002B6EB /* RVTDWViewController.m */; };
 		C96AD5231E94F0BA0002B6EB /* RVTDWViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96AD5211E94F0BA0002B6EB /* RVTDWViewController.xib */; };
+		C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C97881BC1FC6AE6200083ADF /* RXMethodForwardViewController.m */; };
+		C97881BF1FC6AE6200083ADF /* RXMethodForwardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C97881BD1FC6AE6200083ADF /* RXMethodForwardViewController.xib */; };
 		C97B4EFA1CF5AA7500199A6C /* NSObject+RXVerifyExample.m in Sources */ = {isa = PBXBuildFile; fileRef = C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */; };
 		C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C985F5FF1D4A0AFB004D654D /* RVWebViewController.m */; };
 		C985F6021D4A0AFB004D654D /* RVWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C985F6001D4A0AFB004D654D /* RVWebViewController.xib */; };
@@ -162,6 +167,9 @@
 		58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVUPPayViewController.xib; sourceTree = "<group>"; };
 		70BA962DE41383DAC9D079B9 /* Pods-RXVerifyExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXVerifyExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample.release.xcconfig"; sourceTree = "<group>"; };
 		BA6FA15748D4C8749D98E8FA /* Pods-RXVerifyExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXVerifyExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample.debug.xcconfig"; sourceTree = "<group>"; };
+		C928B26B1FB93E530038ECE6 /* RVLLDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVLLDBViewController.h; sourceTree = "<group>"; };
+		C928B26C1FB93E530038ECE6 /* RVLLDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVLLDBViewController.m; sourceTree = "<group>"; };
+		C928B26D1FB93E530038ECE6 /* RVLLDBViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RVLLDBViewController.xib; sourceTree = "<group>"; };
 		C92923371D339BCF009D6875 /* RVDUMAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVDUMAViewController.h; sourceTree = "<group>"; };
 		C92923381D339BCF009D6875 /* RVDUMAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVDUMAViewController.m; sourceTree = "<group>"; };
 		C92923391D339BCF009D6875 /* RVDUMAViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVDUMAViewController.xib; sourceTree = "<group>"; };
@@ -187,9 +195,14 @@
 		C95B6AF71CF81EE300E9FC0F /* RVLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVLockViewController.h; sourceTree = "<group>"; };
 		C95B6AF81CF81EE300E9FC0F /* RVLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVLockViewController.m; sourceTree = "<group>"; };
 		C95B6AF91CF81EE300E9FC0F /* RVLockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVLockViewController.xib; sourceTree = "<group>"; };
+		C966DB891FAEB5DF003BC1B4 /* RXLogManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXLogManager.h; sourceTree = "<group>"; };
+		C966DB8A1FAEB5DF003BC1B4 /* RXLogManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXLogManager.m; sourceTree = "<group>"; };
 		C96AD51F1E94F0BA0002B6EB /* RVTDWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVTDWViewController.h; sourceTree = "<group>"; };
 		C96AD5201E94F0BA0002B6EB /* RVTDWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVTDWViewController.m; sourceTree = "<group>"; };
 		C96AD5211E94F0BA0002B6EB /* RVTDWViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVTDWViewController.xib; sourceTree = "<group>"; };
+		C97881BB1FC6AE6200083ADF /* RXMethodForwardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMethodForwardViewController.h; sourceTree = "<group>"; };
+		C97881BC1FC6AE6200083ADF /* RXMethodForwardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMethodForwardViewController.m; sourceTree = "<group>"; };
+		C97881BD1FC6AE6200083ADF /* RXMethodForwardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RXMethodForwardViewController.xib; sourceTree = "<group>"; };
 		C97B4EF81CF5AA7500199A6C /* NSObject+RXVerifyExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RXVerifyExample.h"; sourceTree = "<group>"; };
 		C97B4EF91CF5AA7500199A6C /* NSObject+RXVerifyExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RXVerifyExample.m"; sourceTree = "<group>"; };
 		C985F5FE1D4A0AFB004D654D /* RVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RVWebViewController.h; sourceTree = "<group>"; };
@@ -447,6 +460,12 @@
 				C96AD51F1E94F0BA0002B6EB /* RVTDWViewController.h */,
 				C96AD5201E94F0BA0002B6EB /* RVTDWViewController.m */,
 				C96AD5211E94F0BA0002B6EB /* RVTDWViewController.xib */,
+				C928B26B1FB93E530038ECE6 /* RVLLDBViewController.h */,
+				C928B26C1FB93E530038ECE6 /* RVLLDBViewController.m */,
+				C928B26D1FB93E530038ECE6 /* RVLLDBViewController.xib */,
+				C97881BB1FC6AE6200083ADF /* RXMethodForwardViewController.h */,
+				C97881BC1FC6AE6200083ADF /* RXMethodForwardViewController.m */,
+				C97881BD1FC6AE6200083ADF /* RXMethodForwardViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -454,6 +473,8 @@
 		58D6602C1C25719700912786 /* RXPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				C97881BA1FC6AE4A00083ADF /* RXMethodForward */,
+				C966DB881FAEB5B3003BC1B4 /* RXLog */,
 				C9A711091D7BA06C0002E703 /* RXCopy */,
 				C985F61A1D503119004D654D /* RXStock */,
 				C929233C1D339C4C009D6875 /* RVDUMA */,
@@ -514,6 +535,22 @@
 				C92923411D339F02009D6875 /* DMLine.m */,
 			);
 			path = RVDUMA;
+			sourceTree = "<group>";
+		};
+		C966DB881FAEB5B3003BC1B4 /* RXLog */ = {
+			isa = PBXGroup;
+			children = (
+				C966DB891FAEB5DF003BC1B4 /* RXLogManager.h */,
+				C966DB8A1FAEB5DF003BC1B4 /* RXLogManager.m */,
+			);
+			path = RXLog;
+			sourceTree = "<group>";
+		};
+		C97881BA1FC6AE4A00083ADF /* RXMethodForward */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RXMethodForward;
 			sourceTree = "<group>";
 		};
 		C97B4EF71CF5AA6700199A6C /* Category */ = {
@@ -609,7 +646,7 @@
 		5850B25F1BF47F2A00EC9144 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Rush.D.Xzj;
 				TargetAttributes = {
 					5850B2661BF47F2A00EC9144 = {
@@ -642,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C93A394A1CF2F45D00C0C442 /* RVRunLoopViewController.xib in Resources */,
+				C97881BF1FC6AE6200083ADF /* RXMethodForwardViewController.xib in Resources */,
 				C9C2B33A1E0BB2AD0087C718 /* RVOCDataViewController.xib in Resources */,
 				C985F6191D5030EC004D654D /* RVStockViewController.xib in Resources */,
 				5850B2771BF47F2A00EC9144 /* Assets.xcassets in Resources */,
@@ -655,6 +693,7 @@
 				C94EB78D1CC4E66600AFDADC /* RVAFNetworkingViewController.xib in Resources */,
 				5886CDAF1C182D7500013C76 /* RVMenuViewController.xib in Resources */,
 				C9A7110E1D7BA0880002E703 /* RVCopyViewController.xib in Resources */,
+				C928B26F1FB93E530038ECE6 /* RVLLDBViewController.xib in Resources */,
 				C9D397A11CF59D3500D8569C /* RVRunTimeViewController.xib in Resources */,
 				C929233B1D339BCF009D6875 /* RVDUMAViewController.xib in Resources */,
 				C95B6AFB1CF81EE300E9FC0F /* RVLockViewController.xib in Resources */,
@@ -771,6 +810,7 @@
 				58D6603B1C2571A700912786 /* RXRefreshView.m in Sources */,
 				C9BDAD671CC62E6E00CBB1CA /* RVPushPopAnimation.m in Sources */,
 				C9C326071CA28E9F00E65090 /* RVGCDViewController.m in Sources */,
+				C966DB8B1FAEB5DF003BC1B4 /* RXLogManager.m in Sources */,
 				5850B26F1BF47F2A00EC9144 /* AppDelegate.m in Sources */,
 				C96AD5221E94F0BA0002B6EB /* RVTDWViewController.m in Sources */,
 				C9BDAD5E1CC621EA00CBB1CA /* RVAnimationViewController.m in Sources */,
@@ -781,6 +821,7 @@
 				C985F6181D5030EC004D654D /* RVStockViewController.m in Sources */,
 				C9F53E231CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.m in Sources */,
 				58D660381C2571A700912786 /* RXMenuItemView.m in Sources */,
+				C97881BE1FC6AE6200083ADF /* RXMethodForwardViewController.m in Sources */,
 				C9E8B7B01D23B74A00A3D16F /* RVOSSViewController.m in Sources */,
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
 				C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */,
@@ -793,6 +834,7 @@
 				C94EB78C1CC4E66600AFDADC /* RVAFNetworkingViewController.m in Sources */,
 				5850B26C1BF47F2A00EC9144 /* main.mm in Sources */,
 				C937947D1CE331D30065F68C /* RVViewCycleViewController.m in Sources */,
+				C928B26E1FB93E530038ECE6 /* RVLLDBViewController.m in Sources */,
 				C9D397A01CF59D3500D8569C /* RVRunTimeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -808,14 +850,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -854,14 +902,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
