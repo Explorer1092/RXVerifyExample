@@ -9,6 +9,8 @@ target 'RXVerifyExample' do
 #pod 'YYAsyncLayer'
 #pod 'YYDispatchQueuePool'
 
+pod 'YTKNetwork'
+
 pod 'RXView'
 
 pod 'RXImagePickManager'
@@ -23,6 +25,8 @@ pod 'RXVerifyButton'
 
 pod 'RXTextView'
 
+pod 'HWWeakTimer'
+
 pod 'RXPaddingView'
 
 pod 'RXCategory'
@@ -36,12 +40,41 @@ pod 'RXAppDefine'
 
 pod 'RXTableViewItem'
 
+# 没有自动引入 RACEXTScope.h
+#pod 'ReactiveCocoa', '2.1.8'
+#pod 'ReactiveCocoa', '2.2.4'
 
+# 自动引入:RACEXTScope.h
+pod 'ReactiveObjC'
 
 pod 'AFNetworking'
 
 pod 'Aspects'
 
 pod 'RX3_TencentLiteSDK'
+
+pod 'fishhook'
+
+pod 'AFNetworking+RX'
+
+pod 'RXTableViewImpl'
+
+pod 'RXUserManager'
+
+pod 'MSWeakTimer'
+
+pod 'JLRoutes'
+
+pod 'Masonry'
+
+pod 'MBProgressHUD'
+
+pod 'coobjc'
+
+pod 'MTHawkeye'
+
+
+inhibit_all_warnings!
+
 end
 

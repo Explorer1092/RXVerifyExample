@@ -7,11 +7,14 @@
 //
 
 #import "RXRunTimeDemoBaseObject.h"
-
+#import <objc/runtime.h>
+#import <objc/objc.h>
 @implementation RXRunTimeDemoBaseObject
 
 - (void)printBaseAction
 {
-    
+//    CALayer *layer;
+//    layer.anchorPoint
+//    UIView *view;
 }
 @end

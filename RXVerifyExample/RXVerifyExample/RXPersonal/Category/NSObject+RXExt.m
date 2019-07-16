@@ -17,7 +17,11 @@
 
 
 
-
++ (void)load
+{
+    NSArray *ary = @[@(2)];
+    NSLog(@"%@, ary:%@", [self class], ary);
+}
 
 
 

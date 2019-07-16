@@ -17,6 +17,7 @@
 @property (nonatomic, copy) NSString *msg;
 
 - (void)testPrint;
+- (void)testPrint2;
 
 + (void)testClassMethod;
 

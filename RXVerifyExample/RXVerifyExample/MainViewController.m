@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-
+#import "RXYellowView.h"
 
 @interface MainViewController ()
 
@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) NSArray *functionItems;
 
-
+@property (nonatomic, strong) UIView *yellowView;
 
 
 @end
@@ -31,7 +31,9 @@
     
 //    self.view.backgroundColor = [UIColor redColor];
     
-    
+//    self.yellowView = [[RXYellowView alloc] initWithFrame:CGRectMake(0, 0, RX_Window_Width, RX_Window_Height)];
+//    self.yellowView.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.3];
+//    [[UIApplication sharedApplication].keyWindow addSubview:self.yellowView];
     
     self.functionItems = @[@"RVMenu", @"RVRefresh", @"RVRect",
                            @"RVScroll", @"RVTrans", @"RVWY",
@@ -43,7 +45,22 @@
                            @"RVLayer", @"RVOSS", @"RVDUMA",
                            @"RVWeb", @"RVStock", @"RVCopy",
                            @"RVOCData", @"RVQQ", @"RVThread",
-                           @"RVTDW", @"RVLLDB", @"RXMethodForward"];
+                           @"RVTDW", @"RVLLDB", @"RXMethodForward",
+                           @"RVEventResponseList", @"RXObjectCreate", @"RVGCD2",
+                           @"RXMRSW", @"RXCurrentQueue", @"RXTargetQueue",
+                           @"RXQueueSpecial", @"RVAutoRelease", @"RVRTPrint",
+                           @"RVMsgForward", @"RVAddMethod", @"RVArrayCopy",
+                           @"RXFramework", @"RXNSObjectForSelector", @"RXMVVMList",
+                           @"RXMultNotification", @"RXSY", @"RVGCDQueues",
+                           @"RXUIListPerformance", @"RXCompressWhitSpace", @"RXMVVMLogin",
+                           @"RXRAC", @"RXMacro", @"RXRACClass",
+                           @"RXRACDemo", @"RXOCKeywordMethodName", @"RXRACMT",
+                           @"RXUncaughtExceptionHandler", @"RXOPMQ", @"RXMethodListDemo",
+                           @"RXAspects", @"RXCLanguage", @"RXAFNetworking",
+                           @"RXUtil", @"RXLayout", @"RXJLRouter",
+                           @"RXAnimation", @"RXShellHome", @"RXVolume",
+                           @"RXVK", @"RXTestManager", @"RXViewLevel",
+                           @"RXMaskView", @"VKAnimationQueue"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -51,12 +68,26 @@
     NSString *object = self.functionItems.firstObject;
     
 #if 1
-<<<<<<< HEAD
+
     object = @"RVTDW";
     object = @"RVRunTime";
-=======
+
     object = @"RVLLDB";
->>>>>>> cb3642dd188c0aefc5814103b49c8b5d204b4330
+
+//    object = @"RVMsgForward";
+//    object = @"RVGCD2";
+//    object = @"RVWeb";
+//    object = @"RXSY";
+    
+//    object = @"RXAFNetworking";
+//    object = @"RVGCD2";
+//    object = @"RXLayout";
+//    object = @"RXJLRouter";
+//    object = @"RXAnimation";
+//    object = @"RXShellHome";
+//    object = @"RXVolume";
+        object = @"RXTestManager";
+//        object = @"RXMaskView";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];

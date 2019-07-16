@@ -10,6 +10,8 @@
 
 @interface RXRunTimeDemoBaseObject : NSObject
 
+@property (nonatomic, copy) NSString *baseString;
+
 - (void)printBaseAction;
 
 @end
