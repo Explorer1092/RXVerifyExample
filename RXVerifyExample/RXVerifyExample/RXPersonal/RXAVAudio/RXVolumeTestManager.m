@@ -89,28 +89,28 @@
 
 #pragma mark - Private
 - (void)_setupAVAudioSession {
-    AVAudioSession *session = [AVAudioSession sharedInstance];
-    AVAudioSessionCategory destCategory = AVAudioSessionCategoryPlayback;
-    if (@available(iOS 9, *)) {
-        NSArray *availableCategories = session.availableCategories;
-        NSLog(@"availableCategories:%@", availableCategories);
-        BOOL find = NO;
-        for (AVAudioSessionCategory category in availableCategories) {
-            if ([category isEqualToString:destCategory]) {
-                find = YES;
-                break;
-            }
-        }
-        if (!find) {
-            destCategory = AVAudioSessionCategorySoloAmbient;
-        }
-    }
-    NSError *error;
-    [session setCategory:destCategory error:&error];
-    if (error) {
-        NSLog(@"error:%@", error);
-    }
-    [session setActive:YES error:nil];
+//    AVAudioSession *session = [AVAudioSession sharedInstance];
+//    AVAudioSessionCategory destCategory = AVAudioSessionCategoryPlayback;
+//    if (@available(iOS 9, *)) {
+//        NSArray *availableCategories = session.availableCategories;
+//        NSLog(@"availableCategories:%@", availableCategories);
+//        BOOL find = NO;
+//        for (AVAudioSessionCategory category in availableCategories) {
+//            if ([category isEqualToString:destCategory]) {
+//                find = YES;
+//                break;
+//            }
+//        }
+//        if (!find) {
+//            destCategory = AVAudioSessionCategorySoloAmbient;
+//        }
+//    }
+//    NSError *error;
+//    [session setCategory:destCategory error:&error];
+//    if (error) {
+//        NSLog(@"error:%@", error);
+//    }
+//    [session setActive:YES error:nil];
 }
 - (void)_setupAVPlayer {
     NSURL *soundUrl = [[NSBundle mainBundle] URLForResource:@"ok.mp3" withExtension:nil];
