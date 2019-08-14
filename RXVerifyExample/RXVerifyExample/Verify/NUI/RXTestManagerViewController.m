@@ -67,6 +67,22 @@
     [[RXPCQueueBufferManager sharedInstance] test];
     
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"_cmd:%@, class:%@", NSStringFromSelector(_cmd), [self class]);
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"_cmd:%@, class:%@", NSStringFromSelector(_cmd), [self class]);
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"_cmd:%@, class:%@", NSStringFromSelector(_cmd), [self class]);
+}
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"_cmd:%@, class:%@", NSStringFromSelector(_cmd), [self class]);
+}
 
 /*
 #pragma mark - Navigation

@@ -60,7 +60,7 @@
                            @"RXUtil", @"RXLayout", @"RXJLRouter",
                            @"RXAnimation", @"RXShellHome", @"RXVolume",
                            @"RXVK", @"RXTestManager", @"RXViewLevel",
-                           @"RXMaskView", @"VKAnimationQueue"];
+                           @"RXMaskView", @"VKAnimationQueue", @"RXKS"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -86,7 +86,8 @@
 //    object = @"RXAnimation";
 //    object = @"RXShellHome";
 //    object = @"RXVolume";
-        object = @"RXTestManager";
+//    object = @"RXTestManager";
+    object = @"RXKS";
 //        object = @"RXMaskView";
 #endif
     
@@ -95,7 +96,22 @@
     
     
 }
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"_cmd:%@, class:%@", NSStringFromSelector(_cmd), [self class]);
+}
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"_cmd:%@, class:%@", NSStringFromSelector(_cmd), [self class]);
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"_cmd:%@, class:%@", NSStringFromSelector(_cmd), [self class]);
+}
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"_cmd:%@, class:%@", NSStringFromSelector(_cmd), [self class]);
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

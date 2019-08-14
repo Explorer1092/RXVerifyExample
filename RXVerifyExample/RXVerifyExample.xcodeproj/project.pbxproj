@@ -118,6 +118,11 @@
 		58FF7D7C1C4623F000F06976 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D7B1C4623F000F06976 /* libz.tbd */; };
 		58FF7D851C4624E000F06976 /* RVUPPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FF7D831C4624E000F06976 /* RVUPPayViewController.m */; };
 		58FF7D861C4624E000F06976 /* RVUPPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */; };
+		8DE4F90B23010F39004009E2 /* KSAdISBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90523010F39004009E2 /* KSAdISBottomView.m */; };
+		8DE4F90C23010F39004009E2 /* KSAdInsertScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90923010F39004009E2 /* KSAdInsertScreenViewController.m */; };
+		8DE4F90D23010F39004009E2 /* KSAdCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90A23010F39004009E2 /* KSAdCountdownView.m */; };
+		8DE4F91023010FD9004009E2 /* KSAdDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90F23010FD9004009E2 /* KSAdDefine.m */; };
+		8DE4F91923014902004009E2 /* RXKSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F91823014902004009E2 /* RXKSViewController.m */; };
 		C928B26E1FB93E530038ECE6 /* RVLLDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C928B26C1FB93E530038ECE6 /* RVLLDBViewController.m */; };
 		C928B26F1FB93E530038ECE6 /* RVLLDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C928B26D1FB93E530038ECE6 /* RVLLDBViewController.xib */; };
 		C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C92923381D339BCF009D6875 /* RVDUMAViewController.m */; };
@@ -597,6 +602,16 @@
 		58FF7D831C4624E000F06976 /* RVUPPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVUPPayViewController.m; sourceTree = "<group>"; };
 		58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVUPPayViewController.xib; sourceTree = "<group>"; };
 		70BA962DE41383DAC9D079B9 /* Pods-RXVerifyExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXVerifyExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample.release.xcconfig"; sourceTree = "<group>"; };
+		8DE4F90523010F39004009E2 /* KSAdISBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAdISBottomView.m; sourceTree = "<group>"; };
+		8DE4F90623010F39004009E2 /* KSAdISBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAdISBottomView.h; sourceTree = "<group>"; };
+		8DE4F90723010F39004009E2 /* KSAdInsertScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAdInsertScreenViewController.h; sourceTree = "<group>"; };
+		8DE4F90823010F39004009E2 /* KSAdCountdownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAdCountdownView.h; sourceTree = "<group>"; };
+		8DE4F90923010F39004009E2 /* KSAdInsertScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAdInsertScreenViewController.m; sourceTree = "<group>"; };
+		8DE4F90A23010F39004009E2 /* KSAdCountdownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAdCountdownView.m; sourceTree = "<group>"; };
+		8DE4F90E23010FD9004009E2 /* KSAdDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAdDefine.h; sourceTree = "<group>"; };
+		8DE4F90F23010FD9004009E2 /* KSAdDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAdDefine.m; sourceTree = "<group>"; };
+		8DE4F91723014902004009E2 /* RXKSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXKSViewController.h; sourceTree = "<group>"; };
+		8DE4F91823014902004009E2 /* RXKSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXKSViewController.m; sourceTree = "<group>"; };
 		BA6FA15748D4C8749D98E8FA /* Pods-RXVerifyExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXVerifyExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample.debug.xcconfig"; sourceTree = "<group>"; };
 		C928B26B1FB93E530038ECE6 /* RVLLDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVLLDBViewController.h; sourceTree = "<group>"; };
 		C928B26C1FB93E530038ECE6 /* RVLLDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVLLDBViewController.m; sourceTree = "<group>"; };
@@ -1281,6 +1296,7 @@
 		583E667922A611D20080597C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8DE4F90223010F39004009E2 /* KS */,
 				5849F89A22BCFF7F002F29FF /* VKAnimation */,
 				5849F88E22BCC207002F29FF /* MaskView */,
 				58901C3122AE0737005D0C4D /* WindowLevel */,
@@ -1680,6 +1696,39 @@
 				58FF7D751C4623A200F06976 /* UPPaymentControl.h */,
 			);
 			path = UnionPay;
+			sourceTree = "<group>";
+		};
+		8DE4F90223010F39004009E2 /* KS */ = {
+			isa = PBXGroup;
+			children = (
+				8DE4F90323010F39004009E2 /* ADSDK */,
+				8DE4F91723014902004009E2 /* RXKSViewController.h */,
+				8DE4F91823014902004009E2 /* RXKSViewController.m */,
+			);
+			path = KS;
+			sourceTree = "<group>";
+		};
+		8DE4F90323010F39004009E2 /* ADSDK */ = {
+			isa = PBXGroup;
+			children = (
+				8DE4F90E23010FD9004009E2 /* KSAdDefine.h */,
+				8DE4F90F23010FD9004009E2 /* KSAdDefine.m */,
+				8DE4F90423010F39004009E2 /* InsertScreen */,
+				8DE4F90823010F39004009E2 /* KSAdCountdownView.h */,
+				8DE4F90A23010F39004009E2 /* KSAdCountdownView.m */,
+				8DE4F90723010F39004009E2 /* KSAdInsertScreenViewController.h */,
+				8DE4F90923010F39004009E2 /* KSAdInsertScreenViewController.m */,
+			);
+			path = ADSDK;
+			sourceTree = "<group>";
+		};
+		8DE4F90423010F39004009E2 /* InsertScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8DE4F90623010F39004009E2 /* KSAdISBottomView.h */,
+				8DE4F90523010F39004009E2 /* KSAdISBottomView.m */,
+			);
+			path = InsertScreen;
 			sourceTree = "<group>";
 		};
 		C929233C1D339C4C009D6875 /* RVDUMA */ = {
@@ -3016,7 +3065,7 @@
 					5850B2661BF47F2A00EC9144 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = TM3LD9DLW8;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -3136,7 +3185,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/RX3_TencentLiteSDK/Paramount.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/RX3_TencentLiteSDK/Paramount.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -3223,6 +3272,7 @@
 				E85159B32148B109006E23D5 /* RXServiceManager.m in Sources */,
 				E87C044521D7126D00B90D74 /* RXMethodSwizzleRoughlyObject.m in Sources */,
 				E8F8D82221ACF428007AB027 /* RXAFNTestManager.m in Sources */,
+				8DE4F90D23010F39004009E2 /* KSAdCountdownView.m in Sources */,
 				5886CDAE1C182D7500013C76 /* RVMenuViewController.m in Sources */,
 				E818A0A921F086530053ED3E /* RXARCPrintMemoryAddressObject.m in Sources */,
 				E818A09021EDE7DF0053ED3E /* RXARCTestObject.m in Sources */,
@@ -3402,6 +3452,7 @@
 				E8B6586D222E07FD007C0E42 /* RXCSDK.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				5882A3E922A6AFA100449D47 /* RXClassExtObject.m in Sources */,
+				8DE4F90C23010F39004009E2 /* KSAdInsertScreenViewController.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
 				580B836E22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.m in Sources */,
 				58A18422226467F30066C2D9 /* RXVolumeViewController.m in Sources */,
@@ -3415,6 +3466,7 @@
 				E8433D8120EF6959004A7FBC /* RXHookBlockManager.m in Sources */,
 				E872496521CFAB8100EA6A3D /* RXAFURLSessionManager.m in Sources */,
 				E818A0D321F6F6390053ED3E /* RXARCClangAttributeObject.m in Sources */,
+				8DE4F91923014902004009E2 /* RXKSViewController.m in Sources */,
 				E87C042721D2599600B90D74 /* RXNSArrayTestObject.m in Sources */,
 				C98FD0ED1D20CD1E0024854D /* RVYYKitViewController.m in Sources */,
 				58901C4422AE6149005D0C4D /* VKNormalLevelView.m in Sources */,
@@ -3437,6 +3489,7 @@
 				C98FD0F21D210F960024854D /* RVLayerViewController.m in Sources */,
 				5821DB2B223F8E35002AA122 /* RBDMuteSwitch.m in Sources */,
 				E818A09321EF0F640053ED3E /* RXBlockChangeOverTimeObject.m in Sources */,
+				8DE4F91023010FD9004009E2 /* KSAdDefine.m in Sources */,
 				582F36E62296D3BF00AA84A8 /* VKProtectEyeViewController.m in Sources */,
 				E872492821BFDD8C00EA6A3D /* RXAFHTTPBodyPart.m in Sources */,
 				E860510220A2E4CA0016F6C9 /* RVArrayCopyViewController.m in Sources */,
@@ -3460,6 +3513,7 @@
 				58D89ED822B4C8E800687338 /* VKDownloadManager.m in Sources */,
 				5841E55822B1E7A300DA4703 /* RXTMOwnershipObject.m in Sources */,
 				5849F8AC22BCFFD7002F29FF /* VKAnimationQueue.m in Sources */,
+				8DE4F90B23010F39004009E2 /* KSAdISBottomView.m in Sources */,
 				588805DD224C66FF00A76039 /* RXStackOverflowManager.m in Sources */,
 				5841E55522B1E70A00DA4703 /* RXTMImpCachingObject.m in Sources */,
 				E818A0BB21F310CB0053ED3E /* RXARCTmpObject.m in Sources */,
@@ -3592,8 +3646,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = TM3LD9DLW8;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "RXVerifyExample/RXVerifyExample-Prefix.pch";
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -3604,7 +3659,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xzj.RXVerifyExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = comAllProvisioning;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3615,7 +3670,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "RXVerifyExample/RXVerifyExample-Prefix.pch";
 				INFOPLIST_FILE = RXVerifyExample/Info.plist;
