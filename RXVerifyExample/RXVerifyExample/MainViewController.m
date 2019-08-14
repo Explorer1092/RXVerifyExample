@@ -86,8 +86,8 @@
 //    object = @"RXAnimation";
 //    object = @"RXShellHome";
 //    object = @"RXVolume";
-//    object = @"RXTestManager";
-    object = @"RXKS";
+    object = @"RXTestManager";
+//    object = @"RXKS";
 //        object = @"RXMaskView";
 #endif
     

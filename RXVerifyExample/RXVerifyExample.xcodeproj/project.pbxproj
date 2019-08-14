@@ -123,6 +123,7 @@
 		8DE4F90D23010F39004009E2 /* KSAdCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90A23010F39004009E2 /* KSAdCountdownView.m */; };
 		8DE4F91023010FD9004009E2 /* KSAdDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90F23010FD9004009E2 /* KSAdDefine.m */; };
 		8DE4F91923014902004009E2 /* RXKSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F91823014902004009E2 /* RXKSViewController.m */; };
+		8DE4F968230406CD004009E2 /* RXSortManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F967230406CD004009E2 /* RXSortManager.m */; };
 		C928B26E1FB93E530038ECE6 /* RVLLDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C928B26C1FB93E530038ECE6 /* RVLLDBViewController.m */; };
 		C928B26F1FB93E530038ECE6 /* RVLLDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C928B26D1FB93E530038ECE6 /* RVLLDBViewController.xib */; };
 		C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C92923381D339BCF009D6875 /* RVDUMAViewController.m */; };
@@ -612,6 +613,8 @@
 		8DE4F90F23010FD9004009E2 /* KSAdDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAdDefine.m; sourceTree = "<group>"; };
 		8DE4F91723014902004009E2 /* RXKSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXKSViewController.h; sourceTree = "<group>"; };
 		8DE4F91823014902004009E2 /* RXKSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXKSViewController.m; sourceTree = "<group>"; };
+		8DE4F966230406CD004009E2 /* RXSortManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXSortManager.h; sourceTree = "<group>"; };
+		8DE4F967230406CD004009E2 /* RXSortManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXSortManager.m; sourceTree = "<group>"; };
 		BA6FA15748D4C8749D98E8FA /* Pods-RXVerifyExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXVerifyExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample.debug.xcconfig"; sourceTree = "<group>"; };
 		C928B26B1FB93E530038ECE6 /* RVLLDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVLLDBViewController.h; sourceTree = "<group>"; };
 		C928B26C1FB93E530038ECE6 /* RVLLDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVLLDBViewController.m; sourceTree = "<group>"; };
@@ -1308,6 +1311,7 @@
 		583E667A22A611D20080597C /* NUI */ = {
 			isa = PBXGroup;
 			children = (
+				8DE4F965230406B3004009E2 /* Sort */,
 				580B836522CCE51600A0CE51 /* ProducerConsumer */,
 				580B835E22CCA1AE00A0CE51 /* Protocol */,
 				580B835722CC5DA600A0CE51 /* Static */,
@@ -1729,6 +1733,15 @@
 				8DE4F90523010F39004009E2 /* KSAdISBottomView.m */,
 			);
 			path = InsertScreen;
+			sourceTree = "<group>";
+		};
+		8DE4F965230406B3004009E2 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				8DE4F966230406CD004009E2 /* RXSortManager.h */,
+				8DE4F967230406CD004009E2 /* RXSortManager.m */,
+			);
+			path = Sort;
 			sourceTree = "<group>";
 		};
 		C929233C1D339C4C009D6875 /* RVDUMA */ = {
@@ -3332,6 +3345,7 @@
 				E86050D320A079050016F6C9 /* RXMRSWViewController.m in Sources */,
 				5821DB33223FA3DC002AA122 /* RXPropertyKeywordObject+AssociatedObject.m in Sources */,
 				C9C2B33E1E0BD92D0087C718 /* RVQQViewController.m in Sources */,
+				8DE4F968230406CD004009E2 /* RXSortManager.m in Sources */,
 				58FF7D851C4624E000F06976 /* RVUPPayViewController.m in Sources */,
 				E8F8D7D5218C3A16007AB027 /* RXAspects.m in Sources */,
 				58DAF76222733A9E0008B543 /* RXYellowView.m in Sources */,
