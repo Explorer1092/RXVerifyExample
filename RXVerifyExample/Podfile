@@ -73,6 +73,8 @@ pod 'coobjc'
 
 pod 'MTHawkeye'
 
+pod 'WechatOpenSDK'
+
 
 inhibit_all_warnings!
 

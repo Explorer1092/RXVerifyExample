@@ -14,6 +14,7 @@
 #import "RXStaticManager.h"
 #import "RXPCQueueBufferManager.h"
 #import "RXSortManager.h"
+#import "RXSignalManager.h"
 @interface RXAAAA : NSObject
 @end
 
@@ -66,7 +67,9 @@
 //    [[RXStaticManager sharedInstance] test];
     
 //    [[RXPCQueueBufferManager sharedInstance] test];
-    [[RXSortManager sharedInstance] test];
+//    [[RXSortManager sharedInstance] test];
+    
+    [[RXSignalManager sharedInstance] test];
     
 }
 - (void)viewWillAppear:(BOOL)animated {
