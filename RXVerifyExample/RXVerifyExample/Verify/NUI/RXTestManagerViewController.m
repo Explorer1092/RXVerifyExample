@@ -15,6 +15,7 @@
 #import "RXPCQueueBufferManager.h"
 #import "RXSortManager.h"
 #import "RXSignalManager.h"
+#import "RXTestManagerViewController+Extension.h"
 @interface RXAAAA : NSObject
 @end
 
@@ -43,17 +44,25 @@
 @end
 
 
+@interface RXTestManagerViewController()
 
-@interface RXTestManagerViewController ()
+@property (nonatomic, assign) NSInteger def;
 
 @end
+
 
 @implementation RXTestManagerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.abc = 10;
+    self.def = 20;
+    
     [RXAAAA test2];
+    
+    NSLog(@"abc:%zd", self.abc);
+    NSLog(@"def:%zd", self.def);
     
     // Do any additional setup after loading the view.
 //    [[RXSelfRequestManager sharedInstance] test];

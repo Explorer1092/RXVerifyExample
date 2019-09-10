@@ -612,6 +612,7 @@
 		58FF7D831C4624E000F06976 /* RVUPPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RVUPPayViewController.m; sourceTree = "<group>"; };
 		58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVUPPayViewController.xib; sourceTree = "<group>"; };
 		70BA962DE41383DAC9D079B9 /* Pods-RXVerifyExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXVerifyExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample.release.xcconfig"; sourceTree = "<group>"; };
+		8D165F0323167B800080A1D8 /* RXTestManagerViewController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RXTestManagerViewController+Extension.h"; sourceTree = "<group>"; };
 		8DE4F90523010F39004009E2 /* KSAdISBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAdISBottomView.m; sourceTree = "<group>"; };
 		8DE4F90623010F39004009E2 /* KSAdISBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAdISBottomView.h; sourceTree = "<group>"; };
 		8DE4F90723010F39004009E2 /* KSAdInsertScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAdInsertScreenViewController.h; sourceTree = "<group>"; };
@@ -1350,6 +1351,7 @@
 				5882A3DC22A6AF1500449D47 /* RXSelfRequest */,
 				583E667B22A611EA0080597C /* RXTestManagerViewController.h */,
 				583E667C22A611EA0080597C /* RXTestManagerViewController.m */,
+				8D165F0323167B800080A1D8 /* RXTestManagerViewController+Extension.h */,
 			);
 			path = NUI;
 			sourceTree = "<group>";

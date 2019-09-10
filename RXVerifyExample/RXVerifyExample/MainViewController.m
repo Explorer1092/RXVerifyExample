@@ -90,8 +90,8 @@
     object = @"RXTestManager";
 //    object = @"RXKS";
 //        object = @"RXMaskView";
-    object = @"RXParent";
-    object = @"RVWeb";
+//    object = @"RXParent";
+//    object = @"RVWeb";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
