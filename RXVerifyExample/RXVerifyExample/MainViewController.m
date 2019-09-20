@@ -61,7 +61,7 @@
                            @"RXAnimation", @"RXShellHome", @"RXVolume",
                            @"RXVK", @"RXTestManager", @"RXViewLevel",
                            @"RXMaskView", @"VKAnimationQueue", @"RXKS",
-                           @"RXParent"];
+                           @"RXParent", @"RXVRC"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -92,6 +92,7 @@
 //        object = @"RXMaskView";
 //    object = @"RXParent";
 //    object = @"RVWeb";
+    object = @"RXVRC";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];

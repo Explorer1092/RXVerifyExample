@@ -118,6 +118,8 @@
 		58FF7D7C1C4623F000F06976 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FF7D7B1C4623F000F06976 /* libz.tbd */; };
 		58FF7D851C4624E000F06976 /* RVUPPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FF7D831C4624E000F06976 /* RVUPPayViewController.m */; };
 		58FF7D861C4624E000F06976 /* RVUPPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */; };
+		8D50AAC3232A340E00B154D5 /* RXVRCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D50AAC2232A340E00B154D5 /* RXVRCView.m */; };
+		8D50AAC6232A343400B154D5 /* RXVRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D50AAC5232A343400B154D5 /* RXVRCViewController.m */; };
 		8DE4F90B23010F39004009E2 /* KSAdISBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90523010F39004009E2 /* KSAdISBottomView.m */; };
 		8DE4F90C23010F39004009E2 /* KSAdInsertScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90923010F39004009E2 /* KSAdInsertScreenViewController.m */; };
 		8DE4F90D23010F39004009E2 /* KSAdCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90A23010F39004009E2 /* KSAdCountdownView.m */; };
@@ -613,6 +615,10 @@
 		58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RVUPPayViewController.xib; sourceTree = "<group>"; };
 		70BA962DE41383DAC9D079B9 /* Pods-RXVerifyExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXVerifyExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample.release.xcconfig"; sourceTree = "<group>"; };
 		8D165F0323167B800080A1D8 /* RXTestManagerViewController+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RXTestManagerViewController+Extension.h"; sourceTree = "<group>"; };
+		8D50AAC1232A340E00B154D5 /* RXVRCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVRCView.h; sourceTree = "<group>"; };
+		8D50AAC2232A340E00B154D5 /* RXVRCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVRCView.m; sourceTree = "<group>"; };
+		8D50AAC4232A343400B154D5 /* RXVRCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVRCViewController.h; sourceTree = "<group>"; };
+		8D50AAC5232A343400B154D5 /* RXVRCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVRCViewController.m; sourceTree = "<group>"; };
 		8DE4F90523010F39004009E2 /* KSAdISBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAdISBottomView.m; sourceTree = "<group>"; };
 		8DE4F90623010F39004009E2 /* KSAdISBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAdISBottomView.h; sourceTree = "<group>"; };
 		8DE4F90723010F39004009E2 /* KSAdInsertScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAdInsertScreenViewController.h; sourceTree = "<group>"; };
@@ -1327,6 +1333,7 @@
 		583E667922A611D20080597C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8D50AAC0232A33FE00B154D5 /* ViewRelateChange */,
 				8DE4F96923041677004009E2 /* ChildVC */,
 				8DE4F90223010F39004009E2 /* KS */,
 				5849F89A22BCFF7F002F29FF /* VKAnimation */,
@@ -1731,6 +1738,17 @@
 				58FF7D751C4623A200F06976 /* UPPaymentControl.h */,
 			);
 			path = UnionPay;
+			sourceTree = "<group>";
+		};
+		8D50AAC0232A33FE00B154D5 /* ViewRelateChange */ = {
+			isa = PBXGroup;
+			children = (
+				8D50AAC1232A340E00B154D5 /* RXVRCView.h */,
+				8D50AAC2232A340E00B154D5 /* RXVRCView.m */,
+				8D50AAC4232A343400B154D5 /* RXVRCViewController.h */,
+				8D50AAC5232A343400B154D5 /* RXVRCViewController.m */,
+			);
+			path = ViewRelateChange;
 			sourceTree = "<group>";
 		};
 		8DE4F90223010F39004009E2 /* KS */ = {
@@ -3429,6 +3447,7 @@
 				E872491E21BE91C400EA6A3D /* RXAFQueryStringPair.m in Sources */,
 				E8433D8C20FC7F7D004A7FBC /* RWDummySignInService.m in Sources */,
 				E818A104221D4DCE0053ED3E /* RXAnimationViewController.m in Sources */,
+				8D50AAC3232A340E00B154D5 /* RXVRCView.m in Sources */,
 				E818A0F12216CC8A0053ED3E /* RXARCReturnValueObject.m in Sources */,
 				C966DB8B1FAEB5DF003BC1B4 /* RXLogManager.m in Sources */,
 				E818F0FA20B93FED00F94127 /* RXMVVMListViewController.m in Sources */,
@@ -3456,6 +3475,7 @@
 				E818A0E42213BF970053ED3E /* RXExternUtil.m in Sources */,
 				E85159CD215890CD006E23D5 /* RXOPMQViewController.m in Sources */,
 				582F36E22296CC9D00AA84A8 /* VKProtectEyeWindow.m in Sources */,
+				8D50AAC6232A343400B154D5 /* RXVRCViewController.m in Sources */,
 				E87C048A21E5E21D00B90D74 /* RXParentLockObject.m in Sources */,
 				E8701FAC20CA5C4000752211 /* RXCornerRadiusViewController.m in Sources */,
 				E872494521C5294900EA6A3D /* RXAFImageResponseSerializer.m in Sources */,
