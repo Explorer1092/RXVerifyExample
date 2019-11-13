@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import "RXYellowView.h"
-
+#import <Masonry/Masonry.h>
 @interface MainViewController ()
 
 
@@ -22,12 +22,35 @@
 @end
 
 @implementation MainViewController
-
+- (CGFloat)valueWith:(CGFloat)ab {
+    CGFloat x = ab * 2;
+    NSInteger x2 = ceil(x);
+    return x2 / 2.0f;
+}
 
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    
+//    CGFloat ab = 3.2;
+//    CGFloat abc = 3.5;
+//    CGFloat abcd = 3.6;
+//    
+//    CGFloat ab_r = [self valueWith:ab];
+//    CGFloat abc_r = [self valueWith:abc];
+//    CGFloat abcd_r = [self valueWith:abcd];
+    
+    
+    
+//    NSString *str1 = NSStringFromClass([self class]);
+//    NSString *str2 = @"MainViewController";
+//    
+//    BOOL b1 = [str1 isEqual:str2];
+//    BOOL b2 = [str1 isEqualToString:str2];
+//    
+//    NSLog(@"b1:%zd, b2:%zd", b1, b2);
     
 //    self.view.backgroundColor = [UIColor redColor];
     
@@ -61,7 +84,8 @@
                            @"RXAnimation", @"RXShellHome", @"RXVolume",
                            @"RXVK", @"RXTestManager", @"RXViewLevel",
                            @"RXMaskView", @"VKAnimationQueue", @"RXKS",
-                           @"RXParent", @"RXVRC"];
+                           @"RXParent", @"RXVRC", @"RXUIAnimation",
+                           @"RXAppStore", @"RXViewContentMode", @"RXMasonryTest"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -87,17 +111,35 @@
 //    object = @"RXAnimation";
 //    object = @"RXShellHome";
 //    object = @"RXVolume";
-    object = @"RXTestManager";
 //    object = @"RXKS";
 //        object = @"RXMaskView";
 //    object = @"RXParent";
 //    object = @"RVWeb";
     object = @"RXVRC";
+    
+    object = @"RXUIAnimation";
+    
+    object = @"RXAppStore";
+    
+    object = @"RXMasonryTest";
+    
+    
+    object = @"RXTestManager";
+    
+//    object = @"RXViewContentMode";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
     
-    
+    UIView *tmpView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+    tmpView.backgroundColor = [UIColor whiteColor];
+    tmpView.layer.shadowOffset = CGSizeMake(0, 0);
+    tmpView.layer.shadowColor = [UIColor redColor].CGColor;
+    tmpView.layer.shadowOpacity = 0.5f;
+    tmpView.layer.shadowRadius = 3;
+    tmpView.layer.cornerRadius = 4;
+//    tmpView.layer.masksToBounds = YES;
+    [self.tableView addSubview:tmpView];
     
 }
 - (void)viewWillAppear:(BOOL)animated {

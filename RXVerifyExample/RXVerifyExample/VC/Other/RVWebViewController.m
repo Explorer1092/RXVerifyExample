@@ -31,9 +31,13 @@
 }
 
 #pragma mark - UIWebViewDelegate
-
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    NSLog(@"22");
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    NSLog(@"11");
     NSString *theTitle = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     self.title = theTitle;
 }

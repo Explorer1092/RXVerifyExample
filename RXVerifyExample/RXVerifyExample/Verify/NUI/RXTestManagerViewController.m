@@ -16,6 +16,8 @@
 #import "RXSortManager.h"
 #import "RXSignalManager.h"
 #import "RXTestManagerViewController+Extension.h"
+
+#import "RXDateManager.h"
 @interface RXAAAA : NSObject
 @end
 
@@ -78,7 +80,11 @@
 //    [[RXPCQueueBufferManager sharedInstance] test];
 //    [[RXSortManager sharedInstance] test];
     
-    [[RXSignalManager sharedInstance] test];
+//    [[RXSignalManager sharedInstance] test];
+    
+    [[RXDateManager sharedInstance] test];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
 }
 - (void)viewWillAppear:(BOOL)animated {

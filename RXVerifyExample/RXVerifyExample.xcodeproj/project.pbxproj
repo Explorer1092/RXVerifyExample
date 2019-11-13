@@ -120,6 +120,11 @@
 		58FF7D861C4624E000F06976 /* RVUPPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58FF7D841C4624E000F06976 /* RVUPPayViewController.xib */; };
 		8D50AAC3232A340E00B154D5 /* RXVRCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D50AAC2232A340E00B154D5 /* RXVRCView.m */; };
 		8D50AAC6232A343400B154D5 /* RXVRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D50AAC5232A343400B154D5 /* RXVRCViewController.m */; };
+		8D6552A9237164C900A2A045 /* RXMasonryTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6552A8237164C900A2A045 /* RXMasonryTestViewController.m */; };
+		8D6552AD2371807200A2A045 /* RXDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6552AC2371807200A2A045 /* RXDateManager.m */; };
+		8D718786233EFB99006B31FF /* RXUIAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D718785233EFB99006B31FF /* RXUIAnimationViewController.m */; };
+		8DB9128F2362D9B000BB74C3 /* RXViewContentModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9128E2362D9B000BB74C3 /* RXViewContentModeViewController.m */; };
+		8DDEE1792367DED9003587FE /* RXAFNResponseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDEE1782367DED9003587FE /* RXAFNResponseManager.m */; };
 		8DE4F90B23010F39004009E2 /* KSAdISBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90523010F39004009E2 /* KSAdISBottomView.m */; };
 		8DE4F90C23010F39004009E2 /* KSAdInsertScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90923010F39004009E2 /* KSAdInsertScreenViewController.m */; };
 		8DE4F90D23010F39004009E2 /* KSAdCountdownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F90A23010F39004009E2 /* KSAdCountdownView.m */; };
@@ -135,6 +140,8 @@
 		8DE4F9812304FB9D004009E2 /* RXChild1Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F9802304FB9D004009E2 /* RXChild1Manager.m */; };
 		8DE4F9842304FBA9004009E2 /* RXChild2Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F9832304FBA9004009E2 /* RXChild2Manager.m */; };
 		8DE4F9872304FBC8004009E2 /* RXSignalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4F9862304FBC8004009E2 /* RXSignalManager.m */; };
+		8DF91879235DDADE00A661A3 /* RXAppStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF91878235DDADE00A661A3 /* RXAppStoreViewController.m */; };
+		8DF9187C235EACB500A661A3 /* RXAppStorePopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9187B235EACB500A661A3 /* RXAppStorePopViewController.m */; };
 		C928B26E1FB93E530038ECE6 /* RVLLDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C928B26C1FB93E530038ECE6 /* RVLLDBViewController.m */; };
 		C928B26F1FB93E530038ECE6 /* RVLLDBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C928B26D1FB93E530038ECE6 /* RVLLDBViewController.xib */; };
 		C929233A1D339BCF009D6875 /* RVDUMAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C92923381D339BCF009D6875 /* RVDUMAViewController.m */; };
@@ -619,6 +626,16 @@
 		8D50AAC2232A340E00B154D5 /* RXVRCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVRCView.m; sourceTree = "<group>"; };
 		8D50AAC4232A343400B154D5 /* RXVRCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVRCViewController.h; sourceTree = "<group>"; };
 		8D50AAC5232A343400B154D5 /* RXVRCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVRCViewController.m; sourceTree = "<group>"; };
+		8D6552A7237164C900A2A045 /* RXMasonryTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMasonryTestViewController.h; sourceTree = "<group>"; };
+		8D6552A8237164C900A2A045 /* RXMasonryTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMasonryTestViewController.m; sourceTree = "<group>"; };
+		8D6552AB2371807200A2A045 /* RXDateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXDateManager.h; sourceTree = "<group>"; };
+		8D6552AC2371807200A2A045 /* RXDateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXDateManager.m; sourceTree = "<group>"; };
+		8D718784233EFB99006B31FF /* RXUIAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXUIAnimationViewController.h; sourceTree = "<group>"; };
+		8D718785233EFB99006B31FF /* RXUIAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXUIAnimationViewController.m; sourceTree = "<group>"; };
+		8DB9128D2362D9B000BB74C3 /* RXViewContentModeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXViewContentModeViewController.h; sourceTree = "<group>"; };
+		8DB9128E2362D9B000BB74C3 /* RXViewContentModeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXViewContentModeViewController.m; sourceTree = "<group>"; };
+		8DDEE1772367DED9003587FE /* RXAFNResponseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAFNResponseManager.h; sourceTree = "<group>"; };
+		8DDEE1782367DED9003587FE /* RXAFNResponseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAFNResponseManager.m; sourceTree = "<group>"; };
 		8DE4F90523010F39004009E2 /* KSAdISBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSAdISBottomView.m; sourceTree = "<group>"; };
 		8DE4F90623010F39004009E2 /* KSAdISBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAdISBottomView.h; sourceTree = "<group>"; };
 		8DE4F90723010F39004009E2 /* KSAdInsertScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSAdInsertScreenViewController.h; sourceTree = "<group>"; };
@@ -649,6 +666,10 @@
 		8DE4F9832304FBA9004009E2 /* RXChild2Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXChild2Manager.m; sourceTree = "<group>"; };
 		8DE4F9852304FBC8004009E2 /* RXSignalManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXSignalManager.h; sourceTree = "<group>"; };
 		8DE4F9862304FBC8004009E2 /* RXSignalManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXSignalManager.m; sourceTree = "<group>"; };
+		8DF91877235DDADE00A661A3 /* RXAppStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAppStoreViewController.h; sourceTree = "<group>"; };
+		8DF91878235DDADE00A661A3 /* RXAppStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAppStoreViewController.m; sourceTree = "<group>"; };
+		8DF9187A235EACB500A661A3 /* RXAppStorePopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXAppStorePopViewController.h; sourceTree = "<group>"; };
+		8DF9187B235EACB500A661A3 /* RXAppStorePopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXAppStorePopViewController.m; sourceTree = "<group>"; };
 		BA6FA15748D4C8749D98E8FA /* Pods-RXVerifyExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RXVerifyExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample.debug.xcconfig"; sourceTree = "<group>"; };
 		C928B26B1FB93E530038ECE6 /* RVLLDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RVLLDBViewController.h; sourceTree = "<group>"; };
 		C928B26C1FB93E530038ECE6 /* RVLLDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RVLLDBViewController.m; sourceTree = "<group>"; };
@@ -1324,6 +1345,7 @@
 		583E667822A611D20080597C /* Verify */ = {
 			isa = PBXGroup;
 			children = (
+				8DD81CC52339F99A00AFE114 /* KS */,
 				583E667922A611D20080597C /* UI */,
 				583E667A22A611D20080597C /* NUI */,
 			);
@@ -1333,6 +1355,10 @@
 		583E667922A611D20080597C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8D6552A6237164B500A2A045 /* Masonry */,
+				8DB9128C2362D99200BB74C3 /* UIImageView */,
+				8DF91876235DDAC800A661A3 /* AppStore */,
+				8D718783233EFB71006B31FF /* Animation */,
 				8D50AAC0232A33FE00B154D5 /* ViewRelateChange */,
 				8DE4F96923041677004009E2 /* ChildVC */,
 				8DE4F90223010F39004009E2 /* KS */,
@@ -1347,6 +1373,8 @@
 		583E667A22A611D20080597C /* NUI */ = {
 			isa = PBXGroup;
 			children = (
+				8D6552AA2371806100A2A045 /* Date */,
+				8DDEE1752367DEC0003587FE /* AFN */,
 				8DE4F97B2304FB75004009E2 /* SIgnal */,
 				8DE4F965230406B3004009E2 /* Sort */,
 				580B836522CCE51600A0CE51 /* ProducerConsumer */,
@@ -1751,6 +1779,74 @@
 			path = ViewRelateChange;
 			sourceTree = "<group>";
 		};
+		8D6552A6237164B500A2A045 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				8D6552A7237164C900A2A045 /* RXMasonryTestViewController.h */,
+				8D6552A8237164C900A2A045 /* RXMasonryTestViewController.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		8D6552AA2371806100A2A045 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				8D6552AB2371807200A2A045 /* RXDateManager.h */,
+				8D6552AC2371807200A2A045 /* RXDateManager.m */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		8D718783233EFB71006B31FF /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				8D718784233EFB99006B31FF /* RXUIAnimationViewController.h */,
+				8D718785233EFB99006B31FF /* RXUIAnimationViewController.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		8DB9128C2362D99200BB74C3 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				8DB9128D2362D9B000BB74C3 /* RXViewContentModeViewController.h */,
+				8DB9128E2362D9B000BB74C3 /* RXViewContentModeViewController.m */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		8DD81CC52339F99A00AFE114 /* KS */ = {
+			isa = PBXGroup;
+			children = (
+				8DD81CC6233A0B9800AFE114 /* ZYDS */,
+			);
+			path = KS;
+			sourceTree = "<group>";
+		};
+		8DD81CC6233A0B9800AFE114 /* ZYDS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ZYDS;
+			sourceTree = "<group>";
+		};
+		8DDEE1752367DEC0003587FE /* AFN */ = {
+			isa = PBXGroup;
+			children = (
+				8DDEE1762367DEC0003587FE /* Response */,
+			);
+			path = AFN;
+			sourceTree = "<group>";
+		};
+		8DDEE1762367DEC0003587FE /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				8DDEE1772367DED9003587FE /* RXAFNResponseManager.h */,
+				8DDEE1782367DED9003587FE /* RXAFNResponseManager.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		8DE4F90223010F39004009E2 /* KS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1823,6 +1919,17 @@
 				8DE4F9862304FBC8004009E2 /* RXSignalManager.m */,
 			);
 			path = SIgnal;
+			sourceTree = "<group>";
+		};
+		8DF91876235DDAC800A661A3 /* AppStore */ = {
+			isa = PBXGroup;
+			children = (
+				8DF91877235DDADE00A661A3 /* RXAppStoreViewController.h */,
+				8DF91878235DDADE00A661A3 /* RXAppStoreViewController.m */,
+				8DF9187A235EACB500A661A3 /* RXAppStorePopViewController.h */,
+				8DF9187B235EACB500A661A3 /* RXAppStorePopViewController.m */,
+			);
+			path = AppStore;
 			sourceTree = "<group>";
 		};
 		C929233C1D339C4C009D6875 /* RVDUMA */ = {
@@ -3299,6 +3406,7 @@
 			files = (
 				E818F10020B9413600F94127 /* RXMVVMListViewModel.m in Sources */,
 				E870204520DA7B3F00752211 /* RXImageCell.m in Sources */,
+				8DF9187C235EACB500A661A3 /* RXAppStorePopViewController.m in Sources */,
 				5803F0CF1C190FFC0071FDDA /* RVRefreshViewController.m in Sources */,
 				E818F0E420B6C0A300F94127 /* RXNSObjectForSelectorViewController.m in Sources */,
 				E818A0CD21F5CE720053ED3E /* RXARCOwnershipQualifiedObject.m in Sources */,
@@ -3341,6 +3449,7 @@
 				C9A7110D1D7BA0880002E703 /* RVCopyViewController.m in Sources */,
 				58901C3E22AE6125005D0C4D /* VKBaseLevelView.m in Sources */,
 				C985F6011D4A0AFB004D654D /* RVWebViewController.m in Sources */,
+				8D6552AD2371807200A2A045 /* RXDateManager.m in Sources */,
 				58D6603A1C2571A700912786 /* RXItemView.m in Sources */,
 				E8F8D808219BB437007AB027 /* RXAFNetworkReachabilityManager.m in Sources */,
 				E8F8D80121917041007AB027 /* RXAFNTest2Object.m in Sources */,
@@ -3386,6 +3495,7 @@
 				E818F0F120B9044A00F94127 /* RXMVVMModel.m in Sources */,
 				E818A0A021F079600053ED3E /* RXARCCategoryMethodSubObject.m in Sources */,
 				5821DB382241D88A002AA122 /* RXRSATheoryObject.m in Sources */,
+				8D6552A9237164C900A2A045 /* RXMasonryTestViewController.m in Sources */,
 				5841E55322B1E70A00DA4703 /* RXTMImpCachingInstanceObject.m in Sources */,
 				C9D397A51CF5A29200D8569C /* RXRunTimeDemoObject.m in Sources */,
 				E811CA911FED09FD003157E9 /* RVEventResponseListViewController.m in Sources */,
@@ -3450,6 +3560,7 @@
 				8D50AAC3232A340E00B154D5 /* RXVRCView.m in Sources */,
 				E818A0F12216CC8A0053ED3E /* RXARCReturnValueObject.m in Sources */,
 				C966DB8B1FAEB5DF003BC1B4 /* RXLogManager.m in Sources */,
+				8DF91879235DDADE00A661A3 /* RXAppStoreViewController.m in Sources */,
 				E818F0FA20B93FED00F94127 /* RXMVVMListViewController.m in Sources */,
 				E87C043221D4E7E300B90D74 /* RXInitializeTestObject.m in Sources */,
 				E870204220DA7B2800752211 /* RXCornerRadiusTableViewImpl.m in Sources */,
@@ -3501,6 +3612,7 @@
 				E87C047D21E34B0300B90D74 /* RXBlockObject.m in Sources */,
 				E86050E220A079E30016F6C9 /* RVRunLoopViewController.m in Sources */,
 				E818A0A621F079E60053ED3E /* RXARCCategoryMethodSubObject+C2.m in Sources */,
+				8DDEE1792367DED9003587FE /* RXAFNResponseManager.m in Sources */,
 				C95B6AFA1CF81EE300E9FC0F /* RVLockViewController.m in Sources */,
 				E87C044821D7127600B90D74 /* RXMethodSwizzleOverrideRoughlyObject.m in Sources */,
 				E818A0B821F30C890053ED3E /* RXARCNSReturnsRetainedObject.m in Sources */,
@@ -3540,6 +3652,7 @@
 				581219332251AD9B0062B616 /* RXClassMethodSelfBlockManager.m in Sources */,
 				C9A711171D7BA1340002E703 /* RXCObject.m in Sources */,
 				E87C043521D4E86D00B90D74 /* RXInitializeEmptyObject.m in Sources */,
+				8D718786233EFB99006B31FF /* RXUIAnimationViewController.m in Sources */,
 				E872495D21CCEA2000EA6A3D /* RXReadonlyProperty2Object.m in Sources */,
 				E872493C21C5290300EA6A3D /* RXAFXMLParserResponseSerializer.m in Sources */,
 				E872494821C5296500EA6A3D /* RXAFCompoundResponseSerializer.m in Sources */,
@@ -3558,6 +3671,7 @@
 				8DE4F90C23010F39004009E2 /* KSAdInsertScreenViewController.m in Sources */,
 				C93E6AF61CF6A14F00E7B193 /* RXRunTimeDemo1Object.m in Sources */,
 				580B836E22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.m in Sources */,
+				8DB9128F2362D9B000BB74C3 /* RXViewContentModeViewController.m in Sources */,
 				58A18422226467F30066C2D9 /* RXVolumeViewController.m in Sources */,
 				E818A0FE221D4B020053ED3E /* RXAnimationTestObject.m in Sources */,
 				580B836422CCA1D500A0CE51 /* RXPBObject.m in Sources */,
