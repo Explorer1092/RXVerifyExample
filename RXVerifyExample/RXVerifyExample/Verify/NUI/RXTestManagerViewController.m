@@ -17,7 +17,9 @@
 #import "RXSignalManager.h"
 #import "RXTestManagerViewController+Extension.h"
 
+#import "RXAssociateManager.h"
 #import "RXDateManager.h"
+#import "RXPrivateApiManager.h"
 @interface RXAAAA : NSObject
 @end
 
@@ -82,7 +84,11 @@
     
 //    [[RXSignalManager sharedInstance] test];
     
-    [[RXDateManager sharedInstance] test];
+//    [[RXDateManager sharedInstance] test];
+    
+//    [[RXAssociateManager sharedInstance] test];
+    
+    [[RXPrivateApiManager sharedInstance] test];
     
     self.view.backgroundColor = [UIColor whiteColor];
     

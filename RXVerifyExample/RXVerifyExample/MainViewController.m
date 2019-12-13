@@ -9,6 +9,9 @@
 #import "MainViewController.h"
 #import "RXYellowView.h"
 #import <Masonry/Masonry.h>
+#import "NSObject+RXVerifyExample.h"
+#import "RXWeakTestViewController.h"
+#import "RXDirectionViewController.h"
 @interface MainViewController ()
 
 
@@ -32,6 +35,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+//    NSObject *object1 = [NSObject new];
+    
     
     
 //    CGFloat ab = 3.2;
@@ -85,7 +91,8 @@
                            @"RXVK", @"RXTestManager", @"RXViewLevel",
                            @"RXMaskView", @"VKAnimationQueue", @"RXKS",
                            @"RXParent", @"RXVRC", @"RXUIAnimation",
-                           @"RXAppStore", @"RXViewContentMode", @"RXMasonryTest"];
+                           @"RXAppStore", @"RXViewContentMode", @"RXMasonryTest",
+                           @"RXDirection", @"RXStrangeA", @"RXViewHolder"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -126,7 +133,11 @@
     
     object = @"RXTestManager";
     
-//    object = @"RXViewContentMode";
+    object = @"RXDirection";
+    
+    object = @"RXStrangeA";
+    
+    object = @"RXViewHolder";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
@@ -192,8 +203,11 @@
 - (void)gotoExampleVCWithName:(NSString *)name
 {
     NSString *clsString = [NSString stringWithFormat:@"rxpage://%@ViewController", name];
-    
+
     [RXVCMediator pushInNavigationController:self.navigationController withString:clsString query:nil animate:YES];
+    
+//    RXWeakTestViewController *vc = [RXWeakTestViewController new];
+//    NSLog(@"vc:%@", vc);
 
 }
 

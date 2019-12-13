@@ -75,6 +75,8 @@ pod 'MTHawkeye'
 
 pod 'WechatOpenSDK'
 
+pod 'Bytedance-UnionAD'
+
 
 inhibit_all_warnings!
 

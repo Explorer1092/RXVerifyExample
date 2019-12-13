@@ -15,6 +15,7 @@
 #import "UncaughtExceptionHandler.h"
 #import "RXServiceManager.h"
 #import "RXTidyMainViewController.h"
+#import "RXAutoGenerateManager.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) UINavigationController *mainNC;
@@ -98,6 +99,8 @@
     
 //    [self config];
 //    [RXServiceManager application:application willFinishLaunchingWithOptions:launchOptions];
+    
+    [RXAutoGenerateManager generate];
     return YES;
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

@@ -35,9 +35,9 @@
     
     __weak typeof(self) weakSelf = self;
     NSArray *ary = @[@"第一个结束",
-                    @"第二个文字第二个文字第二个文字第二个文字第二个文字第二个结束",
-                    @"第三个文字第三个文字第三个文字第三个结束",
-                    @"第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个结束",
+                     @"第二个文字第二个文字第二个文字第二个文字第二个文字第二个结束",
+                     @"第三个文字第三个文字第三个文字第三个结束",
+                     @"第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个结束",
                      @"第五个文字第五个结束"];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
         weakSelf.index = weakSelf.index % ary.count;
