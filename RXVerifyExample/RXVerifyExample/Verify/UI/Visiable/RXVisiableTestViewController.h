@@ -1,8 +1,8 @@
 //
-//  RXStrangeXRPlayerView.h
+//  RXVisiableTestViewController.h
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/12/13.
+//  Created by xuzhijun on 2019/12/14.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
@@ -10,10 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RXStrangeXRPlayerView : UIView
+@interface RXVisiableTestViewController : UIViewController
 
-- (void)setURL:(NSURL *)URL;
-- (void)play;
 @end
 
 NS_ASSUME_NONNULL_END

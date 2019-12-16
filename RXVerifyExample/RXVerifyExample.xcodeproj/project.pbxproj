@@ -124,6 +124,9 @@
 		8D05CB1323A0F46300F37A09 /* RXViewHolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D05CB1223A0F46300F37A09 /* RXViewHolderCell.m */; };
 		8D05CB2B23A32F7C00F37A09 /* RXStrangeXRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D05CB2A23A32F7B00F37A09 /* RXStrangeXRViewController.m */; };
 		8D05CB2E23A32F9700F37A09 /* RXStrangeXRPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D05CB2D23A32F9700F37A09 /* RXStrangeXRPlayerView.m */; };
+		8D05CB3123A38B6A00F37A09 /* RXStrangeXRBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D05CB3023A38B6900F37A09 /* RXStrangeXRBottomView.m */; };
+		8D05CB6423A3ADF700F37A09 /* RXNotificationFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D05CB6323A3ADF700F37A09 /* RXNotificationFirstViewController.m */; };
+		8D05CB6723A3AE0400F37A09 /* RXNotificationSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D05CB6623A3AE0400F37A09 /* RXNotificationSecondViewController.m */; };
 		8D12F6D12384DCB800A7C56A /* LSApplicationWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D12F6D02384DCB800A7C56A /* LSApplicationWorkspace.m */; };
 		8D12F6D42384DCE000A7C56A /* RXPrivateApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D12F6D32384DCE000A7C56A /* RXPrivateApiManager.m */; };
 		8D12F6D72384DDC900A7C56A /* LSApplicationWorkspace+RXVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D12F6D62384DDC900A7C56A /* LSApplicationWorkspace+RXVerify.m */; };
@@ -138,6 +141,7 @@
 		8D6561C5237FFA8E00A2A045 /* RXAssociateObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6561C4237FFA8E00A2A045 /* RXAssociateObject.m */; };
 		8D6561C8237FFAA300A2A045 /* RXAssociateObject+Associate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6561C7237FFAA300A2A045 /* RXAssociateObject+Associate.m */; };
 		8D718786233EFB99006B31FF /* RXUIAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D718785233EFB99006B31FF /* RXUIAnimationViewController.m */; };
+		8D86C4C623A4C26600A8502A /* RXVisiableTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D86C4C523A4C26600A8502A /* RXVisiableTestViewController.m */; };
 		8DB9128F2362D9B000BB74C3 /* RXViewContentModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9128E2362D9B000BB74C3 /* RXViewContentModeViewController.m */; };
 		8DBEA359238FD15900DFE524 /* RXDirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBEA358238FD15900DFE524 /* RXDirectionViewController.m */; };
 		8DBEB7382398B02500DFE524 /* RXStrangeAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBEB7372398B02200DFE524 /* RXStrangeAViewController.m */; };
@@ -651,6 +655,12 @@
 		8D05CB2A23A32F7B00F37A09 /* RXStrangeXRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXStrangeXRViewController.m; sourceTree = "<group>"; };
 		8D05CB2C23A32F9700F37A09 /* RXStrangeXRPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXStrangeXRPlayerView.h; sourceTree = "<group>"; };
 		8D05CB2D23A32F9700F37A09 /* RXStrangeXRPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXStrangeXRPlayerView.m; sourceTree = "<group>"; };
+		8D05CB2F23A38B6900F37A09 /* RXStrangeXRBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXStrangeXRBottomView.h; sourceTree = "<group>"; };
+		8D05CB3023A38B6900F37A09 /* RXStrangeXRBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXStrangeXRBottomView.m; sourceTree = "<group>"; };
+		8D05CB6223A3ADF700F37A09 /* RXNotificationFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNotificationFirstViewController.h; sourceTree = "<group>"; };
+		8D05CB6323A3ADF700F37A09 /* RXNotificationFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNotificationFirstViewController.m; sourceTree = "<group>"; };
+		8D05CB6523A3AE0400F37A09 /* RXNotificationSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNotificationSecondViewController.h; sourceTree = "<group>"; };
+		8D05CB6623A3AE0400F37A09 /* RXNotificationSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNotificationSecondViewController.m; sourceTree = "<group>"; };
 		8D12F6CF2384DCB800A7C56A /* LSApplicationWorkspace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSApplicationWorkspace.h; sourceTree = "<group>"; };
 		8D12F6D02384DCB800A7C56A /* LSApplicationWorkspace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSApplicationWorkspace.m; sourceTree = "<group>"; };
 		8D12F6D22384DCE000A7C56A /* RXPrivateApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPrivateApiManager.h; sourceTree = "<group>"; };
@@ -679,6 +689,8 @@
 		8D6561C7237FFAA300A2A045 /* RXAssociateObject+Associate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RXAssociateObject+Associate.m"; sourceTree = "<group>"; };
 		8D718784233EFB99006B31FF /* RXUIAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXUIAnimationViewController.h; sourceTree = "<group>"; };
 		8D718785233EFB99006B31FF /* RXUIAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXUIAnimationViewController.m; sourceTree = "<group>"; };
+		8D86C4C423A4C26600A8502A /* RXVisiableTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVisiableTestViewController.h; sourceTree = "<group>"; };
+		8D86C4C523A4C26600A8502A /* RXVisiableTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVisiableTestViewController.m; sourceTree = "<group>"; };
 		8DB9128D2362D9B000BB74C3 /* RXViewContentModeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXViewContentModeViewController.h; sourceTree = "<group>"; };
 		8DB9128E2362D9B000BB74C3 /* RXViewContentModeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXViewContentModeViewController.m; sourceTree = "<group>"; };
 		8DBEA357238FD15900DFE524 /* RXDirectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXDirectionViewController.h; sourceTree = "<group>"; };
@@ -1412,6 +1424,8 @@
 		583E667922A611D20080597C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8D86C4C323A4C22700A8502A /* Visiable */,
+				8D05CB6123A3ADCE00F37A09 /* Notification */,
 				8D05CB2823A32F5000F37A09 /* XStrange */,
 				8D05CB0D23A0EF4F00F37A09 /* ViewHolder */,
 				8DBEB7352398B01100DFE524 /* Strange */,
@@ -1861,8 +1875,21 @@
 				8D05CB2A23A32F7B00F37A09 /* RXStrangeXRViewController.m */,
 				8D05CB2C23A32F9700F37A09 /* RXStrangeXRPlayerView.h */,
 				8D05CB2D23A32F9700F37A09 /* RXStrangeXRPlayerView.m */,
+				8D05CB2F23A38B6900F37A09 /* RXStrangeXRBottomView.h */,
+				8D05CB3023A38B6900F37A09 /* RXStrangeXRBottomView.m */,
 			);
 			path = XStrange;
+			sourceTree = "<group>";
+		};
+		8D05CB6123A3ADCE00F37A09 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				8D05CB6223A3ADF700F37A09 /* RXNotificationFirstViewController.h */,
+				8D05CB6323A3ADF700F37A09 /* RXNotificationFirstViewController.m */,
+				8D05CB6523A3AE0400F37A09 /* RXNotificationSecondViewController.h */,
+				8D05CB6623A3AE0400F37A09 /* RXNotificationSecondViewController.m */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		8D12F6C82384DC2F00A7C56A /* PrivateApi */ = {
@@ -1938,6 +1965,15 @@
 				8D718785233EFB99006B31FF /* RXUIAnimationViewController.m */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		8D86C4C323A4C22700A8502A /* Visiable */ = {
+			isa = PBXGroup;
+			children = (
+				8D86C4C423A4C26600A8502A /* RXVisiableTestViewController.h */,
+				8D86C4C523A4C26600A8502A /* RXVisiableTestViewController.m */,
+			);
+			path = Visiable;
 			sourceTree = "<group>";
 		};
 		8DB9128C2362D99200BB74C3 /* UIImageView */ = {
@@ -3586,6 +3622,7 @@
 				58901C6322B0A8F2005D0C4D /* RXCommentUtil.m in Sources */,
 				E858AA4B20B9496000BAAFD6 /* RXMVVMCell.m in Sources */,
 				E8F8D7A62187E377007AB027 /* RXMethodListDemoObject.m in Sources */,
+				8D05CB6723A3AE0400F37A09 /* RXNotificationSecondViewController.m in Sources */,
 				E87C044B21D7133B00B90D74 /* RXMethodSwizzleSafelyObject.m in Sources */,
 				E8F8D7F7219133F8007AB027 /* RXAFSecurityPolicy.m in Sources */,
 				58D89EDA22B4C8E800687338 /* VKDownloadOperation.m in Sources */,
@@ -3668,6 +3705,7 @@
 				E872490B21B5533800EA6A3D /* RXAFNSerializationTestObject.m in Sources */,
 				58D6602A1C256BAD00912786 /* RVWYViewController.m in Sources */,
 				E8B6586A222E07F0007C0E42 /* RXBSDK.m in Sources */,
+				8D86C4C623A4C26600A8502A /* RXVisiableTestViewController.m in Sources */,
 				E87C046821E32CB800B90D74 /* RXEventListCategory.m in Sources */,
 				C9BDAD631CC6237A00CBB1CA /* RVAnimation2ViewController.m in Sources */,
 				C9A711111D7BA1130002E703 /* RXAObject.m in Sources */,
@@ -3782,6 +3820,7 @@
 				E872495621C9F39A00EA6A3D /* RXRuntime1Object.m in Sources */,
 				E8F8D80B219BFC44007AB027 /* RXAFNTest3Object.m in Sources */,
 				E872491821BD40D200EA6A3D /* RXAFPropertyListRequestSerializer.m in Sources */,
+				8D05CB6423A3ADF700F37A09 /* RXNotificationFirstViewController.m in Sources */,
 				E8433D7B20EA51D9004A7FBC /* RXRACViewController.m in Sources */,
 				E8701FA920C957F100752211 /* UIImageView+RXCornerRadius.m in Sources */,
 				E872495221C9EFF800EA6A3D /* RXUtilViewController.m in Sources */,
@@ -3849,6 +3888,7 @@
 				589019CF22A8FFEE005D0C4D /* VKRaptorView.m in Sources */,
 				580B835A22CC5DB400A0CE51 /* RXStaticManager.m in Sources */,
 				5882A3EA22A6AFA100449D47 /* RXClassExtensionManager.m in Sources */,
+				8D05CB3123A38B6A00F37A09 /* RXStrangeXRBottomView.m in Sources */,
 				E870202920D8E10B00752211 /* RVGCDQueuesViewController.m in Sources */,
 				E85159B92148B1CC006E23D5 /* RXJLRoutesService.m in Sources */,
 				E872492D21C128ED00EA6A3D /* RXAFHTTPRequestSerializer.m in Sources */,

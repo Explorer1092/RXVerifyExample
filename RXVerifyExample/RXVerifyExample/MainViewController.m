@@ -92,7 +92,8 @@
                            @"RXMaskView", @"VKAnimationQueue", @"RXKS",
                            @"RXParent", @"RXVRC", @"RXUIAnimation",
                            @"RXAppStore", @"RXViewContentMode", @"RXMasonryTest",
-                           @"RXDirection", @"RXStrangeA", @"RXViewHolder"];
+                           @"RXDirection", @"RXStrangeA", @"RXViewHolder",
+                           @"RXStrangeXR", @"RXNotificationFirst"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -138,6 +139,8 @@
     object = @"RXStrangeA";
     
     object = @"RXViewHolder";
+    
+//    object = @"RXNotificationFirst";
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];

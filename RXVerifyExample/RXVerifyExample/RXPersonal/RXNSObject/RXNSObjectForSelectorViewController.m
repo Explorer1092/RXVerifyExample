@@ -19,11 +19,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    SEL sel1 = NSSelectorFromString(@"abc");
-    SEL sel2 = NSSelectorFromString(@"testInstanceMethod");
-    SEL sel3 = NSSelectorFromString(@"testClassMethod");
-    
-    RXNSObjectForSelectorAObject *object = [RXNSObjectForSelectorAObject new];
+//    SEL sel1 = NSSelectorFromString(@"abc");
+//    SEL sel2 = NSSelectorFromString(@"testInstanceMethod");
+//    SEL sel3 = NSSelectorFromString(@"testClassMethod");
+//    
+//    RXNSObjectForSelectorAObject *object = [RXNSObjectForSelectorAObject new];
     
 //    IMP k1 = [object methodForSelector:sel1];
 //    IMP k2 = [object methodForSelector:sel2];

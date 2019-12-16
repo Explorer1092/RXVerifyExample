@@ -12,9 +12,9 @@
 @implementation VKDownloadTestManager
 
 - (void)test {
-    NSString *str3 = @"/var/mobile/Containers/Data/Application/0685BA32-0FB0-45CC-AF3A-49C72F4044E6/Library/Caches/online_class/audio/91533a573813794211fdb4ff4153c5ad_1140909470830825472_0.mp3";
-    NSLog(@"%ld", str3.length);
-    NSString *str = @"https://opensource.apple.com/tarballs/CFNetwork/CFNetwork-128.2.tar.gz";
+//    NSString *str3 = @"/var/mobile/Containers/Data/Application/0685BA32-0FB0-45CC-AF3A-49C72F4044E6/Library/Caches/online_class/audio/91533a573813794211fdb4ff4153c5ad_1140909470830825472_0.mp3";
+//    NSLog(@"%ld", str3.length);
+//    NSString *str = @"https://opensource.apple.com/tarballs/CFNetwork/CFNetwork-128.2.tar.gz";
 //    str = @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1561187051&di=363bba28833999c6bb2f72ba4e99c9eb&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.sccnn.com%2Fbimg%2F337%2F45497.jpg";
 //    str = @"http://img3.imgtn.bdimg.com/it/u=288321735,873043392&fm=11&gp=0.jpg";
 //    [self test_tmp:str];
@@ -59,11 +59,11 @@
 
     
     
-    NSArray *hostArray = @[@"abc.vip_1_1_kid.com.cn",
-                           @"test-ic-static.vip_1_1_kid.com.cn",
-                           @"ic-static-ali.vip_1_1_kid.com.cn",
-                           @"ic-static.vip_1_1_kid.com.cn"];
-    NSString *relativePath = @"course/material/DEMO1-U1-LC1-L1/e8680666d9fd646aa5334b62494940b9.mp3";
+//    NSArray *hostArray = @[@"abc.vip_1_1_kid.com.cn",
+//                           @"test-ic-static.vip_1_1_kid.com.cn",
+//                           @"ic-static-ali.vip_1_1_kid.com.cn",
+//                           @"ic-static.vip_1_1_kid.com.cn"];
+//    NSString *relativePath = @"course/material/DEMO1-U1-LC1-L1/e8680666d9fd646aa5334b62494940b9.mp3";
     
 //    [[VKDownloadManager sharedInstance] downloadWithHostArray:hostArray relativePath:relativePath progressBlock:nil completionBlock:^(NSURL * _Nullable localURL, NSError * _Nullable error, VKDownloadCacheType cacheType, NSURL * _Nullable downloadURL) {
 //        NSLog(@"111");

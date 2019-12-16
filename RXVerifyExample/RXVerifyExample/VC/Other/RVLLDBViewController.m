@@ -128,11 +128,11 @@
     
     int val = 3;
     void (^blockName)(void) = ^ {
-        NSLog(@"block val:%zd", val);
+        NSLog(@"block val:%zd", (long)val);
     };
     
     val = val + 1;
-    NSLog(@"func val:%zd", val);
+    NSLog(@"func val:%zd", (long)val);
     
     NSLog(@"block:%@", blockName);
     

@@ -1,5 +1,5 @@
 //
-//  RXStrangeXRPlayerView.h
+//  RXNotificationFirstViewController.h
 //  RXVerifyExample
 //
 //  Created by xuzhijun on 2019/12/13.
@@ -10,10 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RXStrangeXRPlayerView : UIView
+@interface RXNotificationFirstViewController : UIViewController
 
-- (void)setURL:(NSURL *)URL;
-- (void)play;
 @end
 
 NS_ASSUME_NONNULL_END

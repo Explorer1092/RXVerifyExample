@@ -679,8 +679,8 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
     dispatch_qos_class_t class_t5 = dispatch_queue_get_qos_class(concurrent2Queue, &it5);
     
     
-    NSLog(@"it: %zd, %zd, %zd, %zd, %zd", it1, it2, it3, it4, it5);
-    NSLog(@"class_t: %zd, %zd, %zd, %zd, %zd", class_t1, class_t2, class_t3, class_t4, class_t5);
+    NSLog(@"it: %zd, %zd, %zd, %zd, %zd", (long)it1, (long)it2, (long)it3, (long)it4, (long)it5);
+    NSLog(@"class_t: %zd, %zd, %zd, %zd, %zd", (long)class_t1, (long)class_t2, (long)class_t3, (long)class_t4, (long)class_t5);
     
     
     
@@ -902,7 +902,7 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
         });
     }
     
-    dispatch_queue_t queue0 = dispatch_get_current_queue();
+//    dispatch_queue_t queue0 = dispatch_get_current_queue();
     dispatch_queue_t queue1 = dispatch_get_main_queue();
     dispatch_queue_t queue2 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
     dispatch_queue_t queue3 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -923,7 +923,7 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
 
     
     
-    NSLog(@"queue0:%s %p", dispatch_queue_get_label(queue0), queue0);
+//    NSLog(@"queue0:%s %p", dispatch_queue_get_label(queue0), queue0);
     NSLog(@"queue1:%s %p", dispatch_queue_get_label(queue1), queue1);
     NSLog(@"queue2:%s %p", dispatch_queue_get_label(queue2), queue2);
     NSLog(@"queue3:%s %p", dispatch_queue_get_label(queue3), queue3);

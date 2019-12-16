@@ -17,4 +17,8 @@
 {
     NSLog(@"print2");
 }
+- (void)print3
+{
+    NSLog(@"print3");
+}
 @end

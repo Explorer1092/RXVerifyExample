@@ -30,6 +30,7 @@
     [[JLRoutes globalRoutes] addRoute:@"/:object/:action" handler:^BOOL(NSDictionary *parameters) {
         NSString *object = parameters[@"object"];
         NSString *action = parameters[@"action"];
+        NSLog(@"object:%@ action:%@", object, action);
         // stuff
         return YES;
     }];
@@ -44,12 +45,15 @@
         NSString *object = parameters[@"object"];
         NSString *action = parameters[@"action"];
         
+        NSLog(@"object:%@ action:%@", object, action);
         [self.navigationController pushViewController:[[RXLayoutViewController alloc] init] animated:YES];
         // stuff
         return YES;
     }];
     NSURL *editPost = [NSURL URLWithString:@"xes://post/halfrost?debug=true&foo=bar"];
     BOOL ok = [JLRoutes routeURL:editPost];
+
+    NSLog(@"ok:%zd", (long)ok);
 }
 - (void)_test_async
 {
@@ -58,6 +62,9 @@
         [[JLRoutes routesForScheme:@"xes"] addRoute:@"/:object/:action" handler:^BOOL(NSDictionary *parameters) {
             NSString *object = parameters[@"object"];
             NSString *action = parameters[@"action"];
+            
+
+            NSLog(@"object:%@ action:%@", object, action);
             
             [weakSelf.navigationController pushViewController:[[RXLayoutViewController alloc] init] animated:YES];
             // stuff
@@ -79,6 +86,8 @@
         [[JLRoutes routesForScheme:@"xes"] addRoute:@"/:object/:action" handler:^BOOL(NSDictionary *parameters) {
             NSString *object = parameters[@"object"];
             NSString *action = parameters[@"action"];
+
+            NSLog(@"object:%@ action:%@", object, action);
             [weakSelf.navigationController pushViewController:[[RXLayoutViewController alloc] init] animated:YES];
             // stuff
             return YES;

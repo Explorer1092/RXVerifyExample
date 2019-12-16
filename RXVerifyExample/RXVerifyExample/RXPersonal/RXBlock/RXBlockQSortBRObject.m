@@ -29,12 +29,12 @@ static int _s_compar (void *tmp, const void *l, const void *r) {
     char *myCharacters[3] = { "TomJohn", "George", "Charles Condomine" };
     RXBlockQSortRParam param = {0, 0};
     [self _print_char_array:myCharacters len:3];
-    NSLog(@"qsort_r before a:%zd, b:%zd", param.a, param.b);
+    NSLog(@"qsort_r before a:%zd, b:%zd", (long)param.a, (long)param.b);
     
     qsort_r(myCharacters, 3, sizeof(char *), &param, _s_compar);
     
     [self _print_char_array:myCharacters len:3];
-    NSLog(@"qsort_r after a:%zd, b:%zd", param.a, param.b);
+    NSLog(@"qsort_r after a:%zd, b:%zd", (long)param.a, (long)param.b);
 }
 
 - (void)test_qsort_b

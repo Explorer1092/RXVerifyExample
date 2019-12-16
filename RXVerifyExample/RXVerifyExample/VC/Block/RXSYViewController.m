@@ -166,7 +166,7 @@ static void __private_HookBlockToPrintArguments(RX_block_impl *cSelf, /*void *_0
 void test_tmp(id block)
 {
     int t = sizeof(size_t);
-    NSLog(@"t:%zd", t);
+    NSLog(@"t:%zd", (long)t);
     
     
     
@@ -174,7 +174,7 @@ void test_tmp(id block)
     int a1 = sizeof(struct RX_block_impl);
     int a2 = sizeof(struct RX_main_block_desc*);
     
-    NSLog(@"a0:%zd, a1:%zd, a2:%zd", a0, a1, a2);
+    NSLog(@"a0:%zd, a1:%zd, a2:%zd", (long)a0, (long)a1, (long)a2);
     
     RX_main_block_impl *main_block_impl = (__bridge RX_main_block_impl *)block;
     // 这里千万不能用 RX_block_impl impl = main_block_impl->impl;

@@ -28,21 +28,21 @@
     return [[NSMutableArray alloc] init];
 }
 + (void)test1 {
-    __strong id value = [RXAAAA array];
+//    __strong id value = [RXAAAA array];
 }
 + (void)test2 {
     __weak id value = [RXAAAA array];
     NSLog(@"value:%@", value);
 }
 + (void)test3 {
-    __autoreleasing id value = [RXAAAA array];
+//    __autoreleasing id value = [RXAAAA array];
 }
 + (void)test4 {
-    __unsafe_unretained id value = [RXAAAA array];
+//    __unsafe_unretained id value = [RXAAAA array];
 }
 + (void)test5 {
     @autoreleasepool {
-        __autoreleasing id value = [RXAAAA array];
+//        __autoreleasing id value = [RXAAAA array];
     }
 }
 @end

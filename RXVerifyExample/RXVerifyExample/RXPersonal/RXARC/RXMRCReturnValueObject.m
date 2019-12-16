@@ -25,7 +25,7 @@
     
 //    [self _test_ownership_from_callee_to_caller_2];
     
-    [self _test_kkk];
+//    [self _test_kkk];
     
 }
 
