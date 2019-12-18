@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RXViewHolderBaseCell.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RXViewHolderCell : UITableViewCell
+@interface RXViewHolderCell : RXViewHolderBaseCell
+
+
+@property (nonatomic, strong) UIView *gradientView;
+@property (nonatomic, strong) CAGradientLayer *gradientLayer;
+
+
 - (void)refreshViewWithIndex:(NSInteger)index;
 @end
 

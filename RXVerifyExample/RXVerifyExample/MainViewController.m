@@ -93,7 +93,7 @@
                            @"RXParent", @"RXVRC", @"RXUIAnimation",
                            @"RXAppStore", @"RXViewContentMode", @"RXMasonryTest",
                            @"RXDirection", @"RXStrangeA", @"RXViewHolder",
-                           @"RXStrangeXR", @"RXNotificationFirst"];
+                           @"RXStrangeXR", @"RXNotificationFirst", @"RXViewVisiable"];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -138,7 +138,7 @@
     
     object = @"RXStrangeA";
     
-    object = @"RXViewHolder";
+    object = @"RXViewVisiable";
     
 //    object = @"RXNotificationFirst";
 #endif
