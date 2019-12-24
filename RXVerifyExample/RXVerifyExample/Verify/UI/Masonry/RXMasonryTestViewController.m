@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSArray *ary = @[@"abc", @"", @""];
+    NSArray *ary = @[@"抗拉伸与抗压缩", @"", @""];
     NSMutableArray *dataArray = [NSMutableArray new];
     for (NSInteger i = 0; i < ary.count; i++) {
         RXMasonryCaseObject *obj = [RXMasonryCaseObject new];

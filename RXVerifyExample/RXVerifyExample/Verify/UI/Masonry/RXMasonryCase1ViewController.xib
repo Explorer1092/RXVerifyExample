@@ -9,7 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RXMasonryCase1ViewController">
             <connections>
-                <outlet property="contentView1" destination="YJA-xF-ZAG" id="DRh-QF-VzX"/>
+                <outlet property="contentView" destination="YJA-xF-ZAG" id="6JO-BT-Pec"/>
+                <outlet property="titleLabel" destination="NEP-9G-561" id="QBF-bO-BsB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,24 +19,24 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="并排两个label，整体靠左边，宽度随内容增长，左边的label“优先级更高”。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEP-9G-561" userLabel="instructionLabel">
-                    <rect key="frame" x="36" y="80" width="342" height="98"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEP-9G-561" userLabel="instructionLabel">
+                    <rect key="frame" x="36" y="80" width="342" height="200"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="98" id="TJF-jd-fy3"/>
+                        <constraint firstAttribute="height" constant="200" id="TJF-jd-fy3"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJA-xF-ZAG" userLabel="contentView1">
-                    <rect key="frame" x="36" y="202" width="343" height="50"/>
+                    <rect key="frame" x="36" y="304" width="343" height="50"/>
                     <color key="backgroundColor" red="0.79607844350000001" green="0.79607844350000001" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="rR6-n7-3VK"/>
                     </constraints>
                 </view>
                 <stepper opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9gx-c3-5Ac">
-                    <rect key="frame" x="285" y="279" width="94" height="29"/>
+                    <rect key="frame" x="285" y="381" width="94" height="29"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="94" id="OAC-C7-7zo"/>
                         <constraint firstAttribute="height" constant="29" id="kcW-p3-Wcn"/>
@@ -45,7 +46,7 @@
                     </connections>
                 </stepper>
                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="4WD-5j-0E6">
-                    <rect key="frame" x="36" y="279" width="94" height="29"/>
+                    <rect key="frame" x="36" y="381" width="94" height="29"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="94" id="L3I-Z6-tAC"/>
                         <constraint firstAttribute="height" constant="29" id="Nma-6h-m3D"/>
