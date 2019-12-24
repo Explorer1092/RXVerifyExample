@@ -2,71 +2,83 @@
 //  RXMasonryTestViewController.m
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/11/5.
+//  Created by xuzhijun on 2019/12/24.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 
 #import "RXMasonryTestViewController.h"
-#import <Masonry/Masonry.h>
+#import "RXMasonryCaseObject.h"
 
-@interface RXMasonryTestViewController ()
-@property (nonatomic, strong) UILabel *autoLabel;
 
-@property (nonatomic, strong) NSTimer *timer;
 
-@property (nonatomic, assign) NSInteger index;
+
+
+
+
+
+@interface RXMasonryTestViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
+@property (nonatomic, copy) NSArray *dataArray;
+
 @end
 
 @implementation RXMasonryTestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self.view addSubview:self.autoLabel];
-    
-    [self.autoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@(0));
-        make.top.equalTo(@(100));
-        make.width.equalTo(@(100));
-    }];
-    self.autoLabel.numberOfLines = 2;
-    self.index = 0;
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    __weak typeof(self) weakSelf = self;
-    NSArray *ary = @[@"第一个结束",
-                     @"第二个文字第二个文字第二个文字第二个文字第二个文字第二个结束",
-                     @"第三个文字第三个文字第三个文字第三个结束",
-                     @"第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个文字第四个结束",
-                     @"第五个文字第五个结束"];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:5.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        weakSelf.index = weakSelf.index % ary.count;
-        NSString *text = [ary objectAtIndex:weakSelf.index];
-        weakSelf.autoLabel.text = text;
-        weakSelf.index++;
-    }];
-}
-
-
-
-
-- (UILabel *)autoLabel {
-    if (_autoLabel == nil) {
-        _autoLabel = [UILabel new];
-        _autoLabel.backgroundColor = [UIColor redColor];
-        _autoLabel.numberOfLines = 0;
+    // Do any additional setup after loading the view from its nib.
+    NSArray *ary = @[@"abc", @"", @""];
+    NSMutableArray *dataArray = [NSMutableArray new];
+    for (NSInteger i = 0; i < ary.count; i++) {
+        RXMasonryCaseObject *obj = [RXMasonryCaseObject new];
+        obj.index = i;
+        obj.subTitle = ary[i];
+        [dataArray addObject:obj];
     }
-    return _autoLabel;
+    self.dataArray = dataArray;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self _gotoVCWithIndex:0];
+    });
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
 }
-*/
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *clsStr = @"UITableViewCell";
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:clsStr];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:clsStr];
+    }
+    RXMasonryCaseObject *obj = self.dataArray[indexPath.row];
+    cell.textLabel.text = obj.title;
+    cell.detailTextLabel.text = obj.subTitle;
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self _gotoVCWithIndex:indexPath.row];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
+#pragma mark - Private
+- (void)_gotoVCWithIndex:(NSInteger)index {
+    if (index >= self.dataArray.count) {
+        return;
+    }
+    RXMasonryCaseObject *obj = self.dataArray[index];
+    Class cls = NSClassFromString(obj.caseViewControllerClassString);
+    if (cls != nil) {
+        UIViewController *vc = [cls new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
 @end

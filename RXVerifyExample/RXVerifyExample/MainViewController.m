@@ -93,7 +93,9 @@
                            @"RXParent", @"RXVRC", @"RXUIAnimation",
                            @"RXAppStore", @"RXViewContentMode", @"RXMasonryTest",
                            @"RXDirection", @"RXStrangeA", @"RXViewHolder",
-                           @"RXStrangeXR", @"RXNotificationFirst", @"RXViewVisiable"];
+                           @"RXStrangeXR", @"RXNotificationFirst", @"RXViewVisiable",
+                           @"RXVisiableTest"
+    ];
     
     // 数组倒叙
     self.functionItems = [[self.functionItems reverseObjectEnumerator] allObjects];
@@ -132,13 +134,15 @@
     object = @"RXMasonryTest";
     
     
-    object = @"RXTestManager";
+//    object = @"RXTestManager";
     
-    object = @"RXDirection";
+//    object = @"RXDirection";
     
-    object = @"RXStrangeA";
+//    object = @"RXStrangeA";
     
-    object = @"RXViewVisiable";
+//    object = @"RXViewVisiable";
+    
+//    object = @"RXVisiableTest";
     
 //    object = @"RXNotificationFirst";
 #endif

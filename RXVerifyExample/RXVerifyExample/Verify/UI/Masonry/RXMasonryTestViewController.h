@@ -2,7 +2,7 @@
 //  RXMasonryTestViewController.h
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/11/5.
+//  Created by xuzhijun on 2019/12/24.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

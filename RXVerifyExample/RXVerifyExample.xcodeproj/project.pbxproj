@@ -133,7 +133,12 @@
 		8D286BB2238E1E3F00238791 /* RXWeakTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D286BB1238E1E3F00238791 /* RXWeakTestViewController.m */; };
 		8D50AAC3232A340E00B154D5 /* RXVRCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D50AAC2232A340E00B154D5 /* RXVRCView.m */; };
 		8D50AAC6232A343400B154D5 /* RXVRCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D50AAC5232A343400B154D5 /* RXVRCViewController.m */; };
-		8D6552A9237164C900A2A045 /* RXMasonryTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6552A8237164C900A2A045 /* RXMasonryTestViewController.m */; };
+		8D580EE123B1B2270055E63B /* NSTimer+RXVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D580EE023B1B2270055E63B /* NSTimer+RXVerify.m */; };
+		8D580EEA23B213E90055E63B /* RXMasonryTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D580EE823B213E90055E63B /* RXMasonryTestViewController.m */; };
+		8D580EEB23B213E90055E63B /* RXMasonryTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D580EE923B213E90055E63B /* RXMasonryTestViewController.xib */; };
+		8D580EEE23B216130055E63B /* RXMasonryCaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D580EED23B216130055E63B /* RXMasonryCaseObject.m */; };
+		8D580EF223B216630055E63B /* RXMasonryCase1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D580EF023B216630055E63B /* RXMasonryCase1ViewController.m */; };
+		8D580EF323B216630055E63B /* RXMasonryCase1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D580EF123B216630055E63B /* RXMasonryCase1ViewController.xib */; };
 		8D6552AD2371807200A2A045 /* RXDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6552AC2371807200A2A045 /* RXDateManager.m */; };
 		8D6561BC237FF7B400A2A045 /* RXNotificationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6561BB237FF7B400A2A045 /* RXNotificationDelegate.m */; };
 		8D6561C2237FF84B00A2A045 /* RXAssociateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6561C1237FF84B00A2A045 /* RXAssociateManager.m */; };
@@ -151,6 +156,8 @@
 		8D86C4E923A72E9400A8502A /* RXViewHolderBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D86C4E823A72E9400A8502A /* RXViewHolderBaseCell.m */; };
 		8D86C4F823AA104100A8502A /* UIView+RXVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D86C4F723AA104000A8502A /* UIView+RXVerify.m */; };
 		8D86C4FB23AA106E00A8502A /* RXViewVisiableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D86C4FA23AA106E00A8502A /* RXViewVisiableViewController.m */; };
+		8D86C4FE23AA149500A8502A /* RXViewVisiableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D86C4FD23AA149500A8502A /* RXViewVisiableCell.m */; };
+		8D86C51A23ACD23600A8502A /* RXEncryptionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D86C51923ACD23500A8502A /* RXEncryptionManager.m */; };
 		8DB9128F2362D9B000BB74C3 /* RXViewContentModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9128E2362D9B000BB74C3 /* RXViewContentModeViewController.m */; };
 		8DBEA359238FD15900DFE524 /* RXDirectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBEA358238FD15900DFE524 /* RXDirectionViewController.m */; };
 		8DBEB7382398B02500DFE524 /* RXStrangeAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBEB7372398B02200DFE524 /* RXStrangeAViewController.m */; };
@@ -682,8 +689,16 @@
 		8D50AAC2232A340E00B154D5 /* RXVRCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVRCView.m; sourceTree = "<group>"; };
 		8D50AAC4232A343400B154D5 /* RXVRCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXVRCViewController.h; sourceTree = "<group>"; };
 		8D50AAC5232A343400B154D5 /* RXVRCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXVRCViewController.m; sourceTree = "<group>"; };
-		8D6552A7237164C900A2A045 /* RXMasonryTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMasonryTestViewController.h; sourceTree = "<group>"; };
-		8D6552A8237164C900A2A045 /* RXMasonryTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMasonryTestViewController.m; sourceTree = "<group>"; };
+		8D580EDF23B1B2270055E63B /* NSTimer+RXVerify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+RXVerify.h"; sourceTree = "<group>"; };
+		8D580EE023B1B2270055E63B /* NSTimer+RXVerify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+RXVerify.m"; sourceTree = "<group>"; };
+		8D580EE723B213E90055E63B /* RXMasonryTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMasonryTestViewController.h; sourceTree = "<group>"; };
+		8D580EE823B213E90055E63B /* RXMasonryTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMasonryTestViewController.m; sourceTree = "<group>"; };
+		8D580EE923B213E90055E63B /* RXMasonryTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RXMasonryTestViewController.xib; sourceTree = "<group>"; };
+		8D580EEC23B216130055E63B /* RXMasonryCaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMasonryCaseObject.h; sourceTree = "<group>"; };
+		8D580EED23B216130055E63B /* RXMasonryCaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMasonryCaseObject.m; sourceTree = "<group>"; };
+		8D580EEF23B216630055E63B /* RXMasonryCase1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXMasonryCase1ViewController.h; sourceTree = "<group>"; };
+		8D580EF023B216630055E63B /* RXMasonryCase1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXMasonryCase1ViewController.m; sourceTree = "<group>"; };
+		8D580EF123B216630055E63B /* RXMasonryCase1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RXMasonryCase1ViewController.xib; sourceTree = "<group>"; };
 		8D6552AB2371807200A2A045 /* RXDateManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXDateManager.h; sourceTree = "<group>"; };
 		8D6552AC2371807200A2A045 /* RXDateManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXDateManager.m; sourceTree = "<group>"; };
 		8D6561BA237FF7B400A2A045 /* RXNotificationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNotificationDelegate.h; sourceTree = "<group>"; };
@@ -718,6 +733,10 @@
 		8D86C4F723AA104000A8502A /* UIView+RXVerify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RXVerify.m"; sourceTree = "<group>"; };
 		8D86C4F923AA106E00A8502A /* RXViewVisiableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXViewVisiableViewController.h; sourceTree = "<group>"; };
 		8D86C4FA23AA106E00A8502A /* RXViewVisiableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXViewVisiableViewController.m; sourceTree = "<group>"; };
+		8D86C4FC23AA149500A8502A /* RXViewVisiableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXViewVisiableCell.h; sourceTree = "<group>"; };
+		8D86C4FD23AA149500A8502A /* RXViewVisiableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXViewVisiableCell.m; sourceTree = "<group>"; };
+		8D86C51823ACD23500A8502A /* RXEncryptionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXEncryptionManager.h; sourceTree = "<group>"; };
+		8D86C51923ACD23500A8502A /* RXEncryptionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXEncryptionManager.m; sourceTree = "<group>"; };
 		8DB9128D2362D9B000BB74C3 /* RXViewContentModeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXViewContentModeViewController.h; sourceTree = "<group>"; };
 		8DB9128E2362D9B000BB74C3 /* RXViewContentModeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXViewContentModeViewController.m; sourceTree = "<group>"; };
 		8DBEA357238FD15900DFE524 /* RXDirectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXDirectionViewController.h; sourceTree = "<group>"; };
@@ -1441,6 +1460,7 @@
 		583E667822A611D20080597C /* Verify */ = {
 			isa = PBXGroup;
 			children = (
+				8D580EDE23B1B20F0055E63B /* Category */,
 				8DD81CC52339F99A00AFE114 /* KS */,
 				583E667922A611D20080597C /* UI */,
 				583E667A22A611D20080597C /* NUI */,
@@ -1477,6 +1497,7 @@
 		583E667A22A611D20080597C /* NUI */ = {
 			isa = PBXGroup;
 			children = (
+				8D86C51723ACD21D00A8502A /* Encryption */,
 				8D05C5FF239E3D7C00F37A09 /* AutoGenerate */,
 				8D12F6C82384DC2F00A7C56A /* PrivateApi */,
 				8D6561B6237FF78700A2A045 /* Associate */,
@@ -1955,11 +1976,26 @@
 			path = ViewRelateChange;
 			sourceTree = "<group>";
 		};
+		8D580EDE23B1B20F0055E63B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8D580EDF23B1B2270055E63B /* NSTimer+RXVerify.h */,
+				8D580EE023B1B2270055E63B /* NSTimer+RXVerify.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		8D6552A6237164B500A2A045 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				8D6552A7237164C900A2A045 /* RXMasonryTestViewController.h */,
-				8D6552A8237164C900A2A045 /* RXMasonryTestViewController.m */,
+				8D580EE723B213E90055E63B /* RXMasonryTestViewController.h */,
+				8D580EE823B213E90055E63B /* RXMasonryTestViewController.m */,
+				8D580EE923B213E90055E63B /* RXMasonryTestViewController.xib */,
+				8D580EEC23B216130055E63B /* RXMasonryCaseObject.h */,
+				8D580EED23B216130055E63B /* RXMasonryCaseObject.m */,
+				8D580EEF23B216630055E63B /* RXMasonryCase1ViewController.h */,
+				8D580EF023B216630055E63B /* RXMasonryCase1ViewController.m */,
+				8D580EF123B216630055E63B /* RXMasonryCase1ViewController.xib */,
 			);
 			path = Masonry;
 			sourceTree = "<group>";
@@ -2041,8 +2077,19 @@
 				8D86C4F723AA104000A8502A /* UIView+RXVerify.m */,
 				8D86C4F923AA106E00A8502A /* RXViewVisiableViewController.h */,
 				8D86C4FA23AA106E00A8502A /* RXViewVisiableViewController.m */,
+				8D86C4FC23AA149500A8502A /* RXViewVisiableCell.h */,
+				8D86C4FD23AA149500A8502A /* RXViewVisiableCell.m */,
 			);
 			path = ViewVisiable;
+			sourceTree = "<group>";
+		};
+		8D86C51723ACD21D00A8502A /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				8D86C51823ACD23500A8502A /* RXEncryptionManager.h */,
+				8D86C51923ACD23500A8502A /* RXEncryptionManager.m */,
+			);
+			path = Encryption;
 			sourceTree = "<group>";
 		};
 		8DB9128C2362D99200BB74C3 /* UIImageView */ = {
@@ -3588,6 +3635,7 @@
 				8D05C601239E3DAD00F37A09 /* auto_content in Resources */,
 				C9F53E241CE1E5B300BF6E1F /* RVStrongWeakSelfViewController.xib in Resources */,
 				58AAC3151C38CDF20023D2EA /* RVButtonViewController.xib in Resources */,
+				8D580EEB23B213E90055E63B /* RXMasonryTestViewController.xib in Resources */,
 				C937947E1CE331D30065F68C /* RVViewCycleViewController.xib in Resources */,
 				5803F0D01C190FFC0071FDDA /* RVRefreshViewController.xib in Resources */,
 				5803F0D51C1913260071FDDA /* RVScrollViewController.xib in Resources */,
@@ -3598,6 +3646,7 @@
 				E86050E020A079E30016F6C9 /* RVRunLoop2ViewController.xib in Resources */,
 				58CA8D5C1C1ABEFB00A507BE /* RVTransformViewController.xib in Resources */,
 				58BF5F8A1C16BAC500E8AEF3 /* MainViewController.xib in Resources */,
+				8D580EF323B216630055E63B /* RXMasonryCase1ViewController.xib in Resources */,
 				58A18423226467F30066C2D9 /* RXVolumeViewController.xib in Resources */,
 				58A1841E2264624E0066C2D9 /* ok.mp3 in Resources */,
 				E86050E820A07A1B0016F6C9 /* RVRunTimeViewController.xib in Resources */,
@@ -3748,9 +3797,9 @@
 				E818F0F120B9044A00F94127 /* RXMVVMModel.m in Sources */,
 				8D6561BC237FF7B400A2A045 /* RXNotificationDelegate.m in Sources */,
 				E818A0A021F079600053ED3E /* RXARCCategoryMethodSubObject.m in Sources */,
+				8D580EEE23B216130055E63B /* RXMasonryCaseObject.m in Sources */,
 				5821DB382241D88A002AA122 /* RXRSATheoryObject.m in Sources */,
 				8D286BB2238E1E3F00238791 /* RXWeakTestViewController.m in Sources */,
-				8D6552A9237164C900A2A045 /* RXMasonryTestViewController.m in Sources */,
 				5841E55322B1E70A00DA4703 /* RXTMImpCachingInstanceObject.m in Sources */,
 				8D6561C5237FFA8E00A2A045 /* RXAssociateObject.m in Sources */,
 				C9D397A51CF5A29200D8569C /* RXRunTimeDemoObject.m in Sources */,
@@ -3924,13 +3973,16 @@
 				E872493C21C5290300EA6A3D /* RXAFXMLParserResponseSerializer.m in Sources */,
 				E872494821C5296500EA6A3D /* RXAFCompoundResponseSerializer.m in Sources */,
 				C95B6AF61CF7EF9A00E9FC0F /* NSObject+RXExt.m in Sources */,
+				8D580EF223B216630055E63B /* RXMasonryCase1ViewController.m in Sources */,
 				E8B65852222CCE97007C0E42 /* RXDynamicPlan.c in Sources */,
 				E872497321D12E0A00EA6A3D /* RXAFHTTPSessionManager.m in Sources */,
 				E85159B62148B195006E23D5 /* RXCrashService.m in Sources */,
 				E87C047021E3390A00B90D74 /* RXClassMetaClassObject.m in Sources */,
 				E8433D9320FD90A5004A7FBC /* RXOCKeywordMethodNameViewController.m in Sources */,
+				8D86C4FE23AA149500A8502A /* RXViewVisiableCell.m in Sources */,
 				E818A0CA21F5BBEF0053ED3E /* RXARCInstanceVariableObject.m in Sources */,
 				582F36DB229683A900AA84A8 /* VKProtectEyeView.m in Sources */,
+				8D580EEA23B213E90055E63B /* RXMasonryTestViewController.m in Sources */,
 				E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */,
 				E8B6586D222E07FD007C0E42 /* RXCSDK.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
@@ -3942,6 +3994,7 @@
 				580B836E22CDAD2400A0CE51 /* RXPCDefectQueueBuffer.m in Sources */,
 				8DB9128F2362D9B000BB74C3 /* RXViewContentModeViewController.m in Sources */,
 				58A18422226467F30066C2D9 /* RXVolumeViewController.m in Sources */,
+				8D580EE123B1B2270055E63B /* NSTimer+RXVerify.m in Sources */,
 				E818A0FE221D4B020053ED3E /* RXAnimationTestObject.m in Sources */,
 				580B836422CCA1D500A0CE51 /* RXPBObject.m in Sources */,
 				E8433D9620FEDA86004A7FBC /* RXRACMTViewController.m in Sources */,
@@ -3971,6 +4024,7 @@
 				E8433D8820FC7EF7004A7FBC /* RXRACDemoViewController.m in Sources */,
 				58D89EDB22B4C8E800687338 /* VKDownloadCacheManager.m in Sources */,
 				E8F8D7A92187E399007AB027 /* RXMethodListDemoObject+MethodList.m in Sources */,
+				8D86C51A23ACD23600A8502A /* RXEncryptionManager.m in Sources */,
 				E8433D6A20E39C83004A7FBC /* RXMVVMLoginViewModel.m in Sources */,
 				58D89EDE22B4C8FA00687338 /* VKDownloadTestManager.m in Sources */,
 				C9D474531D16543F000C14E3 /* RVUtilityViewController.m in Sources */,
