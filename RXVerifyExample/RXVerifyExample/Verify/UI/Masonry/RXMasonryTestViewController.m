@@ -10,7 +10,8 @@
 #import "RXMasonryCaseObject.h"
 
 
-
+// http://tutuge.me/tags/Masonry/
+// https://www.sunyazhou.com/2019/09/26/20190926MasonryPanViewDemo/
 
 
 
@@ -29,7 +30,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    NSArray *ary = @[@"抗拉伸与抗压缩", @"", @""];
+    NSArray *ary = @[
+        @"抗拉伸与抗压缩", @"几个View整体居中，可以任意显示、隐藏", @"子View的宽度始终是父级View的一半（或者任意百分比）",
+        @"变高UITableViewCell", @"", @""
+    ];
     NSMutableArray *dataArray = [NSMutableArray new];
     for (NSInteger i = 0; i < ary.count; i++) {
         RXMasonryCaseObject *obj = [RXMasonryCaseObject new];
@@ -40,7 +44,7 @@
     self.dataArray = dataArray;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self _gotoVCWithIndex:0];
+        [self _gotoVCWithIndex:3];
     });
 }
 
