@@ -7,7 +7,7 @@
 //
 
 #import "RXMasonryObject.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 @implementation RXMasonryObject
 - (void)kk
 {

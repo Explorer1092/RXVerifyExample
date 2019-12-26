@@ -7,7 +7,7 @@
 //
 
 #import "VKAnimationLevel.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 @interface VKAnimationLevel()
 @property (nonatomic, strong) UILabel *animationLabel;
 @end

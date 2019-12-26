@@ -7,7 +7,7 @@
 //
 
 #import "RXMasonryCase9ViewController.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 
 static const CGFloat ITEM_SIZE = 32;
 static const NSUInteger ITEM_COUNT = 4;

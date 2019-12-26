@@ -7,7 +7,7 @@
 //
 
 #import "RXMasonryCase5ViewController.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 
 // 注释掉这个宏定义，就直接使用length值做约束，否则的话，使用新的mas_topLayoutGuide和mas_bottomLayoutGuide
 //#define NEW_FEATURE

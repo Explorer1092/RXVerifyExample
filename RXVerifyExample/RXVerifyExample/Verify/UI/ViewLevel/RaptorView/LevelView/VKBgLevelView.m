@@ -7,7 +7,7 @@
 //
 
 #import "VKBgLevelView.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 @interface VKBgLevelView()
 
 @property (nonatomic, strong) UILabel *pptLabel;

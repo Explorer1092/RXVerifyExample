@@ -7,7 +7,7 @@
 //
 
 #import "RXMasonryCase4ViewController.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 #import "RXMasonryCase4Cell.h"
 #import "RXMasonryCase4Entity.h"
 

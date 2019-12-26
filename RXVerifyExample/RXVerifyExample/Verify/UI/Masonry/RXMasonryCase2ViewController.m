@@ -7,7 +7,7 @@
 //
 
 #import "RXMasonryCase2ViewController.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 
 #define IMAGE_SIZE  40
 #define IMAGE_OFFSET 0

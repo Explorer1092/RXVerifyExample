@@ -7,7 +7,7 @@
 //
 
 #import "VKVideoLevel.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 @interface VKVideoLevel()
 @property (nonatomic, strong) UILabel *teacherLabel;
 @property (nonatomic, strong) UILabel *studentLabel;

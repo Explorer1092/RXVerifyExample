@@ -7,7 +7,7 @@
 //
 
 #import "RXMasonryCase6ViewController.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 #import "RXMasonryCase6ItemView.h"
 
 @interface RXMasonryCase6ViewController ()

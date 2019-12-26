@@ -7,7 +7,7 @@
 //
 
 #import "RXMasonryCase10ViewController.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 
 @interface RXMasonryCase10ViewController ()
 
@@ -15,8 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *logLabel;
 @property (nonatomic, strong) UILabel *tipLabel;
 
-@property (nonatomic, strong) MASConstraint *leftConstraint;
-@property (nonatomic, strong) MASConstraint *topConstraint;
+@property (nonatomic, strong) MASConstraint *centerXConstraint;
+@property (nonatomic, strong) MASConstraint *centerYConstraint;
 
 @end
 
@@ -31,6 +31,7 @@
     
     self.tipLabel.text = @"tutuge.me\niOS";
     [_containerView addSubview:self.tipLabel];
+    // 这里设置了Size
     [_tipLabel sizeToFit];
     
     [_tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -40,8 +41,8 @@
         make.top.greaterThanOrEqualTo(_containerView.mas_top);
         make.bottom.lessThanOrEqualTo(_containerView.mas_bottom);
         
-        _leftConstraint = make.centerX.equalTo(_containerView.mas_left).with.offset(50).priorityHigh(); // 优先级要比边界条件低
-        _topConstraint = make.centerY.equalTo(_containerView.mas_top).with.offset(50).priorityHigh(); // 优先级要比边界条件低
+        _centerXConstraint = make.centerX.equalTo(_containerView.mas_left).with.offset(100).priorityHigh(); // 优先级要比边界条件低
+        _centerYConstraint = make.centerY.equalTo(_containerView.mas_top).with.offset(100).priorityHigh(); // 优先级要比边界条件低
         make.width.mas_equalTo(CGRectGetWidth(_tipLabel.frame) + 8);
         make.height.mas_equalTo(CGRectGetHeight(_tipLabel.frame) + 4);
     }];
@@ -56,8 +57,8 @@
     CGPoint touchPoint = [pan locationInView:_containerView];
     _logLabel.text = NSStringFromCGPoint(touchPoint);
     
-    _leftConstraint.offset = touchPoint.x;
-    _topConstraint.offset = touchPoint.y;
+    _centerXConstraint.offset = touchPoint.x;
+    _centerYConstraint.offset = touchPoint.y;
 }
 
 #pragma mark - Getter

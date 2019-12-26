@@ -7,7 +7,7 @@
 //
 
 #import "RXMasonryCase7ViewController.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 
 static CGFloat ParallaxHeaderHeight = 235;
 static NSString *CellIdentifier = @"Cell";

@@ -7,7 +7,7 @@
 //
 
 #import "RXMasonryCase8Cell.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 
 @interface RXMasonryCase8Cell()
 

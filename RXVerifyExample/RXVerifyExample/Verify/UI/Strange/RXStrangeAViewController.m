@@ -8,7 +8,7 @@
 
 #import "RXStrangeAViewController.h"
 #import "RXStrangeView.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 #import "RXStrangeBViewController.h"
 @interface RXStrangeAViewController ()
 

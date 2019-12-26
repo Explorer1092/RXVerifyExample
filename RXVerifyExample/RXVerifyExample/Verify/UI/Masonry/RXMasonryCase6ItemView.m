@@ -8,7 +8,7 @@
 
 #import "RXMasonryCase6ItemView.h"
 
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 
 @interface RXMasonryCase6ItemView ()
 @property (strong, nonatomic) NSString *text;

@@ -8,7 +8,7 @@
 
 #import "RXViewVisiableViewController.h"
 #import "UIView+RXVerify.h"
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 #import "RXViewVisiableCell.h"
 
 @interface RXViewVisiableViewController () <UITableViewDelegate, UITableViewDataSource>
