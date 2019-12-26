@@ -32,7 +32,10 @@
     // Do any additional setup after loading the view from its nib.
     NSArray *ary = @[
         @"抗拉伸与抗压缩", @"几个View整体居中，可以任意显示、隐藏", @"子View的宽度始终是父级View的一半（或者任意百分比）",
-        @"变高UITableViewCell", @"", @""
+        @"变高UITableViewCell", @"topLayoutGuide和bottomLayoutGuide", @"自定义baseline",
+        @"Parallax Header", @"动态变高度的UITableViewCell", @"两种方式实现等间距",
+        @"", @"", @"",
+        @"", @"", @""
     ];
     NSMutableArray *dataArray = [NSMutableArray new];
     for (NSInteger i = 0; i < ary.count; i++) {
@@ -44,7 +47,7 @@
     self.dataArray = dataArray;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self _gotoVCWithIndex:3];
+        [self _gotoVCWithIndex:9];
     });
 }
 
@@ -82,7 +85,12 @@
     Class cls = NSClassFromString(obj.caseViewControllerClassString);
     if (cls != nil) {
         UIViewController *vc = [cls new];
-        [self.navigationController pushViewController:vc animated:YES];
+        if (index == 4) {
+            UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+            [self.navigationController presentViewController:nc animated:YES completion:nil];
+        } else {
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }
 }
 @end
