@@ -1,5 +1,5 @@
 //
-//  RXMasonryCaseSYZViewController.h
+//  RXMasonryCase13Cell.h
 //  RXVerifyExample
 //
 //  Created by xuzhijun on 2019/12/26.
@@ -10,8 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RXMasonryCaseSYZViewController : UIViewController
+@interface RXMasonryCase13Cell : UITableViewCell
 
+- (void)configWithTexts:(NSArray <NSString *> *)cellTexts;
 @end
 
 NS_ASSUME_NONNULL_END
