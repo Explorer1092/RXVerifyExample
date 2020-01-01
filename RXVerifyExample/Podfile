@@ -62,7 +62,7 @@ pod 'RXTableViewImpl'
 pod 'RXUserManager'
 
 pod 'MSWeakTimer'
-
+pod 'KSCrash'
 pod 'JLRoutes'
 
 pod 'Masonry'

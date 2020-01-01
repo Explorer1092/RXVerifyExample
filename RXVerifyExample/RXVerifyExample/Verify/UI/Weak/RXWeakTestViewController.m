@@ -22,8 +22,13 @@
 }
 
 - (void)dealloc {
-    self.tableView.delegate = nil;
-    self.tableView.dataSource = nil;
+    // 有可能会出现崩溃
+//    self.tableView.delegate = nil;
+//    self.tableView.dataSource = nil;
+    
+    // 不会出现崩溃
+    _tableView.delegate = nil;
+    _tableView.dataSource = nil;
 }
 
 - (UITableView *)tableView {

@@ -12,6 +12,9 @@
 #import "NSObject+RXVerifyExample.h"
 #import "RXWeakTestViewController.h"
 #import "RXDirectionViewController.h"
+
+// xzj_todo https://www.ojit.com/article/1906717
+// xzj_todo linux 学习 https://www.zhihu.com/question/19606660
 @interface MainViewController ()
 
 
@@ -34,6 +37,7 @@
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view from its nib.
     
 //    NSObject *object1 = [NSObject new];
@@ -133,6 +137,8 @@
     
     object = @"RXMasonryTest";
     
+    object = @"";
+    
     
 //    object = @"RXTestManager";
     
@@ -209,12 +215,12 @@
 #pragma mark - Private
 - (void)gotoExampleVCWithName:(NSString *)name
 {
-    NSString *clsString = [NSString stringWithFormat:@"rxpage://%@ViewController", name];
-
-    [RXVCMediator pushInNavigationController:self.navigationController withString:clsString query:nil animate:YES];
+//    NSString *clsString = [NSString stringWithFormat:@"rxpage://%@ViewController", name];
+//
+//    [RXVCMediator pushInNavigationController:self.navigationController withString:clsString query:nil animate:YES];
     
-//    RXWeakTestViewController *vc = [RXWeakTestViewController new];
-//    NSLog(@"vc:%@", vc);
+    RXWeakTestViewController *vc = [RXWeakTestViewController new];
+    NSLog(@"vc:%@", vc);
 
 }
 
