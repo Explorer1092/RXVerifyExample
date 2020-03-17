@@ -15,7 +15,9 @@
 @end
 
 @implementation VKWeakTimerTarget
-
+- (NSArray *)kkk {
+    return [NSMutableArray new];
+}
 - (void) fire:(NSTimer *)timer {
     if(self.target) {
 #pragma clang diagnostic push
@@ -25,6 +27,8 @@
     } else {
         [self.timer invalidate];
     }
+    
+    [self performSelector:@selector(kkk) withObject:nil afterDelay:3];
 }
 
 @end

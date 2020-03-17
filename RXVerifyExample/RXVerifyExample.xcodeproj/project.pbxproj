@@ -126,6 +126,7 @@
 		8D05CB3123A38B6A00F37A09 /* RXStrangeXRBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D05CB3023A38B6900F37A09 /* RXStrangeXRBottomView.m */; };
 		8D05CB6423A3ADF700F37A09 /* RXNotificationFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D05CB6323A3ADF700F37A09 /* RXNotificationFirstViewController.m */; };
 		8D05CB6723A3AE0400F37A09 /* RXNotificationSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D05CB6623A3AE0400F37A09 /* RXNotificationSecondViewController.m */; };
+		8D111CAA23FF6C87005F0817 /* RXTestMulThreadMutableDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D111CA923FF6C87005F0817 /* RXTestMulThreadMutableDataManager.m */; };
 		8D12F6D12384DCB800A7C56A /* LSApplicationWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D12F6D02384DCB800A7C56A /* LSApplicationWorkspace.m */; };
 		8D12F6D42384DCE000A7C56A /* RXPrivateApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D12F6D32384DCE000A7C56A /* RXPrivateApiManager.m */; };
 		8D12F6D72384DDC900A7C56A /* LSApplicationWorkspace+RXVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D12F6D62384DDC900A7C56A /* LSApplicationWorkspace+RXVerify.m */; };
@@ -713,6 +714,8 @@
 		8D05CB6323A3ADF700F37A09 /* RXNotificationFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNotificationFirstViewController.m; sourceTree = "<group>"; };
 		8D05CB6523A3AE0400F37A09 /* RXNotificationSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXNotificationSecondViewController.h; sourceTree = "<group>"; };
 		8D05CB6623A3AE0400F37A09 /* RXNotificationSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXNotificationSecondViewController.m; sourceTree = "<group>"; };
+		8D111CA823FF6C87005F0817 /* RXTestMulThreadMutableDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXTestMulThreadMutableDataManager.h; sourceTree = "<group>"; };
+		8D111CA923FF6C87005F0817 /* RXTestMulThreadMutableDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RXTestMulThreadMutableDataManager.m; sourceTree = "<group>"; };
 		8D12F6CF2384DCB800A7C56A /* LSApplicationWorkspace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSApplicationWorkspace.h; sourceTree = "<group>"; };
 		8D12F6D02384DCB800A7C56A /* LSApplicationWorkspace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSApplicationWorkspace.m; sourceTree = "<group>"; };
 		8D12F6D22384DCE000A7C56A /* RXPrivateApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RXPrivateApiManager.h; sourceTree = "<group>"; };
@@ -1596,6 +1599,7 @@
 		583E667A22A611D20080597C /* NUI */ = {
 			isa = PBXGroup;
 			children = (
+				8D111CA723FF6C65005F0817 /* NSMutableData */,
 				8D86C51723ACD21D00A8502A /* Encryption */,
 				8D05C5FF239E3D7C00F37A09 /* AutoGenerate */,
 				8D12F6C82384DC2F00A7C56A /* PrivateApi */,
@@ -2040,6 +2044,15 @@
 				8D05CB6623A3AE0400F37A09 /* RXNotificationSecondViewController.m */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		8D111CA723FF6C65005F0817 /* NSMutableData */ = {
+			isa = PBXGroup;
+			children = (
+				8D111CA823FF6C87005F0817 /* RXTestMulThreadMutableDataManager.h */,
+				8D111CA923FF6C87005F0817 /* RXTestMulThreadMutableDataManager.m */,
+			);
+			path = NSMutableData;
 			sourceTree = "<group>";
 		};
 		8D12F6C82384DC2F00A7C56A /* PrivateApi */ = {
@@ -3857,12 +3870,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RXVerifyExample/Pods-RXVerifyExample-resources.sh",
 				"${PODS_ROOT}/Bytedance-UnionAD/Bytedance-UnionAd/Frameworks/BUAdSDK.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/RX3_TencentLiteSDK/Paramount.bundle",
+				"${PODS_ROOT}/ZFPlayer/ZFPlayer/Classes/ControlView/ZFPlayer.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BUAdSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Paramount.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZFPlayer.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -4177,6 +4194,7 @@
 				E870202220D0F3EC00752211 /* RXMultNotificationViewController.m in Sources */,
 				E8B6586D222E07FD007C0E42 /* RXCSDK.m in Sources */,
 				8D580F1923B35A250055E63B /* RXMasonryCase7ViewController.m in Sources */,
+				8D111CAA23FF6C87005F0817 /* RXTestMulThreadMutableDataManager.m in Sources */,
 				C9C58B6D1CD8AE4400448350 /* RVDebugViewController.m in Sources */,
 				5882A3E922A6AFA100449D47 /* RXClassExtObject.m in Sources */,
 				8DE4F90C23010F39004009E2 /* KSAdInsertScreenViewController.m in Sources */,

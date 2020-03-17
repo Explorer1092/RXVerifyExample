@@ -19,6 +19,25 @@
 #import <UserNotifications/UserNotifications.h>
 
 
+
+
+/***
+* 1. 尽量不要出现有硬编码
+* 2. url进行导航
+* 3. 面向协议的注册
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+
+
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
 @property (nonatomic, strong) UINavigationController *mainNC;
 
@@ -31,6 +50,8 @@
 {
 //    [RXServiceManager addServiceName:@"RXCrashService" enable:YES async:YES];
 //    [RXServiceManager addServiceName:@"RXJLRoutesService" enable:YES async:NO];
+    
+    
     
 }
 

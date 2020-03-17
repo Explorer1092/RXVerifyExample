@@ -1,5 +1,13 @@
 
 
+
+
+@property (nonatomic, strong) KSAdContentLogoView *contentLogoView;
+@property (nonatomic, strong) KSAdContentUserView *contentUserView;
+@property (nonatomic, strong) KSAdContentControlView *contentControlView;
+
+
+
 @property (nonatomic, strong) UIView *autoSizeView;
 
 @property (nonatomic, strong) UILabel *titleLabel;

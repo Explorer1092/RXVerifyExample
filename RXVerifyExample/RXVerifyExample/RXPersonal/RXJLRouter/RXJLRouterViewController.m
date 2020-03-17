@@ -21,8 +21,60 @@
     
     
 
+//    [self _test_global_scheme];
     
+//    [self _test2];
     
+    [self _test4];
+}
+
+- (void)_test4 {
+    [[JLRoutes globalRoutes] addRoute:@"/ksad/log/:moudle/:level/:message" handler:^BOOL(NSDictionary *parameters) {
+        NSString *object = parameters[@"object"];
+        NSString *action = parameters[@"action"];
+        NSString *primaryKey = parameters[@"primaryKey"];
+        void(^block)(void) = parameters[@"block"];
+        if (block != nil) {
+            block();
+        }
+        // stuff
+        return YES;
+    }];
+    __weak typeof(self) weakSelf = self;
+    NSURL *editPost = [NSURL URLWithString:@"myapp://ksad/log/ui/debug/abc"];
+    void(^customBlock)(void) = ^{
+        NSLog(@"1111111111111:%@", weakSelf.view);
+    };
+    NSDictionary *dic = @{@"abc": @"bcd",
+                          @"block": customBlock
+    };
+    [JLRoutes routeURL:editPost withParameters:dic];
+}
+
+- (void)_test3 {
+    JLRoutes.globalRoutes[@"/user/view/:userID"] = ^BOOL(NSDictionary *parameters) {
+      // ...
+        NSLog(@"%@", parameters);
+        return YES;
+    };
+    
+    NSURL *viewUserURL = [NSURL URLWithString:@"myapp://user/view/joeldev"];
+    [JLRoutes routeURL:viewUserURL];
+    
+}
+
+
+- (void)_test2 {
+    [[JLRoutes globalRoutes] addRoute:@"/:object/:action/:primaryKey" handler:^BOOL(NSDictionary *parameters) {
+      NSString *object = parameters[@"object"];
+      NSString *action = parameters[@"action"];
+      NSString *primaryKey = parameters[@"primaryKey"];
+      // stuff
+      return YES;
+    }];
+    
+    NSURL *editPost = [NSURL URLWithString:@"myapp://post/edit/123?debug=true&foo=bar"];
+    [JLRoutes routeURL:editPost];
 }
 
 - (void)_test_global_scheme

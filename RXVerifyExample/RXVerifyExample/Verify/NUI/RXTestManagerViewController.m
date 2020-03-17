@@ -20,6 +20,7 @@
 #import "RXAssociateManager.h"
 #import "RXDateManager.h"
 #import "RXPrivateApiManager.h"
+#import "RXTestMulThreadMutableDataManager.h"
 @interface RXAAAA : NSObject
 @end
 
@@ -63,7 +64,7 @@
     self.abc = 10;
     self.def = 20;
     
-    [RXAAAA test2];
+//    [RXAAAA test2];
     
     NSLog(@"abc:%zd", self.abc);
     NSLog(@"def:%zd", self.def);
@@ -88,7 +89,8 @@
     
 //    [[RXAssociateManager sharedInstance] test];
     
-    [[RXPrivateApiManager sharedInstance] test];
+//    [[RXPrivateApiManager sharedInstance] test];
+    [[RXTestMulThreadMutableDataManager sharedInstance] test];
     
     self.view.backgroundColor = [UIColor whiteColor];
     

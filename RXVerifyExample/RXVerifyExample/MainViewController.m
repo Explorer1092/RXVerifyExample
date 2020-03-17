@@ -13,6 +13,8 @@
 #import "RXWeakTestViewController.h"
 #import "RXDirectionViewController.h"
 
+static NSInteger a = 0;
+
 // xzj_todo https://www.ojit.com/article/1906717
 // xzj_todo linux 学习 https://www.zhihu.com/question/19606660
 @interface MainViewController ()
@@ -37,6 +39,8 @@
 #pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    a++;
+    NSLog(@"a:%zd", a);
     
     // Do any additional setup after loading the view from its nib.
     
@@ -98,7 +102,7 @@
                            @"RXAppStore", @"RXViewContentMode", @"RXMasonryTest",
                            @"RXDirection", @"RXStrangeA", @"RXViewHolder",
                            @"RXStrangeXR", @"RXNotificationFirst", @"RXViewVisiable",
-                           @"RXVisiableTest"
+                           @"RXVisiableTest", @"RXTestManager"
     ];
     
     // 数组倒叙
@@ -137,7 +141,7 @@
     
     object = @"RXMasonryTest";
     
-    object = @"";
+    object = @"RXJLRouter";
     
     
 //    object = @"RXTestManager";
@@ -151,6 +155,8 @@
 //    object = @"RXVisiableTest";
     
 //    object = @"RXNotificationFirst";
+    
+    
 #endif
     
     [self performSelector:@selector(gotoExampleVCWithName:) withObject:object afterDelay:1];
@@ -165,7 +171,18 @@
 //    tmpView.layer.masksToBounds = YES;
     [self.tableView addSubview:tmpView];
     
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_global_queue(0, 0), ^{
+            NSLog(@"111");
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"222");
+        });
+        NSLog(@"333");
+    });
+    
 }
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSLog(@"_cmd:%@, class:%@", NSStringFromSelector(_cmd), [self class]);
@@ -215,12 +232,12 @@
 #pragma mark - Private
 - (void)gotoExampleVCWithName:(NSString *)name
 {
-//    NSString *clsString = [NSString stringWithFormat:@"rxpage://%@ViewController", name];
-//
-//    [RXVCMediator pushInNavigationController:self.navigationController withString:clsString query:nil animate:YES];
+    NSString *clsString = [NSString stringWithFormat:@"rxpage://%@ViewController", name];
+
+    [RXVCMediator pushInNavigationController:self.navigationController withString:clsString query:nil animate:YES];
     
-    RXWeakTestViewController *vc = [RXWeakTestViewController new];
-    NSLog(@"vc:%@", vc);
+//    RXWeakTestViewController *vc = [RXWeakTestViewController new];
+//    NSLog(@"vc:%@", vc);
 
 }
 
