@@ -9,8 +9,7 @@
 #ifndef RXClassExtObject_Private_h
 #define RXClassExtObject_Private_h
 @interface RXClassExtObject ()
-
-@property (nonatomic, strong) NSString *str2;
+@property (nonatomic, copy) NSString *str2;
 - (void)print2;
 @end
 

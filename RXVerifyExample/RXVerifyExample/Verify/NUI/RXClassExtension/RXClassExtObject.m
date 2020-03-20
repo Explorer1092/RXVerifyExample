@@ -9,7 +9,6 @@
 #import "RXClassExtObject.h"
 #import "RXClassExtObject+Private.h"
 @implementation RXClassExtObject
-
 - (void)print1 {
     NSLog(@"str1:%@", self.str1);
 }

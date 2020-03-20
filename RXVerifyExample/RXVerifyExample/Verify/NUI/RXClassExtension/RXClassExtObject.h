@@ -11,14 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RXClassExtObject : NSObject
-@property (nonatomic, strong) NSString *str1;
+@property (nonatomic, copy) NSString *str1;
 - (void)print1;
 
-@property (nonatomic, strong) NSString *tmp1;
-//@property (nonatomic, strong) NSObject *tmp1;
-
-//- (void)print3:(id)tmp;
-//- (void)print3:(id)tmp;
+//@property (nonatomic, copy) NSString *str2;
+//- (void)print2;
 @end
 
 NS_ASSUME_NONNULL_END
