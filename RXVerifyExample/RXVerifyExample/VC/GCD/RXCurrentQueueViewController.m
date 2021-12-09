@@ -7,19 +7,20 @@
 //
 
 #import "RXCurrentQueueViewController.h"
+#import "RXPreHeader.h"
+
+
 void func(dispatch_queue_t queue, dispatch_block_t block)
 {
-    printf("queue5:%s\n", dispatch_queue_get_label(dispatch_get_current_queue()));
-    printf("queue:%s\n", dispatch_queue_get_label(queue));
-
-    if (dispatch_get_current_queue() == queue) {
-        block();
-    } else {
-        dispatch_sync(queue, block);
-    }
-    
-    
-    
+    RXWarningIgnore_Wdeprecated_declarations (
+        printf("queue5:%s\n", dispatch_queue_get_label(dispatch_get_current_queue()));
+        printf("queue:%s\n", dispatch_queue_get_label(queue));
+        if (dispatch_get_current_queue() == queue) {
+            block();
+        } else {
+            dispatch_sync(queue, block);
+        }
+    );
 }
 
 
@@ -46,19 +47,19 @@ void func(dispatch_queue_t queue, dispatch_block_t block)
 
 
 - (void)testMain {
-    
-    
-    dispatch_queue_t mainQueue = dispatch_get_main_queue();
-    
-    printf("mainQueue:%s\n", dispatch_queue_get_label(mainQueue));
-    
-    dispatch_queue_t serialQueue = dispatch_queue_create("1111", DISPATCH_QUEUE_SERIAL);
-    dispatch_async(serialQueue, ^{
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            dispatch_queue_t curQueue = dispatch_get_current_queue();
-            printf("curQueue:%s\n", dispatch_queue_get_label(curQueue));
+    RXWarningIgnore_Wdeprecated_declarations (
+        dispatch_queue_t mainQueue = dispatch_get_main_queue();
+        printf("mainQueue:%s\n", dispatch_queue_get_label(mainQueue));
+        dispatch_queue_t serialQueue = dispatch_queue_create("1111", DISPATCH_QUEUE_SERIAL);
+        dispatch_async(serialQueue, ^{
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                dispatch_queue_t curQueue = dispatch_get_current_queue();
+                printf("curQueue:%s\n", dispatch_queue_get_label(curQueue));
+            });
         });
-    });
+    );
+    
+    
     
     
 

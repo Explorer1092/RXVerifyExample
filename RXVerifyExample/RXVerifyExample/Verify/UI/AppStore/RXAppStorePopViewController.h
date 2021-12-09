@@ -2,7 +2,7 @@
 //  RXAppStorePopViewController.h
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/10/22.
+//  Created by Rush.D.Xzj on 2019/10/22.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

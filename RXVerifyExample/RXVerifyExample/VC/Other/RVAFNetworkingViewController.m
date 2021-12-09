@@ -60,28 +60,28 @@ static dispatch_queue_t responseAnalysisQueue(void) {
 {
 //    NSString *str = @"http://api.hiexhibition.com/v1/homepage";
     
-    NSString *base = @"http://api.hiexhibition.com";
-    NSString *info = @"v1/zhanhui";
-    NSLog(@"start");
-    AFHTTPSessionManager *httpSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:base]];
-//    httpSessionManager.completionQueue = responseAnalysisQueue();
-    NSURLSessionDataTask *sessionDataTask = [httpSessionManager POST:info parameters:nil progress:^(NSProgress * progress) {
-        NSLog(@"progress");
-    } success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"success:responseObject:%@", [responseObject class]);
-        dispatch_queue_t queue = responseAnalysisQueue();
-        dispatch_async(queue, ^{
-            NSLog(@"analysis data");
-            sleep(2);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"go to main");
-            });
-        });
-    } failure:^(NSURLSessionDataTask *task, NSError * error) {
-        NSLog(@"failed:%@", error);
-    }];
-    NSLog(@"end");
-    NSLog(@"sessionDataTask:%@", sessionDataTask);
+//    NSString *base = @"http://api.hiexhibition.com";
+//    NSString *info = @"v1/zhanhui";
+//    NSLog(@"start");
+//    AFHTTPSessionManager *httpSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:base]];
+////    httpSessionManager.completionQueue = responseAnalysisQueue();
+//    NSURLSessionDataTask *sessionDataTask = [httpSessionManager POST:info parameters:nil progress:^(NSProgress * progress) {
+//        NSLog(@"progress");
+//    } success:^(NSURLSessionDataTask *task, id responseObject) {
+//        NSLog(@"success:responseObject:%@", [responseObject class]);
+//        dispatch_queue_t queue = responseAnalysisQueue();
+//        dispatch_async(queue, ^{
+//            NSLog(@"analysis data");
+//            sleep(2);
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                NSLog(@"go to main");
+//            });
+//        });
+//    } failure:^(NSURLSessionDataTask *task, NSError * error) {
+//        NSLog(@"failed:%@", error);
+//    }];
+//    NSLog(@"end");
+//    NSLog(@"sessionDataTask:%@", sessionDataTask);
 //    [sessionDataTask cancel];
 }
 
@@ -106,35 +106,35 @@ static dispatch_queue_t responseAnalysisQueue(void) {
 {
     //    NSString *str = @"http://api.hiexhibition.com/v1/homepage";
     
-    NSString *base = @"http://api.hiexhibition.com";
-    NSString *info = @"v1/zhanhui";
-    NSDictionary *params = @{@"num":@"1",
-                             @"offset":@"1"};
-    NSLog(@"start");
-    AFHTTPSessionManager *httpSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:base]];
-    AFHTTPRequestSerializer *requestSerializer = [[AFHTTPRequestSerializer alloc] init];
-    [requestSerializer setQueryStringSerializationWithBlock:^NSString *(NSURLRequest *request, id parameters, NSError **error) {
-        return [self parametersFromDictionary:parameters];
-    }];
-    httpSessionManager.requestSerializer = requestSerializer;
-    NSURLSessionDataTask *sessionDataTask = [httpSessionManager POST:info parameters:params progress:^(NSProgress * progress) {
-        NSLog(@"progress");
-    } success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"success:responseObject class:%@", [responseObject class]);
-        NSLog(@"success:responseObject:%@", responseObject);
-        dispatch_queue_t queue = responseAnalysisQueue();
-        dispatch_async(queue, ^{
-            NSLog(@"analysis data");
-            sleep(2);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"go to main");
-            });
-        });
-    } failure:^(NSURLSessionDataTask *task, NSError * error) {
-        NSLog(@"failed:%@", error);
-    }];
-    NSLog(@"end");
-    NSLog(@"sessionDataTask:%@", sessionDataTask);
+//    NSString *base = @"http://api.hiexhibition.com";
+//    NSString *info = @"v1/zhanhui";
+//    NSDictionary *params = @{@"num":@"1",
+//                             @"offset":@"1"};
+//    NSLog(@"start");
+//    AFHTTPSessionManager *httpSessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:base]];
+//    AFHTTPRequestSerializer *requestSerializer = [[AFHTTPRequestSerializer alloc] init];
+//    [requestSerializer setQueryStringSerializationWithBlock:^NSString *(NSURLRequest *request, id parameters, NSError **error) {
+//        return [self parametersFromDictionary:parameters];
+//    }];
+//    httpSessionManager.requestSerializer = requestSerializer;
+//    NSURLSessionDataTask *sessionDataTask = [httpSessionManager POST:info parameters:params progress:^(NSProgress * progress) {
+//        NSLog(@"progress");
+//    } success:^(NSURLSessionDataTask *task, id responseObject) {
+//        NSLog(@"success:responseObject class:%@", [responseObject class]);
+//        NSLog(@"success:responseObject:%@", responseObject);
+//        dispatch_queue_t queue = responseAnalysisQueue();
+//        dispatch_async(queue, ^{
+//            NSLog(@"analysis data");
+//            sleep(2);
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                NSLog(@"go to main");
+//            });
+//        });
+//    } failure:^(NSURLSessionDataTask *task, NSError * error) {
+//        NSLog(@"failed:%@", error);
+//    }];
+//    NSLog(@"end");
+//    NSLog(@"sessionDataTask:%@", sessionDataTask);
 }
 
 
@@ -156,19 +156,19 @@ static dispatch_queue_t responseAnalysisQueue(void) {
 //    }];
 //    httpSessionManager1.requestSerializer = requestSerializer1;
 //    httpSessionManager1.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript", nil];
-    [httpSessionManager1 POST:info1 parameters:nil progress:^(NSProgress * progress) {
-        NSLog(@"1progress");
-    } success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"1success:responseObject class:%@", [responseObject class]);
-//        NSThread *thread = [NSThread currentThread];
-//        dispatch_queue_t queue = dispatch_get_current_queue();
-//        NSLog(@"%s", dispatch_queue_get_label(queue));
-        dispatch_group_leave(group);
-        
-    } failure:^(NSURLSessionDataTask *task, NSError * error) {
-        NSLog(@"1failed");
-        dispatch_group_leave(group);
-    }];
+//    [httpSessionManager1 POST:info1 parameters:nil progress:^(NSProgress * progress) {
+//        NSLog(@"1progress");
+//    } success:^(NSURLSessionDataTask *task, id responseObject) {
+//        NSLog(@"1success:responseObject class:%@", [responseObject class]);
+////        NSThread *thread = [NSThread currentThread];
+////        dispatch_queue_t queue = dispatch_get_current_queue();
+////        NSLog(@"%s", dispatch_queue_get_label(queue));
+//        dispatch_group_leave(group);
+//
+//    } failure:^(NSURLSessionDataTask *task, NSError * error) {
+//        NSLog(@"1failed");
+//        dispatch_group_leave(group);
+//    }];
     
     NSString *info2 = @"v1/base/enterprise_nature";
     dispatch_group_enter(group);
@@ -180,15 +180,15 @@ static dispatch_queue_t responseAnalysisQueue(void) {
 //    }];
 //    httpSessionManager2.requestSerializer = requestSerializer2;
     
-    [httpSessionManager2 POST:info2 parameters:nil progress:^(NSProgress * progress) {
-        NSLog(@"2progress");
-    } success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"2success:responseObject class:%@", [responseObject class]);
-        dispatch_group_leave(group);
-    } failure:^(NSURLSessionDataTask *task, NSError * error) {
-        NSLog(@"2failed");
-        dispatch_group_leave(group);
-    }];
+//    [httpSessionManager2 POST:info2 parameters:nil progress:^(NSProgress * progress) {
+//        NSLog(@"2progress");
+//    } success:^(NSURLSessionDataTask *task, id responseObject) {
+//        NSLog(@"2success:responseObject class:%@", [responseObject class]);
+//        dispatch_group_leave(group);
+//    } failure:^(NSURLSessionDataTask *task, NSError * error) {
+//        NSLog(@"2failed");
+//        dispatch_group_leave(group);
+//    }];
     NSLog(@"before notify");
     
     dispatch_group_notify(group, queue, ^{
@@ -224,21 +224,21 @@ static dispatch_queue_t responseAnalysisQueue(void) {
     //    }];
     //    httpSessionManager1.requestSerializer = requestSerializer1;
     //    httpSessionManager1.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript", nil];
-    [httpSessionManager1 POST:info1 parameters:nil progress:^(NSProgress * progress) {
-        NSLog(@"1progress");
-
-    } success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"1success:responseObject class:%@", [responseObject class]);
-        //        NSThread *thread = [NSThread currentThread];
-        //        dispatch_queue_t queue = dispatch_get_current_queue();
-        //        NSLog(@"%s", dispatch_queue_get_label(queue));
-        dispatch_group_leave(group);
-
-    } failure:^(NSURLSessionDataTask *task, NSError * error) {
-        NSLog(@"1failed");
-        dispatch_group_leave(group);
-
-    }];
+//    [httpSessionManager1 POST:info1 parameters:nil progress:^(NSProgress * progress) {
+//        NSLog(@"1progress");
+//
+//    } success:^(NSURLSessionDataTask *task, id responseObject) {
+//        NSLog(@"1success:responseObject class:%@", [responseObject class]);
+//        //        NSThread *thread = [NSThread currentThread];
+//        //        dispatch_queue_t queue = dispatch_get_current_queue();
+//        //        NSLog(@"%s", dispatch_queue_get_label(queue));
+//        dispatch_group_leave(group);
+//
+//    } failure:^(NSURLSessionDataTask *task, NSError * error) {
+//        NSLog(@"1failed");
+//        dispatch_group_leave(group);
+//
+//    }];
     
     
     dispatch_group_enter(group);
@@ -253,17 +253,17 @@ static dispatch_queue_t responseAnalysisQueue(void) {
     //    }];
     //    httpSessionManager2.requestSerializer = requestSerializer2;
     
-    [httpSessionManager2 POST:info2 parameters:nil progress:^(NSProgress * progress) {
-        NSLog(@"2progress");
-    } success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"2success:responseObject class:%@", [responseObject class]);
-        dispatch_group_leave(group);
-
-    } failure:^(NSURLSessionDataTask *task, NSError * error) {
-        NSLog(@"2failed");
-        dispatch_group_leave(group);
-
-    }];
+//    [httpSessionManager2 POST:info2 parameters:nil progress:^(NSProgress * progress) {
+//        NSLog(@"2progress");
+//    } success:^(NSURLSessionDataTask *task, id responseObject) {
+//        NSLog(@"2success:responseObject class:%@", [responseObject class]);
+//        dispatch_group_leave(group);
+//
+//    } failure:^(NSURLSessionDataTask *task, NSError * error) {
+//        NSLog(@"2failed");
+//        dispatch_group_leave(group);
+//
+//    }];
     NSLog(@"before notify");
     
     dispatch_group_notify(group, queue, ^{

@@ -70,6 +70,19 @@
 //    vc = [RXTidyMainViewController new];
     self.mainNC = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = self.mainNC;
+    
+    
+    
+//    SEL selector = NSSelectorFromString(@"reportForScene:");
+//    NSMethodSignature *signature = [vc methodSignatureForSelector:selector];
+//
+//    char *type = (char *)[signature methodReturnType];
+//
+//    id tmpResult = [self safe_performSelectWithInstance:vc selectorString:@"reportForScene"];
+//    NSLog(@"tmpResult:%@", tmpResult);
+}
+- (id)safe_performSelectWithInstance:(id)instance selectorString:(NSString *)selectorString {
+    return [instance performSelector:NSSelectorFromString(selectorString)];
 }
 
 - (void)xxxxxx {
@@ -190,19 +203,23 @@
 //来源：掘金
 //著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 - (void)xzj_notification {
-    NSString *deviceName = [UIDevice currentDevice].name;
-    if ([deviceName isEqualToString:@"Rush.D.xzj"]) {
-//        [self registLocalNotification];
-//        [self registerNotification:5];
-        
-        [self sendLocalNotification];
-    }
+//    NSString *deviceName = [UIDevice currentDevice].name;
+//    if ([deviceName isEqualToString:@"Rush.D.xzj"]) {
+////        [self registLocalNotification];
+////        [self registerNotification:5];
+//        
+//        [self sendLocalNotification];
+//    }
 }
 
 
 #pragma mark - UIApplicationDelegate
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+//    NSMutableArray *ary = [NSMutableArray new];
+//    [ary removeObjectAtIndex:0];
+    
+//    NSDictionary *dic = [NSDictionary dictionaryWithDictionary:nil];
 //    NSString *str = @"\"OneV\", \"TwoV\", \"ThreeV\"";
 //    NSArray *ary = [str componentsSeparatedByString:@","];
 //    NSLog(@"%@", ary);
@@ -218,13 +235,66 @@
     [RXAutoGenerateManager generate];
     return YES;
 }
+
+static NSMapTable *mapTable;
+- (void)test {
+    
+//    if (mapTable == nil) {
+//        mapTable = [NSMapTable mapTableWithKeyOptions:NSMapTableWeakMemory valueOptions:NSMapTableWeakMemory];
+//    }
+//
+//    for (NSInteger i = 0; i < 1000; i++) {
+//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//            int tmpA = arc4random() % 10000;
+//            BOOL tmp = tmpA % 2 == 0;
+//            NSString *tmpStr = [NSString stringWithFormat:@"%@", @(tmpA)];
+//            if (tmp) {
+//                NSLog(@"addd:%@", [NSThread currentThread]);
+//                [mapTable setObject:tmpStr forKey:tmpStr];
+//            } else {
+//                NSLog(@"remove:%@", [NSThread currentThread]);
+//                [mapTable removeAllObjects];
+//            }
+//        });
+//
+//    }
+//    NSMutableArray *ary = [NSMutableArray new];// 里面有10个并行queue
+//    for (int i = 0; i < 10; i++) {
+//        NSString *str = [NSString stringWithFormat:@"com.%ld.abc", (long)i];
+//        dispatch_queue_t queue = dispatch_queue_create([str UTF8String], DISPATCH_QUEUE_CONCURRENT);
+//        [ary addObject:queue];
+//    }
+//    
+//    NSArray *queueAry = ary;
+    
+//    dispatch_queue_t serialQueue = dispatch_queue_create("com.serial.queue", DISPATCH_QUEUE_SERIAL);
+//    for (dispatch_queue_t queue in ary) {
+//        dispatch_set_target_queue(queue, serialQueue);
+//    }
+    
+    
+    
+    
+    
+//    for (int i  = 0; i < 10; i++) {
+//        dispatch_async(queueAry[i], ^{
+//            int random = arc4random() % 10000;
+//            NSLog(@"aaaaaaaa:i:%ld--random:%ld", (long)i, (long)random);
+//            if (random % 2 == 0) {
+//                NSLog(@"aaaaaaaa:i:%ld--random:%ld (2==0)", (long)i, (long)random);
+//            }
+//        });
+//    }
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 //    [RXServiceManager application:application didFinishLaunchingWithOptions:launchOptions];
-    [self xzj_notification];
+//    [self xzj_notification];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self showMain];
     [self.window makeKeyAndVisible];
+//    [self test];
     
     return YES;
 }

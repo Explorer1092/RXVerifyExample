@@ -2,7 +2,7 @@
 //  RXAutoGenerateManager.h
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/12/9.
+//  Created by Rush.D.Xzj on 2019/12/9.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

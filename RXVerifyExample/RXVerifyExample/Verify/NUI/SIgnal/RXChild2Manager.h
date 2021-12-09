@@ -2,7 +2,7 @@
 //  RXChild2Manager.h
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/8/15.
+//  Created by Rush.D.Xzj on 2019/8/15.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

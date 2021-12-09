@@ -21,6 +21,8 @@
 #import "RXDateManager.h"
 #import "RXPrivateApiManager.h"
 #import "RXTestMulThreadMutableDataManager.h"
+#import "RXWeakPropertyManager.h"
+#import "RXMultThreadManager.h"
 @interface RXAAAA : NSObject
 @end
 
@@ -90,7 +92,10 @@
 //    [[RXAssociateManager sharedInstance] test];
     
 //    [[RXPrivateApiManager sharedInstance] test];
-    [[RXTestMulThreadMutableDataManager sharedInstance] test];
+//    [[RXTestMulThreadMutableDataManager sharedInstance] test];
+    
+//    [[RXWeakPropertyManager sharedInstance] test];
+    [[RXMultThreadManager sharedInstance] test];
     
     self.view.backgroundColor = [UIColor whiteColor];
     

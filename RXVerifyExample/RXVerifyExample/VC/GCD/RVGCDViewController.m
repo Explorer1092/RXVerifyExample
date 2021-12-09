@@ -17,9 +17,9 @@
 
 
 
-DISPATCH_DECL(dispatch_kkkk);
-OS_OBJECT_DECL_SUBCLASS(dispatch_jjj, dispatch_object);
-OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
+//DISPATCH_DECL(dispatch_kkkk);
+//OS_OBJECT_DECL_SUBCLASS(dispatch_jjj, dispatch_object);
+//OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
 
 
 
@@ -35,6 +35,8 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
 @property (nonatomic, copy) NSInteger (^block3)(void);
 @property (nonatomic, copy) void (^block4)(NSInteger, NSInteger, NSInteger);
 
+
+@property (nonatomic, strong) dispatch_queue_t serialQueue;
 
 
 
@@ -1196,7 +1198,7 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
 //    [self test_queue_serial_concurrent_sync_async];
     
     
-    [[RXLogManager sharedInstance] writeToLogTextView:@"111"];
+//    [[RXLogManager sharedInstance] writeToLogTextView:@"111"];
     
     
 //    [self testSD_GCD];
@@ -1205,6 +1207,78 @@ OS_OBJECT_DECL_IMPL(dispatch_lll, <OS_OBJECT_CLASS(dispatch_object)>);
     
     
 //    [self test2222];
+    
+//    [self test_async_serial_inlist];
+//    [self test_okkk];
+    
+    [self test_dispath];
+}
+
+- (void)test_dispath {
+    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self performSelector:@selector(main2Action) withObject:nil afterDelay:1];
+//    });
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        [self performSelector:@selector(otherAction) withObject:nil afterDelay:3];
+//    });
+//    [self performSelector:@selector(mainAction) withObject:nil afterDelay:2];
+
+//
+}
+
+- (void)main2Action {
+    NSLog(@"main2");
+}
+- (void)mainAction {
+    NSLog(@"main");
+}
+- (void)otherAction {
+    NSLog(@"other");
+}
+
+- (void)test_okkk {
+    NSDictionary *dict = @{
+                           @"key1": @"value1",
+                           @"key2": @"value2",
+                           @"key3": @"value3",
+                           @"key4": @"value4",
+                           @"key5": @"value5",
+                           @"key6": @"value6"
+    };
+    NSLog(@"aaaa:0");
+    NSLog(@"aaaa:%@", dict.allKeys);
+    [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        NSLog(@"aaaa begin:key:%@ value:%@", key, obj);
+        if ([key isEqualToString:@"key3"]) {
+            return;
+        }
+        NSLog(@"aaaa end:key:%@ value:%@", key, obj);
+    }];
+    NSLog(@"aaaa:100");
+}
+
+- (void)test_async_serial_inlist {
+    self.serialQueue = dispatch_queue_create("abc", DISPATCH_QUEUE_SERIAL);
+    [self test_async_serial_inlist1];
+    
+}
+- (void)test_async_serial_inlist1 {
+    dispatch_async(self.serialQueue, ^{
+        NSLog(@"test_async_serial_inlist1");
+        [self test_async_serial_inlist2];
+    });
+}
+- (void)test_async_serial_inlist2 {
+    dispatch_async(self.serialQueue, ^{
+        NSLog(@"test_async_serial_inlist2");
+        [self test_async_serial_inlist3];
+    });
+}
+- (void)test_async_serial_inlist3 {
+    dispatch_async(self.serialQueue, ^{
+        NSLog(@"test_async_serial_inlist3");
+    });
 }
 
 // 串行队列,异步执行

@@ -2,7 +2,7 @@
 //  RXAFNResponseManager.m
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/10/29.
+//  Created by Rush.D.Xzj on 2019/10/29.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

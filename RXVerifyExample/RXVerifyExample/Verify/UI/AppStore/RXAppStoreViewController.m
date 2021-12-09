@@ -2,7 +2,7 @@
 //  RXAppStoreViewController.m
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/10/21.
+//  Created by Rush.D.Xzj on 2019/10/21.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

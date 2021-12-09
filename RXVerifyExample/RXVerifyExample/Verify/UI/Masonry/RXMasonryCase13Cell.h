@@ -2,7 +2,7 @@
 //  RXMasonryCase13Cell.h
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/12/26.
+//  Created by Rush.D.Xzj on 2019/12/26.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

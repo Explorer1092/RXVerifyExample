@@ -99,8 +99,8 @@
     
     
     
-    self.rxARCCallObject = [RXARCCallObject new];
-    [self.rxARCCallObject test];
+//    self.rxARCCallObject = [RXARCCallObject new];
+//    [self.rxARCCallObject test];
 //    [self.rxARCCallObject test2];
     
 //    [self _test_category_method];
@@ -112,7 +112,7 @@
 //    [self _test_ns_returns_retained];
     
 //    [self _test_mrc_object];
-//    [self _test_arc_object];
+    [self _test_arc_object];
     
 //    [self _test_mrc_return_value_object];
 //    [self _test_arc_return_value_object];

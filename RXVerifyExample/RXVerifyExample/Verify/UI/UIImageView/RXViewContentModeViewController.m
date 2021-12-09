@@ -2,7 +2,7 @@
 //  RXViewContentModeViewController.m
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/10/25.
+//  Created by Rush.D.Xzj on 2019/10/25.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

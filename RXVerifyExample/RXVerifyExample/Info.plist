@@ -22,6 +22,14 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
+			<string>iOSDevTip</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>iOSDevTip</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
 			<string>tencent</string>
 			<key>CFBundleURLSchemes</key>
 			<array>

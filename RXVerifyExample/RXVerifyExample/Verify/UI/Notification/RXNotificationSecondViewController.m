@@ -2,7 +2,7 @@
 //  RXNotificationSecondViewController.m
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/12/13.
+//  Created by Rush.D.Xzj on 2019/12/13.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

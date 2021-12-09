@@ -2,7 +2,7 @@
 //  RXChild2ViewController.m
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/8/14.
+//  Created by Rush.D.Xzj on 2019/8/14.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

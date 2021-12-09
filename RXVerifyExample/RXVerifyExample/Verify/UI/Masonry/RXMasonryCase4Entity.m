@@ -2,7 +2,7 @@
 //  RXMasonryCase4Entity.m
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/12/25.
+//  Created by Rush.D.Xzj on 2019/12/25.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

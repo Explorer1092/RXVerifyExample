@@ -2,7 +2,7 @@
 //  RXKSViewController.h
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/8/12.
+//  Created by Rush.D.Xzj on 2019/8/12.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

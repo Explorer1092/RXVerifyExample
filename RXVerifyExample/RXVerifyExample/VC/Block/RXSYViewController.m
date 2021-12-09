@@ -34,6 +34,7 @@ static void __private_test(int a, int b, int c)
 
 static void __private_test2222(void *cself, ...)
 {
+    __private_test(1, 1, 1);
     NSLog(@"111111");
     
 //    va_list args;
@@ -192,7 +193,7 @@ void test_tmp(id block)
     
     impl->FuncPtr = exchang;
     
-    char *value = (char *)exchang;
+//    char *value = (char *)exchang;
 //    printf("kkk2:%s\n", value);
     
 //    NSString *str = [NSString stringWithUTF8String:value];

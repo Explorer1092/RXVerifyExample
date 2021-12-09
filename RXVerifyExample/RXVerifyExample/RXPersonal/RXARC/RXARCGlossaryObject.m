@@ -43,6 +43,9 @@ void printString(NSString *string) {
     int a = 0;
     void *b = &a;
     id c = (__bridge id)b;
+    void *d = (__bridge void *)c;
+    int *e = (int *)d;
+    NSLog(@"%ld", (long)*e);
 }
 
 

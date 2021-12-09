@@ -300,11 +300,11 @@
     self.rxBlockTestObject = [RXBlockTestObject new];
 //    [self.rxBlockTestObject mainTest];
     
-    self.rxLockTestObject = [RXLockTestObject new];
+//    self.rxLockTestObject = [RXLockTestObject new];
 //    [self.rxLockTestObject mainTest];
     
     self.rxARCTestObject = [RXARCTestObject new];
-//    [self.rxARCTestObject mainTest];
+    [self.rxARCTestObject mainTest];
     
 //    [self test_self_super];
     
@@ -323,8 +323,8 @@
 //    [[RXTimeoutIntervalManager sharedInstance] test];
     
     
-    NSString *tmp = [RXDeviceUtil deviceModel];
-    NSLog(@"tmp:%@", tmp);
+//    NSString *tmp = [RXDeviceUtil deviceModel];
+//    NSLog(@"tmp:%@", tmp);
     
 }
 

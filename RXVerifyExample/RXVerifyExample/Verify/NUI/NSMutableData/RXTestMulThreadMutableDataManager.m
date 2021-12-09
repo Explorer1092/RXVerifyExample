@@ -2,7 +2,7 @@
 //  RXTestMulThreadMutableDataManager.m
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2020/2/21.
+//  Created by Rush.D.Xzj on 2020/2/21.
 //  Copyright © 2020 Rush.D.Xzj. All rights reserved.
 //
 

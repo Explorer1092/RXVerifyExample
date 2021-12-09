@@ -11,6 +11,11 @@
 #import "RXMRCUtil.h"
 #import "RXARCTmpObject.h"
 
+@interface RXARCObject ()
+
+@property (nonatomic, strong) id tmpObject;
+
+@end
 
 @implementation RXARCObject
 - (void)_foo:(id)x
@@ -43,7 +48,7 @@
 }
 - (void)test
 {
-//    [self _test_method_argument];
+    [self _test_method_argument];
 //    [self _test_variable];
 }
 @end

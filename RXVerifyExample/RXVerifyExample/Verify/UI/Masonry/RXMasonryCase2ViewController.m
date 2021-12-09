@@ -2,7 +2,7 @@
 //  RXMasonryCase2ViewController.m
 //  RXVerifyExample
 //
-//  Created by xuzhijun on 2019/12/24.
+//  Created by Rush.D.Xzj on 2019/12/24.
 //  Copyright © 2019 Rush.D.Xzj. All rights reserved.
 //
 

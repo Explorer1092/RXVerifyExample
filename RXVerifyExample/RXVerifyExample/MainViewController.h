@@ -10,4 +10,6 @@
 
 @interface MainViewController : UIViewController
 
+- (void)reportForScene:(NSString *)scene;
+- (void)gotoExampleVCWithName:(NSString *)name;
 @end

@@ -70,14 +70,14 @@
     mutDic[@"timeout"] = @(timeout);
     CFAbsoluteTime startTime = CFAbsoluteTimeGetCurrent();
     __weak typeof(self) weakSelf = self;
-    [manager GET:@"http://www.baidu.com" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        [weakSelf printWithStartTime:startTime mutDic:mutDic];
-        [weakSelf removeManager:manager];
-     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         [weakSelf printWithStartTime:startTime mutDic:mutDic];
-         [weakSelf removeManager:manager];
-//         NSLog(@"error:%@", error);
-     }];
+//    [manager GET:@"http://www.baidu.com" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        [weakSelf printWithStartTime:startTime mutDic:mutDic];
+//        [weakSelf removeManager:manager];
+//     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//         [weakSelf printWithStartTime:startTime mutDic:mutDic];
+//         [weakSelf removeManager:manager];
+////         NSLog(@"error:%@", error);
+//     }];
 }
 - (void)addManager:(id)manager {
     @synchronized (self.managerArray) {

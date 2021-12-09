@@ -1,5 +1,9 @@
 
 
+source 'https://github.com/cocoapods/specs.git'
+
+#source 'git@code.byted.org:mobilesec/bytebus_MSSDK_iOS.git'
+
 target 'RXVerifyExample' do
 #pod 'YYText'
 #pod 'YYImage'
@@ -9,7 +13,21 @@ target 'RXVerifyExample' do
 #pod 'YYAsyncLayer'
 #pod 'YYDispatchQueuePool'
 
+#pod 'MSSDK_iOS', :subspecs => [
+# 'cn-inhouse' #  中国版本，其他版本请按情况修改，如sg-inhouse
+# # 'sg-inhouse'  # 新加坡版本，三选一，该行已注释
+# # 'va-inhouse'  # 美东版本，三选一，该行已注释
+#]
+
+pod 'React'
+
 pod 'YTKNetwork'
+
+pod 'UMCommon'  #由原来的UMCCommon变为UMCommon
+pod 'UMDevice'
+
+#可选集成，对应产品中稳定性模块（错误捕获），该功能已经独立成为新的应用性能监控产品U-APM
+ pod 'UMAPM'
 
 pod 'RXView'
 
@@ -24,6 +42,8 @@ pod 'RXVCMediator'
 pod 'RXVerifyButton'
 
 pod 'RXTextView'
+
+pod 'AMapNavi'
 
 pod 'HWWeakTimer'
 
@@ -56,7 +76,7 @@ pod 'RX3_TencentLiteSDK'
 pod 'fishhook'
 
 pod 'AFNetworking+RX'
-
+pod 'FLAnimatedImage'
 pod 'RXTableViewImpl'
 
 pod 'RXUserManager'
@@ -71,13 +91,7 @@ pod 'MBProgressHUD'
 
 pod 'coobjc'
 
-pod 'MTHawkeye'
-
-pod 'ZFPlayer'
-pod 'ZFPlayer/ControlView'
-pod 'ZFPlayer/AVPlayer'
-#pod 'ZFPlayer/ijkplayer'
-pod 'ZFPlayer/KSYMediaPlayer'
+#pod 'MTHawkeye'
 
 #pod 'XTAudioPlayer'
 
@@ -85,9 +99,29 @@ pod "MJRefresh"
 
 pod 'WechatOpenSDK'
 
+pod 'SDWebImage'
+#pod 'SDWebImage/GIF'
+
 pod 'Bytedance-UnionAD'
 
 pod 'Bifrost'
+
+
+pod 'SDWebImageWebPCoder'
+
+
+#pod 'GDTMobSDK'
+#pod 'KSAdSDK'
+#pod 'BaiduMobAdSDK'
+
+#pod 'Google-Mobile-Ads-SDK',  '7.52.0'
+#pod 'mopub-ios-sdk'
+
+#pod 'FBSDKCoreKit'
+# pod 'FBSDKLoginKit'
+# pod 'FBSDKShareKit'
+ 
+ pod 'FMDB'
 
 
 inhibit_all_warnings!

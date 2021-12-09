@@ -8,6 +8,8 @@
 
 #import "VKNormalLevelView.h"
 #import <Masonry/Masonry.h>
+#import "RXMacro.h"
+
 @interface VKNormalLevelView()
 
 @property (nonatomic, strong) UILabel *backLabel;
@@ -36,8 +38,16 @@
 }
 
 - (void)backLabelAction:(id)sender {
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"提示" message:@"backLabel" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
-    [av show];
+    
+//    RXWarningIgnore_Wdeprecated_declarations(
+                                             {
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"提示" message:@"backLabel" delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:@"确认", nil];
+        [av show];
+    }
+
+                                             
+//                                             );
+    
 }
 
 @end
